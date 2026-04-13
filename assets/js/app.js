@@ -17,7 +17,6 @@ async function init() {
     });
 
     // 3. 初始化默认状态
-    // 默认展开第一个大类 -> 第一个中类 -> 第一个小类
     const categories = Object.entries(dataManager.categories);
     if (categories.length > 0) {
         const [firstCatId, firstCat] = categories[0];
@@ -53,7 +52,6 @@ function toggleSearch() {
     state.set('search.active', !active);
     state.set('currentView', !active ? 'search' : 'category');
     
-    // 渲染搜索面板 (直接操作 DOM 保证最高响应速度)
     const overlay = document.getElementById('search-overlay');
     if (!overlay) {
         createSearchUI();
@@ -75,8 +73,8 @@ function createSearchUI() {
     overlay.id = 'search-overlay';
     overlay.className = 'search-overlay';
     overlay.innerHTML = `
-        <<divdiv class="search-container">
-            <<inputinput type="text" id="search-input" class="search-input" placeholder="快速搜索网站 (Ctrl+K)...">
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="快速搜索网站 (Ctrl+K)...">
         </div>
     `;
     document.body.appendChild(overlay);

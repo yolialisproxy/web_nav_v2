@@ -11,10 +11,6 @@ class Renderer {
         this.topNav = document.getElementById('top-nav');
     }
 
-    /**
-     * 渲染侧边栏三层菜单
-     * 规范：Menu_System.md
-     */
     renderSidebar(state) {
         const categories = dataManager.categories;
         let html = '';
@@ -23,10 +19,10 @@ class Renderer {
             const isCatActive = state.sidebar.activeCategoryId === catId;
             
             html += `
-                <<divdiv class="menu-group">
-                    <<divdiv class="menu-category ${isCatActive ? 'active' : ''}" data-cat-id="${catId}">
-                        <<divdiv class="category-header">${cat.name}</div>
-                        <<divdiv class="category-content" style="display: ${isCatActive ? 'block' : 'none'}">
+                <div class="menu-group">
+                    <div class="menu-category ${isCatActive ? 'active' : ''}" data-cat-id="${catId}">
+                        <div class="category-header">${cat.name}</div>
+                        <div class="category-content" style="display: ${isCatActive ? 'block' : 'none'}">
                             ${this._renderSubCategories(cat, state)}
                         </div>
                     </div>
@@ -44,12 +40,12 @@ class Renderer {
             const isSubExpanded = state.sidebar.activeSubCategoryId === subId;
             
             html += `
-                <<divdiv class="menu-subcategory ${isSubExpanded ? 'expanded' : ''}" data-sub-id="${subId}">
-                    <<divdiv class="subcategory-header">
-                        <<spanspan class="subcategory-arrow">▶</span>
+                <div class="menu-subcategory ${isSubExpanded ? 'expanded' : ''}" data-sub-id="${subId}">
+                    <div class="subcategory-header">
+                        <span class="subcategory-arrow">▶</span>
                         ${sub.name}
                     </div>
-                    <<divdiv class="subcategory-content" style="display: ${isSubExpanded ? 'block' : 'none'}">
+                    <div class="subcategory-content" style="display: ${isSubExpanded ? 'block' : 'none'}">
                         ${this._renderLeafCategories(sub, state)}
                     </div>
                 </div>
@@ -63,7 +59,7 @@ class Renderer {
         Object.entries(sub.leafCategories || {}).forEach(([leafId, leaf]) => {
             const isLeafActive = state.sidebar.activeLeafId === leafId;
             html += `
-                <<aa href="#" class="menu-leaf ${isLeafActive ? 'active' : ''}" data-leaf-id="${leafId}">
+                <a href="#" class="menu-leaf ${isLeafActive ? 'active' : ''}" data-leaf-id="${leafId}">
                     ${leaf.name}
                 </a>
             `;
@@ -71,10 +67,6 @@ class Renderer {
         return html;
     }
 
-    /**
-     * 渲染内容区域 (网站卡片列表)
-     * 规范：Interaction_Flow.md 4.2
-     */
     renderView(state) {
         if (state.currentView === 'category') {
             const leafId = state.sidebar.activeLeafId;
@@ -90,7 +82,7 @@ class Renderer {
             }
 
             this.container.innerHTML = `
-                <<divdiv class="card-grid">
+                <div class="card-grid">
                     ${sites.map(site => this._createCardHtml(site)).join('')}
                 </div>
             `;
@@ -102,19 +94,19 @@ class Renderer {
 
     _createCardHtml(site) {
         return `
-            <<aa href="${site.url}" target="_blank" class="site-card" data-id="${site.id}">
-                <<imgimg src="${site.icon}" class="card-icon" onerror="this.src='https://via.placeholder.com/32'">
-                <<spanspan class="card-title">${site.name}</span>
-                <<spanspan class="card-desc">${site.desc}</span>
+            <a href="${site.url}" target="_blank" class="site-card" data-id="${site.id}">
+                <img src="${site.icon}" class="card-icon" onerror="this.src='https://via.placeholder.com/32'">
+                <span class="card-title">${site.name}</span>
+                <span class="card-desc">${site.desc}</span>
             </a>
         `;
     }
 
     _getEmptyState(msg = '请选择一个分类开始浏览') {
         return `
-            <<divdiv style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:var(--color-text-dim); text-align:center; opacity:0.6">
-                <<divdiv style="font-size:48px; margin-bottom:16px">📂</div>
-                <<pp>${msg}</p>
+            <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:var(--color-text-dim); text-align:center; opacity:0.6">
+                <div style="font-size:48px; margin-bottom:16px">📂</div>
+                <p>${msg}</p>
             </div>
         `;
     }
@@ -126,25 +118,20 @@ class Renderer {
             return;
         }
         this.container.innerHTML = `
-            <<divdiv class="card-grid">
+            <div class="card-grid">
                 ${results.map(site => this._createCardHtml(site)).join('')}
             </div>
         `;
         this._bindCardEvents();
     }
 
-    /**
-     * 事件绑定
-     */
     _bindSidebarEvents() {
-        // 大类点击
         this.sidebar.querySelectorAll('.menu-category').forEach(el => {
             el.addEventListener('click', (e) => {
                 e.stopPropagation();
                 const catId = el.dataset.catId;
                 state.set('sidebar.activeCategoryId', catId);
                 
-                // 自动展开第一个中类
                 const firstSub = el.querySelector('.menu-subcategory');
                 if (firstSub) {
                     state.set('sidebar.activeSubCategoryId', firstSub.dataset.subId);
@@ -156,7 +143,6 @@ class Renderer {
             });
         });
 
-        // 中类点击
         this.sidebar.querySelectorAll('.menu-subcategory').forEach(el => {
             el.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -166,7 +152,6 @@ class Renderer {
             });
         });
 
-        // 小类点击
         this.sidebar.querySelectorAll('.menu-leaf').forEach(el => {
             el.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -178,7 +163,6 @@ class Renderer {
 
     _bindCardEvents() {
         this.container.querySelectorAll('.site-card').forEach(card => {
-            // 实现 Haptic_Feel.md 中的鼠标跟随偏移
             card.addEventListener('mousemove', (e) => {
                 const rect = card.getBoundingClientRect();
                 const x = (e.clientX - rect.left - rect.width / 2) * 0.05;

@@ -92,7 +92,6 @@ body {
     overflow-y: auto;
     padding: var(--grid-gap);
     scroll-behavior: smooth;
-    /* 触觉规范：滚动阻尼感可通过自定义滚动条实现 */
 }
 
 /* 滚动条美化 */

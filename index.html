@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<<htmlhtml lang="zh-CN" data-theme="system">
-<<headhead>
-    <<metameta charset="UTF-8">
-    <<metameta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <<titletitle>WebNav V2</title>
-    <!-- 
-        FOUC 彻底解决协议: 
-        1. 首屏 CSS 内联
-        2. 异步主题恢复内联脚本 
-    -->
-    <<stylestyle>
+<html lang="zh-CN" data-theme="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WebNav V2</title>
+    <style>
         :root {
             --color-bg: #ffffff;
             --color-text: #111827;
@@ -26,7 +21,7 @@
             background-color: var(--color-bg);
             color: var(--color-text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            overflow: hidden; /* 整个页面由独立区域滚动 */
+            overflow: hidden;
         }
         #app-shell {
             display: grid;
@@ -38,7 +33,6 @@
         #app-shell.collapsed {
             grid-template-columns: var(--sidebar-collapsed-width) 1fr;
         }
-        /* 骨架屏基础样式 */
         .skeleton {
             background: linear-gradient(90deg, var(--color-bg) 25%, rgba(128,128,128,0.1) 50%, var(--color-bg) 75%);
             background-size: 200% 100%;
@@ -49,7 +43,7 @@
             100% { background-position: -200% 0; }
         }
     </style>
-    <<scriptscript>
+    <script>
         (function() {
             const savedTheme = localStorage.getItem('theme') || 'system';
             document.documentElement.dataset.theme = savedTheme;
@@ -59,29 +53,27 @@
             }
         })();
     </script>
-    <<linklink rel="stylesheet" href="./assets/css/core.css">
-    <<linklink rel="stylesheet" href="./assets/css/components.css">
-    <<linklink rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/core.css">
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-    <<divdiv id="app-shell">
-        <<asideaside id="sidebar">
-            <!-- 侧边栏内容将由 render.js 填充 -->
+    <div id="app-shell">
+        <aside id="sidebar">
         </aside>
-        <<mainmain id="main-content">
-            <<headerheader id="top-nav">
-                <!-- 导航栏内容将由 render.js 填充 -->
+        <main id="main-content">
+            <header id="top-nav">
             </header>
-            <<sectionsection id="view-container">
-                <!-- 核心视图区域 -->
+            <section id="view-container">
             </section>
         </main>
     </div>
 
-    <<scriptscript src="./assets/js/state.js" defer></script>
-    <<scriptscript src="./assets/js/data.js" defer></script>
-    <<scriptscript src="./assets/js/search.js" defer></script>
-    <<scriptscript src="./assets/js/render.js" defer></script>
-    <<scriptscript src="./assets/js/app.js" defer></script>
+    <script src="./assets/js/state.js" defer></script>
+    <script src="./assets/js/data.js" defer></script>
+    <script src="./assets/js/search.js" defer></script>
+    <script src="./assets/js/render.js" defer></script>
+    <script src="./assets/js/alive.js" defer></script>
+    <script src="./assets/js/app.js" defer></script>
 </body>
 </html>

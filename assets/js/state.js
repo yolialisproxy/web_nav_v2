@@ -9,7 +9,7 @@ class State {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
             sidebar: {
-                mode: 'expanded', // 'expanded' | 'collapsed'
+                mode: 'expanded',
                 activeCategoryId: null,
                 activeSubCategoryId: null,
                 activeLeafId: null
@@ -19,31 +19,25 @@ class State {
                 query: '',
                 results: []
             },
-            currentView: 'category', // 'category' | 'search'
+            currentView: 'category',
             filterTags: []
         };
         this._subscribers = [];
     }
 
-    /**
-     * 更新状态并通知所有订阅者
-     * @param {string} key 状态键名 (支持嵌套路径如 'sidebar.mode')
-     * @param {any} value 新值
-     */
     set(key, value) {
         const keys = key.split('.');
         let target = this._state;
         
-        for (let i = 0; i << keys keys.length - 1; i++) {
+        for (let i = 0; i < keys.length - 1; i++) {
             target = target[keys[i]];
         }
         
         const lastKey = keys[keys.length - 1];
-        if (target[lastKey] === value) return; // 无变化不触发
+        if (target[lastKey] === value) return;
 
         target[lastKey] = value;
 
-        // 特殊处理：主题持久化
         if (key === 'theme') {
             localStorage.setItem('theme', value);
             document.documentElement.dataset.theme = this._resolveTheme(value);
@@ -75,6 +69,5 @@ class State {
     }
 }
 
-// 导出单例
 const state = new State();
 window.state = state;

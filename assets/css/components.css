@@ -130,7 +130,6 @@
 .site-card:hover {
     border-color: var(--color-primary);
     box-shadow: 0 4px 12px var(--color-shadow);
-    /* 鼠标跟随偏移将在 JS 中实现，此处预留变换 */
 }
 
 .site-card:active {
