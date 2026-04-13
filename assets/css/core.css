@@ -1,0 +1,111 @@
+:root {
+    /* --- 核心尺寸 --- */
+    --sidebar-width: 280px;
+    --sidebar-collapsed-width: 64px;
+    --nav-height: 60px;
+    --card-radius: 10px;
+    --transition-duration: 180ms;
+    --transition-curve: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --grid-gap: 16px;
+
+    /* --- 颜色系统 (Light) --- */
+    --color-bg: #ffffff;
+    --color-bg-alt: #f9fafb;
+    --color-text: #111827;
+    --color-text-dim: #6b7280;
+    --color-primary: #7c3aed;
+    --color-primary-soft: rgba(124, 58, 237, 0.1);
+    --color-border: #e5e7eb;
+    --color-shadow: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    --color-bg: #0a0a0a;
+    --color-bg-alt: #141414;
+    --color-text: #f3f4f6;
+    --color-text-dim: #9ca3af;
+    --color-primary: #a78bfa;
+    --color-primary-soft: rgba(167, 139, 250, 0.1);
+    --color-border: #262626;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    transition: background-color var(--transition-duration) var(--transition-curve);
+}
+
+/* 布局容器 */
+#app-shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+    height: 100vh;
+    width: 100vw;
+    transition: grid-template-columns var(--transition-duration) var(--transition-curve);
+}
+
+#app-shell.collapsed {
+    grid-template-columns: var(--sidebar-collapsed-width) 1fr;
+}
+
+/* 侧边栏 */
+#sidebar {
+    height: 100vh;
+    background-color: var(--color-bg-alt);
+    border-right: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 主内容区 */
+#main-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#top-nav {
+    height: var(--nav-height);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--grid-gap);
+    background-color: var(--color-bg);
+    z-index: 100;
+}
+
+#view-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--grid-gap);
+    scroll-behavior: smooth;
+    /* 触觉规范：滚动阻尼感可通过自定义滚动条实现 */
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-dim);
+}

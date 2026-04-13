@@ -1,0 +1,101 @@
+{
+  "config": {
+    "version": "1.0",
+    "lastUpdated": "2026-04-13"
+  },
+  "categories": {
+    "cat_ai": {
+      "name": "AI 工具",
+      "icon": "fa-robot",
+      "subCategories": {
+        "sub_llm": {
+          "name": "大语言模型",
+          "leafCategories": {
+            "leaf_chat": {
+              "name": "对话机器人",
+              "siteIds": ["site_claude", "site_gpt4"]
+            },
+            "leaf_code": {
+              "name": "编程辅助",
+              "siteIds": ["site_cursor", "site_copilot"]
+            }
+          }
+        },
+        "sub_image": {
+          "name": "图像生成",
+          "leafCategories": {
+            "leaf_midjourney": {
+              "name": "艺术创作",
+              "siteIds": ["site_midjourney"]
+            }
+          }
+        }
+      }
+    },
+    "cat_dev": {
+      "name": "开发者",
+      "icon": "fa-code",
+      "subCategories": {
+        "sub_docs": {
+          "name": "技术文档",
+          "leafCategories": {
+            "leaf_mdn": {
+              "name": "前端指南",
+              "siteIds": ["site_mdn"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "sites": {
+    "site_claude": {
+      "name": "Claude",
+      "url": "https://claude.ai",
+      "desc": "Anthropic 开发的高智能AI助手",
+      "icon": "https://claude.ai/favicon.ico",
+      "tags": ["LLM", "Coding"],
+      "priority": 100
+    },
+    "site_gpt4": {
+      "name": "ChatGPT",
+      "url": "https://chatgpt.com",
+      "desc": "OpenAI 开发的通用人工智能",
+      "icon": "https://chatgpt.com/favicon.ico",
+      "tags": ["LLM", "General"],
+      "priority": 90
+    },
+    "site_cursor": {
+      "name": "Cursor",
+      "url": "https://cursor.com",
+      "desc": "AI 驱动的下一代代码编辑器",
+      "icon": "https://cursor.com/favicon.ico",
+      "tags": ["IDE", "Coding"],
+      "priority": 100
+    },
+    "site_copilot": {
+      "name": "GitHub Copilot",
+      "url": "https://github.com/features/copilot",
+      "desc": "全球最流行的 AI 编程助手",
+      "icon": "https://github.com/favicon.ico",
+      "tags": ["LLM", "Coding"],
+      "priority": 80
+    },
+    "site_midjourney": {
+      "name": "Midjourney",
+      "url": "https://midjourney.com",
+      "desc": "顶级 AI 艺术图像生成器",
+      "icon": "https://midjourney.com/favicon.ico",
+      "tags": ["Image", "Art"],
+      "priority": 100
+    },
+    "site_mdn": {
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org",
+      "desc": "Web 开发者的终极权威指南",
+      "icon": "https://developer.mozilla.org/favicon.ico",
+      "tags": ["Frontend", "Docs"],
+      "priority": 100
+    }
+  }
+}
