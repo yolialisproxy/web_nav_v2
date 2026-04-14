@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" width="280" height="60">
+  <defs>
+    <!-- 主渐变 -->
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 图标渐变 -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 光泽效果 -->
+    <linearGradient id="iconShine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:white;stop-opacity:0.4" />
+      <stop offset="50%" style="stop-color:white;stop-opacity:0" />
+      <stop offset="100%" style="stop-color:black;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- 阴影 -->
+    <filter id="textShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#764ba2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- 左侧图标 - 导航罗盘 -->
+  <g transform="translate(5, 5)">
+    <!-- 外圈 -->
+    <circle cx="25" cy="25" r="24" fill="url(#iconGradient)" opacity="0.15"/>
+    <circle cx="25" cy="25" r="20" fill="url(#iconGradient)" opacity="0.25"/>
+    <circle cx="25" cy="25" r="16" fill="url(#iconGradient)"/>
+    
+    <!-- 光泽 -->
+    <circle cx="25" cy="25" r="16" fill="url(#iconShine)"/>
+    
+    <!-- 中心点 -->
+    <circle cx="25" cy="25" r="3" fill="white" opacity="0.9"/>
+    
+    <!-- 方向指示 - 北 -->
+    <path d="M25 12 L25 20" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="25,8 22,14 28,14" fill="white"/>
+    
+    <!-- 方向指示 - 南 -->
+    <path d="M25 30 L25 38" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    
+    <!-- 方向指示 - 东 -->
+    <path d="M32 25 L38 25" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+    
+    <!-- 方向指示 - 西 -->
+    <path d="M12 25 L18 25" stroke="white" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  
+  <!-- 文字部分 - 啃魂导航 -->
+  <g font-family="'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif" filter="url(#textShadow)">
+    <!-- 啃 -->
+    <text x="60" y="40" font-size="30" font-weight="700" fill="url(#textGradient)">啃</text>
+    
+    <!-- 魂 -->
+    <text x="92" y="40" font-size="30" font-weight="700" fill="url(#textGradient)">魂</text>
+    
+    <!-- 导航 -->
+    <text x="124" y="40" font-size="30" font-weight="700" fill="url(#textGradient)">导航</text>
+  </g>
+  
+  <!-- 装饰性元素 -->
+  <g opacity="0.25">
+    <!-- 右侧装饰圆点 -->
+    <circle cx="220" cy="12" r="6" fill="url(#iconGradient)"/>
+    <circle cx="235" cy="48" r="5" fill="url(#iconGradient)"/>
+    <circle cx="250" cy="20" r="4" fill="url(#iconGradient)"/>
+    <circle cx="260" cy="40" r="3" fill="url(#iconGradient)"/>
+    
+    <!-- 连接线 -->
+    <line x1="200" y1="30" x2="215" y2="15" stroke="url(#iconGradient)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="200" y1="30" x2="230" y2="45" stroke="url(#iconGradient)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- 底部装饰线 -->
+  <line x1="60" y1="50" x2="190" y2="50" stroke="url(#textGradient)" stroke-width="2" opacity="0.2" stroke-linecap="round"/>
+</svg>
