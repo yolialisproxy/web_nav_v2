@@ -1,0 +1,18 @@
+/* 响应式布局适配 */
+@media (max-width: 768px) {
+  #app-shell {
+    grid-template-columns: var(--sidebar-collapsed-width) 1fr !important;
+  }
+  #sidebar {
+    position: fixed;
+    left: -280px;
+    top: 0;
+    bottom: 0;
+    width: 280px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  #app-shell.collapsed #sidebar {
+    transform: translateX(280px);
+  }
+}
