@@ -42,13 +42,15 @@ def save_data(data):
 
 def get_all_sites_urls(data):
     urls = set()
-    for big_name, big in data['categories'].items():
+    if 'categories' not in data:
+        return urls
+    for big in data['categories']:
         for mid in big.get('subcategories', []):
             for small in mid.get('minor_categories', []):
                 for site in small.get('sites', []):
-                    if 'url' in site: urls.add(site['url'])
+                    if 'url' in site:
+                        urls.add(site['url'].strip().lower())
     return urls
-
 # ========== 核心逻辑 ==========
 def fetch_site_for_category(category_name):
     """针对特定分类定向采集站点"""
@@ -78,14 +80,15 @@ def calibrate():
     targets = [] # (big_idx, mid_idx, small_idx, category_name)
     total_count = 0
     
-    for b_idx, (b_name, b_val) in enumerate(data['categories'].items()):
-        for m_idx, m_val in enumerate(b_val.get('subcategories', [])):
-            for s_idx, s_val in enumerate(m_val.get('minor_categories', [])):
-                sites = s_val.get('sites', [])
+    for b_idx, big in enumerate(data.values()):
+        b_name = big.get('name', f"大类{b_idx}")
+        for m_idx, mid in enumerate(big.get('subcategories', [])):
+            for s_idx, small in enumerate(mid.get('minor_categories', [])):
+                sites = small.get('sites', [])
                 count = len(sites)
                 total_count += count
                 if count < MIN_PER_SMALL:
-                    targets.append((b_name, m_idx, s_idx, s_val.get('name', 'Unknown')))
+                    targets.append((b_idx, m_idx, s_idx, small.get('name', 'Unknown')))
     
     log(f"📊 当前总数: {total_count} | 目标: {TARGET_TOTAL} | 缺口: {TARGET_TOTAL - total_count}")
     log(f"⚠️ 填充不足的小类: {len(targets)} 个")

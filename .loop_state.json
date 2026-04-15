@@ -1,14 +1,13 @@
 {
   "status": "running",
-  "last_updated": "2026-04-15 19:02:50",
-  "current_total": 200,
-  "target_total": 9000,
-  "remaining_gap": 8800,
-  "underfilled_categories": 74,
-  "next_action": "wait_network",
-  "last_error": "duckduckgo SSL proxy failure - all network search unavailable",
-  "retry_counter": 1,
-  "last_batch_added": 0,
-  "note": "All existing sites correctly distributed. No new sites can be collected until network proxy issue is resolved.",
-  "last_skipped": 0
+  "next_action": "calibrate_fill.py --continue",
+  "last_updated": "2026-04-15 20:38:37",
+  "total_sites": 600,
+  "target": 9000,
+  "progress": 6.67,
+  "batch_counter": 6,
+  "error": "SSL proxy handshake failure - DuckDuckGo search temporarily unavailable",
+  "last_added_category": "AI工具 > 图像生成 > 视觉AI",
+  "added_this_batch": 0,
+  "note": "Cron job active. Continuous fill calibration running. Network proxy error encountered, will retry on next run."
 }
