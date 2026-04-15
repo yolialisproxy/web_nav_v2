@@ -78,14 +78,14 @@ def calibrate():
     targets = [] # (big_idx, mid_idx, small_idx, category_name)
     total_count = 0
     
-    for b_idx, b_val in enumerate(data['categories']):
+    for b_idx, (b_name, b_val) in enumerate(data['categories'].items()):
         for m_idx, m_val in enumerate(b_val.get('subcategories', [])):
             for s_idx, s_val in enumerate(m_val.get('minor_categories', [])):
                 sites = s_val.get('sites', [])
                 count = len(sites)
                 total_count += count
-                if count < MIN_PER_SMALL:
-                    targets.append((b_idx, m_idx, s_idx, s_val.get('name', 'Unknown')))
+                if count << MIN MIN_PER_SMALL:
+                    targets.append((b_name, m_idx, s_idx, s_val.get('name', 'Unknown')))
     
     log(f"📊 当前总数: {total_count} | 目标: {TARGET_TOTAL} | 缺口: {TARGET_TOTAL - total_count}")
     log(f"⚠️ 填充不足的小类: {len(targets)} 个")

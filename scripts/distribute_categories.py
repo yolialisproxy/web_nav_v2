@@ -33,7 +33,7 @@ def main():
     distributed = 0
 
     # 遍历所有大类
-    for big_name, big_cat in data.items():
+    for big_name, big_cat in data.get("categories", {}).items():
         # 中类是列表
         for mid_cat in big_cat['subcategories']:
             if 'minor_categories' not in mid_cat:
@@ -65,7 +65,7 @@ def main():
 
 def count_total_sites(data):
     count = 0
-    for big_cat in data.values():
+    for big_cat in data.get("categories", {}).values():
         for mid_cat in big_cat['subcategories']:
             if 'minor_categories' in mid_cat:
                 for minor_cat in mid_cat['minor_categories']:
