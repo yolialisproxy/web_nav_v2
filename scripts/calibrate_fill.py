@@ -42,7 +42,7 @@ def save_data(data):
 
 def get_all_sites_urls(data):
     urls = set()
-    for big in data.values():
+    for big_name, big in data['categories'].items():
         for mid in big.get('subcategories', []):
             for small in mid.get('minor_categories', []):
                 for site in small.get('sites', []):
@@ -51,7 +51,7 @@ def get_all_sites_urls(data):
 
 # ========== 核心逻辑 ==========
 def fetch_site_for_category(category_name):
-    \"\"\"针对特定分类定向采集站点\"\"\"
+    """针对特定分类定向采集站点"""
     query = f"免费 {category_name} 在线工具"
     # 简单模拟搜索结果采集 (实际中可调用搜索API或特定目录)
     # 这里实现一个基础的关键词搜索模拟，通过DuckDuckGo或类似接口
@@ -75,17 +75,17 @@ def calibrate():
     existing_urls = get_all_sites_urls(data)
     
     # 1. 扫描缺口
-    targets = [] # (big_name, mid_idx, small_idx, category_name)
+    targets = [] # (big_idx, mid_idx, small_idx, category_name)
     total_count = 0
     
-    for b_name, b_val in data.items():
+    for b_idx, b_val in enumerate(data['categories']):
         for m_idx, m_val in enumerate(b_val.get('subcategories', [])):
             for s_idx, s_val in enumerate(m_val.get('minor_categories', [])):
                 sites = s_val.get('sites', [])
                 count = len(sites)
                 total_count += count
-                if count << MIN MIN_PER_SMALL:
-                    targets.append((b_name, m_idx, s_idx, s_val.get('name', 'Unknown')))
+                if count < MIN_PER_SMALL:
+                    targets.append((b_idx, m_idx, s_idx, s_val.get('name', 'Unknown')))
     
     log(f"📊 当前总数: {total_count} | 目标: {TARGET_TOTAL} | 缺口: {TARGET_TOTAL - total_count}")
     log(f"⚠️ 填充不足的小类: {len(targets)} 个")

@@ -35,71 +35,60 @@ async function init() {
         }
     }
 
-    // 4. 绑定全局快捷键 (Ctrl+K / Cmd+K)
-    window.addEventListener('keydown', (e) => {
-        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-            e.preventDefault();
-            toggleSearch();
-        }
-    });
+  // 4. 绑定全局快捷键 (Ctrl+K / Cmd+K)
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+      e.preventDefault();
+      toggleSearch();
+    }
+  });
 
-    // 5. 初始渲染
-    state._notify();
+  // Add search button click listener
+  const searchButton = document.getElementById('search-button');
+  if (searchButton) {
+    searchButton.addEventListener('click', toggleSearch);
+  }
+
+  // Add search input listeners
+  const searchInput = document.getElementById('search-input');
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const query = e.target.value;
+      state.set('search.query', query);
+      const results = searchEngine.query(query);
+      state.set('search.results', results);
+    });
+    searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        toggleSearch();
+      }
+    });
+  }
+
+  // 5. 初始渲染
+  state._notify();
 }
 
 function toggleSearch() {
-    const active = state.get('search.active');
-    state.set('search.active', !active);
-    state.set('currentView', !active ? 'search' : 'category');
-    
-    const overlay = document.getElementById('search-overlay');
-    if (!overlay) {
-        createSearchUI();
-    }
-    
-    const searchOverlay = document.getElementById('search-overlay');
+  const active = state.get('search.active');
+  state.set('search.active', !active);
+  state.set('currentView', !active ? 'search' : 'category');
+  
+  const searchContainer = document.querySelector('.search-container');
+  const searchInput = document.getElementById('search-input');
+  if (searchContainer && searchInput) {
     if (!active) {
-        searchOverlay.classList.add('active');
-        setTimeout(() => {
-            document.getElementById('search-input').focus();
-        }, 50);
+      searchContainer.classList.add('active');
+      setTimeout(() => {
+        searchInput.focus();
+      }, 50);
     } else {
-        searchOverlay.classList.remove('active');
+      searchContainer.classList.remove('active');
     }
+  }
 }
 
-function createSearchUI() {
-    const overlay = document.createElement('div');
-    overlay.id = 'search-overlay';
-    overlay.className = 'search-overlay';
-    overlay.innerHTML = `
-        <div class="search-container">
-            <input type="text" id="search-input" class="search-input" placeholder="快速搜索网站 (Ctrl+K)...">
-        </div>
-    `;
-    document.body.appendChild(overlay);
 
-    const input = document.getElementById('search-input');
-    input.addEventListener('input', (e) => {
-        const query = e.target.value;
-        state.set('search.query', query);
-        const results = searchEngine.query(query);
-        state.set('search.results', results);
-        
-        if (query === '') {
-            state.set('search.active', false);
-            state.set('currentView', 'category');
-            overlay.classList.remove('active');
-        }
-    });
-
-    input.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            input.value = '';
-            toggleSearch();
-        }
-    });
-}
 
 // 启动
 init();

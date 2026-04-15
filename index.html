@@ -1,94 +1,59 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="system">
+<html lang="en">
 <head>
  <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
- <title>WebNav V2</title>
- <style>
- :root {
- --color-bg: #ffffff;
- --color-text: #111827;
- --sidebar-width: 280px;
- --sidebar-collapsed-width: 64px;
- }
- [data-theme="dark"] {
- --color-bg: #111827;
- --color-text: #f9fafb;
- }
- body {
- margin: 0;
- padding: 0;
- background-color: var(--color-bg);
- color: var(--color-text);
- font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
- overflow: hidden;
- }
- #app-shell {
- display: grid;
- grid-template-columns: var(--sidebar-width) 1fr;
- height: 100vh;
- width: 100vw;
- transition: grid-template-columns 180ms cubic-bezier(0.25, 0.1, 0.25, 1);
- }
- #app-shell.collapsed {
- grid-template-columns: var(--sidebar-collapsed-width) 1fr;
- }
- .skeleton {
- background: linear-gradient(90deg, var(--color-bg) 25%, rgba(128,128,128,0.1) 50%, var(--color-bg) 75%);
- background-size: 200% 100%;
- animation: skeleton-loading 1.5s infinite;
- }
- @keyframes skeleton-loading {
- 0% { background-position: 200% 0; }
- 100% { background-position: -200% 0; }
- }
- </style>
- <script>
- (function() {
- const savedTheme = localStorage.getItem('theme') || 'system';
- document.documentElement.dataset.theme = savedTheme;
- if (savedTheme === 'system') {
- const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
- document.documentElement.dataset.theme = prefersDark ? 'dark' : 'light';
- }
- })();
- </script>
- <link rel="stylesheet" href="./assets/css/core.css">
- <link rel="stylesheet" href="./assets/css/components.css">
- <link rel="stylesheet" href="./assets/css/responsive.css">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>WebNav - AI-Powered Navigation Website</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+ <link rel="stylesheet" href="assets/css/all.css?v=2.6">
 </head>
 <body>
- <div id="app-shell">
- <aside id="sidebar">
- <div class="sidebar-header">
- <h1>WebNav</h1>
- <button id="toggle-sidebar" aria-label="切换侧边栏">☰</button>
- </div>
- <nav class="categories">
- <ul id="category-list"></ul>
- </nav>
- </aside>
- <main id="main-content">
- <header id="top-nav">
- <div class="search-container">
- <input type="text" id="search-input" placeholder="搜索网站..." aria-label="搜索网站">
- <button id="search-button" aria-label="搜索">🔍</button>
- </div>
- <div class="theme-toggle">
- <button id="theme-toggle" aria-label="切换主题">🌙</button>
- </div>
- </header>
- <section id="view-container">
- <div class="skeleton" style="height: 100vh;"></div>
- </section>
- </main>
- </div>
 
- <script src="./assets/js/state.js" defer></script>
- <script src="./assets/js/data.js" defer></script>
- <script src="./assets/js/search.js" defer></script>
- <script src="./assets/js/render.js" defer></script>
- <script src="./assets/js/alive.js" defer></script>
- <script src="./assets/js/app.js" defer></script>
+<header class="header">
+ <a href="#" class="logo">WebNav</a>
+ <div class="search-container">
+  <input type="text" id="search-input" placeholder="Search sites...">
+  <button id="search-btn">Search</button>
+ </div>
+ <div id="menu-bars" class="fas fa-bars"></div>
+</header>
+
+<aside class="sidebar">
+ <h2>Categories</h2>
+ <ul class="category-list">
+  <!-- Categories will be populated by JS -->
+ </ul>
+</aside>
+
+<main id="main-content">
+ <div class="site-list">
+  <!-- Sites will be populated by JS -->
+ </div>
+</main>
+
+<footer class="footer">
+ <div class="box-container">
+  <div class="box"><h3>quick links</h3><a href="#home">home</a><a href="#about">about</a></div>
+  <div class="box"><h3>contact info</h3><a href="mailto:yoli_alis@2925.com">yoli_alis@2925.com</a></div>
+ </div>
+ <div class="credit">created by <span>啃魂</span> | all rights reserved</div>
+</footer>
+
+<div class="theme-toggler">
+ <div class="toggle-btn"><i class="fas fa-cog"></i></div>
+ <h3>choose color</h3>
+ <div class="buttons">
+  <div class="theme-btn" style="background: #3498db"></div>
+  <div class="theme-btn" style="background: #ff3344"></div>
+  <div class="theme-btn" style="background: #27ae60"></div>
+  <div class="theme-btn" style="background: #f39c12"></div>
+  <div class="theme-btn" style="background: #9b59b6"></div>
+ </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/app.js" defer></script>
 </body>
 </html>

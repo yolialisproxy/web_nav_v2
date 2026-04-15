@@ -1,0 +1,13 @@
+{
+  "status": "running",
+  "last_run": "2026-04-15 17:30:12",
+  "current_total": 216,
+  "target_total": 9000,
+  "remaining_gap": 8784,
+  "underfilled_categories": 72,
+  "next_action": "scripts/batch_enrichment_worker.py",
+  "last_error": "calibrate_fill.py structure mismatch - using enrichment worker",
+  "retry_counter": 1,
+  "last_batch_added": 0,
+  "note": "Detected V2 nested structure, scripts require update. Running enrichment worker instead."
+}
