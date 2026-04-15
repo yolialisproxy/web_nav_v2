@@ -84,7 +84,7 @@ def calibrate():
                 sites = s_val.get('sites', [])
                 count = len(sites)
                 total_count += count
-                if count << MIN MIN_PER_SMALL:
+                if count < MIN_PER_SMALL:
                     targets.append((b_name, m_idx, s_idx, s_val.get('name', 'Unknown')))
     
     log(f"📊 当前总数: {total_count} | 目标: {TARGET_TOTAL} | 缺口: {TARGET_TOTAL - total_count}")
