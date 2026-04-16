@@ -1,13 +1,1 @@
-{
-  "status": "running",
-  "next_action": "speed_fill.py --source awesome",
-  "last_updated": "2026-04-15 22:18:00",
-  "total_sites": 600,
-  "target": 9000,
-  "progress": 0.066,
-  "batch_counter": 12,
-  "error": "DuckDuckGo API is blocked. Switched to offline Awesome Lists import mode.",
-  "last_added_category": "Offline import running",
-  "added_this_batch": 0,
-  "note": "Cron job active. Next run will continue importing from GitHub awesome lists offline."
-}
+{"status": "running", "next_action": "collect_awesome", "last_run": "2026-04-16 11:21:17", "current_count": 605, "target": 9000, "note": "DuckDuckGo SSL blocked, switched to Awesome Lists mining"}
