@@ -1,1 +1,1 @@
-{"status": "running", "next_action": "collect_awesome", "last_run": "2026-04-16 11:21:17", "current_count": 605, "target": 9000, "note": "DuckDuckGo SSL blocked, switched to Awesome Lists mining"}
+{"status": "running", "next_action": "calibrate_fill.py", "last_run": "2026-04-17 08:12", "total_sites": 24886, "pending_categories": 681, "total_categories": 729, "completion_percent": 7.2, "last_result": "✅ Collected 3760 new sites from Awesome Lists. DuckDuckGo SSL blocked. Buffer ready for distribution."}

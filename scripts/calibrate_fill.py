@@ -42,13 +42,12 @@ def save_data(data):
 
 def get_all_sites_urls(data):
     urls = set()
-    if 'categories' not in data:
-        return urls
-    for big in data['categories']:
-        for mid in big.get('subcategories', []):
-            for small in mid.get('minor_categories', []):
-                for site in small.get('sites', []):
-                    if 'url' in site:
+    for cat in data.values():
+        if not isinstance(cat, dict): continue
+        for sub in cat.get('subcategories', []):
+            for minor in sub.get('minor_categories', []):
+                for site in minor.get('sites', []):
+                    if isinstance(site, dict) and 'url' in site:
                         urls.add(site['url'].strip().lower())
     return urls
 # ========== 核心逻辑 ==========
@@ -71,27 +70,58 @@ def fetch_site_for_category(category_name):
         log(f"采集 {category_name} 失败: {e}")
     return []
 
+def find_minor_category(data, cat_name):
+    for big in data.values():
+        if not isinstance(big, dict): continue
+        for sub in big.get('subcategories', []):
+            for minor in sub.get('minor_categories', []):
+                if minor.get('name') == cat_name:
+                    return minor
+    return None
+
 def calibrate():
     log("🚀 启动填充校准程序...")
     data = load_data()
     existing_urls = get_all_sites_urls(data)
     
     # 1. 扫描缺口
-    targets = [] # (big_idx, mid_idx, small_idx, category_name)
-    total_count = 0
+    targets = []
+    total_count = sum(len(minor['sites']) for cat in data.values() for sub in cat.get('subcategories', []) for minor in sub.get('minor_categories', []))
     
-    for b_idx, big in enumerate(data.values()):
-        b_name = big.get('name', f"大类{b_idx}")
-        for m_idx, mid in enumerate(big.get('subcategories', [])):
-            for s_idx, small in enumerate(mid.get('minor_categories', [])):
-                sites = small.get('sites', [])
-                count = len(sites)
-                total_count += count
+    # 统计每个小类站点数量
+    small_cat_counts = {}
+    
+
+    
+    # 遍历分类树
+    data.pop('version', None)
+    for big_id, big in data.items():
+        # Skip non-dict entries at root level
+        if not isinstance(big, dict):
+            continue
+        b_name = big.get('name', big_id)
+        # Iterate over array subcategories (v2 structure)
+        for mid in big.get('subcategories', []):
+            mid_id = mid.get('id', mid.get('name'))
+            m_name = mid.get('name', mid_id)
+            # Iterate over array minor categories
+            for small in mid.get('minor_categories', []):
+                small_id = small.get('id', small.get('name'))
+                s_name = small.get('name', small_id)
+                count = len(small.get('sites', []))
                 if count < MIN_PER_SMALL:
-                    targets.append((b_idx, m_idx, s_idx, small.get('name', 'Unknown')))
+                    targets.append( (count, s_name) )
+    
+    # 按空缺排序（最空优先）
+    targets.sort()
     
     log(f"📊 当前总数: {total_count} | 目标: {TARGET_TOTAL} | 缺口: {TARGET_TOTAL - total_count}")
     log(f"⚠️ 填充不足的小类: {len(targets)} 个")
+
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == '--scan-only':
+        log("✅ 扫描完成，退出。")
+        return
 
     if total_count >= TARGET_TOTAL and len(targets) == 0:
         log("✅ 所有指标均已达标，无需校准。")
@@ -102,26 +132,36 @@ def calibrate():
     
     distributed_count = 0
     
-    with ThreadPoolExecutor(max_workers=THREADS) as executor:
-        future_to_cat = {executor.submit(fetch_site_for_category, t[3]): t for t in targets}
+    if targets:
+        # 处理前 10 个最空的小类
+        batch = targets[:10]
+        log(f"\n🔍 开始填充前 10 个最空的小类:")
+        for cnt, name in batch:
+            log(f"  - {name}: {cnt}/{MIN_PER_SMALL}")
+        
+        # 并行采集
+        with ThreadPoolExecutor(max_workers=THREADS) as executor:
+            future_to_cat = {executor.submit(fetch_site_for_category, name): (cnt, name) for cnt, name in batch}
         
         for future in as_completed(future_to_cat):
-            b_name, m_idx, s_idx, cat_name = future_to_cat[future]
+            cnt, cat_name = future_to_cat[future]
             try:
                 found_urls = future.result()
                 # 过滤已存在的
                 new_urls = [u for u in found_urls if u not in existing_urls]
                 
                 # 计算需要多少个
-                current_count = len(data[b_name]['subcategories'][m_idx]['minor_categories'][s_idx]['sites'])
-                needed = MIN_PER_SMALL - current_count
+                needed = MIN_PER_SMALL - cnt
                 
                 to_add = new_urls[:needed]
+                
+                # 暂时先添加到全局站点列表，后续分配
                 for url in to_add:
-                    data[b_name]['subcategories'][m_idx]['minor_categories'][s_idx]['sites'].append({
+                    data['sites'].append({
                         "url": url,
-                        "title": "", # 等待内容补完脚本处理
-                        "description": ""
+                        "title": "",
+                        "description": "",
+                        "minor_category": cat_name
                     })
                     existing_urls.add(url)
                     distributed_count += 1

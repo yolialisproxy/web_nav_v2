@@ -154,11 +154,18 @@ for cat in CATEGORIES.values():
 with open('data/websites.json', 'r') as f:
     old_data = json.load(f)
 
-all_sites = []
-for cat in old_data.values():
-    for sub in cat['subcategories']:
-        for minc in sub['minor_categories']:
-            all_sites.extend(minc['sites'])
+all_sites = old_data.get('sites', [])
+if not all_sites:
+    # 兼容旧格式
+    all_sites = []
+    if isinstance(old_data, dict):
+        for cat in old_data.values():
+            if isinstance(cat, dict) and 'subcategories' in cat:
+                for sub in cat['subcategories']:
+                    if isinstance(sub, dict) and 'minor_categories' in sub:
+                        for minc in sub['minor_categories']:
+                            if isinstance(minc, dict) and 'sites' in minc:
+                                all_sites.extend(minc['sites'])
 
 print(f"读取到总网站数: {len(all_sites)}")
 random.shuffle(all_sites)
