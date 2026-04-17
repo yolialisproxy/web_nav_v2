@@ -86,7 +86,7 @@ def calibrate():
 
     # 1. 扫描缺口
     targets = []
-    total_count = sum(len(minor['sites']) for cat in data['categories'] for sub in cat.get('subcategories', []) for minor in sub.get('minor_categories', []))
+    total_count = sum(len(minor['sites']) for cat in data.values() for sub in cat.get('subcategories', []) for minor in sub.get('minor_categories', []))
 
     # 统计每个小类站点数量
     small_cat_counts = {}
@@ -157,7 +157,7 @@ def calibrate():
 
                 # 暂时先添加到全局站点列表，后续分配
                 for url in to_add:
-                    data['sites'].append({
+                    data['siteIds'].append({
                         "url": url,
                         "title": "",
                         "description": "",

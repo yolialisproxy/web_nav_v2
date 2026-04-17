@@ -525,7 +525,7 @@
               },
               {
                 "url": "https://graphics.stanford.edu/~seander/bithacks.html",
-                "title": "Bit Twiddling Hacks",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -717,7 +717,7 @@
               },
               {
                 "url": "http://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/",
-                "title": "Numbers Everyone Should Know | Everything is Data",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -789,7 +789,7 @@
               },
               {
                 "url": "http://thenewstack.io/led-amazon-microservices-architecture/",
-                "title": "What Led Amazon to its Own Microservices Architecture - The New Stack",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -855,8 +855,8 @@
               },
               {
                 "url": "https://github.careers",
-                "title": "GitHub Careers",
-                "description": "GitHub Careers",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {

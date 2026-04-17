@@ -34,11 +34,16 @@ def get_empty_sites():
     websites = load_websites()
     processed = load_state()
     empty = []
-    for top_level, top_data in websites.items():
-        for subcat in top_data['subcategories']:
-            for minor_cat in subcat['minor_categories']:
-                for idx, site in enumerate(minor_cat['sites']):
-                    url = site['url']
+    # 数据现在是 { TOP_CATEGORY: { SUB_CATEGORY: { MINOR_CATEGORY: [sites...] } } } 结构
+    for top_name, top_data in websites.items():
+        if not isinstance(top_data, dict): continue
+        for sub_name, sub_data in top_data.items():
+            if not isinstance(sub_data, dict): continue
+            for minor_name, sites in sub_data.items():
+                if not isinstance(sites, list): continue
+                for idx, site in enumerate(sites):
+                    if not isinstance(site, dict): continue
+                    url = site.get('url', '')
                     if url in processed:
                         continue
                     title = site.get('title', '').strip()
@@ -60,21 +65,21 @@ async def enrich_site(session, site_item):
                 return None
             html = await resp.text()
             soup = BeautifulSoup(html, 'html.parser')
-            
+
             title = ''
             if soup.title:
                 title = soup.title.string.strip()
-            
+
             desc = ''
             meta_desc = soup.find('meta', attrs={'name': 'description'})
             if meta_desc:
                 desc = meta_desc.get('content', '').strip()
-            
+
             if len(title) > 60:
                 title = title[:57] + '...'
             if len(desc) > 80:
                 desc = desc[:77] + '...'
-            
+
             return {
                 'url': url,
                 'title': title,
@@ -95,7 +100,7 @@ async def worker(queue, websites, processed, results):
                         if subcat['name'] == sub:
                             for mcat in subcat['minor_categories']:
                                 if mcat['name'] == minor:
-                                    site = mcat['sites'][item['index']]
+                                    site = mcat['siteIds'][item['index']]
                                     site['title'] = res['title']
                                     if res['description']:
                                         site['description'] = res['description']
@@ -112,25 +117,25 @@ async def main():
     if not empty:
         print("All sites are enriched!")
         return
-    
+
     websites = load_websites()
     processed = load_state()
     results = {'success': 0, 'failed': 0}
-    
+
     queue = asyncio.Queue(maxsize=MAX_CONCURRENT*2)
     workers = [asyncio.create_task(worker(queue, websites, processed, results)) for _ in range(MAX_CONCURRENT)]
-    
+
     for item in empty:
         await queue.put(item)
-    
+
     await queue.join()
-    
+
     for w in workers:
         w.cancel()
-    
+
     save_websites(websites)
     save_state(processed)
-    
+
     print(f"\n✅ Batch completed. Success: {results['success']}, Failed: {results['failed']}")
 
 if __name__ == "__main__":

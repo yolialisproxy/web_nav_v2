@@ -34,10 +34,10 @@ def analyze_level(data_list, level_name):
     """
     if not data_list:
         return None
-    
+
     counts = [i['count'] for i in data_list]
     items = sorted(data_list, key=lambda x: x['count'])
-    
+
     return {
         'level': level_name,
         'total_items': len(items),
@@ -99,7 +99,7 @@ def process_json(input_path):
     # 1. 格式标准化 (内存中)
     categories = []
     all_sites_count = 0
-    
+
     if isinstance(data, dict) and not ('sites' in data and 'categories' in data):
         # V1-style nested format: { "Cat": { "subcategories": [...] } }
         for cat_name, cat_val in data.items():
@@ -107,25 +107,25 @@ def process_json(input_path):
             cat_sites = cat_val.get('sites', []) if isinstance(cat_val, dict) else []
             cat_obj['site_count'] = len(cat_sites)
             all_sites_count += len(cat_sites)
-            
+
             for sub in cat_val.get('subcategories', []) if isinstance(cat_val, dict) else []:
                 sub_obj = {'name': sub['name'], 'minor_categories': []}
                 sub_sites = sub.get('sites', [])
                 sub_obj['site_count'] = len(sub_sites)
                 all_sites_count += len(sub_sites)
-                
+
                 for minor in sub.get('minor_categories', []) if isinstance(sub, dict) else []:
                     minor_sites = minor.get('sites', [])
                     minor_obj = {'name': minor['name'], 'count': len(minor_sites)}
                     all_sites_count += len(minor_sites)
                     sub_obj['minor_categories'].append(minor_obj)
-                
+
                 cat_obj['subcategories'].append(sub_obj)
             categories.append(cat_obj)
     elif 'categories' in data:
         # V2 structure: { "categories": [...], "sites": [...] }
         categories = data['categories']
-        all_sites_count = len(data['sites'])
+        all_sites_count = len(data['siteIds'])
     else:
         print("❌ 未知数据格式")
         return
@@ -141,15 +141,15 @@ def process_json(input_path):
             c_count += sub.get('site_count', 0)
             for minor in sub.get('minor_categories', []):
                 c_count += minor.get('count', 0)
-        
+
         cat_stats.append({'name': cat['name'], 'count': c_count})
-        
+
         for sub in cat.get('subcategories', []):
             s_count = sub.get('site_count', 0)
             for minor in sub.get('minor_categories', []):
                 s_count += minor.get('count', 0)
             sub_stats.append({'name': f"{cat['name']} > {sub['name']}", 'count': s_count})
-            
+
             for minor in sub.get('minor_categories', []):
                 minor_stats.append({'name': f"{cat['name']} > {sub['name']} > {minor['name']}", 'count': minor.get('count', 0)})
 
@@ -170,7 +170,7 @@ def main():
     if not Path(input_path).exists():
         print(f"❌ 文件不存在: {input_path}")
         sys.exit(1)
-    
+
     process_json(input_path)
 
 if __name__ == "__main__":

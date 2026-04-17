@@ -86,7 +86,7 @@ def main():
                 new = [u for u in urls if u not in existing][:need]
 
                 for url in new:
-                    data['categories'][bidx]['subcategories'][midx]['minor_categories'][sidx]['sites'].append({"url": url})
+                    data['categories'][bidx]['subcategories'][midx]['minor_categories'][sidx]['siteIds'].append({"url": url})
                     existing.add(url)
                     added += 1
                     total += 1

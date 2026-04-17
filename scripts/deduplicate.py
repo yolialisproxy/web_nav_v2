@@ -157,12 +157,12 @@ def process_json(input_path):
             'sites': all_sites,
             'categories': all_categories
         }
-        print(f"✅ 自动升级完成: 共 {len(data['sites'])} 个网站")
+        print(f"✅ 自动升级完成: 共 {len(data['siteIds'])} 个网站")
 
-    original_count = len(data['sites'])
+    original_count = len(data['siteIds'])
 
     # 全量去重，直接操作全局 sites 列表
-    deduplicated_sites = deduplicate_sites(data['sites'])
+    deduplicated_sites = deduplicate_sites(data['siteIds'])
     kept_ids = {site['id'] for site in deduplicated_sites}
 
     # 清理所有分类中的无效ID引用
@@ -173,10 +173,10 @@ def process_json(input_path):
             cat['siteIds'] = [id for id in cat['siteIds'] if id in kept_ids]
             cleaned_count += original_len - len(cat['siteIds'])
 
-    data['sites'] = deduplicated_sites
+    data['siteIds'] = deduplicated_sites
 
     # 统计
-    processed_count = len(data['sites'])
+    processed_count = len(data['siteIds'])
     print(f"\n📊 统计: 原始网站数 {original_count} → 去重后 {processed_count}")
     print(f"   移除: {original_count - processed_count} 个重复项")
     print(f"   清理无效引用: {cleaned_count} 个")

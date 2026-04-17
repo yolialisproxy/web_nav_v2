@@ -123,13 +123,13 @@
               },
               {
                 "url": "https://roadmap.sh/devops\\",
-                "title": "DevOps Roadmap: Learn to become a DevOps Engineer or SRE",
-                "description": "Step by step guide for DevOps, SRE or any other Operations Role in 2026",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.khanacademy.org/computing/computer-science/informationtheory\\",
-                "title": "Client Challenge",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -184,7 +184,7 @@
               {
                 "url": "https://aws.amazon.com/sqs/\\",
                 "title": "",
-                "description": "Amazon SQS fully managed message queuing makes it easy to decouple  and scale microservices, distributed systems, and serverless applications.",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -219,7 +219,7 @@
               },
               {
                 "url": "http://kafka.apache.org/documentation.html#introduction\\",
-                "title": "Documentation Redirect Legacy | Apache Kafka",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -315,7 +315,7 @@
               },
               {
                 "url": "http://www.oodesign.com/single-responsibility-principle.html\\",
-                "title": "Design Patterns | Object Oriented Design",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -393,31 +393,31 @@
               },
               {
                 "url": "https://startupnextdoor.com/ive-been-acquired-by-amazon/?src=ciu",
-                "title": "I've Been Acquired by Amazon &mdash; Startup Next Door",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://medium.freecodecamp.org/why-i-studied-full-time-for-8-months-for-a-google-interview-cc662ce9bb13",
-                "title": "Why I studied full-time for 8 months for a Google interview",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
                 "title": "",
-                "description": "Create sophisticated formatting for your prose and code on GitHub with simple syntax.",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.amazon.com/Programming-Language-Brian-W-Kernighan/dp/0131103628",
                 "title": "",
-                "description": "Amazon.com: C Programming Language, 2nd Edition: 9780131103627: Brian W. Kernighan, Dennis M. Ritchie: Books",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://exercism.org/tracks",
-                "title": "Exercism",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -429,26 +429,26 @@
               },
               {
                 "url": "https://www.hackerearth.com/for-developers/",
-                "title": "For developers - Resources for technical recruitment",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.scaler.com/topics/",
-                "title": "Scaler Topics - Technopedia for Your Mastermind",
-                "description": "Scaler Topics provides programming articles related to Python, Java, Data Structure, C/C++ and other popular programming languages with easy to follow tutorials and example programs.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://programiz.pro/",
-                "title": "Overcome your fear of coding | Programiz PRO",
-                "description": "Programiz Pro helps you learn coding faster with hands-on projects, guided paths, and professional certification. Everything you need to become job-ready.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.byte-by-byte.com/choose-the-right-language-for-your-coding-interview/",
-                "title": "Choose the right language for your coding interview - Byte by Byte",
-                "description": "Some say you have to use Java. Some say to never use Java. So what programming language is actually right for your interview? Here&#039;s how to choose.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -459,8 +459,8 @@
               },
               {
                 "url": "http://ankisrs.net/",
-                "title": "Anki - powerful, intelligent flashcards",
-                "description": "Anki - a program which makes remembering things easy.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -477,32 +477,32 @@
               },
               {
                 "url": "https://www.hackerrank.com/",
-                "title": "HackerRank - Online Coding Tests and Technical Interviews",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://codeforces.com/",
-                "title": "Codeforces",
-                "description": "Codeforces. Programming competitions and contests, programming community",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://codility.com/programmers/",
-                "title": "Developer Training | Test Coding Skills Online - Codility",
-                "description": "Become a better programmer. Develop your coding skills with our programming lessons.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://practice.geeksforgeeks.org/explore/?page=1",
-                "title": "Practice | GeeksforGeeks | A computer science portal for geeks",
-                "description": "Platform to practice programming problems. Solve company interview questions and improve your coding intellect",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.algoexpert.io/product",
-                "title": "AlgoExpert | Ace the Coding Interviews",
-                "description": "The leading platform to prepare for coding interviews. Master essential algorithms and data structures, and land your dream job with AlgoExpert.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -519,31 +519,31 @@
               },
               {
                 "url": "https://www.eskimo.com/~scs/cclass/int/sx8.html",
-                "title": "Chapter 22: Pointers to Pointers",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://graphics.stanford.edu/~seander/bithacks.html",
-                "title": "Bit Twiddling Hacks",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://bits.stephan-brumme.com/",
-                "title": "the bit twiddler",
-                "description": "Bit manipulation explained: the bit twiddler",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://pconrad.github.io/old_pconrad_cs16/topics/bitOps/",
-                "title": "Practice with bit operators (|,&amp;,^,&lt;&lt;,&gt;&gt;)",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/",
-                "title": "Maximum Depth or Height of a Binary Tree - GeeksforGeeks",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -561,13 +561,13 @@
               },
               {
                 "url": "https://sourcemaking.com/design-patterns-and-tips",
-                "title": "101 Design Patterns &amp; Tips for Developers",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb",
-                "title": "Jupyter Notebook Viewer",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -579,7 +579,7 @@
               },
               {
                 "url": "http://www.dabeaz.com/GIL",
-                "title": ":Understanding the Python GIL",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -597,7 +597,7 @@
               },
               {
                 "url": "http://jasonpolites.github.io/tao-of-testing/ch3-1.1.html",
-                "title": "Chapter 3 - Dependency Injection &mdash; The Tao of Testing",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -621,7 +621,7 @@
               },
               {
                 "url": "https://www.careercup.com/resume",
-                "title": "Hiring Consulting &mdash; Gayle Laakmann McDowell",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -645,38 +645,38 @@
               },
               {
                 "url": "https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513",
-                "title": "Learn Data Structures and Algorithms | Udacity",
-                "description": "Learn data structures and algorithms online with Udacity. Evaluate data structures and algorithms for any open-ended problem and implement a solution.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.educative.io/courses/grokking-the-behavioral-interview",
-                "title": "Grokking the Behavioral Interview - Free AI-Powered Course",
-                "description": "The ultimate guide to behavioral interviews. Developed by FAANG engineers. Use real-world questions, video recording, and structured strategies to get interview-ready in just a few hours.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://algo.monster/?utm_campaign=jwasham&amp;utm_medium=referral&amp;utm_content=coding-interview-university&amp;utm_source=github",
-                "title": "AlgoMonster: The Most Structured Way to Prepare for Coding Interviews",
-                "description": "Master key coding interview patterns with AlgoMonster. Save time with AI-powered tools and an optimized curriculum to confidently land your dream job.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.gainlo.co/#!/",
-                "title": "Best offshore sportsbook: top US betting sites 2025 now",
-                "description": "Discover the best offshore sportsbook for U.S. players in 2025. Compare bonuses, odds, payouts, and secure mobile betting options.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.pramp.com/",
                 "title": "",
-                "description": "Join thousands of professionals practicing live mock interviews & interview questions online, with peers, for free. We help you prep & land your dream tech job. Learn more!",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://interviewing.io",
                 "title": "",
-                "description": "Get actionable feedback, get awesome at technical interviews, and get fast-tracked at top companies.",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -687,13 +687,13 @@
               },
               {
                 "url": "https://www.hellointerview.com/?utm_source=ciu",
-                "title": "Hello Interview | Hello Interview",
-                "description": "The best way to prepare for your next SWE/EM interview. Mock interviews, exclusive content, company questions, guides, and more.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://codemia.io/?utm_source=ciu",
-                "title": "Codemia | Master System Design Interviews Through Active Practice",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -705,7 +705,7 @@
               },
               {
                 "url": "http://jeffe.cs.illinois.edu/teaching/algorithms/",
-                "title": "Algorithms by Jeff Erickson",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -717,37 +717,37 @@
               },
               {
                 "url": "http://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/",
-                "title": "Numbers Everyone Should Know | Everything is Data",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://blog.tsunanet.net/2010/11/how-long-does-it-take-to-make-context.html",
-                "title": "Tsuna's blog: How long does it take to make a context switch?",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://ksat.me/a-plain-english-introduction-to-cap-theorem",
-                "title": "A plain English introduction to CAP theorem &laquo; Kaushik Sathupadi",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://raft.github.io/",
-                "title": "Raft Consensus Algorithm",
-                "description": "Raft is a consensus algorithm that is designed to be easy to understand.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://thesecretlivesofdata.com/raft/",
-                "title": "Raft",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.tom-e-white.com/2007/11/consistent-hashing.html",
-                "title": "Consistent Hashing | Tom White",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -759,13 +759,13 @@
               },
               {
                 "url": "http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones",
-                "title": "Redirecting...",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.aosabook.org/en/distsys.html",
-                "title": "Redirecting&hellip;",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -783,13 +783,13 @@
               },
               {
                 "url": "https://blog.clevertap.com/how-to-remove-duplicates-in-large-datasets/",
-                "title": "How to remove duplicates in large datasets - CleverTap",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://thenewstack.io/led-amazon-microservices-architecture/",
-                "title": "What Led Amazon to its Own Microservices Architecture - The New Stack",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
@@ -801,14 +801,14 @@
               },
               {
                 "url": "https://support.github.com?tags=dotcom-404",
-                "title": "Sign in for Software Support and Product Help - GitHub Support",
-                "description": "Access your support options and sign in to your account for GitHub software support and product assistance. Get the help you need from our dedicated support team.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://githubstatus.com",
-                "title": "GitHub Status",
-                "description": "Welcome to GitHub&#39;s home for real-time and historical data on system performance.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -819,56 +819,56 @@
               },
               {
                 "url": "https://resources.github.com",
-                "title": "Resources to help you build, secure,  and scale with GitHub · GitHub",
-                "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://docs.github.com/get-started/exploring-integrations/about-building-integrations",
                 "title": "",
-                "description": "You can build integrations to extend GitHub&#x27;s functionality.",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://partner.github.com",
-                "title": "GitHub Partner Program · GitHub",
-                "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://cli.github.com",
-                "title": "GitHub CLI | Take GitHub to the command line",
-                "description": "Take GitHub to the command line",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://github.community",
-                "title": "community · Discussions · GitHub",
-                "description": "Ask questions, get answers, share expertise.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://services.github.com",
-                "title": "Expert Services | GitHub · GitHub",
-                "description": "From idea to implementation, our experts are ready to help your team get wherever you want to go. Start a conversation with us about how we can bring your goals to life.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://github.careers",
-                "title": "GitHub Careers",
-                "description": "GitHub Careers",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://socialimpact.github.com",
-                "title": "Redirecting&hellip;",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://shop.github.com",
-                "title": "GitHub Shop",
-                "description": "GitHub&#39;s collection of high-quality, sustainable gifts for yourself, a friend, or even your pet.",
+                "title": "",
+                "description": "",
                 "source": "awesome"
               },
               {
@@ -957,7 +957,7 @@
               },
               {
                 "url": "https://0xacab.org/liberate/backupninja\\",
-                "title": "Sign in · GitLab",
+                "title": "",
                 "description": "",
                 "source": "awesome"
               },

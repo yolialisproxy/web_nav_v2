@@ -64,17 +64,17 @@ def main():
     if fmt == 'v1':
         for cat_name, cat in import_data.items():
             if 'sites' in cat:
-                import_sites.extend(cat['sites'])
+                import_sites.extend(cat['siteIds'])
             if 'subcategories' in cat:
                 for sub in cat['subcategories']:
                     if 'sites' in sub:
-                        import_sites.extend(sub['sites'])
+                        import_sites.extend(sub['siteIds'])
                     if 'minor_categories' in sub:
                         for minor in sub['minor_categories']:
                             if 'sites' in minor:
-                                import_sites.extend(minor['sites'])
+                                import_sites.extend(minor['siteIds'])
     elif fmt == 'v2':
-        import_sites = import_data['sites']
+        import_sites = import_data['siteIds']
     elif fmt == 'flat_list':
         import_sites = import_data
 
@@ -82,7 +82,7 @@ def main():
 
     # 计算现有指纹
     existing_hashes = set()
-    for site in main_data['sites']:
+    for site in main_data['siteIds']:
         existing_hashes.add(normalize_site_hash(site))
 
     # 去重合并
@@ -111,7 +111,7 @@ def main():
     print(f"💾 备份已保存: {backup_file}")
 
     # 合并写入
-    main_data['sites'].extend(new_sites)
+    main_data['siteIds'].extend(new_sites)
 
     # 原子写入
     temp_path = main_path.with_suffix('.tmp')
@@ -120,7 +120,7 @@ def main():
 
     temp_path.replace(main_path)
 
-    print(f"✅ 导入完成，总网站数: {len(main_data['sites'])}")
+    print(f"✅ 导入完成，总网站数: {len(main_data['siteIds'])}")
     print("✨ 导入成功!")
 
 if __name__ == "__main__":

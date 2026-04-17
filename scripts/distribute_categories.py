@@ -61,7 +61,7 @@ def main():
                     minor_cat['sites'] = []
 
                 # 每个小类上限100
-                while len(minor_cat['sites']) <<  100 and len(pool) > 0:
+                while len(minor_cat.get('sites', [])) < 100 and len(pool) > 0:
                     site = pool.pop(0)
                     minor_cat['sites'].append(site)
                     distributed += 1
@@ -76,7 +76,7 @@ def main():
 
     with open(pool_path, 'w', encoding='utf-8') as f:
         if pool_meta:
-            pool_meta['sites'] = pool
+            pool_meta['siteIds'] = pool
             json.dump(pool_meta, f, ensure_ascii=False, indent=2)
         else:
             json.dump(pool, f, ensure_ascii=False, indent=2)
