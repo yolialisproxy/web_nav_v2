@@ -1,1 +1,1 @@
-{"status": "running", "next_action": "scripts/content_enrichment_worker.py", "last_run": "2026-04-17 11:22:19", "total_sites": 2847, "target": 9000, "progress": 31.6, "buffer_count": 3760, "last_operation": "awesome_collection_completed"}
+{"status": "running", "last_run": "2026-04-17 14:20:12", "total_sites": 2847, "buffer_size": 3783, "target": 9000, "gap": 6153, "next_action": "scripts/speed_fill.py"}

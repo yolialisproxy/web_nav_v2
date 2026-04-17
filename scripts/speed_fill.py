@@ -40,7 +40,7 @@ def save_data(data):
 
 def get_all_urls(data):
     urls = set()
-    for b in data.values():
+    for b in data.get('categories', []):
         for m in b.get('subcategories', []):
             for s in m.get('minor_categories', []):
                 for site in s.get('sites', []):
@@ -67,12 +67,12 @@ def main():
 
     # 预先生成所有缺口任务
     tasks = []
-    for bname, bval in data.items():
-        for midx, mval in enumerate(bval.get('subcategories', [])):
-            for sidx, sval in enumerate(mval.get('minor_categories', [])):
-                count = len(sval.get('sites', []))
+    for bidx, b in enumerate(data.get('categories', [])):
+        for midx, m in enumerate(b.get('subcategories', [])):
+            for sidx, s in enumerate(m.get('minor_categories', [])):
+                count = len(s.get('sites', []))
                 if count < MIN_PER_SMALL:
-                    tasks.append( (bname, midx, sidx, sval['name'], MIN_PER_SMALL - count) )
+                    tasks.append( (bidx, midx, sidx, s['name'], MIN_PER_SMALL - count) )
 
     log(f"启动极速填充 | 当前:{total} | 目标:{TARGET_TOTAL} | 缺口分类:{len(tasks)}")
 
@@ -80,13 +80,13 @@ def main():
         futures = { exe.submit(fetch_batch, t[3]): t for t in tasks }
 
         for future in as_completed(futures):
-            bname, midx, sidx, name, need = futures[future]
+            bidx, midx, sidx, name, need = futures[future]
             try:
                 urls = future.result()
                 new = [u for u in urls if u not in existing][:need]
 
                 for url in new:
-                    data[bname]['subcategories'][midx]['minor_categories'][sidx]['sites'].append({"url": url})
+                    data['categories'][bidx]['subcategories'][midx]['minor_categories'][sidx]['sites'].append({"url": url})
                     existing.add(url)
                     added += 1
                     total += 1

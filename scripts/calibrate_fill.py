@@ -83,16 +83,16 @@ def calibrate():
     log("🚀 启动填充校准程序...")
     data = load_data()
     existing_urls = get_all_sites_urls(data)
-    
+
     # 1. 扫描缺口
     targets = []
-    total_count = sum(len(minor['sites']) for cat in data.values() for sub in cat.get('subcategories', []) for minor in sub.get('minor_categories', []))
-    
+    total_count = sum(len(minor['sites']) for cat in data['categories'] for sub in cat.get('subcategories', []) for minor in sub.get('minor_categories', []))
+
     # 统计每个小类站点数量
     small_cat_counts = {}
-    
 
-    
+
+
     # 遍历分类树
     data.pop('version', None)
     for big_id, big in data.items():
@@ -111,10 +111,10 @@ def calibrate():
                 count = len(small.get('sites', []))
                 if count < MIN_PER_SMALL:
                     targets.append( (count, s_name) )
-    
+
     # 按空缺排序（最空优先）
     targets.sort()
-    
+
     log(f"📊 当前总数: {total_count} | 目标: {TARGET_TOTAL} | 缺口: {TARGET_TOTAL - total_count}")
     log(f"⚠️ 填充不足的小类: {len(targets)} 个")
 
@@ -129,32 +129,32 @@ def calibrate():
 
     # 2. 优先级排序（从小类数量升序）
     # 注意：这里简化处理，直接遍历 targets
-    
+
     distributed_count = 0
-    
+
     if targets:
         # 处理前 10 个最空的小类
         batch = targets[:10]
         log(f"\n🔍 开始填充前 10 个最空的小类:")
         for cnt, name in batch:
             log(f"  - {name}: {cnt}/{MIN_PER_SMALL}")
-        
+
         # 并行采集
         with ThreadPoolExecutor(max_workers=THREADS) as executor:
             future_to_cat = {executor.submit(fetch_site_for_category, name): (cnt, name) for cnt, name in batch}
-        
+
         for future in as_completed(future_to_cat):
             cnt, cat_name = future_to_cat[future]
             try:
                 found_urls = future.result()
                 # 过滤已存在的
                 new_urls = [u for u in found_urls if u not in existing_urls]
-                
+
                 # 计算需要多少个
                 needed = MIN_PER_SMALL - cnt
-                
+
                 to_add = new_urls[:needed]
-                
+
                 # 暂时先添加到全局站点列表，后续分配
                 for url in to_add:
                     data['sites'].append({
@@ -165,7 +165,7 @@ def calibrate():
                     })
                     existing_urls.add(url)
                     distributed_count += 1
-                
+
                 log(f"✅ {cat_name}: 补充 {len(to_add)}/{needed} 个站点")
             except Exception as e:
                 log(f"❌ {cat_name} 处理异常: {e}")

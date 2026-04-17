@@ -5,7 +5,7 @@ from hermes_tools import web_search, web_extract
 def enrich_website_data(input_path, output_path):
     with open(input_path, 'r') as f:
         data = json.load(f)
-    
+
     for category, subcats in data.items():
         for subcat in subcats.get('subcategories', []):
             for minor_cat in subcat.get('minor_categories', []):
@@ -25,9 +25,12 @@ def enrich_website_data(input_path, output_path):
                                     content = extract_result['results'][0].get('content', '')
                                     site['title'] = site['title'] or '未命名'
                                     site['description'] = site['description'] or content[:200] if content else '无描述'
+                            except Exception as e:
+                                site['title'] = site['title'] or '未命名'
+                                site['description'] = site['description'] or '无法获取描述'
                     if 'id' not in site:
                         site['id'] = site['url'].replace('https://', '').replace('http://', '').replace('/', '_')
-    
+
     with open(output_path, 'w') as f:
         json.dump(data, f, indent=2)
 
