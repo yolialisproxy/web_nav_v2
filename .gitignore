@@ -45,3 +45,5 @@ CLAUDE.md
 .graphify_extract.json
 
 hermes-agent/
+
+data/backups/

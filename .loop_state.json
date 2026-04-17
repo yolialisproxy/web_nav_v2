@@ -1,8 +1,12 @@
 {
   "status": "running",
-  "last_run": "2026-04-17T19:20:31Z",
-  "next_action": "scripts/audit_quality.py",
+  "last_run": "2026-04-17T19:26:42Z",
+  "next_action": "scripts/enrich_sites_batch.py",
   "total_sites": 11616,
-  "completion_percent": 100,
-  "queue_status": "idle"
+  "completion_percent": 3,
+  "queue_status": "enriching",
+  "last_audit": {
+    "title_missing": 11221,
+    "description_missing": 9539
+  }
 }
