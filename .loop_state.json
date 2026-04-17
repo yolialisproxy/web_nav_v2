@@ -1,1 +1,1 @@
-{"status": "running", "next_action": "calibrate_fill.py", "last_run": "2026-04-17 08:12", "total_sites": 24886, "pending_categories": 681, "total_categories": 729, "completion_percent": 7.2, "last_result": "✅ Collected 3760 new sites from Awesome Lists. DuckDuckGo SSL blocked. Buffer ready for distribution."}
+{"status": "running", "next_action": "scripts/content_enrichment_worker.py", "last_run": "2026-04-17 11:22:19", "total_sites": 2847, "target": 9000, "progress": 31.6, "buffer_count": 3760, "last_operation": "awesome_collection_completed"}
