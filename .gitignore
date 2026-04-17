@@ -48,3 +48,6 @@ hermes-agent/
 
 data/backups/
 data/.backup/
+.loop_state.json
+.loop_state.json
+.loop_state.json
