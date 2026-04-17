@@ -47,3 +47,4 @@ CLAUDE.md
 hermes-agent/
 
 data/backups/
+data/.backup/

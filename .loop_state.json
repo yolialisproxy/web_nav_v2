@@ -1,12 +1,13 @@
 {
   "status": "running",
-  "last_run": "2026-04-17T19:26:42Z",
-  "next_action": "scripts/enrich_sites_batch.py",
-  "total_sites": 11616,
-  "completion_percent": 3,
+  "last_run": "2026-04-17T19:29:42Z",
+  "next_action": "scripts/fast_meta_extractor.py",
+  "total_sites": 11641,
+  "completion_percent": 3.6,
   "queue_status": "enriching",
-  "last_audit": {
-    "title_missing": 11221,
-    "description_missing": 9539
+  "current_batch": {
+    "processed": 136,
+    "success": 25,
+    "remaining": 11196
   }
 }
