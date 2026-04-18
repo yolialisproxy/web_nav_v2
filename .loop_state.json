@@ -1,13 +1,14 @@
 {
   "status": "running",
-  "last_run": "2026-04-18T11:06:10",
-  "last_action": "calibrate_fill",
+  "last_run": "2026-04-18T11:56:32",
+  "last_action": "scripts/calibrate_fill.py",
   "next_action": "scripts/calibrate_fill.py",
-  "total_sites": 21762,
+  "total_sites": 27689,
   "last_added": 0,
-  "empty_small_categories": 576,
+  "empty_small_categories": 219,
+  "filling_categories": 219,
   "network_error": true,
-  "next_retry": 600,
-  "last_error": "SSL Handshake failure on DuckDuckGo endpoint - proxy SSL inspection issue",
-  "failure_streak": 1
+  "next_retry": 1800,
+  "failure_streak": 4,
+  "notes": "SSL proxy failure confirmed. Network operations suspended for 30 minutes. Buffer is empty. System idle waiting for network recovery."
 }

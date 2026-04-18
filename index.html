@@ -50,20 +50,94 @@
         }
 
         /* 顶部导航栏 */
-        .top-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 56px;
-            background: #1a1a1a;
-            border-bottom: 1px solid #2a2a2a;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            z-index: 100;
-            backdrop-filter: blur(10px);
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 56px;
+        background: rgba(26, 26, 26, 0.8);
+        border-bottom: 1px solid #2a2a2a;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        z-index: 100;
+        backdrop-filter: blur(10px);
+    }
+
+    /* 侧边栏样式 */
+    .sidebar {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        bottom: 0;
+        width: 260px;
+        background: #141414;
+        border-right: 1px solid #2a2a2a;
+        padding: 20px 0;
+        overflow-y: auto;
+        transition: all 0.3s ease;
+        z-index: 90;
+    }
+
+    .sidebar-group {
+        margin-bottom: 24px;
+    }
+
+    .sidebar-title {
+        padding: 0 20px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #555;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .sidebar-item {
+        padding: 8px 20px;
+        color: #aaa;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sidebar-item:hover {
+        background: #1a1a1a;
+        color: #fff;
+    }
+
+    .sidebar-item.active {
+        background: rgba(255, 215, 0, 0.1);
+        color: #ffd700;
+        border-right: 2px solid #ffd700;
+    }
+
+    .sidebar-item .count {
+        font-size: 11px;
+        opacity: 0.5;
+    }
+
+    /* 主内容区适配 */
+    .main-content {
+        margin-left: 260px;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    @media (max-width: 1024px) {
+        .sidebar {
+            transform: translateX(-260px);
         }
+        .main-content {
+            margin-left: 0;
+        }
+        .sidebar.open {
+            transform: translateX(0);
+        }
+    }
 
         .logo {
             font-size: 18px;
@@ -135,64 +209,546 @@
             color: #fff;
         }
 
-        .category-card .count {
-            font-size: 14px;
-            color: #888;
-        }
+.category-card .count {
+        font-size: 14px;
+        color: #888;
+    }
 
-        @media (max-width: 768px) {
-            .category-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 14px;
-            }
-        }
+    .category-card .sub-count {
+        font-size: 12px;
+        color: #555;
+        margin-top: 4px;
+    }
 
-        @media (max-width: 480px) {
-            .category-grid {
-                grid-template-columns: 1fr;
-            }
+    @media (max-width: 768px) {
+        .category-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
         }
-    </style>
+    }
+
+    @media (max-width: 480px) {
+        .category-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* 视图头部 */
+    .view-header {
+        padding: 0 0 30px;
+    }
+
+    .breadcrumb {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 12px;
+    }
+
+    .breadcrumb-item {
+        color: #888;
+        cursor: pointer;
+        transition: color 0.2s;
+    }
+
+    .breadcrumb-item:hover {
+        color: #ffd700;
+    }
+
+    .breadcrumb-sep {
+        margin: 0 8px;
+        color: #444;
+    }
+
+    .view-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    .view-desc {
+        font-size: 14px;
+        color: #666;
+    }
+
+    /* 网站网格 */
+    .sites-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+
+    .site-card {
+        background: #1a1a1a;
+        border: 1px solid #2a2a2a;
+        border-radius: 10px;
+        padding: 18px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        display: block;
+    }
+
+    .site-card:hover {
+        border-color: #ffd700;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 215, 0, 0.08);
+    }
+
+    .site-path {
+        font-size: 11px;
+        color: #555;
+        margin-bottom: 8px;
+    }
+
+    .site-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        margin-bottom: 6px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .site-desc {
+        font-size: 13px;
+        color: #777;
+        line-height: 1.5;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .site-url {
+        font-size: 12px;
+        color: #ffd700;
+        opacity: 0.7;
+    }
+
+    /* 空状态 */
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #555;
+        font-size: 15px;
+    }
+
+    @media (max-width: 1024px) {
+        .sites-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 640px) {
+        .sites-grid {
+            grid-template-columns: 1fr;
+        }
+        .view-title {
+            font-size: 22px;
+        }
+    }
+</style>
 </head>
 <body>
     <div id="app">
         <div class="loading">正在加载数据...</div>
     </div>
 
-    <script>
-        const App = {
-            data: null,
-            currentView: 'grid',
-            activeCategory: null,
-            searchQuery: '',
+<script>
+ const App = {
+ data: null,
+ currentView: 'grid',
+ activeCategory: null,
+ searchQuery: '',
+ majorCategories: {},
+ middleCategories: {},
+ minorCategories: {},
 
-            async init() {
-                try {
-                    const res = await fetch('./data/websites.json');
-                    if (!res.ok) throw new Error('数据文件加载失败');
+ async init() {
+ try {
+ const res = await fetch('./data/websites.json');
+ if (!res.ok) throw new Error('数据文件加载失败');
 
-                    App.data = await res.json();
-                    console.log(`✅ 数据加载完成，共 ${App.data.length} 个网站`);
+ App.data = await res.json();
+ this.buildCategoryTree();
+ console.log(`✅ 数据加载完成，共 ${this.getTotalSites()} 个网站`);
 
-                    App.render();
-                } catch (err) {
-                    console.error('❌ 数据加载失败:', err);
-                    document.querySelector('.loading').textContent = '数据加载失败，请刷新重试';
-                }
-            },
+ App.render();
+ this.bindEvents();
+ } catch (err) {
+ console.error('❌ 数据加载失败:', err);
+ document.querySelector('.loading').textContent = '数据加载失败，请刷新重试';
+ }
+ },
 
-            render() {
-                const app = document.getElementById('app');
-                app.innerHTML = `
-                    <h1 style="padding: 40px; text-align: center; color: #ffd700;">啃魂导航 V2</h1>
-                    <div style="text-align: center; color: #888; margin-top: 10px;">
-                        已加载 ${App.data.length} 个网站
-                    </div>
-                `;
-            }
-        };
+ buildCategoryTree() {
+ const majors = {};
+ for (const majorName in this.data) {
+ const major = this.data[majorName];
+ let majorCount = 0;
+ const middles = {};
 
-        document.addEventListener('DOMContentLoaded', () => App.init());
-    </script>
+ if (major.subcategories) {
+ for (const mid of major.subcategories) {
+ let midCount = 0;
+ const minors = {};
+
+ if (mid.minor_categories) {
+ for (const min of mid.minor_categories) {
+ const sites = min.sites || [];
+ minors[min.name] = {
+ name: min.name,
+ id: min.id,
+ sites: sites,
+ count: sites.length
+ };
+ midCount += sites.length;
+ }
+ }
+
+ middles[mid.name] = {
+ name: mid.name,
+ id: mid.id,
+ minors: minors,
+ count: midCount
+ };
+ majorCount += midCount;
+ }
+ }
+
+ majors[majorName] = {
+ name: majorName,
+ subcategories: middles,
+ count: majorCount
+ };
+ }
+
+ this.majorCategories = majors;
+ },
+
+ getTotalSites() {
+ let total = 0;
+ for (const m in this.majorCategories) {
+ total += this.majorCategories[m].count;
+ }
+ return total;
+ },
+
+ getBreadcrumb() {
+ if (!this.activeCategory) {
+ return '<span class="breadcrumb-item">全部</span>';
+ }
+ const parts = [];
+ parts.push(`<span class="breadcrumb-item" data-nav="home">首页</span>`);
+ if (this.activeCategory.major) {
+ parts.push(`<span class="breadcrumb-sep">›</span>`);
+ parts.push(`<span class="breadcrumb-item" data-nav="major">${this.activeCategory.major}</span>`);
+ }
+ if (this.activeCategory.middle) {
+ parts.push(`<span class="breadcrumb-sep">›</span>`);
+ parts.push(`<span class="breadcrumb-item" data-nav="middle">${this.activeCategory.middle}</span>`);
+ }
+ if (this.activeCategory.minor) {
+ parts.push(`<span class="breadcrumb-sep">›</span>`);
+ parts.push(`<span class="breadcrumb-item">${this.activeCategory.minor}</span>`);
+ }
+ return parts.join('');
+ },
+
+ renderMain() {
+ const main = document.getElementById('main-content');
+ if (this.searchQuery) {
+ this.renderSearchResults(main);
+ return;
+ }
+ if (!this.activeCategory) {
+ this.renderMajorGrid(main);
+ } else if (this.activeCategory.type === 'major') {
+ this.renderMiddleList(main);
+ } else if (this.activeCategory.type === 'middle') {
+ this.renderMinorList(main);
+ } else if (this.activeCategory.type === 'minor') {
+ this.renderSitesList(main);
+ }
+ },
+
+ renderMajorGrid(container) {
+ const items = Object.entries(this.majorCategories)
+ .sort((a, b) => b[1].count - a[1].count);
+
+ container.innerHTML = `
+ <div class="view-header">
+ <div class="breadcrumb">${this.getBreadcrumb()}</div>
+ <h2 class="view-title">探索全部分类</h2>
+ <p class="view-desc">共 ${items.length} 个大类，${this.getTotalSites()} 个网站</p>
+ </div>
+ <div class="category-grid">
+ ${items.map(([name, data]) => `
+ <div class="category-card" data-major="${name}">
+ <h3>${name}</h3>
+ <div class="count">${data.count} 个网站</div>
+ <div class="sub-count">${Object.keys(data.subcategories).length} 个子类</div>
+ </div>
+ `).join('')}
+ </div>
+ `;
+ },
+
+ renderMiddleList(container) {
+ const major = this.majorCategories[this.activeCategory.major];
+ const items = Object.entries(major.subcategories)
+ .sort((a, b) => b[1].count - a[1].count);
+
+ container.innerHTML = `
+ <div class="view-header">
+ <div class="breadcrumb">${this.getBreadcrumb()}</div>
+ <h2 class="view-title">${major.name}</h2>
+ <p class="view-desc">共 ${items.length} 个中类，${major.count} 个网站</p>
+ </div>
+ <div class="category-grid">
+ ${items.map(([name, data]) => `
+ <div class="category-card" data-middle="${name}">
+ <h3>${name}</h3>
+ <div class="count">${data.count} 个网站</div>
+ <div class="sub-count">${Object.keys(data.minors).length} 个小类</div>
+ </div>
+ `).join('')}
+ </div>
+ `;
+ },
+
+ renderMinorList(container) {
+ const major = this.majorCategories[this.activeCategory.major];
+ const middle = major.subcategories[this.activeCategory.middle];
+ const items = Object.entries(middle.minors)
+ .sort((a, b) => b[1].count - a[1].count);
+
+ container.innerHTML = `
+ <div class="view-header">
+ <div class="breadcrumb">${this.getBreadcrumb()}</div>
+ <h2 class="view-title">${middle.name}</h2>
+ <p class="view-desc">共 ${items.length} 个小类，${middle.count} 个网站</p>
+ </div>
+ <div class="category-grid">
+ ${items.map(([name, data]) => `
+ <div class="category-card" data-minor="${name}">
+ <h3>${name}</h3>
+ <div class="count">${data.count} 个网站</div>
+ </div>
+ `).join('')}
+ </div>
+ `;
+ },
+
+ renderSitesList(container) {
+ const major = this.majorCategories[this.activeCategory.major];
+ const middle = major.subcategories[this.activeCategory.middle];
+ const minor = middle.minors[this.activeCategory.minor];
+
+ container.innerHTML = `
+ <div class="view-header">
+ <div class="breadcrumb">${this.getBreadcrumb()}</div>
+ <h2 class="view-title">${minor.name}</h2>
+ <p class="view-desc">共 ${minor.sites.length} 个网站</p>
+ </div>
+ <div class="sites-grid">
+ ${minor.sites.map(site => `
+ <a class="site-card" href="${site.url}" target="_blank" rel="noopener">
+ <div class="site-title">${site.title || site.name || site.url}</div>
+ ${site.description ? `<div class="site-desc">${this.escapeHtml(site.description).substring(0, 80)}...</div>` : ''}
+ <div class="site-url">${this.extractDomain(site.url)}</div>
+ </a>
+ `).join('')}
+ </div>
+ `;
+ },
+
+ renderSearchResults(container) {
+ const query = this.searchQuery.toLowerCase();
+ const results = [];
+ const visited = new Set();
+
+ for (const majorName in this.data) {
+ const major = this.data[majorName];
+ if (major.subcategories) {
+ for (const mid of major.subcategories) {
+ if (mid.minor_categories) {
+ for (const min of mid.minor_categories) {
+ const sites = min.sites || [];
+ for (const site of sites) {
+ const key = site.url;
+ if (visited.has(key)) continue;
+ visited.add(key);
+
+ const title = (site.title || site.name || '').toLowerCase();
+ const desc = (site.description || '').toLowerCase();
+ const url = site.url.toLowerCase();
+
+ if (title.includes(query) || desc.includes(query) || url.includes(query)) {
+ results.push({ ...site, majorName, middleName: mid.name, minorName: min.name });
+ }
+ }
+ }
+ }
+ }
+ }
+ }
+
+ container.innerHTML = `
+ <div class="view-header">
+ <div class="breadcrumb">${this.getBreadcrumb()}</div>
+ <h2 class="view-title">搜索: "${this.escapeHtml(this.searchQuery)}"</h2>
+ <p class="view-desc">找到 ${results.length} 个结果</p>
+ </div>
+ ${results.length > 0 ? `
+ <div class="sites-grid">
+ ${results.map(site => `
+ <a class="site-card" href="${site.url}" target="_blank" rel="noopener">
+ <div class="site-path">${site.majorName} › ${site.middleName} › ${site.minorName}</div>
+ <div class="site-title">${site.title || site.name || site.url}</div>
+ ${site.description ? `<div class="site-desc">${this.escapeHtml(site.description).substring(0, 100)}...</div>` : ''}
+ <div class="site-url">${this.extractDomain(site.url)}</div>
+ </a>
+ `).join('')}
+ </div>
+ ` : '<div class="empty-state">未找到相关网站</div>'}
+ `;
+ },
+
+ renderSidebar() {
+ const sidebar = document.getElementById('sidebar');
+ const majorList = Object.entries(this.majorCategories)
+ .sort((a, b) => b[1].count - a[1].count);
+
+ let html = '';
+ html += `
+ <div class="sidebar-group">
+ <div class="sidebar-item ${!this.activeCategory && !this.searchQuery ? 'active' : ''}" data-action="home">
+ <span>🏠 首页</span>
+ </div>
+ </div>
+ `;
+
+ html += `<div class="sidebar-group">`;
+ html += `<div class="sidebar-title">全部分类</div>`;
+
+ for (const [name, data] of majorList) {
+ const isActive = this.activeCategory && this.activeCategory.major === name;
+ html += `
+ <div class="sidebar-item ${isActive ? 'active' : ''}" data-major="${name}">
+ <span>${name}</span>
+ <span class="count">${data.count}</span>
+ </div>
+ `;
+ }
+ html += `</div>`;
+
+ sidebar.innerHTML = html;
+ },
+
+ render() {
+ const app = document.getElementById('app');
+
+ app.innerHTML = `
+ <div class="top-bar">
+ <div class="logo" data-action="home">啃魂导航</div>
+ <input type="text" class="search-input" placeholder="搜索网站..." value="${this.escapeHtml(this.searchQuery)}">
+ </div>
+
+ <div id="sidebar" class="sidebar"></div>
+
+ <div id="main-content" class="main-content">
+ <div class="loading">正在加载数据...</div>
+ </div>
+ `;
+
+ this.renderSidebar();
+ this.renderMain();
+ },
+
+ bindEvents() {
+ document.addEventListener('input', (e) => {
+ if (e.target.classList.contains('search-input')) {
+ this.searchQuery = e.target.value;
+ this.renderSidebar();
+ this.renderMain();
+ }
+ });
+
+ document.addEventListener('click', (e) => {
+ const card = e.target.closest('.category-card');
+ if (card) {
+ if (card.dataset.major) {
+ this.activeCategory = { type: 'major', major: card.dataset.major };
+ this.searchQuery = '';
+ this.renderSidebar();
+ this.renderMain();
+ } else if (card.dataset.middle) {
+ this.activeCategory = { ...this.activeCategory, type: 'middle', middle: card.dataset.middle };
+ this.renderSidebar();
+ this.renderMain();
+ } else if (card.dataset.minor) {
+ this.activeCategory = { ...this.activeCategory, type: 'minor', minor: card.dataset.minor };
+ this.renderSidebar();
+ this.renderMain();
+ }
+ return;
+ }
+
+ const item = e.target.closest('.sidebar-item');
+ if (item) {
+ if (item.dataset.action === 'home') {
+ this.activeCategory = null;
+ this.searchQuery = '';
+ this.renderSidebar();
+ this.renderMain();
+ } else if (item.dataset.major) {
+ this.activeCategory = { type: 'major', major: item.dataset.major };
+ this.searchQuery = '';
+ this.renderSidebar();
+ this.renderMain();
+ }
+ return;
+ }
+
+ const crumb = e.target.closest('.breadcrumb-item');
+ if (crumb) {
+ const nav = crumb.dataset.nav;
+ if (nav === 'home') {
+ this.activeCategory = null;
+ this.searchQuery = '';
+ this.renderSidebar();
+ this.renderMain();
+ } else if (nav === 'major') {
+ this.activeCategory = { type: 'major', major: this.activeCategory.major };
+ this.renderSidebar();
+ this.renderMain();
+ } else if (nav === 'middle') {
+ this.activeCategory = { type: 'middle', major: this.activeCategory.major, middle: this.activeCategory.middle };
+ this.renderSidebar();
+ this.renderMain();
+ }
+ }
+ });
+ },
+
+ escapeHtml(str) {
+ if (!str) return '';
+ return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+ },
+
+ extractDomain(url) {
+ try {
+ return new URL(url).hostname.replace('www.', '');
+ } catch {
+ return url;
+ }
+ }
+ };
+
+ document.addEventListener('DOMContentLoaded', () => App.init());
+ </script>
 </body>
 </html>
