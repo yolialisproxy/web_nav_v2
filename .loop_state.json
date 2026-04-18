@@ -1,14 +1,9 @@
 {
   "status": "running",
-  "last_run": "2026-04-18T11:56:32",
-  "last_action": "scripts/calibrate_fill.py",
-  "next_action": "scripts/calibrate_fill.py",
-  "total_sites": 27689,
-  "last_added": 0,
-  "empty_small_categories": 219,
-  "filling_categories": 219,
-  "network_error": true,
-  "next_retry": 1800,
-  "failure_streak": 4,
-  "notes": "SSL proxy failure confirmed. Network operations suspended for 30 minutes. Buffer is empty. System idle waiting for network recovery."
+  "next_action": "scripts/speed_fill.py",
+  "last_run": "2026-04-18 14:13:47",
+  "total_sites": 32789,
+  "pending_categories": 262,
+  "buffer_size": 0,
+  "last_round_added": 3862
 }
