@@ -1,1 +1,13 @@
-{'status': 'completed', 'last_run': '2026-04-17T19:52:35.000000', 'next_action': None, 'total_sites': 11616, 'completion_percent': 100.0, 'queue_status': 'done', 'current_batch': {'processed': 11616, 'success': 11616, 'remaining': 0}, 'notes': '✅ Cron 作业执行完成。所有 729 个小类均已达标 ≥12 个站点，总数 11616 已超过 9000 目标。填充校准任务已完成，系统进入休眠状态。'}
+{
+  "status": "running",
+  "last_run": "2026-04-18T11:06:10",
+  "last_action": "calibrate_fill",
+  "next_action": "scripts/calibrate_fill.py",
+  "total_sites": 21762,
+  "last_added": 0,
+  "empty_small_categories": 576,
+  "network_error": true,
+  "next_retry": 600,
+  "last_error": "SSL Handshake failure on DuckDuckGo endpoint - proxy SSL inspection issue",
+  "failure_streak": 1
+}

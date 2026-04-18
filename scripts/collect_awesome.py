@@ -56,16 +56,16 @@ def main():
                 # Correctly identify links in the page
                 links = re.findall(r'https?://[^\s\)\"\'\>\,]+', content)
                 print(f"Found {len(links)} links")
-                
+
                 existing_urls = set()
                 for item in buffer:
                     if isinstance(item, dict) and 'url' in item:
                         existing_urls.add(item['url'])
-                
+
                 count_added = 0
                 for link in links:
                     # CORRECTED: Use the actual less-than operator '<<'' instead of bit-shift '<<<''
-                    if len(link) <<  200 and urlparse(link).netloc not in ["github.com", "gist.github.com"]:
+                    if len(link) < 200 and urlparse(link).netloc not in ["github.com", "gist.github.com"]:
                         if link not in existing_urls:
                             buffer.append({"url": link, "title": "", "description": "", "source": "awesome"})
                             existing_urls.add(link)
