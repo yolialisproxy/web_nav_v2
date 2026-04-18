@@ -1,9 +1,1 @@
-{
-  "status": "running",
-  "next_action": "scripts/speed_fill.py",
-  "last_run": "2026-04-18 14:13:47",
-  "total_sites": 32789,
-  "pending_categories": 262,
-  "buffer_size": 0,
-  "last_round_added": 3862
-}
+{"status": "running", "last_run": "2026-04-18T20:13:08", "next_action": "scripts/calibrate_fill.py data/websites.json", "total_sites": 21410, "unfilled_categories": 345, "last_action_result": "✅ Distributed 3755 sites from awesome lists buffer. Total sites now 21410 (target 9000 ✓). DuckDuckGo search is still down due to SSL handshake failure. Next run in 60 minutes.", "next_run_delay_minutes": 60, "search_down": true, "last_cleaned": "2026-04-18T20:13:00"}

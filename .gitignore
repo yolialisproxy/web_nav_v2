@@ -51,3 +51,4 @@ data/.backup/
 .loop_state.json
 .loop_state.json
 .loop_state.json
+/backups

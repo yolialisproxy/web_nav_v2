@@ -1,0 +1,10 @@
+{
+  "timestamp": "20260418_192625",
+  "total_before": 18085,
+  "duplicates": 11671,
+  "total_after": 6414,
+  "duplicate_rate": 64.53,
+  "cleaned": true,
+  "backup_file": "/home/yoli/GitHub/web_nav_v2/backups/websites_before_dedup_20260418_192625.json",
+  "report_file": "/home/yoli/GitHub/web_nav_v2/reports/dedup_report_20260418_192625.txt"
+}

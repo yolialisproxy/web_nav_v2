@@ -1,0 +1,27 @@
+============================================================
+🔍 导航网站每日去重清理报告
+============================================================
+执行时间: 2026-04-18 18:35:05
+📊 统计结果:
+  原始站点总数: 29720
+  发现重复站点: 23308
+  清理后剩余: 6412
+  重复率: 78.43%
+------------------------------------------------------------
+✅ 重复率超过阈值(5%)，执行清理操作
+✅ 已更新 websites.json 文件
+
+📝 重复站点示例(前10个):
+  # 1 |                      | https://collector.github.com/github/collect
+  # 2 |                      | https://api.github.com/_private/browser/stats
+  # 3 |                      | https://api.github.com/_private/browser/errors
+  # 4 | Keyboard shortcuts - GitHub Docs | https://docs.github.com/get-started/accessibility/keyboard-s
+  # 5 | GitHub Docs          | https://docs.github.com
+  # 6 |                      | https://github.blog
+  # 7 |                      | https://github.blog/changelog
+  # 8 |                      | https://skills.github.com
+  # 9 |                      | https://support.github.com
+  #10 |                      | https://securitylab.github.com
+
+✅ 任务完成
+📦 原始文件备份: /home/yoli/GitHub/web_nav_v2/backups/websites_before_dedup_20260418_183503.json
