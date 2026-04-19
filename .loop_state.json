@@ -1,1 +1,1 @@
-{"status": "running", "next_action": "scripts/calibrate_fill.py", "last_run_at": "2026-04-19T23:27:12", "current_round": 4, "last_progress": 75, "total_sites": 6332, "gap_remaining": 2668}
+{"status": "running", "current_action": "scripts/calibrate_fill.py", "next_action": "classify_sites_v2.py", "last_run": "2026-04-20T01:15:00.000000", "last_progress": 2868, "total_collected": 3750, "total_classified": 2868, "total_remaining": 882, "current_session": "proc_90a19bd2b3c7"}
