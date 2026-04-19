@@ -4,6 +4,11 @@
 # 目标速度：每分钟 300+ 站点
 import json
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from safe_json_io import safe_read_json, safe_write_json
+
+import os
 import requests
 from datetime import datetime
 from pathlib import Path

@@ -7,6 +7,11 @@ WebNav V2 导入脚本
 
 import sys
 import json
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from safe_json_io import safe_read_json, safe_write_json
+
 import hashlib
 import shutil
 from pathlib import Path

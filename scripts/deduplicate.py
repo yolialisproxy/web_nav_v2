@@ -7,6 +7,11 @@
 import sys
 import os
 import json
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from safe_json_io import safe_read_json, safe_write_json
+
 import re
 import time
 from urllib.parse import urlparse

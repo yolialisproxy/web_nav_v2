@@ -4,6 +4,11 @@
 按照 industrial execution pattern 实现：静默运行、状态写入磁盘、不阻塞对话
 """
 import json
+import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from safe_json_io import safe_read_json, safe_write_json
+
 import time
 from pathlib import Path
 import random

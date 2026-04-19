@@ -2,6 +2,11 @@
 # -*- coding: utf-8 -*-
 import json
 import os
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from safe_json_io import safe_read_json, safe_write_json
+
+import os
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -51,24 +56,33 @@ def get_all_sites_urls(data):
                         urls.add(site['url'].strip().lower())
     return urls
 # ========== 核心逻辑 ==========
-def fetch_site_for_category(category_name):
-    """针对特定分类定向采集站点"""
-    query = f"免费 {category_name} 在线工具"
-    # 简单模拟搜索结果采集 (实际中可调用搜索API或特定目录)
-    # 这里实现一个基础的关键词搜索模拟，通过DuckDuckGo或类似接口
-    search_url = f"https://duckduckgo.com/html/?q={query}"
-    try:
-        resp = requests.get(search_url, timeout=10, headers={"User-Agent": USER_AGENT})
-        if resp.status_code == 200:
-            # 极简解析：提取所有外部链接
-            import re
-            links = re.findall(r'href=\"(https?://[^\"]+)\"', resp.text)
-            # 过滤掉干扰项
-            filtered = [l for l in links if "duckduckgo" not in l and "google" not in l]
-            return filtered
-    except Exception as e:
-        log(f"采集 {category_name} 失败: {e}")
+def load_buffer():
+    buffer_path = BASE_DIR / "data/collected_buffer.json"
+    if buffer_path.exists():
+        try:
+            with open(buffer_path, 'r', encoding='utf-8') as f:
+                buf = json.load(f)
+            return [s['url'] for s in buf.get('sites', []) if 'url' in s]
+        except:
+            pass
     return []
+
+BUFFER = load_buffer()
+BUFFER_INDEX = 0
+
+def fetch_site_for_category(category_name):
+    """使用预先采集的缓冲区站点，避免网络搜索"""
+    global BUFFER_INDEX
+    if BUFFER_INDEX >= len(BUFFER):
+        return []
+    
+    # 每次取20个站点分配给该分类
+    start = BUFFER_INDEX
+    end = min(BUFFER_INDEX + 20, len(BUFFER))
+    BUFFER_INDEX = end
+    
+    log(f"📦 从缓冲区分配 {end-start} 个站点给 {category_name} (缓冲区进度: {BUFFER_INDEX}/{len(BUFFER)})")
+    return BUFFER[start:end]
 
 def find_minor_category(data, cat_name):
     for big in data.values():
@@ -86,7 +100,14 @@ def calibrate():
 
     # 1. 扫描缺口
     targets = []
-    total_count = sum(len(minor['sites']) for cat in data.values() for sub in cat.get('subcategories', []) for minor in sub.get('minor_categories', []))
+    total_count = 0
+    for cat in data.values():
+        if not isinstance(cat, dict): continue
+        for sub in cat.get('subcategories', []):
+            if not isinstance(sub, dict): continue
+            for minor in sub.get('minor_categories', []):
+                if not isinstance(minor, dict): continue
+                total_count += len(minor.get('sites', []))
 
     # 统计每个小类站点数量
     small_cat_counts = {}
