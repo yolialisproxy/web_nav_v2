@@ -75,12 +75,12 @@ def fetch_site_for_category(category_name):
     global BUFFER_INDEX
     if BUFFER_INDEX >= len(BUFFER):
         return []
-    
+
     # 每次取20个站点分配给该分类
     start = BUFFER_INDEX
     end = min(BUFFER_INDEX + 20, len(BUFFER))
     BUFFER_INDEX = end
-    
+
     log(f"📦 从缓冲区分配 {end-start} 个站点给 {category_name} (缓冲区进度: {BUFFER_INDEX}/{len(BUFFER)})")
     return BUFFER[start:end]
 
@@ -176,16 +176,20 @@ def calibrate():
 
                 to_add = new_urls[:needed]
 
-                # 暂时先添加到全局站点列表，后续分配
-                for url in to_add:
-                    data['siteIds'].append({
-                        "url": url,
-                        "title": "",
-                        "description": "",
-                        "minor_category": cat_name
-                    })
-                    existing_urls.add(url)
-                    distributed_count += 1
+                # 直接添加到对应小分类下
+                minor_cat = find_minor_category(data, cat_name)
+                if minor_cat:
+                    if 'sites' not in minor_cat:
+                        minor_cat['sites'] = []
+                    for url in to_add:
+                        minor_cat['sites'].append({
+                            "url": url,
+                            "title": "",
+                            "description": "",
+                            "source": "buffer"
+                        })
+                        existing_urls.add(url)
+                        distributed_count += 1
 
                 log(f"✅ {cat_name}: 补充 {len(to_add)}/{needed} 个站点")
             except Exception as e:

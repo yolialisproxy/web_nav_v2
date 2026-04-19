@@ -49,10 +49,19 @@ def main():
     # 收集所有空标题站点
     sites = []
     for cat_id, category in data.items():
+        # 🔧 安全检查: 跳过非字典条目(修复 siteIds 数组污染bug)
+        if not isinstance(category, dict):
+            print(f"⚠️  跳过无效分类条目: {cat_id} 类型: {type(category)}")
+            continue
+
         for sub in category.get('subcategories', []):
+            if not isinstance(sub, dict):
+                continue
             for mc in sub.get('minor_categories', []):
+                if not isinstance(mc, dict):
+                    continue
                 for site in mc.get('sites', []):
-                    if not site.get('title') or len(site['title'].strip()) < 3:
+                    if isinstance(site, dict) and (not site.get('title') or len(site['title'].strip()) < 3):
                         sites.append(site)
 
     print(f"🔍 发现待补完站点: {len(sites)} 个")

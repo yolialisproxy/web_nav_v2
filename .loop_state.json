@@ -1,1 +1,11 @@
-{"status": "running", "current_action": "scripts/calibrate_fill.py", "next_action": "scripts/analyze_categories.py", "last_run": "2026-04-20T01:38:37.000000", "last_progress": 2868, "total_collected": 3750, "total_classified": 2868, "total_remaining": 882, "current_session": "proc_90a19bd2b3c7", "last_added": 11, "completion_percent": 31.87}
+{
+  "status": "running",
+  "next_action": "scripts/calibrate_fill.py",
+  "last_run": "2026-04-20T05:30:09.000000",
+  "total_sites": 10443,
+  "underfilled_categories": 406,
+  "buffer_remaining": 3566,
+  "last_result": "Success! Calibration run completed. 9 sites added this run. Buffer remains at 3566 sites pending.",
+  "error_observed": null,
+  "run_count": 7
+}

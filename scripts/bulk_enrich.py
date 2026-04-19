@@ -14,19 +14,20 @@ from safe_json_io import safe_read_json, safe_write_json
 BATCH_SIZE = 50
 MAX_WORKERS = 4
 TIMEOUT = 30
+MAX_FAILURES = 3
 
 def get_total_and_done():
     data = safe_read_json('data/websites.json')
     total = 0
     done = 0
-    
+
     if isinstance(data, dict):
         values = data.values()
     elif isinstance(data, list):
         values = data
     else:
         return 0,0
-        
+
     for major in values:
         if isinstance(major, dict):
             items = major.get('subcategories', [])
@@ -34,7 +35,7 @@ def get_total_and_done():
             items = major
         else:
             continue
-            
+
         for sub in items:
             if isinstance(sub, dict):
                 mc_items = sub.get('minor_categories', [])
@@ -42,7 +43,7 @@ def get_total_and_done():
                 mc_items = sub
             else:
                 continue
-                
+
             for mc in mc_items:
                 if isinstance(mc, dict):
                     sites = mc.get('sites', [])
@@ -50,7 +51,7 @@ def get_total_and_done():
                     sites = mc
                 else:
                     continue
-                    
+
                 for site in sites:
                     total += 1
                     if site.get('title') and site['title'].strip() and site['title'] != site['url']:
@@ -74,33 +75,34 @@ async def fetch_single(session, site):
                 return False
             html = await resp.text(errors='ignore')
             title = extract_title(html)
-            
+
             if title and title != site['url']:
                 site['title'] = title
                 return True
             return False
 
     except Exception:
+        site['_failures'] = site.get('_failures', 0) + 1
         return False
 
 async def run_batch():
     total, done = get_total_and_done()
-    
+
     print(f"总站点: {total}, 已完成: {done}, 待处理: {total-done}")
-    
+
     with open('data/websites.json','r',encoding='utf-8') as f:
         data = json.load(f)
-    
+
     sites_to_process = []
     site_refs = []
-    
+
     if isinstance(data, dict):
         values = data.values()
     elif isinstance(data, list):
         values = data
     else:
         return 0,0
-        
+
     for major in values:
         if isinstance(major, dict):
             items = major.get('subcategories', [])
@@ -108,7 +110,7 @@ async def run_batch():
             items = major
         else:
             continue
-            
+
         for sub in items:
             if isinstance(sub, dict):
                 mc_items = sub.get('minor_categories', [])
@@ -116,7 +118,7 @@ async def run_batch():
                 mc_items = sub
             else:
                 continue
-                
+
             for mc in mc_items:
                 if isinstance(mc, dict):
                     sites = mc.get('sites', [])
@@ -124,8 +126,11 @@ async def run_batch():
                     sites = mc
                 else:
                     continue
-                    
+
                 for site in sites:
+                    # Skip if already failed too many times
+                    if site.get('_failures', 0) >= MAX_FAILURES:
+                        continue
                     if not site.get('title') or not site['title'].strip() or site['title'] == site['url']:
                         sites_to_process.append(site['url'])
                         site_refs.append(site)
@@ -135,36 +140,42 @@ async def run_batch():
                     break
             if len(sites_to_process) >= BATCH_SIZE:
                 break
-    
+
     if not sites_to_process:
         print("✅ 没有需要处理的站点")
         return 0, 0
-    
+
     print(f"📦 开始处理 {len(sites_to_process)} 个站点...")
-    
+
+    semaphore = asyncio.Semaphore(MAX_WORKERS)
+
+    async def bounded_fetch(session, site):
+        async with semaphore:
+            return await fetch_single(session, site)
+
     async with aiohttp.ClientSession() as session:
-        tasks = [fetch_single(session, site_refs[i]) for i, url in enumerate(sites_to_process)]
+        tasks = [bounded_fetch(session, site_ref) for site_ref in site_refs]
         results = await asyncio.gather(*tasks)
-    
+
     success = sum(1 for r in results if r)
-    
+
     # 安全写入
     safe_write_json('data/websites.json', data)
-    
+
     print(f"✅ 批次完成: 成功 {success}/{len(sites_to_process)}")
     new_total, new_done = get_total_and_done()
     print(f"📊 总进度: {round(new_done/new_total*100, 1)}%")
-    
+
     return success, len(sites_to_process)
 
 if __name__ == "__main__":
     print(f"🚀 批量内容增强 简单稳定版")
     print(f"   并发数: {MAX_WORKERS}, 每批: {BATCH_SIZE}")
     print("="*50)
-    
+
     start = time.time()
     success, total = asyncio.run(run_batch())
     elapsed = time.time() - start
-    
+
     print(f"\n⏱️  总耗时: {elapsed:.1f}秒")
     print(f"✨ 本次增强完成: {success} 个站点")
