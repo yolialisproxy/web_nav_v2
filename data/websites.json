@@ -248,8 +248,26 @@
                 "source": "buffer"
               },
               {
-                "url": "https://en.wikipedia.org/wiki/DevOps",
-                "title": "",
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "Flow for Developers | Wispr Flow",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "Flow for Developers | Wispr Flow",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "Flow for Developers | Wispr Flow",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "StandWithUkraine | #StandWithUkraine banner and related documents",
                 "description": "",
                 "source": "buffer"
               },
@@ -267,6 +285,18 @@
               },
               {
                 "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "Flow for Developers | Wispr Flow",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "StandWithUkraine | #StandWithUkraine banner and related documents",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
                 "title": "",
                 "description": "",
                 "source": "buffer"
@@ -320,14 +350,8 @@
                 "source": "awesome"
               },
               {
-                "url": "https://roadmap.sh/</a",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://roadmap.sh/computer-science",
-                "title": "",
+                "title": "Computer Science Roadmap: Curriculum for the self taught developer",
                 "description": "",
                 "source": "awesome"
               }
@@ -345,48 +369,42 @@
               },
               {
                 "url": "https://www.coursera.org/learn/data-structures/home/week/4",
-                "title": "",
+                "title": "Coursera | Online Courses & Credentials From Top Educators. Join for Free | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.coursera.org/lecture/data-structures/phone-book-problem-NYZZP",
-                "title": "",
+                "title": "Data Structures | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.coursera.org/lecture/data-structures/instant-uploads-and-storage-optimization-in-dropbox-DvaIb",
-                "title": "",
+                "title": "Data Structures | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.coursera.org/lecture/data-structures/distributed-hash-tables-tvH8H",
-                "title": "",
+                "title": "Data Structures | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search",
-                "title": "",
+                "title": "Client Challenge",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.topcoder.com/thrive/articles/Binary%20Search",
-                "title": "",
+                "title": "Binary Search",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/fDKIpRe8GW4",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -405,31 +423,31 @@
               },
               {
                 "url": "https://www.coursera.org/learn/algorithms-part2/lecture/c1U7L/lsd-radix-sort",
-                "title": "",
+                "title": "Algorithms, Part II | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.coursera.org/learn/algorithms-part2/lecture/gFxwG/msd-radix-sort",
-                "title": "",
+                "title": "Algorithms, Part II | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.coursera.org/lecture/algorithms-part2/3-way-radix-quicksort-crkd5",
-                "title": "",
+                "title": "Algorithms, Part II | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.coursera.org/learn/algorithms-part2/lecture/TH18W/suffix-arrays",
-                "title": "",
+                "title": "Algorithms, Part II | Coursera",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#radixSort",
-                "title": "",
+                "title": "Notes on Data Structures and Programming Techniques (CPSC 223, Spring 2022)",
                 "description": "",
                 "source": "awesome"
               }
@@ -459,7 +477,7 @@
               },
               {
                 "url": "http://jasonpolites.github.io/tao-of-testing/ch3-1.1.html",
-                "title": "",
+                "title": "Chapter 3 - Dependency Injection — The Tao of Testing",
                 "description": "",
                 "source": "awesome"
               },
@@ -8716,12 +8734,6 @@
             "name": "其他",
             "sites": [
               {
-                "url": "https://roadmap.sh/computer-science</a",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://guides.github.com/features/mastering-markdown/#GitHub-flavored-markdown",
                 "title": "",
                 "description": "",
@@ -8884,12 +8896,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://ankiweb.net/shared/info/25173560</a",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "http://www.hiredintech.com/algorithm-design/",
                 "title": "",
                 "description": "",
@@ -9010,12 +9016,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/F8AbOfQwl1c",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://www.coursera.org/lecture/data-structures-optimizing-performance/core-linked-lists-vs-arrays-rjBs9",
                 "title": "",
                 "description": "",
@@ -9046,12 +9046,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/KcT3aVgrrpU",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://www.coursera.org/lecture/data-structures/queues-EShpq",
                 "title": "",
                 "description": "",
@@ -9059,18 +9053,6 @@
               },
               {
                 "url": "https://en.wikipedia.org/wiki/Circular_buffer",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/D6gu-_tmEpQ",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/knV86FlSXJ8",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -9124,12 +9106,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/Hzuzo9NJrlc",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://graphics.stanford.edu/~seander/bithacks.html#CountBitsSetKernighan",
                 "title": "",
                 "description": "",
@@ -9161,18 +9137,6 @@
               },
               {
                 "url": "https://www.coursera.org/lecture/data-structures/tree-traversal-fr51b",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/HZ5YTanv5QE",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/Urx87-NMm6c",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -9239,12 +9203,6 @@
               },
               {
                 "url": "https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/odNJmw5TOEE?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=3291",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -9412,42 +9370,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/Hoixgm4-P4M",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/2DmK_H7IdTo",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/4VqmGXwpLqc",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/xli_FI7CuzA",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/g-PGLbMth_g",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/JU767SDMDvA",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://www.coursera.org/learn/algorithms-part2/home/week/3",
                 "title": "",
                 "description": "",
@@ -9484,19 +9406,7 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/ngCos392W4w",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://leetcode.com/problems/combination-sum/discuss/429538/General-Backtracking-questions-solutions-in-Python-for-reference-%3A",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/J5aJEcOr6Eo?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=3558",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -9580,37 +9490,7 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/qcGnJ47Smlo?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=2939",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/1I5ZMmrOfnA",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/fpnE6UAfbtU",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/FZGugFqdr60",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/zltgXvg6r3k",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -9623,18 +9503,6 @@
               },
               {
                 "url": "https://www.quora.com/What-is-the-difference-between-a-process-and-a-thread",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/O4nwUqQodAg",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/iKlAWIKEyuw",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -10168,12 +10036,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/JnJq3Py0dyM?t=176",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://www.khanacademy.org/computing/computer-science/cryptography",
                 "title": "",
                 "description": "",
@@ -10283,12 +10145,6 @@
               },
               {
                 "url": "https://archive.org/details/ucberkeley_webcast_G5QIXywcJlY",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/1W3x0f_RmUo?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=3871",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -10647,12 +10503,6 @@
               },
               {
                 "url": "https://www.cs.cmu.edu/~scandal/papers/treaps-spaa98.pdf",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/XIAQRlNkJAw?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=3164",
                 "title": "",
                 "description": "",
                 "source": "awesome"
@@ -14803,60 +14653,6 @@
                 "source": "awesome"
               },
               {
-                "url": "https://youtu.be/LXWSE_9gHd0",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/_DaviS6K0Vc",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/QCGSS3kyGo0",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/K1PLeggQ33I",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/dH2nuI-1-qM",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/1FyAh07jh0o",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/f6ivp84qFUc",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/7VRdaqMDalQ",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "https://youtu.be/8TMT-gHlj_Q",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
                 "url": "https://www.scaler.com/topics/what-is-deep-learning/",
                 "title": "",
                 "description": "",
@@ -16742,12 +16538,6 @@
               },
               {
                 "url": "https://linkedin.com/in/Christofidis",
-                "title": "",
-                "description": "",
-                "source": "awesome"
-              },
-              {
-                "url": "http://yann.lecun.com/exdb/mnist/</a",
                 "title": "",
                 "description": "",
                 "source": "awesome"
