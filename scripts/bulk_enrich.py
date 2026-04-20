@@ -132,20 +132,19 @@ async def run_batch():
                     if site.get('_failures', 0) >= MAX_FAILURES:
                         continue
                     if not site.get('title') or not site['title'].strip() or site['title'] == site['url']:
-                        sites_to_process.append(site['url'])
                         site_refs.append(site)
-                    if len(sites_to_process) >= BATCH_SIZE:
+                    if len(site_refs) >= BATCH_SIZE:
                         break
                 if len(sites_to_process) >= BATCH_SIZE:
                     break
             if len(sites_to_process) >= BATCH_SIZE:
                 break
 
-    if not sites_to_process:
+    if not site_refs:
         print("✅ 没有需要处理的站点")
         return 0, 0
 
-    print(f"📦 开始处理 {len(sites_to_process)} 个站点...")
+    print(f"📦 开始处理 {len(site_refs)} 个站点...")
 
     semaphore = asyncio.Semaphore(MAX_WORKERS)
 
