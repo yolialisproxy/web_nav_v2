@@ -1,1 +1,9 @@
-{"status": "running", "last_run": "2026-04-20 13:16:19", "next_action": "scripts/calibrate_fill.py", "last_added": 9, "total_sites": 10292, "empty_categories": 421}
+{
+  "status": "running",
+  "last_run": "2026-04-20 13:46:16",
+  "next_action": "scripts/calibrate_fill.py",
+  "last_added": 9,
+  "total_sites": 10355,
+  "empty_categories": 423,
+  "buffer_remaining": 3566
+}
