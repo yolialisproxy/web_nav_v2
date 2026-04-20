@@ -1,9 +1,8 @@
 {
   "status": "running",
-  "last_run": "2026-04-20 13:46:16",
-  "next_action": "scripts/calibrate_fill.py",
-  "last_added": 9,
-  "total_sites": 10355,
-  "empty_categories": 423,
+  "last_run": "2026-04-20T20:56:12.000000",
+  "next_action": "/home/yoli/GitHub/web_nav_v2/scripts/calibrate_fill.py",
+  "last_added": 104,
+  "total_sites": 4164,
   "buffer_remaining": 3566
 }

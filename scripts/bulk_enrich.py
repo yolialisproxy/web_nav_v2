@@ -8,55 +8,13 @@ import os
 import sys
 from html import unescape
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from safe_json_io import safe_read_json, safe_write_json
+BATCH_SIZE = 5
+MAX_WORKERS = 1
+TIMEOUT = 60
 
-BATCH_SIZE = 50
-MAX_WORKERS = 4
-TIMEOUT = 30
-MAX_FAILURES = 3
-
-def get_total_and_done():
-    data = safe_read_json('data/websites.json')
-    total = 0
-    done = 0
-
-    if isinstance(data, dict):
-        values = data.values()
-    elif isinstance(data, list):
-        values = data
-    else:
-        return 0,0
-
-    for major in values:
-        if isinstance(major, dict):
-            items = major.get('subcategories', [])
-        elif isinstance(major, list):
-            items = major
-        else:
-            continue
-
-        for sub in items:
-            if isinstance(sub, dict):
-                mc_items = sub.get('minor_categories', [])
-            elif isinstance(sub, list):
-                mc_items = sub
-            else:
-                continue
-
-            for mc in mc_items:
-                if isinstance(mc, dict):
-                    sites = mc.get('sites', [])
-                elif isinstance(mc, list):
-                    sites = mc
-                else:
-                    continue
-
-                for site in sites:
-                    total += 1
-                    if site.get('title') and site['title'].strip() and site['title'] != site['url']:
-                        done += 1
-    return total, done
+print("🚀 批量内容增强 真实版")
+print(f"   并发数: {MAX_WORKERS}, 每批: {BATCH_SIZE}")
+print("="*50)
 
 def extract_title(html):
     match = re.search(r'<title[^>]*>([^<]+)</title>', html, re.IGNORECASE | re.DOTALL)
@@ -67,114 +25,59 @@ def extract_title(html):
 
 async def fetch_single(session, site):
     try:
-        headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        }
+        print(f"  → 正在请求: {site['url'][:60]}")
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
         async with session.get(site['url'], timeout=TIMEOUT, ssl=False, headers=headers) as resp:
-            if resp.status != 200:
+            print(f"    ← 状态码: {resp.status}")
+            if resp.status >= 400:
                 return False
             html = await resp.text(errors='ignore')
             title = extract_title(html)
 
-            if title and title != site['url']:
+            if title and title.strip() and title != site['url']:
+                print(f"    ✅ 成功: {title[:50]}")
                 site['title'] = title
                 return True
             return False
-
-    except Exception:
-        site['_failures'] = site.get('_failures', 0) + 1
+    except Exception as e:
+        print(f"    ❌ 失败: {type(e).__name__}: {str(e)[:50]}")
         return False
 
-async def run_batch():
-    total, done = get_total_and_done()
+async def main():
+    f = open('data/websites.json')
+    data = json.load(f)
+    f.close()
 
-    print(f"总站点: {total}, 已完成: {done}, 待处理: {total-done}")
-
-    with open('data/websites.json','r',encoding='utf-8') as f:
-        data = json.load(f)
-
-    sites_to_process = []
-    site_refs = []
-
-    if isinstance(data, dict):
-        values = data.values()
-    elif isinstance(data, list):
-        values = data
-    else:
-        return 0,0
-
-    for major in values:
-        if isinstance(major, dict):
-            items = major.get('subcategories', [])
-        elif isinstance(major, list):
-            items = major
-        else:
-            continue
-
-        for sub in items:
-            if isinstance(sub, dict):
-                mc_items = sub.get('minor_categories', [])
-            elif isinstance(sub, list):
-                mc_items = sub
-            else:
-                continue
-
-            for mc in mc_items:
-                if isinstance(mc, dict):
-                    sites = mc.get('sites', [])
-                elif isinstance(mc, list):
-                    sites = mc
-                else:
-                    continue
-
-                for site in sites:
-                    # Skip if already failed too many times
-                    if site.get('_failures', 0) >= MAX_FAILURES:
-                        continue
-                    if not site.get('title') or not site['title'].strip() or site['title'] == site['url']:
-                        site_refs.append(site)
-                    if len(site_refs) >= BATCH_SIZE:
-                        break
-                if len(sites_to_process) >= BATCH_SIZE:
+    sites = []
+    for major in data.values():
+        for sub in major['subcategories']:
+            for mc in sub['minor_categories']:
+                for site in mc['sites']:
+                    if not site.get('title') or site['title'].strip() == '' or site['title'] == site['url']:
+                        sites.append(site)
+                        if len(sites) >= BATCH_SIZE:
+                            break
+                if len(sites) >= BATCH_SIZE:
                     break
-            if len(sites_to_process) >= BATCH_SIZE:
+            if len(sites) >= BATCH_SIZE:
                 break
 
-    if not site_refs:
-        print("✅ 没有需要处理的站点")
-        return 0, 0
+    print(f"\n📦 本次处理 {len(sites)} 个站点\n")
 
-    print(f"📦 开始处理 {len(site_refs)} 个站点...")
+    timeout = aiohttp.ClientTimeout(total=TIMEOUT)
+    async with aiohttp.ClientSession(timeout=timeout) as session:
+        tasks = [fetch_single(session, s) for s in sites]
+        results = await asyncio.gather(*tasks, return_exceptions=True)
 
-    semaphore = asyncio.Semaphore(MAX_WORKERS)
+    success = sum(1 for r in results if r is True)
+    print(f"\n✅ 批次完成: 成功 {success}/{len(sites)}")
 
-    async def bounded_fetch(session, site):
-        async with semaphore:
-            return await fetch_single(session, site)
-
-    async with aiohttp.ClientSession() as session:
-        tasks = [bounded_fetch(session, site_ref) for site_ref in site_refs]
-        results = await asyncio.gather(*tasks)
-
-    success = sum(1 for r in results if r)
-
-    # 安全写入
-    safe_write_json('data/websites.json', data)
-
-    print(f"✅ 批次完成: 成功 {success}/{len(sites_to_process)}")
-    new_total, new_done = get_total_and_done()
-    print(f"📊 总进度: {round(new_done/new_total*100, 1)}%")
-
-    return success, len(sites_to_process)
+    f = open('data/websites.json', 'w')
+    json.dump(data, f, indent=2, ensure_ascii=False)
+    f.close()
 
 if __name__ == "__main__":
-    print(f"🚀 批量内容增强 简单稳定版")
-    print(f"   并发数: {MAX_WORKERS}, 每批: {BATCH_SIZE}")
-    print("="*50)
-
     start = time.time()
-    success, total = asyncio.run(run_batch())
+    asyncio.run(main())
     elapsed = time.time() - start
-
     print(f"\n⏱️  总耗时: {elapsed:.1f}秒")
-    print(f"✨ 本次增强完成: {success} 个站点")
