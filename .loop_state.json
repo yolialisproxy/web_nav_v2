@@ -1,0 +1,1 @@
+{'status': 'running', 'last_run': '2026-04-20T11:13:00', 'next_action': 'scripts/calibrate_fill.py', 'total_sites': 6310, 'remaining_buffer': 3566, 'empty_categories': 415}

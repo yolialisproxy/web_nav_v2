@@ -1,10 +1,10 @@
 {
-  "timestamp": "20260419_153318",
-  "total_before": 6257,
-  "duplicates": 0,
-  "total_after": 6257,
-  "duplicate_rate": 0.0,
-  "cleaned": false,
-  "backup_file": "/home/yoli/GitHub/web_nav_v2/backups/websites_before_dedup_20260419_153318.json",
-  "report_file": "/home/yoli/GitHub/web_nav_v2/reports/dedup_report_20260419_153318.txt"
+  "timestamp": "20260420_111305",
+  "total_before": 10974,
+  "duplicates": 4664,
+  "total_after": 6310,
+  "duplicate_rate": 42.5,
+  "cleaned": true,
+  "backup_file": "/home/yoli/GitHub/web_nav_v2/backups/websites_before_dedup_20260420_111305.json",
+  "report_file": "/home/yoli/GitHub/web_nav_v2/reports/dedup_report_20260420_111305.txt"
 }
