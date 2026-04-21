@@ -1,1 +1,9 @@
-{"status":"running","last_run":"2026-04-21 16:38:05","last_action":"scripts/calibrate_fill.py","next_action":"scripts/calibrate_fill.py","last_added":9,"total_sites":3649,"completion":40.5,"next_schedule":600}
+{
+  "status": "running",
+  "next_action": "adapt scripts for flat array format",
+  "last_run": "2026-04-21 17:26:12",
+  "total_sites": 6257,
+  "missing_metadata": 5093,
+  "missing_title": 4828,
+  "note": "Auto-resume loop active: detected flat array format migration, old object format scripts failing, will update scripts on next run"
+}

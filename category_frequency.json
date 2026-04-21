@@ -1,9 +1,0 @@
-{
-  "Nav": 2,
-  "{{ city_name }}": 1,
-  "和风天气": 1,
-  "Qweather": 1,
-  "{{ site.name }}": 1,
-  "@{{ author }}": 1,
-  "{{ author }}": 1
-}

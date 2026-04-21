@@ -47,13 +47,9 @@ def save_data(data):
 
 def get_all_sites_urls(data):
     urls = set()
-    for cat in data.values():
-        if not isinstance(cat, dict): continue
-        for sub in cat.get('subcategories', []):
-            for minor in sub.get('minor_categories', []):
-                for site in minor.get('sites', []):
-                    if isinstance(site, dict) and 'url' in site:
-                        urls.add(site['url'].strip().lower())
+    for item in data:
+        if isinstance(item, dict) and 'url' in item:
+            urls.add(item['url'].strip().lower())
     return urls
 # ========== 核心逻辑 ==========
 def load_buffer():
