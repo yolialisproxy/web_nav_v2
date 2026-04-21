@@ -301,19 +301,19 @@
               },
               {
                 "url": "https://dadamailproject.com/",
-                "title": "",
+                "title": "Dada Mail - Self Hosted, Easy to Use Email Marketing Mailing List Manager",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "https://www.portainer.io/",
-                "title": "",
+                "title": "Kubernetes, Docker and Podman Container Management Platform",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.cairographics.org/",
-                "title": "",
+                "title": "cairographics.org",
                 "description": ""
               },
               {
@@ -329,7 +329,7 @@
               },
               {
                 "url": "https://airbyte.io/",
-                "title": "",
+                "title": "Airbyte | Open-Source Data Integration Platform | ELT Tool",
                 "description": "",
                 "source": "awesome"
               },
@@ -1126,7 +1126,7 @@
             "sites": []
           },
           {
-            "name": "测试生成",
+            "name": "测试用例",
             "sites": []
           },
           {
@@ -1734,7 +1734,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": [
               {
                 "url": "https://github.blog/changelog",
@@ -2004,7 +2004,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -2217,7 +2217,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -2432,7 +2432,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -2600,7 +2600,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -2796,7 +2796,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -2998,7 +2998,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -3718,7 +3718,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -4479,7 +4479,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -4684,7 +4684,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "原创小说",
             "sites": [
               {
                 "url": "https://docs.github.com",
@@ -4973,7 +4973,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "独立博客",
             "sites": [
               {
                 "url": "http://www.codewars.com",
@@ -5271,7 +5271,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "科技资讯",
             "sites": [
               {
                 "url": "http://www.crypto-textbook.com/",
@@ -6482,7 +6482,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "电子书籍",
             "sites": [
               {
                 "url": "https://git-scm.com/",
@@ -7430,7 +7430,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "写作工具",
             "sites": [
               {
                 "url": "http://cs224d.stanford.edu/",
@@ -7975,7 +7975,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "出版平台",
             "sites": [
               {
                 "url": "https://webui.me/",
@@ -8704,7 +8704,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "编辑工具",
             "sites": []
           }
         ]
@@ -9379,7 +9379,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "写作平台",
             "sites": []
           }
         ]
@@ -10051,7 +10051,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "写作教程",
             "sites": []
           }
         ]
@@ -10553,7 +10553,32 @@
           },
           {
             "name": "HDRI",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "纹理包",
@@ -16322,7 +16347,7 @@
             "sites": []
           },
           {
-            "name": "正则测试",
+            "name": "正则工具",
             "sites": []
           },
           {
@@ -17810,7 +17835,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -17891,7 +17916,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -17994,7 +18019,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -18090,7 +18115,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -18203,7 +18228,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -18339,7 +18364,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -18426,7 +18451,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -18995,7 +19020,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -19630,7 +19655,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -20068,7 +20093,7 @@
             "sites": []
           },
           {
-            "name": "正则测试",
+            "name": "正则工具",
             "sites": []
           },
           {
@@ -20132,7 +20157,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -20171,7 +20196,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -20268,7 +20293,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -20700,7 +20725,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -20813,7 +20838,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -21520,7 +21545,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -22102,7 +22127,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -22857,7 +22882,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -23105,7 +23130,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -23217,7 +23242,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -23364,7 +23389,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -23503,7 +23528,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -23544,7 +23569,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -24092,7 +24117,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -24664,7 +24689,7 @@
           },
           {
             "id": "other",
-            "name": "其他",
+            "name": "垂直领域",
             "sites": []
           }
         ]
@@ -25848,7 +25873,7 @@
               },
               {
                 "url": "https://www.videolan.org/",
-                "title": "",
+                "title": "VLC: Official site - Free multimedia solutions for all OS! - VideoLAN",
                 "description": ""
               },
               {
@@ -27059,7 +27084,14 @@
           },
           {
             "name": "GitLab",
-            "sites": []
+            "sites": [
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "开源项目",
@@ -27079,7 +27111,32 @@
           },
           {
             "name": "Issue",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "PR",
@@ -27232,7 +27289,7 @@
             "sites": []
           },
           {
-            "name": "正则测试",
+            "name": "正则工具",
             "sites": []
           },
           {
@@ -27253,7 +27310,32 @@
           },
           {
             "name": "Hash",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           }
         ]
       },
@@ -27385,7 +27467,14 @@
         "minor_categories": [
           {
             "name": "IP查询",
-            "sites": []
+            "sites": [
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "Ping测试",
@@ -27623,7 +27712,32 @@
           },
           {
             "name": "Header检查",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "SEO工具",
