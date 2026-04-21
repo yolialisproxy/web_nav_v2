@@ -101,11 +101,11 @@ async def fetch_site_metadata(session: aiohttp.ClientSession, url: str) -> Optio
                 if resp.status != 200:
                     await asyncio.sleep(0.5 + attempt)
                     continue
-                
+
                 raw_html = await resp.text(errors="ignore")
-                
+
                 result = {}
-                
+
                 # 快速解析标题
                 title_start = raw_html.lower().find("<title>")
                 title_end = raw_html.lower().find("</title>")
@@ -113,7 +113,7 @@ async def fetch_site_metadata(session: aiohttp.ClientSession, url: str) -> Optio
                     title = raw_html[title_start+7:title_end].strip()
                     if 2 < len(title) < 70:
                         result["title"] = title
-                
+
                 # 快速解析描述
                 desc_pos = raw_html.lower().find('<meta name="description"')
                 if desc_pos != -1:
@@ -124,25 +124,25 @@ async def fetch_site_metadata(session: aiohttp.ClientSession, url: str) -> Optio
                             desc = raw_html[content_start+9:content_end].strip()
                             if 10 < len(desc) < 200:
                                 result["description"] = desc
-                
+
                 if result:
                     return result
-                    
+
         except Exception:
             await asyncio.sleep(1 + attempt)
             continue
-    
+
     return None
 
 # ========== 备份与原子写入 ==========
 def atomic_write_data(data: Any) -> None:
     backup_file = BACKUP_DIR / f"websites_{int(time.time())}.json.bak"
     shutil.copy2(DATA_FILE, backup_file)
-    
+
     temp_file = DATA_FILE.with_suffix(".tmp")
     with open(temp_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    
+
     temp_file.replace(DATA_FILE)
     logger.info(f"✅ 备份已创建: {backup_file.name}")
 
@@ -153,20 +153,20 @@ async def main():
     logger.info(f"📂 数据文件: {DATA_FILE}")
     logger.info(f"📊 状态文件: {STATE_FILE}")
     logger.info("=" * 60)
-    
+
     state = load_state()
-    
+
     while True:
         # 加载当前数据
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             full_data = json.load(f)
-        
+
         # 收集待处理站点
         targets = []
         total_count = 0
-        
+
         # 遍历数据结构
-        for cat in full_data.values():
+        for cat in full_data:
             if not isinstance(cat, dict) or 'subcategories' not in cat: continue
             for sub in cat['subcategories']:
                 if 'minor_categories' not in sub: continue
@@ -176,26 +176,26 @@ async def main():
                         total_count += 1
                         if not site.get('title') and len(targets) < BATCH_SIZE:
                             targets.append(site)
-        
+
         state["total_sites"] = total_count
-        
+
         if not targets:
             logger.info("✅ 所有站点处理完成，工作进程正常退出")
             state["status"] = "completed"
             state["finish_time"] = time.time()
             save_state(state)
             return
-        
+
         logger.info(f"🔄 处理批次: {len(targets)} 个站点 | 已处理: {state['processed']} | 进度: {state.get('progress_pct', 0)}%")
-        
+
         # 执行批量抓取
         async with aiohttp.ClientSession(connector=aiohttp.TCPConnector(limit=30, ttl_dns_cache=300)) as session:
             tasks = [fetch_site_metadata(session, s["url"]) for s in targets]
             results = await asyncio.gather(*tasks, return_exceptions=True)
-        
+
         success = 0
         failed = 0
-        
+
         # 写入结果
         for site, meta in zip(targets, results):
             if meta and isinstance(meta, dict):
@@ -206,20 +206,20 @@ async def main():
                 success += 1
             else:
                 failed += 1
-        
+
         # 原子写入磁盘
         atomic_write_data(full_data)
-        
+
         # 更新状态
         state["processed"] += len(targets)
         state["success"] += success
         state["failed"] += failed
         state["last_run"] = time.time()
         save_state(state)
-        
+
         logger.info(f"✅ 批次完成: 成功 {success} | 失败 {failed} | 总进度 {state['progress_pct']}%")
         logger.info("")
-        
+
         await asyncio.sleep(BATCH_DELAY)
 
 if __name__ == "__main__":

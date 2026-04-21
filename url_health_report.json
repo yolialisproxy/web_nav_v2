@@ -1,0 +1,128 @@
+{
+  "generated_at": "2026-04-21T23:01:58.021574",
+  "total": 204,
+  "success": 189,
+  "failed_count": 15,
+  "failed_sites": [
+    {
+      "id": "site_1",
+      "url": "http://www.awstats.org/",
+      "title": "AWStats - Open Source Log File Analyzer for advanced statistics (GNU GPL)",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_8",
+      "url": "https://www.passbolt.com/",
+      "title": "Open Source Password Manager for Teams | Passbolt",
+      "status_code": 405,
+      "ok": false,
+      "error": null
+    },
+    {
+      "id": "site_32",
+      "url": "https://www.material.io/icons",
+      "title": "Material Design",
+      "status_code": 405,
+      "ok": false,
+      "error": null
+    },
+    {
+      "id": "site_50",
+      "url": "https://indieweb.org/",
+      "title": "IndieWeb",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_59",
+      "url": "https://www.wechat.com",
+      "title": "WeChat - 连接10亿人的生活方式 | 聊天·通话·生活服务",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_81",
+      "url": "https://xbackbone.app/",
+      "title": "Home | XBackBone",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_82",
+      "url": "https://receiptwrangler.io",
+      "title": "Documentation | Receipt Wrangler",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_84",
+      "url": "https://git.mills.io/prologic/tube",
+      "title": "prologic/tube: 📺 tube is a Youtube-like (without censorship and features you don&#39;t need!) Video Sharing App written in Go which also supports automatic transcoding to MP4 H.265 AAC, multiple collections and RSS feed. - tube - Mills",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_101",
+      "url": "https://turtl.it/",
+      "title": "Turtl: The secure, collaborative notebook | Turtl",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_107",
+      "url": "https://lets-go-further.alexedwards.net",
+      "title": "Let’s Go Further! Advanced patterns for APIs and web applications in Go",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_148",
+      "url": "https://gopherconbr.org",
+      "title": "GopherCon Brasil — Conferência Oficial da Go Community",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_167",
+      "url": "https://demo.papra.app/",
+      "title": "Papra - Document archiving and sharing platform",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_191",
+      "url": "https://www.sitepoint.com",
+      "title": "SitePoint — Learn HTML, CSS, JavaScript, PHP,",
+      "status_code": 403,
+      "ok": false,
+      "error": null
+    },
+    {
+      "id": "site_206",
+      "url": "https://s-cart.org/",
+      "title": "S-Cart overview",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_219",
+      "url": "https://docs.slinkapp.io/",
+      "title": "Slink Documentation | Slink Docs",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    }
+  ]
+}

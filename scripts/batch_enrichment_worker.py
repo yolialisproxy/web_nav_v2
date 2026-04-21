@@ -55,7 +55,7 @@ def get_empty_sites():
                     desc = site.get('description', '').strip()
                     if not title or not desc or title == url or len(title) < 3:
                         empty.append({
-                            'path': (top_level, subcat['name'], minor_cat['name']),
+                            'path': (top_name, sub_name, minor_name),
                             'url': url,
                             'index': idx
                         })
@@ -101,17 +101,14 @@ async def worker(queue, websites, processed, results):
                 res = await enrich_site(session, item)
                 if res and res['title']:
                     top, sub, minor = item['path']
-                    for subcat in websites[top]['subcategories']:
-                        if subcat['name'] == sub:
-                            for mcat in subcat['minor_categories']:
-                                if mcat['name'] == minor:
-                                    site = mcat['siteIds'][item['index']]
-                                    site['title'] = res['title']
-                                    if res['description']:
-                                        site['description'] = res['description']
-                                    processed.add(item['url'])
-                                    results['success'] += 1
-                                    print(f"✅ [{results['success']}] {res['title']}")
+                    # 新的扁平结构直接访问
+                    site = websites[top][sub][minor][item['index']]
+                    site['title'] = res['title']
+                    if res['description']:
+                        site['description'] = res['description']
+                    processed.add(item['url'])
+                    results['success'] += 1
+                    print(f"✅ [{results['success']}] {res['title']}")
                 else:
                     results['failed'] += 1
             finally:

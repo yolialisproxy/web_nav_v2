@@ -1,14 +1,17 @@
 {
-  "current_round": 1,
-  "last_updated": "2026-04-21T22:17:00",
-  "last_round_errors": [],
-  "total_completed": 0,
-  "remaining": 9000,
+  "current_round": 2,
+  "last_updated": "2026-04-21T23:00:43.094412",
+  "last_round_errors": [
+    "url_health_checker.py is using old object format while data is now flat list",
+    "all old scripts need migration to new flat data format"
+  ],
+  "total_completed": 204,
+  "remaining": 0,
   "completed": false,
-  "watchdog_job_id": null,
+  "watchdog_job_id": "",
   "next_round_tasks": [
-    "1. 运行数据清理 webnav-data-sanitizer",
-    "2. 运行内容补全 webnav-content-enricher",
-    "3. 运行站点验证 site-validator"
+    "1. Patch url_health_checker.py to support flat list data format",
+    "2. Run fixed health checker and generate URL validation report",
+    "3. Perform surgical cleanup scan on index.html for dead links"
   ]
 }
