@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-21T23:01:58.021574",
+  "generated_at": "2026-04-21T23:08:19.679434",
   "total": 204,
-  "success": 189,
-  "failed_count": 15,
+  "success": 190,
+  "failed_count": 14,
   "failed_sites": [
     {
-      "id": "site_1",
-      "url": "http://www.awstats.org/",
-      "title": "AWStats - Open Source Log File Analyzer for advanced statistics (GNU GPL)",
+      "id": "site_6",
+      "url": "https://samacloud.io",
+      "title": "Open source chat server for mobile and web apps | Free, Secure, and Easy to Use",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
@@ -19,6 +19,22 @@
       "status_code": 405,
       "ok": false,
       "error": null
+    },
+    {
+      "id": "site_14",
+      "url": "https://kutt.to",
+      "title": "Kutt | Free modern URL shortener",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": "site_18",
+      "url": "https://www.programiz.com/cpp-programming/online-compiler",
+      "title": "Online C++ Compiler - Programiz",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
     },
     {
       "id": "site_32",
@@ -45,25 +61,17 @@
       "error": "TimeoutError"
     },
     {
-      "id": "site_81",
-      "url": "https://xbackbone.app/",
-      "title": "Home | XBackBone",
+      "id": "site_61",
+      "url": "https://glitchtip.com",
+      "title": "Open Source Error Tracking | GlitchTip",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
     },
     {
-      "id": "site_82",
-      "url": "https://receiptwrangler.io",
-      "title": "Documentation | Receipt Wrangler",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "site_84",
-      "url": "https://git.mills.io/prologic/tube",
-      "title": "prologic/tube: 📺 tube is a Youtube-like (without censorship and features you don&#39;t need!) Video Sharing App written in Go which also supports automatic transcoding to MP4 H.265 AAC, multiple collections and RSS feed. - tube - Mills",
+      "id": "site_76",
+      "url": "https://d8a.tech",
+      "title": "Warehouse-native Analytics - d8a.tech",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
@@ -77,25 +85,17 @@
       "error": "TimeoutError"
     },
     {
-      "id": "site_107",
-      "url": "https://lets-go-further.alexedwards.net",
-      "title": "Let’s Go Further! Advanced patterns for APIs and web applications in Go",
+      "id": "site_125",
+      "url": "https://www.privacytools.io/",
+      "title": "Best Privacy Tools & Software Guide in in 2026",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
     },
     {
-      "id": "site_148",
-      "url": "https://gopherconbr.org",
-      "title": "GopherCon Brasil — Conferência Oficial da Go Community",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "site_167",
-      "url": "https://demo.papra.app/",
-      "title": "Papra - Document archiving and sharing platform",
+      "id": "site_134",
+      "url": "https://activitywatch.net",
+      "title": "ActivityWatch - Open-source time tracker",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
@@ -109,17 +109,9 @@
       "error": null
     },
     {
-      "id": "site_206",
-      "url": "https://s-cart.org/",
-      "title": "S-Cart overview",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "site_219",
-      "url": "https://docs.slinkapp.io/",
-      "title": "Slink Documentation | Slink Docs",
+      "id": "site_203",
+      "url": "https://homebox.software/",
+      "title": "HomeBox | Homebox",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"

@@ -12,7 +12,7 @@
     "title": "LanCache.NET | LAN Party game caching made easy",
     "description": "LAN Party game caching made easy",
     "_cat": "AI智能/AI其他/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_2"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Llmkube Com",
     "description": "# LLMKube Summary: Kubernetes for Local LLMs...",
     "_cat": "资源素材/图片/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_3"
   },
   {
@@ -37,7 +37,7 @@
     "title": "Digiboard by La Digitale",
     "description": "Un tableau blanc collaboratif proposé par La Digitale",
     "_cat": "AI智能/AI其他/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_5"
   },
   {
@@ -62,7 +62,7 @@
     "title": "Open Source Password Manager for Teams | Passbolt",
     "description": "Manage and share passwords securely with Passbolt. Open source, audited and built for teams that need collaboration, compliance and control.",
     "_cat": "开发资源/api/生成器",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_8"
   },
   {
@@ -71,7 +71,7 @@
     "description": "Torch is a scientific computing framework for LuaJIT.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_9"
   },
   {
@@ -79,7 +79,7 @@
     "title": "OpenObserve: Open Source Observability Platform | Logs, Metrics &amp; Traces",
     "description": "Fast, scalable and cost-effective open source observability platform. Monitor logs, metrics &#38; traces with 140x lower storage costs than Elasticsearch. Start in 2 minutes.",
     "_cat": "视频娱乐/国内视频/社区",
-    "category": "其他",
+    "category": "devops",
     "id": "site_10"
   },
   {
@@ -87,7 +87,7 @@
     "title": "InvenTree - InvenTree Demo",
     "description": "InvenTree is an open-source inventory management system which provides intuitive parts management and stock control. It is at the center of an ecosystem of a...",
     "_cat": "AI智能/工具/资源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_11"
   },
   {
@@ -95,7 +95,7 @@
     "title": "monetr",
     "description": "Take control of your finances, paycheck by paycheck, with monetr. Put aside what you need, spend what you want, and confidently manage your money with ease. Always know you’ll have enough for your bills and what’s left to save or spend.",
     "_cat": "视频娱乐/国内视频/开源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_12"
   },
   {
@@ -129,7 +129,7 @@
     "description": "Distributed deep learning system",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_16"
   },
   {
@@ -145,7 +145,7 @@
     "title": "Online C++ Compiler - Programiz",
     "description": "Write and run your C++ code using our online compiler. Enjoy additional features like code sharing, dark mode, and support for multiple programming languages.",
     "_cat": "开发资源/ai编程/生成器",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_18"
   },
   {
@@ -153,7 +153,7 @@
     "title": "Home - Readeck",
     "description": "Save interesting articles, long read, pictures, videos. Read or revisit them later.",
     "_cat": "视频娱乐/国内视频/服务",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_19"
   },
   {
@@ -186,7 +186,7 @@
     "title": "OpenSlides - Veranstaltungen und Online-Wahlen managen",
     "description": "OpenSlides ist eine Software zur digitalen Organisation Ihrer Veranstaltungen und Gremienstrukturen und Durchführen von Online-Wahlen.",
     "_cat": "阅读写作/创作/生成器",
-    "category": "其他",
+    "category": "devops",
     "id": "site_25"
   },
   {
@@ -194,7 +194,7 @@
     "title": "Zammad Community | Home &amp; Download",
     "description": "The Zammad - Help Desk and Ticket System - Community Page",
     "_cat": "AI智能/AI开发/生成器",
-    "category": "其他",
+    "category": "办公工具",
     "id": "site_26"
   },
   {
@@ -236,7 +236,7 @@
     "title": "Cannery",
     "description": "The self-hosted firearm tracker app",
     "_cat": "视频创作/特效/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_33"
   },
   {
@@ -254,7 +254,7 @@
     "description": "cuDNN provides researchers and developers with high-performance GPU acceleration.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_36"
   },
   {
@@ -280,7 +280,7 @@
     "title": "Layli",
     "description": "Web site created using create-react-app",
     "_cat": "视频娱乐/游戏/资源",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_39"
   },
   {
@@ -288,7 +288,7 @@
     "title": "Fast, embeddable key-value storage | TidesDB",
     "description": "A high-performance LSM-tree based key-value storage engine library written in C. Build databases or use directly as a standalone store.",
     "_cat": "资源素材/字体/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_40"
   },
   {
@@ -296,7 +296,7 @@
     "title": "ODB - C++ Object-Relational Mapping (ORM)",
     "description": "ODB is an open-source, cross-platform and cross-database object-relational mapping (ORM) system for C++",
     "_cat": "创意工具/思维导图/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_41"
   },
   {
@@ -304,7 +304,7 @@
     "title": "chibisafe | chibisafe",
     "description": "Beautiful and performant vault to save all your files in the cloud.",
     "_cat": "资源素材/资源/生成器",
-    "category": "其他",
+    "category": "devops",
     "id": "site_42"
   },
   {
@@ -312,7 +312,7 @@
     "title": "C++ Stories",
     "description": "Stay up-to-date with Modern C++",
     "_cat": "视频创作/素材/社区",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_43"
   },
   {
@@ -337,7 +337,7 @@
     "title": "Discussions - Dotclear",
     "description": "Prenez le contrôle de votre blog - page 1",
     "_cat": "AI智能/AI其他/平台",
-    "category": "其他",
+    "category": "devops",
     "id": "site_47"
   },
   {
@@ -354,7 +354,7 @@
     "title": "Tinode",
     "description": "Tinode instant messenger in a browser",
     "_cat": "视频娱乐/游戏/生成器",
-    "category": "其他",
+    "category": "通讯社区",
     "id": "site_49"
   },
   {
@@ -362,7 +362,7 @@
     "title": "IndieWeb",
     "description": "The IndieWeb is a people-focused alternative to the “corporate web”.",
     "_cat": "视频娱乐/动漫/教程",
-    "category": "其他",
+    "category": "通讯社区",
     "id": "site_50"
   },
   {
@@ -370,7 +370,7 @@
     "title": "Welcome to the public demo of the Silverstripe CMS | Silverstripe CMS Demo",
     "description": "this is my test of this website template...",
     "_cat": "学术科研/教材/生成器",
-    "category": "其他",
+    "category": "办公工具",
     "id": "site_51"
   },
   {
@@ -378,7 +378,7 @@
     "title": "OpenOlat &#8211; Infinite learning",
     "description": "OpenOlat LMS+ ist Ihr Learning Management System für eLearning, Online-Schulungen, eTesting und digitale Weiterbildung. Die flexible Bildungsplattform für Unternehmen und Bildungsinstitutionen in der Schweiz.",
     "_cat": "学术科研/数据集/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_52"
   },
   {
@@ -404,7 +404,7 @@
     "title": "C++ Resources",
     "description": "Various resources for learning or using C++",
     "_cat": "视频娱乐/动漫/资源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_55"
   },
   {
@@ -429,7 +429,7 @@
     "title": "Welcome - Engity's Bifröst",
     "description": "Bifröst is a highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session.",
     "_cat": "学术科研/教程/工具",
-    "category": "其他",
+    "category": "devops",
     "id": "site_58"
   },
   {
@@ -446,7 +446,7 @@
     "title": "CKAN - The open source data management system",
     "description": "CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data.",
     "_cat": "视频娱乐/国外视频/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_60"
   },
   {
@@ -462,7 +462,7 @@
     "title": "Luau | Luau",
     "description": "Luau is a small, fast, and embeddable programming language based on Lua with a gradual type system.",
     "_cat": "开发资源/学习/生成器",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_62"
   },
   {
@@ -488,7 +488,7 @@
     "title": "audiobookshelf",
     "description": "Self-hosted audiobook and podcast server",
     "_cat": "阅读写作/教程/社区",
-    "category": "其他",
+    "category": "devops",
     "id": "site_65"
   },
   {
@@ -515,7 +515,7 @@
     "description": "Recurrent Neural Network Language Models",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_68"
   },
   {
@@ -523,7 +523,7 @@
     "title": "Omeka",
     "description": "Omeka is a free, flexible, and open source web-publishing platform for the display of library, museum, archives, and scholarly collections and exhibitions. Its five-minute setup makes launching an online archive or exhibition as easy as launching a blog.",
     "_cat": "学术科研/ai学习/服务",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_69"
   },
   {
@@ -531,7 +531,7 @@
     "title": "Create a new Form for free",
     "description": "Build beautiful, powerful forms for free with OpnForm. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.",
     "_cat": "阅读写作/教程/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_70"
   },
   {
@@ -539,7 +539,7 @@
     "title": "AzuraCast",
     "description": "AzuraCast is a free and open-source, self-hosted web radio management suite.",
     "_cat": "AI智能/工具/平台",
-    "category": "其他",
+    "category": "devops",
     "id": "site_71"
   },
   {
@@ -547,7 +547,7 @@
     "title": "What is SeqAn? | SeqAn",
     "description": "SeqAn is an open source C++ library of efficient algorithms and data structures for the analysis of sequences with the focus on biological data. Our library applies a unique generic design that guarantees high performance, generality, extensibility, and integration with other libraries. SeqAn is easy to use and simplifies the development of new software tools with a minimal loss of performance.",
     "_cat": "开发资源/学习/生成器",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_72"
   },
   {
@@ -555,7 +555,7 @@
     "title": "Home | TCPDUMP &amp; LIBPCAP",
     "description": "Web site of Tcpdump and Libpcap",
     "_cat": "AI智能/工具/教程",
-    "category": "其他",
+    "category": "AI工具",
     "id": "site_73"
   },
   {
@@ -580,7 +580,7 @@
     "title": "Warehouse-native Analytics - d8a.tech",
     "description": "Reporting-ready clickstream for your own data warehouse.",
     "_cat": "视频娱乐/国外视频/服务",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_76"
   },
   {
@@ -588,7 +588,7 @@
     "title": "LinkStack - Self-hosted open-source Linktree alternative",
     "description": "LinkStack provides you with a website similar to Linktree. Many social media platforms only allow you to add one link, with this you can simply link to your LinkStack page and have all the links you want displayed on one site. You can share all your links to your social media platform or important links to easy accessible and hosted on your own web-server or web-hosting provider. On this website, other users can register and create their own links, you can access other user via the Admin Panel.",
     "_cat": "AI智能/工具/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_77"
   },
   {
@@ -606,7 +606,7 @@
     "description": "由 University of California San Diego ... 免费注册。",
     "source": "awesome",
     "_cat": "阅读写作/出版/工具",
-    "category": "其他",
+    "category": "学习资源",
     "id": "site_79"
   },
   {
@@ -622,7 +622,7 @@
     "title": "Home | XBackBone",
     "description": "A lightweight file manager with full ShareX support and more",
     "_cat": "视频娱乐/国内视频/资源",
-    "category": "其他",
+    "category": "办公工具",
     "id": "site_81"
   },
   {
@@ -638,7 +638,7 @@
     "title": "raylib",
     "description": "raylib is a simple and easy-to-use library to enjoy videogames programming.",
     "_cat": "资源素材/字体/社区",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_83"
   },
   {
@@ -662,7 +662,7 @@
     "title": "Samtools",
     "description": "Samtools",
     "_cat": "视频娱乐/游戏/生成器",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_86"
   },
   {
@@ -670,7 +670,7 @@
     "title": "Sovereign Web Analytics — Self-Hosted or Managed Cloud",
     "description": "HitKeep is a privacy-first web analytics platform you can self-host or run in managed EU/US cloud regions. Single binary, zero external dependencies, cookie-free by default.",
     "_cat": "AI智能/AI音乐/服务",
-    "category": "其他",
+    "category": "devops",
     "id": "site_87"
   },
   {
@@ -703,7 +703,7 @@
     "title": "GopherCon Israel 2026",
     "description": "Best Go Conference in Israel",
     "_cat": "资源素材/资源/生成器",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_91"
   },
   {
@@ -719,7 +719,7 @@
     "title": "Building a Go Microservice with CI/CD",
     "description": "Get familiar with Gin and find out how it can help you reduce boilerplate code and build a request handling pipeline.",
     "_cat": "视频娱乐/直播/生成器",
-    "category": "其他",
+    "category": "学习资源",
     "id": "site_93"
   },
   {
@@ -760,7 +760,7 @@
     "title": "Home | SCM-Manager",
     "description": "The easiest way to share and manage your Git, Mercurial and Subversion repositories.",
     "_cat": "阅读写作/博客/服务",
-    "category": "其他",
+    "category": "devops",
     "id": "site_98"
   },
   {
@@ -784,7 +784,7 @@
     "title": "Turtl: The secure, collaborative notebook | Turtl",
     "description": "The safe way to remember everything. Take all your important data with you.",
     "_cat": "AI智能/AI音乐/库",
-    "category": "其他",
+    "category": "通讯社区",
     "id": "site_101"
   },
   {
@@ -792,7 +792,7 @@
     "title": "CasaOS - A simple, easy-to-use, elegant open-source personal cloud system",
     "description": "CasaOS is a simple, easy-to-use, elegant open-source personal cloud system",
     "_cat": "学术科研/ai学习/开源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_102"
   },
   {
@@ -817,7 +817,7 @@
     "title": "openFrameworks",
     "description": "openFrameworks",
     "_cat": "视频娱乐/国外视频/生成器",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_106"
   },
   {
@@ -833,7 +833,7 @@
     "title": "Chevereto self-hosted - Image and Video Hosting Software",
     "description": "Image and Video hosting software that allows you to create your own media hosting and sharing service in your own premises. It's your hosting and your rules, say goodbye to the closures and restrictions.",
     "_cat": "视频娱乐/国内视频/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_108"
   },
   {
@@ -850,7 +850,7 @@
     "title": "Webhooks as a Service – Secure and Enterprise Ready · Svix",
     "description": "Svix is the enterprise ready webhook service. Build a state of the art webhook platform in minutes with our hosted webhook SaaS or our open source project. Don't reinvent the wheel, use webhooks as a service.",
     "_cat": "AI智能/工具/社区",
-    "category": "其他",
+    "category": "devops",
     "id": "site_110"
   },
   {
@@ -867,7 +867,7 @@
     "title": "Project Chrono - An Open-Source Physics Engine",
     "description": "Project Chrono is a physics-based simulation infrastructure based on a platform-independent, open-source design.",
     "_cat": "开发资源/api/开源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_113"
   },
   {
@@ -875,7 +875,7 @@
     "title": "Ollama",
     "description": "Ollama is the easiest way to automate your work using open models, while keeping your data safe.",
     "_cat": "学术科研/课程/生成器",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_115"
   },
   {
@@ -892,7 +892,7 @@
     "description": "Discover 38,239 Plugins, Code and Script for Bootstrap, Javascript, PHP, Wordpress, HTML5 and more. Save time, buy Code on CodeCanyon!",
     "title": "Buy Plugins &amp; Code from CodeCanyon",
     "_cat": "视频创作/录屏/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_118"
   },
   {
@@ -909,7 +909,7 @@
     "title": "Share Secrets Securely",
     "description": "Share sensitive information securely with self-destructing links. Paste your secret, generate a link, and share it. Once viewed, it's gone forever",
     "_cat": "视频娱乐/动漫/工具",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_120"
   },
   {
@@ -917,7 +917,7 @@
     "title": "Open source Business Intelligence and Embedded Analytics",
     "description": "Metabase is the easy, open-source way for everyone to ask questions and learn from data.",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "AI工具",
     "id": "site_121"
   },
   {
@@ -1009,7 +1009,7 @@
     "title": "ActivityWatch - Open-source time tracker",
     "description": "The best free and open-source automated time tracker. Cross-platform, extensible, local/privacy-first. Tracks app and website usage on Windows, macOS, Linux & Android. All data stays on your device.",
     "_cat": "视频创作/字幕/资源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_134"
   },
   {
@@ -1026,7 +1026,7 @@
     "title": "Charmhub | The Open Operator Collection",
     "description": "Universal operators for application lifecycle management on Linux, Windows and Kubernetes",
     "_cat": "开发资源/api/工具",
-    "category": "其他",
+    "category": "devops",
     "id": "site_136"
   },
   {
@@ -1069,7 +1069,7 @@
     "title": "QST Free Account",
     "description": "An easy to use yet feature rich method of developing, delivering and grading online quizzes, surveys, tests and other markable assignments. Installs on laptop, desktop, server or cloud. Windows 10/11, Linux and Mac OS. Create/import/export/convert questions.",
     "_cat": "创意工具/白板/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_141"
   },
   {
@@ -1086,7 +1086,7 @@
     "title": "Accent | Accent",
     "description": ">Accent is your simple, developer-oriented translation tool",
     "_cat": "AI智能/AI开发/生成器",
-    "category": "其他",
+    "category": "通讯社区",
     "id": "site_143"
   },
   {
@@ -1103,7 +1103,7 @@
     "description": "Home of the deforum community",
     "title": "deforum",
     "_cat": "创意工具/ui设计/工具",
-    "category": "其他",
+    "category": "通讯社区",
     "id": "site_145"
   },
   {
@@ -1127,7 +1127,7 @@
     "title": "MPQC | The Massively Parallel Quantum Chemistry (MPQC) platform is a research package for ab initio simulation of the electronic structure of molecules and periodic solids, with primary focus on many-body electronic structure methods, such as coupled-cluster.",
     "description": "The Massively Parallel Quantum Chemistry (MPQC) platform is a research package for ab initio simulation of the electronic structure of molecules and periodic solids, with primary focus on many-body electronic structure methods, such as coupled-cluster.",
     "_cat": "AI智能/AI其他/工具",
-    "category": "其他",
+    "category": "devops",
     "id": "site_149"
   },
   {
@@ -1143,7 +1143,7 @@
     "title": "Mafl",
     "description": "Intuitive service for organizing your homepage",
     "_cat": "阅读写作/网文/资源",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_151"
   },
   {
@@ -1152,7 +1152,7 @@
     "description": "Open-source version control system for Data Science and Machine Learning projects. Git-like experience to organize your data, models, and experiments.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "framework",
     "id": "site_153"
   },
   {
@@ -1177,7 +1177,7 @@
     "title": "Technitium DNS Server | An Open Source DNS Server For Privacy & Security",
     "description": "Technitium DNS Server is an open source authoritative as well as recursive DNS server that can be used for self hosting a DNS server for privacy & security.",
     "_cat": "办公效率/工具/社区",
-    "category": "其他",
+    "category": "devops",
     "id": "site_156"
   },
   {
@@ -1203,7 +1203,7 @@
     "description": "The official home of the Python Programming Language",
     "title": "Welcome to Python.org",
     "_cat": "AI智能/AI视频/库",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_160"
   },
   {
@@ -1211,7 +1211,7 @@
     "title": "Static Site Generators - Top Open Source SSGs | Jamstack",
     "description": "Check out this showcase of some of the best, open source static site generators. This is community-drive so be sure to submit your favorite today!",
     "_cat": "视频娱乐/动漫/教程",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_161"
   },
   {
@@ -1235,7 +1235,7 @@
     "title": "ezBookkeeping",
     "description": "ezBookkeeping is a lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.",
     "_cat": "视频娱乐/游戏/社区",
-    "category": "其他",
+    "category": "devops",
     "id": "site_164"
   },
   {
@@ -1259,7 +1259,7 @@
     "title": "Papra - Document archiving and sharing platform",
     "description": "Papra, the document archiving and sharing platform.",
     "_cat": "AI智能/AI视频/服务",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_167"
   },
   {
@@ -1267,7 +1267,7 @@
     "title": "Your Personal Cloud - Syncloud",
     "description": "Your Personal Server",
     "_cat": "AI智能/工具/社区",
-    "category": "其他",
+    "category": "devops",
     "id": "site_168"
   },
   {
@@ -1302,7 +1302,7 @@
     "description": "Free online SQL playground for MySQL, PostgreSQL, and SQL Server. Create database structures, run queries, and share results instantly.",
     "source": "awesome",
     "_cat": "AI智能/AI音乐/库",
-    "category": "其他",
+    "category": "devops",
     "id": "site_173"
   },
   {
@@ -1310,7 +1310,7 @@
     "title": "Free MQTT Broker: Public &amp; Multi-Region | Connect Now | EMQ",
     "description": "Try out the free public MQTT broker based on the scalable and reliable EMQX. Start your MQTT testing and learning immediately without deployment.",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_174"
   },
   {
@@ -1326,7 +1326,7 @@
     "title": "Fess - Enterprise Search Server",
     "description": "Fess is a full-text search server that can be easily set up in just 5 minutes.",
     "_cat": "视频创作/录屏/服务",
-    "category": "其他",
+    "category": "devops",
     "id": "site_176"
   },
   {
@@ -1334,7 +1334,7 @@
     "title": "ClipBucketV5 Demo - A way to broadcast yourself",
     "description": "ClipBucketV5 is a photo & video sharing script, by Oxygenz",
     "_cat": "开发资源/ide/资源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_177"
   },
   {
@@ -1342,7 +1342,7 @@
     "title": "Yarn.social - The decentralised social micro-blogging platform that actually respects your privacy",
     "description": "Yarn.social is a decentralised self-hosted social media based on the Twtxt format that has a privacy-first focus. There are no ads, no tracking, and no personal information is ever collected or stored.",
     "_cat": "资源素材/图片/资源",
-    "category": "其他",
+    "category": "devops",
     "id": "site_178"
   },
   {
@@ -1383,7 +1383,7 @@
     "title": "Labeled Tab-separated Values (LTSV)",
     "description": "Labeled Tab-separated Values (LTSV) format is a variant of Tab-separated Values (TSV). Each record in a LTSV file is represented as a single line. Each field is separated by TAB and has a label and a value. The label and the value have been separated by",
     "_cat": "阅读写作/工具/服务",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_184"
   },
   {
@@ -1391,7 +1391,7 @@
     "title": "Donate to farmOS | farmOS",
     "description": "farmOS is a free and open source web-based application for farm management, planning, and record keeping.",
     "_cat": "资源素材/资源/社区",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_185"
   },
   {
@@ -1415,7 +1415,7 @@
     "title": "PrestaShop Live Demo",
     "description": "Looking for a powerful shopping cart software? Try the PrestaShop Demo now and visualize it on mobile, tablet and desktop.",
     "_cat": "AI智能/AI开发/资源",
-    "category": "其他",
+    "category": "AI工具",
     "id": "site_188"
   },
   {
@@ -1448,7 +1448,7 @@
     "title": "Discount Bandit",
     "description": "Track Your Favourite Products Across Multiple Stores | Self Hosted",
     "_cat": "资源素材/平台/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_192"
   },
   {
@@ -1465,7 +1465,7 @@
     "title": "PostHog – We make dev tools for product engineers",
     "description": "All your developer tools in one place. PostHog gives engineers everything to build, test, measure, and ship successful products faster. Get started free.",
     "_cat": "开发资源/部署/资源",
-    "category": "其他",
+    "category": "代码工具",
     "id": "site_194"
   },
   {
@@ -1490,7 +1490,7 @@
     "title": "MyBB - Free and Open Source Forum Software",
     "description": "The official homepage for MyBB, a free and open source PHP forum software.",
     "_cat": "视频娱乐/音乐/生成器",
-    "category": "其他",
+    "category": "通讯社区",
     "id": "site_197"
   },
   {
@@ -1506,7 +1506,7 @@
     "title": "Seafile - Open Source File Sync and Share Software",
     "description": "Seafile is an open source, self-hosted file sync and share solution with high performance and reliability. Sync, access, and collaborate on files on your own server or private cloud.",
     "_cat": "视频娱乐/动漫/工具",
-    "category": "其他",
+    "category": "devops",
     "id": "site_199"
   },
   {
@@ -1514,7 +1514,7 @@
     "title": "tududi - Organize Life and Work, Self-Hosted or Hosted",
     "description": "A calm, open system for life and work. Tasks, projects, notes, and smart views in one place. Self-host the open-source version, or use Tududi Hosted.",
     "_cat": "视频娱乐/音乐/教程",
-    "category": "其他",
+    "category": "devops",
     "id": "site_200"
   },
   {
@@ -1523,7 +1523,7 @@
     "description": "HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.",
     "title": "HandBrake: Open Source Video Transcoder",
     "_cat": "视频娱乐/直播/生成器",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_201"
   },
   {
@@ -1540,7 +1540,7 @@
     "title": "HomeBox | Homebox",
     "description": "A simple home inventory management software",
     "_cat": "AI智能/AI开发/资源",
-    "category": "其他",
+    "category": "办公工具",
     "id": "site_203"
   },
   {
@@ -1548,7 +1548,7 @@
     "title": "Home",
     "description": "Join GopherCon 2025 and immerse yourself in the Go community. Connect with developers, attend insightful talks, and explore the latest in Go programming.",
     "_cat": "视频创作/录屏/资源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_204"
   },
   {
@@ -1556,7 +1556,7 @@
     "title": "S-Cart overview",
     "description": "An open-source application built with Laravel, providing free website solutions for businesses.",
     "_cat": "开发资源/学习/生成器",
-    "category": "其他",
+    "category": "代码工具",
     "id": "site_206"
   },
   {
@@ -1564,7 +1564,7 @@
     "title": "Finde eine Solawi in Deiner Nähe! | ernte-teilen.org",
     "description": "Hier finden Landwirte und Verbraucher zusammen, die sich an Solidarischer Landwirtschaft beteiligen möchten.",
     "_cat": "阅读写作/网文/资源",
-    "category": "其他",
+    "category": "实用工具",
     "id": "site_207"
   },
   {
@@ -1572,7 +1572,7 @@
     "title": "Oxygine - 2D C++ game framework",
     "description": "Oxygine is free C++ engine and framework for 2D games on iOS, Android, Windows, Linux and Mac.",
     "_cat": "资源素材/图片/工具",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_209"
   },
   {
@@ -1598,7 +1598,7 @@
     "description": "All popular icon sets, one framework",
     "title": "Iconify Design: All popular icon sets, one framework.",
     "_cat": "AI智能/AI其他/服务",
-    "category": "其他",
+    "category": "AI工具",
     "id": "site_213"
   },
   {
@@ -1615,7 +1615,7 @@
     "description": "The Python Package Index (PyPI) is a repository of software for the Python programming language.",
     "title": "PyPI · The Python Package Index",
     "_cat": "AI智能/工具/工具",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_215"
   },
   {
@@ -1624,7 +1624,7 @@
     "description": "The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations, interactive dashboards and other media.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "其他",
+    "category": "开发工具",
     "id": "site_216"
   },
   {
