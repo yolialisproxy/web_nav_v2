@@ -1,9 +1,12 @@
 {
-  "current_round": 11,
-  "last_updated": "2026-04-21T20:11:00",
+  "current_round": 12,
+  "last_updated": "2026-04-21T20:16:00",
   "last_round_errors": [],
-  "total_completed": 6,
-  "remaining": 3,
+  "total_completed": 7,
+  "remaining": 2,
   "next_round_tasks": [
+    "继续运行 round5_precise_fill.py 填充剩余不足分类",
+    "清理重复站点",
+    "重新生成最终HTML"
   ]
 }
