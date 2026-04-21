@@ -23,8 +23,47 @@ def extract_title(html):
         return title[:180]
     return None
 
+# 全局垃圾特征库，永远不会再碰到同样的垃圾
+GARBAGE_PATTERNS = [
+    'githubassets.com',
+    'avatars.githubusercontent.com',
+    'github-cloud.s3.amazonaws.com',
+    'user-images.githubusercontent.com',
+    'raw.githubusercontent.com',
+    'repository-images.githubusercontent.com',
+    '.svg',
+    '.png',
+    '.jpg',
+    '.gif',
+    '&quot;',
+    '\\u0026',
+    'utm_campaign',
+    'utm_medium',
+    'utm_source',
+    'api.github.com/_private',
+    'opengraph.githubassets.com',
+    'w3.org/2000/svg',
+    'schema.org/',
+    'awesomelists.top',
+    'trackawesomelist.com',
+    '\\'
+]
+
+GARBAGE_TITLES = [
+    'GitHub · Change is constant.',
+    'Sign in for Software Support and Product Help',
+    'GitHub General Privacy Statement',
+    'GitHub Terms of Service'
+]
+
 async def fetch_single(session, site):
     try:
+        # ✅ 前置垃圾检测，根本不去请求
+        for pattern in GARBAGE_PATTERNS:
+            if pattern in site['url']:
+                print(f"  ⏭️  跳过垃圾: {site['url'][:60]}")
+                return None
+
         print(f"  → 正在请求: {site['url'][:60]}")
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'}
         async with session.get(site['url'], timeout=TIMEOUT, ssl=False, headers=headers) as resp:
@@ -33,6 +72,11 @@ async def fetch_single(session, site):
                 return False
             html = await resp.text(errors='ignore')
             title = extract_title(html)
+
+            # ✅ 垃圾标题检测
+            if title in GARBAGE_TITLES:
+                print(f"    ⚠️  垃圾标题: {title[:50]}")
+                return None
 
             if title and title.strip() and title != site['url']:
                 print(f"    ✅ 成功: {title[:50]}")
@@ -70,7 +114,10 @@ async def main():
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
     success = sum(1 for r in results if r is True)
-    print(f"\n✅ 批次完成: 成功 {success}/{len(sites)}")
+    garbage = sum(1 for r in results if r is None)
+    failed = sum(1 for r in results if r is False)
+
+    print(f"\n✅ 批次完成: 成功 {success}/{len(sites)}  垃圾跳过 {garbage}  失败 {failed}")
 
     f = open('data/websites.json', 'w')
     json.dump(data, f, indent=2, ensure_ascii=False)
