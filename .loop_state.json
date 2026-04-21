@@ -1,9 +1,14 @@
 {
   "status": "running",
-  "next_action": "adapt scripts for flat array format",
-  "last_run": "2026-04-21 17:26:12",
+  "next_action": "fix all scripts for flat array format",
+  "last_run": "2026-04-21 17:47:32",
   "total_sites": 6257,
   "missing_metadata": 5093,
   "missing_title": 4828,
-  "note": "Auto-resume loop active: detected flat array format migration, old object format scripts failing, will update scripts on next run"
+  "note": "Auto-resume loop: detected that all old scripts are failing due to flat array migration. Next step: patch all scripts to support list format instead of object format.",
+  "progress": {
+    "total_scripts": 30,
+    "scripts_fixed": 8,
+    "scripts_failing": 7
+  }
 }

@@ -10,7 +10,7 @@ from datetime import datetime
 
 def count_total_sites(data):
     count = 0
-    for big_cat in data.values():
+    for big_cat in data:
         if not isinstance(big_cat, dict): continue
         for mid_cat in big_cat.get('subcategories', []):
             for minor_cat in mid_cat.get('minor_categories', []):

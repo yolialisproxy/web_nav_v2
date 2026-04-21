@@ -129,7 +129,7 @@ def process_json(input_path):
             categories.append(cat_obj)
     elif 'categories' in data:
         # V2 structure: { "categories": [...], "sites": [...] }
-        categories = data['categories']
+        categories = data
         all_sites_count = len(data['siteIds'])
     else:
         print("❌ 未知数据格式")

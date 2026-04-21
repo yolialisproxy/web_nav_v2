@@ -45,7 +45,7 @@ def save_data(data):
 
 def get_all_urls(data):
     urls = set()
-    for b in data.get('categories', []):
+    for b in data:
         for m in b.get('subcategories', []):
             for s in m.get('minor_categories', []):
                 for site in s.get('sites', []):
@@ -72,7 +72,7 @@ def main():
 
     # 预先生成所有缺口任务
     tasks = []
-    for bidx, b in enumerate(data.get('categories', [])):
+    for bidx, b in enumerate(data):
         for midx, m in enumerate(b.get('subcategories', [])):
             for sidx, s in enumerate(m.get('minor_categories', [])):
                 count = len(s.get('sites', []))
@@ -91,7 +91,7 @@ def main():
                 new = [u for u in urls if u not in existing][:need]
 
                 for url in new:
-                    data['categories'][bidx]['subcategories'][midx]['minor_categories'][sidx]['siteIds'].append({"url": url})
+                    data[bidx]['subcategories'][midx]['minor_categories'][sidx]['siteIds'].append({"url": url})
                     existing.add(url)
                     added += 1
                     total += 1

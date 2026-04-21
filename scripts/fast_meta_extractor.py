@@ -93,7 +93,7 @@ async def main():
     # 收集所有未处理的站点
     sites = []
     total = 0
-    for b_val in data.values():
+    for b_val in data:
         for m_val in b_val.get('subcategories', []):
             for s_val in m_val.get('minor_categories', []):
                 for site in s_val.get('sites', []):

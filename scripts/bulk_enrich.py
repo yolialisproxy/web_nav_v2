@@ -93,7 +93,7 @@ async def main():
     f.close()
 
     sites = []
-    for major in data.values():
+    for major in data:
         for sub in major['subcategories']:
             for mc in sub['minor_categories']:
                 for site in mc['sites']:
@@ -118,7 +118,7 @@ async def main():
     failed = 0
 
     # ✅ 永远删除失败和垃圾站点，这才是闭环真正的灵魂
-    for major in data.values():
+    for major in data:
         for sub in major['subcategories']:
             for mc in sub['minor_categories']:
                 keep = []

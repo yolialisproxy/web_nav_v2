@@ -172,7 +172,7 @@ def process_json(input_path):
 
     # 清理所有分类中的无效ID引用
     cleaned_count = 0
-    for cat in data['categories']:
+    for cat in data:
         if 'siteIds' in cat:
             original_len = len(cat['siteIds'])
             cat['siteIds'] = [id for id in cat['siteIds'] if id in kept_ids]

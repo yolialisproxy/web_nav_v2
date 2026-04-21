@@ -81,7 +81,7 @@ def fetch_site_for_category(category_name):
     return BUFFER[start:end]
 
 def find_minor_category(data, cat_name):
-    for big in data.values():
+    for big in data:
         if not isinstance(big, dict): continue
         for sub in big.get('subcategories', []):
             for minor in sub.get('minor_categories', []):
@@ -97,7 +97,7 @@ def calibrate():
     # 1. 扫描缺口
     targets = []
     total_count = 0
-    for cat in data.values():
+    for cat in data:
         if not isinstance(cat, dict): continue
         for sub in cat.get('subcategories', []):
             if not isinstance(sub, dict): continue

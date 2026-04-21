@@ -1,0 +1,10 @@
+{
+  "round": 1,
+  "before_total": 6257,
+  "after_total": 6240,
+  "duplicates_removed": 16,
+  "invalid_removed": 1,
+  "categories_total": 441,
+  "categories_under_10": 124,
+  "timestamp": "2026-04-21"
+}
