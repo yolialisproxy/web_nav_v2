@@ -1,1 +1,10 @@
-{"status": "running", "next_action": "scripts/calibrate_fill.py", "last_run": "2026-04-21T12:26:30", "total_sites": 2066, "last_added": 94, "buffer_remaining": 3566}
+{
+  "status": "running",
+  "next_action": "scripts/calibrate_fill.py",
+  "last_run": "2026-04-21T13:08:21",
+  "current_count": 2947,
+  "target_count": 9000,
+  "progress_percent": 32.7,
+  "last_added": 9,
+  "buffer_remaining": 3566
+}

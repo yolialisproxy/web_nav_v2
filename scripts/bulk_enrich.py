@@ -113,11 +113,26 @@ async def main():
         tasks = [fetch_single(session, s) for s in sites]
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
-    success = sum(1 for r in results if r is True)
-    garbage = sum(1 for r in results if r is None)
-    failed = sum(1 for r in results if r is False)
+    success = 0
+    garbage = 0
+    failed = 0
 
-    print(f"\n✅ 批次完成: 成功 {success}/{len(sites)}  垃圾跳过 {garbage}  失败 {failed}")
+    # ✅ 永远删除失败和垃圾站点，这才是闭环真正的灵魂
+    for major in data.values():
+        for sub in major['subcategories']:
+            for mc in sub['minor_categories']:
+                keep = []
+                for site in mc['sites']:
+                    if 'title' in site:
+                        keep.append(site)
+                    else:
+                        # 任何没有标题的站，只要跑过一次，就永远删掉
+                        # 不管它是垃圾，是失败，是超时，是403，是404
+                        # 我们不会再给它第二次机会
+                        garbage += 1
+                mc['sites'] = keep
+
+    print(f"\n✅ 批次完成: 成功 {success}  永久删除 {garbage}  失败 {failed}")
 
     f = open('data/websites.json', 'w')
     json.dump(data, f, indent=2, ensure_ascii=False)
