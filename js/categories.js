@@ -1,0 +1,1 @@
+window.CATEGORIES = ["AI工具"];

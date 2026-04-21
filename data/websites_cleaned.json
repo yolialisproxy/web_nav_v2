@@ -44,6 +44,14 @@
     "category": "其他"
   },
   {
+    "url": "https://montrealaisymposium.wordpress.com/",
+    "title": "Montreal AI Symposium / Symposium IA Montréal – Montreal AI Symposium / Symposium IA Montréal",
+    "description": "The Montreal AI Symposium aims to gather experts and professionals interested in fundamental advances and applications of artificial intelligence, emphasizing machine learning, deep learning, and related approaches. The Symposium welcomes academic and industrial participants and seeks to build strong connections between researchers in Greater Montr",
+    "source": "awesome",
+    "_cat": "AI智能/AI视频/资源",
+    "category": "AI工具"
+  },
+  {
     "url": "http://singa.incubator.apache.org/",
     "title": "Apache SINGA · Distributed deep learning system",
     "description": "Distributed deep learning system",
@@ -217,11 +225,33 @@
     "category": "其他"
   },
   {
+    "url": "https://ossrs.io/",
+    "title": "SRS (Simple Realtime Server) | SRS",
+    "description": "SRS is a simple, high efficiency and realtime video server, supports RTMP, WebRTC, HLS, HTTP-FLV, SRT, MPEG-DASH and GB28181. Oryx is an all-in-one, out-of-the-box, and open-source video solution for creating online video services, including live streaming and WebRTC, on the cloud or through self-hosting.",
+    "_cat": "AI智能/AI视频/服务",
+    "category": "实用工具"
+  },
+  {
     "url": "https://www.godays.io/",
     "title": "GoDays 2020 in Berlin - Connect with hundreds of like-minded people",
     "description": "GoDays is a three day conference focused on connecting the Go community. In numerous technical talks and hands-on workshops, Go experts, beginners, and everyone in between will exchange ideas and learn from each other.",
     "_cat": "AI智能/AI视频/社区",
     "category": "图片处理"
+  },
+  {
+    "url": "https://www.elsaspeak.com",
+    "name": "Elsa Speak",
+    "description": "Improve your English speaking skills. Pronounce English like an American through real-world conversations.",
+    "title": "The world’s best way to improve your English speaking | ELSA Speak",
+    "_cat": "AI智能/AI视频/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coreshop.org",
+    "title": "CoreShop: Transforming E-Commerce with Pimcore",
+    "description": "Discover CoreShop for your E-Commerce. Maximum customization, powerful Pimcore integration. ➨ Start now!",
+    "_cat": "AI智能/AI视频/生成器",
+    "category": "其他"
   },
   {
     "url": "https://gotemplate.io/",
@@ -231,18 +261,25 @@
     "category": "实用工具"
   },
   {
-    "url": "https://www.summarize.tech",
-    "name": "Summarize",
-    "description": "智能摘要",
-    "title": "summarize.tech: AI-powered video summaries",
+    "url": "https://www.kuaishou.com",
+    "name": "快手",
+    "description": "快手是一款国民级短视频App。在快手，了解真实的世界，认识有趣的人，也可以记录真实而有趣的自己。快手，拥抱每一种生活。",
+    "title": "快手",
     "_cat": "AI智能/AI视频/生成器",
-    "category": "AI工具"
+    "category": "视频创作"
   },
   {
-    "name": "Flux AI",
-    "url": "https://blackforestlabs.ai",
-    "description": "Black Forest Labs is the AI company behind FLUX, the state-of-the-art image generation model. Try FLUX.2, FLUX Kontext, and more via our API.",
-    "title": "Black Forest Labs - Frontier AI Lab",
+    "url": "https://domain-locker.com",
+    "title": "Domain Locker",
+    "description": "Domain Locker helps you track, monitor, and manage your domains effortlessly. Stay on top of expiration dates, DNS records, and changes with alerts and detailed insights.",
+    "_cat": "AI智能/AI音乐/工具",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://www.papercup.com",
+    "name": "Papercup",
+    "description": "Natural-sounding AI dubbing and professional voice-over services. Delivered by cutting-edge synthetic voices and expert voice talent.",
+    "title": "The future of audio localization - AI dubbing and VO",
     "_cat": "AI智能/AI音乐/平台",
     "category": "AI工具"
   },
@@ -255,107 +292,102 @@
     "category": "AI工具"
   },
   {
-    "url": "https://runsql.com/",
-    "title": "RunSQL - Online SQL Playground for MySQL, PostgreSQL, and SQL Server",
-    "description": "Free online SQL playground for MySQL, PostgreSQL, and SQL Server. Create database structures, run queries, and share results instantly.",
+    "url": "https://nghttp2.org/",
+    "title": "Nghttp2: HTTP/2 C Library - nghttp2.org",
+    "description": "Nghttp2: HTTP/2 C Library Feb 16th, 2015 11:16 pm nghttp2 is an implementation of\nHTTP/2 and its header\ncompression algorithm HPACK in\nC. The &hellip;",
+    "_cat": "AI智能/AI音乐/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://docs.dexpaprika.com",
+    "title": "DEX & On-chain Crypto API – Liquidity, Swaps, Tokens | DexPaprika",
+    "description": "Real‑time DEX and on‑chain cryptocurrency data: liquidity pools, swaps, token prices, and transactions across 33 blockchain networks via REST API and SSE streaming.",
     "source": "awesome",
     "_cat": "AI智能/AI音乐/库",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.gophercon.co.uk/",
-    "title": "GopherCon UK",
-    "description": "GopherCon UK 2026 — three days of Go talks, workshops, and community at The Brewery, London. 12–13 August 2026.",
-    "_cat": "AI智能/AI音乐/教程",
     "category": "图片处理"
   },
   {
-    "url": "https://www.modular.com",
-    "name": "Modular",
-    "description": "AI引擎",
-    "title": "Modular: Inference from Kernel to Cloud",
+    "url": "https://www.tudou.com",
+    "name": "土豆网",
+    "description": "视频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
+    "title": "土豆-召唤全球优秀短视频",
+    "_cat": "AI智能/AI音乐/库",
+    "category": "视频创作"
+  },
+  {
+    "url": "https://www.datadriven.io/",
+    "title": "DataDriven | Free Data Engineering Interview Prep",
+    "description": "Free data engineering interview prep. SQL, Python, data modeling, and pipeline architecture with real code execution.",
+    "source": "awesome",
     "_cat": "AI智能/AI音乐/教程",
-    "category": "AI工具"
+    "category": "实用工具"
   },
   {
-    "url": "https://www.yes.com",
-    "name": "Yes",
-    "description": "Yes.com is a Malta-based online gaming company building fair and responsible casino and sports betting products for regulated European markets. First launch in Denmark 2026.",
-    "title": "Yes.com - Modern Casino &amp; Sportsbook | Launching 2026",
-    "_cat": "AI智能/AI音乐/教程",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://docs.librephotos.com/docs/user-guide/mobile/",
-    "title": "📱  Mobile Apps | LibrePhotos",
-    "description": "UhuruPhotos",
-    "_cat": "AI智能/AI音乐/服务",
-    "category": "图片处理"
-  },
-  {
-    "url": "https://hitkeep.com/",
-    "title": "Sovereign Web Analytics — Self-Hosted or Managed Cloud",
-    "description": "HitKeep is a privacy-first web analytics platform you can self-host or run in managed EU/US cloud regions. Single binary, zero external dependencies, cookie-free by default.",
-    "_cat": "AI智能/AI音乐/服务",
+    "url": "https://www.auto-mcs.com",
+    "title": "auto-mcs - Create a Minecraft Server in less than a minute, for free!",
+    "description": "Spend more time playing with your friends!",
+    "_cat": "AI智能/AI音乐/生成器",
     "category": "其他"
   },
   {
-    "url": "https://www.alibaba.com/ai",
-    "name": "阿里AI",
-    "description": "AI服务",
-    "title": "404-Error",
-    "_cat": "AI智能/AI音乐/社区",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://docspell.org",
-    "title": "Docspell – Simple document organizer",
-    "description": "Docspell is a Document Management System (DMS), a system that asists in organizing your piles of documents, resulting from scanners, e-mails and other sources with miminal effort.",
-    "_cat": "AI智能/AI音乐/社区",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://not-th.re",
-    "title": "not-th.re - encrypted notes",
-    "description": "Simple client-side encrypted notes paired with the known monaco editor. Open source and free.",
-    "_cat": "AI智能/AI音乐/社区",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://gopherconbr.org",
-    "title": "GopherCon Brasil — Conferência Oficial da Go Community",
-    "description": "GopherCon Brasil é a maior conferência de desenvolvimento em Go no país, reunindo programadores.",
+    "url": "https://webthings.io/gateway/",
+    "title": "WebThings Gateway",
+    "description": "Build your own Web of Things gateway",
     "_cat": "AI智能/AI开发/工具",
-    "category": "AI工具"
+    "category": "实用工具"
   },
   {
-    "url": "https://www.audo.ai",
-    "name": "Audo AI",
-    "description": "One click audio cleaning for YouTubers and Podcasters 🎙️ 📺",
-    "title": "Audo Studio | One Click Audio Cleaning",
-    "_cat": "AI智能/AI开发/平台",
-    "category": "AI工具"
+    "url": "https://formbricks.com",
+    "title": "baseball-bat-ball",
+    "description": "Own your data, build better experiences.",
+    "_cat": "AI智能/AI开发/工具",
+    "category": "其他"
   },
   {
-    "url": "https://homebox.software/",
-    "title": "HomeBox | Homebox",
-    "description": "A simple home inventory management software",
+    "url": "https://www.nowcoder.com",
+    "name": "牛客网",
+    "description": "求职之前，先上牛客，就业找工作一站解决。互联网IT技术/产品/运营/硬件/汽车机械制造/金融/财务管理/审计/银行/市场营销/地产/快消/管培生等等专业技能学习/备考/求职神器，在线进行企业校招实习笔试面试真题模拟考试练习，全面提升求职竞争力，找到好工作，拿到好offer。_牛客网_牛客在手,offer不愁",
+    "title": "牛客网 - 找工作神器|笔试题库|面试经验|实习招聘内推，求职就业一站解决_牛客网",
     "_cat": "AI智能/AI开发/资源",
     "category": "其他"
   },
   {
-    "url": "https://demo.prestashop.com/",
-    "title": "PrestaShop Live Demo",
-    "description": "Looking for a powerful shopping cart software? Try the PrestaShop Demo now and visualize it on mobile, tablet and desktop.",
-    "_cat": "AI智能/AI开发/资源",
+    "url": "https://otterwiki.com/",
+    "title": "Welcome &ndash; An Otter Wiki",
+    "description": "A minimalistic wiki powered by python, markdown and git.",
+    "_cat": "AI智能/AI开发/库",
+    "category": "文档工具"
+  },
+  {
+    "url": "https://roundup.getdbt.com/s/the-analytics-engineering-podcast",
+    "title": "🎧 🆕 The Analytics Engineering Podcast | The Analytics Engineering Roundup | Tristan Handy | Substack",
+    "description": "Conversations with data practitioners inventing the future of analytics engineering.\n\nThe podcast is hosted by Tristan Handy and published biweekly along with each edition of the Roundup newsletter. Click to read The Analytics Engineering Roundup, a Substack publication with tens of thousands of subscribers.",
+    "source": "awesome",
+    "_cat": "AI智能/AI开发/库",
     "category": "其他"
   },
   {
-    "url": "https://gophercon.africa/",
-    "title": "GopherCon Africa 2026 - The Premier Go Conference in Africa",
-    "description": "Join Africa&#x27;s largest Go conference! Experience three days of knowledge sharing, networking, and innovation in Nairobi, Kenya.",
-    "_cat": "AI智能/AI开发/教程",
-    "category": "AI工具"
+    "url": "https://upscaledb.com",
+    "title": "upscaledb - embedded database technology",
+    "description": "upscaledb - a blazingly fast embedded key-value store with analytical functions",
+    "_cat": "AI智能/AI开发/服务",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://www.redgiant.com",
+    "name": "Red Giant",
+    "description": "视频特效插件",
+    "title": "Red Giant | Toolkit for Video Editing, VFX & Motion Graphics",
+    "_cat": "AI智能/AI开发/服务",
+    "category": "视频创作"
+  },
+  {
+    "url": "https://hubot.github.com/",
+    "title": "HUBOT | Hubot is your friendly robot sidekick. Install him in your company to dramatically improve employee efficiency.",
+    "description": "Hubot is your friendly robot sidekick. Install him in your company to dramatically improve employee efficiency.",
+    "source": "awesome",
+    "_cat": "AI智能/AI开发/服务",
+    "category": "开源项目"
   },
   {
     "url": "https://landscape.cncf.io/?group=projects-and-products&amp;view-mode=card",
@@ -366,19 +398,18 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.chef.io/products/chef-infra",
-    "title": "Configuration Management System Software - Chef Infra | Chef",
-    "description": "Chef Infra automates the process of managing configurations, ensuring that every system is configured correctly and consistently. Learn more and get started today!",
-    "source": "awesome",
+    "url": "https://viseron.netlify.app/",
+    "title": "Homepage | Viseron",
+    "description": "Self-hosted, local only NVR and AI Computer Vision software.",
     "_cat": "AI智能/AI开发/服务",
-    "category": "实用工具"
+    "category": "AI工具"
   },
   {
-    "url": "https://zammad.org/",
-    "title": "Zammad Community | Home &amp; Download",
-    "description": "The Zammad - Help Desk and Ticket System - Community Page",
-    "_cat": "AI智能/AI开发/生成器",
-    "category": "其他"
+    "url": "https://getindico.io/",
+    "title": "Indico - Home",
+    "description": "Indico Project Official site - Indico is a powerful event (meetings, conferences, lectures) management system developed at CERN",
+    "_cat": "AI智能/AI开发/社区",
+    "category": "实用工具"
   },
   {
     "url": "https://www.accent.reviews/",
@@ -388,6 +419,13 @@
     "category": "其他"
   },
   {
+    "url": "https://touca.io/",
+    "title": "Touca",
+    "description": "Touca is a continuous regression testing solution that helps software engineering teams gain confidence in their daily code changes.",
+    "_cat": "AI智能/AI其他/工具",
+    "category": "图片处理"
+  },
+  {
     "url": "https://www.kasmweb.com/#demo",
     "title": "Kasm Workspaces | The Container Streaming Platform",
     "description": "Kasm Workspaces delivers zero-trust remote browser isolation, Desktop as a Service (DaaS), and OSINT workloads to your web browser.",
@@ -395,68 +433,47 @@
     "category": "AI工具"
   },
   {
-    "url": "https://mpqc.org/",
-    "title": "MPQC | The Massively Parallel Quantum Chemistry (MPQC) platform is a research package for ab initio simulation of the electronic structure of molecules and periodic solids, with primary focus on many-body electronic structure methods, such as coupled-cluster.",
-    "description": "The Massively Parallel Quantum Chemistry (MPQC) platform is a research package for ab initio simulation of the electronic structure of molecules and periodic solids, with primary focus on many-body electronic structure methods, such as coupled-cluster.",
-    "_cat": "AI智能/AI其他/工具",
-    "category": "其他"
-  },
-  {
-    "url": "https://git.dotclear.org/dev/dotclear",
-    "title": "Discussions - Dotclear",
-    "description": "Prenez le contrôle de votre blog - page 1",
+    "url": "https://wikisuite.org/Source-Code",
+    "title": "WikiSuite | Source Code",
+    "description": "While Wikipedia is the broadest unified body of knowledge, WikiSuite is the most comprehensive and integrated Open Source enterprise solution",
     "_cat": "AI智能/AI其他/平台",
-    "category": "其他"
+    "category": "文档工具"
   },
   {
-    "url": "https://lancache.net",
-    "title": "LanCache.NET | LAN Party game caching made easy",
-    "description": "LAN Party game caching made easy",
-    "_cat": "AI智能/AI其他/资源",
-    "category": "其他"
-  },
-  {
-    "url": "https://digiboard.app/",
-    "title": "Digiboard by La Digitale",
-    "description": "Un tableau blanc collaboratif proposé par La Digitale",
-    "_cat": "AI智能/AI其他/资源",
-    "category": "其他"
-  },
-  {
-    "name": "fast.ai",
-    "url": "https://fast.ai",
-    "description": "实用深度学习课程",
-    "title": "fast.ai - fast.ai—Making neural nets uncool again",
-    "_cat": "AI智能/AI其他/教程",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://www.iconify.design",
-    "name": "Iconify",
-    "description": "All popular icon sets, one framework",
-    "title": "Iconify Design: All popular icon sets, one framework.",
+    "url": "https://learn.microsoft.com/zh-cn/dotnet/visual-basic/",
+    "name": "VB官方文档",
+    "description": "了解 .NET 中的 Visual Basic 编程 - 面向新手开发人员、刚开始接触 Visual Basic 的开发人员、以及经验丰富的 Visual Basic 开发人员",
+    "title": "Visual Basic 文档 - 入门、教程、参考。 - Visual Basic | Microsoft Learn",
     "_cat": "AI智能/AI其他/服务",
-    "category": "其他"
+    "category": "文档工具"
   },
   {
-    "url": "https://tinyfilemanager.github.io",
-    "title": "Tiny File Manager - Web Based File Manager in Single PHP File",
-    "description": "Simple, fast and small file manager with a single PHP file. Upload, download, edit, delete, preview and manage your files with ease. No dependencies, no database required. Open source and free forever.",
+    "url": "https://miniaud.io/",
+    "title": "miniaudio - A single file audio playback and capture library.",
+    "description": "miniaudio is a single file audio playback and capture library written in C.",
+    "_cat": "AI智能/AI其他/社区",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://www.topcoder.com/thrive/articles/How%20To%20Dissect%20a%20Topcoder%20Problem%20Statement%20Content\\",
+    "title": "How To Dissect a Topcoder Problem Statement Content",
+    "description": "Topcoder is a crowdsourcing marketplace that connects businesses with hard-to-find expertise. The Topcoder Community includes more than one million of the world’s top designers, developers, data scientists, and algorithmists. Global enterprises and startups alike use Topcoder to accelerate innovation, solve challenging problems, and tap into specia",
+    "source": "awesome",
+    "_cat": "AI智能/AI其他/生成器",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://strapi.io/",
+    "title": "Strapi - Open source Node.js Headless CMS 🚀",
+    "description": "Strapi is the next-gen headless CMS, open-source, JavaScript/TypeScript, enabling content-rich experiences to be created, managed and exposed to any digital device.",
     "_cat": "AI智能/工具/工具",
-    "category": "开源项目"
+    "category": "代码工具"
   },
   {
-    "url": "https://www.pypi.org",
-    "name": "PyPI",
-    "description": "The Python Package Index (PyPI) is a repository of software for the Python programming language.",
-    "title": "PyPI · The Python Package Index",
-    "_cat": "AI智能/工具/工具",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.azuracast.com/",
-    "title": "AzuraCast",
-    "description": "AzuraCast is a free and open-source, self-hosted web radio management suite.",
+    "url": "https://www.atril.org",
+    "name": "Atril",
+    "description": "Espacio virtual para el arte y la cultura.",
+    "title": "ATRIL.digital – Espacio virtual para el arte y la cultura.",
     "_cat": "AI智能/工具/平台",
     "category": "其他"
   },
@@ -467,13 +484,6 @@
     "title": "WeChat - 连接10亿人的生活方式 | 聊天·通话·生活服务",
     "_cat": "AI智能/工具/资源",
     "category": "视频创作"
-  },
-  {
-    "url": "https://inventree.org/demo",
-    "title": "InvenTree - InvenTree Demo",
-    "description": "InvenTree is an open-source inventory management system which provides intuitive parts management and stock control. It is at the center of an ecosystem of a...",
-    "_cat": "AI智能/工具/资源",
-    "category": "其他"
   },
   {
     "url": "https://www.tcpdump.org/",
@@ -490,74 +500,46 @@
     "category": "其他"
   },
   {
-    "url": "http://www.awstats.org/",
-    "title": "AWStats - Open Source Log File Analyzer for advanced statistics (GNU GPL)",
-    "description": "AWStats Official Web Site - Compile and generate advanced graphical web, ftp or mail statistics with a logfile analysis (For IIS, Apache,... distributed under GNU GPL).",
+    "url": "https://trunk.io",
+    "title": "Keep CI Green | Trunk",
+    "description": "Eliminate flaky test failures and merge bottlenecks at scale",
     "_cat": "AI智能/工具/服务",
     "category": "AI工具"
   },
   {
-    "url": "https://svix.com",
-    "title": "Webhooks as a Service – Secure and Enterprise Ready · Svix",
-    "description": "Svix is the enterprise ready webhook service. Build a state of the art webhook platform in minutes with our hosted webhook SaaS or our open source project. Don't reinvent the wheel, use webhooks as a service.",
+    "url": "https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/",
+    "title": "Introduction &#xB7; Build web application with Golang",
+    "description": "GitBook 3.2.3",
     "_cat": "AI智能/工具/社区",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://www.learnjavaonline.org",
+    "name": "Learn Java",
+    "description": "learnjavaonline.org is a free interactive Java tutorial for people who want to learn Java, fast.",
+    "title": "Learn Java - Free Interactive Java Tutorial",
+    "_cat": "AI智能/工具/生成器",
     "category": "其他"
   },
   {
-    "url": "https://syncloud.org/",
-    "title": "Your Personal Cloud - Syncloud",
-    "description": "Your Personal Server",
-    "_cat": "AI智能/工具/社区",
-    "category": "其他"
-  },
-  {
-    "url": "https://archivebox.io/",
-    "title": "ArchiveBox | 🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more…",
-    "description": "🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more…",
-    "_cat": "AI智能/工具/生成器",
-    "category": "文档工具"
-  },
-  {
-    "url": "https://bagisto.com/en/",
-    "title": "Bagisto - Laravel eCommerce Platform | Free &amp; Open Source",
-    "description": "An Open source Laravel eCommerce platform for building marketplaces, mobile apps, blockchain, and headless commerce.",
-    "_cat": "AI智能/工具/生成器",
-    "category": "图片处理"
-  },
-  {
-    "url": "https://chevereto.com/",
-    "title": "Chevereto self-hosted - Image and Video Hosting Software",
-    "description": "Image and Video hosting software that allows you to create your own media hosting and sharing service in your own premises. It's your hosting and your rules, say goodbye to the closures and restrictions.",
+    "url": "https://philippegroarke.com/posts/2018/c++_ui_solutions/",
+    "title": "C&#43;&#43; UI Libraries • memdump",
+    "description": "A list of free, cross-platform GUI solutions for C&#43;&#43;.",
     "_cat": "视频娱乐/国内视频/资源",
     "category": "其他"
   },
   {
-    "url": "https://xbackbone.app/",
-    "title": "Home | XBackBone",
-    "description": "A lightweight file manager with full ShareX support and more",
+    "url": "https://selfoss.aditu.de/",
+    "title": "selfoss – the open source web based rss reader and multi source mashup aggregator",
+    "description": "selfoss the web based open source rss reader and multi source mashup aggregator",
     "_cat": "视频娱乐/国内视频/资源",
     "category": "其他"
   },
   {
-    "url": "https://nodejs.org/docs",
-    "name": "Node.js Docs",
-    "description": "Node.js文档",
-    "title": "Index of /docs/",
+    "url": "https://roundcube.net",
+    "title": "Roundcube - Free and Open Source Webmail Software",
+    "description": "Free and open source webmail software for the masses, written in PHP",
     "_cat": "视频娱乐/国内视频/教程",
-    "category": "文档工具"
-  },
-  {
-    "url": "https://zincsearch.com",
-    "title": "OpenObserve: Open Source Observability Platform | Logs, Metrics &amp; Traces",
-    "description": "Fast, scalable and cost-effective open source observability platform. Monitor logs, metrics &#38; traces with 140x lower storage costs than Elasticsearch. Start in 2 minutes.",
-    "_cat": "视频娱乐/国内视频/社区",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.b1gmail.eu/en/start/addon-b1gmailserver/",
-    "title": "AddOn b1gMailServer - b1gMail OSS Community",
-    "description": "b1gMailServer",
-    "_cat": "视频娱乐/国内视频/服务",
     "category": "AI工具"
   },
   {
@@ -568,25 +550,19 @@
     "category": "图片处理"
   },
   {
-    "url": "https://readeck.org/en/",
-    "title": "Home - Readeck",
-    "description": "Save interesting articles, long read, pictures, videos. Read or revisit them later.",
-    "_cat": "视频娱乐/国内视频/服务",
-    "category": "其他"
-  },
-  {
-    "url": "http://aantron.github.io/better-enums/",
-    "title": "Better Enums - Clean reflective enums for C++",
-    "description": "Reflective enums in a single header file, with clean syntax.\nThe enums can be converted to string, iterated, and counted, at run time or\nas part of metaprogramming. Free and open source under the BSD license.",
-    "_cat": "视频娱乐/国内视频/开源",
-    "category": "开源项目"
-  },
-  {
     "url": "https://monetr.app/",
     "title": "monetr",
     "description": "Take control of your finances, paycheck by paycheck, with monetr. Put aside what you need, spend what you want, and confidently manage your money with ease. Always know you’ll have enough for your bills and what’s left to save or spend.",
     "_cat": "视频娱乐/国内视频/开源",
     "category": "其他"
+  },
+  {
+    "url": "https://zed.dev",
+    "name": "Zed",
+    "description": "Zed is a high-performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+    "title": "Zed — Love your editor again",
+    "_cat": "视频娱乐/国外视频/工具",
+    "category": "AI工具"
   },
   {
     "url": "https://www.bentoml.com",
@@ -597,26 +573,11 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.powtoon.com",
-    "name": "Powtoon",
-    "description": "动画视频制作",
-    "title": "Video Maker | Make Videos and Animations Online | Powtoon",
-    "_cat": "视频娱乐/国外视频/工具",
-    "category": "视频创作"
-  },
-  {
     "url": "https://shkeeper.io/",
     "title": "SHKeeper - cryptocurrency gateway payment processor for business, e-commerce",
     "description": "SHKeeper is a self-hosted and open-source cryptocurrency gateway payment processor. It&#039;s integrate with popular CMS, any e-commerce, your own code or product",
     "_cat": "视频娱乐/国外视频/资源",
     "category": "实用工具"
-  },
-  {
-    "url": "https://ckan.org",
-    "title": "CKAN - The open source data management system",
-    "description": "CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data.",
-    "_cat": "视频娱乐/国外视频/资源",
-    "category": "其他"
   },
   {
     "url": "https://thelounge.chat/",
@@ -634,19 +595,19 @@
     "category": "视频创作"
   },
   {
-    "url": "https://www.claude.com/code",
-    "name": "Claude Code",
-    "description": "Anthropic编程工具",
-    "title": "App unavailable in region | Claude",
+    "url": "https://wintercms.com/",
+    "title": "Home | Winter CMS",
+    "description": "Winter CMS is a free, open-source content management framework, built on top of the Laravel PHP framework.",
     "_cat": "视频娱乐/国外视频/社区",
-    "category": "AI工具"
+    "category": "其他"
   },
   {
-    "url": "https://d8a.tech",
-    "title": "Warehouse-native Analytics - d8a.tech",
-    "description": "Reporting-ready clickstream for your own data warehouse.",
-    "_cat": "视频娱乐/国外视频/服务",
-    "category": "其他"
+    "name": "Windsurf",
+    "url": "https://codeium.com/windsurf",
+    "description": "Tomorrow&#x27;s editor, today. Windsurf Editor is the first AI agent-powered IDE that keeps developers in the flow. Available today on Mac, Windows, and Linux.",
+    "title": "Discord",
+    "_cat": "视频娱乐/国外视频/社区",
+    "category": "图片处理"
   },
   {
     "url": "https://forum.golangbridge.org",
@@ -663,33 +624,48 @@
     "category": "其他"
   },
   {
-    "url": "http://molpopgen.github.io/libsequence/",
-    "title": "The libsequence home page | libsequence",
-    "description": "libsequence: a C++ class library for evolutionary genetic analysis",
-    "_cat": "视频娱乐/直播/工具",
-    "category": "开源项目"
+    "url": "https://lesiw.io/moxie",
+    "title": "GitHub - lesiw/moxie: Go mock library that proxies method calls to embedded types. · GitHub",
+    "description": "Go mock library that proxies method calls to embedded types. - lesiw/moxie",
+    "_cat": "视频娱乐/直播/教程",
+    "category": "代码工具"
   },
   {
-    "url": "https://bencher.dev/",
-    "title": "Bencher - Continuous Benchmarking",
-    "description": "Catch performance regressions before they merge with Continuous Benchmarking",
-    "_cat": "视频娱乐/直播/服务",
-    "category": "实用工具"
+    "url": "http://simonrodriguez.fr/dragon/",
+    "title": "Here be dragons",
+    "description": "Here be dragons is a computer graphics pet project",
+    "_cat": "视频娱乐/直播/教程",
+    "category": "其他"
   },
   {
-    "url": "https://stashapp.cc",
-    "title": "Stash | An organizer for your porn",
-    "description": "An organizer for your porn",
+    "url": "https://try.discourse.org/",
+    "title": "Discourse Demo",
+    "description": "Demonstration sandbox for Discourse",
+    "_cat": "视频娱乐/直播/教程",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/arrays-OsBSF\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "视频娱乐/直播/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.acfun.cn",
+    "name": "AcFun",
+    "description": "弹幕视频平台",
+    "title": "AcFun弹幕视频网 - 认真你就输啦 (・ω・)ノ- ( ゜- ゜)つロ",
+    "_cat": "视频娱乐/直播/开源",
+    "category": "视频创作"
+  },
+  {
+    "url": "https://prosody.im/",
+    "title": "Welcome – Prosody IM",
+    "description": "Prosody is a Jabber/XMPP server\nwritten in Lua",
     "_cat": "视频娱乐/直播/生成器",
-    "category": "实用工具"
-  },
-  {
-    "name": "Murf AI",
-    "url": "https://murf.ai",
-    "description": "专业AI配音工具",
-    "title": "Free AI Voice Generator &amp; Text to Speech Online | Murf AI",
-    "_cat": "视频娱乐/直播/生成器",
-    "category": "AI工具"
+    "category": "其他"
   },
   {
     "url": "https://kutt.to",
@@ -699,14 +675,6 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.handbrake.fr",
-    "name": "HandBrake",
-    "description": "HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.",
-    "title": "HandBrake: Open Source Video Transcoder",
-    "_cat": "视频娱乐/直播/生成器",
-    "category": "其他"
-  },
-  {
     "url": "https://semaphoreci.com/community/tutorials/building-go-web-applications-and-microservices-using-gin",
     "title": "Building a Go Microservice with CI/CD",
     "description": "Get familiar with Gin and find out how it can help you reduce boilerplate code and build a request handling pipeline.",
@@ -714,25 +682,40 @@
     "category": "其他"
   },
   {
-    "url": "https://glitchtip.com",
-    "title": "Open Source Error Tracking | GlitchTip",
-    "description": "GlitchTip is an open source, Sentry API compatible error tracking platform.",
+    "url": "https://www.opus.pro",
+    "name": "Opus",
+    "description": "AI视频剪辑",
+    "title": "OpusClip: #1 AI video clipping and editi",
     "_cat": "视频娱乐/音乐/工具",
-    "category": "代码工具"
+    "category": "视频创作"
   },
   {
-    "url": "https://tools.ietf.org/html/rfc959",
-    "title": "RFC 959 - File Transfer Protocol",
-    "description": "File Transfer Protocol (RFC 959, )",
+    "url": "https://knrdl.github.io/bicimon/",
+    "title": "BiCiMon",
+    "description": "Bike Speedometer",
     "_cat": "视频娱乐/音乐/教程",
-    "category": "实用工具"
+    "category": "开源项目"
   },
   {
-    "url": "https://tududi.com/",
-    "title": "tududi - Organize Life and Work, Self-Hosted or Hosted",
-    "description": "A calm, open system for life and work. Tasks, projects, notes, and smart views in one place. Self-host the open-source version, or use Tududi Hosted.",
-    "_cat": "视频娱乐/音乐/教程",
+    "url": "https://docs.microsoft.com/en-us/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp?view=msvc-160",
+    "title": ".NET programming with C++/CLI | Microsoft Learn",
+    "description": "Learn how to use C++/CLI to create .NET apps and components in Visual Studio.",
+    "_cat": "视频娱乐/音乐/社区",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://zoraxy.aroz.org/",
+    "title": "Homelab Gateway | Zoraxy",
+    "description": "tobychui",
+    "_cat": "视频娱乐/音乐/社区",
     "category": "其他"
+  },
+  {
+    "url": "https://www.compilebytes.com/tools/cpp",
+    "title": "C++ Online Compiler (Editor / Interpreter) | Compile Bytes",
+    "description": "Free online C++ compiler, editor, and interpreter. Write, run, and test C++ code instantly. Features C++ v10.2.0, syntax highlighting, and instant execution.",
+    "_cat": "视频娱乐/音乐/开源",
+    "category": "实用工具"
   },
   {
     "url": "https://lets-go.alexedwards.net",
@@ -742,18 +725,11 @@
     "category": "图片处理"
   },
   {
-    "url": "https://mybb.com/",
-    "title": "MyBB - Free and Open Source Forum Software",
-    "description": "The official homepage for MyBB, a free and open source PHP forum software.",
+    "url": "https://cozy.io/",
+    "title": "Cozy Cloud / Twake - Prenez le contrôle de toutes vos données.",
+    "description": "✅ Français ✅ Open source ✅ Sécurisé ✅ Gratuit jusqu’à 5 Go de stockage",
     "_cat": "视频娱乐/音乐/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://autodiff.github.io",
-    "title": "autodiff",
-    "description": "autodiff documentation.",
-    "_cat": "视频娱乐/游戏/资源",
-    "category": "开源项目"
+    "category": "AI工具"
   },
   {
     "url": "https://layli.app",
@@ -763,32 +739,18 @@
     "category": "其他"
   },
   {
+    "url": "https://iceshrimp.net",
+    "title": "iceshrimp/Iceshrimp.NET: This repository contains our efforts to continue the Iceshrimp project&#39;s legacy - in the form of an entirely new codebase, with a focus on performance, stability and maintainability. - Iceshrimp development",
+    "description": "Iceshrimp.NET - This repository contains our efforts to continue the Iceshrimp project&#39;s legacy - in the form of an entirely new codebase, with a focus on performance, stability and maintainability.",
+    "_cat": "视频娱乐/游戏/资源",
+    "category": "AI工具"
+  },
+  {
     "url": "https://feather.wiki/?page=gallery#wikis",
     "title": "Feather Wiki",
     "description": "A tiny tool for simple, self-contained wikis!",
     "_cat": "视频娱乐/游戏/教程",
     "category": "AI工具"
-  },
-  {
-    "url": "https://ezbookkeeping-demo.mayswind.net/",
-    "title": "ezBookkeeping",
-    "description": "ezBookkeeping is a lightweight, self-hosted personal finance app with a user-friendly interface and powerful bookkeeping features.",
-    "_cat": "视频娱乐/游戏/社区",
-    "category": "其他"
-  },
-  {
-    "url": "http://www.htslib.org/",
-    "title": "Samtools",
-    "description": "Samtools",
-    "_cat": "视频娱乐/游戏/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://sandbox.tinode.co/",
-    "title": "Tinode",
-    "description": "Tinode instant messenger in a browser",
-    "_cat": "视频娱乐/游戏/生成器",
-    "category": "其他"
   },
   {
     "url": "https://cachethq.io/",
@@ -798,20 +760,6 @@
     "category": "图片处理"
   },
   {
-    "url": "https://onetimesecret.com",
-    "title": "Share Secrets Securely",
-    "description": "Share sensitive information securely with self-destructing links. Paste your secret, generate a link, and share it. Once viewed, it's gone forever",
-    "_cat": "视频娱乐/动漫/工具",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.seafile.com/en/home/",
-    "title": "Seafile - Open Source File Sync and Share Software",
-    "description": "Seafile is an open source, self-hosted file sync and share solution with high performance and reliability. Sync, access, and collaborate on files on your own server or private cloud.",
-    "_cat": "视频娱乐/动漫/工具",
-    "category": "其他"
-  },
-  {
     "url": "https://andreasfertig.com/cpp-resources/",
     "title": "C++ Resources",
     "description": "Various resources for learning or using C++",
@@ -819,46 +767,39 @@
     "category": "其他"
   },
   {
-    "url": "https://www.staticgen.com",
-    "title": "Static Site Generators - Top Open Source SSGs | Jamstack",
-    "description": "Check out this showcase of some of the best, open source static site generators. This is community-drive so be sure to submit your favorite today!",
+    "url": "https://zero-k.info/",
+    "title": "Zero-K",
+    "description": "Zero-K is a FREE multiplatform, open-source RTS game which aims to be dynamic and action-packed.",
     "_cat": "视频娱乐/动漫/教程",
-    "category": "其他"
-  },
-  {
-    "url": "https://indieweb.org/",
-    "title": "IndieWeb",
-    "description": "The IndieWeb is a people-focused alternative to the “corporate web”.",
-    "_cat": "视频娱乐/动漫/教程",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.xwikiplayground.org/xwiki/bin/view/Main/",
-    "title": "Home - XWiki",
-    "description": "Home",
-    "_cat": "视频娱乐/动漫/服务",
     "category": "AI工具"
   },
   {
-    "url": "https://element.io",
-    "title": "Element | Secure collaboration and messaging",
-    "description": "Element | Secure collaboration and messaging",
-    "_cat": "视频娱乐/动漫/服务",
-    "category": "实用工具"
+    "url": "https://tuxseo.com/",
+    "title": "TuxSEO",
+    "description": "Best SEO Blog Writer entity in the universe!",
+    "_cat": "视频娱乐/动漫/社区",
+    "category": "其他"
   },
   {
-    "url": "https://receiptwrangler.io",
-    "title": "Documentation | Receipt Wrangler",
-    "description": "Description will go into a meta tag in <head />",
-    "_cat": "视频娱乐/工具/资源",
-    "category": "实用工具"
+    "url": "http://lucumr.pocoo.org/2013/8/18/beautiful-native-libraries/",
+    "title": "Beautiful Native Libraries",
+    "description": "A guide on writing beautiful native libraries in C or C++ that compile to native code.",
+    "_cat": "视频娱乐/平台/生成器",
+    "category": "其他"
   },
   {
-    "url": "https://mafl.hywax.space/",
-    "title": "Mafl",
-    "description": "Intuitive service for organizing your homepage",
+    "url": "https://chronoframe.bh8.ga/",
+    "title": "ChronoFrame",
+    "description": "A Self-hosted photo gallery",
     "_cat": "阅读写作/网文/资源",
     "category": "其他"
+  },
+  {
+    "url": "https://saleor.io",
+    "title": "Saleor - Composable, Open Source, Headless Ecommerce Platform",
+    "description": "A headless, open source, GraphQL-first e-commerce platform. API-first design for composable era and technology agnostic stack.",
+    "_cat": "阅读写作/网文/资源",
+    "category": "代码工具"
   },
   {
     "url": "https://ernte-teilen.org/karte/#/",
@@ -868,6 +809,29 @@
     "category": "其他"
   },
   {
+    "url": "https://freshrss.org/",
+    "title": "FreshRSS, a free, self-hostable feeds aggregator",
+    "description": "FreshRSS is lightweight, easy to work with, powerful, and customizable.",
+    "_cat": "阅读写作/博客/教程",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.bluu.com",
+    "name": "Bluu",
+    "description": "AI绘图",
+    "title": "The Best Patio Umbrellas &amp; Furniture One-Stop Store | Bluu ®",
+    "_cat": "阅读写作/博客/服务",
+    "category": "AI工具"
+  },
+  {
+    "name": "Haikei",
+    "url": "https://haikei.app",
+    "description": "精美SVG图形生成器",
+    "title": "Generate unique SVG design assets | Haikei",
+    "_cat": "阅读写作/博客/服务",
+    "category": "AI工具"
+  },
+  {
     "url": "https://www.scm-manager.org/",
     "title": "Home | SCM-Manager",
     "description": "The easiest way to share and manage your Git, Mercurial and Subversion repositories.",
@@ -875,26 +839,41 @@
     "category": "其他"
   },
   {
-    "url": "https://datarhei.github.io/restreamer/",
-    "title": "Restreamer",
-    "description": "Live video streaming on your website without a streaming provider. Latest release v0.6.8",
-    "_cat": "阅读写作/电子书/服务",
-    "category": "开源项目"
+    "url": "https://www.gophercon-russia.ru",
+    "title": "GopherCon Russia 2021",
+    "description": "Конференция разработчиков на Go, 23-25 апреля 2021 года, Online.",
+    "_cat": "阅读写作/电子书/社区",
+    "category": "其他"
   },
   {
-    "url": "https://openslides.com/",
-    "title": "OpenSlides - Veranstaltungen und Online-Wahlen managen",
-    "description": "OpenSlides ist eine Software zur digitalen Organisation Ihrer Veranstaltungen und Gremienstrukturen und Durchführen von Online-Wahlen.",
+    "url": "https://www.dependabot.com",
+    "name": "Dependabot",
+    "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+    "title": "GitHub Advanced Security · Built-in protection for every repository · GitHub",
+    "_cat": "阅读写作/创作/教程",
+    "category": "代码工具"
+  },
+  {
+    "url": "https://git.deuxfleurs.fr/Deuxfleurs/garage",
+    "title": "Deuxfleurs/garage: S3-compatible object store for small self-hosted geo-distributed deployments - Forge Deuxfleurs",
+    "description": "garage - S3-compatible object store for small self-hosted geo-distributed deployments",
     "_cat": "阅读写作/创作/生成器",
     "category": "其他"
   },
   {
-    "url": "https://www.coursera.org/lecture/data-structures/distributed-hash-tables-tvH8H\\",
-    "title": "数据结构 | Coursera",
-    "description": "由 University of California San Diego ... 免费注册。",
-    "source": "awesome",
-    "_cat": "阅读写作/出版/工具",
-    "category": "其他"
+    "url": "https://atom.io",
+    "name": "Atom",
+    "description": "We are archiving Atom and all projects under the Atom organization for an official sunset on December 15, 2022.",
+    "title": "Sunsetting Atom - The GitHub Blog",
+    "_cat": "阅读写作/创作/生成器",
+    "category": "代码工具"
+  },
+  {
+    "url": "https://simonwep.github.io/ocular/demo/#demo",
+    "title": "Ocular - Budgeting Tool",
+    "description": "Ocular - A simplistic, straight-forward budgeting tool for managing finances.",
+    "_cat": "阅读写作/出版/教程",
+    "category": "AI工具"
   },
   {
     "url": "https://demo.gitea.com",
@@ -904,49 +883,36 @@
     "category": "AI工具"
   },
   {
-    "url": "https://plane.so",
-    "title": "AI-native project management | Plane",
-    "description": "Project management for teams and AI agents. Plan, track, and ship with Projects, Wiki, and AI. Available on cloud, self-hosted, and air-gapped.",
+    "name": "JSBench",
+    "url": "https://jsbench.me",
+    "description": "JSBench.me is a JavaScript performance benchmarking playground based on Benchmark.js and influenced by JSPerf.",
+    "title": "JSBench.me - JavaScript performance benchmarking playground",
     "_cat": "阅读写作/工具/工具",
-    "category": "AI工具"
+    "category": "其他"
   },
   {
-    "url": "https://www.coze.cn",
-    "name": "扣子",
-    "description": "扣子是强大的AI办公助手，基于Agent技术，集成了AI写作、AI PPT生成、AI表格处理、AI设计、AI播客、AI生图与AI视频等全功能。扣子助力财经分析、市场营销等多场景办公任务自动化，全面提升工作效率。",
-    "title": "扣子 - AI办公助手一站式平台 - 扣子提供AI写作|PPT|表格|设计|播客|生图",
-    "_cat": "阅读写作/工具/工具",
-    "category": "视频创作"
-  },
-  {
-    "url": "http://ltsv.org/",
-    "title": "Labeled Tab-separated Values (LTSV)",
-    "description": "Labeled Tab-separated Values (LTSV) format is a variant of Tab-separated Values (TSV). Each record in a LTSV file is represented as a single line. Each field is separated by TAB and has a label and a value. The label and the value have been separated by",
+    "url": "https://www.contentbot.ai",
+    "name": "ContentBot",
+    "description": "AI写作",
+    "title": "The Future of Writing is Here",
     "_cat": "阅读写作/工具/服务",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.superhuman.com",
-    "name": "Superhuman",
-    "description": "AI 邮件助手",
-    "title": "Superhuman: Docs, Mail, and AI That Work Everywhere",
-    "_cat": "阅读写作/平台/工具",
     "category": "AI工具"
   },
   {
-    "url": "https://www.creatool.com",
-    "name": "Cretool",
-    "description": "设计素材",
-    "title": "Pagina niet gevonden &#8211; Creatool.com",
-    "_cat": "阅读写作/平台/服务",
-    "category": "图片处理"
+    "url": "https://www.huemint.com",
+    "name": "Huemint",
+    "description": "AI配色",
+    "title": "Huemint - AI color palette generator",
+    "_cat": "阅读写作/教程/工具",
+    "category": "AI工具"
   },
   {
-    "url": "https://opnform.com/forms/create/guest",
-    "title": "Create a new Form for free",
-    "description": "Build beautiful, powerful forms for free with OpnForm. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.",
-    "_cat": "阅读写作/教程/资源",
-    "category": "其他"
+    "name": "Tripo AI",
+    "url": "https://tripo3d.com",
+    "description": "更好的图片 / 文字转 3D 模型生成器：支持 3D 生成、智能拆分、贴图、绑定、重拓扑、风格化等完整功能。免费、AI 驱动。 更好的 3D 模型制作工具：从文字 / 图片快速、免费生成梦幻般的 3D 模型。非常适合艺术家、游戏开发者、VR/AR 与电影创作者。",
+    "title": "Tripo Studio —— 你的下一站 AI 3D 工作台",
+    "_cat": "阅读写作/教程/工具",
+    "category": "图片处理"
   },
   {
     "url": "https://www.audiobookshelf.org/",
@@ -956,40 +922,32 @@
     "category": "其他"
   },
   {
-    "url": "https://pocketbase.io/",
-    "title": "PocketBase - Open Source backend in 1 file",
-    "description": "Open Source backend in 1 file with realtime database, authentication, file storage and admin dashboard",
-    "_cat": "资源素材/图片/工具",
+    "url": "https://www.partow.net/programming/exprtk/",
+    "title": ".:: C++ Mathematical Expression Library (ExprTk) - By Arash Partow ::.",
+    "description": "C++ Mathematical Expression Library (ExprTk)",
+    "_cat": "资源素材/图片/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.permit.io/blog/role-based-access-control-rbac-authorization-in-golang",
+    "title": "How to Implement Role-Based Access Control (RBAC) Authorization in Golang",
+    "description": "A guide to implementing Role-Based Access Control (RBAC) in Golang, including code examples, covering various methods to secure app endpoints with role-based authorization.",
+    "_cat": "资源素材/图片/资源",
     "category": "实用工具"
   },
   {
-    "url": "http://oxygine.org/",
-    "title": "Oxygine - 2D C++ game framework",
-    "description": "Oxygine is free C++ engine and framework for 2D games on iOS, Android, Windows, Linux and Mac.",
-    "_cat": "资源素材/图片/工具",
-    "category": "其他"
-  },
-  {
-    "url": "https://llmkube.com",
-    "title": "Llmkube Com",
-    "description": "# LLMKube Summary: Kubernetes for Local LLMs...",
+    "url": "https://myfinbudget.com",
+    "title": "Myfin Budget",
+    "description": "The open-source personal finance manager",
     "_cat": "资源素材/图片/资源",
     "category": "其他"
   },
   {
-    "url": "https://yarn.social",
-    "title": "Yarn.social - The decentralised social micro-blogging platform that actually respects your privacy",
-    "description": "Yarn.social is a decentralised self-hosted social media based on the Twtxt format that has a privacy-first focus. There are no ads, no tracking, and no personal information is ever collected or stored.",
-    "_cat": "资源素材/图片/资源",
+    "url": "https://readflow.app",
+    "title": "readflow",
+    "description": "Read your Internet article flow in one place with complete peace of mind and freedom.",
+    "_cat": "资源素材/字体/资源",
     "category": "其他"
-  },
-  {
-    "url": "https://www.designkit.cn",
-    "name": "美图设计室",
-    "description": "商业AI设计",
-    "title": "美图设计室",
-    "_cat": "资源素材/字体/工具",
-    "category": "图片处理"
   },
   {
     "url": "https://tidesdb.com/",
@@ -999,13 +957,6 @@
     "category": "其他"
   },
   {
-    "url": "https://titra.io/",
-    "title": "Zeiterfassung kostenlos online - nur 1 Klick - keine Anmeldung",
-    "description": "Nutze unsere Zeiterfassung kostenlos online! Mit 1 Klick sofort loslegen und Projektzeiten eintragen. Keine Anmeldung notwendig - verliere also keine Zeit!",
-    "_cat": "资源素材/字体/教程",
-    "category": "实用工具"
-  },
-  {
     "url": "http://www.raylib.com/",
     "title": "raylib",
     "description": "raylib is a simple and easy-to-use library to enjoy videogames programming.",
@@ -1013,12 +964,18 @@
     "category": "其他"
   },
   {
-    "url": "https://tusiart.com",
-    "name": "吐司AI",
-    "description": "可免费在线生图的 AI 模型分享社区，支持 Stable Diffusion Model & LoRA, ComfyUI Workflow, Tencent Hunyuan-DiT",
-    "title": "可在线生图的 AI 模型分享社区，还是免费的！ | 吐司 tusi.cn | 吐司 tusi.cn",
+    "url": "https://opensmtpd.org/",
+    "title": "OpenSMTPD",
+    "description": "the main OpenSMTPD page",
     "_cat": "资源素材/ppt模板/工具",
     "category": "AI工具"
+  },
+  {
+    "url": "https://www.egroupware.org/",
+    "title": "Groupware | Online Collaboration Apps | Free Trial available",
+    "description": "Online collaboration and Organisation: EGroupware integrates cutting edge technologies - in a german hosting environment or on-premises.",
+    "_cat": "资源素材/ppt模板/工具",
+    "category": "图片处理"
   },
   {
     "url": "https://bits.stephan-brumme.com/\\",
@@ -1029,17 +986,58 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.magicstudio.com",
-    "name": "Magic Studio",
-    "description": "With Magic Studio anybody can use AI to create images, add &amp; remove objects, backgrounds and more. Make beautiful images for product pages, ads &amp; social media.",
-    "title": "Magic Studio : Make beautiful images with AI",
-    "_cat": "资源素材/ui套件/服务",
+    "url": "https://pixelfed.social",
+    "title": "pixelfed",
+    "description": "The original Pixelfed instance, operated by the main developer @dansup",
+    "_cat": "资源素材/ppt模板/社区",
     "category": "AI工具"
   },
   {
-    "url": "https://docs.python.org/3/library/argparse.html",
-    "title": "argparse — Parser for command-line options, arguments and subcommands &#8212; Python 3.14.4 documentation",
-    "description": "Source code: Lib/argparse.py Tutorial: This page contains the API reference information. For a more gentle introduction to Python command-line parsing, have a look at the argparse tutorial. The arg...",
+    "url": "https://docs.inventree.org/en/latest/",
+    "title": "InvenTree - InvenTree Documentation",
+    "description": "InvenTree - Open Source Inventory Management",
+    "_cat": "资源素材/ppt模板/开源",
+    "category": "文档工具"
+  },
+  {
+    "url": "https://www.spip.net/fr",
+    "title": "SPIP",
+    "description": "Système de Publication pour Internet",
+    "_cat": "资源素材/ppt模板/开源",
+    "category": "其他"
+  },
+  {
+    "url": "https://typo3.org/",
+    "title": "TYPO3 Project and Governance — Democratic Open Source - TYPO3 Project",
+    "description": "The TYPO3 project is a volunteer community backed by a not-for-profit member association, and a fully-owned service company.",
+    "_cat": "资源素材/ui套件/服务",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.concretecms.com",
+    "title": "Concrete CMS is a Free and Open Source Content Management System for Teams",
+    "description": "Concrete CMS is an open source content management system for teams. A website builder with built in tools make editing content easy.",
+    "_cat": "资源素材/工具/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://chirpy.dev/play",
+    "title": "Playground・Chirpy",
+    "description": "Chirpy is a privacy-friendly, customizable and open-source Disqus alternate.",
+    "_cat": "资源素材/工具/服务",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://wide.b3log.org/login",
+    "title": "Wide - 随时随地玩 golang",
+    "description": "A Web-based Go IDE , do your development anytime, anywhere.",
+    "_cat": "资源素材/平台/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://coder.com/",
+    "title": "Coder | Enterprise AI Development Infrastructure & Governance",
+    "description": "Give developers a secure, governed environment to run AI coding agents at scale. Self-hosted infrastructure with full control over agent permissions, audit logging, and compliance.",
     "_cat": "资源素材/平台/资源",
     "category": "AI工具"
   },
@@ -1051,39 +1049,11 @@
     "category": "其他"
   },
   {
-    "url": "http://site.icu-project.org/",
-    "title": "ICU - International Components for Unicode",
-    "description": "News 2026-03-17: ICU 78.3 is now available — releases/tag/release-78.3 — Maven: com.ibm.icu / icu4j / version 78.3 This is a maintenance release. It supersedes ICU 78.1 and 78.2. ICU 78 updates to Unicode 17 (blog), including new characters and scripts, emoji, collation & IDNA changes, and",
-    "_cat": "资源素材/教程/资源",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://farmos.org/",
-    "title": "Donate to farmOS | farmOS",
-    "description": "farmOS is a free and open source web-based application for farm management, planning, and record keeping.",
-    "_cat": "资源素材/资源/社区",
-    "category": "其他"
-  },
-  {
     "url": "https://oupala.github.io/apaxy/",
     "title": "Apaxy: A simple, customisable Apache directory theme",
     "description": "Apaxy: A simple, customisable Apache directory theme.",
     "_cat": "资源素材/资源/开源",
     "category": "开源项目"
-  },
-  {
-    "url": "https://www.gophercon.org.il/",
-    "title": "GopherCon Israel 2026",
-    "description": "Best Go Conference in Israel",
-    "_cat": "资源素材/资源/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://git.mills.io/prologic/tube",
-    "title": "prologic/tube: 📺 tube is a Youtube-like (without censorship and features you don&#39;t need!) Video Sharing App written in Go which also supports automatic transcoding to MP4 H.265 AAC, multiple collections and RSS feed. - tube - Mills",
-    "description": "tube - 📺 tube is a Youtube-like (without censorship and features you don&#39;t need!) Video Sharing App written in Go which also supports automatic transcoding to MP4 H.265 AAC, multiple collections and RSS feed.",
-    "_cat": "资源素材/资源/生成器",
-    "category": "实用工具"
   },
   {
     "url": "https://chibisafe.app",
@@ -1093,18 +1063,18 @@
     "category": "其他"
   },
   {
-    "url": "https://imagemagick.org/script/magick-wand.php",
-    "title": "ImageMagick | MagickWand, C API",
-    "description": "ImageMagick is a powerful open-source software suite for creating, editing, converting, and manipulating images in over 200 formats. Ideal for developers, designers, and researchers.",
+    "url": "https://docs.tubearchivist.com/faq/#how-do-i-import-my-videos-to-emby-plex-jellyfin-kodi",
+    "title": "FAQ - Tube Archivist Documentation",
+    "description": "Frequently asked questions about what this project is, what it tries and what it doesn't try to do.",
     "_cat": "资源素材/资源/生成器",
-    "category": "代码工具"
+    "category": "文档工具"
   },
   {
-    "url": "https://airtrail.johan.ohly.dk",
-    "title": "AirTrail",
-    "description": "A modern, open-source personal flight tracking system.",
-    "_cat": "开发资源/ide/工具",
-    "category": "AI工具"
+    "url": "https://papra.app",
+    "title": "Papra - The document archiving platform",
+    "description": "Papra is an open-source platform to organize, secure, and archive all your documents, effortlessly. Start digitizing your life today!",
+    "_cat": "开发资源/ide/资源",
+    "category": "其他"
   },
   {
     "url": "https://demo.clipbucket.oxygenz.fr/",
@@ -1121,45 +1091,53 @@
     "category": "其他"
   },
   {
-    "url": "https://developer.mapquest.com/documentation/api/geocoding/",
-    "title": "Geocoding API | MapQuest Developer Documentation",
-    "description": "The portal for developers to use MapQuest APIs. Find documentation to use our geo-spatial APIs and make maps using our mobile and javascript SDKs.",
-    "_cat": "开发资源/ide/开源",
+    "url": "https://www.psono.pw",
+    "title": "Psono",
+    "description": "Psono Web Client to login or register",
+    "_cat": "开发资源/ide/资源",
     "category": "图片处理"
   },
   {
-    "url": "https://jujucharms.com/",
-    "title": "Charmhub | The Open Operator Collection",
-    "description": "Universal operators for application lifecycle management on Linux, Windows and Kubernetes",
-    "_cat": "开发资源/api/工具",
+    "url": "https://google.github.io/styleguide/go/",
+    "title": "Go Style | styleguide",
+    "description": "Style guides for Google-originated open-source projects",
+    "_cat": "开发资源/api/社区",
+    "category": "开源项目"
+  },
+  {
+    "url": "https://easyindie.app",
+    "title": "Easy Indie App",
+    "description": "Run your own X<br>in a few clicks.",
+    "_cat": "开发资源/api/生成器",
     "category": "其他"
   },
   {
-    "url": "https://projectchrono.org/",
-    "title": "Project Chrono - An Open-Source Physics Engine",
-    "description": "Project Chrono is a physics-based simulation infrastructure based on a platform-independent, open-source design.",
-    "_cat": "开发资源/api/开源",
-    "category": "其他"
+    "url": "https://nitric.io/?utm_campaign=github_repo\\u0026amp;utm_medium=referral\\u0026amp;utm_content=sindresorhus\\u0026amp;utm_source=github\\",
+    "title": "Nitric Cloud-Native Framework | Get Infrastructure from Code | Nitric",
+    "description": "Nitric Open Source Cloud-Native Framework auto-provisions infrastructure for your app from any language for any cloud. Launch now with AWS, GCP and Azure.",
+    "_cat": "开发资源/api/生成器",
+    "category": "AI工具"
   },
   {
-    "url": "https://gitbucket.github.io/",
-    "title": "GitBucket: A Git platform",
-    "description": "A Git platform powered by Scala with easy installation, high extensibility &amp; GitHub API compatibility",
-    "_cat": "开发资源/api/生成器",
-    "category": "代码工具"
+    "url": "https://www.palette.fm",
+    "name": "Palette.fm",
+    "description": "Colorize your black and white images within seconds. Try our online AI colorize tool for free, no sign-up needed.",
+    "title": "Colorize Photo | Try Free | Realistic Colors",
+    "_cat": "开发资源/文档/资源",
+    "category": "AI工具"
   },
   {
-    "url": "https://gophercises.com/",
-    "title": "Gophercises - Coding exercises for budding gophers",
-    "description": "This FREE course will help you exercise your Go skills while building some cool apps, tools, and packages.",
-    "_cat": "开发资源/api/生成器",
-    "category": "图片处理"
+    "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+    "title": "Link Not Found | Dub",
+    "description": "This link does not exist on Dub. Please check the URL and try again.",
+    "_cat": "开发资源/文档/教程",
+    "category": "AI工具"
   },
   {
-    "url": "https://hasura.io",
-    "title": "Hasura: Creator of PromptQL, Data Delivery Network &amp; GraphQL Engine",
-    "description": "Hasura delivers accurate, fast, and secure data access for AI and digital experiences. Trusted by data leaders and developers at Fortune 100 companies and high-growth AI and digital natives.",
-    "_cat": "开发资源/api/生成器",
+    "url": "https://nitric.io/?utm_campaign=github_repo&amp;utm_medium=referral&amp;utm_content=sindresorhus&amp;utm_source=github",
+    "title": "Nitric Cloud-Native Framework | Get Infrastructure from Code | Nitric",
+    "description": "Nitric Open Source Cloud-Native Framework auto-provisions infrastructure for your app from any language for any cloud. Launch now with AWS, GCP and Azure.",
+    "_cat": "开发资源/文档/教程",
     "category": "AI工具"
   },
   {
@@ -1170,6 +1148,20 @@
     "category": "AI工具"
   },
   {
+    "url": "https://lardbit.github.io/nefarious/",
+    "title": "nefarious | Web application for automatically downloading TV &amp; Movies (w/ VPN)",
+    "description": "Web application for automatically downloading TV &amp; Movies (w/ VPN)",
+    "_cat": "开发资源/文档/开源",
+    "category": "开源项目"
+  },
+  {
+    "url": "https://yourls.org/",
+    "title": "YOURLS",
+    "description": "Your Own URL Shortener",
+    "_cat": "开发资源/ai编程/社区",
+    "category": "其他"
+  },
+  {
     "url": "https://maza-ad-blocking.andros.dev/",
     "title": "Maza ad blocking - Like Pi-hole but local",
     "description": "Local ad blocker. Like Pi-hole but local and using your operating system.",
@@ -1177,19 +1169,11 @@
     "category": "实用工具"
   },
   {
-    "url": "https://www.programiz.com/cpp-programming/online-compiler",
-    "title": "Online C++ Compiler - Programiz",
-    "description": "Write and run your C++ code using our online compiler. Enjoy additional features like code sharing, dark mode, and support for multiple programming languages.",
+    "url": "https://gameyfin.org",
+    "title": "Home - Gameyfin",
+    "description": "Your simple video game library manager.",
     "_cat": "开发资源/ai编程/生成器",
     "category": "其他"
-  },
-  {
-    "url": "https://www.groq.com",
-    "name": "Groq",
-    "description": "AI推理",
-    "title": "Groq is fast, low cost inference.",
-    "_cat": "开发资源/ai编程/生成器",
-    "category": "AI工具"
   },
   {
     "url": "https://haraka.github.io/",
@@ -1199,34 +1183,12 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.gitbook.com",
-    "name": "GitBook",
-    "description": "文档平台",
-    "title": "Turn documentation into your product’s knowledge system | GitBook",
-    "_cat": "开发资源/ai编程/生成器",
-    "category": "文档工具"
-  },
-  {
-    "name": "API Ninja",
-    "url": "https://api-ninjas.com",
-    "description": "100+免费API集合",
-    "title": "API Ninjas | Production-Ready APIs That Accelerate Your Product Roadmap",
-    "_cat": "开发资源/学习/教程",
-    "category": "代码工具"
-  },
-  {
-    "url": "https://luau.org/",
-    "title": "Luau | Luau",
-    "description": "Luau is a small, fast, and embeddable programming language based on Lua with a gradual type system.",
+    "url": "https://www.iconfont.cn",
+    "name": "Iconfont",
+    "description": "iconfont-国内功能很强大且图标内容很丰富的矢量图标库，提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造，设计和前端开发的便捷工具",
+    "title": "iconfont-阿里巴巴矢量图标库",
     "_cat": "开发资源/学习/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://docmost.com/",
-    "title": "Enterprise-ready Wiki for Teams | Docmost",
-    "description": "Replace Confluence and Notion with secure on-premise documentation. ITAR, FedRAMP, and GDPR compliant wiki platform with SSO, MFA, and granular permissions.",
-    "_cat": "开发资源/学习/生成器",
-    "category": "文档工具"
+    "category": "图片处理"
   },
   {
     "url": "https://nuskooler.github.io/enigma-bbs/",
@@ -1236,103 +1198,37 @@
     "category": "AI工具"
   },
   {
-    "url": "http://www.seqan.de/",
-    "title": "What is SeqAn? | SeqAn",
-    "description": "SeqAn is an open source C++ library of efficient algorithms and data structures for the analysis of sequences with the focus on biological data. Our library applies a unique generic design that guarantees high performance, generality, extensibility, and integration with other libraries. SeqAn is easy to use and simplifies the development of new software tools with a minimal loss of performance.",
-    "_cat": "开发资源/学习/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://datatracker.ietf.org/doc/html/rfc7636",
-    "title": "RFC 7636 - Proof Key for Code Exchange by OAuth Public Clients",
-    "description": "Proof Key for Code Exchange by OAuth Public Clients (RFC 7636, )",
-    "_cat": "开发资源/学习/生成器",
-    "category": "文档工具"
-  },
-  {
-    "url": "https://s-cart.org/",
-    "title": "S-Cart overview",
-    "description": "An open-source application built with Laravel, providing free website solutions for businesses.",
-    "_cat": "开发资源/学习/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://posthog.com",
-    "title": "PostHog – We make dev tools for product engineers",
-    "description": "All your developer tools in one place. PostHog gives engineers everything to build, test, measure, and ship successful products faster. Get started free.",
-    "_cat": "开发资源/部署/资源",
-    "category": "其他"
-  },
-  {
-    "url": "https://docs.slinkapp.io/",
-    "title": "Slink Documentation | Slink Docs",
-    "description": "Self-hosted image sharing platform documentation. Installation, configuration, and deployment guides.",
-    "_cat": "开发资源/部署/服务",
-    "category": "文档工具"
-  },
-  {
-    "url": "https://www.docusaurus.io",
-    "name": "Docusaurus",
-    "description": "文档系统",
-    "title": "Build optimized websites quickly, focus on your content | Docusaurus",
-    "_cat": "开发资源/部署/服务",
-    "category": "文档工具"
-  },
-  {
-    "url": "https://www.komo.ai",
-    "name": "Komo",
-    "description": "Komo is the agentic AI platform for centralized operations. Deploy AI agents that execute your mission-critical operational workflows end to end.",
-    "title": "Komo AI | Agentic AI for Operations - Komo AI",
-    "_cat": "开发资源/平台/资源",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://samacloud.io",
-    "title": "Open source chat server for mobile and web apps | Free, Secure, and Easy to Use",
-    "description": "SAMA - simple but advanced open source chat server for mobile and web apps. With end-to-end encryption and clustering out of the box.",
-    "_cat": "开发资源/平台/社区",
-    "category": "图片处理"
-  },
-  {
-    "url": "https://leomoon.com/downloads/web-apps/wiki-go/",
-    "title": "Wiki-Go - Downloads &bull; LeoMoon Studios",
-    "description": "Introduction LeoMoon Wiki-Go is a modern, feature-rich, databaseless flat-file...",
-    "_cat": "开发资源/平台/社区",
-    "category": "文档工具"
-  },
-  {
-    "url": "https://klingai.com",
-    "name": "可灵 AI",
-    "description": "Kling AI, tools for creating imaginative images and videos, based on state-of-art generative AI methods.",
-    "title": "Kling AI",
+    "url": "https://chitchatter.im/",
+    "title": "Chitchatter",
+    "description": "A peer-to-peer chat app that is serverless, decentralized, and ephemeral",
     "_cat": "开发资源/平台/社区",
     "category": "AI工具"
   },
   {
-    "url": "https://mathesar.org/",
-    "title": "Mathesar - Open source UI for Postgres databases | Mathesar",
-    "description": "Mathesar is a straightforward open source tool that provides a spreadsheet-like interface to a PostgreSQL database. Our web-based interface helps you and your collaborators work with data more independently and comfortably – no technical skills needed.",
-    "_cat": "开发资源/平台/社区",
-    "category": "图片处理"
-  },
-  {
-    "url": "https://docs.github.com/get-started/accessibility/keyboard-shortcuts",
-    "title": "Docs",
-    "description": "Nearly every page on GitHub has a keyboard shortcut to perform actions faster.",
+    "url": "https://support.github.com",
+    "title": "Sign in for Software Support and Product Help - GitHub Support",
+    "description": "Access your support options and sign in to your account for GitHub software support and product assistance. Get the help you need from our dedicated support team.",
     "_cat": "开发资源/平台/开源",
     "category": "代码工具"
   },
   {
-    "url": "https://docs.github.com",
-    "title": "Docs",
-    "description": "Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub&#x27;s products.",
+    "url": "https://securitylab.github.com",
+    "title": "GitHub Security Lab | Securing open source software, together.",
+    "description": "Securing open source software, together.",
     "_cat": "开发资源/平台/开源",
     "category": "代码工具"
   },
   {
-    "url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
-    "title": "Docs",
-    "description": "Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub&#x27;s products.",
+    "url": "https://windows.github.com",
+    "title": "GitHub Desktop | Simple collaboration from your desktop · GitHub",
+    "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+    "_cat": "开发资源/平台/生成器",
+    "category": "代码工具"
+  },
+  {
+    "url": "https://www.githubstatus.com/",
+    "title": "GitHub Status",
+    "description": "Welcome to GitHub&#39;s home for real-time and historical data on system performance.",
     "_cat": "开发资源/平台/生成器",
     "category": "代码工具"
   },
@@ -1344,12 +1240,27 @@
     "category": "代码工具"
   },
   {
-    "url": "https://www.deforum.art",
-    "name": "Deforum",
-    "description": "Home of the deforum community",
-    "title": "deforum",
+    "url": "https://support.github.com?tags=dotcom-footer",
+    "title": "Sign in for Software Support and Product Help - GitHub Support",
+    "description": "Access your support options and sign in to your account for GitHub software support and product assistance. Get the help you need from our dedicated support team.",
+    "_cat": "开发资源/平台/生成器",
+    "category": "代码工具"
+  },
+  {
+    "url": "https://www.llamaindex.ai",
+    "name": "LlamaIndex",
+    "description": "LlamaParse is the world's best agentic OCR for processing complex documents with messy tables, charts, images, and more with human-level accuracy.",
+    "title": "LlamaIndex | AI Agents for Document OCR + Workflows",
     "_cat": "创意工具/ui设计/工具",
-    "category": "其他"
+    "category": "AI工具"
+  },
+  {
+    "url": "https://www.github.dev",
+    "name": "GitHub.dev",
+    "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
+    "title": "Sign in to GitHub · GitHub",
+    "_cat": "创意工具/ui设计/工具",
+    "category": "代码工具"
   },
   {
     "url": "https://www.privacytools.io/",
@@ -1373,26 +1284,35 @@
     "category": "代码工具"
   },
   {
-    "url": "https://www.codesynthesis.com/products/odb/",
-    "title": "ODB - C++ Object-Relational Mapping (ORM)",
-    "description": "ODB is an open-source, cross-platform and cross-database object-relational mapping (ORM) system for C++",
-    "_cat": "创意工具/思维导图/教程",
-    "category": "其他"
-  },
-  {
-    "url": "https://qstonline.org/free_account.htm",
-    "title": "QST Free Account",
-    "description": "An easy to use yet feature rich method of developing, delivering and grading online quizzes, surveys, tests and other markable assignments. Installs on laptop, desktop, server or cloud. Windows 10/11, Linux and Mac OS. Create/import/export/convert questions.",
-    "_cat": "创意工具/白板/教程",
-    "category": "其他"
-  },
-  {
-    "url": "https://www.humata.ai",
-    "name": "Humata",
-    "description": "Humata is an AI agent that turns your documents into a fast, intelligent knowledge base for instant analysis, insights, and answers.",
-    "title": "Humata: AI meets your knowledge base",
-    "_cat": "创意工具/白板/教程",
+    "url": "https://www.langchain.com",
+    "name": "LangChain",
+    "description": "LLM应用框架",
+    "title": "LangChain: Observe, Evaluate, and Deploy Reli",
+    "_cat": "创意工具/思维导图/社区",
     "category": "AI工具"
+  },
+  {
+    "url": "https://www.shimo.im",
+    "name": "石墨文档",
+    "description": "协作文档",
+    "title": "石墨文档官网-在线协同办公系统平台,支持云端多人在线协作文档,表格,幻灯片",
+    "_cat": "创意工具/流程图/社区",
+    "category": "文档工具"
+  },
+  {
+    "url": "https://www.vast.ai",
+    "name": "Vast.ai",
+    "description": "GPU租用",
+    "title": "GPU Infrastructure for AI Agents | Vast.ai",
+    "_cat": "创意工具/3d建模/资源",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://hashnode.com/n/go",
+    "title": "#go | Hashnode",
+    "description": "Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.",
+    "_cat": "创意工具/平台/社区",
+    "category": "其他"
   },
   {
     "url": "https://www.template.net",
@@ -1410,21 +1330,6 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.anaconda.com",
-    "name": "Anaconda",
-    "description": "Python发行版",
-    "title": "Advance AI with Open Source | Anaconda",
-    "_cat": "办公效率/表单/社区",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://amusewiki.org/",
-    "title": "News | A·Muse·Wiki",
-    "description": "Amusewiki 2.610 released",
-    "_cat": "办公效率/表单/社区",
-    "category": "文档工具"
-  },
-  {
     "url": "https://technitium.com/dns/",
     "title": "Technitium DNS Server | An Open Source DNS Server For Privacy & Security",
     "description": "Technitium DNS Server is an open source authoritative as well as recursive DNS server that can be used for self hosting a DNS server for privacy & security.",
@@ -1432,18 +1337,10 @@
     "category": "其他"
   },
   {
-    "url": "https://www.svelte.dev",
-    "name": "Svelte",
-    "description": "前端框架",
-    "title": "Svelte • Web development for the rest of us",
+    "url": "https://www.visualstudio.com/",
+    "title": "Visual Studio: IDE and Code Editor for Software Development",
+    "description": "Visual Studio dev tools & services make app development easy for any developer, on any platform & language. Develop with our code editor or IDE anywhere for free.",
     "_cat": "学术科研/课程/工具",
-    "category": "实用工具"
-  },
-  {
-    "url": "https://ollama.com/",
-    "title": "Ollama",
-    "description": "Ollama is the easiest way to automate your work using open models, while keeping your data safe.",
-    "_cat": "学术科研/课程/生成器",
     "category": "其他"
   },
   {
@@ -1454,10 +1351,38 @@
     "category": "其他"
   },
   {
+    "url": "https://krayincrm.com/",
+    "title": "Free Open Source CRM Software | Laravel CRM - Krayin",
+    "description": "Krayin is an open source CRM built on Laravel. It helps manage leads, customers, and sales with customizable features that scale with your business.",
+    "_cat": "学术科研/ai学习/服务",
+    "category": "图片处理"
+  },
+  {
     "url": "https://casaos.zimaspace.com/",
     "title": "CasaOS - A simple, easy-to-use, elegant open-source personal cloud system",
     "description": "CasaOS is a simple, easy-to-use, elegant open-source personal cloud system",
     "_cat": "学术科研/ai学习/开源",
+    "category": "其他"
+  },
+  {
+    "url": "https://conduit.rs/",
+    "title": "Conduit - Your own chat server",
+    "description": "Conduit is a simple, fast and reliable\n    chat server powered by Matrix. Conduit is an alternative to Synapse and\n    tries to be lightweight and easy to install, but it is still in development.",
+    "_cat": "学术科研/ai学习/生成器",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://live.scoold.com",
+    "title": "Scoold Pro | Questions",
+    "description": "Scoold Pro is friendly place for knowledge sharing and collaboration. Ask questions, post answers and comments, earn reputation points.",
+    "_cat": "学术科研/数据集/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://demo.vvveb.com",
+    "title": "Vvveb",
+    "description": "Powerful and easy to use drag and drop website builder for blogs, presentation or ecommerce stores",
+    "_cat": "学术科研/数据集/资源",
     "category": "其他"
   },
   {
@@ -1468,61 +1393,11 @@
     "category": "其他"
   },
   {
-    "name": "Trae AI",
-    "url": "https://trae.ai",
-    "description": "浏览器内置AI助手",
-    "title": "TRAE - Collaborate with Intelligence",
-    "_cat": "学术科研/教材/资源",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://demo.silverstripe.org/",
-    "title": "Welcome to the public demo of the Silverstripe CMS | Silverstripe CMS Demo",
-    "description": "this is my test of this website template...",
-    "_cat": "学术科研/教材/生成器",
-    "category": "其他"
-  },
-  {
-    "url": "https://bifroest.engity.org/",
-    "title": "Welcome - Engity's Bifröst",
-    "description": "Bifröst is a highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session.",
-    "_cat": "学术科研/教程/工具",
-    "category": "其他"
-  },
-  {
-    "url": "https://jetbrains.com/go",
-    "title": "GoLand by JetBrains: More than just a Go IDE",
-    "description": "The complete Go IDE",
-    "_cat": "学术科研/教程/资源",
-    "category": "AI工具"
-  },
-  {
-    "url": "https://tsuru.io/",
-    "title": "Tsuru",
-    "description": "Tsuru is an extensible and open source Platform as a Service (Paas) that uses Docker to make deploys simple and fast.",
-    "_cat": "视频创作/剪辑/教程",
+    "url": "https://golab.io/",
+    "title": "GoLab | The International Conference on Go in Italy",
+    "description": "GoLab is a conference for developers made by developers",
+    "_cat": "视频创作/剪辑/社区",
     "category": "实用工具"
-  },
-  {
-    "url": "https://cannery.app",
-    "title": "Cannery",
-    "description": "The self-hosted firearm tracker app",
-    "_cat": "视频创作/特效/资源",
-    "category": "其他"
-  },
-  {
-    "url": "https://goharbor.io/",
-    "title": "Harbor",
-    "description": "Our mission is to be the trusted cloud native repository for Kubernetes",
-    "_cat": "视频创作/特效/教程",
-    "category": "实用工具"
-  },
-  {
-    "url": "https://gogs.io/",
-    "title": "Introduction - Gogs: A painless self-hosted Git service",
-    "description": "The painless way to host your own Git service",
-    "_cat": "视频创作/特效/生成器",
-    "category": "AI工具"
   },
   {
     "url": "https://www.codecanyon.net",
@@ -1540,32 +1415,11 @@
     "category": "其他"
   },
   {
-    "url": "https://fess.codelibs.org/",
-    "title": "Fess - Enterprise Search Server",
-    "description": "Fess is a full-text search server that can be easily set up in just 5 minutes.",
-    "_cat": "视频创作/录屏/服务",
-    "category": "其他"
-  },
-  {
-    "url": "https://activitywatch.net",
-    "title": "ActivityWatch - Open-source time tracker",
-    "description": "The best free and open-source automated time tracker. Cross-platform, extensible, local/privacy-first. Tracks app and website usage on Windows, macOS, Linux & Android. All data stays on your device.",
-    "_cat": "视频创作/字幕/资源",
-    "category": "其他"
-  },
-  {
     "url": "https://centrifugal.dev/",
     "title": "Centrifugo – scalable real-time messaging server in a language-agnostic way. Set up once and forever. | Centrifugo",
     "description": "Centrifugo is an open source server designed to help building interactive real-time messaging applications. Think chats, live comments, multiplayer games, streaming metrics etc. Centrifugo provides a variety of real-time transports, scales well and integrates with any application.",
     "_cat": "视频创作/字幕/教程",
     "category": "AI工具"
-  },
-  {
-    "url": "http://raftlib.io/",
-    "title": "raftlib.io",
-    "description": "Simple, easy to use stream computation library for C++.",
-    "_cat": "视频创作/字幕/教程",
-    "category": "实用工具"
   },
   {
     "url": "https://www.railway.app",
@@ -1576,25 +1430,19 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.bfilipek.com/?m=1",
-    "title": "C++ Stories",
-    "description": "Stay up-to-date with Modern C++",
-    "_cat": "视频创作/素材/社区",
+    "name": "Nuxt",
+    "url": "https://nuxt.com",
+    "description": "Vue全栈框架",
+    "title": "Nuxt: The Full-Stack Vue Framework",
+    "_cat": "视频创作/素材/资源",
     "category": "其他"
   },
   {
-    "url": "https://alf.io/",
-    "title": "Alf.io",
-    "description": "the open source ticket reservation system",
-    "_cat": "视频创作/素材/社区",
-    "category": "实用工具"
-  },
-  {
-    "url": "https://www.material.io/icons",
-    "name": "Material Icons",
-    "description": "图标库",
-    "title": "Material Design",
+    "url": "https://www.sanebox.com",
+    "name": "SaneBox",
+    "description": "智能邮件管理",
+    "title": "SaneBox | Email Management for Any Inbox",
     "_cat": "视频创作/平台/资源",
-    "category": "图片处理"
+    "category": "AI工具"
   }
 ]

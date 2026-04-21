@@ -3,401 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>啃魂导航</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: #fafafa; }
-        #sidebar { position: fixed; left: 0; top: 0; width: 240px; height: 100vh; background: white; border-right: 1px solid #eee; padding: 20px 0; overflow-y: auto; }
-        #sidebar h1 { font-size: 18px; padding: 0 20px 20px; font-weight: 600; }
-        #sidebar a { display: block; padding: 8px 20px; text-decoration: none; color: #333; font-size: 14px; }
-        #sidebar a:hover { background: #f5f5f5; }
-        #main { margin-left: 240px; padding: 30px 40px; }
-        #search { width: 100%; padding: 12px 16px; border: 1px solid #eee; border-radius: 8px; font-size: 15px; margin-bottom: 30px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 20px 0; }
-        .site {
-            padding: 14px 16px;
-            background: white;
-            border-radius: 10px;
-            text-decoration: none;
-            color: #222;
-            font-size: 14px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            min-height: 72px;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
-        }
-        .site:hover {
-            background: #fafafa;
-            transform: translateY(-1px);
-            box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-            border-color: #e5e7eb;
-        }
-        .site:empty { display: none !important; }
-        .site[data-title=""] { display: none !important; }
-        .site strong {
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.4;
-            color: #111;
-            display: block;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-        .site span {
-            font-size: 12px;
-            color: #6b7280;
-            line-height: 1.4;
-            overflow: hidden;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-        }
-
-        /* 搜索高亮样式 */
-        mark.search-highlight {
-            background: #fef08a;
-            color: #111827;
-            padding: 0 2px;
-            border-radius: 2px;
-            font-weight: 500;
-        }
-        /* 汉堡菜单按钮 */
-        #hamburger {
-            display: none;
-            position: fixed;
-            top: 16px;
-            left: 16px;
-            z-index: 1001;
-            width: 44px;
-            height: 44px;
-            border: none;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            cursor: pointer;
-            padding: 10px;
-            transition: all 0.2s ease;
-        }
-
-        #hamburger span {
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: #333;
-            margin: 5px 0;
-            transition: all 0.3s ease;
-            border-radius: 2px;
-        }
-
-        #hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        #hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        #hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* 遮罩层 */
-        #overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.4);
-            z-index: 999;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            backdrop-filter: blur(2px);
-        }
-
-        #overlay.show {
-            opacity: 1;
-        }
-
-        /* 状态UI 样式 */
-        .state-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 300px;
-            text-align: center;
-            padding: 40px 20px;
-            color: #6b7280;
-        }
-
-        .state-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
-            opacity: 0.7;
-        }
-
-        .state-title {
-            font-size: 18px;
-            font-weight: 500;
-            color: #374151;
-            margin-bottom: 8px;
-        }
-
-        .state-desc {
-            font-size: 14px;
-            color: #9ca3af;
-            max-width: 320px;
-            line-height: 1.6;
-        }
-
-        .state-action {
-            margin-top: 24px;
-        }
-
-        .state-button {
-            padding: 10px 24px;
-            background: #3b82f6;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .state-button:hover {
-            background: #2563eb;
-        }
-
-        /* 加载动画 */
-        .loading-spinner {
-            width: 48px;
-            height: 48px;
-            border: 3px solid #e5e7eb;
-            border-top-color: #3b82f6;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin-bottom: 20px;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        .loading-dots::after {
-            content: '';
-            animation: dots 1.5s steps(4, end) infinite;
-        }
-
-        @keyframes dots {
-            0%, 20% { content: ''; }
-            40% { content: '.'; }
-            60% { content: '..'; }
-            80%, 100% { content: '...'; }
-        }
-
-        /* 错误状态 */
-        .state-error .state-icon {
-            color: #ef4444;
-        }
-
-        /* 空状态 */
-        .state-empty .state-icon {
-            color: #9ca3af;
-        }
-
-        @media (max-width: 768px) {
-            #hamburger {
-                display: block;
-            }
-
-            #overlay {
-                display: block;
-            }
-
-            #sidebar {
-                transform: translateX(-100%);
-                transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                z-index: 1000;
-                box-shadow: 2px 0 15px rgba(0,0,0,0.1);
-            }
-
-            #sidebar.open {
-                transform: translateX(0);
-            }
-
-            #main {
-                margin-left: 0;
-                padding: 20px;
-                padding-top: 70px;
-            }
-
-            body.menu-open {
-                overflow: hidden;
-            }
-        }
-    </style>
+    <title>啃魂导航 V2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body>
-    <!-- 汉堡菜单按钮 -->
-    <button id="hamburger" aria-label="菜单">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-
-    <!-- 遮罩层 -->
-    <div id="overlay"></div>
-
-    <!-- 顶部导航栏 -->
-    <header id="top-nav">
-        <div class="nav-header">
-            <h1>啃魂导航</h1>
-            <button id="search-button" class="search-trigger">🔍 搜索 Ctrl+K</button>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold">🔮 啃魂导航 V2</h1>
+            <input id="search" type="text" placeholder="搜索站点..." class="px-3 py-2 border rounded-lg w-64">
         </div>
     </header>
-
-    <!-- 搜索容器 -->
-    <div class="search-container">
-        <input id="search-input" type="text" placeholder="输入关键词搜索网站..." autocomplete="off">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex gap-6">
+        <aside id="sidebar" class="w-64 shrink-0 hidden lg:block">
+            <div id="category-list" class="sticky top-24 space-y-1"></div>
+        </aside>
+        <main class="flex-1">
+            <div id="sites" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+        </main>
     </div>
 
-    <!-- 内容视图容器 -->
-    <main id="view-container">
-        <!-- 内容将由 JS 动态渲染 -->
-    </main>
+    <script src="js/data.js"></script>
+    <script>
+        const sitesEl = document.getElementById('sites');
+        const searchEl = document.getElementById('search');
+        const catEl = document.getElementById('category-list');
 
-    <!-- JS 脚本引用 -->
-    <script src="/assets/js/state.js"></script>
-    <script src="/assets/js/data.js"></script>
-    <script src="/assets/js/search.js"></script>
-    <script src="/assets/js/render.js"></script>
-    <script src="/assets/js/app.js"></script>
-</body>
-</html>
+        function renderSites(list) {
+            sitesEl.innerHTML = list.map(site => `
+            <a href="${site.url}" target="_blank" rel="noopener" class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-1 block">
+                <div class="font-bold">${site.title}</div>
+                <div class="text-sm text-gray-500 mt-1 line-clamp-2">${site.description || ''}</div>
+            </a>
+            `).join('');
+        }
+
+        function renderCategories() {
+            const cats = [...new Set(window.SITES.map(s => s.category))].sort();
+            catEl.innerHTML = cats.map(cat => `
+            <button class="w-full text-left px-3 py-2 rounded hover:bg-gray-100">${cat}</button>
+            `).join('');
+        }
+
+        searchEl.addEventListener('input', e => {
+            const q = e.target.value.toLowerCase();
+            renderSites(window.SITES.filter(s =>
+                s.title.toLowerCase().includes(q) || s.description?.toLowerCase().includes(q)
+            ));
         });
-      }
 
-      lastLevel = level;
-      levelMap[level] = item;
-    });
-
-    // 默认展开第一个大类
-    if(items[0]) items[0].click();
-
-    console.log('✅ 四级折叠菜单已加载');
-  }, 100);
-});
-</script>
+        renderCategories();
+        renderSites(window.SITES);
+    </script>
 </body>
-<script>
-// 自动修复空链接与填充站点信息
-document.addEventListener('DOMContentLoaded', function() {
-    const sites = document.querySelectorAll('.site');
-    let fixedCount = 0;
-
-    sites.forEach(site => {
-        const href = site.getAttribute('href');
-        const title = site.getAttribute('data-title');
-
-        // 隐藏空链接和无效站点
-        if (!href || href === '#' || href === '' || title === '') {
-            site.remove();
-            fixedCount++;
-            return;
-        }
-
-        // 自动填充站点内容
-        if (!site.innerHTML.trim()) {
-            let displayTitle = title;
-            if (!displayTitle || displayTitle === '') {
-                try {
-                    const url = new URL(href);
-                    displayTitle = url.hostname.replace('www.', '');
-                } catch(e) {
-                    displayTitle = href;
-                }
-            }
-
-            // 构建卡片内容
-            site.innerHTML = `
-                <strong>${displayTitle}</strong>
-                <span>${href}</span>
-            `;
-            fixedCount++;
-        }
-    });
-
-    console.log(`✅ 站点修复完成: 清理了 ${fixedCount} 个无效/空链接卡片`);
-});
-
-// 首屏体验优化
-document.addEventListener('DOMContentLoaded', () => {
-  // 汉堡菜单逻辑
-  const hamburger = document.getElementById('hamburger');
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.getElementById('overlay');
-
-  function toggleMenu() {
-    hamburger.classList.toggle('active');
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('show');
-    document.body.classList.toggle('menu-open');
-  }
-
-  function closeMenu() {
-    hamburger.classList.remove('active');
-    sidebar.classList.remove('open');
-    overlay.classList.remove('show');
-    document.body.classList.remove('menu-open');
-  }
-
-  hamburger.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', closeMenu);
-
-  // 菜单内链接点击后自动关闭
-  sidebar.addEventListener('click', (e) => {
-    if(e.target.tagName === 'A') {
-      // 平滑滚动到顶部，偏移60px避免被导航栏遮挡
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-
-      // 移动端自动关闭菜单
-      if(window.innerWidth < 768) {
-        closeMenu();
-      }
-    }
-  });
-
-  // ESC 快捷键关闭菜单
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && sidebar.classList.contains('open')) {
-      closeMenu();
-    }
-  });
-
-  setTimeout(() => {
-    // 进入页面自动打开第一个分类
-    const firstCategory = document.querySelector('#sidebar a[data-level="0"]');
-    if(firstCategory) {
-      firstCategory.click();
-    }
-
-    // 移除空状态提示
-    const emptyHint = document.querySelector('#view-container:empty');
-    if(emptyHint) {
-      emptyHint.innerHTML = '';
-    }
-  }, 200);
-});
-</script>
 </html>
-</div></body></html>
