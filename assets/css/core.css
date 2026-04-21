@@ -36,9 +36,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -94,17 +97,42 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 滚动条美化 */
-::-webkit-scrollbar {
-    width: 6px;
+/* WCAG Compliant Touch Targets */
+button,
+a[role="button"],
+.sidebar-link,
+.nav-item,
+.card {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 12px 16px;
+  touch-action: manipulation;
 }
-::-webkit-scrollbar-track {
-    background: transparent;
+
+/* Interactive control sizing */
+.sidebar-toggle,
+.theme-toggle,
+.action-btn {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color var(--transition-duration) var(--transition-curve);
 }
-::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: 10px;
+
+.sidebar-toggle:hover,
+.theme-toggle:hover,
+.action-btn:hover {
+  background-color: var(--color-bg-alt);
 }
-::-webkit-scrollbar-thumb:hover {
-    background: var(--color-text-dim);
+
+/* Ensure sufficient spacing between touch targets */
+button + button,
+a + a {
+  margin-left: 8px;
 }
