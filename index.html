@@ -9044,6 +9044,69 @@
     <script src="./assets/js/search.js"></script>
     <script src="./assets/js/render.js"></script>
     <script src="./assets/js/app.js"></script>
+
+<script>
+// 四级折叠菜单 - 纯外部注入，不修改原有DOM
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    const items = document.querySelectorAll('#sidebar a');
+    let levelMap = {};
+    let lastLevel = 0;
+
+    items.forEach(item => {
+      const text = item.textContent.trim();
+      let level = 0;
+
+      // 自动识别分类层级
+      if (text.includes('/')) {
+        level = text.split('/').length - 1;
+      }
+
+      item.style.paddingLeft = (16 + level * 16) + 'px';
+      item.dataset.level = level;
+
+      if (level > 0) {
+        item.style.display = 'none';
+      }
+
+      if (level < lastLevel) {
+        for(let i = level; i < lastLevel; i++) {
+          levelMap[i].nextElementSibling.style.display = 'none';
+        }
+      }
+
+      if (level === 0) {
+        const arrow = document.createElement('span');
+        arrow.textContent = '▸ ';
+        arrow.style.display = 'inline-block';
+        arrow.style.width = '16px';
+        arrow.style.transition = 'transform 0.2s';
+        item.insertBefore(arrow, item.firstChild);
+
+        item.addEventListener('click', e => {
+          e.preventDefault();
+          item.classList.toggle('expanded');
+          arrow.style.transform = item.classList.contains('expanded') ? 'rotate(90deg)' : '';
+
+          let next = item.nextElementSibling;
+          while(next && parseInt(next.dataset.level) > level) {
+            next.style.display = item.classList.contains('expanded') ? 'block' : 'none';
+            next = next.nextElementSibling;
+          }
+        });
+      }
+
+      lastLevel = level;
+      levelMap[level] = item;
+    });
+
+    // 默认展开第一个大类
+    if(items[0]) items[0].click();
+
+    console.log('✅ 四级折叠菜单已加载');
+  }, 100);
+});
+</script>
 </body>
 <script>
 // 自动修复空链接与填充站点信息
