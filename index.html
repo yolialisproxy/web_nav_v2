@@ -47,8 +47,23 @@
         function renderCategories() {
             const cats = [...new Set(window.SITES.map(s => s.category))].sort();
             catEl.innerHTML = cats.map(cat => `
-            <button class="w-full text-left px-3 py-2 rounded hover:bg-gray-100">${cat}</button>
+            <button class="w-full text-left px-3 py-2 rounded hover:bg-gray-100 transition-colors" data-category="${cat}">${cat}</button>
             `).join('');
+
+            // Category click filtering
+            catEl.querySelectorAll('button').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    // Clear active state
+                    catEl.querySelectorAll('button').forEach(b => b.classList.remove('bg-blue-50', 'text-blue-700', 'font-medium'));
+                    // Set active state
+                    btn.classList.add('bg-blue-50', 'text-blue-700', 'font-medium');
+                    // Filter sites
+                    const selectedCat = btn.dataset.category;
+                    renderSites(window.SITES.filter(s => s.category === selectedCat));
+                    // Scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
         }
 
         searchEl.addEventListener('input', e => {

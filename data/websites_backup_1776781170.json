@@ -58,6 +58,14 @@
     "id": "site_7"
   },
   {
+    "url": "https://www.passbolt.com/",
+    "title": "Open Source Password Manager for Teams | Passbolt",
+    "description": "Manage and share passwords securely with Passbolt. Open source, audited and built for teams that need collaboration, compliance and control.",
+    "_cat": "开发资源/api/生成器",
+    "category": "其他",
+    "id": "site_8"
+  },
+  {
     "url": "http://torch.ch/",
     "title": "Torch | Scientific computing for LuaJIT.",
     "description": "Torch is a scientific computing framework for LuaJIT.",
@@ -215,6 +223,15 @@
     "id": "site_31"
   },
   {
+    "url": "https://www.material.io/icons",
+    "name": "Material Icons",
+    "description": "图标库",
+    "title": "Material Design",
+    "_cat": "视频创作/平台/资源",
+    "category": "图片处理",
+    "id": "site_32"
+  },
+  {
     "url": "https://cannery.app",
     "title": "Cannery",
     "description": "The self-hosted firearm tracker app",
@@ -267,6 +284,14 @@
     "id": "site_39"
   },
   {
+    "url": "https://tidesdb.com/",
+    "title": "Fast, embeddable key-value storage | TidesDB",
+    "description": "A high-performance LSM-tree based key-value storage engine library written in C. Build databases or use directly as a standalone store.",
+    "_cat": "资源素材/字体/教程",
+    "category": "其他",
+    "id": "site_40"
+  },
+  {
     "url": "https://www.codesynthesis.com/products/odb/",
     "title": "ODB - C++ Object-Relational Mapping (ORM)",
     "description": "ODB is an open-source, cross-platform and cross-database object-relational mapping (ORM) system for C++",
@@ -283,12 +308,37 @@
     "id": "site_42"
   },
   {
+    "url": "https://www.bfilipek.com/?m=1",
+    "title": "C++ Stories",
+    "description": "Stay up-to-date with Modern C++",
+    "_cat": "视频创作/素材/社区",
+    "category": "其他",
+    "id": "site_43"
+  },
+  {
     "url": "https://gogs.io/",
     "title": "Introduction - Gogs: A painless self-hosted Git service",
     "description": "The painless way to host your own Git service",
     "_cat": "视频创作/特效/生成器",
     "category": "AI工具",
     "id": "site_44"
+  },
+  {
+    "name": "fast.ai",
+    "url": "https://fast.ai",
+    "description": "实用深度学习课程",
+    "title": "fast.ai - fast.ai—Making neural nets uncool again",
+    "_cat": "AI智能/AI其他/教程",
+    "category": "AI工具",
+    "id": "site_46"
+  },
+  {
+    "url": "https://git.dotclear.org/dev/dotclear",
+    "title": "Discussions - Dotclear",
+    "description": "Prenez le contrôle de votre blog - page 1",
+    "_cat": "AI智能/AI其他/平台",
+    "category": "其他",
+    "id": "site_47"
   },
   {
     "url": "https://mlem.ai/",
@@ -308,6 +358,14 @@
     "id": "site_49"
   },
   {
+    "url": "https://indieweb.org/",
+    "title": "IndieWeb",
+    "description": "The IndieWeb is a people-focused alternative to the “corporate web”.",
+    "_cat": "视频娱乐/动漫/教程",
+    "category": "其他",
+    "id": "site_50"
+  },
+  {
     "url": "https://demo.silverstripe.org/",
     "title": "Welcome to the public demo of the Silverstripe CMS | Silverstripe CMS Demo",
     "description": "this is my test of this website template...",
@@ -322,6 +380,15 @@
     "_cat": "学术科研/数据集/教程",
     "category": "其他",
     "id": "site_52"
+  },
+  {
+    "url": "https://cml.dev/",
+    "title": "CML · Continuous Machine Learning",
+    "description": "Bring DevOps practices to your projects for automatic, reproducible, and fast machine learning.",
+    "source": "awesome",
+    "_cat": "AI智能/AI视频/资源",
+    "category": "图片处理",
+    "id": "site_53"
   },
   {
     "url": "https://v.qq.com",
@@ -358,6 +425,14 @@
     "id": "site_57"
   },
   {
+    "url": "https://bifroest.engity.org/",
+    "title": "Welcome - Engity's Bifröst",
+    "description": "Bifröst is a highly customizable SSH server with several ways to authorize a user and options where and how to execute a user's session.",
+    "_cat": "学术科研/教程/工具",
+    "category": "其他",
+    "id": "site_58"
+  },
+  {
     "url": "https://www.wechat.com",
     "name": "微信",
     "description": "WeChat是一款服务超过10亿用户的社交通讯应用，支持免费聊天、高清音视频通话、朋友圈分享和移动支付，让沟通与生活更便捷。",
@@ -373,6 +448,14 @@
     "_cat": "视频娱乐/国外视频/资源",
     "category": "其他",
     "id": "site_60"
+  },
+  {
+    "url": "https://glitchtip.com",
+    "title": "Open Source Error Tracking | GlitchTip",
+    "description": "GlitchTip is an open source, Sentry API compatible error tracking platform.",
+    "_cat": "视频娱乐/音乐/工具",
+    "category": "代码工具",
+    "id": "site_61"
   },
   {
     "url": "https://luau.org/",
@@ -427,12 +510,29 @@
     "id": "site_67"
   },
   {
+    "url": "http://rnnlm.org/",
+    "title": "Recurrent Neural Network Language Models",
+    "description": "Recurrent Neural Network Language Models",
+    "source": "awesome",
+    "_cat": "AI智能/AI视频/资源",
+    "category": "其他",
+    "id": "site_68"
+  },
+  {
     "url": "https://omeka.org",
     "title": "Omeka",
     "description": "Omeka is a free, flexible, and open source web-publishing platform for the display of library, museum, archives, and scholarly collections and exhibitions. Its five-minute setup makes launching an online archive or exhibition as easy as launching a blog.",
     "_cat": "学术科研/ai学习/服务",
     "category": "其他",
     "id": "site_69"
+  },
+  {
+    "url": "https://opnform.com/forms/create/guest",
+    "title": "Create a new Form for free",
+    "description": "Build beautiful, powerful forms for free with OpnForm. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.",
+    "_cat": "阅读写作/教程/资源",
+    "category": "其他",
+    "id": "site_70"
   },
   {
     "url": "https://www.azuracast.com/",
@@ -474,6 +574,14 @@
     "_cat": "资源素材/字体/教程",
     "category": "实用工具",
     "id": "site_75"
+  },
+  {
+    "url": "https://d8a.tech",
+    "title": "Warehouse-native Analytics - d8a.tech",
+    "description": "Reporting-ready clickstream for your own data warehouse.",
+    "_cat": "视频娱乐/国外视频/服务",
+    "category": "其他",
+    "id": "site_76"
   },
   {
     "url": "https://linkstack.org/",
@@ -648,6 +756,14 @@
     "id": "site_97"
   },
   {
+    "url": "https://www.scm-manager.org/",
+    "title": "Home | SCM-Manager",
+    "description": "The easiest way to share and manage your Git, Mercurial and Subversion repositories.",
+    "_cat": "阅读写作/博客/服务",
+    "category": "其他",
+    "id": "site_98"
+  },
+  {
     "url": "http://raftlib.io/",
     "title": "raftlib.io",
     "description": "Simple, easy to use stream computation library for C++.",
@@ -672,6 +788,14 @@
     "id": "site_101"
   },
   {
+    "url": "https://casaos.zimaspace.com/",
+    "title": "CasaOS - A simple, easy-to-use, elegant open-source personal cloud system",
+    "description": "CasaOS is a simple, easy-to-use, elegant open-source personal cloud system",
+    "_cat": "学术科研/ai学习/开源",
+    "category": "其他",
+    "id": "site_102"
+  },
+  {
     "url": "https://www.chef.io/products/chef-infra",
     "title": "Configuration Management System Software - Chef Infra | Chef",
     "description": "Chef Infra automates the process of managing configurations, ensuring that every system is configured correctly and consistently. Learn more and get started today!",
@@ -687,6 +811,30 @@
     "_cat": "AI智能/AI视频/库",
     "category": "实用工具",
     "id": "site_105"
+  },
+  {
+    "url": "http://www.openframeworks.cc/",
+    "title": "openFrameworks",
+    "description": "openFrameworks",
+    "_cat": "视频娱乐/国外视频/生成器",
+    "category": "其他",
+    "id": "site_106"
+  },
+  {
+    "url": "https://lets-go-further.alexedwards.net",
+    "title": "Let’s Go Further! Advanced patterns for APIs and web applications in Go",
+    "description": "An in-depth guide to advanced patterns for developing, managing and deploying APIs and web applications with Go",
+    "_cat": "AI智能/AI视频/库",
+    "category": "代码工具",
+    "id": "site_107"
+  },
+  {
+    "url": "https://chevereto.com/",
+    "title": "Chevereto self-hosted - Image and Video Hosting Software",
+    "description": "Image and Video hosting software that allows you to create your own media hosting and sharing service in your own premises. It's your hosting and your rules, say goodbye to the closures and restrictions.",
+    "_cat": "视频娱乐/国内视频/资源",
+    "category": "其他",
+    "id": "site_108"
   },
   {
     "name": "Flux AI",
@@ -840,6 +988,15 @@
     "id": "site_130"
   },
   {
+    "url": "https://www.yes.com",
+    "name": "Yes",
+    "description": "Yes.com is a Malta-based online gaming company building fair and responsible casino and sports betting products for regulated European markets. First launch in Denmark 2026.",
+    "title": "Yes.com - Modern Casino &amp; Sportsbook | Launching 2026",
+    "_cat": "AI智能/AI音乐/教程",
+    "category": "AI工具",
+    "id": "site_132"
+  },
+  {
     "url": "https://maza-ad-blocking.andros.dev/",
     "title": "Maza ad blocking - Like Pi-hole but local",
     "description": "Local ad blocker. Like Pi-hole but local and using your operating system.",
@@ -865,6 +1022,14 @@
     "id": "site_135"
   },
   {
+    "url": "https://jujucharms.com/",
+    "title": "Charmhub | The Open Operator Collection",
+    "description": "Universal operators for application lifecycle management on Linux, Windows and Kubernetes",
+    "_cat": "开发资源/api/工具",
+    "category": "其他",
+    "id": "site_136"
+  },
+  {
     "url": "https://www.svelte.dev",
     "name": "Svelte",
     "description": "前端框架",
@@ -874,6 +1039,14 @@
     "id": "site_137"
   },
   {
+    "url": "https://gophercises.com/",
+    "title": "Gophercises - Coding exercises for budding gophers",
+    "description": "This FREE course will help you exercise your Go skills while building some cool apps, tools, and packages.",
+    "_cat": "开发资源/api/生成器",
+    "category": "图片处理",
+    "id": "site_138"
+  },
+  {
     "url": "https://nodejs.org/docs",
     "name": "Node.js Docs",
     "description": "Node.js文档",
@@ -881,6 +1054,15 @@
     "_cat": "视频娱乐/国内视频/教程",
     "category": "文档工具",
     "id": "site_139"
+  },
+  {
+    "name": "Heroicons",
+    "url": "https://heroicons.com",
+    "description": "Tailwind官方图标",
+    "title": "Heroicons",
+    "_cat": "AI智能/AI视频/资源",
+    "category": "图片处理",
+    "id": "site_140"
   },
   {
     "url": "https://qstonline.org/free_account.htm",
@@ -925,12 +1107,36 @@
     "id": "site_145"
   },
   {
+    "url": "https://www.kasmweb.com/#demo",
+    "title": "Kasm Workspaces | The Container Streaming Platform",
+    "description": "Kasm Workspaces delivers zero-trust remote browser isolation, Desktop as a Service (DaaS), and OSINT workloads to your web browser.",
+    "_cat": "AI智能/AI其他/工具",
+    "category": "AI工具",
+    "id": "site_146"
+  },
+  {
+    "url": "https://gopherconbr.org",
+    "title": "GopherCon Brasil — Conferência Oficial da Go Community",
+    "description": "GopherCon Brasil é a maior conferência de desenvolvimento em Go no país, reunindo programadores.",
+    "_cat": "AI智能/AI开发/工具",
+    "category": "AI工具",
+    "id": "site_148"
+  },
+  {
     "url": "https://mpqc.org/",
     "title": "MPQC | The Massively Parallel Quantum Chemistry (MPQC) platform is a research package for ab initio simulation of the electronic structure of molecules and periodic solids, with primary focus on many-body electronic structure methods, such as coupled-cluster.",
     "description": "The Massively Parallel Quantum Chemistry (MPQC) platform is a research package for ab initio simulation of the electronic structure of molecules and periodic solids, with primary focus on many-body electronic structure methods, such as coupled-cluster.",
     "_cat": "AI智能/AI其他/工具",
     "category": "其他",
     "id": "site_149"
+  },
+  {
+    "url": "https://bagisto.com/en/",
+    "title": "Bagisto - Laravel eCommerce Platform | Free &amp; Open Source",
+    "description": "An Open source Laravel eCommerce platform for building marketplaces, mobile apps, blockchain, and headless commerce.",
+    "_cat": "AI智能/工具/生成器",
+    "category": "图片处理",
+    "id": "site_150"
   },
   {
     "url": "https://mafl.hywax.space/",
@@ -1082,6 +1288,15 @@
     "id": "site_171"
   },
   {
+    "url": "https://www.docusaurus.io",
+    "name": "Docusaurus",
+    "description": "文档系统",
+    "title": "Build optimized websites quickly, focus on your content | Docusaurus",
+    "_cat": "开发资源/部署/服务",
+    "category": "文档工具",
+    "id": "site_172"
+  },
+  {
     "url": "https://runsql.com/",
     "title": "RunSQL - Online SQL Playground for MySQL, PostgreSQL, and SQL Server",
     "description": "Free online SQL playground for MySQL, PostgreSQL, and SQL Server. Create database structures, run queries, and share results instantly.",
@@ -1180,6 +1395,14 @@
     "id": "site_185"
   },
   {
+    "url": "https://bencher.dev/",
+    "title": "Bencher - Continuous Benchmarking",
+    "description": "Catch performance regressions before they merge with Continuous Benchmarking",
+    "_cat": "视频娱乐/直播/服务",
+    "category": "实用工具",
+    "id": "site_186"
+  },
+  {
     "url": "https://www.godays.io/",
     "title": "GoDays 2020 in Berlin - Connect with hundreds of like-minded people",
     "description": "GoDays is a three day conference focused on connecting the Go community. In numerous technical talks and hands-on workshops, Go experts, beginners, and everyone in between will exchange ideas and learn from each other.",
@@ -1196,6 +1419,14 @@
     "id": "site_188"
   },
   {
+    "url": "http://site.icu-project.org/",
+    "title": "ICU - International Components for Unicode",
+    "description": "News 2026-03-17: ICU 78.3 is now available — releases/tag/release-78.3 — Maven: com.ibm.icu / icu4j / version 78.3 This is a maintenance release. It supersedes ICU 78.1 and 78.2. ICU 78 updates to Unicode 17 (blog), including new characters and scripts, emoji, collation & IDNA changes, and",
+    "_cat": "资源素材/教程/资源",
+    "category": "AI工具",
+    "id": "site_189"
+  },
+  {
     "url": "https://devhints.io/",
     "title": "Devhints — TL;DR for developer documentation",
     "description": "A ridiculous collection of web development cheatsheets",
@@ -1204,12 +1435,30 @@
     "id": "site_190"
   },
   {
+    "url": "https://www.sitepoint.com",
+    "name": "SitePoint",
+    "description": "Web开发教程",
+    "title": "SitePoint — Learn HTML, CSS, JavaScript, PHP,",
+    "_cat": "资源素材/图片/社区",
+    "category": "代码工具",
+    "id": "site_191"
+  },
+  {
     "url": "https://discount-bandit.cybrarist.com/",
     "title": "Discount Bandit",
     "description": "Track Your Favourite Products Across Multiple Stores | Self Hosted",
     "_cat": "资源素材/平台/教程",
     "category": "其他",
     "id": "site_192"
+  },
+  {
+    "url": "https://www.claude.com/code",
+    "name": "Claude Code",
+    "description": "Anthropic编程工具",
+    "title": "App unavailable in region | Claude",
+    "_cat": "视频娱乐/国外视频/社区",
+    "category": "AI工具",
+    "id": "site_193"
   },
   {
     "url": "https://posthog.com",
@@ -1253,12 +1502,29 @@
     "id": "site_198"
   },
   {
+    "url": "https://www.seafile.com/en/home/",
+    "title": "Seafile - Open Source File Sync and Share Software",
+    "description": "Seafile is an open source, self-hosted file sync and share solution with high performance and reliability. Sync, access, and collaborate on files on your own server or private cloud.",
+    "_cat": "视频娱乐/动漫/工具",
+    "category": "其他",
+    "id": "site_199"
+  },
+  {
     "url": "https://tududi.com/",
     "title": "tududi - Organize Life and Work, Self-Hosted or Hosted",
     "description": "A calm, open system for life and work. Tasks, projects, notes, and smart views in one place. Self-host the open-source version, or use Tududi Hosted.",
     "_cat": "视频娱乐/音乐/教程",
     "category": "其他",
     "id": "site_200"
+  },
+  {
+    "url": "https://www.handbrake.fr",
+    "name": "HandBrake",
+    "description": "HandBrake is an open-source, GPL-licensed, multiplatform, multithreaded video transcoder.",
+    "title": "HandBrake: Open Source Video Transcoder",
+    "_cat": "视频娱乐/直播/生成器",
+    "category": "其他",
+    "id": "site_201"
   },
   {
     "url": "https://www.superhuman.com",
@@ -1268,6 +1534,14 @@
     "_cat": "阅读写作/平台/工具",
     "category": "AI工具",
     "id": "site_202"
+  },
+  {
+    "url": "https://homebox.software/",
+    "title": "HomeBox | Homebox",
+    "description": "A simple home inventory management software",
+    "_cat": "AI智能/AI开发/资源",
+    "category": "其他",
+    "id": "site_203"
   },
   {
     "url": "https://gopherconindia.org/",
@@ -1317,6 +1591,23 @@
     "_cat": "开发资源/平台/社区",
     "category": "AI工具",
     "id": "site_212"
+  },
+  {
+    "url": "https://www.iconify.design",
+    "name": "Iconify",
+    "description": "All popular icon sets, one framework",
+    "title": "Iconify Design: All popular icon sets, one framework.",
+    "_cat": "AI智能/AI其他/服务",
+    "category": "其他",
+    "id": "site_213"
+  },
+  {
+    "url": "https://goharbor.io/",
+    "title": "Harbor",
+    "description": "Our mission is to be the trusted cloud native repository for Kubernetes",
+    "_cat": "视频创作/特效/教程",
+    "category": "实用工具",
+    "id": "site_214"
   },
   {
     "url": "https://www.pypi.org",

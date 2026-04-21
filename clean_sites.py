@@ -22,13 +22,14 @@ async def check_url(session: aiohttp.ClientSession, url: str, timeout: int = 8) 
 
 async def main():
     input_path = '/home/yoli/GitHub/web_nav_v2/data/websites.json'
-    output_path = '/home/yoli/GitHub/web_nav_v2/data/websites_cleaned.json'
+    output_path = '/home/yoli/GitHub/web_nav_v2/data/cleaned_websites.json'
 
     print("✅ 开始清理网站数据")
     print(f"📂 读取文件: {input_path}")
 
     with open(input_path, 'r', encoding='utf-8') as f:
-        sites: List[Dict] = json.load(f)
+        data = json.load(f)
+        sites: List[Dict] = data.get('sites', [])
 
     original_count = len(sites)
     print(f"📊 原始站点总数: {original_count}")

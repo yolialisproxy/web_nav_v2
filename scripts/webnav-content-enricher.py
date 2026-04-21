@@ -58,45 +58,46 @@ def enrich_website_data(input_path, output_path):
     failed = 0
     total_missing = 0
 
-    # 遍历分类结构
-    for cat in data.values():
-        for sub in cat['subcategories']:
-            for minor in sub['minor_categories']:
-                for site in minor['sites']:
-                    if not site.get('title') or not site.get('description'):
-                        total_missing += 1
+    total_count = len(data)
 
-                        title, desc = fetch_site_info(site['url'])
+    # 遍历网站列表
+    for site in data:
+        total_missing += 1
 
-                        if title:
-                            site['title'] = title[:60]
-                        if desc:
-                            site['description'] = desc[:150]
+        title, desc = fetch_site_info(site['url'])
 
-                        if title or desc:
-                            processed += 1
-                        else:
-                            # 降级方案：使用域名
-                            parsed = urlparse(site['url'])
-                            domain = parsed.netloc
-                            site['title'] = domain
-                            site['description'] = f"专业网站：{domain}"
-                            failed += 1
+        if title:
+            site['cn_title'] = title[:60]
+        if desc:
+            site['cn_description'] = desc[:150]
 
-                        # 自动生成唯一ID
-                        if 'id' not in site:
-                            parsed = urlparse(site['url'])
-                            domain = parsed.netloc
-                            site['id'] = re.sub(r'[^a-zA-Z0-9]', '_', domain)
+        if title or desc:
+            processed += 1
+        else:
+            # 降级方案：使用域名
+            parsed = urlparse(site['url'])
+            domain = parsed.netloc
+            site['cn_title'] = domain
+            site['cn_description'] = f"专业网站：{domain}"
+            failed += 1
 
-                        # 限流防止被封
-                        time.sleep(0.2)
+        # 自动生成唯一ID
+        if 'id' not in site:
+            parsed = urlparse(site['url'])
+            domain = parsed.netloc
+            site['id'] = re.sub(r'[^a-zA-Z0-9]', '_', domain)
+
+        # 限流防止被封
+        time.sleep(0.2)
 
     print(f"\n📊 处理完成报告:")
-    print(f"   需要处理站点: {total_missing}")
+    print(f"   总站点数: {total_count}")
     print(f"   ✅ 成功抓取: {processed}")
     print(f"   ❌ 抓取失败: {failed}")
-    print(f"   成功率: {processed/total_missing*100:.1f}%\n")
+    if total_missing > 0:
+        print(f"   成功率: {processed/total_missing*100:.1f}%\n")
+    else:
+        print(f"   没有需要处理的站点\n")
 
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
