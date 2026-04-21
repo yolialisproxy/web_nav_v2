@@ -37,4 +37,5 @@ function initSearchEngine(dataManager) {
     window.searchEngine = searchEngine;
 }
 
-export { SearchEngine, initSearchEngine };
+
+
