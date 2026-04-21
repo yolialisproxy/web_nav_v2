@@ -394,19 +394,19 @@
               },
               {
                 "url": "https://karpathy.ai/",
-                "title": "",
+                "title": "Andrej Karpathy",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://brainlogging.wordpress.com/",
-                "title": "",
+                "title": "G. Desjardins | my academic research website",
                 "description": "",
                 "source": "awesome"
               },
               {
                 "url": "http://www.aiai.ed.ac.uk/",
-                "title": "",
+                "title": "AIAI, University of Edinburgh",
                 "description": "",
                 "source": "awesome"
               },
@@ -424,7 +424,7 @@
               },
               {
                 "url": "http://www.ai.sri.com/",
-                "title": "",
+                "title": "Artificial Intelligence Center – Inventing a better future together",
                 "description": "",
                 "source": "awesome"
               },
@@ -1058,6 +1058,24 @@
                 "title": "",
                 "description": "",
                 "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
               }
             ]
           },
@@ -1599,7 +1617,32 @@
           },
           {
             "name": "Prompt工程",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "API管理",
@@ -10253,7 +10296,32 @@
           },
           {
             "name": "PNG素材",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "4K图库",
@@ -10936,6 +11004,102 @@
               },
               {
                 "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
                 "title": "",
                 "description": "",
                 "source": "buffer"
@@ -17880,7 +18044,32 @@
           },
           {
             "name": "SDK生成",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "开放平台",
@@ -20046,7 +20235,218 @@
           },
           {
             "name": "PDF工具",
-            "sites": []
+            "sites": [
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "笔记工具",
@@ -25422,7 +25822,14 @@
           },
           {
             "name": "AR/VR",
-            "sites": []
+            "sites": [
+              {
+                "url": "http://schema.org/SoftwareSourceCode",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "游戏资产",
@@ -26725,6 +27132,30 @@
                 "title": "",
                 "description": "",
                 "source": "buffer"
+              },
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
               }
             ]
           },
@@ -27328,11 +27759,61 @@
           },
           {
             "name": "SEO",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "SEM",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "案例",
@@ -27553,7 +28034,32 @@
           },
           {
             "name": "PR",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "开源协议",
@@ -27598,7 +28104,32 @@
           },
           {
             "name": "RSS",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps\\",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           }
         ]
       }
@@ -27718,7 +28249,32 @@
           },
           {
             "name": "Base64",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "编码转换",
@@ -27973,7 +28529,32 @@
           },
           {
             "name": "Ping测试",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "端口扫描",
@@ -28236,7 +28817,32 @@
           },
           {
             "name": "SEO工具",
-            "sites": []
+            "sites": [
+              {
+                "url": "https://ref.wisprflow.ai/VjA6dYR",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://vshymanskyy.github.io/StandWithUkraine",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              },
+              {
+                "url": "https://en.wikipedia.org/wiki/DevOps",
+                "title": "",
+                "description": "",
+                "source": "buffer"
+              }
+            ]
           },
           {
             "name": "网站测速",
