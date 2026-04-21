@@ -15,13 +15,13 @@ class DataManager {
 
     async load() {
         try {
-            const response = await fetch('../data/websites.json');
+            const response = await fetch('data/websites.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             this.raw = await response.json();
             
             this._buildIndexes();
             this.isLoaded = true;
-            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -30,33 +30,32 @@ class DataManager {
 
     _buildIndexes() {
         if (this.raw.sites) {
-_buildIndexes() {
- this.categories = this.raw || {};
- this.sites = new Map();
- this.mappings = new Map();
+            this.categories = this.raw || {};
+            this.sites = new Map();
+            this.mappings = new Map();
 
- const traverse = (node) => {
-  if (node.sites) {
-   node.sites.forEach(site => {
-    this.sites.set(site.id, site);
-   });
-  }
-  if (node.subcategories) {
-   Object.values(node.subCategories).forEach(child => {
-    traverse(child);
-   });
-  }
-  if (node.minor_categories) {
-   Object.values(node.minor_categories).forEach(child => {
-    traverse(child);
-   });
-  }
- };
+            const traverse = (node) => {
+                if (node.sites) {
+                    node.sites.forEach(site => {
+                        this.sites.set(site.id, site);
+                    });
+                }
+                if (node.subCategories) {
+                    Object.values(node.subCategories).forEach(child => {
+                        traverse(child);
+                    });
+                }
+                if (node.minor_categories) {
+                    Object.values(node.minor_categories).forEach(child => {
+                        traverse(child);
+                    });
+                }
+            };
 
-Object.values(this.categories).forEach(category => {
-  traverse(category);
- });
-}
+            Object.values(this.categories).forEach(category => {
+                traverse(category);
+            });
+        }
 
     getSitesByLeafId(leafId) {
         const siteIds = this.mappings.get(leafId) || [];
