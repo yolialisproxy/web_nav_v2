@@ -1,10 +1,1 @@
-{
-  "status": "running",
-  "next_action": "scripts/calibrate_fill.py",
-  "last_run": "2026-04-21T13:36:36",
-  "current_count": 3010,
-  "target_count": 9000,
-  "progress_percent": 33.4,
-  "last_added": 9,
-  "buffer_remaining": 3566
-}
+{'status': 'running', 'next_action': 'scripts/calibrate_fill.py', 'last_run': '2026-04-21T13:44:12', 'current_count': 3037, 'target_count': 9000, 'progress_percent': 33.7, 'last_added': 9, 'buffer_remaining': 3566}
