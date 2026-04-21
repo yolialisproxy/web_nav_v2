@@ -1,0 +1,348 @@
+[
+  {
+    "name": "常用推荐",
+    "subcategories": [
+      {
+        "id": "常用推荐",
+        "name": "常用推荐"
+      }
+    ]
+  },
+  {
+    "name": "社区资讯",
+    "subcategories": [
+      {
+        "id": "社区资讯",
+        "name": "社区资讯"
+      }
+    ]
+  },
+  {
+    "name": "灵感采集",
+    "subcategories": [
+      {
+        "id": "发现产品",
+        "name": "发现产品"
+      },
+      {
+        "id": "界面灵感",
+        "name": "界面灵感"
+      },
+      {
+        "id": "网页灵感",
+        "name": "网页灵感\nHot"
+      }
+    ]
+  },
+  {
+    "name": "发现产品",
+    "subcategories": [
+      {
+        "id": "发现产品",
+        "name": "发现产品"
+      }
+    ]
+  },
+  {
+    "name": "界面灵感",
+    "subcategories": [
+      {
+        "id": "界面灵感",
+        "name": "界面灵感"
+      }
+    ]
+  },
+  {
+    "name": "网页灵感",
+    "subcategories": [
+      {
+        "id": "网页灵感",
+        "name": "网页灵感\nHot"
+      }
+    ]
+  },
+  {
+    "name": "素材资源",
+    "subcategories": [
+      {
+        "id": "图标素材",
+        "name": "图标素材"
+      },
+      {
+        "id": "LOGO设计",
+        "name": "LOGO设计"
+      },
+      {
+        "id": "平面素材",
+        "name": "平面素材"
+      },
+      {
+        "id": "UI资源",
+        "name": "UI资源"
+      },
+      {
+        "id": "Sketch资源",
+        "name": "Sketch资源"
+      },
+      {
+        "id": "字体资源",
+        "name": "字体资源"
+      },
+      {
+        "id": "Mockup",
+        "name": "Mockup"
+      },
+      {
+        "id": "摄影图库",
+        "name": "摄影图库"
+      },
+      {
+        "id": "PPT资源",
+        "name": "PPT资源"
+      }
+    ]
+  },
+  {
+    "name": "图标素材",
+    "subcategories": [
+      {
+        "id": "图标素材",
+        "name": "图标素材"
+      }
+    ]
+  },
+  {
+    "name": "LOGO设计",
+    "subcategories": [
+      {
+        "id": "LOGO设计",
+        "name": "LOGO设计"
+      }
+    ]
+  },
+  {
+    "name": "平面素材",
+    "subcategories": [
+      {
+        "id": "平面素材",
+        "name": "平面素材"
+      }
+    ]
+  },
+  {
+    "name": "UI资源",
+    "subcategories": [
+      {
+        "id": "UI资源",
+        "name": "UI资源"
+      }
+    ]
+  },
+  {
+    "name": "Sketch资源",
+    "subcategories": [
+      {
+        "id": "Sketch资源",
+        "name": "Sketch资源"
+      }
+    ]
+  },
+  {
+    "name": "字体资源",
+    "subcategories": [
+      {
+        "id": "字体资源",
+        "name": "字体资源"
+      }
+    ]
+  },
+  {
+    "name": "Mockup",
+    "subcategories": [
+      {
+        "id": "Mockup",
+        "name": "Mockup"
+      }
+    ]
+  },
+  {
+    "name": "摄影图库",
+    "subcategories": [
+      {
+        "id": "摄影图库",
+        "name": "摄影图库"
+      }
+    ]
+  },
+  {
+    "name": "PPT资源",
+    "subcategories": [
+      {
+        "id": "PPT资源",
+        "name": "PPT资源"
+      }
+    ]
+  },
+  {
+    "name": "常用工具",
+    "subcategories": [
+      {
+        "id": "图形创意",
+        "name": "图形创意"
+      },
+      {
+        "id": "界面设计",
+        "name": "界面设计"
+      },
+      {
+        "id": "交互动效",
+        "name": "交互动效"
+      },
+      {
+        "id": "在线配色",
+        "name": "在线配色"
+      },
+      {
+        "id": "在线工具",
+        "name": "在线工具"
+      },
+      {
+        "id": "Chrome插件",
+        "name": "Chrome插件"
+      }
+    ]
+  },
+  {
+    "name": "图形创意",
+    "subcategories": [
+      {
+        "id": "图形创意",
+        "name": "图形创意"
+      }
+    ]
+  },
+  {
+    "name": "界面设计",
+    "subcategories": [
+      {
+        "id": "界面设计",
+        "name": "界面设计"
+      }
+    ]
+  },
+  {
+    "name": "交互动效",
+    "subcategories": [
+      {
+        "id": "交互动效",
+        "name": "交互动效"
+      }
+    ]
+  },
+  {
+    "name": "在线配色",
+    "subcategories": [
+      {
+        "id": "在线配色",
+        "name": "在线配色"
+      }
+    ]
+  },
+  {
+    "name": "在线工具",
+    "subcategories": [
+      {
+        "id": "在线工具",
+        "name": "在线工具"
+      }
+    ]
+  },
+  {
+    "name": "Chrome插件",
+    "subcategories": [
+      {
+        "id": "Chrome插件",
+        "name": "Chrome插件"
+      }
+    ]
+  },
+  {
+    "name": "学习教程",
+    "subcategories": [
+      {
+        "id": "设计规范",
+        "name": "设计规范"
+      },
+      {
+        "id": "视频教程",
+        "name": "视频教程"
+      },
+      {
+        "id": "设计文章",
+        "name": "设计文章"
+      },
+      {
+        "id": "设计电台",
+        "name": "设计电台"
+      },
+      {
+        "id": "交互设计",
+        "name": "交互设计\nHot"
+      }
+    ]
+  },
+  {
+    "name": "设计规范",
+    "subcategories": [
+      {
+        "id": "设计规范",
+        "name": "设计规范"
+      }
+    ]
+  },
+  {
+    "name": "视频教程",
+    "subcategories": [
+      {
+        "id": "视频教程",
+        "name": "视频教程"
+      }
+    ]
+  },
+  {
+    "name": "设计文章",
+    "subcategories": [
+      {
+        "id": "设计文章",
+        "name": "设计文章"
+      }
+    ]
+  },
+  {
+    "name": "设计电台",
+    "subcategories": [
+      {
+        "id": "设计电台",
+        "name": "设计电台"
+      }
+    ]
+  },
+  {
+    "name": "交互设计",
+    "subcategories": [
+      {
+        "id": "交互设计",
+        "name": "交互设计\nHot"
+      }
+    ]
+  },
+  {
+    "name": "UED团队",
+    "subcategories": [
+      {
+        "id": "UED团队",
+        "name": "UED团队"
+      }
+    ]
+  }
+]

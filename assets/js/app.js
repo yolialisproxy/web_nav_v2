@@ -5,7 +5,7 @@
  */
 
 async function init() {
-    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('WebNav V2: Initializing...');
+    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('WebNav V2: Initializing...');
 
     // 1. 加载数据
     await dataManager.load();

@@ -1,1 +1,1 @@
-{'status': 'running', 'next_action': 'python /home/yoli/GitHub/web_nav_v2/scripts/calibrate_fill.py', 'last_run': '2026-04-21 13:56:50', 'run_count': 2, 'total_sites_added': 18, 'last_added': 9, 'total_sites': 3145, 'gap_remaining': 5855}
+{"status":"running","last_run":"2026-04-21 16:25:36","last_action":"scripts/calibrate_fill.py","next_action":"scripts/calibrate_fill.py","last_added":9,"total_sites":3622,"completion":40.2,"next_schedule":600}
