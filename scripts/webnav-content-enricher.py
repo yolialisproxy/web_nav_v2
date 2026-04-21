@@ -15,7 +15,15 @@ def enrich_website_data(input_path, output_path):
     processed = 0
     failed = 0
 
-    for site in data.get('sites', []):
+    # Support both list format and dict format
+    if isinstance(data, list):
+        sites = data
+        output_data = {"sites": data, "processed_at": None, "processed_count": 0, "failed_count": 0}
+    else:
+        sites = data.get('sites', [])
+        output_data = data
+
+    for site in sites:
         if not site.get('title') or not site.get('description'):
             try:
                 parsed = urlparse(site['url'])
@@ -32,12 +40,12 @@ def enrich_website_data(input_path, output_path):
         if 'id' not in site:
             site['id'] = site['url'].replace('https://', '').replace('http://', '').replace('/', '_')
 
-    data['processed_at'] = '2026-04-18'
-    data['processed_count'] = processed
-    data['failed_count'] = failed
+    output_data['processed_at'] = '2026-04-21'
+    output_data['processed_count'] = processed
+    output_data['failed_count'] = failed
 
     with open(output_path, 'w') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
 
     print(f"✅ Processed: {processed}, Failed: {failed}")
 

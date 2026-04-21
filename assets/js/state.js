@@ -28,12 +28,29 @@ class State {
     set(key, value) {
         const keys = key.split('.');
         let target = this._state;
-        
+
         for (let i = 0; i < keys.length - 1; i++) {
-            target = target[keys[i]];
+            const k = keys[i];
+            // 边界检查：如果路径节点不存在，优雅降级不崩溃
+            if (target[k] === undefined || target[k] === null) {
+                console.warn(`[State] 尝试写入不存在的路径: "${key}"，节点 "${k}" 未定义，操作已忽略`);
+                return;
+            }
+            // 检查不是对象/数组类型时无法继续嵌套访问
+            if (typeof target[k] !== 'object') {
+                console.warn(`[State] 路径 "${key}" 节点 "${k}" 不是可嵌套类型，操作已忽略`);
+                return;
+            }
+            target = target[k];
         }
-        
+
         const lastKey = keys[keys.length - 1];
+        // 最终节点也检查父对象有效性
+        if (!target || typeof target !== 'object') {
+            console.warn(`[State] 无效路径 "${key}"，无法写入`);
+            return;
+        }
+
         if (target[lastKey] === value) return;
 
         target[lastKey] = value;
@@ -47,7 +64,12 @@ class State {
     }
 
     get(key) {
-        return key.split('.').reduce((obj, k) => (obj ? obj[k] : null), this._state);
+        try {
+            return key.split('.').reduce((obj, k) => (obj && typeof obj === 'object' ? obj[k] : undefined), this._state);
+        } catch (e) {
+            console.warn(`[State] 读取路径失败: "${key}"`, e);
+            return undefined;
+        }
     }
 
     subscribe(callback) {

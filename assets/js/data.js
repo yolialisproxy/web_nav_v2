@@ -21,7 +21,7 @@ class DataManager {
 
             this._buildIndexes();
             this.isLoaded = true;
-            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -29,33 +29,46 @@ class DataManager {
     }
 
     _buildIndexes() {
-        if (this.raw.sites) {
-            this.categories = this.raw || {};
-            this.sites = new Map();
-            this.mappings = new Map();
+        this.categories = {};
+        this.sites = new Map();
+        this.mappings = new Map();
+        let siteId = 0;
 
-            const traverse = (node) => {
-                if (node.sites) {
-                    node.sites.forEach(site => {
-                        this.sites.set(site.id, site);
-                    });
-                }
-                if (node.subCategories) {
-                    Object.values(node.subCategories).forEach(child => {
-                        traverse(child);
-                    });
-                }
-                if (node.minor_categories) {
-                    Object.values(node.minor_categories).forEach(child => {
-                        traverse(child);
-                    });
-                }
-            };
+        this.raw.forEach(site => {
+            if (!site._cat) return;
 
-            Object.values(this.categories).forEach(category => {
-                traverse(category);
-            });
-        }
+            site.id = siteId++;
+            this.sites.set(site.id, site);
+
+            // 拆分四级分类路径
+            const parts = site._cat.split('/').filter(Boolean);
+            if (parts.length < 1) return;
+
+            const [cat, sub, leaf] = parts;
+
+            // 构建分类树
+            if (!this.categories[cat]) {
+                this.categories[cat] = { name: cat, subCategories: {} };
+            }
+
+            if (!this.categories[cat].subCategories[sub]) {
+                this.categories[cat].subCategories[sub] = { name: sub, leafCategories: {} };
+            }
+
+            if (!this.categories[cat].subCategories[sub].leafCategories[leaf]) {
+                this.categories[cat].subCategories[sub].leafCategories[leaf] = { name: leaf, siteIds: [] };
+            }
+
+            const leafNode = this.categories[cat].subCategories[sub].leafCategories[leaf];
+            leafNode.siteIds.push(site.id);
+
+            // 建立映射索引
+            const leafId = `${cat}/${sub}/${leaf}`;
+            if (!this.mappings.has(leafId)) {
+                this.mappings.set(leafId, []);
+            }
+            this.mappings.get(leafId).push(site.id);
+        });
     }
 
     getSitesByLeafId(leafId) {
@@ -68,15 +81,7 @@ class DataManager {
     }
 
     _handleLoadError(error) {
-        const container = document.getElementById('view-container');
-        if (container) {
-            container.innerHTML = `
-                <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:var(--color-text-dim); text-align:center;">
-                    <p>数据加载失败，请检查网络连接</p>
-                    <button onclick="location.reload()" style="margin-top:12px; padding:8px 16px; cursor:pointer; background:var(--color-primary); color:white; border:none; border-radius:4px;">重试</button>
-                </div>
-            `;
-        }
+        renderSites(false);
     }
 }
 

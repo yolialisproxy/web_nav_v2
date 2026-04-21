@@ -44,14 +44,6 @@
     "category": "其他"
   },
   {
-    "url": "https://montrealaisymposium.wordpress.com/",
-    "title": "Montreal AI Symposium / Symposium IA Montréal – Montreal AI Symposium / Symposium IA Montréal",
-    "description": "The Montreal AI Symposium aims to gather experts and professionals interested in fundamental advances and applications of artificial intelligence, emphasizing machine learning, deep learning, and related approaches. The Symposium welcomes academic and industrial participants and seeks to build strong connections between researchers in Greater Montr",
-    "source": "awesome",
-    "_cat": "AI智能/AI视频/资源",
-    "category": "AI工具"
-  },
-  {
     "url": "http://singa.incubator.apache.org/",
     "title": "Apache SINGA · Distributed deep learning system",
     "description": "Distributed deep learning system",
@@ -261,13 +253,6 @@
     "source": "awesome",
     "_cat": "AI智能/AI音乐/平台",
     "category": "AI工具"
-  },
-  {
-    "url": "https://turtl.it/",
-    "title": "Turtl: The secure, collaborative notebook | Turtl",
-    "description": "The safe way to remember everything. Take all your important data with you.",
-    "_cat": "AI智能/AI音乐/库",
-    "category": "其他"
   },
   {
     "url": "https://runsql.com/",
@@ -957,14 +942,6 @@
     "category": "图片处理"
   },
   {
-    "url": "https://github.com/topics/ide",
-    "name": "GitHub IDE 话题",
-    "description": "GitHub IDE 相关开源项目社区",
-    "title": "IDE · GitHub Topics",
-    "_cat": "阅读写作/平台/开源",
-    "category": "代码工具"
-  },
-  {
     "url": "https://opnform.com/forms/create/guest",
     "title": "Create a new Form for free",
     "description": "Build beautiful, powerful forms for free with OpnForm. Unlimited submissions, rich features, and seamless integrations — fully open-source and easy to use.",
@@ -1005,14 +982,6 @@
     "description": "Yarn.social is a decentralised self-hosted social media based on the Twtxt format that has a privacy-first focus. There are no ads, no tracking, and no personal information is ever collected or stored.",
     "_cat": "资源素材/图片/资源",
     "category": "其他"
-  },
-  {
-    "url": "https://www.sitepoint.com",
-    "name": "SitePoint",
-    "description": "Web开发教程",
-    "title": "SitePoint — Learn HTML, CSS, JavaScript, PHP,",
-    "_cat": "资源素材/图片/社区",
-    "category": "代码工具"
   },
   {
     "url": "https://www.designkit.cn",
@@ -1194,13 +1163,6 @@
     "category": "AI工具"
   },
   {
-    "url": "https://www.passbolt.com/",
-    "title": "Open Source Password Manager for Teams | Passbolt",
-    "description": "Manage and share passwords securely with Passbolt. Open source, audited and built for teams that need collaboration, compliance and control.",
-    "_cat": "开发资源/api/生成器",
-    "category": "其他"
-  },
-  {
     "url": "https://vshymanskyy.github.io/StandWithUkraine",
     "title": "StandWithUkraine | #StandWithUkraine banner and related documents",
     "description": "#StandWithUkraine banner and related documents",
@@ -1368,23 +1330,9 @@
     "category": "代码工具"
   },
   {
-    "url": "https://desktop.github.com",
-    "title": "GitHub Desktop | Simple collaboration from your desktop · GitHub",
-    "description": "GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.",
-    "_cat": "开发资源/平台/开源",
-    "category": "代码工具"
-  },
-  {
     "url": "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement",
     "title": "Docs",
     "description": "Get started, troubleshoot, and make the most of GitHub. Documentation for new users, developers, administrators, and all of GitHub&#x27;s products.",
-    "_cat": "开发资源/平台/生成器",
-    "category": "代码工具"
-  },
-  {
-    "url": "https://github.community/",
-    "title": "community · Discussions · GitHub",
-    "description": "Ask questions, get answers, share expertise.",
     "_cat": "开发资源/平台/生成器",
     "category": "代码工具"
   },
@@ -1430,13 +1378,6 @@
     "description": "ODB is an open-source, cross-platform and cross-database object-relational mapping (ORM) system for C++",
     "_cat": "创意工具/思维导图/教程",
     "category": "其他"
-  },
-  {
-    "url": "https://librekb.com/",
-    "title": "GitHub - michaelstaake/LibreKB: Knowledge Base Web App - Free, Open Source, Self Hosted, PHP/MySQL · GitHub",
-    "description": "Knowledge Base Web App - Free, Open Source, Self Hosted, PHP/MySQL - michaelstaake/LibreKB",
-    "_cat": "创意工具/白板/资源",
-    "category": "代码工具"
   },
   {
     "url": "https://qstonline.org/free_account.htm",

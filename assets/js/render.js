@@ -1,6 +1,95 @@
 /**
- * render.js - DOM 渲染引擎
- * 职责：将 State 和 Data 转换为 DOM
+ * render.js - 渲染引擎
+ * 职责：DOM 渲染、状态UI输出
+ */
+
+// 状态UI 渲染器
+const StateUI = {
+    loading() {
+        return `
+            <div class="state-container state-loading">
+                <div class="loading-spinner"></div>
+                <div class="state-title">正在加载站点数据<span class="loading-dots"></span></div>
+                <div class="state-desc">首次加载可能需要几秒时间，请稍候</div>
+            </div>
+        `;
+    },
+
+    error(message = '加载数据失败', retryCallback = null) {
+        const button = retryCallback ?
+            `<div class="state-action">
+                <button class="state-button" onclick="(${retryCallback.toString()})()">重试加载</button>
+            </div>` : '';
+
+        return `
+            <div class="state-container state-error">
+                <div class="state-icon">⚠️</div>
+                <div class="state-title">哎呀，出问题了</div>
+                <div class="state-desc">${message}</div>
+                ${button}
+            </div>
+        `;
+    },
+
+    empty(message = '该分类下还没有站点') {
+        return `
+            <div class="state-container state-empty">
+                <div class="state-icon">📭</div>
+                <div class="state-title">暂无内容</div>
+                <div class="state-desc">${message}</div>
+            </div>
+        `;
+    },
+
+    searchEmpty(query) {
+        return `
+            <div class="state-container state-empty">
+                <div class="state-icon">🔍</div>
+                <div class="state-title">未找到匹配的网站</div>
+                <div class="state-desc">没有找到与 "${query}" 相关的站点，请尝试其他关键词</div>
+            </div>
+        `;
+    }
+};
+
+window.StateUI = StateUI;
+
+function renderSites(sites, containerId = 'view-container') {
+    const container = document.getElementById(containerId);
+
+    if (!container) return;
+
+    if (sites === null || sites === undefined) {
+        container.innerHTML = StateUI.loading();
+        return;
+    }
+
+    if (sites === false) {
+        container.innerHTML = StateUI.error('无法加载站点数据，请检查网络连接后重试', window.loadData);
+        return;
+    }
+
+    if (Array.isArray(sites) && sites.length === 0) {
+        container.innerHTML = StateUI.empty();
+        return;
+    }
+
+    // 正常渲染站点列表
+    let html = '<div class="grid">';
+    sites.forEach(site => {
+        html += `
+            <a href="${site.url}" class="site" target="_blank" rel="noopener" data-title="${site.title}">
+                <strong>${site.title}</strong>
+                <span>${site.description || site.url}</span>
+            </a>
+        `;
+    });
+    html += '</div>';
+
+    container.innerHTML = html;
+}
+
+/**
  * 规范：Menu_System.md, Haptic_Feel.md, Technical_Architecture.md
  */
 
@@ -17,7 +106,7 @@ class Renderer {
 
         Object.entries(categories).forEach(([catId, cat]) => {
             const isCatActive = state.sidebar.activeCategoryId === catId;
-            
+
             html += `
                 <div class="menu-group">
                     <div class="menu-category ${isCatActive ? 'active' : ''}" data-cat-id="${catId}">
@@ -38,7 +127,7 @@ class Renderer {
         let html = '';
         Object.entries(cat.subCategories || {}).forEach(([subId, sub]) => {
             const isSubExpanded = state.sidebar.activeSubCategoryId === subId;
-            
+
             html += `
                 <div class="menu-subcategory ${isSubExpanded ? 'expanded' : ''}" data-sub-id="${subId}">
                     <div class="subcategory-header">
@@ -93,11 +182,16 @@ class Renderer {
     }
 
     _createCardHtml(site) {
+        // 检测是否为搜索结果并应用高亮
+        const query = site._query;
+        const name = query ? SearchEngine.highlight(site.name, query) : site.name;
+        const desc = query ? SearchEngine.highlight(site.desc, query) : site.desc;
+
         return `
             <a href="${site.url}" target="_blank" class="site-card" data-id="${site.id}">
-                <img src="${site.icon}" class="card-icon" onerror="this.src='https://via.placeholder.com/32'">
-                <span class="card-title">${site.name}</span>
-                <span class="card-desc">${site.desc}</span>
+                <img src="${site.icon}" class="card-icon" onerror="if(!this.dataset.error) {this.dataset.error='1'; this.src='assets/images/favicon.png'; this.onerror=null;}">
+                <span class="card-title">${name}</span>
+                <span class="card-desc">${desc}</span>
             </a>
         `;
     }
@@ -131,7 +225,7 @@ class Renderer {
                 e.stopPropagation();
                 const catId = el.dataset.catId;
                 state.set('sidebar.activeCategoryId', catId);
-                
+
                 const firstSub = el.querySelector('.menu-subcategory');
                 if (firstSub) {
                     state.set('sidebar.activeSubCategoryId', firstSub.dataset.subId);
