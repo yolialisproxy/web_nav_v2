@@ -68,6 +68,9 @@
 .menu-item.expanded > .menu-arrow { transform: rotate(90deg); }
 .menu-children { display: none; }
 .menu-item.expanded + .menu-children { display: block; }
+
+#sidebar a.active { background: #3b82f6; color: white; }
+#sidebar a.active:hover { background: #2563eb; }
 </style>
 </head>
 <body>
@@ -9092,6 +9095,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     console.log(`✅ 站点修复完成: 清理了 ${fixedCount} 个无效/空链接卡片`);
+});
+
+// 菜单点击后平滑滚动到对应分类
+document.querySelectorAll('#sidebar a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
+    const target = document.getElementById(targetId);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.scrollBy(0, -60);
+    }
+  });
+});
+
+// 四级折叠菜单系统
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('#sidebar a').forEach(link => {
+    const level = parseInt(link.dataset.level || 0);
+    if (level === 0 || level === 1) {
+      const arrow = document.createElement('span');
+      arrow.className = 'menu-arrow';
+      arrow.textContent = '▸ ';
+      link.insertBefore(arrow, link.firstChild);
+
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        link.classList.toggle('expanded');
+        let next = link.nextElementSibling;
+        while(next && next.dataset.level > level) {
+          next.style.display = link.classList.contains('expanded') ? 'block' : 'none';
+          next = next.nextElementSibling;
+        }
+      });
+
+      // 默认折叠所有大类，只展开第一个
+      if (level === 0 && link !== document.querySelectorAll('#sidebar a[data-level="0"]')[0]) {
+        let next = link.nextElementSibling;
+        while(next && next.dataset.level > 0) {
+          next.style.display = 'none';
+          next = next.nextElementSibling;
+        }
+      }
+    }
+  });
+});
+
+// 菜单选中状态高亮
+document.querySelectorAll('#sidebar a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelectorAll('#sidebar a').forEach(a => a.classList.remove('active'));
+    link.classList.add('active');
+  });
 });
 </script>
 </html>
