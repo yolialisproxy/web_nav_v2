@@ -11,16 +11,16 @@ class SearchEngine {
 
     query(text) {
         if (!text) return [];
-        
+
         const query = text.toLowerCase();
         const allSites = this.dataManager.getAllSites();
-        
+
         const results = allSites.map(site => {
             let score = 0;
             if (site.name.toLowerCase().includes(query)) score += 100;
             if (site.desc.toLowerCase().includes(query)) score += 30;
             if (site.tags && site.tags.some(t => t.toLowerCase().includes(query))) score += 50;
-            
+
             return { site, score };
         })
         .filter(res => res.score > 0)
@@ -30,5 +30,11 @@ class SearchEngine {
     }
 }
 
-const searchEngine = new SearchEngine(dataManager);
-window.searchEngine = searchEngine;
+let searchEngine;
+
+function initSearchEngine(dataManager) {
+    searchEngine = new SearchEngine(dataManager);
+    window.searchEngine = searchEngine;
+}
+
+export { SearchEngine, initSearchEngine };

@@ -5,10 +5,13 @@
  */
 
 async function init() {
-    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('WebNav V2: Initializing...');
+    // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('WebNav V2: Initializing...');
 
     // 1. 加载数据
     await dataManager.load();
+
+    // 1.5 初始化搜索
+    initSearchEngine(dataManager);
 
     // 2. 订阅状态变更，驱动 UI 更新
     state.subscribe((s) => {
@@ -21,12 +24,12 @@ async function init() {
     if (categories.length > 0) {
         const [firstCatId, firstCat] = categories[0];
         state.set('sidebar.activeCategoryId', firstCatId);
-        
+
         const subCats = Object.entries(firstCat.subCategories || {});
         if (subCats.length > 0) {
             const [firstSubId, firstSub] = subCats[0];
             state.set('sidebar.activeSubCategoryId', firstSubId);
-            
+
             const leafCats = Object.entries(firstSub.leafCategories || {});
             if (leafCats.length > 0) {
                 const [firstLeafId] = leafCats[0];
@@ -73,7 +76,7 @@ function toggleSearch() {
   const active = state.get('search.active');
   state.set('search.active', !active);
   state.set('currentView', !active ? 'search' : 'category');
-  
+
   const searchContainer = document.querySelector('.search-container');
   const searchInput = document.getElementById('search-input');
   if (searchContainer && searchInput) {
