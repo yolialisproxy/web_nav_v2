@@ -1,0 +1,479 @@
+[
+  {
+    "id": 1,
+    "name": "设计创意",
+    "frequency": 18,
+    "subcategories": [
+      {
+        "name": "灵感采集",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "设计资源",
+        "frequency": 18,
+        "sites": []
+      },
+      {
+        "name": "设计工具",
+        "frequency": 18,
+        "sites": []
+      },
+      {
+        "name": "设计学习",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "样机素材",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "配色字体",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "图标素材",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "摄影图库",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "平面设计",
+        "frequency": 14,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 2,
+    "name": "开发工具",
+    "frequency": 18,
+    "subcategories": [
+      {
+        "name": "在线工具",
+        "frequency": 18,
+        "sites": []
+      },
+      {
+        "name": "前端开发",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "后端开发",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "API接口",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "开发文档",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "代码资源",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "测试调试",
+        "frequency": 11,
+        "sites": []
+      },
+      {
+        "name": "部署运维",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "开源项目",
+        "frequency": 15,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 3,
+    "name": "效率办公",
+    "frequency": 18,
+    "subcategories": [
+      {
+        "name": "文档处理",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "演示PPT",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "表格工具",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "协作工具",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "笔记应用",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "思维导图",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "时间管理",
+        "frequency": 11,
+        "sites": []
+      },
+      {
+        "name": "邮件通讯",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "常用推荐",
+        "frequency": 18,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 4,
+    "name": "AI智能",
+    "frequency": 17,
+    "subcategories": [
+      {
+        "name": "对话聊天",
+        "frequency": 18,
+        "sites": []
+      },
+      {
+        "name": "AI绘画",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "AI写作",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "AI视频",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "音频生成",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "编程助手",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "设计AI",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "AI工具集",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "提示工程",
+        "frequency": 12,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 5,
+    "name": "跨境电商",
+    "frequency": 16,
+    "subcategories": [
+      {
+        "name": "独立站工具",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "广告投放",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "选品工具",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "支付收款",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "物流海外仓",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "竞品侦探",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "ERP系统",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "引流营销",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "学习教程",
+        "frequency": 11,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 6,
+    "name": "运营营销",
+    "frequency": 16,
+    "subcategories": [
+      {
+        "name": "数据分析",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "SEO优化",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "社交媒体",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "内容创作",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "用户增长",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "邮件营销",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "竞品分析",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "热点追踪",
+        "frequency": 11,
+        "sites": []
+      },
+      {
+        "name": "产品设计",
+        "frequency": 15,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 7,
+    "name": "学习资源",
+    "frequency": 17,
+    "subcategories": [
+      {
+        "name": "编程学习",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "设计教程",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "在线课程",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "电子书库",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "技术文档",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "开源书籍",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "面试题库",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "职业路径",
+        "frequency": 11,
+        "sites": []
+      },
+      {
+        "name": "大学公开课",
+        "frequency": 13,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 8,
+    "name": "多媒体",
+    "frequency": 16,
+    "subcategories": [
+      {
+        "name": "视频剪辑",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "音频处理",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "图片编辑",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "格式转换",
+        "frequency": 18,
+        "sites": []
+      },
+      {
+        "name": "压缩优化",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "录屏截图",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "素材下载",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "播放器",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "动效制作",
+        "frequency": 14,
+        "sites": []
+      }
+    ],
+    "sites": []
+  },
+  {
+    "id": 9,
+    "name": "实用工具",
+    "frequency": 18,
+    "subcategories": [
+      {
+        "name": "文本处理",
+        "frequency": 17,
+        "sites": []
+      },
+      {
+        "name": "编码转换",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "网络工具",
+        "frequency": 15,
+        "sites": []
+      },
+      {
+        "name": "密码生成",
+        "frequency": 14,
+        "sites": []
+      },
+      {
+        "name": "时间日期",
+        "frequency": 13,
+        "sites": []
+      },
+      {
+        "name": "单位换算",
+        "frequency": 12,
+        "sites": []
+      },
+      {
+        "name": "二维码",
+        "frequency": 16,
+        "sites": []
+      },
+      {
+        "name": "PDF工具",
+        "frequency": 18,
+        "sites": []
+      },
+      {
+        "name": "图表生成",
+        "frequency": 14,
+        "sites": []
+      }
+    ],
+    "sites": []
+  }
+]

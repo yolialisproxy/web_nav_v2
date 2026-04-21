@@ -1,0 +1,130 @@
+[
+  {
+    "name": "设计创意",
+    "subcategories": [
+      {
+        "name": "灵感采集",
+        "children": [
+          "界面灵感",
+          "网页灵感",
+          "图形创意",
+          "设计灵感"
+        ]
+      },
+      {
+        "name": "设计资源",
+        "children": [
+          "图标素材",
+          "字体资源",
+          "平面素材",
+          "摄影图库",
+          "Mockup",
+          "Sketch资源",
+          "UI资源"
+        ]
+      },
+      {
+        "name": "设计工具",
+        "children": [
+          "在线配色",
+          "LOGO设计",
+          "Colors",
+          "Icon",
+          "Fonts",
+          "Free Photos"
+        ]
+      },
+      {
+        "name": "设计学习",
+        "children": [
+          "学习教程",
+          "视频教程",
+          "设计规范",
+          "设计文章",
+          "交互设计",
+          "UX"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "开发工具",
+    "subcategories": [
+      {
+        "name": "在线工具",
+        "children": [
+          "在线工具",
+          "常用工具",
+          "Online Tools",
+          "Chrome插件"
+        ]
+      },
+      {
+        "name": "资源文档",
+        "children": [
+          "Tutorial",
+          "API文档",
+          "开发资源"
+        ]
+      },
+      {
+        "name": "前端开发",
+        "children": [
+          "UI Design",
+          "CSS工具",
+          "代码资源"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "效率办公",
+    "subcategories": [
+      {
+        "name": "文档演示",
+        "children": [
+          "PPT",
+          "PPT资源",
+          "文档工具",
+          "表格工具"
+        ]
+      },
+      {
+        "name": "协作交流",
+        "children": [
+          "团队协作",
+          "沟通工具"
+        ]
+      },
+      {
+        "name": "常用推荐",
+        "children": [
+          "常用推荐",
+          "Recommended"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "资讯社区",
+    "subcategories": [
+      {
+        "name": "行业资讯",
+        "children": [
+          "社区资讯",
+          "产品资讯",
+          "发现产品",
+          "Product"
+        ]
+      },
+      {
+        "name": "设计社区",
+        "children": [
+          "设计电台",
+          "UED团队",
+          "UED Team"
+        ]
+      }
+    ]
+  }
+]
