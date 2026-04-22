@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-23T07:18:56.903022",
+  "timestamp": "2026-04-23T07:21:47.040172",
   "min_required": 10,
   "max_allowed": 50,
   "summary": {
     "total_leaf_categories": 48,
-    "total_sites": 0,
-    "balanced": 0,
+    "total_sites": 3342,
+    "balanced": 1,
     "underfilled": 0,
     "overfilled": 0,
-    "empty": 48,
+    "empty": 47,
     "uncategorized": 0
   },
   "category_details": [
@@ -261,8 +261,8 @@
       "major": "效率办公",
       "mid": "文档演示",
       "leaf": "文档工具",
-      "count": 0,
-      "status": "empty"
+      "count": 30,
+      "status": "balanced"
     },
     {
       "major": "效率办公",
@@ -592,13 +592,6 @@
       "major": "效率办公",
       "mid": "文档演示",
       "leaf": "PPT资源",
-      "count": 0,
-      "status": "empty"
-    },
-    {
-      "major": "效率办公",
-      "mid": "文档演示",
-      "leaf": "文档工具",
       "count": 0,
       "status": "empty"
     },
