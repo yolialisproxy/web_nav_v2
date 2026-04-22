@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-22T11:08:08.198103",
+  "timestamp": "2026-04-22T12:26:09.858826",
   "min_required": 10,
   "max_allowed": 50,
   "summary": {
     "total_leaf_categories": 48,
-    "total_sites": 95,
+    "total_sites": 0,
     "balanced": 0,
-    "underfilled": 2,
+    "underfilled": 0,
     "overfilled": 0,
-    "empty": 46,
+    "empty": 48,
     "uncategorized": 0
   },
   "category_details": [
@@ -219,8 +219,8 @@
       "major": "开发工具",
       "mid": "资源文档",
       "leaf": "开发资源",
-      "count": 1,
-      "status": "underfilled"
+      "count": 0,
+      "status": "empty"
     },
     {
       "major": "开发工具",
@@ -261,8 +261,8 @@
       "major": "效率办公",
       "mid": "文档演示",
       "leaf": "文档工具",
-      "count": 4,
-      "status": "underfilled"
+      "count": 0,
+      "status": "empty"
     },
     {
       "major": "效率办公",
@@ -557,8 +557,8 @@
       "major": "开发工具",
       "mid": "资源文档",
       "leaf": "开发资源",
-      "count": 1,
-      "status": "underfilled"
+      "count": 0,
+      "status": "empty"
     },
     {
       "major": "开发工具",
@@ -599,8 +599,8 @@
       "major": "效率办公",
       "mid": "文档演示",
       "leaf": "文档工具",
-      "count": 4,
-      "status": "underfilled"
+      "count": 0,
+      "status": "empty"
     },
     {
       "major": "效率办公",

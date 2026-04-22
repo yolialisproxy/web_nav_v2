@@ -1,104 +1,24 @@
 {
-  "generated_at": "2026-04-22T11:21:53.532698",
-  "total": 93,
-  "success": 81,
-  "failed_count": 12,
+  "generated_at": "2026-04-22T12:23:27.520921",
+  "total": 72,
+  "success": 70,
+  "failed_count": 2,
   "failed_sites": [
     {
-      "id": "www_privoxy_org",
-      "url": "https://www.privoxy.org",
-      "title": "Privoxy - Home Page",
+      "id": "site_53",
+      "url": "https://opensmtpd.org/",
+      "title": "OpenSMTPD",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
     },
     {
-      "id": "app_tamariapp_com",
-      "url": "https://app.tamariapp.com",
-      "title": "登录 - Tamari",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "github_com",
-      "url": "https://github.com/topics/ide",
-      "title": "IDE · GitHub Topics",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "joinmastodon_org",
-      "url": "https://joinmastodon.org/",
-      "title": "Mastodon - 去中心化社交媒体",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "pagespeed_web_dev",
-      "url": "https://pagespeed.web.dev",
-      "title": "PageSpeed Insights",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "fonts_google_com",
-      "url": "https://fonts.google.com",
-      "title": "Google Fonts",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": "unsplash_com",
+      "id": "site_84",
       "url": "https://unsplash.com",
       "title": "Unsplash",
       "status_code": 401,
       "ok": false,
       "error": null
-    },
-    {
-      "id": "www_pexels_com",
-      "url": "https://www.pexels.com",
-      "title": "Pexels",
-      "status_code": 403,
-      "ok": false,
-      "error": null
-    },
-    {
-      "id": "www_notion_so",
-      "url": "https://www.notion.so",
-      "title": "Notion",
-      "status_code": null,
-      "ok": false,
-      "error": "ClientResponseError"
-    },
-    {
-      "id": "www_notion_so",
-      "url": "https://www.notion.so/product/ai",
-      "title": "Notion AI",
-      "status_code": null,
-      "ok": false,
-      "error": "ClientResponseError"
-    },
-    {
-      "id": "www_producthunt_com",
-      "url": "https://www.producthunt.com",
-      "title": "Product Hunt",
-      "status_code": 403,
-      "ok": false,
-      "error": null
-    },
-    {
-      "id": "news_ycombinator_com",
-      "url": "https://news.ycombinator.com",
-      "title": "Hacker News",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
     }
   ]
 }

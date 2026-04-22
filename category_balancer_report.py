@@ -18,7 +18,8 @@ def main():
         category_tree = json.load(f)
 
     with open(WEBSITES_PATH, 'r', encoding='utf-8') as f:
-        websites = json.load(f)
+        websites_data = json.load(f)
+        websites = websites_data.get('sites', [])
 
     counts = defaultdict(int)
     for site in websites:

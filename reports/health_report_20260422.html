@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航网站项目健康状态报告 2026-04-22</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        body { background: #f0f2f5; padding: 2rem; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #1a202c; text-align: center; margin-bottom: 2rem; font-weight: 700; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .card { background: white; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .card h3 { color: #64748b; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .card .value { font-size: 2.5rem; font-weight: 700; }
+        .success { color: #10b981; }
+        .warning { color: #f59e0b; }
+        .danger { color: #ef4444; }
+        .info { color: #3b82f6; }
+        .section { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .section h2 { color: #1a202c; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e2e8f0; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 0.875rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f8fafc; font-weight: 600; color: #475569; }
+        tr:hover { background: #f8fafc; }
+        .progress-bar { width: 100%; height: 12px; background: #e2e8f0; border-radius: 6px; overflow: hidden; margin: 1rem 0; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #10b981, #059669); transition: width 0.5s ease; }
+        .timestamp { text-align: center; color: #64748b; font-size: 0.875rem; margin-top: 2rem; }
+        .badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; }
+        .badge-danger { background: #fef2f2; color: #dc2626; }
+        .badge-success { background: #f0fdf4; color: #166534; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 导航网站项目健康状态报告</h1>
+
+        <div class="card-grid">
+            <div class="card">
+                <h3>站点总数</h3>
+                <div class="value info">72</div>
+            </div>
+            <div class="card">
+                <h3>健康站点</h3>
+                <div class="value success">70</div>
+            </div>
+            <div class="card">
+                <h3>失效链接</h3>
+                <div class="value danger">2</div>
+            </div>
+            <div class="card">
+                <h3>完成率</h3>
+                <div class="value success">97.2%</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📊 整体健康进度</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 97.2%"></div>
+            </div>
+            <p style="text-align: center; color: #64748b; margin-top: 0.5rem;">97.2% 站点可正常访问</p>
+        </div>
+
+        <div class="section">
+            <h2>⚠️ 失效链接统计</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>状态</th>
+                        <th>站点名称</th>
+                        <th>URL</th>
+                        <th>错误类型</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge badge-danger">超时</span></td>
+                        <td>OpenSMTPD</td>
+                        <td><code>https://opensmtpd.org/</code></td>
+                        <td>TimeoutError</td>
+                    </tr>
+                    <tr>
+                        <td><span class="badge badge-danger">401</span></td>
+                        <td>Unsplash</td>
+                        <td><code>https://unsplash.com</code></td>
+                        <td>HTTP 401 Unauthorized</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>🧹 清理结果</h2>
+            <table>
+                <tr>
+                    <th>项目</th>
+                    <th>数值</th>
+                </tr>
+                <tr>
+                    <td>已移除无效站点</td>
+                    <td class="success">0</td>
+                </tr>
+                <tr>
+                    <td>待审核站点</td>
+                    <td class="warning">2</td>
+                </tr>
+                <tr>
+                    <td>已保留有效站点</td>
+                    <td class="success">70</td>
+                </tr>
+                <tr>
+                    <td>清理后站点总数</td>
+                    <td>72</td>
+                </tr>
+            </table>
+            <p style="margin-top: 1rem; color: #64748b; font-size: 0.875rem;">注：本次扫描未执行自动清理，失效链接已标记待人工审核确认。</p>
+        </div>
+
+        <div class="section">
+            <h2>📑 分类分布概览</h2>
+            <table>
+                <tr>
+                    <th>分类</th>
+                    <th>站点数量</th>
+                    <th>占比</th>
+                </tr>
+                <tr>
+                    <td>AI智能</td>
+                    <td>47</td>
+                    <td>65.3%</td>
+                </tr>
+                <tr>
+                    <td>开发工具</td>
+                    <td>15</td>
+                    <td>20.8%</td>
+                </tr>
+                <tr>
+                    <td>开源软件</td>
+                    <td>10</td>
+                    <td>13.9%</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="timestamp">
+            报告生成时间：2026年4月22日 12:34 | 导航网站项目 v2
+        </div>
+    </div>
+</body>
+</html>

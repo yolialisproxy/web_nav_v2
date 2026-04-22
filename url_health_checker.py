@@ -5,7 +5,7 @@ import aiohttp
 from typing import List, Dict
 from datetime import datetime
 
-DATA_FILE = "/home/yoli/GitHub/web_nav_v2/data/enriched_websites.json"
+DATA_FILE = "/home/yoli/GitHub/web_nav_v2/data/websites.json"
 OUTPUT_FILE = "/home/yoli/GitHub/web_nav_v2/url_health_report.json"
 CONCURRENT_LIMIT = 15
 TIMEOUT = 10
@@ -53,8 +53,8 @@ async def main():
             for child in node['minor_categories']:
                 traverse(child)
 
-    # Root is flat list of sites
-    sites = data
+    # Root is object with 'sites' array
+    sites = data['sites']
     total_count = len(sites)
     print(f"[{datetime.now()}] 总共加载 {total_count} 个网站，开始批量检测...")
 

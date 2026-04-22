@@ -1,0 +1,27 @@
+============================================================
+🔍 导航网站每日去重清理报告
+============================================================
+执行时间: 2026-04-22 12:35:01
+📊 统计结果:
+  原始站点总数: 3721
+  发现重复站点: 2182
+  清理后剩余: 1539
+  重复率: 58.64%
+------------------------------------------------------------
+✅ 重复率超过阈值(5%)，执行清理操作
+✅ 已更新 websites.json 文件
+
+📝 重复站点示例(前10个):
+  # 1 |                      | https://ref.wisprflow.ai/VjA6dYR\
+  # 2 |                      | https://vshymanskyy.github.io/StandWithUkraine\
+  # 3 |                      | https://raw.githubusercontent.com/vshymanskyy/StandWithUkrai
+  # 4 |                      | https://en.wikipedia.org/wiki/DevOps\
+  # 5 |                      | https://ref.wisprflow.ai/VjA6dYR\
+  # 6 |                      | https://vshymanskyy.github.io/StandWithUkraine\
+  # 7 |                      | https://raw.githubusercontent.com/vshymanskyy/StandWithUkrai
+  # 8 |                      | https://en.wikipedia.org/wiki/DevOps\
+  # 9 |                      | http://schema.org/SoftwareSourceCode
+  #10 |                      | https://ref.wisprflow.ai/VjA6dYR
+
+✅ 任务完成
+📦 原始文件备份: /home/yoli/GitHub/web_nav_v2/backups/websites_before_dedup_20260422_123501.json

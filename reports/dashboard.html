@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebNav V2 项目统计仪表盘</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background: #0f172a; color: #e2e8f0; padding: 2rem; max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #38bdf8; margin-bottom: 2rem; }
+        .timestamp { text-align: center; color: #94a3b8; margin-bottom: 2rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+        .card { background: #1e293b; border-radius: 12px; padding: 1.5rem; border-left: 4px solid #38bdf8; }
+        .card h3 { color: #94a3b8; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+        .value { font-size: 2rem; font-weight: 700; color: #f1f5f9; }
+        .progress-bar { width: 100%; height: 8px; background: #334155; border-radius: 4px; overflow: hidden; margin-top: 0.75rem; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #10b981, #34d399); }
+        .good { border-color: #10b981; }
+        .warning { border-color: #f59e0b; }
+        .danger { border-color: #ef4444; }
+        .section { margin-bottom: 2rem; }
+        .section h2 { margin: 2rem 0 1rem; color: #cbd5e1; padding-bottom: 0.5rem; border-bottom: 1px solid #334155; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #334155; }
+        th { color: #94a3b8; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <h1>📊 WebNav V2 项目状态仪表盘</h1>
+    <div class="timestamp">生成时间: 2026-04-22 12:23:27</div>
+
+    <div class="grid">
+        <div class="card">
+            <h3>总站点数量</h3>
+            <div class="value">72</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 0.8%"></div></div>
+            <div style="margin-top: 0.5rem; color: #94a3b8; font-size: 0.875rem;">目标: 9,000 个站点</div>
+        </div>
+
+        <div class="card good">
+            <h3>内容补全率</h3>
+            <div class="value">98.6%</div>
+            <div class="progress-bar"><div class="progress-fill" style="width: 98.6%"></div></div>
+            <div style="margin-top: 0.5rem; color: #94a3b8; font-size: 0.875rem;">已补全: 71 个站点</div>
+        </div>
+
+        <div class="card warning">
+            <h3>链接有效率</h3>
+            <div class="value">0%</div>
+            <div style="margin-top: 0.5rem; color: #94a3b8; font-size: 0.875rem;">失效链接: 0 个</div>
+        </div>
+
+        <div class="card warning">
+            <h3>分类平衡度</h3>
+            <div class="value">0.0%</div>
+            <div style="margin-top: 0.5rem; color: #94a3b8; font-size: 0.875rem;">达标分类: 0 / 48</div>
+        </div>
+
+    </div>
+
+    <div class="section">
+        <h2>📋 详细统计</h2>
+        <table>
+            <tr><th>指标</th><th>数值</th><th>状态</th></tr>
+
+            <tr><td>✅ 达标分类</td><td>0</td><td style="color:#10b981">正常</td></tr>
+            <tr><td>⚠️ 站点不足</td><td>2</td><td style="color:#f59e0b">待补充</td></tr>
+            <tr><td>⛔ 站点过多</td><td>0</td><td style="color:#f59e0b">待调整</td></tr>
+            <tr><td>❌ 空分类</td><td>46</td><td style="color:#ef4444">需填充</td></tr>
+            <tr><td>❓ 未分类站点</td><td>0</td><td style="color:#f59e0b">待分类</td></tr>
+
+        </table>
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem; color: #64748b; font-size: 0.875rem;">
+        WebNav V2 自动监控仪表盘 | 自动生成请勿手动修改
+    </div>
+</body>
+</html>

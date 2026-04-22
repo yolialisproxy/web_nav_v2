@@ -51,47 +51,58 @@ def fetch_site_info(url):
         return None, None
 
 def enrich_website_data(input_path, output_path):
-    with open(input_path, 'r', encoding='utf-8') as f:
-        data = json.load(f)
+    data = safe_read_json(input_path)
 
     processed = 0
     failed = 0
     total_missing = 0
 
-    total_count = len(data)
+    # 遍历所有分类
+    processed_cats = 0
+    for category, sites in data.items():
+        if not isinstance(sites, list):
+            continue
+        for site in sites:
+            if not isinstance(site, dict) or 'url' not in site:
+                continue
 
-    # 遍历网站列表
-    for site in data:
-        total_missing += 1
+            # 测试只处理前50个站点
+            if total_missing >= 50:
+                continue
+            # 只处理缺少标题、占位标题或者缺少描述的站点
+            need_process = False
+            current_title = site.get('title', '').strip()
+            current_desc = site.get('description', '').strip()
 
-        title, desc = fetch_site_info(site['url'])
+            # 检测占位文本和空值
+            # if not current_title or len(current_title) < 2 or \
+            #    current_title in ['', 'Untitled', '首页', 'Welcome', 'Homepage', 'Title'] or \
+            #    'placeholder' in current_title.lower() or \
+            #    'description will' in current_desc.lower() or \
+            #    'baseball-bat-ball' in current_title:
+            need_process = True
+            total_missing += 1
 
-        if title:
-            site['cn_title'] = title[:60]
-        if desc:
-            site['cn_description'] = desc[:150]
+            if not need_process:
+                continue
 
-        if title or desc:
-            processed += 1
-        else:
-            # 降级方案：使用域名
-            parsed = urlparse(site['url'])
-            domain = parsed.netloc
-            site['cn_title'] = domain
-            site['cn_description'] = f"专业网站：{domain}"
-            failed += 1
+            title, desc = fetch_site_info(site['url'])
 
-        # 自动生成唯一ID
-        if 'id' not in site:
-            parsed = urlparse(site['url'])
-            domain = parsed.netloc
-            site['id'] = re.sub(r'[^a-zA-Z0-9]', '_', domain)
+            if title:
+                site['title'] = title[:60]
+            if desc:
+                site['description'] = desc[:150]
 
-        # 限流防止被封
-        time.sleep(0.2)
+            if title or desc:
+                processed += 1
+            else:
+                failed += 1
+
+            # 限流防止被封
+            time.sleep(0.2)
 
     print(f"\n📊 处理完成报告:")
-    print(f"   总站点数: {total_count}")
+    print(f"   🎯 需要补全的站点: {total_missing}")
     print(f"   ✅ 成功抓取: {processed}")
     print(f"   ❌ 抓取失败: {failed}")
     if total_missing > 0:
@@ -99,8 +110,7 @@ def enrich_website_data(input_path, output_path):
     else:
         print(f"   没有需要处理的站点\n")
 
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    safe_write_json(output_path, data)
 
 if __name__ == '__main__':
     import argparse
