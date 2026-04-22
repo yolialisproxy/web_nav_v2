@@ -15,7 +15,7 @@
   },
   {
     "url": "https://kinto.readthedocs.org",
-    "title": "&#8212; Kinto 23.2 documentation",
+    "title": "Just a moment...",
     "description": "",
     "_cat": "AI智能/AI视频/资源",
     "category": "文档工具"
@@ -66,7 +66,7 @@
   },
   {
     "url": "https://www.ijcai-18.org/",
-    "title": "IJCAI-ECAI-18 – July 13-19 2018, Stockholm, Sweden",
+    "title": "IJCAI-ECAI-18 &#8211; July 13-19 2018, Stockholm, Sweden",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
@@ -114,7 +114,7 @@
   },
   {
     "url": "https://www.waset.org/conference/2018/07/istanbul/ICDM",
-    "title": "",
+    "title": "Just a moment...",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
@@ -130,7 +130,7 @@
   },
   {
     "url": "https://www.aaai.org",
-    "title": "",
+    "title": "Just a moment...",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
@@ -202,7 +202,8 @@
     "name": "抖音",
     "description": "短视频平台",
     "_cat": "AI智能/AI视频/库",
-    "category": "视频创作"
+    "category": "视频创作",
+    "title": "验证码中间页"
   },
   {
     "url": "https://djangochat.com/",
@@ -238,7 +239,8 @@
     "url": "https://pexels.com",
     "description": "免费图片视频素材",
     "_cat": "AI智能/AI视频/库",
-    "category": "视频创作"
+    "category": "视频创作",
+    "title": "Just a moment..."
   },
   {
     "url": "https://www.musicpd.org/clients/",
@@ -256,7 +258,7 @@
   },
   {
     "url": "https://we.phorge.it/",
-    "title": "Home",
+    "title": "Making sure you&#39;re not a bot!",
     "description": "",
     "_cat": "AI智能/AI视频/教程",
     "category": "其他"
@@ -273,7 +275,8 @@
     "name": "ColorMagic",
     "description": "AI 智能配色",
     "_cat": "AI智能/AI视频/教程",
-    "category": "AI工具"
+    "category": "AI工具",
+    "title": "Attention Required! | Cloudflare"
   },
   {
     "url": "https://www.sympy.org",
@@ -443,7 +446,7 @@
   {
     "url": "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-867-machine-learning-fall-2006/lecture-notes/",
     "title": "",
-    "description": "",
+    "description": "This section provides the lecture notes from the course.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
     "category": "文档工具"
@@ -547,7 +550,7 @@
   },
   {
     "url": "http://creativecommons.org/publicdomain/zero/1.0/",
-    "title": "",
+    "title": "Deed - CC0 1.0 Universal - Creative Commons",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
@@ -672,7 +675,7 @@
     "url": "https://www.summarize.tech",
     "name": "Summarize",
     "description": "智能摘要",
-    "title": "summarize.tech: AI-powered video summaries",
+    "title": "Vercel Security Checkpoint",
     "_cat": "AI智能/AI视频/生成器",
     "category": "AI工具"
   },
@@ -681,14 +684,16 @@
     "name": "Pixabay Video",
     "description": "免费视频素材",
     "_cat": "AI智能/AI视频/生成器",
-    "category": "视频创作"
+    "category": "视频创作",
+    "title": "Just a moment..."
   },
   {
     "url": "https://www.office.com/word",
     "name": "Word Online",
     "description": "在线文档",
     "_cat": "AI智能/AI视频/生成器",
-    "category": "文档工具"
+    "category": "文档工具",
+    "title": "Error 403"
   },
   {
     "url": "https://webui.me/",
@@ -702,7 +707,8 @@
     "name": "Morguefile",
     "description": "免费图片",
     "_cat": "AI智能/AI音乐/工具",
-    "category": "图片处理"
+    "category": "图片处理",
+    "title": "Just a moment..."
   },
   {
     "url": "https://www.dify.ai",
@@ -714,7 +720,7 @@
   },
   {
     "url": "https://www.qbittorrent.org/",
-    "title": "",
+    "title": "Just a moment...",
     "description": "",
     "_cat": "AI智能/AI音乐/工具",
     "category": "其他"
@@ -735,7 +741,7 @@
   },
   {
     "url": "https://emailrelay.sourceforge.net/",
-    "title": "User Guide &#8212; E-MailRelay 2.6.1 documentation",
+    "title": "Just a moment...",
     "description": "",
     "_cat": "AI智能/AI音乐/工具",
     "category": "AI工具"
@@ -765,8 +771,8 @@
   },
   {
     "url": "http://numenta.org/nupic.html",
-    "title": "",
-    "description": "",
+    "title": "Home | Neuroscience Inspired AI",
+    "description": "Powerful neuroscience-based AI",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
     "category": "其他"
@@ -840,7 +846,7 @@
   },
   {
     "url": "https://cppquiz.org",
-    "title": "CppQuiz.org  - Question #333",
+    "title": "CppQuiz.org  - Question #365",
     "description": "",
     "_cat": "AI智能/AI音乐/平台",
     "category": "其他"
@@ -863,7 +869,7 @@
   },
   {
     "url": "http://sourceforge.net/p/rnnl/wiki/Home/\\",
-    "title": "",
+    "title": "Just a moment...",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI音乐/平台",
@@ -950,7 +956,7 @@
   {
     "url": "https://pkg.go.dev/golang.org/x/net/html#Node",
     "title": "html package - golang.org/x/net/html - Go Packages",
-    "description": "",
+    "description": "Package html implements an HTML5-compliant tokenizer and parser.",
     "_cat": "AI智能/AI音乐/资源",
     "category": "实用工具"
   },
@@ -973,7 +979,8 @@
     "name": "IconScout",
     "description": "设计资源",
     "_cat": "AI智能/AI音乐/资源",
-    "category": "图片处理"
+    "category": "图片处理",
+    "title": "Just a moment..."
   },
   {
     "url": "https://chrome.google.com/webstore/detail/code-finder-for-research/aikkeehnlfpamidigaffhfmgbkdeheil",
@@ -1017,7 +1024,7 @@
   },
   {
     "url": "https://www.analyticsvidhya.com/blog/2018/12/practical-guide-object-detection-yolo-framewor-python/",
-    "title": "",
+    "title": "Attention Required! | Cloudflare",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
@@ -1047,7 +1054,7 @@
   {
     "url": "https://www.theodinproject.com",
     "name": "Odin Project",
-    "description": "Web开发",
+    "description": "The Odin Project empowers aspiring web developers to learn together for free",
     "title": "Your Career in Web Development Starts Here | The Odin Project",
     "_cat": "AI智能/AI音乐/库",
     "category": "代码工具"
@@ -1117,7 +1124,7 @@
   },
   {
     "url": "https://datakitchen.io/",
-    "title": "",
+    "title": "Just a moment...",
     "description": "",
     "source": "awesome",
     "_cat": "AI智能/AI音乐/库",
@@ -1141,8 +1148,8 @@
   },
   {
     "url": "https://www.sparkplayground.com/",
-    "title": "",
-    "description": "",
+    "title": "Vercel Security Checkpoint",
+    "description": "Learn PySpark with hands-on tutorials and real interview questions. Practice writing PySpark code, solve data engineering problems, and prepare for your next job interview.",
     "source": "awesome",
     "_cat": "AI智能/AI音乐/库",
     "category": "其他"
@@ -1172,7 +1179,7 @@
   },
   {
     "url": "https://www.asterisk.org/",
-    "title": "",
+    "title": "Just a moment...",
     "description": "",
     "_cat": "AI智能/AI音乐/教程",
     "category": "其他"
@@ -1203,7 +1210,8 @@
     "name": "Speechify",
     "description": "AI朗读",
     "_cat": "AI智能/AI音乐/教程",
-    "category": "AI工具"
+    "category": "AI工具",
+    "title": "Just a moment..."
   },
   {
     "url": "https://www.lintcode.com",
@@ -1321,7 +1329,7 @@
   {
     "url": "https://www.lalal.ai",
     "name": "LALAL.AI",
-    "title": "Lalal Ai",
+    "title": "Vocal Remover & Instrumental AI Splitter | LALAL.AI",
     "_cat": "AI智能/AI音乐/服务",
     "category": "AI工具"
   },
@@ -1428,7 +1436,8 @@
     "name": "Blender Market",
     "description": "Blender资源",
     "_cat": "AI智能/AI音乐/社区",
-    "category": "其他"
+    "category": "其他",
+    "title": "Attention Required! | Cloudflare"
   },
   {
     "url": "https://neptune.ai/\\",
@@ -1595,7 +1604,8 @@
     "name": "Canva Video",
     "description": "视频制作",
     "_cat": "AI智能/AI开发/工具",
-    "category": "视频创作"
+    "category": "视频创作",
+    "title": "Canva"
   },
   {
     "url": "https://short.crueter.xyz",

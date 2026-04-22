@@ -89,6 +89,8 @@ function renderSites(sites, containerId = 'view-container') {
     container.innerHTML = html;
 }
 
+window.renderSites = renderSites;
+
 /**
  * 规范：Menu_System.md, Haptic_Feel.md, Technical_Architecture.md
  */

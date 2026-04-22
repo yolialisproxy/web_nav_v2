@@ -6,6 +6,7 @@
 
 async function init() {
     // 立即显示加载状态
+    window.renderSites = renderSites;
     renderSites(null);
 
     // 1. 加载数据
