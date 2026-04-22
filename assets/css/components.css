@@ -117,11 +117,11 @@
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    transition: transform var(--transition-duration) var(--transition-curve), 
+    transition: transform var(--transition-duration) var(--transition-curve),
                 box-shadow var(--transition-duration) var(--transition-curve),
                 border-color var(--transition-duration) var(--transition-curve);
     box-shadow: 0 2px 4px var(--color-shadow);
-    
+
     /* 触觉规范：使用 content-visibility 优化 9000 条目渲染 */
     content-visibility: auto;
     contain-intrinsic-size: 100px;
@@ -148,6 +148,10 @@
     font-size: 15px;
     margin-bottom: 6px;
     display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .card-desc {
@@ -158,6 +162,10 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* --- 搜索面板 --- */
