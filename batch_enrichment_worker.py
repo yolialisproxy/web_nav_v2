@@ -36,6 +36,7 @@ import asyncio
 import aiohttp
 import time
 import logging
+import os
 import shutil
 from pathlib import Path
 from typing import Optional, Dict, Any
@@ -143,8 +144,14 @@ def atomic_write_data(data: Any) -> None:
     temp_file = DATA_FILE.with_suffix(".tmp")
     with open(temp_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
 
-    temp_file.replace(DATA_FILE)
+    # 安全原子替换
+    if temp_file.exists():
+        temp_file.replace(DATA_FILE)
+    else:
+        logger.error(f"❌ 临时文件不存在，跳过替换: {temp_file}")
     logger.info(f"✅ 备份已创建: {backup_file.name}")
 
 # ========== 主工作循环 ==========
