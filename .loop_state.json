@@ -1,15 +1,15 @@
 {
   "current_round": 6,
-  "last_updated": "2026-04-22T22:04:00.218957",
+  "last_updated": "2026-04-22T22:31:36.396821",
   "last_round_errors": [],
   "total_completed": 6,
-  "remaining": 995,
+  "remaining": 782,
   "completed": false,
   "watchdog_job_id": null,
-  "last_round_summary": "✅ 2026-04-22 22:04 第四次迭代断点续传运行完成: 处理 12 个批次，总进度 360.11%，已处理 26549 站点。已自动保存，下次运行自动继续。",
+  "last_round_summary": "✅ 2026-04-22 22:31 第四次迭代继续运行: 成功完成 8 个批次，总进度 483.9%，已处理 35862 站点。自动断点保存成功。",
   "next_round_tasks": [
     "1. 继续运行内容补全工作进程",
-    "2. 统计剩余未填充站点数量",
-    "3. 开始占位文本清理工作"
+    "2. 启动占位文本清理程序",
+    "3. 分类平衡度检查"
   ]
 }

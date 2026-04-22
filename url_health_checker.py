@@ -53,8 +53,24 @@ async def main():
             for child in node['minor_categories']:
                 traverse(child)
 
-    # Root is object with 'sites' array
-    sites = data
+    # 兼容两种数据格式: 直接数组 或者 带分类层级的对象格式
+    sites = []
+    if isinstance(data, list):
+        # 新格式: 纯网站数组
+        sites = data
+    else:
+        # 旧格式: 带分类层级结构
+        def traverse(node):
+            if 'sites' in node and isinstance(node['sites'], list):
+                sites.extend(node['sites'])
+            if 'subcategories' in node:
+                for child in node['subcategories']:
+                    traverse(child)
+            if 'minor_categories' in node:
+                for child in node['minor_categories']:
+                    traverse(child)
+        traverse(data)
+
     total_count = len(sites)
     print(f"[{datetime.now()}] 总共加载 {total_count} 个网站，开始批量检测...")
 

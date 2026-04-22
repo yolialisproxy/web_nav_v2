@@ -34,9 +34,10 @@
 import json
 import asyncio
 import aiohttp
-import time
-import logging
-import os
+import re
+from html import unescape
+from typing import List, Dict, Optional
+from datetime import datetime
 import shutil
 from pathlib import Path
 from typing import Optional, Dict, Any
@@ -113,6 +114,7 @@ async def fetch_site_metadata(session: aiohttp.ClientSession, url: str) -> Optio
                 title_end = raw_html.lower().find("</title>")
                 if title_start != -1 and title_end != -1 and title_end > title_start:
                     title = raw_html[title_start+7:title_end].strip()
+                    title = unescape(title)  # 处理HTML转义字符
                     if 2 < len(title) < 70:
                         result["title"] = title
 
@@ -124,6 +126,7 @@ async def fetch_site_metadata(session: aiohttp.ClientSession, url: str) -> Optio
                         content_end = raw_html.find('"', content_start+9)
                         if content_end != -1:
                             desc = raw_html[content_start+9:content_end].strip()
+                            desc = unescape(desc)  # 处理HTML转义字符
                             if 10 < len(desc) < 200:
                                 result["description"] = desc
 
