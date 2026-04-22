@@ -19,7 +19,12 @@ def main():
 
     with open(WEBSITES_PATH, 'r', encoding='utf-8') as f:
         websites_data = json.load(f)
-        websites = websites_data.get('sites', [])
+        if isinstance(websites_data, dict):
+            websites = websites_data.get('sites', [])
+        elif isinstance(websites_data, list):
+            websites = websites_data
+        else:
+            websites = []
 
     counts = defaultdict(int)
     for site in websites:
@@ -45,10 +50,21 @@ def main():
 
     leaf_names = []
     for major in category_tree:
+        if not isinstance(major, dict):
+            continue
         major_name = major.get("name")
+        if not major_name:
+            continue
         for mid in major.get("subcategories", []):
+            if not isinstance(mid, dict):
+                continue
             mid_name = mid.get("name")
-            for leaf_name in mid.get("children", []):
+            if not mid_name:
+                continue
+            children = mid.get("children", [])
+            if not isinstance(children, list):
+                continue
+            for leaf_name in children:
                 leaf_names.append(leaf_name)
                 cnt = counts.get(leaf_name, 0)
                 results["summary"]["total_leaf_categories"] +=1
