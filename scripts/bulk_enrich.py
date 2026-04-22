@@ -93,18 +93,36 @@ async def main():
     f.close()
 
     sites = []
-    for major in data:
-        for sub in major['subcategories']:
-            for mc in sub['minor_categories']:
-                for site in mc['sites']:
-                    if not site.get('title') or site['title'].strip() == '' or site['title'] == site['url']:
-                        sites.append(site)
+    if isinstance(data, dict) and 'categories' in data:
+        # Check if categories are flat sites list
+        if len(data['categories']) > 0 and 'url' in data['categories'][0]:
+            # New flat format
+            sites = [s for s in data['categories'] if not s.get('title') or s['title'].strip() == '' or s['title'] == s['url']]
+        else:
+            # Old tree format
+            for major in data['categories']:
+                if 'subcategories' in major:
+                    for sub in major['subcategories']:
+                        if 'minor_categories' in sub:
+                            for mc in sub['minor_categories']:
+                                if 'sites' in mc:
+                                    for site in mc['sites']:
+                                        if not site.get('title') or site['title'].strip() == '' or site['title'] == site['url']:
+                                            sites.append(site)
+                                            if len(sites) >= BATCH_SIZE:
+                                                break
+                                if len(sites) >= BATCH_SIZE:
+                                    break
                         if len(sites) >= BATCH_SIZE:
                             break
                 if len(sites) >= BATCH_SIZE:
                     break
-            if len(sites) >= BATCH_SIZE:
-                break
+    elif isinstance(data, list):
+        # Direct flat list
+        sites = [s for s in data if not s.get('title') or s['title'].strip() == '' or s['title'] == s['url']]
+    else:
+        print("❌ Unknown data format")
+        return
 
     print(f"\n📦 本次处理 {len(sites)} 个站点\n")
 

@@ -68,8 +68,13 @@ def deduplicate_sites(sites):
     result = []
 
     for site in sites:
-        url = site.get('url', '').strip()
-        name = site.get('name', '').strip()
+        # Handle flat string url format (v3)
+        if isinstance(site, str):
+            url = site.strip()
+            name = url
+        else:
+            url = site.get('url', '').strip()
+            name = site.get('name', '').strip()
 
         if not url:
             continue
