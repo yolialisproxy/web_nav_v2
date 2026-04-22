@@ -59,12 +59,97 @@ def enrich_website_data(input_path, output_path):
 
     # 遍历所有分类
     processed_cats = 0
-    for category, sites in data.items():
-        if not isinstance(sites, list):
+    # ✅ 修复 AttributeError: 现在数据结构是列表不是字典
+    # 数据结构: [{'name':'xxx', 'subcategories': [...], 'sites': [...]}, ...]
+    for cat_item in data:
+        if not isinstance(cat_item, dict):
             continue
-        for site in sites:
-            if not isinstance(site, dict) or 'url' not in site:
-                continue
+
+        # 处理顶级分类下的站点
+        if 'sites' in cat_item and isinstance(cat_item['sites'], list):
+            for site in cat_item['sites']:
+                if not isinstance(site, dict) or 'url' not in site:
+                    continue
+
+                # 处理站点
+                total_missing += 1
+
+                current_title = site.get('title', '').strip()
+                current_desc = site.get('description', '').strip()
+                need_process = True
+
+                if need_process:
+                    title, desc = fetch_site_info(site['url'])
+                    if title:
+                        site['title'] = title[:60]
+                    if desc:
+                        site['description'] = desc[:150]
+                    if title or desc:
+                        processed += 1
+                    else:
+                        failed += 1
+                    time.sleep(0.2)
+
+        # 处理子分类
+        if 'subcategories' in cat_item and isinstance(cat_item['subcategories'], list):
+            for sub_cat in cat_item['subcategories']:
+                if not isinstance(sub_cat, dict):
+                    continue
+
+                # 处理子分类下的站点
+                if 'sites' in sub_cat and isinstance(sub_cat['sites'], list):
+                    for site in sub_cat['sites']:
+                        if not isinstance(site, dict) or 'url' not in site:
+                            continue
+
+                        # 处理站点
+                        total_missing += 1
+
+                        current_title = site.get('title', '').strip()
+                        current_desc = site.get('description', '').strip()
+                        need_process = True
+
+                        if need_process:
+                            title, desc = fetch_site_info(site['url'])
+                            if title:
+                                site['title'] = title[:60]
+                            if desc:
+                                site['description'] = desc[:150]
+                            if title or desc:
+                                processed += 1
+                            else:
+                                failed += 1
+                            time.sleep(0.2)
+
+                # 处理小分类
+                if 'minor_categories' in sub_cat and isinstance(sub_cat['minor_categories'], list):
+                    for minor_cat in sub_cat['minor_categories']:
+                        if not isinstance(minor_cat, dict):
+                            continue
+
+                        if 'sites' in minor_cat and isinstance(minor_cat['sites'], list):
+                            for site in minor_cat['sites']:
+                                if not isinstance(site, dict) or 'url' not in site:
+                                    continue
+
+                                # 处理站点
+                                total_missing += 1
+
+                                current_title = site.get('title', '').strip()
+                                current_desc = site.get('description', '').strip()
+                                need_process = True
+
+                                if need_process:
+                                    title, desc = fetch_site_info(site['url'])
+                                    if title:
+                                        site['title'] = title[:60]
+                                    if desc:
+                                        site['description'] = desc[:150]
+                                    if title or desc:
+                                        processed += 1
+                                    else:
+                                        failed += 1
+                                    time.sleep(0.2)
 
             # 测试只处理前50个站点
             if total_missing >= 50:

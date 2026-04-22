@@ -194,11 +194,15 @@ async def main():
             tasks = [fetch_site_metadata(session, s["url"]) for s in targets]
             results = await asyncio.gather(*tasks, return_exceptions=True)
 
+        # 写入结果
         success = 0
         failed = 0
 
-        # 写入结果
         for site, meta in zip(targets, results):
+            # ✅ 修复 AttributeError: 过滤掉 Exception 对象
+            if isinstance(meta, Exception):
+                failed += 1
+                continue
             if meta and isinstance(meta, dict):
                 if "title" in meta:
                     site["title"] = meta["title"]

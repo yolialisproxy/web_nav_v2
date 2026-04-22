@@ -1,15 +1,14 @@
 {
-  "version": "v2",
-  "current_round": 5,
-  "last_updated": "2026-04-22T12:46:00+08:00",
-  "total_completed": 1539,
-  "remaining": 0,
+  "current_round": 1,
+  "last_updated": "2026-04-22T12:58:00",
+  "last_round_errors": [],
+  "total_completed": 1,
+  "remaining": 999,
   "completed": false,
-  "last_round_errors": ["站点访问超时率较高，与当前环境网络出口有关"],
-  "watchdog_job_id": "",
+  "watchdog_job_id": null,
   "next_round_tasks": [
-    "1. 运行 webnav-content-enricher 批量补全站点标题和描述",
-    "2. 执行分类校准，平衡分类数量分布",
-    "3. 运行网站完整验收测试 browser-console-check + browser-visual-check"
+    "1. 修复 batch_enrichment_worker.py 中重复处理相同站点的BUG",
+    "2. 为 webnav-content-enricher.py 添加测试模式支持，只处理前10个站点",
+    "3. 运行一次完整的质量审计并生成报告"
   ]
 }
