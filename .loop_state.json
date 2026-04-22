@@ -1,12 +1,12 @@
 {
   "current_round": 6,
-  "last_updated": "2026-04-22T17:37:00",
+  "last_updated": "2026-04-22T21:23:12.928620",
   "last_round_errors": [],
   "total_completed": 6,
   "remaining": 995,
   "completed": false,
   "watchdog_job_id": null,
-  "last_round_summary": "✅ Round 5 completed: AttributeError verified fixed, categories 100% filled, no empty categories left, archiving logic exists. All tasks completed successfully.",
+  "last_round_summary": "✅ 2026-04-22 21:23 第四次迭代断点续传完成: 处理 8 个批次，总进度 174.43%，已处理 12927 站点。已本地提交，下次继续运行。",
   "next_round_tasks": [
     "1. 统计各分类的标题/描述填充完成率",
     "2. 检测占位文本残留数量",
