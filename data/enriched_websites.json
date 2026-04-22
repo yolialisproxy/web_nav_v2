@@ -36,8 +36,8 @@
     "description": "the main LibreSSL page",
     "_cat": "AI智能/AI音乐/资源",
     "category": "AI工具",
-    "cn_title": "www.libressl.org",
-    "cn_description": "专业网站：www.libressl.org",
+    "cn_title": "LibreSSL",
+    "cn_description": "the main LibreSSL page",
     "id": "www_libressl_org"
   },
   {
@@ -47,8 +47,8 @@
     "title": "土豆-召唤全球优秀短视频",
     "_cat": "AI智能/AI音乐/库",
     "category": "视频创作",
-    "cn_title": "www.tudou.com",
-    "cn_description": "专业网站：www.tudou.com",
+    "cn_title": "土豆",
+    "cn_description": "视频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
     "id": "www_tudou_com"
   },
   {
@@ -76,8 +76,8 @@
     "description": "登录 Tamari 网络应用程序。",
     "_cat": "AI智能/AI音乐/生成器",
     "category": "实用工具",
-    "cn_title": "登录",
-    "cn_description": "登录 Tamari 网络应用程序。",
+    "cn_title": "app.tamariapp.com",
+    "cn_description": "专业网站：app.tamariapp.com",
     "id": "app_tamariapp_com"
   },
   {
@@ -86,8 +86,8 @@
     "description": "Michal Čihař",
     "_cat": "AI智能/AI开发/工具",
     "category": "其他",
-    "cn_title": "cihar.com",
-    "cn_description": "专业网站：cihar.com",
+    "cn_title": "Enca",
+    "cn_description": "Michal Čihař's website",
     "id": "cihar_com"
   },
   {
@@ -106,8 +106,8 @@
     "description": "Own your data, build better experiences.",
     "_cat": "AI智能/AI开发/工具",
     "category": "其他",
-    "cn_title": "formbricks.com",
-    "cn_description": "专业网站：formbricks.com",
+    "cn_title": "The Open Source Qualtrics Alternative",
+    "cn_description": "Own your data, build better experiences.",
     "id": "formbricks_com"
   },
   {
@@ -116,8 +116,8 @@
     "description": "A simple home inventory management software",
     "_cat": "AI智能/AI开发/资源",
     "category": "其他",
-    "cn_title": "homebox.software",
-    "cn_description": "专业网站：homebox.software",
+    "cn_title": "HomeBox",
+    "cn_description": "A simple home inventory management software",
     "id": "homebox_software"
   },
   {
@@ -136,8 +136,8 @@
     "description": "Self-hosted, local only NVR and AI Computer Vision software.",
     "_cat": "AI智能/AI开发/服务",
     "category": "AI工具",
-    "cn_title": "viseron.netlify.app",
-    "cn_description": "专业网站：viseron.netlify.app",
+    "cn_title": "Homepage",
+    "cn_description": "Self",
     "id": "viseron_netlify_app"
   },
   {
@@ -146,8 +146,8 @@
     "description": ">Accent is your simple, developer-oriented translation tool",
     "_cat": "AI智能/AI开发/生成器",
     "category": "其他",
-    "cn_title": "www.accent.reviews",
-    "cn_description": "专业网站：www.accent.reviews",
+    "cn_title": "Accent",
+    "cn_description": ">Accent is your simple, developer",
     "id": "www_accent_reviews"
   },
   {
@@ -156,8 +156,8 @@
     "description": "A lightweight file manager with full ShareX support and more",
     "_cat": "视频娱乐/国内视频/资源",
     "category": "其他",
-    "cn_title": "xbackbone.app",
-    "cn_description": "专业网站：xbackbone.app",
+    "cn_title": "Home",
+    "cn_description": "A lightweight file manager with full ShareX support and more",
     "id": "xbackbone_app"
   },
   {
@@ -176,8 +176,8 @@
     "description": "a simple server for sending and receiving messages",
     "_cat": "视频娱乐/国外视频/服务",
     "category": "其他",
-    "cn_title": "gotify.net",
-    "cn_description": "专业网站：gotify.net",
+    "cn_title": "Gotify",
+    "cn_description": "a simple server for sending and receiving messages",
     "id": "gotify_net"
   },
   {
@@ -186,8 +186,8 @@
     "description": "A C++ units library, by Aurora",
     "_cat": "视频娱乐/国外视频/开源",
     "category": "AI工具",
-    "cn_title": "aurora-opensource.github.io",
-    "cn_description": "专业网站：aurora-opensource.github.io",
+    "cn_title": "The Au units library",
+    "cn_description": "A C++ units library, by Aurora",
     "id": "aurora_opensource_github_io"
   },
   {
@@ -206,8 +206,8 @@
     "description": "Here be dragons is a computer graphics pet project",
     "_cat": "视频娱乐/直播/教程",
     "category": "其他",
-    "cn_title": "simonrodriguez.fr",
-    "cn_description": "专业网站：simonrodriguez.fr",
+    "cn_title": "Here be dragons",
+    "cn_description": "Here be dragons is a computer graphics pet project",
     "id": "simonrodriguez_fr"
   },
   {
@@ -216,8 +216,8 @@
     "description": "Demonstration sandbox for Discourse",
     "_cat": "视频娱乐/直播/教程",
     "category": "其他",
-    "cn_title": "try.discourse.org",
-    "cn_description": "专业网站：try.discourse.org",
+    "cn_title": "Discourse Demo",
+    "cn_description": "Demonstration sandbox for Discourse",
     "id": "try_discourse_org"
   },
   {
@@ -248,8 +248,8 @@
     "description": "Hedley documentation",
     "_cat": "视频娱乐/直播/服务",
     "category": "开源项目",
-    "cn_title": "nemequ.github.io",
-    "cn_description": "专业网站：nemequ.github.io",
+    "cn_title": "Hedley",
+    "cn_description": "Hedley documentation",
     "id": "nemequ_github_io"
   },
   {
@@ -268,8 +268,8 @@
     "description": "Prosody is a Jabber/XMPP server\nwritten in Lua",
     "_cat": "视频娱乐/直播/生成器",
     "category": "其他",
-    "cn_title": "prosody.im",
-    "cn_description": "专业网站：prosody.im",
+    "cn_title": "Welcome – Prosody IM",
+    "cn_description": "Prosody is a Jabber/XMPP server written in Lua",
     "id": "prosody_im"
   },
   {
@@ -278,8 +278,8 @@
     "description": "Bike Speedometer",
     "_cat": "视频娱乐/音乐/教程",
     "category": "开源项目",
-    "cn_title": "knrdl.github.io",
-    "cn_description": "专业网站：knrdl.github.io",
+    "cn_title": "BiCiMon",
+    "cn_description": "Bike Speedometer",
     "id": "knrdl_github_io"
   },
   {
@@ -288,8 +288,8 @@
     "description": "autodiff documentation.",
     "_cat": "视频娱乐/游戏/资源",
     "category": "开源项目",
-    "cn_title": "autodiff.github.io",
-    "cn_description": "专业网站：autodiff.github.io",
+    "cn_title": "autodiff",
+    "cn_description": "autodiff documentation.",
     "id": "autodiff_github_io"
   },
   {
@@ -308,8 +308,8 @@
     "description": "A tiny tool for simple, self-contained wikis!",
     "_cat": "视频娱乐/游戏/教程",
     "category": "AI工具",
-    "cn_title": "feather.wiki",
-    "cn_description": "专业网站：feather.wiki",
+    "cn_title": "Feather Wiki",
+    "cn_description": "A tiny tool for simple, self",
     "id": "feather_wiki"
   },
   {
@@ -328,8 +328,8 @@
     "description": "Various resources for learning or using C++",
     "_cat": "视频娱乐/动漫/资源",
     "category": "其他",
-    "cn_title": "andreasfertig.com",
-    "cn_description": "专业网站：andreasfertig.com",
+    "cn_title": "C++ Resources",
+    "cn_description": "Various resources for learning or using C++",
     "id": "andreasfertig_com"
   },
   {
@@ -465,8 +465,7 @@
     "description": "Self-hosted audiobook and podcast server",
     "_cat": "阅读写作/教程/社区",
     "category": "其他",
-    "cn_title": "www.audiobookshelf.org",
-    "cn_description": "专业网站：www.audiobookshelf.org",
+    "cn_title": "audiobookshelf",
     "id": "www_audiobookshelf_org"
   },
   {
@@ -495,8 +494,8 @@
     "description": "# LocalAI...",
     "_cat": "资源素材/图片/资源",
     "category": "AI工具",
-    "cn_title": "localai.io",
-    "cn_description": "专业网站：localai.io",
+    "cn_title": "LocalAI",
+    "cn_description": "The free, OpenAI, Anthropic alternative. Your All",
     "id": "localai_io"
   },
   {
@@ -515,8 +514,8 @@
     "description": "The open-source personal finance manager",
     "_cat": "资源素材/图片/资源",
     "category": "其他",
-    "cn_title": "myfinbudget.com",
-    "cn_description": "专业网站：myfinbudget.com",
+    "cn_title": "Myfin Budget",
+    "cn_description": "The open",
     "id": "myfinbudget_com"
   },
   {
@@ -525,8 +524,7 @@
     "description": "Ombi, media request tool",
     "_cat": "资源素材/ppt模板/工具",
     "category": "实用工具",
-    "cn_title": "app.ombi.io",
-    "cn_description": "专业网站：app.ombi.io",
+    "cn_title": "Ombi",
     "id": "app_ombi_io"
   },
   {
@@ -546,8 +544,8 @@
     "source": "awesome",
     "_cat": "资源素材/ppt模板/教程",
     "category": "AI工具",
-    "cn_title": "bits.stephan-brumme.com",
-    "cn_description": "专业网站：bits.stephan-brumme.com",
+    "cn_title": "the bit twiddler",
+    "cn_description": "Bit manipulation explained: the bit twiddler",
     "id": "bits_stephan_brumme_com"
   },
   {
@@ -566,8 +564,8 @@
     "description": "A Web-based Go IDE , do your development anytime, anywhere.",
     "_cat": "资源素材/平台/工具",
     "category": "其他",
-    "cn_title": "wide.b3log.org",
-    "cn_description": "专业网站：wide.b3log.org",
+    "cn_title": "Wide",
+    "cn_description": "A Web",
     "id": "wide_b3log_org"
   },
   {
@@ -596,8 +594,8 @@
     "description": "A modern, open-source personal flight tracking system.",
     "_cat": "开发资源/ide/工具",
     "category": "AI工具",
-    "cn_title": "airtrail.johan.ohly.dk",
-    "cn_description": "专业网站：airtrail.johan.ohly.dk",
+    "cn_title": "AirTrail",
+    "cn_description": "A modern, open",
     "id": "airtrail_johan_ohly_dk"
   },
   {
@@ -606,8 +604,8 @@
     "description": "Psono Web Client to login or register",
     "_cat": "开发资源/ide/资源",
     "category": "图片处理",
-    "cn_title": "www.psono.pw",
-    "cn_description": "专业网站：www.psono.pw",
+    "cn_title": "Psono",
+    "cn_description": "Psono Web Client to login or register",
     "id": "www_psono_pw"
   },
   {
@@ -626,8 +624,8 @@
     "description": "Golang online books, articles, tools, etc.",
     "_cat": "开发资源/文档/服务",
     "category": "其他",
-    "cn_title": "go101.org",
-    "cn_description": "专业网站：go101.org",
+    "cn_title": "Go 101",
+    "cn_description": "Golang online books, articles, tools, etc.",
     "id": "go101_org"
   },
   {
@@ -636,8 +634,8 @@
     "description": "Your Own URL Shortener",
     "_cat": "开发资源/ai编程/社区",
     "category": "其他",
-    "cn_title": "yourls.org",
-    "cn_description": "专业网站：yourls.org",
+    "cn_title": "YOURLS",
+    "cn_description": "Your Own URL Shortener",
     "id": "yourls_org"
   },
   {
@@ -646,8 +644,8 @@
     "description": "Your simple video game library manager.",
     "_cat": "开发资源/ai编程/生成器",
     "category": "其他",
-    "cn_title": "gameyfin.org",
-    "cn_description": "专业网站：gameyfin.org",
+    "cn_title": "Home",
+    "cn_description": "Your simple video game library manager.",
     "id": "gameyfin_org"
   },
   {
@@ -656,8 +654,8 @@
     "description": "Your Self hosted YouTube Media Server.",
     "_cat": "开发资源/平台/社区",
     "category": "其他",
-    "cn_title": "tubearchivist.com",
-    "cn_description": "专业网站：tubearchivist.com",
+    "cn_title": "Tube Archivist",
+    "cn_description": "Your Self hosted YouTube Media Server.",
     "id": "tubearchivist_com"
   },
   {
@@ -678,8 +676,8 @@
     "title": "Poly Haven",
     "_cat": "创意工具/ui设计/教程",
     "category": "其他",
-    "cn_title": "www.polyhaven.com",
-    "cn_description": "专业网站：www.polyhaven.com",
+    "cn_title": "Poly Haven",
+    "cn_description": "The Public 3D Asset Library",
     "id": "www_polyhaven_com"
   },
   {
@@ -688,8 +686,8 @@
     "description": "Quality crafted apps by Sindre Sorhus",
     "_cat": "创意工具/ui设计/开源",
     "category": "图片处理",
-    "cn_title": "sindresorhus.com",
-    "cn_description": "专业网站：sindresorhus.com",
+    "cn_title": "Apps — Sindre Sorhus",
+    "cn_description": "Quality crafted apps by Sindre Sorhus",
     "id": "sindresorhus_com"
   },
   {
@@ -698,8 +696,7 @@
     "description": "summary_large_image",
     "_cat": "创意工具/ui设计/开源",
     "category": "其他",
-    "cn_title": "buymeacoffee.com",
-    "cn_description": "专业网站：buymeacoffee.com",
+    "cn_title": "Sindre Sorhus",
     "id": "buymeacoffee_com"
   },
   {
@@ -719,8 +716,8 @@
     "description": "RomM is a self-hosted rom manager for your game collection.",
     "_cat": "办公效率/协作/社区",
     "category": "其他",
-    "cn_title": "romm.app",
-    "cn_description": "专业网站：romm.app",
+    "cn_title": "The RomM Project",
+    "cn_description": "RomM is a self",
     "id": "romm_app"
   },
   {
@@ -738,8 +735,8 @@
     "description": "Amusewiki 2.610 released",
     "_cat": "办公效率/表单/社区",
     "category": "文档工具",
-    "cn_title": "amusewiki.org",
-    "cn_description": "专业网站：amusewiki.org",
+    "cn_title": "News",
+    "cn_description": "Amusewiki 2.610 released",
     "id": "amusewiki_org"
   },
   {
@@ -748,8 +745,8 @@
     "description": "Learn the basics of C and C++",
     "_cat": "视频创作/特效/资源",
     "category": "其他",
-    "cn_title": "www.cbyexample.com",
-    "cn_description": "专业网站：www.cbyexample.com",
+    "cn_title": "C by Example",
+    "cn_description": "Learn the basics of C and C++",
     "id": "www_cbyexample_com"
   },
   {
@@ -779,7 +776,7 @@
     "_cat": "视频创作/字幕/教程",
     "category": "实用工具",
     "cn_title": "raftlib.io",
-    "cn_description": "专业网站：raftlib.io",
+    "cn_description": "Simple, easy to use stream computation library for C++.",
     "id": "raftlib_io"
   },
   {
@@ -808,8 +805,8 @@
     "title": "Font Awesome",
     "_cat": "设计创意/设计资源/图标素材",
     "category": "设计资源",
-    "cn_title": "fontawesome.com",
-    "cn_description": "专业网站：fontawesome.com",
+    "cn_title": "Font Awesome",
+    "cn_description": "The internet's icon library + toolkit. Used by millions of designers, devs, & content creators. Open",
     "id": "fontawesome_com"
   },
   {
@@ -840,8 +837,7 @@
     "title": "Pexels",
     "_cat": "设计创意/设计资源/摄影图库",
     "category": "设计资源",
-    "cn_title": "www.pexels.com",
-    "cn_description": "专业网站：www.pexels.com",
+    "cn_title": "Just a moment...",
     "id": "www_pexels_com"
   },
   {
@@ -851,8 +847,8 @@
     "title": "Coolors",
     "_cat": "设计创意/设计工具/在线配色",
     "category": "设计工具",
-    "cn_title": "coolors.co",
-    "cn_description": "专业网站：coolors.co",
+    "cn_title": "Coolors",
+    "cn_description": "Generate or browse beautiful color combinations for your designs.",
     "id": "coolors_co"
   },
   {
@@ -862,8 +858,8 @@
     "title": "Color Hunt",
     "_cat": "设计创意/设计工具/Colors",
     "category": "设计工具",
-    "cn_title": "colorhunt.co",
-    "cn_description": "专业网站：colorhunt.co",
+    "cn_title": "Color Hunt",
+    "cn_description": "Discover the newest hand",
     "id": "colorhunt_co"
   },
   {
@@ -873,8 +869,8 @@
     "title": "Dribbble",
     "_cat": "设计创意/灵感采集/界面灵感",
     "category": "灵感采集",
-    "cn_title": "dribbble.com",
-    "cn_description": "专业网站：dribbble.com",
+    "cn_title": "Dribbble",
+    "cn_description": "Find Top Designers & Creative Professionals on Dribbble. We are where designers gain inspiration, feedback, community, and jobs. Your best resource to",
     "id": "dribbble_com"
   },
   {
@@ -884,8 +880,8 @@
     "title": "Awwwards",
     "_cat": "设计创意/灵感采集/网页灵感",
     "category": "灵感采集",
-    "cn_title": "www.awwwards.com",
-    "cn_description": "专业网站：www.awwwards.com",
+    "cn_title": "Awwwards",
+    "cn_description": "Awwwards are the Website Awards that recognize and promote the talent and effort of the best developers, designers and web agencies in the world.",
     "id": "www_awwwards_com"
   },
   {
@@ -906,8 +902,8 @@
     "title": "MDN Web Docs",
     "_cat": "开发工具/资源文档/API文档",
     "category": "开发资源",
-    "cn_title": "developer.mozilla.org",
-    "cn_description": "专业网站：developer.mozilla.org",
+    "cn_title": "MDN Web Docs",
+    "cn_description": "The MDN Web Docs site provides information about Open Web technologies including HTML, CSS, and APIs for both Web sites and progressive web apps.",
     "id": "developer_mozilla_org"
   },
   {
@@ -917,8 +913,8 @@
     "title": "Notion",
     "_cat": "效率办公/文档演示/文档工具",
     "category": "效率办公",
-    "cn_title": "www.notion.so",
-    "cn_description": "专业网站：www.notion.so",
+    "cn_title": "The AI workspace that works for you.",
+    "cn_description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
     "id": "www_notion_so"
   },
   {
@@ -928,8 +924,8 @@
     "title": "Notion AI",
     "_cat": "效率办公/文档演示/文档工具",
     "category": "效率办公",
-    "cn_title": "www.notion.so",
-    "cn_description": "专业网站：www.notion.so",
+    "cn_title": "Meet your AI team",
+    "cn_description": "One tool that does it all. Search, generate, analyze, and chat—right inside Notion.",
     "id": "www_notion_so"
   },
   {
@@ -939,8 +935,7 @@
     "title": "Product Hunt",
     "_cat": "资讯社区/行业资讯/Product",
     "category": "资讯社区",
-    "cn_title": "www.producthunt.com",
-    "cn_description": "专业网站：www.producthunt.com",
+    "cn_title": "Just a moment...",
     "id": "www_producthunt_com"
   },
   {
