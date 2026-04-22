@@ -50,6 +50,8 @@ BATCH_SIZE = 120
 REQUEST_TIMEOUT = 8
 MAX_RETRIES = 2
 BATCH_DELAY = 4
+REQUEST_DELAY = 0.25  # 每秒4个请求速率限制
+MAX_CONCURRENT = 8    # 最大并发请求数
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
 
 # 路径配置
