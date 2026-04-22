@@ -53,6 +53,10 @@ def fetch_site_info(url):
 def enrich_website_data(input_path, output_path):
     data = safe_read_json(input_path)
 
+    if data is None:
+        print(f"❌ 错误: 无法读取输入文件或文件为空")
+        return
+
     processed = 0
     failed = 0
     total_missing = 0
