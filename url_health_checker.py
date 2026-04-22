@@ -54,7 +54,7 @@ async def main():
                 traverse(child)
 
     # Root is object with 'sites' array
-    sites = data['sites']
+    sites = data
     total_count = len(sites)
     print(f"[{datetime.now()}] 总共加载 {total_count} 个网站，开始批量检测...")
 
