@@ -133,13 +133,21 @@ def enrich_website_data(input_path, output_path):
                                     continue
 
                                 # 处理站点
-                                total_missing += 1
-
                                 current_title = site.get('title', '').strip()
                                 current_desc = site.get('description', '').strip()
-                                need_process = True
+
+                                # 只处理缺少标题、占位标题或者缺少描述的站点
+                                need_process = False
+                                # 检测占位文本和空值
+                                if not current_title or len(current_title) < 2 or \
+                                   current_title in ['', 'Untitled', '首页', 'Welcome', 'Homepage', 'Title'] or \
+                                   'placeholder' in current_title.lower() or \
+                                   'description will' in current_desc.lower() or \
+                                   'baseball-bat-ball' in current_title:
+                                    need_process = True
 
                                 if need_process:
+                                    total_missing += 1
                                     title, desc = fetch_site_info(site['url'])
                                     if title:
                                         site['title'] = title[:60]
@@ -151,40 +159,9 @@ def enrich_website_data(input_path, output_path):
                                         failed += 1
                                     time.sleep(0.2)
 
-            # 测试只处理前50个站点
-            if total_missing >= 50:
-                continue
-            # 只处理缺少标题、占位标题或者缺少描述的站点
-            need_process = False
-            current_title = site.get('title', '').strip()
-            current_desc = site.get('description', '').strip()
-
-            # 检测占位文本和空值
-            # if not current_title or len(current_title) < 2 or \
-            #    current_title in ['', 'Untitled', '首页', 'Welcome', 'Homepage', 'Title'] or \
-            #    'placeholder' in current_title.lower() or \
-            #    'description will' in current_desc.lower() or \
-            #    'baseball-bat-ball' in current_title:
-            need_process = True
-            total_missing += 1
-
-            if not need_process:
-                continue
-
-            title, desc = fetch_site_info(site['url'])
-
-            if title:
-                site['title'] = title[:60]
-            if desc:
-                site['description'] = desc[:150]
-
-            if title or desc:
-                processed += 1
-            else:
-                failed += 1
-
-            # 限流防止被封
-            time.sleep(0.2)
+        # 测试只处理前50个站点
+        if total_missing >= 50:
+            break
 
     print(f"\n📊 处理完成报告:")
     print(f"   🎯 需要补全的站点: {total_missing}")

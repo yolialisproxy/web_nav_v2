@@ -166,17 +166,18 @@ async def main():
         targets = []
         total_count = 0
 
-        # 遍历数据结构
-        for cat in full_data:
-            if not isinstance(cat, dict) or 'subcategories' not in cat: continue
-            for sub in cat['subcategories']:
-                if 'minor_categories' not in sub: continue
-                for minor in sub['minor_categories']:
-                    if 'sites' not in minor: continue
-                    for site in minor['sites']:
-                        total_count += 1
-                        if not site.get('title') and len(targets) < BATCH_SIZE:
-                            targets.append(site)
+        # 遍历数据结构 - 扁平化列表格式
+        total_count = len(full_data)
+
+        for site in full_data:
+            if not isinstance(site, dict): continue
+            # 补全条件: 标题缺失/过短 或 描述缺失/过短
+            need_enrich = (
+                not site.get('title') or len(site.get('title', '').strip()) < 3
+                or not site.get('description') or len(site.get('description', '').strip()) < 10
+            )
+            if need_enrich and site.get('url') and len(targets) < 139:
+                targets.append(site)
 
         state["total_sites"] = total_count
 
