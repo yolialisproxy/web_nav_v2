@@ -32,6 +32,9 @@ def main():
     invalid_count = 0
 
     for site in raw_data:
+        if not isinstance(site, dict):
+            invalid_count +=1
+            continue
         url = site.get('url', '')
         norm_url = normalize_url(url)
 

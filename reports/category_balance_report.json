@@ -1,0 +1,690 @@
+{
+  "timestamp": "2026-04-22T11:08:08.198103",
+  "min_required": 10,
+  "max_allowed": 50,
+  "summary": {
+    "total_leaf_categories": 48,
+    "total_sites": 95,
+    "balanced": 0,
+    "underfilled": 2,
+    "overfilled": 0,
+    "empty": 46,
+    "uncategorized": 0
+  },
+  "category_details": [
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "界面灵感",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "网页灵感",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "图形创意",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "设计灵感",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "图标素材",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "字体资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "平面素材",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "摄影图库",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "Mockup",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "Sketch资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "UI资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "在线配色",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "LOGO设计",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Colors",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Icon",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Fonts",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Free Photos",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "学习教程",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "视频教程",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "设计规范",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "设计文章",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "交互设计",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "UX",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "在线工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "常用工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "Online Tools",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "Chrome插件",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "资源文档",
+      "leaf": "Tutorial",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "资源文档",
+      "leaf": "API文档",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "资源文档",
+      "leaf": "开发资源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "major": "开发工具",
+      "mid": "前端开发",
+      "leaf": "UI Design",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "前端开发",
+      "leaf": "CSS工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "前端开发",
+      "leaf": "代码资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "PPT",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "PPT资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "文档工具",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "表格工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "协作交流",
+      "leaf": "团队协作",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "协作交流",
+      "leaf": "沟通工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "常用推荐",
+      "leaf": "常用推荐",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "常用推荐",
+      "leaf": "Recommended",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "社区资讯",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "产品资讯",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "发现产品",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "Product",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "设计社区",
+      "leaf": "设计电台",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "设计社区",
+      "leaf": "UED团队",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "设计社区",
+      "leaf": "UED Team",
+      "count": 0,
+      "status": "empty"
+    }
+  ],
+  "issues": [
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "界面灵感",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "网页灵感",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "图形创意",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "灵感采集",
+      "leaf": "设计灵感",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "图标素材",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "字体资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "平面素材",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "摄影图库",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "Mockup",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "Sketch资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计资源",
+      "leaf": "UI资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "在线配色",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "LOGO设计",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Colors",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Icon",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Fonts",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计工具",
+      "leaf": "Free Photos",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "学习教程",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "视频教程",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "设计规范",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "设计文章",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "交互设计",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "设计创意",
+      "mid": "设计学习",
+      "leaf": "UX",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "在线工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "常用工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "Online Tools",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "在线工具",
+      "leaf": "Chrome插件",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "资源文档",
+      "leaf": "Tutorial",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "资源文档",
+      "leaf": "API文档",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "资源文档",
+      "leaf": "开发资源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "major": "开发工具",
+      "mid": "前端开发",
+      "leaf": "UI Design",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "前端开发",
+      "leaf": "CSS工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "开发工具",
+      "mid": "前端开发",
+      "leaf": "代码资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "PPT",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "PPT资源",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "文档工具",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "major": "效率办公",
+      "mid": "文档演示",
+      "leaf": "表格工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "协作交流",
+      "leaf": "团队协作",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "协作交流",
+      "leaf": "沟通工具",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "常用推荐",
+      "leaf": "常用推荐",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "效率办公",
+      "mid": "常用推荐",
+      "leaf": "Recommended",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "社区资讯",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "产品资讯",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "发现产品",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "行业资讯",
+      "leaf": "Product",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "设计社区",
+      "leaf": "设计电台",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "设计社区",
+      "leaf": "UED团队",
+      "count": 0,
+      "status": "empty"
+    },
+    {
+      "major": "资讯社区",
+      "mid": "设计社区",
+      "leaf": "UED Team",
+      "count": 0,
+      "status": "empty"
+    }
+  ]
+}

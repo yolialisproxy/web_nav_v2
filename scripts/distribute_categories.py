@@ -2,26 +2,43 @@
 import json
 import os
 import sys
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from safe_json_io import safe_read_json, safe_write_json
-
-import os
 from datetime import datetime
+
+# Dynamically resolve project root relative to this script file, works from any working directory
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..'))
+
+# Add both project root and scripts dir to import path
+sys.path.insert(0, PROJECT_ROOT)
+sys.path.insert(0, SCRIPT_DIR)
+
+from scripts.safe_json_io import safe_read_json, safe_write_json
+
 
 def count_total_sites(data):
     count = 0
-    for big_cat in data:
+    # Handle both list and dict root formats
+    items = data.values() if isinstance(data, dict) else data
+    for big_cat in items:
         if not isinstance(big_cat, dict): continue
         for mid_cat in big_cat.get('subcategories', []):
             for minor_cat in mid_cat.get('minor_categories', []):
                 count += len(minor_cat.get('sites', []))
     return count
 
+
 def main():
-    base_dir = '/home/yoli/GitHub/web_nav_v2'
-    data_path = os.path.join(base_dir, 'data/websites.json')
-    pool_path = os.path.join(base_dir, 'data/collected_buffer.json')
-    backup_dir = os.path.join(base_dir, 'data/.backup')
+    # All paths are relative to project root, works from any working directory
+    data_path = os.path.join(PROJECT_ROOT, 'data', 'websites.json')
+    pool_path = os.path.join(PROJECT_ROOT, 'data', 'collected_buffer.json')
+    backup_dir = os.path.join(PROJECT_ROOT, 'data', '.backup')
+
+    # Validate required files exist before proceeding
+    for required_file in (data_path, pool_path):
+        if not os.path.exists(required_file):
+            print(f"❌ Fatal: Required file not found: {required_file}")
+            print(f"   Resolved project root: {PROJECT_ROOT}")
+            sys.exit(1)
 
     os.makedirs(backup_dir, exist_ok=True)
 
@@ -52,8 +69,9 @@ def main():
 
     distributed = 0
 
-    # 遍历所有大类
-    for big_name, big_cat in data.items():
+    # 遍历所有大类 - handle both dict and list root formats
+    items = data.items() if isinstance(data, dict) else enumerate(data)
+    for key_name, big_cat in items:
         if not isinstance(big_cat, dict): continue
         # 中类是列表
         for mid_cat in big_cat.get('subcategories', []):

@@ -37,12 +37,16 @@ body {
 
 /* 侧边栏样式 */
 #sidebar {
-  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease, margin 0.3s ease;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 #sidebar.w-0 {
+  width: 0;
   margin: 0;
   padding: 0;
+  opacity: 0;
   pointer-events: none;
 }
 

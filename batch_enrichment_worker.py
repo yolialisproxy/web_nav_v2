@@ -98,7 +98,8 @@ async def fetch_site_metadata(session: aiohttp.ClientSession, url: str) -> Optio
     for attempt in range(MAX_RETRIES):
         try:
             async with session.get(url, timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT), headers={"User-Agent": USER_AGENT}) as resp:
-                if resp.status != 200:
+                # 允许 200/301/302/403/405 状态码，正常站点也会返回这些
+                if resp.status not in (200, 301, 302, 403, 405):
                     await asyncio.sleep(0.5 + attempt)
                     continue
 

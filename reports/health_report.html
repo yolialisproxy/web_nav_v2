@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Directory Health Report</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background: #f5f7fa; padding: 2rem; line-height: 1.5; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { color: #1a202c; margin-bottom: 1.5rem; }
+        .summary-card { background: white; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.5rem; margin: 1.5rem 0; }
+        .stat-box { text-align: center; padding: 1.25rem; border-radius: 8px; }
+        .stat-box.ok { background: #f0fff4; border-left: 4px solid #38a169; }
+        .stat-box.failed { background: #fff5f5; border-left: 4px solid #e53e3e; }
+        .stat-value { font-size: 2rem; font-weight: 700; display: block; }
+        .stat-label { color: #6b7280; margin-top: 0.25rem; }
+        .progress-bar { width: 100%; height: 12px; background: #e2e8f0; border-radius: 6px; overflow: hidden; margin: 1rem 0; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #38a169 0%, #68d391 100%); }
+        h2 { color: #2d3748; margin: 2rem 0 1rem; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        th { background: #edf2f7; color: #2d3748; font-weight: 600; text-align: left; padding: 1rem; }
+        td { padding: 1rem; border-top: 1px solid #e2e8f0; }
+        tr:hover { background: #f7fafc; }
+        .badge { padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+        .badge.err { background: #fed7d7; color: #c53030; }
+        .badge.4xx { background: #feebc8; color: #c05621; }
+        .generated-at { color: #718096; font-size: 0.875rem; text-align: right; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🔍 Website Directory Health Report</h1>
+
+    <div class="summary-card">
+        <h3>Validation Summary</h3>
+        <div class="stats-grid">
+            <div class="stat-box">
+                <span class="stat-value">93</span>
+                <span class="stat-label">Total Sites</span>
+            </div>
+            <div class="stat-box ok">
+                <span class="stat-value">81</span>
+                <span class="stat-label">Working (87.1%)</span>
+            </div>
+            <div class="stat-box failed">
+                <span class="stat-value">12</span>
+                <span class="stat-label">Failed (12.9%)</span>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 87.1%"></div>
+        </div>
+    </div>
+
+    <h2>⚠️ Failed / Broken Links</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Site ID</th>
+                <th>Title</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>www_privoxy_org</td>
+                <td>Privoxy - Home Page</td>
+                <td>https://www.privoxy.org</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>app_tamariapp_com</td>
+                <td>登录 - Tamari</td>
+                <td>https://app.tamariapp.com</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>github_com</td>
+                <td>IDE · GitHub Topics</td>
+                <td>https://github.com/topics/ide</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>joinmastodon_org</td>
+                <td>Mastodon - 去中心化社交媒体</td>
+                <td>https://joinmastodon.org/</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>pagespeed_web_dev</td>
+                <td>PageSpeed Insights</td>
+                <td>https://pagespeed.web.dev</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>fonts_google_com</td>
+                <td>Google Fonts</td>
+                <td>https://fonts.google.com</td>
+            </tr>
+            <tr>
+                <td><span class="badge 4xx">401</span></td>
+                <td>unsplash_com</td>
+                <td>Unsplash</td>
+                <td>https://unsplash.com</td>
+            </tr>
+            <tr>
+                <td><span class="badge 4xx">403</span></td>
+                <td>www_pexels_com</td>
+                <td>Pexels</td>
+                <td>https://www.pexels.com</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>www_notion_so</td>
+                <td>Notion</td>
+                <td>https://www.notion.so</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>www_notion_so</td>
+                <td>Notion AI</td>
+                <td>https://www.notion.so/product/ai</td>
+            </tr>
+            <tr>
+                <td><span class="badge 4xx">403</span></td>
+                <td>www_producthunt_com</td>
+                <td>Product Hunt</td>
+                <td>https://www.producthunt.com</td>
+            </tr>
+            <tr>
+                <td><span class="badge err">ERR</span></td>
+                <td>news_ycombinator_com</td>
+                <td>Hacker News</td>
+                <td>https://news.ycombinator.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="generated-at">Generated: 2026-04-22 11:04:26</p>
+</div>
+</body>
+</html>

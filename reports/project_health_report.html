@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Health Report | web_nav_v2</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+        body { background: #f8fafc; padding: 2rem; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #1e293b; margin-bottom: 1.5rem; }
+        .card { background: white; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .status-good { color: #166534; background: #dcfce7; }
+        .status-warning { color: #854d0e; background: #fef3c7; }
+        .status-badge { padding: 0.375rem 0.75rem; border-radius: 999px; font-weight: 600; display: inline-block; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .metric-card { background: #f1f5f9; border-radius: 8px; padding: 1rem; text-align: center; }
+        .metric-value { font-size: 2rem; font-weight: 700; color: #0f172a; }
+        .metric-label { color: #64748b; margin-top: 0.25rem; }
+        .progress-bar { height: 8px; background: #e2e8f0; border-radius: 4px; overflow: hidden; margin-top: 0.5rem; }
+        .progress-fill { height: 100%; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { font-weight: 600; color: #475569; }
+        .timestamp { color: #64748b; font-size: 0.875rem; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>✅ web_nav_v2 Project Health Report</h1>
+    <p class="timestamp">Generated: 2026-04-22 10:27 UTC</p>
+
+    <div class="card">
+        <h2>Overall Status</h2>
+        <div style="margin: 1rem 0;">
+            <span class="status-badge status-good">HEALTHY</span>
+        </div>
+        <p>Project is operating normally with good data quality and high URL availability.</p>
+    </div>
+
+    <div class="card">
+        <h2>Data Quality Metrics</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">80</div>
+                <div class="metric-label">Active Sites</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Title Coverage</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Description Coverage</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Category Coverage</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>URL Health Status</h2>
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value">204</div>
+                <div class="metric-label">Total Checked</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">197</div>
+                <div class="metric-label">Working OK</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">96.6%</div>
+                <div class="metric-label">Uptime Rate</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">7</div>
+                <div class="metric-label">Failed Sites</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 1rem;">
+            <strong>Availability:</strong>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 96.6%; background: #22c55e;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Project Status Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Indicator</th>
+                    <th>Value</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Data Integrity</td>
+                    <td>100% complete fields</td>
+                    <td><span class="status-badge status-good">PASS</span></td>
+                </tr>
+                <tr>
+                    <td>URL Availability</td>
+                    <td>96.6%</td>
+                    <td><span class="status-badge status-good">GOOD</span></td>
+                </tr>
+                <tr>
+                    <td>Duplication Check</td>
+                    <td>No duplicates found</td>
+                    <td><span class="status-badge status-good">CLEAN</span></td>
+                </tr>
+                <tr>
+                    <td>Backup Status</td>
+                    <td>Recent backups exist</td>
+                    <td><span class="status-badge status-good">SAFE</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card">
+        <h3>Notes</h3>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; color: #475569;">
+            <li>Full raw health data saved to <code>url_health_report.json</code></li>
+            <li>7 failed URLs are queued for recheck</li>
+            <li>No critical issues detected</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

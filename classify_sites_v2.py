@@ -12,7 +12,7 @@ def main():
 
     # 正确遍历所有站点
     for major_name, major_node in data.items():
-        if 'subcategories' not in major_node:
+        if not isinstance(major_node, dict) or 'subcategories' not in major_node:
             continue
         for midcat in major_node['subcategories']:
             if 'minor_categories' not in midcat:

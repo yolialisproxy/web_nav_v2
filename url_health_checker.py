@@ -5,7 +5,7 @@ import aiohttp
 from typing import List, Dict
 from datetime import datetime
 
-DATA_FILE = "/home/yoli/GitHub/web_nav_v2/data/websites.json"
+DATA_FILE = "/home/yoli/GitHub/web_nav_v2/data/enriched_websites.json"
 OUTPUT_FILE = "/home/yoli/GitHub/web_nav_v2/url_health_report.json"
 CONCURRENT_LIMIT = 15
 TIMEOUT = 10
@@ -38,7 +38,23 @@ async def check_url(session: aiohttp.ClientSession, url: str, site_info: Dict) -
 async def main():
     print(f"[{datetime.now()}] 开始加载网站列表...")
     with open(DATA_FILE, "r", encoding="utf-8") as f:
-        sites = json.load(f)
+        data = json.load(f)
+
+    # Extract all sites from category hierarchy
+    sites = []
+
+    def traverse(node):
+        if 'sites' in node and isinstance(node['sites'], list):
+            sites.extend(node['sites'])
+        if 'subcategories' in node:
+            for child in node['subcategories']:
+                traverse(child)
+        if 'minor_categories' in node:
+            for child in node['minor_categories']:
+                traverse(child)
+
+    # Root is flat list of sites
+    sites = data
     total_count = len(sites)
     print(f"[{datetime.now()}] 总共加载 {total_count} 个网站，开始批量检测...")
 
