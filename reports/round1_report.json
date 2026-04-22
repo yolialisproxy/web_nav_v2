@@ -1,9 +1,9 @@
 {
   "round": 1,
-  "before_total": 3,
+  "before_total": 2,
   "after_total": 0,
   "duplicates_removed": 0,
-  "invalid_removed": 3,
+  "invalid_removed": 2,
   "categories_total": 0,
   "categories_under_10": 0,
   "timestamp": "2026-04-21"
