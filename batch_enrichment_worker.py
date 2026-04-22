@@ -94,7 +94,7 @@ def load_state() -> Dict[str, Any]:
 def save_state(state: Dict[str, Any]) -> None:
     state["last_updated"] = time.time()
     if state["total_sites"] > 0:
-        state["progress_pct"] = round(100 * state["processed"] / state["total_sites"], 2)
+        state["progress_pct"] = round(min(100.0, 100 * state["processed"] / state["total_sites"]), 2)
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
 
