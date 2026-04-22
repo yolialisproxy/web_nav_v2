@@ -130,7 +130,7 @@ def process_json(input_path):
     elif 'categories' in data:
         # V2 structure: { "categories": [...], "sites": [...] }
         categories = data
-        all_sites_count = len(data['siteIds'])
+        all_sites_count = len(data['sites'])
     else:
         print("❌ 未知数据格式")
         return
@@ -141,22 +141,36 @@ def process_json(input_path):
     minor_stats = []
 
     for cat in categories:
+        if isinstance(cat, str):
+            # Skip string entries, just count as 0
+            continue
         c_count = cat.get('site_count', 0)
+
         for sub in cat.get('subcategories', []):
+            if isinstance(sub, str):
+                continue
             c_count += sub.get('site_count', 0)
             for minor in sub.get('minor_categories', []):
+                if isinstance(minor, str):
+                    continue
                 c_count += minor.get('count', 0)
 
-        cat_stats.append({'name': cat['name'], 'count': c_count})
+        cat_stats.append({'name': cat.get('name', 'UNKNOWN'), 'count': c_count})
 
         for sub in cat.get('subcategories', []):
+            if isinstance(sub, str):
+                continue
             s_count = sub.get('site_count', 0)
             for minor in sub.get('minor_categories', []):
+                if isinstance(minor, str):
+                    continue
                 s_count += minor.get('count', 0)
-            sub_stats.append({'name': f"{cat['name']} > {sub['name']}", 'count': s_count})
+            sub_stats.append({'name': f"{cat.get('name', 'UNKNOWN')} > {sub.get('name', 'UNKNOWN')}", 'count': s_count})
 
             for minor in sub.get('minor_categories', []):
-                minor_stats.append({'name': f"{cat['name']} > {sub['name']} > {minor['name']}", 'count': minor.get('count', 0)})
+                if isinstance(minor, str):
+                    continue
+                minor_stats.append({'name': f"{cat.get('name', 'UNKNOWN')} > {sub.get('name', 'UNKNOWN')} > {minor.get('name', 'UNKNOWN')}", 'count': minor.get('count', 0)})
 
     # 4. 执行分析与打印
     print_analysis(analyze_level(cat_stats, '大类 (9)'), 'category')

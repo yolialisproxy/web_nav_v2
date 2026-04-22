@@ -116,9 +116,70 @@ def process_json(input_path):
         data = json.load(f)
 
     # 🔍 自动检测格式版本
-    if 'sites' in data and 'categories' in data:
+    if isinstance(data, list):
+        version = 3
+        print("✅ 检测到 V3 扁平格式")
+        # Flat list of strings (urls only)
+        original_count = len(data)
+        deduplicated_sites = deduplicate_sites(data)
+        final_json = json.dumps(deduplicated_sites, ensure_ascii=False, indent=2)
+    elif 'sites' in data and 'categories' in data:
         version = 2
         print("✅ 检测到 V2 格式")
+
+        original_count = len(data['sites'])
+
+        # 全量去重，直接操作全局 sites 列表
+        deduplicated_sites = deduplicate_sites(data['sites'])
+        kept_ids = {site['id'] for site in deduplicated_sites}
+
+        # 清理所有分类中的无效ID引用
+        cleaned_count = 0
+        for cat in data['categories']:
+            if 'siteIds' in cat:
+                original_len = len(cat['siteIds'])
+                cat['siteIds'] = [id for id in cat['siteIds'] if id in kept_ids]
+                cleaned_count += original_len - len(cat['siteIds'])
+            # 清理子分类
+            for sub in cat.get('subcategories', []):
+                if 'siteIds' in sub:
+                    original_len = len(sub['siteIds'])
+                    sub['siteIds'] = [id for id in sub['siteIds'] if id in kept_ids]
+                    cleaned_count += original_len - len(sub['siteIds'])
+                # 清理小分类
+                for mc in sub.get('minor_categories', []):
+                    if 'siteIds' in mc:
+                        original_len = len(mc['siteIds'])
+                        mc['siteIds'] = [id for id in mc['siteIds'] if id in kept_ids]
+                        cleaned_count += original_len - len(mc['siteIds'])
+
+        data['sites'] = deduplicated_sites
+
+        # 统计
+        processed_count = len(data['sites'])
+        print(f"\n📊 统计: 原始网站数 {original_count} → 去重后 {processed_count}")
+        print(f"   移除: {original_count - processed_count} 个重复项")
+        print(f"   清理无效引用: {cleaned_count} 个")
+
+        # ✅ 原子写入 （先完整序列化后再一次性写回磁盘）
+        final_json = json.dumps(data, ensure_ascii=False, indent=2)
+
+        # 先写入备份
+        backup_path = Path(input_path).parent / '.backup' / f'websites_{int(time.time())}.json'
+        backup_path.parent.mkdir(exist_ok=True)
+        with open(backup_path, 'w', encoding='utf-8') as f:
+            f.write(final_json)
+
+        # 最后覆盖主文件
+        with open(input_path, 'w', encoding='utf-8') as f:
+            f.write(final_json)
+
+        print(f"\n✅ 原子写入完成")
+        print(f"💾 备份已保存: {backup_path}")
+        print(f"💾 主文件已更新: {input_path}")
+
+        return data
+
     else:
         version = 1
         print("✅ 检测到 V1 格式，正在透明升级")
@@ -128,6 +189,36 @@ def process_json(input_path):
         site_id_counter = 1
 
         for cat_name, cat_data in data.items():
+            if isinstance(cat_data, list):
+                # Old flat format
+                cat = {
+                    'id': cat_name,
+                    'name': cat_name,
+                    'siteIds': [],
+                    'subcategories': []
+                }
+                sub_cat = {
+                    'id': 'default',
+                    'name': cat_name,
+                    'siteIds': [],
+                    'minor_categories': []
+                }
+                minor_cat = {
+                    'id': 'default',
+                    'name': cat_name,
+                    'siteIds': []
+                }
+                for site in cat_data:
+                    if isinstance(site, str):
+                        site = {'url': site, 'name': site}
+                    site['id'] = f"site_{site_id_counter}"
+                    site_id_counter += 1
+                    all_sites.append(site)
+                    minor_cat['siteIds'].append(site['id'])
+                sub_cat['minor_categories'].append(minor_cat)
+                cat['subcategories'].append(sub_cat)
+                all_categories.append(cat)
+                continue
             cat = {
                 'id': cat_name,
                 'name': cat_name,
@@ -169,58 +260,58 @@ def process_json(input_path):
         }
         print(f"✅ 自动升级完成: 共 {len(data['sites'])} 个网站")
 
-    original_count = len(data['sites'])
+        original_count = len(data['sites'])
 
-    # 全量去重，直接操作全局 sites 列表
-    deduplicated_sites = deduplicate_sites(data['sites'])
-    kept_ids = {site['id'] for site in deduplicated_sites}
+        # 全量去重，直接操作全局 sites 列表
+        deduplicated_sites = deduplicate_sites(data['sites'])
+        kept_ids = {site['id'] for site in deduplicated_sites}
 
-    # 清理所有分类中的无效ID引用
-    cleaned_count = 0
-    for cat in data['categories']:
-        if 'siteIds' in cat:
-            original_len = len(cat['siteIds'])
-            cat['siteIds'] = [id for id in cat['siteIds'] if id in kept_ids]
-            cleaned_count += original_len - len(cat['siteIds'])
-        # 清理子分类
-        for sub in cat.get('subcategories', []):
-            if 'siteIds' in sub:
-                original_len = len(sub['siteIds'])
-                sub['siteIds'] = [id for id in sub['siteIds'] if id in kept_ids]
-                cleaned_count += original_len - len(sub['siteIds'])
-            # 清理小分类
-            for mc in sub.get('minor_categories', []):
-                if 'siteIds' in mc:
-                    original_len = len(mc['siteIds'])
-                    mc['siteIds'] = [id for id in mc['siteIds'] if id in kept_ids]
-                    cleaned_count += original_len - len(mc['siteIds'])
+        # 清理所有分类中的无效ID引用
+        cleaned_count = 0
+        for cat in data['categories']:
+            if 'siteIds' in cat:
+                original_len = len(cat['siteIds'])
+                cat['siteIds'] = [id for id in cat['siteIds'] if id in kept_ids]
+                cleaned_count += original_len - len(cat['siteIds'])
+            # 清理子分类
+            for sub in cat.get('subcategories', []):
+                if 'siteIds' in sub:
+                    original_len = len(sub['siteIds'])
+                    sub['siteIds'] = [id for id in sub['siteIds'] if id in kept_ids]
+                    cleaned_count += original_len - len(sub['siteIds'])
+                # 清理小分类
+                for mc in sub.get('minor_categories', []):
+                    if 'siteIds' in mc:
+                        original_len = len(mc['siteIds'])
+                        mc['siteIds'] = [id for id in mc['siteIds'] if id in kept_ids]
+                        cleaned_count += original_len - len(mc['siteIds'])
 
-    data['sites'] = deduplicated_sites
+        data['sites'] = deduplicated_sites
 
-    # 统计
-    processed_count = len(data['sites'])
-    print(f"\n📊 统计: 原始网站数 {original_count} → 去重后 {processed_count}")
-    print(f"   移除: {original_count - processed_count} 个重复项")
-    print(f"   清理无效引用: {cleaned_count} 个")
+        # 统计
+        processed_count = len(data['sites'])
+        print(f"\n📊 统计: 原始网站数 {original_count} → 去重后 {processed_count}")
+        print(f"   移除: {original_count - processed_count} 个重复项")
+        print(f"   清理无效引用: {cleaned_count} 个")
 
-    # ✅ 原子写入 （先完整序列化后再一次性写回磁盘）
-    final_json = json.dumps(data, ensure_ascii=False, indent=2)
+        # ✅ 原子写入 （先完整序列化后再一次性写回磁盘）
+        final_json = json.dumps(data, ensure_ascii=False, indent=2)
 
-    # 先写入备份
-    backup_path = Path(input_path).parent / '.backup' / f'websites_{int(time.time())}.json'
-    backup_path.parent.mkdir(exist_ok=True)
-    with open(backup_path, 'w', encoding='utf-8') as f:
-        f.write(final_json)
+        # 先写入备份
+        backup_path = Path(input_path).parent / '.backup' / f'websites_{int(time.time())}.json'
+        backup_path.parent.mkdir(exist_ok=True)
+        with open(backup_path, 'w', encoding='utf-8') as f:
+            f.write(final_json)
 
-    # 最后覆盖主文件
-    with open(input_path, 'w', encoding='utf-8') as f:
-        f.write(final_json)
+        # 最后覆盖主文件
+        with open(input_path, 'w', encoding='utf-8') as f:
+            f.write(final_json)
 
-    print(f"\n✅ 原子写入完成")
-    print(f"💾 备份已保存: {backup_path}")
-    print(f"💾 主文件已更新: {input_path}")
+        print(f"\n✅ 原子写入完成")
+        print(f"💾 备份已保存: {backup_path}")
+        print(f"💾 主文件已更新: {input_path}")
 
-    return data
+        return data
 def main():
     if len(sys.argv) < 2:
         print("用法: python3 deduplicate.py data/websites.json")
