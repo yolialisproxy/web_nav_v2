@@ -1,0 +1,563 @@
+{
+  "常用推荐": {
+    "subcategories": [
+      {
+        "name": "常用推荐",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "社区资讯": {
+    "subcategories": [
+      {
+        "name": "社区资讯",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "灵感采集": {
+    "subcategories": [
+      {
+        "name": "发现产品",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "界面灵感",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "网页灵感\nHot",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "发现产品": {
+    "subcategories": [
+      {
+        "name": "发现产品",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "界面灵感": {
+    "subcategories": [
+      {
+        "name": "界面灵感",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "网页灵感": {
+    "subcategories": [
+      {
+        "name": "网页灵感\nHot",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "素材资源": {
+    "subcategories": [
+      {
+        "name": "图标素材",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "LOGO设计",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "平面素材",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "UI资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "Sketch资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "字体资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "Mockup",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "摄影图库",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "PPT资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "图标素材": {
+    "subcategories": [
+      {
+        "name": "图标素材",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "LOGO设计": {
+    "subcategories": [
+      {
+        "name": "LOGO设计",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "平面素材": {
+    "subcategories": [
+      {
+        "name": "平面素材",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "UI资源": {
+    "subcategories": [
+      {
+        "name": "UI资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "Sketch资源": {
+    "subcategories": [
+      {
+        "name": "Sketch资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "字体资源": {
+    "subcategories": [
+      {
+        "name": "字体资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "Mockup": {
+    "subcategories": [
+      {
+        "name": "Mockup",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "摄影图库": {
+    "subcategories": [
+      {
+        "name": "摄影图库",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "PPT资源": {
+    "subcategories": [
+      {
+        "name": "PPT资源",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "常用工具": {
+    "subcategories": [
+      {
+        "name": "图形创意",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "界面设计",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "交互动效",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "在线配色",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "在线工具",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "Chrome插件",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "图形创意": {
+    "subcategories": [
+      {
+        "name": "图形创意",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "界面设计": {
+    "subcategories": [
+      {
+        "name": "界面设计",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "交互动效": {
+    "subcategories": [
+      {
+        "name": "交互动效",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "在线配色": {
+    "subcategories": [
+      {
+        "name": "在线配色",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "在线工具": {
+    "subcategories": [
+      {
+        "name": "在线工具",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "Chrome插件": {
+    "subcategories": [
+      {
+        "name": "Chrome插件",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "学习教程": {
+    "subcategories": [
+      {
+        "name": "设计规范",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "视频教程",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "设计文章",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "设计电台",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      },
+      {
+        "name": "交互设计\nHot",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "设计规范": {
+    "subcategories": [
+      {
+        "name": "设计规范",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "视频教程": {
+    "subcategories": [
+      {
+        "name": "视频教程",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "设计文章": {
+    "subcategories": [
+      {
+        "name": "设计文章",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "设计电台": {
+    "subcategories": [
+      {
+        "name": "设计电台",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "交互设计": {
+    "subcategories": [
+      {
+        "name": "交互设计\nHot",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  },
+  "UED团队": {
+    "subcategories": [
+      {
+        "name": "UED团队",
+        "minor_categories": [
+          {
+            "name": "全部",
+            "sites": []
+          }
+        ]
+      }
+    ]
+  }
+}
