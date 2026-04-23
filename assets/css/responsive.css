@@ -1,185 +1,79 @@
-/* 响应式布局适配 - Complete Responsive Implementation */
+/* 响应式适配 - 第七次迭代 */
 
-/* Base fixes for horizontal overflow */
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
-* {
-  max-width: 100%;
-}
-
-/* ========================================
-   Tablet Breakpoint ( < 1024px )
-   ======================================== */
+/* 移动端适配断点 */
 @media (max-width: 1023px) {
-  :root {
-    --grid-gap: 12px;
-  }
-
-  #app-shell {
-    grid-template-columns: var(--sidebar-collapsed-width) 1fr !important;
-  }
-}
-
-/* ========================================
-   Mobile Breakpoint ( < 768px )
-   ======================================== */
-@media (max-width: 767px) {
-  :root {
-    --grid-gap: 10px;
-    --nav-height: 56px;
-    --card-radius: 8px;
-  }
-
-  /* Single column layout for mobile */
-  #app-shell {
-    display: flex !important;
-    flex-direction: column;
-    height: 100dvh;
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #app-shell.collapsed {
-    grid-template-columns: unset !important;
-  }
-
-  /* Hamburger Sidebar - Off Canvas on mobile */
+  /* 侧边栏移动端动画 */
   #sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 280px;
-    max-width: 85vw;
     transform: translateX(-100%);
-    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: 9998;
-    box-shadow: 2px 0 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  #app-shell.sidebar-open #sidebar {
+  #sidebar:not(.translate-x-full) {
     transform: translateX(0);
   }
 
-  /* Backdrop overlay for open sidebar */
-  #sidebar-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.5);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 220ms ease;
-    z-index: 9997;
-  }
-
-  #app-shell.sidebar-open #sidebar-backdrop {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  /* Main Content Area */
-  #main-content {
-    width: 100vw;
-    height: auto;
-    min-height: 100dvh;
-  }
-
+  /* 卡片网格适配 */
   #view-container {
-    padding: 10px 12px 60px;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* 头部紧凑布局 */
+  header > div {
+    padding: 12px !important;
   }
 
-  /* Grid becomes single column */
-  .website-grid {
+  /* 搜索框全屏宽度 */
+  #search-input {
+    font-size: 16px; /* 防止iOS自动缩放 */
+  }
+
+  /* 卡片单列布局 */
+  #view-container {
     grid-template-columns: 1fr !important;
     gap: 10px;
   }
 
-  /* WCAG 2.1 Touch Target Compliance - minimum 48x48px */
-  button,
-  a,
-  .card,
-  .nav-item,
-  .sidebar-link {
-    min-height: 48px !important;
-    min-width: 48px !important;
-    padding: 12px 16px !important;
+  .site-card {
+    padding: 12px;
   }
 
-  .sidebar-toggle,
-  .theme-toggle,
-  .search-btn {
-    width: 48px !important;
-    height: 48px !important;
-    padding: 12px !important;
+  .card-icon {
+    width: 28px;
+    height: 28px;
   }
 
-  /* Text scaling for mobile */
-  h1 { font-size: 1.5rem; }
-  h2 { font-size: 1.25rem; }
-  h3 { font-size: 1.1rem; }
-
-  /* Fix horizontal overflow on all containers */
-  .section-header,
-  .category-title,
-  .card,
-  .search-bar {
-    max-width: 100%;
-    overflow: hidden;
+  .card-title {
+    font-size: 14px;
   }
 
-  /* Search bar adjustments */
-  #search-input {
-    height: 48px;
-    font-size: 16px; /* Prevents iOS zoom */
-  }
-
-  /* Hide sidebar collapse button on mobile */
-  #sidebar-collapse {
-    display: none;
+  .card-desc {
+    font-size: 12px;
   }
 }
 
-/* ========================================
-   Small Mobile Breakpoint ( < 480px )
-   ======================================== */
-@media (max-width: 479px) {
-  :root {
-    --grid-gap: 8px;
-  }
-
-  #top-nav {
-    padding: 0 8px;
-  }
-
-  #view-container {
-    padding: 8px 10px 70px;
-  }
-
-  .website-grid {
-    gap: 8px;
-  }
+/* 侧边栏收缩图标修复 */
+.subcategory-arrow {
+  opacity: 1 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Prevent viewport zoom on input focus for iOS */
-@supports (-webkit-overflow-scrolling: touch) {
-  input,
-  textarea,
-  select {
-    font-size: 16px !important;
-  }
+/* 搜索框优化 */
+#search-input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
 }
 
-/* Accessibility: Reduce motion preference */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+/* 防止移动端点击闪烁 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 移动端滚动平滑 */
+html {
+  scroll-behavior: smooth;
 }

@@ -95,7 +95,46 @@ async function init() {
     });
   }
 
-  // 5. 初始渲染
+  // 5. 绑定侧边栏切换
+  const sidebarToggle = document.getElementById('sidebar-toggle');
+  const sidebar = document.getElementById('sidebar');
+  const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+  if (sidebarToggle && sidebar && sidebarOverlay) {
+    function toggleSidebar() {
+      const isOpen = !sidebar.classList.contains('-translate-x-full');
+      if (isOpen) {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('hidden');
+      } else {
+        sidebar.classList.remove('-translate-x-full');
+        sidebarOverlay.classList.remove('hidden');
+      }
+    }
+
+    sidebarToggle.addEventListener('click', toggleSidebar);
+    sidebarOverlay.addEventListener('click', toggleSidebar);
+  }
+
+  // 搜索框清除按钮逻辑
+  const searchClear = document.getElementById('search-clear');
+
+  if (searchInput && searchClear) {
+    searchInput.addEventListener('input', () => {
+      searchClear.classList.toggle('hidden', searchInput.value.length === 0);
+    });
+
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      searchClear.classList.add('hidden');
+      searchInput.focus();
+      state.set('search.query', '');
+      state.set('search.results', []);
+      state.set('currentView', 'category');
+    });
+  }
+
+  // 6. 初始渲染
   state._notify();
 }
 
