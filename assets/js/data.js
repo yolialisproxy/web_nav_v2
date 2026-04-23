@@ -15,13 +15,13 @@ class DataManager {
 
     async load() {
         try {
-            const response = await fetch('data/websites.json');
+            const response = await fetch('websites.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             this.raw = await response.json();
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -35,13 +35,13 @@ class DataManager {
         let siteId = 0;
 
         this.raw.forEach(site => {
-            if (!site._cat) return;
+            if (!site.category) return;
 
             site.id = siteId++;
             this.sites.set(site.id, site);
 
             // 拆分四级分类路径
-            const parts = site._cat.split('/').filter(Boolean);
+            const parts = site.category.split('/').filter(Boolean);
             if (parts.length < 1) return;
 
             const [cat, sub, leaf] = parts;
