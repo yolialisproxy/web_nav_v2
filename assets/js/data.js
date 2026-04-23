@@ -23,7 +23,7 @@ class DataManager {
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -46,7 +46,18 @@ class DataManager {
             const parts = site.category.split('/').filter(Boolean);
             if (parts.length < 1) return;
 
-            const [cat, sub, leaf] = parts;
+            // 兼容不同分类层级
+            let cat, sub, leaf;
+            if (parts.length >= 3) {
+                [cat, sub, leaf] = parts;
+            } else if (parts.length === 2) {
+                [cat, sub] = parts;
+                leaf = sub;
+            } else {
+                cat = parts[0];
+                sub = cat;
+                leaf = cat;
+            }
 
             // 构建分类树
             if (!this.categories[cat]) {

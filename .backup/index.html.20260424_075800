@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>啃魂导航 V2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/core.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <button id="sidebar-toggle" class="p-2 rounded-lg hover:bg-gray-100 transition-colors lg:hidden">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-lg sm:text-xl font-bold">🔮 啃魂导航 V2</h1>
+            </div>
+            <div class="relative flex-1 max-w-md ml-auto">
+                <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+                <input id="search-input" type="text" placeholder="搜索站点... (Ctrl+K)" class="w-full pl-10 pr-10 py-2.5 border border-gray-200 rounded-xl bg-gray-50 hover:bg-white focus:bg-white transition-all outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100">
+                <button id="search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black/30 z-40 hidden lg:hidden"></div>
+    <div class="max-w-7xl mx-auto px-4 py-4 flex gap-6">
+        <aside id="sidebar" class="w-64 shrink-0 transition-all duration-300 ease-in-out overflow-hidden fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] bg-white z-40 shadow-xl lg:shadow-none -translate-x-full lg:translate-x-0 lg:w-64">
+            <div id="category-list" class="sticky top-4 space-y-1 p-2"></div>
+        </aside>
+        <main id="main-content" class="flex-1 transition-all duration-300 ease-in-out w-full">
+            <div id="view-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+        </main>
+    </div>
+
+    <script src="assets/js/state.js"></script>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/render.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/app.js?v=1"></script>
+</body>
+</html>
