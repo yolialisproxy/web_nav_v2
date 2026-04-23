@@ -1,8 +1,8 @@
 {
   "round": 1,
-  "before_total": 3342,
+  "before_total": 704,
   "after_total": 702,
-  "duplicates_removed": 2640,
+  "duplicates_removed": 2,
   "invalid_removed": 0,
   "categories_total": 225,
   "categories_under_10": 214,
