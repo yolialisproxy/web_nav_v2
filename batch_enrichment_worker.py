@@ -176,7 +176,7 @@ async def main():
     while True:
         # 加载当前数据
         with open(DATA_FILE, "r", encoding="utf-8") as f:
-            full_data = json.load(f)
+            full_data = json.load(f, strict=False)
 
         # 收集待处理站点
         targets = []

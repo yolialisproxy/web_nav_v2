@@ -704,7 +704,7 @@
     "url": "https://www.summarize.tech",
     "name": "Summarize",
     "description": "智能摘要",
-    "title": "Vercel Security Checkpoint",
+    "title": "summarize.tech: AI-powered video summaries",
     "_cat": "AI智能/AI视频/生成器",
     "category": "AI工具"
   },
@@ -5108,7 +5108,7 @@
     "url": "https://www.powtoon.com",
     "name": "Powtoon",
     "description": "动画视频制作",
-    "title": "Home AI Platform for Business",
+    "title": "Video Maker | Make Videos and Animations Online | Powtoon",
     "_cat": "视频娱乐/国外视频/工具",
     "category": "视频创作"
   },
@@ -8655,7 +8655,7 @@
   {
     "url": "http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-864-advanced-natural-language-processing-fall-2005/",
     "title": "Advanced Natural Language Processing | Electrical Engineering and Computer Science | MIT OpenCourseWare",
-    "description": "This course is a graduate introduction to natural language processing - the study of human language from a computational perspective. It covers syntactic, semantic and discourse processing models, emphasizing machine learning or corpus-based methods and algorithms. It also covers applications of these methods and models in syntactic parsing, inform",
+    "description": "This course is a graduate introduction to natural language processing - the study of human language from a computational perspective. It covers syntactic, semantic and discourse processing models, emphasizing machine learning or corpus-based methods and algorithms. It also covers applications of these methods and models i,
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
     "category": "其他"
@@ -23533,7 +23533,7 @@
     "url": "https://www.peacocktv.com",
     "name": "Peacock",
     "description": "流媒体",
-    "title": "Unavailable In Your Region",
+    "title": "Access Denied",
     "_cat": "学术科研/教材/资源",
     "category": "其他"
   },
@@ -26251,5 +26251,7 @@
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
     "category": "AI工具"
+  }
+]"category": "AI工具"
   }
 ]
