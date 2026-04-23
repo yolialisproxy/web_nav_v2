@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-04-23T07:26:18.372721",
-  "total": 3342,
-  "success": 3264,
-  "failed_count": 78,
+  "generated_at": "2026-04-23T11:06:51.733793",
+  "total": 704,
+  "success": 632,
+  "failed_count": 72,
   "failed_sites": [
     {
       "id": null,
@@ -38,14 +38,6 @@
     },
     {
       "id": null,
-      "url": "http://deeplearning4j.org/\\",
-      "title": "Eclipse Deeplearning4j · GitHub",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": null,
       "url": "https://www.papercup.com",
       "title": "The future of audio localization - AI dubbing and VO",
       "status_code": 404,
@@ -59,6 +51,14 @@
       "status_code": null,
       "ok": false,
       "error": "ClientConnectorCertificateError"
+    },
+    {
+      "id": null,
+      "url": "https://www.microsoft.com/en-us/research/project/visual-studio-code-tools-ai/\\",
+      "title": "Visual Studio Code Tools for AI - Microsoft Research",
+      "status_code": null,
+      "ok": false,
+      "error": "TooManyRedirects"
     },
     {
       "id": null,
@@ -87,7 +87,7 @@
     {
       "id": null,
       "url": "https://ml-cheatsheet.readthedocs.io",
-      "title": "Machine Learning Glossary &mdash; ML Glossary  documentation",
+      "title": "Just a moment...",
       "status_code": 403,
       "ok": false,
       "error": null
@@ -128,9 +128,9 @@
       "id": null,
       "url": "https://ibiling.cn",
       "title": "笔灵AI写作 - 国内领先的AI写作助手 | 官网、智能工具、免费改写",
-      "status_code": null,
+      "status_code": 403,
       "ok": false,
-      "error": "TimeoutError"
+      "error": null
     },
     {
       "id": null,
@@ -182,14 +182,6 @@
     },
     {
       "id": null,
-      "url": "https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/",
-      "title": "Introduction &#xB7; Build web application with Golang",
-      "status_code": 401,
-      "ok": false,
-      "error": null
-    },
-    {
-      "id": null,
       "url": "https://www.learnjavaonline.org",
       "title": "Learn Java - Free Interactive Java Tutorial",
       "status_code": 415,
@@ -200,9 +192,9 @@
       "id": null,
       "url": "https://www.pinpng.com",
       "title": "pinpng.com",
-      "status_code": null,
+      "status_code": 403,
       "ok": false,
-      "error": "ClientConnectorDNSError"
+      "error": null
     },
     {
       "id": null,
@@ -211,14 +203,6 @@
       "status_code": 401,
       "ok": false,
       "error": null
-    },
-    {
-      "id": null,
-      "url": "https://lesiw.io/moxie",
-      "title": "GitHub - lesiw/moxie: Go mock library that proxies method calls to embedded types. · GitHub",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
     },
     {
       "id": null,
@@ -254,14 +238,6 @@
     },
     {
       "id": null,
-      "url": "https://www.dependabot.com",
-      "title": "GitHub Advanced Security · Built-in protection for every repository · GitHub",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": null,
       "url": "https://www.descript.com",
       "title": "Descript – AI Video & Podcast Editor | Free, Online",
       "status_code": null,
@@ -270,24 +246,8 @@
     },
     {
       "id": null,
-      "url": "https://git.freepbx.org/projects/FREEPBX",
-      "title": "FreePBX · GitHub",
-      "status_code": null,
-      "ok": false,
-      "error": "TimeoutError"
-    },
-    {
-      "id": null,
       "url": "https://www.meta.ai",
       "title": "Meta AI",
-      "status_code": 403,
-      "ok": false,
-      "error": null
-    },
-    {
-      "id": null,
-      "url": "https://github.com/topics/ide",
-      "title": "IDE · GitHub Topics",
       "status_code": null,
       "ok": false,
       "error": "TimeoutError"
@@ -455,7 +415,7 @@
     {
       "id": null,
       "url": "https://www.glaze.studio",
-      "title": "glaze.studio - 该网站正在出售！ - glaze 资源和信息。",
+      "title": "glaze.studio - 该网站正在出售！ - glaze 资源和信息。",
       "status_code": 405,
       "ok": false,
       "error": null
@@ -465,14 +425,6 @@
       "url": "https://geni.us/q7svoz\\",
       "title": "Coding Interview Patterns: Nail Your Next Coding Interview: Xu, Alex, Gunawardane, Shaun: 9781736049136: Amazon.com: Books",
       "status_code": 405,
-      "ok": false,
-      "error": null
-    },
-    {
-      "id": null,
-      "url": "https://codegangsta.gitbooks.io/building-web-apps-with-go/content/",
-      "title": "Introduction | Building Web Apps with Go",
-      "status_code": 401,
       "ok": false,
       "error": null
     },
@@ -574,6 +526,14 @@
     },
     {
       "id": null,
+      "url": "https://css-tricks.com",
+      "title": "CSS-Tricks - A Website About Making Websites",
+      "status_code": null,
+      "ok": false,
+      "error": "TimeoutError"
+    },
+    {
+      "id": null,
       "url": "http://loki-lib.sourceforge.net/",
       "title": "Loki download | SourceForge.net",
       "status_code": 403,
@@ -592,14 +552,6 @@
       "id": null,
       "url": "https://software.intel.com/en-us/c-compilers",
       "title": "Compile Cross-Architecture: Intel® oneAPI DPC++/C++ Compiler",
-      "status_code": 403,
-      "ok": false,
-      "error": null
-    },
-    {
-      "id": null,
-      "url": "https://www.peacocktv.com",
-      "title": "Access Denied",
       "status_code": 403,
       "ok": false,
       "error": null

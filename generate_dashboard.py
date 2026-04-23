@@ -16,7 +16,7 @@ def load_data():
 
     # Load website stats
     with open(os.path.join(PROJECT_ROOT, "data/websites.json"), 'r', encoding='utf-8') as f:
-        sites = json.load(f).get('sites', [])
+        sites = json.load(f)
         data["total_sites"] = len(sites)
 
         # Count enriched
