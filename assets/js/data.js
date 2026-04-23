@@ -21,7 +21,7 @@ class DataManager {
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -87,3 +87,6 @@ class DataManager {
 
 const dataManager = new DataManager();
 window.dataManager = dataManager;
+
+// 启动数据加载
+dataManager.load();
