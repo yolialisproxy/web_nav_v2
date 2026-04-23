@@ -13,7 +13,9 @@ class DataManager {
         this.isLoaded = false;
     }
 
-    async load() {
+        async load() {
+        if (this.isLoaded) return;
+
         try {
             const response = await fetch('websites.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
@@ -21,7 +23,7 @@ class DataManager {
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -87,6 +89,3 @@ class DataManager {
 
 const dataManager = new DataManager();
 window.dataManager = dataManager;
-
-// 启动数据加载
-dataManager.load();
