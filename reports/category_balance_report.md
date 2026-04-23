@@ -1,5 +1,5 @@
 # Category Balance Analysis Report
-Generated: 2026-04-23 12:06:07
+Generated: 2026-04-23 13:05:30
 
 ✅ Target rules: **10 - 50 sites per leaf category**
 
