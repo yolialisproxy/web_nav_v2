@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-04-23T08:26:53.916140",
+  "timestamp": "2026-04-23T09:01:17.179648",
   "min_required": 10,
   "max_allowed": 50,
   "summary": {
     "total_leaf_categories": 48,
-    "total_sites": 3342,
+    "total_sites": 3380,
     "balanced": 1,
     "underfilled": 0,
     "overfilled": 0,

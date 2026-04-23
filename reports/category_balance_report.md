@@ -1,5 +1,5 @@
 # Category Balance Analysis Report
-Generated: 2026-04-23 08:26:53
+Generated: 2026-04-23 09:01:17
 
 ✅ Target rules: **10 - 50 sites per leaf category**
 
@@ -8,7 +8,7 @@ Generated: 2026-04-23 08:26:53
 | Metric | Value |
 |--------|-------|
 | Total leaf categories | 48 |
-| Total indexed websites | 3342 |
+| Total indexed websites | 3380 |
 | ✅ Properly balanced | 1 |
 | ⚠️ Underfilled (< 10) | 0 |
 | ⛔ Overfilled (> 50) | 0 |
