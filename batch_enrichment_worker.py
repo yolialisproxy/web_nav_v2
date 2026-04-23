@@ -171,6 +171,7 @@ async def main():
     logger.info("=" * 60)
 
     state = load_state()
+    empty_batch_count = 0
 
     while True:
         # 加载当前数据
@@ -191,7 +192,7 @@ async def main():
                 not site.get('title') or len(site.get('title', '').strip()) < 3
                 or not site.get('description') or len(site.get('description', '').strip()) < 10
             )
-            if need_enrich and site.get('url') and len(targets) < 139:
+            if need_enrich and site.get('url') and len(targets) < BATCH_SIZE:
                 targets.append(site)
 
         state["total_sites"] = total_count
@@ -240,6 +241,18 @@ async def main():
 
         logger.info(f"✅ 批次完成: 成功 {success} | 失败 {failed} | 总进度 {state['progress_pct']}%")
         logger.info("")
+
+        # 空批次检测：连续3次批次无成功记录则正常退出
+        if success == 0:
+            empty_batch_count += 1
+            if empty_batch_count >= 3:
+                logger.info("✅ 连续3批次无成功结果，所有可处理站点已完成，工作进程正常退出")
+                state["status"] = "completed"
+                state["finish_time"] = time.time()
+                save_state(state)
+                return
+        else:
+            empty_batch_count = 0
 
         await asyncio.sleep(BATCH_DELAY)
 

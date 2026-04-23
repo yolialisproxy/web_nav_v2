@@ -1,10 +1,10 @@
 {
   "round": 1,
-  "before_total": 7411,
-  "after_total": 6240,
-  "duplicates_removed": 1170,
-  "invalid_removed": 1,
-  "categories_total": 441,
-  "categories_under_10": 124,
+  "before_total": 3342,
+  "after_total": 702,
+  "duplicates_removed": 2640,
+  "invalid_removed": 0,
+  "categories_total": 225,
+  "categories_under_10": 214,
   "timestamp": "2026-04-21"
 }
