@@ -1,0 +1,98 @@
+{
+  "current_state": {
+    "total_sites": 6289,
+    "total_categories": 272,
+    "balanced_count": 89,
+    "balance_percentage": 32.7,
+    "over_capacity": 51,
+    "under_capacity": 132
+  },
+  "proposed_strategy": {
+    "phase1_over_capacity_split": {
+      "description": "拆分51个超容类，每个拆分为8-15个子类",
+      "affected_categories": [
+        "开发工具/平台开源/GitHub",
+        "AI工具/人工智能/数据分析",
+        "多媒体/视频娱乐/教程",
+        "AI工具/人工智能/代码助手",
+        "AI工具/人工智能/3D生成",
+        "AI工具/人工智能/AI平台",
+        "AI工具/人工智能/产品图生成",
+        "AI工具/人工智能/人脸编辑",
+        "AI工具/人工智能/写作助手",
+        "AI工具/人工智能/动漫风格",
+        "AI工具/人工智能/图像修复",
+        "AI工具/人工智能/图像增强",
+        "AI工具/人工智能/图像扩展",
+        "AI工具/人工智能/图像识别",
+        "AI工具/人工智能/图生图",
+        "AI工具/人工智能/场景生成",
+        "AI工具/人工智能/情感分析",
+        "AI工具/人工智能/推荐系统",
+        "AI工具/人工智能/搜索引擎",
+        "AI工具/人工智能/摘要生成",
+        "AI工具/人工智能/文生图",
+        "AI工具/人工智能/知识图谱",
+        "AI工具/人工智能/翻译服务",
+        "AI工具/人工智能/聊天对话",
+        "AI工具/人工智能/背景移除",
+        "AI工具/人工智能/自动化流程",
+        "AI工具/人工智能/色彩调整",
+        "AI工具/人工智能/草图转图",
+        "AI工具/人工智能/视频生成",
+        "AI工具/人工智能/语音识别",
+        "AI工具/人工智能/超分辨率",
+        "AI工具/人工智能/预测分析",
+        "AI工具/人工智能/风格迁移",
+        "效率办公/AI写作",
+        "效率办公/内容写作",
+        "效率办公/创意激发",
+        "效率办公/剧本创作",
+        "效率办公/协作工具",
+        "效率办公/博客管理",
+        "效率办公/总结摘要",
+        "效率办公/技术写作",
+        "效率办公/改写重述",
+        "效率办公/故事生成",
+        "效率办公/文案优化",
+        "效率办公/标题生成",
+        "效率办公/社交媒体",
+        "效率办公/营销文案",
+        "效率办公/诗歌创作",
+        "效率办公/邮件写作",
+        "系统工具/实用工具/文件工具",
+        "设计工具/UI设计工具"
+      ],
+      "new_sub_categories_total": 740,
+      "estimated_effort": "HIGH"
+    },
+    "phase2_under_category_fill": {
+      "description": "填充132个欠容类，每个补充到10-15个站点",
+      "categories_to_fill": 72,
+      "sites_to_import": 788,
+      "merge_candidates": 60,
+      "estimated_effort": "HIGH"
+    },
+    "phase3_category_merge": {
+      "description": "合并可合并的欠容类，减少分类总数",
+      "merge_count": 60,
+      "estimated_effort": "LOW"
+    }
+  },
+  "expected_outcomes": {
+    "final_total_categories": 901,
+    "final_balanced_categories": 212,
+    "final_balance_percentage": 23.53,
+    "final_total_sites": 7077,
+    "target_achieved": false
+  },
+  "migration_plan": {
+    "notes": "所有迁移都应在单次原子操作中完成，确保数据一致性",
+    "strategy": "先拆分超容类→再填充欠容类→最后微调合并"
+  },
+  "risk_assessment": {
+    "data_consistency": "LOW - 原子写入保证",
+    "frontend_compatibility": "MEDIUM - data.js需要重新生成",
+    "execution_complexity": "HIGH - 涉及6,289个站点重分类"
+  }
+}

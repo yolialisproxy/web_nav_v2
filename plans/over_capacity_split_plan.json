@@ -1,0 +1,4033 @@
+{
+  "开发工具/平台开源/GitHub": {
+    "current_count": 206,
+    "split_dimension": "by_usage_domain_and_tech_stack",
+    "sub_categories": [
+      {
+        "name": "开发工具/平台开源/GitHub-官方仓库",
+        "estimated_count": 45,
+        "description": "官方组织、核心项目"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-AI框架",
+        "estimated_count": 35,
+        "description": "机器学习、深度学习框架"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-前端生态",
+        "estimated_count": 30,
+        "description": "React、Vue、前端工具链"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-后端服务",
+        "estimated_count": 28,
+        "description": "Node.js、Python、Java后端"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-移动开发",
+        "estimated_count": 20,
+        "description": "Android、iOS、跨平台"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-DevOps",
+        "estimated_count": 18,
+        "description": "CI/CD、容器化、监控"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-数据库",
+        "estimated_count": 12,
+        "description": "SQL、NoSQL、存储"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-安全工具",
+        "estimated_count": 10,
+        "description": "渗透测试、漏洞扫描"
+      },
+      {
+        "name": "开发工具/平台开源/GitHub-游戏开发",
+        "estimated_count": 8,
+        "description": "游戏引擎、游戏框架"
+      }
+    ],
+    "total_sub_count": 9
+  },
+  "AI工具/人工智能/数据分析": {
+    "current_count": 196,
+    "split_dimension": "by_data_type_and_industry",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/数据分析/商业智能BI",
+        "estimated_count": 35
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/大数据处理",
+        "estimated_count": 30
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/数据可视化",
+        "estimated_count": 28
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/统计分析",
+        "estimated_count": 25
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/数据清洗",
+        "estimated_count": 22
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/预测分析",
+        "estimated_count": 20
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/实时流处理",
+        "estimated_count": 18
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/数据挖掘",
+        "estimated_count": 18
+      },
+      {
+        "name": "AI工具/人工智能/数据分析/时序分析",
+        "estimated_count": 20
+      }
+    ],
+    "total_sub_count": 9
+  },
+  "多媒体/视频娱乐/教程": {
+    "current_count": 192,
+    "split_dimension": "by_content_topic_and_skill_level",
+    "sub_categories": [
+      {
+        "name": "多媒体/视频娱乐/教程/编程开发",
+        "estimated_count": 40
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/AI人工智能",
+        "estimated_count": 35
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/设计创意",
+        "estimated_count": 30
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/产品运营",
+        "estimated_count": 25
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/学术科研",
+        "estimated_count": 22
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/语言学习",
+        "estimated_count": 20
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/职业发展",
+        "estimated_count": 20
+      },
+      {
+        "name": "多媒体/视频娱乐/教程/生活技能",
+        "estimated_count": 20
+      }
+    ],
+    "total_sub_count": 8
+  },
+  "AI工具/人工智能/代码助手": {
+    "current_count": 177,
+    "split_dimension": "by_programming_language_and_use_case",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/代码助手/Python助手",
+        "estimated_count": 35
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/JavaScript助手",
+        "estimated_count": 30
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/Java助手",
+        "estimated_count": 28
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/Go助手",
+        "estimated_count": 22
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/Rust助手",
+        "estimated_count": 18
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/C++助手",
+        "estimated_count": 18
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/代码审查",
+        "estimated_count": 16
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/代码重构",
+        "estimated_count": 15
+      },
+      {
+        "name": "AI工具/人工智能/代码助手/文档生成",
+        "estimated_count": 15
+      }
+    ],
+    "total_sub_count": 9
+  },
+  "AI工具/人工智能/3D生成": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/3D生成-基础版",
+        "estimated_count": 4,
+        "description": "3D生成的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-进阶版",
+        "estimated_count": 4,
+        "description": "3D生成的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-专业版",
+        "estimated_count": 4,
+        "description": "3D生成的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-企业版",
+        "estimated_count": 4,
+        "description": "3D生成的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-云端",
+        "estimated_count": 4,
+        "description": "3D生成的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-本地",
+        "estimated_count": 4,
+        "description": "3D生成的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-开源",
+        "estimated_count": 4,
+        "description": "3D生成的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-商业",
+        "estimated_count": 4,
+        "description": "3D生成的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-API",
+        "estimated_count": 4,
+        "description": "3D生成的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-桌面",
+        "estimated_count": 4,
+        "description": "3D生成的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-移动",
+        "estimated_count": 4,
+        "description": "3D生成的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-Web",
+        "estimated_count": 4,
+        "description": "3D生成的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-插件",
+        "estimated_count": 4,
+        "description": "3D生成的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-平台",
+        "estimated_count": 4,
+        "description": "3D生成的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/3D生成-工具",
+        "estimated_count": 3,
+        "description": "3D生成的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/AI平台": {
+    "current_count": 100,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/AI平台-基础版",
+        "estimated_count": 7,
+        "description": "AI平台的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-进阶版",
+        "estimated_count": 7,
+        "description": "AI平台的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-专业版",
+        "estimated_count": 7,
+        "description": "AI平台的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-企业版",
+        "estimated_count": 7,
+        "description": "AI平台的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-云端",
+        "estimated_count": 7,
+        "description": "AI平台的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-本地",
+        "estimated_count": 7,
+        "description": "AI平台的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-开源",
+        "estimated_count": 7,
+        "description": "AI平台的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-商业",
+        "estimated_count": 7,
+        "description": "AI平台的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-API",
+        "estimated_count": 7,
+        "description": "AI平台的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-桌面",
+        "estimated_count": 7,
+        "description": "AI平台的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-移动",
+        "estimated_count": 6,
+        "description": "AI平台的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-Web",
+        "estimated_count": 6,
+        "description": "AI平台的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-插件",
+        "estimated_count": 6,
+        "description": "AI平台的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-平台",
+        "estimated_count": 6,
+        "description": "AI平台的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/AI平台-工具",
+        "estimated_count": 6,
+        "description": "AI平台的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/产品图生成": {
+    "current_count": 65,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/产品图生成-基础版",
+        "estimated_count": 5,
+        "description": "产品图生成的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-进阶版",
+        "estimated_count": 5,
+        "description": "产品图生成的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-专业版",
+        "estimated_count": 5,
+        "description": "产品图生成的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-企业版",
+        "estimated_count": 5,
+        "description": "产品图生成的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-云端",
+        "estimated_count": 5,
+        "description": "产品图生成的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-本地",
+        "estimated_count": 4,
+        "description": "产品图生成的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-开源",
+        "estimated_count": 4,
+        "description": "产品图生成的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-商业",
+        "estimated_count": 4,
+        "description": "产品图生成的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-API",
+        "estimated_count": 4,
+        "description": "产品图生成的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-桌面",
+        "estimated_count": 4,
+        "description": "产品图生成的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-移动",
+        "estimated_count": 4,
+        "description": "产品图生成的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-Web",
+        "estimated_count": 4,
+        "description": "产品图生成的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-插件",
+        "estimated_count": 4,
+        "description": "产品图生成的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-平台",
+        "estimated_count": 4,
+        "description": "产品图生成的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/产品图生成-工具",
+        "estimated_count": 4,
+        "description": "产品图生成的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/人脸编辑": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/人脸编辑-基础版",
+        "estimated_count": 4,
+        "description": "人脸编辑的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-进阶版",
+        "estimated_count": 4,
+        "description": "人脸编辑的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-专业版",
+        "estimated_count": 4,
+        "description": "人脸编辑的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-企业版",
+        "estimated_count": 4,
+        "description": "人脸编辑的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-云端",
+        "estimated_count": 4,
+        "description": "人脸编辑的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-本地",
+        "estimated_count": 4,
+        "description": "人脸编辑的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-开源",
+        "estimated_count": 4,
+        "description": "人脸编辑的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-商业",
+        "estimated_count": 4,
+        "description": "人脸编辑的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-API",
+        "estimated_count": 4,
+        "description": "人脸编辑的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-桌面",
+        "estimated_count": 4,
+        "description": "人脸编辑的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-移动",
+        "estimated_count": 4,
+        "description": "人脸编辑的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-Web",
+        "estimated_count": 4,
+        "description": "人脸编辑的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-插件",
+        "estimated_count": 4,
+        "description": "人脸编辑的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-平台",
+        "estimated_count": 4,
+        "description": "人脸编辑的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/人脸编辑-工具",
+        "estimated_count": 3,
+        "description": "人脸编辑的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/写作助手": {
+    "current_count": 90,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/写作助手-基础版",
+        "estimated_count": 6,
+        "description": "写作助手的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-进阶版",
+        "estimated_count": 6,
+        "description": "写作助手的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-专业版",
+        "estimated_count": 6,
+        "description": "写作助手的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-企业版",
+        "estimated_count": 6,
+        "description": "写作助手的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-云端",
+        "estimated_count": 6,
+        "description": "写作助手的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-本地",
+        "estimated_count": 6,
+        "description": "写作助手的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-开源",
+        "estimated_count": 6,
+        "description": "写作助手的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-商业",
+        "estimated_count": 6,
+        "description": "写作助手的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-API",
+        "estimated_count": 6,
+        "description": "写作助手的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-桌面",
+        "estimated_count": 6,
+        "description": "写作助手的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-移动",
+        "estimated_count": 6,
+        "description": "写作助手的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-Web",
+        "estimated_count": 6,
+        "description": "写作助手的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-插件",
+        "estimated_count": 6,
+        "description": "写作助手的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-平台",
+        "estimated_count": 6,
+        "description": "写作助手的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/写作助手-工具",
+        "estimated_count": 6,
+        "description": "写作助手的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/动漫风格": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/动漫风格-基础版",
+        "estimated_count": 4,
+        "description": "动漫风格的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-进阶版",
+        "estimated_count": 4,
+        "description": "动漫风格的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-专业版",
+        "estimated_count": 4,
+        "description": "动漫风格的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-企业版",
+        "estimated_count": 4,
+        "description": "动漫风格的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-云端",
+        "estimated_count": 4,
+        "description": "动漫风格的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-本地",
+        "estimated_count": 4,
+        "description": "动漫风格的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-开源",
+        "estimated_count": 4,
+        "description": "动漫风格的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-商业",
+        "estimated_count": 4,
+        "description": "动漫风格的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-API",
+        "estimated_count": 4,
+        "description": "动漫风格的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-桌面",
+        "estimated_count": 4,
+        "description": "动漫风格的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-移动",
+        "estimated_count": 4,
+        "description": "动漫风格的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-Web",
+        "estimated_count": 4,
+        "description": "动漫风格的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-插件",
+        "estimated_count": 4,
+        "description": "动漫风格的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-平台",
+        "estimated_count": 3,
+        "description": "动漫风格的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/动漫风格-工具",
+        "estimated_count": 3,
+        "description": "动漫风格的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/图像修复": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/图像修复-基础版",
+        "estimated_count": 4,
+        "description": "图像修复的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-进阶版",
+        "estimated_count": 4,
+        "description": "图像修复的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-专业版",
+        "estimated_count": 4,
+        "description": "图像修复的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-企业版",
+        "estimated_count": 4,
+        "description": "图像修复的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-云端",
+        "estimated_count": 4,
+        "description": "图像修复的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-本地",
+        "estimated_count": 4,
+        "description": "图像修复的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-开源",
+        "estimated_count": 4,
+        "description": "图像修复的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-商业",
+        "estimated_count": 4,
+        "description": "图像修复的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-API",
+        "estimated_count": 4,
+        "description": "图像修复的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-桌面",
+        "estimated_count": 4,
+        "description": "图像修复的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-移动",
+        "estimated_count": 4,
+        "description": "图像修复的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-Web",
+        "estimated_count": 4,
+        "description": "图像修复的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-插件",
+        "estimated_count": 4,
+        "description": "图像修复的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-平台",
+        "estimated_count": 4,
+        "description": "图像修复的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像修复-工具",
+        "estimated_count": 3,
+        "description": "图像修复的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/图像增强": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/图像增强-基础版",
+        "estimated_count": 4,
+        "description": "图像增强的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-进阶版",
+        "estimated_count": 4,
+        "description": "图像增强的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-专业版",
+        "estimated_count": 4,
+        "description": "图像增强的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-企业版",
+        "estimated_count": 4,
+        "description": "图像增强的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-云端",
+        "estimated_count": 4,
+        "description": "图像增强的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-本地",
+        "estimated_count": 4,
+        "description": "图像增强的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-开源",
+        "estimated_count": 4,
+        "description": "图像增强的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-商业",
+        "estimated_count": 4,
+        "description": "图像增强的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-API",
+        "estimated_count": 4,
+        "description": "图像增强的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-桌面",
+        "estimated_count": 4,
+        "description": "图像增强的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-移动",
+        "estimated_count": 4,
+        "description": "图像增强的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-Web",
+        "estimated_count": 4,
+        "description": "图像增强的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-插件",
+        "estimated_count": 4,
+        "description": "图像增强的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-平台",
+        "estimated_count": 3,
+        "description": "图像增强的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像增强-工具",
+        "estimated_count": 3,
+        "description": "图像增强的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/图像扩展": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/图像扩展-基础版",
+        "estimated_count": 4,
+        "description": "图像扩展的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-进阶版",
+        "estimated_count": 4,
+        "description": "图像扩展的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-专业版",
+        "estimated_count": 4,
+        "description": "图像扩展的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-企业版",
+        "estimated_count": 4,
+        "description": "图像扩展的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-云端",
+        "estimated_count": 4,
+        "description": "图像扩展的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-本地",
+        "estimated_count": 4,
+        "description": "图像扩展的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-开源",
+        "estimated_count": 4,
+        "description": "图像扩展的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-商业",
+        "estimated_count": 4,
+        "description": "图像扩展的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-API",
+        "estimated_count": 4,
+        "description": "图像扩展的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-桌面",
+        "estimated_count": 4,
+        "description": "图像扩展的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-移动",
+        "estimated_count": 4,
+        "description": "图像扩展的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-Web",
+        "estimated_count": 4,
+        "description": "图像扩展的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-插件",
+        "estimated_count": 4,
+        "description": "图像扩展的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-平台",
+        "estimated_count": 4,
+        "description": "图像扩展的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像扩展-工具",
+        "estimated_count": 3,
+        "description": "图像扩展的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/图像识别": {
+    "current_count": 140,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/图像识别-基础版",
+        "estimated_count": 10,
+        "description": "图像识别的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-进阶版",
+        "estimated_count": 10,
+        "description": "图像识别的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-专业版",
+        "estimated_count": 10,
+        "description": "图像识别的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-企业版",
+        "estimated_count": 10,
+        "description": "图像识别的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-云端",
+        "estimated_count": 10,
+        "description": "图像识别的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-本地",
+        "estimated_count": 9,
+        "description": "图像识别的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-开源",
+        "estimated_count": 9,
+        "description": "图像识别的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-商业",
+        "estimated_count": 9,
+        "description": "图像识别的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-API",
+        "estimated_count": 9,
+        "description": "图像识别的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-桌面",
+        "estimated_count": 9,
+        "description": "图像识别的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-移动",
+        "estimated_count": 9,
+        "description": "图像识别的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-Web",
+        "estimated_count": 9,
+        "description": "图像识别的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-插件",
+        "estimated_count": 9,
+        "description": "图像识别的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-平台",
+        "estimated_count": 9,
+        "description": "图像识别的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/图像识别-工具",
+        "estimated_count": 9,
+        "description": "图像识别的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/图生图": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/图生图-基础版",
+        "estimated_count": 4,
+        "description": "图生图的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-进阶版",
+        "estimated_count": 4,
+        "description": "图生图的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-专业版",
+        "estimated_count": 4,
+        "description": "图生图的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-企业版",
+        "estimated_count": 4,
+        "description": "图生图的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-云端",
+        "estimated_count": 4,
+        "description": "图生图的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-本地",
+        "estimated_count": 4,
+        "description": "图生图的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-开源",
+        "estimated_count": 4,
+        "description": "图生图的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-商业",
+        "estimated_count": 4,
+        "description": "图生图的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-API",
+        "estimated_count": 4,
+        "description": "图生图的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-桌面",
+        "estimated_count": 4,
+        "description": "图生图的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-移动",
+        "estimated_count": 4,
+        "description": "图生图的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-Web",
+        "estimated_count": 4,
+        "description": "图生图的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-插件",
+        "estimated_count": 4,
+        "description": "图生图的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-平台",
+        "estimated_count": 4,
+        "description": "图生图的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/图生图-工具",
+        "estimated_count": 3,
+        "description": "图生图的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/场景生成": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/场景生成-基础版",
+        "estimated_count": 4,
+        "description": "场景生成的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-进阶版",
+        "estimated_count": 4,
+        "description": "场景生成的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-专业版",
+        "estimated_count": 4,
+        "description": "场景生成的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-企业版",
+        "estimated_count": 4,
+        "description": "场景生成的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-云端",
+        "estimated_count": 4,
+        "description": "场景生成的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-本地",
+        "estimated_count": 4,
+        "description": "场景生成的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-开源",
+        "estimated_count": 4,
+        "description": "场景生成的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-商业",
+        "estimated_count": 4,
+        "description": "场景生成的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-API",
+        "estimated_count": 4,
+        "description": "场景生成的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-桌面",
+        "estimated_count": 4,
+        "description": "场景生成的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-移动",
+        "estimated_count": 4,
+        "description": "场景生成的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-Web",
+        "estimated_count": 4,
+        "description": "场景生成的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-插件",
+        "estimated_count": 4,
+        "description": "场景生成的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-平台",
+        "estimated_count": 3,
+        "description": "场景生成的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/场景生成-工具",
+        "estimated_count": 3,
+        "description": "场景生成的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/情感分析": {
+    "current_count": 86,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/情感分析-基础版",
+        "estimated_count": 6,
+        "description": "情感分析的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-进阶版",
+        "estimated_count": 6,
+        "description": "情感分析的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-专业版",
+        "estimated_count": 6,
+        "description": "情感分析的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-企业版",
+        "estimated_count": 6,
+        "description": "情感分析的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-云端",
+        "estimated_count": 6,
+        "description": "情感分析的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-本地",
+        "estimated_count": 6,
+        "description": "情感分析的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-开源",
+        "estimated_count": 6,
+        "description": "情感分析的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-商业",
+        "estimated_count": 6,
+        "description": "情感分析的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-API",
+        "estimated_count": 6,
+        "description": "情感分析的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-桌面",
+        "estimated_count": 6,
+        "description": "情感分析的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-移动",
+        "estimated_count": 6,
+        "description": "情感分析的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-Web",
+        "estimated_count": 5,
+        "description": "情感分析的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-插件",
+        "estimated_count": 5,
+        "description": "情感分析的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-平台",
+        "estimated_count": 5,
+        "description": "情感分析的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/情感分析-工具",
+        "estimated_count": 5,
+        "description": "情感分析的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/推荐系统": {
+    "current_count": 86,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/推荐系统-基础版",
+        "estimated_count": 6,
+        "description": "推荐系统的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-进阶版",
+        "estimated_count": 6,
+        "description": "推荐系统的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-专业版",
+        "estimated_count": 6,
+        "description": "推荐系统的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-企业版",
+        "estimated_count": 6,
+        "description": "推荐系统的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-云端",
+        "estimated_count": 6,
+        "description": "推荐系统的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-本地",
+        "estimated_count": 6,
+        "description": "推荐系统的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-开源",
+        "estimated_count": 6,
+        "description": "推荐系统的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-商业",
+        "estimated_count": 6,
+        "description": "推荐系统的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-API",
+        "estimated_count": 6,
+        "description": "推荐系统的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-桌面",
+        "estimated_count": 6,
+        "description": "推荐系统的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-移动",
+        "estimated_count": 6,
+        "description": "推荐系统的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-Web",
+        "estimated_count": 5,
+        "description": "推荐系统的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-插件",
+        "estimated_count": 5,
+        "description": "推荐系统的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-平台",
+        "estimated_count": 5,
+        "description": "推荐系统的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/推荐系统-工具",
+        "estimated_count": 5,
+        "description": "推荐系统的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/搜索引擎": {
+    "current_count": 104,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/搜索引擎-基础版",
+        "estimated_count": 7,
+        "description": "搜索引擎的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-进阶版",
+        "estimated_count": 7,
+        "description": "搜索引擎的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-专业版",
+        "estimated_count": 7,
+        "description": "搜索引擎的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-企业版",
+        "estimated_count": 7,
+        "description": "搜索引擎的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-云端",
+        "estimated_count": 7,
+        "description": "搜索引擎的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-本地",
+        "estimated_count": 7,
+        "description": "搜索引擎的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-开源",
+        "estimated_count": 7,
+        "description": "搜索引擎的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-商业",
+        "estimated_count": 7,
+        "description": "搜索引擎的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-API",
+        "estimated_count": 7,
+        "description": "搜索引擎的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-桌面",
+        "estimated_count": 7,
+        "description": "搜索引擎的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-移动",
+        "estimated_count": 7,
+        "description": "搜索引擎的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-Web",
+        "estimated_count": 7,
+        "description": "搜索引擎的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-插件",
+        "estimated_count": 7,
+        "description": "搜索引擎的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-平台",
+        "estimated_count": 7,
+        "description": "搜索引擎的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/搜索引擎-工具",
+        "estimated_count": 6,
+        "description": "搜索引擎的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/摘要生成": {
+    "current_count": 88,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/摘要生成-基础版",
+        "estimated_count": 6,
+        "description": "摘要生成的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-进阶版",
+        "estimated_count": 6,
+        "description": "摘要生成的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-专业版",
+        "estimated_count": 6,
+        "description": "摘要生成的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-企业版",
+        "estimated_count": 6,
+        "description": "摘要生成的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-云端",
+        "estimated_count": 6,
+        "description": "摘要生成的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-本地",
+        "estimated_count": 6,
+        "description": "摘要生成的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-开源",
+        "estimated_count": 6,
+        "description": "摘要生成的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-商业",
+        "estimated_count": 6,
+        "description": "摘要生成的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-API",
+        "estimated_count": 6,
+        "description": "摘要生成的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-桌面",
+        "estimated_count": 6,
+        "description": "摘要生成的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-移动",
+        "estimated_count": 6,
+        "description": "摘要生成的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-Web",
+        "estimated_count": 6,
+        "description": "摘要生成的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-插件",
+        "estimated_count": 6,
+        "description": "摘要生成的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-平台",
+        "estimated_count": 5,
+        "description": "摘要生成的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/摘要生成-工具",
+        "estimated_count": 5,
+        "description": "摘要生成的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/文生图": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/文生图-基础版",
+        "estimated_count": 4,
+        "description": "文生图的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-进阶版",
+        "estimated_count": 4,
+        "description": "文生图的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-专业版",
+        "estimated_count": 4,
+        "description": "文生图的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-企业版",
+        "estimated_count": 4,
+        "description": "文生图的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-云端",
+        "estimated_count": 4,
+        "description": "文生图的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-本地",
+        "estimated_count": 4,
+        "description": "文生图的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-开源",
+        "estimated_count": 4,
+        "description": "文生图的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-商业",
+        "estimated_count": 4,
+        "description": "文生图的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-API",
+        "estimated_count": 4,
+        "description": "文生图的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-桌面",
+        "estimated_count": 4,
+        "description": "文生图的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-移动",
+        "estimated_count": 4,
+        "description": "文生图的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-Web",
+        "estimated_count": 4,
+        "description": "文生图的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-插件",
+        "estimated_count": 4,
+        "description": "文生图的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-平台",
+        "estimated_count": 4,
+        "description": "文生图的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/文生图-工具",
+        "estimated_count": 3,
+        "description": "文生图的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/知识图谱": {
+    "current_count": 94,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/知识图谱-基础版",
+        "estimated_count": 7,
+        "description": "知识图谱的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-进阶版",
+        "estimated_count": 7,
+        "description": "知识图谱的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-专业版",
+        "estimated_count": 7,
+        "description": "知识图谱的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-企业版",
+        "estimated_count": 7,
+        "description": "知识图谱的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-云端",
+        "estimated_count": 6,
+        "description": "知识图谱的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-本地",
+        "estimated_count": 6,
+        "description": "知识图谱的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-开源",
+        "estimated_count": 6,
+        "description": "知识图谱的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-商业",
+        "estimated_count": 6,
+        "description": "知识图谱的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-API",
+        "estimated_count": 6,
+        "description": "知识图谱的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-桌面",
+        "estimated_count": 6,
+        "description": "知识图谱的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-移动",
+        "estimated_count": 6,
+        "description": "知识图谱的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-Web",
+        "estimated_count": 6,
+        "description": "知识图谱的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-插件",
+        "estimated_count": 6,
+        "description": "知识图谱的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-平台",
+        "estimated_count": 6,
+        "description": "知识图谱的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/知识图谱-工具",
+        "estimated_count": 6,
+        "description": "知识图谱的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/翻译服务": {
+    "current_count": 86,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/翻译服务-基础版",
+        "estimated_count": 6,
+        "description": "翻译服务的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-进阶版",
+        "estimated_count": 6,
+        "description": "翻译服务的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-专业版",
+        "estimated_count": 6,
+        "description": "翻译服务的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-企业版",
+        "estimated_count": 6,
+        "description": "翻译服务的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-云端",
+        "estimated_count": 6,
+        "description": "翻译服务的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-本地",
+        "estimated_count": 6,
+        "description": "翻译服务的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-开源",
+        "estimated_count": 6,
+        "description": "翻译服务的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-商业",
+        "estimated_count": 6,
+        "description": "翻译服务的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-API",
+        "estimated_count": 6,
+        "description": "翻译服务的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-桌面",
+        "estimated_count": 6,
+        "description": "翻译服务的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-移动",
+        "estimated_count": 6,
+        "description": "翻译服务的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-Web",
+        "estimated_count": 5,
+        "description": "翻译服务的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-插件",
+        "estimated_count": 5,
+        "description": "翻译服务的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-平台",
+        "estimated_count": 5,
+        "description": "翻译服务的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/翻译服务-工具",
+        "estimated_count": 5,
+        "description": "翻译服务的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/聊天对话": {
+    "current_count": 88,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/聊天对话-基础版",
+        "estimated_count": 6,
+        "description": "聊天对话的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-进阶版",
+        "estimated_count": 6,
+        "description": "聊天对话的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-专业版",
+        "estimated_count": 6,
+        "description": "聊天对话的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-企业版",
+        "estimated_count": 6,
+        "description": "聊天对话的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-云端",
+        "estimated_count": 6,
+        "description": "聊天对话的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-本地",
+        "estimated_count": 6,
+        "description": "聊天对话的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-开源",
+        "estimated_count": 6,
+        "description": "聊天对话的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-商业",
+        "estimated_count": 6,
+        "description": "聊天对话的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-API",
+        "estimated_count": 6,
+        "description": "聊天对话的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-桌面",
+        "estimated_count": 6,
+        "description": "聊天对话的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-移动",
+        "estimated_count": 6,
+        "description": "聊天对话的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-Web",
+        "estimated_count": 6,
+        "description": "聊天对话的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-插件",
+        "estimated_count": 6,
+        "description": "聊天对话的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-平台",
+        "estimated_count": 5,
+        "description": "聊天对话的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/聊天对话-工具",
+        "estimated_count": 5,
+        "description": "聊天对话的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/背景移除": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/背景移除-基础版",
+        "estimated_count": 4,
+        "description": "背景移除的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-进阶版",
+        "estimated_count": 4,
+        "description": "背景移除的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-专业版",
+        "estimated_count": 4,
+        "description": "背景移除的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-企业版",
+        "estimated_count": 4,
+        "description": "背景移除的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-云端",
+        "estimated_count": 4,
+        "description": "背景移除的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-本地",
+        "estimated_count": 4,
+        "description": "背景移除的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-开源",
+        "estimated_count": 4,
+        "description": "背景移除的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-商业",
+        "estimated_count": 4,
+        "description": "背景移除的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-API",
+        "estimated_count": 4,
+        "description": "背景移除的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-桌面",
+        "estimated_count": 4,
+        "description": "背景移除的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-移动",
+        "estimated_count": 4,
+        "description": "背景移除的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-Web",
+        "estimated_count": 4,
+        "description": "背景移除的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-插件",
+        "estimated_count": 4,
+        "description": "背景移除的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-平台",
+        "estimated_count": 4,
+        "description": "背景移除的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/背景移除-工具",
+        "estimated_count": 3,
+        "description": "背景移除的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/自动化流程": {
+    "current_count": 86,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/自动化流程-基础版",
+        "estimated_count": 6,
+        "description": "自动化流程的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-进阶版",
+        "estimated_count": 6,
+        "description": "自动化流程的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-专业版",
+        "estimated_count": 6,
+        "description": "自动化流程的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-企业版",
+        "estimated_count": 6,
+        "description": "自动化流程的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-云端",
+        "estimated_count": 6,
+        "description": "自动化流程的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-本地",
+        "estimated_count": 6,
+        "description": "自动化流程的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-开源",
+        "estimated_count": 6,
+        "description": "自动化流程的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-商业",
+        "estimated_count": 6,
+        "description": "自动化流程的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-API",
+        "estimated_count": 6,
+        "description": "自动化流程的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-桌面",
+        "estimated_count": 6,
+        "description": "自动化流程的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-移动",
+        "estimated_count": 6,
+        "description": "自动化流程的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-Web",
+        "estimated_count": 5,
+        "description": "自动化流程的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-插件",
+        "estimated_count": 5,
+        "description": "自动化流程的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-平台",
+        "estimated_count": 5,
+        "description": "自动化流程的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/自动化流程-工具",
+        "estimated_count": 5,
+        "description": "自动化流程的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/色彩调整": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/色彩调整-基础版",
+        "estimated_count": 4,
+        "description": "色彩调整的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-进阶版",
+        "estimated_count": 4,
+        "description": "色彩调整的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-专业版",
+        "estimated_count": 4,
+        "description": "色彩调整的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-企业版",
+        "estimated_count": 4,
+        "description": "色彩调整的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-云端",
+        "estimated_count": 4,
+        "description": "色彩调整的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-本地",
+        "estimated_count": 4,
+        "description": "色彩调整的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-开源",
+        "estimated_count": 4,
+        "description": "色彩调整的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-商业",
+        "estimated_count": 4,
+        "description": "色彩调整的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-API",
+        "estimated_count": 4,
+        "description": "色彩调整的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-桌面",
+        "estimated_count": 4,
+        "description": "色彩调整的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-移动",
+        "estimated_count": 4,
+        "description": "色彩调整的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-Web",
+        "estimated_count": 4,
+        "description": "色彩调整的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-插件",
+        "estimated_count": 4,
+        "description": "色彩调整的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-平台",
+        "estimated_count": 3,
+        "description": "色彩调整的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/色彩调整-工具",
+        "estimated_count": 3,
+        "description": "色彩调整的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/草图转图": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/草图转图-基础版",
+        "estimated_count": 4,
+        "description": "草图转图的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-进阶版",
+        "estimated_count": 4,
+        "description": "草图转图的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-专业版",
+        "estimated_count": 4,
+        "description": "草图转图的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-企业版",
+        "estimated_count": 4,
+        "description": "草图转图的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-云端",
+        "estimated_count": 4,
+        "description": "草图转图的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-本地",
+        "estimated_count": 4,
+        "description": "草图转图的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-开源",
+        "estimated_count": 4,
+        "description": "草图转图的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-商业",
+        "estimated_count": 4,
+        "description": "草图转图的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-API",
+        "estimated_count": 4,
+        "description": "草图转图的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-桌面",
+        "estimated_count": 4,
+        "description": "草图转图的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-移动",
+        "estimated_count": 4,
+        "description": "草图转图的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-Web",
+        "estimated_count": 4,
+        "description": "草图转图的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-插件",
+        "estimated_count": 4,
+        "description": "草图转图的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-平台",
+        "estimated_count": 3,
+        "description": "草图转图的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/草图转图-工具",
+        "estimated_count": 3,
+        "description": "草图转图的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/视频生成": {
+    "current_count": 153,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/视频生成-基础版",
+        "estimated_count": 11,
+        "description": "视频生成的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-进阶版",
+        "estimated_count": 11,
+        "description": "视频生成的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-专业版",
+        "estimated_count": 11,
+        "description": "视频生成的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-企业版",
+        "estimated_count": 10,
+        "description": "视频生成的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-云端",
+        "estimated_count": 10,
+        "description": "视频生成的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-本地",
+        "estimated_count": 10,
+        "description": "视频生成的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-开源",
+        "estimated_count": 10,
+        "description": "视频生成的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-商业",
+        "estimated_count": 10,
+        "description": "视频生成的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-API",
+        "estimated_count": 10,
+        "description": "视频生成的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-桌面",
+        "estimated_count": 10,
+        "description": "视频生成的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-移动",
+        "estimated_count": 10,
+        "description": "视频生成的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-Web",
+        "estimated_count": 10,
+        "description": "视频生成的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-插件",
+        "estimated_count": 10,
+        "description": "视频生成的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-平台",
+        "estimated_count": 10,
+        "description": "视频生成的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/视频生成-工具",
+        "estimated_count": 10,
+        "description": "视频生成的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/语音识别": {
+    "current_count": 88,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/语音识别-基础版",
+        "estimated_count": 6,
+        "description": "语音识别的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-进阶版",
+        "estimated_count": 6,
+        "description": "语音识别的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-专业版",
+        "estimated_count": 6,
+        "description": "语音识别的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-企业版",
+        "estimated_count": 6,
+        "description": "语音识别的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-云端",
+        "estimated_count": 6,
+        "description": "语音识别的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-本地",
+        "estimated_count": 6,
+        "description": "语音识别的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-开源",
+        "estimated_count": 6,
+        "description": "语音识别的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-商业",
+        "estimated_count": 6,
+        "description": "语音识别的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-API",
+        "estimated_count": 6,
+        "description": "语音识别的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-桌面",
+        "estimated_count": 6,
+        "description": "语音识别的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-移动",
+        "estimated_count": 6,
+        "description": "语音识别的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-Web",
+        "estimated_count": 6,
+        "description": "语音识别的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-插件",
+        "estimated_count": 6,
+        "description": "语音识别的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-平台",
+        "estimated_count": 5,
+        "description": "语音识别的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/语音识别-工具",
+        "estimated_count": 5,
+        "description": "语音识别的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/超分辨率": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/超分辨率-基础版",
+        "estimated_count": 4,
+        "description": "超分辨率的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-进阶版",
+        "estimated_count": 4,
+        "description": "超分辨率的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-专业版",
+        "estimated_count": 4,
+        "description": "超分辨率的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-企业版",
+        "estimated_count": 4,
+        "description": "超分辨率的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-云端",
+        "estimated_count": 4,
+        "description": "超分辨率的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-本地",
+        "estimated_count": 4,
+        "description": "超分辨率的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-开源",
+        "estimated_count": 4,
+        "description": "超分辨率的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-商业",
+        "estimated_count": 4,
+        "description": "超分辨率的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-API",
+        "estimated_count": 4,
+        "description": "超分辨率的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-桌面",
+        "estimated_count": 4,
+        "description": "超分辨率的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-移动",
+        "estimated_count": 4,
+        "description": "超分辨率的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-Web",
+        "estimated_count": 4,
+        "description": "超分辨率的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-插件",
+        "estimated_count": 4,
+        "description": "超分辨率的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-平台",
+        "estimated_count": 4,
+        "description": "超分辨率的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/超分辨率-工具",
+        "estimated_count": 3,
+        "description": "超分辨率的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/预测分析": {
+    "current_count": 86,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/预测分析-基础版",
+        "estimated_count": 6,
+        "description": "预测分析的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-进阶版",
+        "estimated_count": 6,
+        "description": "预测分析的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-专业版",
+        "estimated_count": 6,
+        "description": "预测分析的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-企业版",
+        "estimated_count": 6,
+        "description": "预测分析的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-云端",
+        "estimated_count": 6,
+        "description": "预测分析的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-本地",
+        "estimated_count": 6,
+        "description": "预测分析的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-开源",
+        "estimated_count": 6,
+        "description": "预测分析的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-商业",
+        "estimated_count": 6,
+        "description": "预测分析的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-API",
+        "estimated_count": 6,
+        "description": "预测分析的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-桌面",
+        "estimated_count": 6,
+        "description": "预测分析的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-移动",
+        "estimated_count": 6,
+        "description": "预测分析的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-Web",
+        "estimated_count": 5,
+        "description": "预测分析的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-插件",
+        "estimated_count": 5,
+        "description": "预测分析的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-平台",
+        "estimated_count": 5,
+        "description": "预测分析的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/预测分析-工具",
+        "estimated_count": 5,
+        "description": "预测分析的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "AI工具/人工智能/风格迁移": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "AI工具/人工智能/风格迁移-基础版",
+        "estimated_count": 4,
+        "description": "风格迁移的基础版类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-进阶版",
+        "estimated_count": 4,
+        "description": "风格迁移的进阶版类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-专业版",
+        "estimated_count": 4,
+        "description": "风格迁移的专业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-企业版",
+        "estimated_count": 4,
+        "description": "风格迁移的企业版类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-云端",
+        "estimated_count": 4,
+        "description": "风格迁移的云端类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-本地",
+        "estimated_count": 4,
+        "description": "风格迁移的本地类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-开源",
+        "estimated_count": 4,
+        "description": "风格迁移的开源类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-商业",
+        "estimated_count": 4,
+        "description": "风格迁移的商业类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-API",
+        "estimated_count": 4,
+        "description": "风格迁移的API类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-桌面",
+        "estimated_count": 4,
+        "description": "风格迁移的桌面类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-移动",
+        "estimated_count": 4,
+        "description": "风格迁移的移动类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-Web",
+        "estimated_count": 4,
+        "description": "风格迁移的Web类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-插件",
+        "estimated_count": 4,
+        "description": "风格迁移的插件类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-平台",
+        "estimated_count": 4,
+        "description": "风格迁移的平台类型"
+      },
+      {
+        "name": "AI工具/人工智能/风格迁移-工具",
+        "estimated_count": 3,
+        "description": "风格迁移的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/AI写作": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/AI写作/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/AI写作/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/内容写作": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/内容写作/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/内容写作/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/创意激发": {
+    "current_count": 57,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/创意激发/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-插件",
+        "estimated_count": 3,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/创意激发/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/剧本创作": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/剧本创作/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-平台",
+        "estimated_count": 4,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/剧本创作/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/协作工具": {
+    "current_count": 69,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/协作工具/通用-基础版",
+        "estimated_count": 5,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-进阶版",
+        "estimated_count": 5,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-专业版",
+        "estimated_count": 5,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-企业版",
+        "estimated_count": 5,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-云端",
+        "estimated_count": 5,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-本地",
+        "estimated_count": 5,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-开源",
+        "estimated_count": 5,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-商业",
+        "estimated_count": 5,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-API",
+        "estimated_count": 5,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-平台",
+        "estimated_count": 4,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/协作工具/通用-工具",
+        "estimated_count": 4,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/博客管理": {
+    "current_count": 65,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/博客管理/通用-基础版",
+        "estimated_count": 5,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-进阶版",
+        "estimated_count": 5,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-专业版",
+        "estimated_count": 5,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-企业版",
+        "estimated_count": 5,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-云端",
+        "estimated_count": 5,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-平台",
+        "estimated_count": 4,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/博客管理/通用-工具",
+        "estimated_count": 4,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/总结摘要": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/总结摘要/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-平台",
+        "estimated_count": 4,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/总结摘要/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/技术写作": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/技术写作/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/技术写作/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/改写重述": {
+    "current_count": 57,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/改写重述/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-插件",
+        "estimated_count": 3,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/改写重述/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/故事生成": {
+    "current_count": 57,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/故事生成/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-插件",
+        "estimated_count": 3,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/故事生成/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/文案优化": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/文案优化/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/文案优化/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/标题生成": {
+    "current_count": 57,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/标题生成/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-插件",
+        "estimated_count": 3,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/标题生成/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/社交媒体": {
+    "current_count": 59,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/社交媒体/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-平台",
+        "estimated_count": 4,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/社交媒体/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/营销文案": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/营销文案/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/营销文案/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/诗歌创作": {
+    "current_count": 58,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/诗歌创作/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-插件",
+        "estimated_count": 4,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/诗歌创作/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "效率办公/邮件写作": {
+    "current_count": 57,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "效率办公/邮件写作/通用-基础版",
+        "estimated_count": 4,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-进阶版",
+        "estimated_count": 4,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-专业版",
+        "estimated_count": 4,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-企业版",
+        "estimated_count": 4,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-云端",
+        "estimated_count": 4,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-本地",
+        "estimated_count": 4,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-开源",
+        "estimated_count": 4,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-商业",
+        "estimated_count": 4,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-API",
+        "estimated_count": 4,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-桌面",
+        "estimated_count": 4,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-移动",
+        "estimated_count": 4,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-Web",
+        "estimated_count": 4,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-插件",
+        "estimated_count": 3,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-平台",
+        "estimated_count": 3,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "效率办公/邮件写作/通用-工具",
+        "estimated_count": 3,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "系统工具/实用工具/文件工具": {
+    "current_count": 121,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "系统工具/实用工具/文件工具-基础版",
+        "estimated_count": 9,
+        "description": "文件工具的基础版类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-进阶版",
+        "estimated_count": 8,
+        "description": "文件工具的进阶版类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-专业版",
+        "estimated_count": 8,
+        "description": "文件工具的专业版类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-企业版",
+        "estimated_count": 8,
+        "description": "文件工具的企业版类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-云端",
+        "estimated_count": 8,
+        "description": "文件工具的云端类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-本地",
+        "estimated_count": 8,
+        "description": "文件工具的本地类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-开源",
+        "estimated_count": 8,
+        "description": "文件工具的开源类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-商业",
+        "estimated_count": 8,
+        "description": "文件工具的商业类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-API",
+        "estimated_count": 8,
+        "description": "文件工具的API类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-桌面",
+        "estimated_count": 8,
+        "description": "文件工具的桌面类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-移动",
+        "estimated_count": 8,
+        "description": "文件工具的移动类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-Web",
+        "estimated_count": 8,
+        "description": "文件工具的Web类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-插件",
+        "estimated_count": 8,
+        "description": "文件工具的插件类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-平台",
+        "estimated_count": 8,
+        "description": "文件工具的平台类型"
+      },
+      {
+        "name": "系统工具/实用工具/文件工具-工具",
+        "estimated_count": 8,
+        "description": "文件工具的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  },
+  "设计工具/UI设计工具": {
+    "current_count": 125,
+    "split_dimension": "by_feature_and_deployment",
+    "sub_categories": [
+      {
+        "name": "设计工具/UI设计工具/通用-基础版",
+        "estimated_count": 9,
+        "description": "通用的基础版类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-进阶版",
+        "estimated_count": 9,
+        "description": "通用的进阶版类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-专业版",
+        "estimated_count": 9,
+        "description": "通用的专业版类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-企业版",
+        "estimated_count": 9,
+        "description": "通用的企业版类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-云端",
+        "estimated_count": 9,
+        "description": "通用的云端类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-本地",
+        "estimated_count": 8,
+        "description": "通用的本地类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-开源",
+        "estimated_count": 8,
+        "description": "通用的开源类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-商业",
+        "estimated_count": 8,
+        "description": "通用的商业类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-API",
+        "estimated_count": 8,
+        "description": "通用的API类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-桌面",
+        "estimated_count": 8,
+        "description": "通用的桌面类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-移动",
+        "estimated_count": 8,
+        "description": "通用的移动类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-Web",
+        "estimated_count": 8,
+        "description": "通用的Web类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-插件",
+        "estimated_count": 8,
+        "description": "通用的插件类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-平台",
+        "estimated_count": 8,
+        "description": "通用的平台类型"
+      },
+      {
+        "name": "设计工具/UI设计工具/通用-工具",
+        "estimated_count": 8,
+        "description": "通用的工具类型"
+      }
+    ],
+    "total_sub_count": 15
+  }
+}

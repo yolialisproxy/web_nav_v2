@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /data/
+
+Sitemap: https://yolialisproxy.github.io/web_nav/sitemap.xml

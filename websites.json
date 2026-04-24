@@ -4,7 +4,7 @@
     "title": "0ad/0ad: The main repository for pyrogenesis and 0 A.D.: Empires Ascendant - 0ad - Wildfire Games",
     "description": "0ad - The main repository for pyrogenesis and 0 A.D.: Empires Ascendant",
     "_cat": "AI智能/AI视频/资源",
-    "category": "开发工具/平台开源/GitLab",
+    "category": "开发工具/杂项/合并分类",
     "name": "0ad/0ad: The main repository for pyrogenesis and 0 A.D.: Emp"
   },
   {
@@ -89,7 +89,7 @@
     "description": "The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations, interactive dashboards and other media.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "开发工具/平台开源/Gitee",
+    "category": "开发工具/杂项/合并分类",
     "name": "Project Jupyter"
   },
   {
@@ -179,7 +179,7 @@
     "description": "Bring DevOps practices to your projects for automatic, reproducible, and fast machine learning.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "开发工具/平台开源/Bitbucket",
+    "category": "开发工具/杂项/合并分类",
     "name": "CML · Continuous Machine Learning"
   },
   {
@@ -188,7 +188,7 @@
     "description": "Open-source version control system for Data Science and Machine Learning projects. Git-like experience to organize your data, models, and experiments.",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "开发工具/平台开源/SourceForge",
+    "category": "开发工具/杂项/合并分类",
     "name": "Home – DVC"
   },
   {
@@ -247,7 +247,7 @@
     "description": "Curate and annotate vision, audio, and LLM datasets, track experiments, and manage models on a single platform",
     "source": "awesome",
     "_cat": "AI智能/AI视频/资源",
-    "category": "学术科研/工具教程/数据集",
+    "category": "学术科研/杂项/合并分类",
     "name": "DagsHub: Everything you need to manage multimodal AI"
   },
   {
@@ -336,7 +336,7 @@
     "title": "Colanode - Open-source & local-first collaboration infrastructure",
     "description": "Colanode is an all-in-one workspace for your team. Chat, notes, files, wiki, project-management, and more.",
     "_cat": "AI智能/AI视频/社区",
-    "category": "开发工具/平台开源/GitHub替代",
+    "category": "开发工具/杂项/合并分类",
     "name": "Colanode - Open-source & local-first collaboration infrastru"
   },
   {
@@ -570,7 +570,7 @@
     "description": "Learn Web Design & Development with SitePoint tutorials, courses and books - HTML5, CSS3, JavaScript, PHP, mobile app development, Responsive Web Design",
     "title": "SitePoint — Learn HTML, CSS, JavaScript, PHP,",
     "_cat": "资源素材/图片/社区",
-    "category": "设计工具/图片社区"
+    "category": "设计工具/杂项/合并分类"
   },
   {
     "url": "https://www.iconfinder.com",
@@ -593,7 +593,7 @@
     "title": "readflow",
     "description": "Read your Internet article flow in one place with complete peace of mind and freedom.",
     "_cat": "资源素材/字体/资源",
-    "category": "设计工具/字体资源",
+    "category": "设计工具/杂项/合并分类",
     "name": "readflow"
   },
   {
@@ -633,7 +633,7 @@
     "title": "raylib",
     "description": "raylib is a simple and easy-to-use library to enjoy videogames programming.",
     "_cat": "资源素材/字体/社区",
-    "category": "设计工具/字体社区",
+    "category": "设计工具/杂项/合并分类",
     "name": "raylib"
   },
   {
@@ -641,7 +641,7 @@
     "title": "Cooklang – Recipe Markup Language",
     "description": "Cooklang is a markup language for recipes.",
     "_cat": "资源素材/字体/服务",
-    "category": "设计工具/字体服务",
+    "category": "设计工具/杂项/合并分类",
     "name": "Cooklang – Recipe Markup Language"
   },
   {
@@ -698,7 +698,7 @@
     "description": "Bit manipulation explained: the bit twiddler",
     "source": "awesome",
     "_cat": "资源素材/ppt模板/教程",
-    "category": "设计工具/模板教程",
+    "category": "设计工具/杂项/合并分类",
     "name": "the bit twiddler"
   },
   {
@@ -706,7 +706,7 @@
     "title": "pixelfed",
     "description": "The original Pixelfed instance, operated by the main developer @dansup",
     "_cat": "资源素材/ppt模板/社区",
-    "category": "设计工具/模板社区",
+    "category": "设计工具/杂项/合并分类",
     "name": "pixelfed"
   },
   {
@@ -714,7 +714,7 @@
     "title": "Kimai - Open Source time-tracker",
     "description": "Kimai - free and easy time-tracking for freelancer, agencies and companies with user and invoice handling.",
     "_cat": "资源素材/ppt模板/服务",
-    "category": "设计工具/模板服务",
+    "category": "设计工具/杂项/合并分类",
     "name": "Kimai - Open Source time-tracker"
   },
   {
@@ -786,7 +786,7 @@
     "title": "Supercharge — Sindre Sorhus",
     "description": "Elevate your Mac experience",
     "_cat": "创意工具/ui设计/社区",
-    "category": "设计工具/UI设计社区",
+    "category": "设计工具/杂项/合并分类",
     "name": "Supercharge"
   },
   {
@@ -850,7 +850,7 @@
     "title": "Scaler Topics - Technopedia for Your Mastermind",
     "description": "Scaler Topics provides programming articles related to Python, Java, Data Structure, C/C++ and other popular programming languages with easy to follow tutorials and example programs.",
     "_cat": "创意工具/平面设计/开源",
-    "category": "设计工具/平面设计开源",
+    "category": "设计工具/杂项/合并分类",
     "name": "Scaler Topics - Technopedia for Your Mastermind"
   },
   {
@@ -1011,7 +1011,7 @@
     "description": "设计素材",
     "title": "Pagina niet gevonden – Creatool.com",
     "_cat": "阅读写作/平台/服务",
-    "category": "设计工具/平台服务"
+    "category": "设计工具/杂项/合并分类"
   },
   {
     "url": "https://github.com/topics/ide",
@@ -1154,7 +1154,7 @@
     "title": "Apaxy: A simple, customisable Apache directory theme",
     "description": "Apaxy: A simple, customisable Apache directory theme.",
     "_cat": "资源素材/资源/开源",
-    "category": "设计工具/资源开源",
+    "category": "设计工具/杂项/合并分类",
     "name": "Apaxy: A simple, customisable Apache directory theme"
   },
   {
@@ -1346,7 +1346,7 @@
     "title": "PinePods - Your Complete Podcast Ecosystem | PinePods Docs",
     "description": "Lightning-fast Rust-powered podcast server with seamless sync across all devices. Self-hosted, open source, and built for performance.",
     "_cat": "开发资源/ide/服务",
-    "category": "开发工具/IDE服务",
+    "category": "开发工具/杂项/合并分类",
     "name": "PinePods - Your Complete Podcast Ecosystem"
   },
   {
@@ -1354,7 +1354,7 @@
     "title": "Geocoding API | MapQuest Developer Documentation",
     "description": "The portal for developers to use MapQuest APIs. Find documentation to use our geo-spatial APIs and make maps using our mobile and javascript SDKs.",
     "_cat": "开发资源/ide/开源",
-    "category": "开发工具/IDE开源",
+    "category": "开发工具/杂项/合并分类",
     "name": "Geocoding API"
   },
   {
@@ -1362,7 +1362,7 @@
     "title": "Charmhub | The Open Operator Collection",
     "description": "Universal operators for application lifecycle management on Linux, Windows and Kubernetes",
     "_cat": "开发资源/api/工具",
-    "category": "开发工具/API工具",
+    "category": "开发工具/杂项/合并分类",
     "name": "Charmhub"
   },
   {
@@ -1370,7 +1370,7 @@
     "title": "Go Style | styleguide",
     "description": "Style guides for Google-originated open-source projects",
     "_cat": "开发资源/api/社区",
-    "category": "开发工具/API社区",
+    "category": "开发工具/杂项/合并分类",
     "name": "Go Style"
   },
   {
@@ -1386,7 +1386,7 @@
     "title": "Project Chrono - An Open-Source Physics Engine",
     "description": "Project Chrono is a physics-based simulation infrastructure based on a platform-independent, open-source design.",
     "_cat": "开发资源/api/开源",
-    "category": "开发工具/API开源",
+    "category": "开发工具/杂项/合并分类",
     "name": "Project Chrono - An Open-Source Physics Engine"
   },
   {
@@ -1475,7 +1475,7 @@
     "description": "该网站正在出售！ glaze.studio 是关于 glaze 信息的第一个最佳来源。在此，您还会发现与普遍关心的问题有关的话题。我们希望您找到您正在寻找的内容！",
     "title": "glaze.studio - 该网站正在出售！ - glaze 资源和信息。",
     "_cat": "开发资源/文档/工具",
-    "category": "开发工具/文档工具"
+    "category": "开发工具/杂项/合并分类"
   },
   {
     "url": "https://hackingcpp.com/cpp/cheat_sheets.html",
@@ -1538,7 +1538,7 @@
     "title": "Depot - Up to 55x Faster Builds, Half the Cost | Docker &amp; GitHub Actions",
     "description": "Exponentially faster builds for everyone.",
     "_cat": "开发资源/文档/社区",
-    "category": "开发工具/文档社区",
+    "category": "开发工具/杂项/合并分类",
     "name": "Depot - Up to 55x Faster Builds, Half the Cost"
   },
   {
@@ -1546,7 +1546,7 @@
     "title": "Go 101 -Go 101",
     "description": "Golang online books, articles, tools, etc.",
     "_cat": "开发资源/文档/服务",
-    "category": "开发工具/文档服务",
+    "category": "开发工具/杂项/合并分类",
     "name": "Go 101 -Go 101"
   },
   {
@@ -1570,7 +1570,7 @@
     "title": "Live helper chat - open source live support chat with bot, Voice, Video, ScreenShare support.",
     "description": "Live support chat for your website with Bot, Voice, Video, ScreenShare support. Featuring web/mobile/desktop apps. Supports Telegram, Twilio (whatsapp), Facebook messenger, Rest API integrations.",
     "_cat": "开发资源/学习/资源",
-    "category": "开发工具/学习资源",
+    "category": "开发工具/杂项/合并分类",
     "name": "Live helper chat - open source live support chat with bot, V"
   },
   {
@@ -1579,7 +1579,7 @@
     "description": "100+免费API集合",
     "title": "API Ninjas | Production-Ready APIs That Accelerate Your Product Roadmap",
     "_cat": "开发资源/学习/教程",
-    "category": "开发工具/学习教程"
+    "category": "开发工具/杂项/合并分类"
   },
   {
     "url": "https://www.tinypng.com",
@@ -1619,7 +1619,7 @@
     "description": "All-in-one visual design platform with AI photo and video editing tools. Automatic background removal, image restoration, graphic design, content generation, text-to-speech, digital humans, AI image generation, image editing and image-to-video. With Cutout.Pro, optimize your content and transform your design ideas into special assets with just one ",
     "title": "Cutout.Pro - AI Photo Editing | Visual Content Generation Platform, Best for Image Generation, Editing and Video - All-in-One AI Platform",
     "_cat": "开发资源/学习/生成器",
-    "category": "开发工具/学习生成/视频课程"
+    "category": "开发工具/杂项/合并分类"
   },
   {
     "url": "https://www.afterglowplayer.com",
@@ -1650,7 +1650,7 @@
     "title": "Create an online shop easily - Ecommerce | PrestaShop",
     "description": "Launch your ecommerce website, customize your online store and start selling your products with the PrestaShop ecommerce platform.",
     "_cat": "开发资源/学习/生成器",
-    "category": "开发工具/学习生成/学习平台",
+    "category": "开发工具/杂项/合并分类",
     "name": "Create an online shop easily - Ecommerce"
   },
   {
@@ -1794,7 +1794,7 @@
     "title": "Wt, C++ Web Toolkit  —  Emweb",
     "description": "web-based user interfaces, web applications, intranets, embedded systems",
     "_cat": "开发资源/平台/开源",
-    "category": "开发工具/平台开源/文档托管",
+    "category": "开发工具/杂项/合并分类",
     "name": "Wt, C++ Web Toolkit"
   },
   {
@@ -1946,7 +1946,7 @@
     "title": "ODB - C++ Object-Relational Mapping (ORM)",
     "description": "ODB is an open-source, cross-platform and cross-database object-relational mapping (ORM) system for C++",
     "_cat": "创意工具/思维导图/教程",
-    "category": "设计工具/思维导图教程",
+    "category": "设计工具/杂项/合并分类",
     "name": "ODB - C++ Object-Relational Mapping (ORM)"
   },
   {
@@ -1955,14 +1955,14 @@
     "description": "LLM应用框架",
     "title": "LangChain: Observe, Evaluate, and Deploy Reliable AI Agents",
     "_cat": "创意工具/思维导图/社区",
-    "category": "设计工具/思维导图社区"
+    "category": "设计工具/杂项/合并分类"
   },
   {
     "url": "https://hedgedoc.org/",
     "title": "HedgeDoc - Ideas grow better together",
     "description": "Ideas grow better together",
     "_cat": "创意工具/思维导图/开源",
-    "category": "设计工具/思维导图开源",
+    "category": "设计工具/杂项/合并分类",
     "name": "HedgeDoc - Ideas grow better together"
   },
   {
@@ -1971,14 +1971,14 @@
     "description": "协作文档",
     "title": "石墨文档官网-在线协同办公系统平台,支持云端多人在线协作文档,表格,幻灯片",
     "_cat": "创意工具/流程图/社区",
-    "category": "设计工具/流程图社区"
+    "category": "设计工具/杂项/合并分类"
   },
   {
     "url": "https://www.traccar.org/",
     "title": "GPS Tracking Software - Free and Open Source System - Traccar",
     "description": "Traccar is the leading GPS tracking software. Vehicle and personal tracking. Self hosting and cloud-based solution. Real time view, reports, notifications.",
     "_cat": "创意工具/流程图/生成器",
-    "category": "设计工具/流程图生成",
+    "category": "设计工具/杂项/合并分类",
     "name": "GPS Tracking Software - Free and Open Source System - Tracca"
   },
   {
@@ -2026,7 +2026,7 @@
     "title": "Documize — Self-hosted Knowledge Management",
     "description": "Documize provides self-hosted knowledge management solutions for enterprises of all sizes",
     "_cat": "创意工具/白板/开源",
-    "category": "设计工具/白板开源",
+    "category": "设计工具/杂项/合并分类",
     "name": "Documize"
   },
   {
@@ -4387,7 +4387,7 @@
     "title": "Documentation | Receipt Wrangler",
     "description": "Description will go into a meta tag in <head />",
     "_cat": "视频娱乐/工具/资源",
-    "category": "多媒体/视频娱乐/资源",
+    "category": "多媒体/杂项/合并分类",
     "name": "Documentation"
   },
   {
@@ -4468,7 +4468,7 @@
     "description": "The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 415 open source projects, including runtimes, tools and frameworks.",
     "title": "Projects Gateway | The Eclipse Foundation",
     "_cat": "阅读写作/网文/社区",
-    "category": "效率办公/网文社区"
+    "category": "效率办公/杂项/合并分类"
   },
   {
     "url": "https://www.jwplayer.com",
@@ -4476,7 +4476,7 @@
     "description": "JWX helps streamers, publishers, and advertisers create, deliver, and monetize video with one intelligent workflow - built for speed, scale, and results.",
     "title": "Video technology &amp; monetization platform ",
     "_cat": "阅读写作/网文/服务",
-    "category": "效率办公/网文服务"
+    "category": "效率办公/杂项/合并分类"
   },
   {
     "url": "https://www.coursera.org/lecture/data-structures-optimizing-performance/core-linked-lists-vs-arrays-rjBs9\\",
@@ -4528,7 +4528,7 @@
     "title": "FreshRSS, a free, self-hostable feeds aggregator",
     "description": "FreshRSS is lightweight, easy to work with, powerful, and customizable.",
     "_cat": "阅读写作/博客/教程",
-    "category": "效率办公/博客教程",
+    "category": "效率办公/杂项/合并分类",
     "name": "FreshRSS, a free, self-hostable feeds aggregator"
   },
   {
@@ -4584,7 +4584,7 @@
     "title": "GopherCon Russia 2021",
     "description": "Конференция разработчиков на Go, 23-25 апреля 2021 года, Online.",
     "_cat": "阅读写作/电子书/社区",
-    "category": "效率办公/电子书社区",
+    "category": "效率办公/杂项/合并分类",
     "name": "GopherCon Russia 2021"
   },
   {
@@ -4592,7 +4592,7 @@
     "title": "Restreamer",
     "description": "Live video streaming on your website without a streaming provider. Latest release v0.6.8",
     "_cat": "阅读写作/电子书/服务",
-    "category": "效率办公/电子书服务",
+    "category": "效率办公/杂项/合并分类",
     "name": "Restreamer"
   },
   {
@@ -4600,7 +4600,7 @@
     "title": "Enclosed - Send private and secure notes",
     "description": "Enclosed is a secure, end-to-end encrypted platform for sending private notes. Set expiration, passwords, and self-destruct options to keep your notes confidential.",
     "_cat": "阅读写作/电子书/生成器",
-    "category": "效率办公/电子书生成",
+    "category": "效率办公/杂项/合并分类",
     "name": "Enclosed - Send private and secure notes"
   },
   {
@@ -4724,7 +4724,7 @@
     "title": "Ocular - Budgeting Tool",
     "description": "Ocular - A simplistic, straight-forward budgeting tool for managing finances.",
     "_cat": "阅读写作/出版/教程",
-    "category": "效率办公/出版教程",
+    "category": "效率办公/杂项/合并分类",
     "name": "Ocular - Budgeting Tool"
   },
   {
@@ -4733,7 +4733,7 @@
     "description": "AI研究",
     "title": "Meta AI",
     "_cat": "阅读写作/出版/社区",
-    "category": "效率办公/出版社区"
+    "category": "效率办公/杂项/合并分类"
   },
   {
     "url": "https://www.huemint.com",
@@ -4780,7 +4780,7 @@
     "title": "audiobookshelf",
     "description": "Self-hosted audiobook and podcast server",
     "_cat": "阅读写作/教程/社区",
-    "category": "效率办公/教程社区",
+    "category": "效率办公/杂项/合并分类",
     "name": "audiobookshelf"
   },
   {
@@ -4796,7 +4796,7 @@
     "title": "Appsmith | Open-Source Low-Code Application Platform",
     "description": "Stop grappling with data, scouring for the perfect React library, and coding everything from scratch. Build custom software 10X faster with Appsmith.",
     "_cat": "阅读写作/教程/生成器",
-    "category": "效率办公/教程生成",
+    "category": "效率办公/杂项/合并分类",
     "name": "Appsmith"
   },
   {
@@ -4940,7 +4940,7 @@
     "title": "PostHog – We make dev tools for product engineers",
     "description": "All your developer tools in one place. PostHog gives engineers everything to build, test, measure, and ship successful products faster. Get started free.",
     "_cat": "开发资源/部署/资源",
-    "category": "开发工具/部署资源",
+    "category": "开发工具/杂项/合并分类",
     "name": "PostHog – We make dev tools for product engineers"
   },
   {
@@ -5021,7 +5021,7 @@
     "description": "Generate free templates, designs, documents, presentations, charts, whiteboards, and more in an all-in-one AI-powered editor. Turn prompts into fully editable, branded assets instantly. No signup needed",
     "title": "Template.net | AI Generator for Fully Editable Assets",
     "_cat": "办公效率/笔记/工具",
-    "category": "办公工具/笔记工具"
+    "category": "办公工具/杂项/合并分类"
   },
   {
     "url": "https://gitee.com",
@@ -5029,7 +5029,7 @@
     "description": "面向企业提供一站式研发管理解决方案，包括代码管理、项目管理、文档协作、测试管理、CICD、效能度量等多个模块，支持SaaS、私有化等多种部署方式，帮助企业有序规划和管理研发过程，提升研发效率和质量。",
     "title": "Gitee - 基于 Git 的代码托管和研发协作平台",
     "_cat": "办公效率/笔记/开源",
-    "category": "办公工具/笔记开源"
+    "category": "办公工具/杂项/合并分类"
   },
   {
     "url": "https://romm.app/",
@@ -5060,7 +5060,7 @@
     "title": "Wiki.js",
     "description": "The most powerful and extensible open source Wiki software.",
     "_cat": "办公效率/日程/生成器",
-    "category": "办公工具/日程生成",
+    "category": "办公工具/杂项/合并分类",
     "name": "Wiki.js"
   },
   {
@@ -5132,7 +5132,7 @@
     "title": "Confetti",
     "description": "Confetti is a Go (Golang) web application framework with an expressive, elegant syntax. Confetti combines the elegance of Confetti and the simplicity of Go.",
     "_cat": "学术科研/搜索/教程",
-    "category": "学术科研/搜索教程",
+    "category": "学术科研/杂项/合并分类",
     "name": "Confetti"
   },
   {
@@ -5164,7 +5164,7 @@
     "title": "Ollama",
     "description": "Ollama is the easiest way to automate your work using open models, while keeping your data safe.",
     "_cat": "学术科研/课程/生成器",
-    "category": "学术科研/课程生成",
+    "category": "学术科研/杂项/合并分类",
     "name": "Ollama"
   },
   {
@@ -5332,7 +5332,7 @@
     "title": "OpenOlat &#8211; Infinite learning",
     "description": "OpenOlat LMS+ ist Ihr Learning Management System für eLearning, Online-Schulungen, eTesting und digitale Weiterbildung. Die flexible Bildungsplattform für Unternehmen und Bildungsinstitutionen in der Schweiz.",
     "_cat": "学术科研/数据集/教程",
-    "category": "学术科研/数据集教程",
+    "category": "学术科研/杂项/合并分类",
     "name": "OpenOlat &#8211; Infinite learning"
   },
   {
@@ -5372,7 +5372,7 @@
     "title": "Welcome to the public demo of the Silverstripe CMS | Silverstripe CMS Demo",
     "description": "this is my test of this website template...",
     "_cat": "学术科研/教材/生成器",
-    "category": "学术科研/教材生成",
+    "category": "学术科研/杂项/合并分类",
     "name": "Welcome to the public demo of the Silverstripe CMS"
   },
   {
@@ -5509,7 +5509,7 @@
     "description": "Our hands-on training and practical certification can help build your career and help your team reduce downtime and boost helpdesk response.",
     "title": "Training and Certification",
     "_cat": "视频创作/特效/服务",
-    "category": "多媒体/特效服务"
+    "category": "多媒体/杂项/合并分类"
   },
   {
     "url": "https://www.fireworks.ai",
@@ -5564,7 +5564,7 @@
     "title": "Fess - Enterprise Search Server",
     "description": "Fess is a full-text search server that can be easily set up in just 5 minutes.",
     "_cat": "视频创作/录屏/服务",
-    "category": "多媒体/录屏服务",
+    "category": "多媒体/杂项/合并分类",
     "name": "Fess - Enterprise Search Server"
   },
   {
@@ -5661,7 +5661,7 @@
     "description": "免费图标",
     "title": "iconmonstr - Free simple icons for your next project",
     "_cat": "视频创作/动画/开源",
-    "category": "多媒体/动画开源"
+    "category": "多媒体/杂项/合并分类"
   },
   {
     "url": "https://www.material.io/icons",
@@ -5685,14 +5685,14 @@
     "description": "Anthropic AI",
     "title": "App unavailable in region | Claude",
     "_cat": "视频创作/平台/开源",
-    "category": "开发工具/平台开源/依赖管理"
+    "category": "开发工具/杂项/合并分类"
   },
   {
     "url": "https://demo.gauzy.co",
     "title": "Gauzy",
     "description": "Business Management Platform",
     "_cat": "视频创作/平台/开源",
-    "category": "开发工具/平台开源/项目展示",
+    "category": "开发工具/杂项/合并分类",
     "name": "Gauzy"
   },
   {
