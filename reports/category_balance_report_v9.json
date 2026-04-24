@@ -1,0 +1,556 @@
+{
+  "timestamp": "2026-04-24T08:35:17.501277",
+  "total_categories": 109,
+  "min_required": 10,
+  "max_allowed": 50,
+  "balanced": 20,
+  "underfilled": 88,
+  "overfilled": 1,
+  "details": [
+    {
+      "category": "其他/杂项/未分类",
+      "count": 2792,
+      "status": "overfilled"
+    },
+    {
+      "category": "AI工具/AI音频/工具",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI音频/平台",
+      "count": 7,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI音频/资源",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI音频/库",
+      "count": 9,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI音频/教程",
+      "count": 10,
+      "status": "balanced"
+    },
+    {
+      "category": "AI工具/AI音频/服务",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI音频/社区",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI音频/生成器",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI开发/工具",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI开发/平台",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI开发/资源",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI开发/库",
+      "count": 10,
+      "status": "balanced"
+    },
+    {
+      "category": "AI工具/AI开发/教程",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI开发/服务",
+      "count": 12,
+      "status": "balanced"
+    },
+    {
+      "category": "AI工具/AI开发/社区",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI开发/生成器",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/工具",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/平台",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/资源",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/库",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/教程",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/服务",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/社区",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI通用/生成器",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "多媒体/视频娱乐/工具",
+      "count": 19,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频娱乐/资源",
+      "count": 18,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频娱乐/教程",
+      "count": 20,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频娱乐/社区",
+      "count": 17,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频娱乐/服务",
+      "count": 14,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频娱乐/开源",
+      "count": 12,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频娱乐/生成器",
+      "count": 11,
+      "status": "balanced"
+    },
+    {
+      "category": "阅读写作/网文资源/资源",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/网文资源/社区",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/网文资源/服务",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/博客平台/工具",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/博客平台/教程",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/博客平台/服务",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/创作工具/教程",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/创作工具/开源",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/创作工具/生成器",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/出版工具/工具",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/出版工具/教程",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "阅读写作/出版工具/社区",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "系统工具/实用工具/工具",
+      "count": 9,
+      "status": "underfilled"
+    },
+    {
+      "category": "系统工具/实用工具/社区",
+      "count": 11,
+      "status": "balanced"
+    },
+    {
+      "category": "系统工具/实用工具/服务",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "系统工具/实用工具/生成器",
+      "count": 11,
+      "status": "balanced"
+    },
+    {
+      "category": "系统工具/实用工具/教程",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "系统工具/实用工具/开源",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/设计资源/工具",
+      "count": 11,
+      "status": "balanced"
+    },
+    {
+      "category": "设计工具/设计资源/资源",
+      "count": 12,
+      "status": "balanced"
+    },
+    {
+      "category": "设计工具/设计资源/社区",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/图标字体/工具",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/图标字体/资源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/图标字体/教程",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/图标字体/社区",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/图标字体/服务",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/设计资源/教程",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/设计资源/服务",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/设计资源/开源",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "系统工具/实用工具/资源",
+      "count": 9,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/代码资源/生成器",
+      "count": 15,
+      "status": "balanced"
+    },
+    {
+      "category": "开发工具/开发工具/工具",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/开发工具/资源",
+      "count": 7,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/开发工具/社区",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/开发工具/服务",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/开发工具/开源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/文档API/工具",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/文档API/社区",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/文档API/服务",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/文档API/开源",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/文档API/生成器",
+      "count": 10,
+      "status": "balanced"
+    },
+    {
+      "category": "开发工具/文档API/资源",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/文档API/教程",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI编程/社区",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI编程/服务",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI编程/开源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "AI工具/AI编程/生成器",
+      "count": 12,
+      "status": "balanced"
+    },
+    {
+      "category": "开发工具/代码资源/资源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/代码资源/教程",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/代码资源/服务",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/在线工具/资源",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "开发工具/在线工具/社区",
+      "count": 11,
+      "status": "balanced"
+    },
+    {
+      "category": "开发工具/在线工具/开源",
+      "count": 11,
+      "status": "balanced"
+    },
+    {
+      "category": "开发工具/在线工具/生成器",
+      "count": 8,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/UI设计/工具",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/UI设计/教程",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/UI设计/社区",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/UI设计/开源",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/UI设计/生成器",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/平面设计/开源",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "设计工具/设计灵感/教程",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/课程教材/工具",
+      "count": 3,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/课程教材/生成器",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/AI学习/服务",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/AI学习/开源",
+      "count": 5,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/AI学习/生成器",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/数据集/资源",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/数据集/教程",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/数据集/生成器",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/课程教材/资源",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/科研工具/教程",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "学术科研/科研工具/社区",
+      "count": 1,
+      "status": "underfilled"
+    },
+    {
+      "category": "多媒体/视频编辑/教程",
+      "count": 4,
+      "status": "underfilled"
+    },
+    {
+      "category": "多媒体/视频编辑/社区",
+      "count": 6,
+      "status": "underfilled"
+    },
+    {
+      "category": "多媒体/视频编辑/资源",
+      "count": 14,
+      "status": "balanced"
+    },
+    {
+      "category": "多媒体/视频编辑/服务",
+      "count": 2,
+      "status": "underfilled"
+    },
+    {
+      "category": "多媒体/视频编辑/开源",
+      "count": 3,
+      "status": "underfilled"
+    }
+  ]
+}

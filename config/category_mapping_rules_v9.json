@@ -1,0 +1,564 @@
+{
+  "version": "v9.0",
+  "description": "第9次迭代分类映射规则 - 将当前9个宽泛分类映射到80个扩展叶子类",
+  "mapping_strategy": "混合模式 - 基于内容特征的智能分类 + 人工审核兜底",
+
+  "main_categories": {
+    "设计创意": {
+      "id": "design",
+      "leaf_count": 17,
+      "capacity_min": 10,
+      "capacity_max": 50,
+      "subcategories": ["灵感采集", "设计资源", "设计工具", "设计学习"]
+    },
+    "开发工具": {
+      "id": "dev",
+      "leaf_count": 17,
+      "capacity_min": 10,
+      "capacity_max": 50,
+      "subcategories": ["在线工具", "资源文档", "前端开发", "系统开发"],
+      "note": "扩展后包含原开发工具、开发资源、部分AI开发工具"
+    },
+    "效率办公": {
+      "id": "productivity",
+      "leaf_count": 14,
+      "capacity_min": 10,
+      "capacity_max": 50,
+      "subcategories": ["文档演示", "协作交流", "常用推荐", "个人效率"]
+    },
+    "资讯社区": {
+      "id": "news",
+      "leaf_count": 12,
+      "capacity_min": 10,
+      "capacity_max": 50,
+      "subcategories": ["行业资讯", "设计社区", "开发社区"]
+    },
+    "AI与智能": {
+      "id": "ai",
+      "leaf_count": 12,
+      "capacity_min": 10,
+      "capacity_max": 50,
+      "subcategories": ["AI工具", "AI资源", "AI学习", "AI社区"],
+      "note": "从原'AI工具'大类拆分出来的新主分类"
+    },
+    "多媒体娱乐": {
+      "id": "media",
+      "leaf_count": 8,
+      "capacity_min": 10,
+      "capacity_max": 50,
+      "subcategories": ["视频服务", "音频服务", "动画游戏"],
+      "note": "从原'多媒体'大类扩展的新主分类"
+    }
+  },
+
+  "current_to_target_mapping": {
+    "AI工具/人工智能/通用工具": {
+      "source_size": 1485,
+      "strategy": "智能拆分",
+      "rules": [
+        {
+          "condition": "has_keywords(['ai工具', 'chatgpt', 'copilot', 'midjourney', 'claude', 'gemini'])",
+          "action": "assign",
+          "target": "AI工具/AI工具平台",
+          "confidence": 0.9,
+          "description": "集成化AI应用平台"
+        },
+        {
+          "condition": "has_keywords(['huggingface', 'modelscope', 'model', 'checkpoint', '权重'])",
+          "action": "assign",
+          "target": "AI工具/AI模型库",
+          "confidence": 0.9,
+          "description": "预训练模型仓库"
+        },
+        {
+          "condition": "has_keywords(['api', 'openai', 'azure', 'api key', '调用'])",
+          "action": "assign",
+          "target": "AI工具/AI API服务",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['代码助手', '编程', 'copilot', 'cursor', 'tabnine', 'code completion'])",
+          "action": "assign",
+          "target": "AI工具/AI代码助手",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['教程', '课程', '学习', 'bootcamp', '学习路径', 'fast.ai'])",
+          "action": "assign",
+          "target": "AI工具/AI学习资源",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['community', 'forum', 'discussion', 'reddit', 'stackexchange'])",
+          "action": "assign",
+          "target": "AI工具/AI社区论坛",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['图像生成', '文生图', 'stable diffusion', 'dall-e', 'midjourney'])",
+          "action": "assign",
+          "target": "AI工具/AI图像生成",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['文本生成', '写作', '创作', 'jasper', 'copy.ai'])",
+          "action": "assign",
+          "target": "AI工具/AI文本生成",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['语音', 'speech', 'tts', 'asr', 'whisper', 'elevenlabs'])",
+          "action": "assign",
+          "target": "AI工具/AI语音处理",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['视频生成', 'video generation', 'runway', 'synthesia'])",
+          "action": "assign",
+          "target": "AI工具/AI视频生成",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['dataset', '数据集', 'kaggle', '开放数据'])",
+          "action": "assign",
+          "target": "AI工具/AI数据集",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['paper', '论文', 'arxiv', 'research', '学术'])",
+          "action": "assign",
+          "target": "AI工具/AI研究论文",
+          "confidence": 0.85
+        },
+        {
+          "condition": "default",
+          "action": "flag_review",
+          "target": "AI工具/待分类",
+          "confidence": 0,
+          "description": "需要人工审核分类"
+        }
+      ]
+    },
+
+    "其他/杂项/未分类": {
+      "source_size": 938,
+      "strategy": "重新分类 + 兜底保留",
+      "rules": [
+        {
+          "condition": "has_keywords(['wiki', 'wiki内容', '知识库', '知识管理', '笔记'])",
+          "action": "assign",
+          "target": "效率办公/文档工具",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['project management', '项目管理', 'task', '看板', 'kanban'])",
+          "action": "assign",
+          "target": "效率办公/任务管理",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['图标', 'icon', 'font', '字体', '颜色', 'color palette', '配色'])",
+          "action": "assign",
+          "target": "设计创意/设计资源",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['github', '开源', 'repository', 'source code', 'gitlab'])",
+          "action": "assign",
+          "target": "开发工具/开发资源",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['api', '接口', 'rest api', 'graphql', 'openapi'])",
+          "action": "assign",
+          "target": "开发工具/API文档",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['online tool', '在线工具', '实用工具', 'converter', 'generator'])",
+          "action": "assign",
+          "target": "开发工具/在线工具",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['video', '视频', 'youtube', 'bilibili', 'streaming'])",
+          "action": "assign",
+          "target": "多媒体娱乐/视频平台",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['audio', '音乐', 'podcast', 'sound', 'mp3'])",
+          "action": "assign",
+          "target": "多媒体娱乐/音频平台",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['forum', 'community', 'discussion', 'reddit', 'discord'])",
+          "action": "assign",
+          "target": "资讯社区/社区资讯",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['news', 'blog', '资讯', '新闻', '杂志'])",
+          "action": "assign",
+          "target": "资讯社区/行业资讯",
+          "confidence": 0.75
+        },
+        {
+          "condition": "default",
+          "action": "keep_as_other",
+          "target": "其他/其他",
+          "confidence": 0,
+          "description": "保留在'其他'类，限制总容量<200"
+        }
+      ]
+    },
+
+    "系统工具/实用工具/通用": {
+      "source_size": 718,
+      "strategy": "主要映射到效率办公",
+      "rules": [
+        {
+          "condition": "has_keywords(['wiki', '知识库', '知识管理', '笔记本', '笔记'])",
+          "action": "assign",
+          "target": "效率办公/笔记知识库",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['task management', '任务管理', '项目管理', '看板', 'todo'])",
+          "action": "assign",
+          "target": "效率办公/任务管理",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['文档', 'document', 'docs', '文档协作', 'documentation'])",
+          "action": "assign",
+          "target": "效率办公/文档工具",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['calendar', '日历', '日程', '时间管理', 'scheduling'])",
+          "action": "assign",
+          "target": "效率办公/日历时间管理",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['password', '密码管理', 'security', '安全', '加密'])",
+          "action": "assign",
+          "target": "效率办公/密码安全",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['collaboration', 'team chat', '团队沟通', '即时通讯'])",
+          "action": "assign",
+          "target": "效率办公/沟通工具",
+          "confidence": 0.85
+        },
+        {
+          "condition": "default",
+          "action": "assign",
+          "target": "效率办公/常用推荐",
+          "confidence": 0.6,
+          "description": "通用实用工具"
+        }
+      ]
+    },
+
+    "设计工具/图像处理/通用": {
+      "source_size": 73,
+      "strategy": "设计类直接映射",
+      "rules": [
+        {
+          "condition": "has_keywords(['icon', '图标'])",
+          "action": "assign",
+          "target": "设计创意/设计资源/图标素材",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['font', '字体', 'typeface'])",
+          "action": "assign",
+          "target": "设计创意/设计资源/字体资源",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['stock photo', '免费图片', '摄影图库', 'unsplash', 'pexels'])",
+          "action": "assign",
+          "target": "设计创意/设计资源/摄影图库",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['mockup', '样机', '模板'])",
+          "action": "assign",
+          "target": "设计创意/设计资源/Mockup",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['ui kit', 'ui组件', 'ui资源'])",
+          "action": "assign",
+          "target": "设计创意/设计资源/UI资源",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['color palette', '配色', '在线配色'])",
+          "action": "assign",
+          "target": "设计创意/设计工具/在线配色",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['logo maker', 'logo设计', '标志'])",
+          "action": "assign",
+          "target": "设计创意/设计工具/LOGO设计",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['design inspiration', '设计灵感', 'dribbble', 'behance'])",
+          "action": "assign",
+          "target": "设计创意/灵感采集/设计灵感",
+          "confidence": 0.85
+        },
+        {
+          "condition": "default",
+          "action": "flag_review",
+          "target": "设计创意/待分类",
+          "confidence": 0
+        }
+      ]
+    },
+
+    "开发工具/代码编辑器/通用": {
+      "source_size": 56,
+      "strategy": "映射到开发工具类",
+      "rules": [
+        {
+          "condition": "has_keywords(['vscode', 'sublime', 'vim', 'emacs', '编辑器', 'editor'])",
+          "action": "assign",
+          "target": "开发工具/在线工具/常用工具",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['api documentation', 'api文档', 'swagger', 'openapi'])",
+          "action": "assign",
+          "target": "开发工具/资源文档/API文档",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['tutorial', '教程', '学习', 'course', 'ode项目', 'freecodecamp'])",
+          "action": "assign",
+          "target": "开发工具/资源文档/Tutorial",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['framework', 'library', '代码资源', 'code snippets'])",
+          "action": "assign",
+          "target": "开发工具/前端开发/代码资源",
+          "confidence": 0.8
+        },
+        {
+          "condition": "default",
+          "action": "assign",
+          "target": "开发工具/在线工具/在线工具",
+          "confidence": 0.6
+        }
+      ]
+    },
+
+    "办公工具/文档处理/通用": {
+      "source_size": 30,
+      "strategy": "主要映射到效率办公",
+      "rules": [
+        {
+          "condition": "has_keywords(['document', '文档', 'docs', 'wiki', 'confluence'])",
+          "action": "assign",
+          "target": "效率办公/文档工具",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['presentation', 'ppt', '幻灯片', 'slides', '演示'])",
+          "action": "assign",
+          "target": "效率办公/文档演示/PPT",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['spreadsheet', '表格', 'excel', 'sheet'])",
+          "action": "assign",
+          "target": "效率办公/文档演示/表格工具",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['collaboration', '团队协作', 'teamwork', '在线协作'])",
+          "action": "assign",
+          "target": "效率办公/协作交流/团队协作",
+          "confidence": 0.85
+        },
+        {
+          "condition": "default",
+          "action": "assign",
+          "target": "效率办公/文档工具",
+          "confidence": 0.7
+        }
+      ]
+    },
+
+    "多媒体/视频编辑/通用": {
+      "source_size": 23,
+      "strategy": "拆分为平台和工具",
+      "rules": [
+        {
+          "condition": "has_keywords(['youtube', 'bilibili', '抖音', '快手', 'tiktok', 'video platform', '视频网站'])",
+          "action": "assign",
+          "target": "多媒体娱乐/视频平台",
+          "confidence": 0.95
+        },
+        {
+          "condition": "has_keywords(['video editor', '视频编辑', 'video editing', 'premiere', '剪辑'])",
+          "action": "assign",
+          "target": "多媒体娱乐/视频工具",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['streaming', '直播', 'twitch', '虎牙', '斗鱼'])",
+          "action": "assign",
+          "target": "多媒体娱乐/直播平台",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['dailymotion', 'vimeo', '优酷', '土豆'])",
+          "action": "assign",
+          "target": "多媒体娱乐/视频平台",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['animation', '动画', 'motion graphics', 'blender', 'maya'])",
+          "action": "assign",
+          "target": "多媒体娱乐/动画制作",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['stock video', '视频素材', '免版权视频'])",
+          "action": "assign",
+          "target": "多媒体娱乐/视频素材库",
+          "confidence": 0.85
+        },
+        {
+          "condition": "default",
+          "action": "flag_review",
+          "target": "多媒体娱乐/待分类",
+          "confidence": 0
+        }
+      ]
+    },
+
+    "开发资源/开源项目/通用": {
+      "source_size": 18,
+      "strategy": "映射到开发工具资源类",
+      "rules": [
+        {
+          "condition": "has_keywords(['github', '开源项目', 'repository', 'source code', 'gitlab'])",
+          "action": "assign",
+          "target": "开发工具/版本控制",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['tutorial', '教程', 'guide', '学习资源', '文档'])",
+          "action": "assign",
+          "target": "开发工具/资源文档/Tutorial",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['library', '框架', 'package', '模块', 'npm', 'pypi'])",
+          "action": "assign",
+          "target": "开发工具/包管理",
+          "confidence": 0.8
+        },
+        {
+          "condition": "has_keywords(['ci/cd', 'continuous integration', 'jenkins', 'pipeline'])",
+          "action": "assign",
+          "target": "开发工具/CI/CD工具",
+          "confidence": 0.9
+        },
+        {
+          "condition": "default",
+          "action": "assign",
+          "target": "开发工具/开发资源",
+          "confidence": 0.6
+        }
+      ]
+    },
+
+    "多媒体/音频处理/通用": {
+      "source_size": 1,
+      "strategy": "扩充或合并",
+      "rules": [
+        {
+          "condition": "has_keywords(['music', '音乐', 'spotify', '网易云', 'apple music'])",
+          "action": "assign",
+          "target": "多媒体娱乐/音频平台",
+          "confidence": 0.9
+        },
+        {
+          "condition": "has_keywords(['audio editor', '音频编辑', 'audacity', '混音', 'music production'])",
+          "action": "assign",
+          "target": "多媒体娱乐/音频工具",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['podcast', '播客', 'audio content'])",
+          "action": "assign",
+          "target": "多媒体娱乐/音频平台",
+          "confidence": 0.85
+        },
+        {
+          "condition": "has_keywords(['sound effect', '音效', 'audio library', '配乐'])",
+          "action": "assign",
+          "target": "多媒体娱乐/音频素材库",
+          "confidence": 0.9
+        },
+        {
+          "condition": "default",
+          "action": "assign",
+          "target": "多媒体娱乐/音频平台",
+          "confidence": 0.5
+        }
+      ]
+    }
+  },
+
+  "keyword_dict": {
+    "设计创意": ["icon", "font", "color", "palette", "logo", "mockup", "template", "ui", "ux", "design", "illustration", "vector", "sketch", "figma", "photoshop", " illustrator", "invision", "zeplin", "dribbble", "behance", "art", "graphic"],
+    "开发工具": ["github", "gitlab", "bitbucket", "vscode", "sublime", "vim", "emacs", "ide", "editor", "api", "documentation", "swagger", "postman", "docker", "kubernetes", "jenkins", "ci/cd", "devops", "cloud", "aws", "azure", "gcp"],
+    "效率办公": ["office", "document", "wiki", "notes", "notion", "confluence", "trello", "asana", "jira", "slack", "teams", "zoom", "meeting", "calendar", "scheduling", "productivity"],
+    "AI工具": ["ai", "gpt", "llm", "machine learning", "deep learning", "neural network", "chatbot", "copilot", "midjourney", "stable diffusion", "dall-e", "openai", "anthropic", "claude", "gemini"],
+    "多媒体": ["video", "youtube", "bilibili", "抖音", "tiktok", "audio", "music", "podcast", "streaming", "live", "animation", "movie", "film", "editor", "premiere", "after effects"],
+    "系统工具": ["tool", "utility", "monitoring", "backup", "security", "password", "file manager", "download", "converter", "generator"]
+  },
+
+  "confidence_thresholds": {
+    "high": 0.85,
+    "medium": 0.7,
+    "low": 0.5
+  },
+
+  "capacity_limits": {
+    "normal_min": 10,
+    "normal_max": 50,
+    "warning_threshold": 60,
+    "critical_threshold": 80,
+    "empty_threshold": 5,
+    "other_max": 200
+  },
+
+  "processing": {
+    "batch_size": 500,
+    "review_sample_size": 100,
+    "auto_assign_threshold": 0.8,
+    "require_human_review_threshold": 0.6
+  },
+
+  "output": {
+    "main_file": "websites_v9.json",
+    "mapping_log": "logs/v9_mapping_log.json",
+    "stats_report": "reports/v9_stats.md",
+    "unmapped_list": "reports/v9_unmapped.json",
+    "low_confidence_list": "reports/v9_low_confidence.json"
+  }
+}
