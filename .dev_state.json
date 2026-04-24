@@ -1,5 +1,5 @@
 {
-  "current_step": 7,
+  "current_step": 8,
   "completed_tasks": [],
   "backup_paths": [
     "/home/yoli/GitHub/web_nav_v2/.backup/websites.json.20260424_083517",
@@ -122,5 +122,6 @@
     "categories": 109,
     "balanced": 20,
     "null_name": 0
-  }
+  },
+  "completed": true
 }

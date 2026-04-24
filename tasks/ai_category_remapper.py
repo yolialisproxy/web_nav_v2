@@ -32,12 +32,12 @@ AI_SUBCATEGORY_RULES = {
         "name": "AI视频",
         "keywords": ["video", "生成", "视频", "animation", "motion", "视觉", "视觉特效", "影视", "movie", "film", "剪辑", "video generation"],
         "label_map": {
-            "AI视频/资源": "AI视频/素材资源",
-            "AI视频/生成器": "AI视频/生成平台",
-            "AI视频/库": "AI视频/开发库",
-            "AI视频/服务": "AI视频/云服务",
-            "AI视频/社区": "AI视频/社区论坛",
-            "AI视频/教程": "AI视频/学习教程"
+            "AI智能/AI视频/资源": "AI视频/素材资源",
+            "AI智能/AI视频/生成器": "AI视频/生成平台",
+            "AI智能/AI视频/库": "AI视频/开发库",
+            "AI智能/AI视频/服务": "AI视频/云服务",
+            "AI智能/AI视频/社区": "AI视频/社区论坛",
+            "AI智能/AI视频/教程": "AI视频/学习教程"
         }
     },
     # AI音频相关
