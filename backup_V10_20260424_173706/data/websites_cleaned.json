@@ -1,0 +1,579 @@
+[
+  {
+    "name": "Heroicons",
+    "url": "https://heroicons.com",
+    "description": "Tailwind官方图标",
+    "title": "Heroicons",
+    "_cat": "AI智能/AI视频/资源",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://try.vikunja.io/login",
+    "title": "Vikunja",
+    "description": "Vikunja (/vɪˈkuːnjə/) - The to-do app to organize your life.",
+    "_cat": "AI智能/AI视频/资源",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://webui.me/",
+    "title": "WebUI",
+    "description": "Use web browser as GUI",
+    "_cat": "AI智能/AI视频/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "http://www.libressl.org/",
+    "title": "LibreSSL",
+    "description": "the main LibreSSL page",
+    "_cat": "AI智能/AI音乐/资源",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://www.tudou.com",
+    "name": "土豆网",
+    "description": "视频服务平台,提供视频播放,视频发布,视频搜索,视频分享",
+    "title": "土豆-召唤全球优秀短视频",
+    "_cat": "AI智能/AI音乐/库",
+    "category": "视频创作"
+  },
+  {
+    "url": "https://www.privoxy.org",
+    "title": "Privoxy - Home Page",
+    "description": "Privoxy helps users to protect their privacy.",
+    "_cat": "AI智能/AI音乐/教程",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://docs.wedding-share.org/",
+    "title": "WeddingShare",
+    "description": "Description will go into a meta tag in &lt;head /&gt;",
+    "_cat": "AI智能/AI音乐/教程",
+    "category": "文档工具"
+  },
+  {
+    "url": "https://app.tamariapp.com",
+    "title": "登录 - Tamari",
+    "description": "登录 Tamari 网络应用程序。",
+    "_cat": "AI智能/AI音乐/生成器",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://cihar.com/software/enca/",
+    "title": "Enca",
+    "description": "Michal Čihař",
+    "_cat": "AI智能/AI开发/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://webthings.io/gateway/",
+    "title": "WebThings Gateway",
+    "description": "Build your own Web of Things gateway",
+    "_cat": "AI智能/AI开发/工具",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://formbricks.com",
+    "title": "baseball-bat-ball",
+    "description": "Own your data, build better experiences.",
+    "_cat": "AI智能/AI开发/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://homebox.software/",
+    "title": "HomeBox | Homebox",
+    "description": "A simple home inventory management software",
+    "_cat": "AI智能/AI开发/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://cfengine.com/",
+    "title": "CFEngine",
+    "description": "Automate your infrastructure, security & compliance.",
+    "source": "awesome",
+    "_cat": "AI智能/AI开发/服务",
+    "category": "其他"
+  },
+  {
+    "url": "https://viseron.netlify.app/",
+    "title": "Homepage | Viseron",
+    "description": "Self-hosted, local only NVR and AI Computer Vision software.",
+    "_cat": "AI智能/AI开发/服务",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://www.accent.reviews/",
+    "title": "Accent | Accent",
+    "description": ">Accent is your simple, developer-oriented translation tool",
+    "_cat": "AI智能/AI开发/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://xbackbone.app/",
+    "title": "Home | XBackBone",
+    "description": "A lightweight file manager with full ShareX support and more",
+    "_cat": "视频娱乐/国内视频/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://forum.golangbridge.org",
+    "title": "Go Forum",
+    "description": "The community-driven Go discussion site that keeps on giving",
+    "_cat": "视频娱乐/国外视频/服务",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://gotify.net/",
+    "title": "Gotify",
+    "description": "a simple server for sending and receiving messages",
+    "_cat": "视频娱乐/国外视频/服务",
+    "category": "其他"
+  },
+  {
+    "url": "https://aurora-opensource.github.io/au/main/",
+    "title": "The Au units library",
+    "description": "A C++ units library, by Aurora",
+    "_cat": "视频娱乐/国外视频/开源",
+    "category": "AI工具"
+  },
+  {
+    "url": "http://www.openframeworks.cc/",
+    "title": "openFrameworks",
+    "description": "openFrameworks",
+    "_cat": "视频娱乐/国外视频/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "http://simonrodriguez.fr/dragon/",
+    "title": "Here be dragons",
+    "description": "Here be dragons is a computer graphics pet project",
+    "_cat": "视频娱乐/直播/教程",
+    "category": "其他"
+  },
+  {
+    "url": "https://try.discourse.org/",
+    "title": "Discourse Demo",
+    "description": "Demonstration sandbox for Discourse",
+    "_cat": "视频娱乐/直播/教程",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/arrays-OsBSF\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "视频娱乐/直播/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/dynamic-arrays-EwbnV\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "视频娱乐/直播/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://nemequ.github.io/hedley/",
+    "title": "Hedley",
+    "description": "Hedley documentation",
+    "_cat": "视频娱乐/直播/服务",
+    "category": "开源项目"
+  },
+  {
+    "url": "https://yacy.net/en/index.html",
+    "title": "Home - YaCy",
+    "description": "YaCy P2P - Decentralized Search Engine",
+    "_cat": "视频娱乐/直播/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://prosody.im/",
+    "title": "Welcome – Prosody IM",
+    "description": "Prosody is a Jabber/XMPP server\nwritten in Lua",
+    "_cat": "视频娱乐/直播/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://knrdl.github.io/bicimon/",
+    "title": "BiCiMon",
+    "description": "Bike Speedometer",
+    "_cat": "视频娱乐/音乐/教程",
+    "category": "开源项目"
+  },
+  {
+    "url": "https://autodiff.github.io",
+    "title": "autodiff",
+    "description": "autodiff documentation.",
+    "_cat": "视频娱乐/游戏/资源",
+    "category": "开源项目"
+  },
+  {
+    "url": "https://layli.app",
+    "title": "Layli",
+    "description": "Web site created using create-react-app",
+    "_cat": "视频娱乐/游戏/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://feather.wiki/?page=gallery#wikis",
+    "title": "Feather Wiki",
+    "description": "A tiny tool for simple, self-contained wikis!",
+    "_cat": "视频娱乐/游戏/教程",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://sandbox.tinode.co/",
+    "title": "Tinode",
+    "description": "Tinode instant messenger in a browser",
+    "_cat": "视频娱乐/游戏/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://andreasfertig.com/cpp-resources/",
+    "title": "C++ Resources",
+    "description": "Various resources for learning or using C++",
+    "_cat": "视频娱乐/动漫/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://tuxseo.com/",
+    "title": "TuxSEO",
+    "description": "Best SEO Blog Writer entity in the universe!",
+    "_cat": "视频娱乐/动漫/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://chronoframe.bh8.ga/",
+    "title": "ChronoFrame",
+    "description": "A Self-hosted photo gallery",
+    "_cat": "阅读写作/网文/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://mafl.hywax.space/",
+    "title": "Mafl",
+    "description": "Intuitive service for organizing your homepage",
+    "_cat": "阅读写作/网文/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/doubly-linked-lists-jpGKD\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "阅读写作/博客/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/stacks-UdKzQ\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "阅读写作/博客/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/queues-EShpq\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "阅读写作/博客/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/phone-book-problem-NYZZP\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "阅读写作/出版/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/instant-uploads-and-storage-optimization-in-dropbox-DvaIb\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "阅读写作/出版/工具",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://www.coursera.org/lecture/data-structures/distributed-hash-tables-tvH8H\\",
+    "title": "数据结构 | Coursera",
+    "description": "由 University of California San Diego ... 免费注册。",
+    "source": "awesome",
+    "_cat": "阅读写作/出版/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://livebook.dev",
+    "title": "Home - Livebook.dev",
+    "description": "Automate code & data workflows with interactive notebooks",
+    "_cat": "阅读写作/工具/社区",
+    "category": "实用工具"
+  },
+  {
+    "url": "http://linticator.com",
+    "title": "Linticator",
+    "description": "Flexe/PC-Lint (Plus) Integration for Eclipse CDT",
+    "_cat": "阅读写作/平台/教程",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://github.com/topics/ide",
+    "name": "GitHub IDE 话题",
+    "description": "GitHub IDE 相关开源项目社区",
+    "title": "IDE · GitHub Topics",
+    "_cat": "阅读写作/平台/开源",
+    "category": "代码工具"
+  },
+  {
+    "url": "https://www.audiobookshelf.org/",
+    "title": "audiobookshelf",
+    "description": "Self-hosted audiobook and podcast server",
+    "_cat": "阅读写作/教程/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://llmkube.com",
+    "title": "Llmkube Com",
+    "description": "# LLMKube Summary: Kubernetes for Local LLMs...",
+    "_cat": "资源素材/图片/资源",
+    "category": "其他"
+  },
+  {
+    "name": "Plainpad",
+    "url": "https://alextselegidis.com/get/plainpad/",
+    "title": "Alextselegidis Com",
+    "description": "# Plainpad: Self Hosted Note Taking App...",
+    "_cat": "资源素材/图片/资源",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://localai.io/",
+    "title": "Localai Io",
+    "description": "# LocalAI...",
+    "_cat": "资源素材/图片/资源",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://joinmastodon.org/",
+    "title": "Mastodon - 去中心化社交媒体",
+    "description": "详细了解 Mastodon，一个截然不同的，自由及开放源代码的去中心化社交媒体平台。",
+    "_cat": "资源素材/图片/资源",
+    "category": "代码工具"
+  },
+  {
+    "url": "https://myfinbudget.com",
+    "title": "Myfin Budget",
+    "description": "The open-source personal finance manager",
+    "_cat": "资源素材/图片/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://app.ombi.io/",
+    "title": "Ombi",
+    "description": "Ombi, media request tool",
+    "_cat": "资源素材/ppt模板/工具",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://opensmtpd.org/",
+    "title": "OpenSMTPD",
+    "description": "the main OpenSMTPD page",
+    "_cat": "资源素材/ppt模板/工具",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://bits.stephan-brumme.com/\\",
+    "title": "the bit twiddler",
+    "description": "Bit manipulation explained: the bit twiddler",
+    "source": "awesome",
+    "_cat": "资源素材/ppt模板/教程",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://www.spip.net/fr",
+    "title": "SPIP",
+    "description": "Système de Publication pour Internet",
+    "_cat": "资源素材/ppt模板/开源",
+    "category": "其他"
+  },
+  {
+    "url": "https://wide.b3log.org/login",
+    "title": "Wide - 随时随地玩 golang",
+    "description": "A Web-based Go IDE , do your development anytime, anywhere.",
+    "_cat": "资源素材/平台/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://docs.opencloud.eu/",
+    "title": "OpenCloud Docs",
+    "description": "Excellent file sharing",
+    "_cat": "资源素材/平台/资源",
+    "category": "文档工具"
+  },
+  {
+    "url": "http://jemalloc.net/",
+    "title": "jemalloc",
+    "description": "jemalloc : memory allocator",
+    "_cat": "资源素材/资源/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://airtrail.johan.ohly.dk",
+    "title": "AirTrail",
+    "description": "A modern, open-source personal flight tracking system.",
+    "_cat": "开发资源/ide/工具",
+    "category": "AI工具"
+  },
+  {
+    "url": "https://www.psono.pw",
+    "title": "Psono",
+    "description": "Psono Web Client to login or register",
+    "_cat": "开发资源/ide/资源",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://easyindie.app",
+    "title": "Easy Indie App",
+    "description": "Run your own X<br>in a few clicks.",
+    "_cat": "开发资源/api/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://go101.org",
+    "title": "Go 101 -Go 101",
+    "description": "Golang online books, articles, tools, etc.",
+    "_cat": "开发资源/文档/服务",
+    "category": "其他"
+  },
+  {
+    "url": "https://yourls.org/",
+    "title": "YOURLS",
+    "description": "Your Own URL Shortener",
+    "_cat": "开发资源/ai编程/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://gameyfin.org",
+    "title": "Home - Gameyfin",
+    "description": "Your simple video game library manager.",
+    "_cat": "开发资源/ai编程/生成器",
+    "category": "其他"
+  },
+  {
+    "url": "https://tubearchivist.com/",
+    "title": "Tube Archivist",
+    "description": "Your Self hosted YouTube Media Server.",
+    "_cat": "开发资源/平台/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.deforum.art",
+    "name": "Deforum",
+    "description": "Home of the deforum community",
+    "title": "deforum",
+    "_cat": "创意工具/ui设计/工具",
+    "category": "其他"
+  },
+  {
+    "url": "https://www.polyhaven.com",
+    "name": "Poly Haven",
+    "description": "The Public 3D Asset Library",
+    "title": "Poly Haven",
+    "_cat": "创意工具/ui设计/教程",
+    "category": "其他"
+  },
+  {
+    "url": "https://sindresorhus.com/apps",
+    "title": "Apps — Sindre Sorhus",
+    "description": "Quality crafted apps by Sindre Sorhus",
+    "_cat": "创意工具/ui设计/开源",
+    "category": "图片处理"
+  },
+  {
+    "url": "https://buymeacoffee.com/sindresorhus",
+    "title": "Buymeacoffee",
+    "description": "summary_large_image",
+    "_cat": "创意工具/ui设计/开源",
+    "category": "其他"
+  },
+  {
+    "name": "PageSpeed",
+    "url": "https://pagespeed.web.dev",
+    "description": "Google网站性能分析工具",
+    "title": "PageSpeed Insights",
+    "_cat": "创意工具/平台/教程",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://romm.app/",
+    "title": "The RomM Project",
+    "description": "RomM is a self-hosted rom manager for your game collection.",
+    "_cat": "办公效率/协作/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://js.wiki/",
+    "title": "Wiki.js",
+    "description": "The most powerful and extensible open source Wiki software.",
+    "_cat": "办公效率/日程/生成器",
+    "category": "文档工具"
+  },
+  {
+    "url": "https://amusewiki.org/",
+    "title": "News | A·Muse·Wiki",
+    "description": "Amusewiki 2.610 released",
+    "_cat": "办公效率/表单/社区",
+    "category": "文档工具"
+  },
+  {
+    "url": "http://www.cbyexample.com/",
+    "title": "C by Example",
+    "description": "Learn the basics of C and C++",
+    "_cat": "视频创作/特效/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://cannery.app",
+    "title": "Cannery",
+    "description": "The self-hosted firearm tracker app",
+    "_cat": "视频创作/特效/资源",
+    "category": "其他"
+  },
+  {
+    "url": "https://getcockpit.com",
+    "title": "Cockpit",
+    "description": "Simple Content Platform to manage any structured content",
+    "_cat": "视频创作/字幕/资源",
+    "category": "其他"
+  },
+  {
+    "url": "http://raftlib.io/",
+    "title": "raftlib.io",
+    "description": "Simple, easy to use stream computation library for C++.",
+    "_cat": "视频创作/字幕/教程",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://www.bfilipek.com/?m=1",
+    "title": "C++ Stories",
+    "description": "Stay up-to-date with Modern C++",
+    "_cat": "视频创作/素材/社区",
+    "category": "其他"
+  },
+  {
+    "url": "https://alf.io/",
+    "title": "Alf.io",
+    "description": "the open source ticket reservation system",
+    "_cat": "视频创作/素材/社区",
+    "category": "实用工具"
+  },
+  {
+    "url": "https://demo.gauzy.co",
+    "title": "Gauzy",
+    "description": "Business Management Platform",
+    "_cat": "视频创作/平台/开源",
+    "category": "其他"
+  }
+]

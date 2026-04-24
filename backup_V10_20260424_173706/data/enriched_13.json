@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://github.com",
+    "original_title": "GitHub",
+    "cn_title": "GitHub",
+    "cn_description": "Join the world's most widely adopted, AI",
+    "id": "github_com"
+  },
+  {
+    "url": "https://stackoverflow.com",
+    "original_title": "Stack Overflow",
+    "cn_title": "stackoverflow.com",
+    "cn_description": "专业网站：stackoverflow.com",
+    "id": "stackoverflow_com"
+  },
+  {
+    "url": "https://www.baidu.com",
+    "original_title": "百度",
+    "cn_title": "www.baidu.com",
+    "cn_description": "专业网站：www.baidu.com",
+    "id": "www_baidu_com"
+  },
+  {
+    "url": "https://www.bilibili.com",
+    "original_title": "哔哩哔哩",
+    "cn_title": "www.bilibili.com",
+    "cn_description": "专业网站：www.bilibili.com",
+    "id": "www_bilibili_com"
+  },
+  {
+    "url": "https://www.zhihu.com",
+    "original_title": "知乎",
+    "cn_title": "www.zhihu.com",
+    "cn_description": "专业网站：www.zhihu.com",
+    "id": "www_zhihu_com"
+  }
+]
