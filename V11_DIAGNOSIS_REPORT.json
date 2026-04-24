@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-04-24T19:26:10.579191",
+  "v10_final_state": {
+    "total_sites": 6289,
+    "total_categories": 218,
+    "balance_stats": {
+      "balanced": 92,
+      "over_capacity": 51,
+      "under_capacity": 75,
+      "balance_percentage": 42.2
+    }
+  },
+  "v11_plans": {
+    "over_capacity_split": {
+      "file_exists": true,
+      "total_planned_splits": 51,
+      "total_sub_categories": 740
+    },
+    "under_category_fill": {
+      "file_exists": true,
+      "total_under_categories": 132,
+      "merge_candidates": 60,
+      "to_fill": 72,
+      "estimated_gap": 788
+    }
+  },
+  "v11_target": {
+    "target_balance_percentage": 80,
+    "current_balance": 42.2,
+    "gap_to_target": 37.8,
+    "estimated_after_split": 77.9,
+    "estimated_after_fill": 99.8
+  }
+}
