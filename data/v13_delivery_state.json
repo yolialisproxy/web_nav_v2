@@ -1,0 +1,15 @@
+{
+  "version": "V13",
+  "timestamp": "2026-04-25T14:44:48.423047",
+  "total_sites": 3358,
+  "total_categories": 208,
+  "underrepresented_categories": 67,
+  "gap_remaining": 340,
+  "balance_percentage": 3.37,
+  "phase1_health_sample": "data/v13_health_sample.json",
+  "phase1_health_remaining": "data/v13_health_remaining.json",
+  "phase2_imports": 24,
+  "phase3_merges": 1342,
+  "phase4_modifications": 121,
+  "backups_created": 4
+}

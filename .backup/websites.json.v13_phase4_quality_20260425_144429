@@ -11,7 +11,7 @@
   {
     "url": "https://www.data.ai",
     "name": "Data.ai",
-    "description": "Login | data.ai - https://www.data.ai",
+    "description": "数据可视化",
     "title": "Login | data.ai",
     "_cat": "AI智能/AI视频/资源",
     "category": "AI工具/人工智能/综合平台"
@@ -158,7 +158,7 @@
   {
     "url": "https://www.aippt.cn",
     "name": "AiPPT",
-    "description": "AiPPT - 全智能 AI 一键生成 PPT - https://www.aippt.cn",
+    "description": "AI生成PPT",
     "title": "AiPPT - 全智能 AI 一键生成 PPT",
     "_cat": "AI智能/AI视频/生成器",
     "category": "AI工具/人工智能/综合平台"
@@ -166,7 +166,7 @@
   {
     "url": "https://www.summarize.tech",
     "name": "Summarize",
-    "description": "Vercel Security Checkpoint - https://www.summarize.tech",
+    "description": "智能摘要",
     "title": "Vercel Security Checkpoint",
     "_cat": "AI智能/AI视频/生成器",
     "category": "AI工具/人工智能/综合平台"
@@ -182,7 +182,7 @@
   {
     "url": "https://www.brainscape.com",
     "name": "Brainscape",
-    "description": "Brainscape: The Best Flashcards App | Make Flashcards Online - https://www.brainscape.com",
+    "description": "智能卡片",
     "title": "Brainscape: The Best Flashcards App | Make Flashcards Online",
     "_cat": "AI智能/工具/工具",
     "category": "AI工具/人工智能/综合平台"
@@ -190,7 +190,7 @@
   {
     "url": "http://xmlsoft.org/",
     "title": "Home · Wiki · GNOME / libxml2 · GitLab",
-    "description": "Home · Wiki · GNOME / libxml2 · GitLab - http://xmlsoft.org/",
+    "description": "#ECECEF",
     "_cat": "AI智能/工具/平台",
     "category": "AI工具/人工智能/综合平台",
     "name": "Home · Wiki · GNOME / libxml2 · GitLab"
@@ -222,7 +222,7 @@
   {
     "url": "https://www.researchrabbit.ai",
     "name": "Research Rabbit",
-    "description": "ResearchRabbit: AI Tool for Smarter, Faster Literature Reviews - https://www.researchrabbit.ai",
+    "description": "学术工具",
     "title": "ResearchRabbit: AI Tool for Smarter, Faster Literature Reviews",
     "_cat": "开发资源/工具/生成器",
     "category": "AI工具/人工智能/综合平台"
@@ -3598,8 +3598,8 @@
     "title": "Neural Coding and Perception of Sound | Health Sciences and Technology | MIT OpenCourseWare",
     "description": "This course focuses on neural structures and mechanisms mediating the detection, localization and recognition of sounds. Discussions cover how acoustic signals are coded by auditory neurons, the impact of these codes on behavioral performance, and the circuitry and cellular mechanisms underlying signal transformations. Topics include temporal codin",
     "source": "awesome",
-    "_cat": "AI工具/人工智能/代码助手",
-    "category": "AI工具/人工智能/代码助手",
+    "_cat": "AI工具/人工智能",
+    "category": "AI工具/人工智能",
     "name": "Neural Coding and Perception of Sound",
     "phase3_merged": true
   },
@@ -4705,7 +4705,7 @@
   {
     "url": "https://www.iconfinder.com",
     "name": "Iconfinder",
-    "description": "Access denied - https://www.iconfinder.com",
+    "description": "图标搜索",
     "title": "Access denied",
     "_cat": "设计工具",
     "category": "设计工具",
@@ -5874,7 +5874,7 @@
   {
     "url": "https://dev.funkwhale.audio/funkwhale",
     "title": "Making sure you're not a bot!",
-    "description": "Making sure you're not a bot! - https://dev.funkwhale.audio/funkwhale",
+    "description": "#F1F0F6",
     "_cat": "系统工具/实用工具/文件工具",
     "category": "系统工具/实用工具/文件工具",
     "name": "Making sure you're not a bot!",
@@ -5901,7 +5901,7 @@
   {
     "name": "ML Glossary",
     "url": "https://ml-cheatsheet.readthedocs.io",
-    "description": "Just a moment... - https://ml-cheatsheet.readthedocs.io",
+    "description": "机器学习速查表",
     "title": "Just a moment...",
     "_cat": "系统工具/实用工具/文件工具",
     "category": "系统工具/实用工具/文件工具",
@@ -5949,7 +5949,7 @@
   {
     "url": "https://www.loom.com/ai",
     "name": "Loom AI",
-    "description": "Record better, faster video messages with AI | Loom - https://www.loom.com/ai",
+    "description": "AI视频",
     "title": "Record better, faster video messages with AI | Loom",
     "_cat": "系统工具/实用工具/文件工具",
     "category": "系统工具/实用工具/文件工具",
@@ -6056,7 +6056,7 @@
   {
     "url": "https://www.contentbot.ai",
     "name": "ContentBot",
-    "description": "ContentBot - AI Content Automation and Workflows - https://www.contentbot.ai",
+    "description": "AI写作",
     "title": "ContentBot - AI Content Automation and Workflows",
     "_cat": "办公工具",
     "category": "办公工具"
@@ -6080,7 +6080,7 @@
   {
     "url": "https://www.material.io/icons",
     "name": "Material Icons",
-    "description": "Material Design - https://www.material.io/icons",
+    "description": "图标库",
     "title": "Material Design",
     "_cat": "视频创作/平台/资源",
     "category": "设计工具/平台资源"
@@ -6161,7 +6161,7 @@
   {
     "url": "https://gitlab.gnome.org/GNOME/rygel/",
     "title": "GNOME / rygel · GitLab",
-    "description": "GNOME / rygel · GitLab - https://gitlab.gnome.org/GNOME/rygel/",
+    "description": "#ECECEF",
     "_cat": "开发资源/api/生成器",
     "category": "开发工具/API生成",
     "name": "GNOME / rygel · GitLab"
@@ -6327,7 +6327,7 @@
   {
     "url": "https://www.opus.pro",
     "name": "Opus",
-    "description": "OpusClip: #1 AI video clipping and editing tool - https://www.opus.pro",
+    "description": "AI视频剪辑",
     "title": "OpusClip: #1 AI video clipping and editing tool",
     "_cat": "多媒体/视频娱乐",
     "category": "多媒体/视频娱乐"
@@ -6451,7 +6451,7 @@
   {
     "url": "https://nodejs.org/docs",
     "name": "Node.js Docs",
-    "description": "Index of /docs/ - https://nodejs.org/docs",
+    "description": "Node.js文档",
     "title": "Index of /docs/",
     "_cat": "视频娱乐/国内视频/教程",
     "category": "多媒体/视频娱乐/国内视频"
@@ -7409,8 +7409,8 @@
     "url": "http://www.ius.cs.cmu.edu/idb/\\",
     "name": "http://www.ius.cs.cmu.edu/idb/\\",
     "description": "访问 http://www.ius.cs.cmu.edu/idb/\\ 了解更多信息",
-    "category": "效率办公/诗歌创作",
-    "_cat": "效率办公/诗歌创作",
+    "category": "效率办公/诗歌创作/子类-4",
+    "_cat": "效率办公/诗歌创作/子类-4",
     "phase3_split": true,
     "title": "http://www.ius.cs.cmu.edu/idb/\\"
   },
@@ -7418,8 +7418,8 @@
     "url": "http://cvc.yale.edu/projects/yalefaces/yalefaces.html\\",
     "name": "http://cvc.yale.edu/projects/yalefaces/yalefaces.html\\",
     "description": "访问 http://cvc.yale.edu/projects/yalefaces/yalefaces.html\\ 了解更多信息",
-    "category": "效率办公/诗歌创作",
-    "_cat": "效率办公/诗歌创作",
+    "category": "效率办公/诗歌创作/子类-4",
+    "_cat": "效率办公/诗歌创作/子类-4",
     "phase3_split": true,
     "title": "http://cvc.yale.edu/projects/yalefaces/yalefaces.html\\"
   },
@@ -7615,8 +7615,8 @@
     "url": "https://typo3.org/",
     "title": "TYPO3 Project and Governance — Democratic Open Source - TYPO3 Project",
     "description": "The TYPO3 project is a volunteer community backed by a not-for-profit member association, and a fully-owned service company.",
-    "_cat": "设计工具",
-    "category": "设计工具",
+    "_cat": "资源素材/ui套件/服务",
+    "category": "设计工具/UI套件",
     "name": "TYPO3 Project and Governance"
   },
   {
@@ -7624,8 +7624,8 @@
     "name": "Magic Studio",
     "description": "With Magic Studio anybody can use AI to create images, add &amp; remove objects, backgrounds and more. Make beautiful images for product pages, ads &amp; social media.",
     "title": "Magic Studio : Make beautiful images with AI",
-    "_cat": "设计工具",
-    "category": "设计工具"
+    "_cat": "资源素材/ui套件/服务",
+    "category": "设计工具/UI套件"
   },
   {
     "url": "https://posthog.com",
@@ -7655,7 +7655,7 @@
   {
     "url": "https://www.docusaurus.io",
     "name": "Docusaurus",
-    "description": "Build optimized websites quickly, focus on your content | Docusaurus - https://www.docusaurus.io",
+    "description": "文档系统",
     "title": "Build optimized websites quickly, focus on your content | Docusaurus",
     "_cat": "开发资源/部署/服务",
     "category": "开发工具/部署服务"
@@ -7784,7 +7784,7 @@
   {
     "url": "https://www.vlive.tv",
     "name": "VLIVE",
-    "description": "VLIVE is now a part of Weverse - https://www.vlive.tv",
+    "description": "明星直播",
     "title": "VLIVE is now a part of Weverse",
     "_cat": "学术科研",
     "category": "学术科研",
@@ -7793,7 +7793,7 @@
   {
     "name": "Trae AI",
     "url": "https://trae.ai",
-    "description": "TRAE - Collaborate with Intelligence - https://trae.ai",
+    "description": "浏览器内置AI助手",
     "title": "TRAE - Collaborate with Intelligence",
     "_cat": "学术科研",
     "category": "学术科研",
@@ -7876,26 +7876,26 @@
     "url": "https://khoj.dev/",
     "title": "Khoj - AI for Humans",
     "description": "Khoj is an applied artificial intelligence company building safe, useful AI software for humans.",
-    "_cat": "多媒体",
-    "category": "多媒体",
+    "_cat": "视频创作/录屏/资源",
+    "category": "多媒体/录屏资源",
     "name": "Khoj - AI for Humans"
   },
   {
     "url": "https://activitywatch.net",
     "title": "ActivityWatch - Open-source time tracker",
     "description": "The best free and open-source automated time tracker. Cross-platform, extensible, local/privacy-first. Tracks app and website usage on Windows, macOS, Linux & Android. All data stays on your device.",
-    "_cat": "多媒体",
-    "category": "多媒体",
+    "_cat": "多媒体/字幕资源",
+    "category": "多媒体/字幕资源",
     "name": "ActivityWatch - Open-source time tracker",
     "phase3_merged": true
   },
   {
     "url": "https://www.andi.ai",
     "name": "Andi",
-    "description": "Andi | Family Intelligence—The AI that actually knows your family - https://www.andi.ai",
+    "description": "AI搜索",
     "title": "Andi | Family Intelligence—The AI that actually knows your family",
-    "_cat": "多媒体",
-    "category": "多媒体",
+    "_cat": "多媒体/字幕资源",
+    "category": "多媒体/字幕资源",
     "phase3_merged": true
   },
   {
@@ -7903,17 +7903,17 @@
     "name": "raftlib.io",
     "title": "raftlib.io",
     "description": "欠容填充站点 - 多媒体/字幕教程",
-    "category": "多媒体",
-    "_cat": "多媒体",
+    "category": "多媒体/字幕教程",
+    "_cat": "多媒体/字幕教程",
     "source": "v12_underfill_flat"
   },
   {
     "url": "https://www.iconmonstr.com",
     "name": "iconmonstr",
-    "description": "iconmonstr - Free simple icons for your next project - https://www.iconmonstr.com",
+    "description": "免费图标",
     "title": "iconmonstr - Free simple icons for your next project",
-    "_cat": "多媒体",
-    "category": "多媒体",
+    "_cat": "多媒体/动画开源",
+    "category": "多媒体/动画开源",
     "phase3_merged": true
   },
   {
@@ -7929,8 +7929,8 @@
     "url": "https://gitpod.io/#https://github.com/rstacruz/cheatsheets\\",
     "name": "https://gitpod.io/#https://github.com/rstacruz/cheatsheets\\",
     "description": "访问 https://gitpod.io/#https://github.com/rstacruz/cheatsheets\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://gitpod.io/#https://github.com/rstacruz/cheatsheets\\"
   },
@@ -8019,8 +8019,8 @@
     "url": "https://capistranorb.com/\\",
     "name": "https://capistranorb.com/\\",
     "description": "访问 https://capistranorb.com/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://capistranorb.com/\\"
   },
@@ -8028,8 +8028,8 @@
     "url": "https://api.github.com/_private/browser/stats",
     "name": "https://api.github.com/_private/browser/stats",
     "description": "访问 https://api.github.com/_private/browser/stats 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://api.github.com/_private/browser/stats"
   },
@@ -8037,8 +8037,8 @@
     "url": "https://d3j2pkmjtin6ou.cloudfront.net/art_board_sm_2.jpg\\",
     "name": "https://d3j2pkmjtin6ou.cloudfront.net/art_board_sm_2.jpg\\",
     "description": "访问 https://d3j2pkmjtin6ou.cloudfront.net/art_board_sm_2.jpg\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://d3j2pkmjtin6ou.cloudfront.net/art_board_sm_2.jpg\\"
   },
@@ -8109,8 +8109,8 @@
     "url": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html",
     "name": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html",
     "description": "访问 http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html"
   },
@@ -8154,8 +8154,8 @@
     "url": "https://api.github.com/_private/browser/errors",
     "name": "https://api.github.com/_private/browser/errors",
     "description": "访问 https://api.github.com/_private/browser/errors 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://api.github.com/_private/browser/errors"
   },
@@ -8226,8 +8226,8 @@
     "url": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html\\",
     "name": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html\\",
     "description": "访问 http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html\\"
   },
@@ -8235,8 +8235,8 @@
     "url": "http://www.hiredintech.com/system-design/\\",
     "name": "http://www.hiredintech.com/system-design/\\",
     "description": "访问 http://www.hiredintech.com/system-design/\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://www.hiredintech.com/system-design/\\"
   },
@@ -8244,8 +8244,8 @@
     "url": "http://horicky.blogspot.com/2009/11/nosql-patterns.html\\",
     "name": "http://horicky.blogspot.com/2009/11/nosql-patterns.html\\",
     "description": "访问 http://horicky.blogspot.com/2009/11/nosql-patterns.html\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://horicky.blogspot.com/2009/11/nosql-patterns.html\\"
   },
@@ -8262,8 +8262,8 @@
     "url": "https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/waxgx/core-markov-text-generation\\",
     "name": "https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/waxgx/core-markov-text-generation\\",
     "description": "访问 https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/waxgx/core-markov-text-generation\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/data-structures-optimizing-performance/lecture/waxgx/core-markov-text-generation\\"
   },
@@ -8271,8 +8271,8 @@
     "url": "http://www.oodesign.com/open-close-principle.html\\",
     "name": "http://www.oodesign.com/open-close-principle.html\\",
     "description": "访问 http://www.oodesign.com/open-close-principle.html\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://www.oodesign.com/open-close-principle.html\\"
   },
@@ -8343,8 +8343,8 @@
     "url": "https://www.coursera.org/learn/algorithms-part2/lecture/jwNmV/character-based-operations\\",
     "name": "https://www.coursera.org/learn/algorithms-part2/lecture/jwNmV/character-based-operations\\",
     "description": "访问 https://www.coursera.org/learn/algorithms-part2/lecture/jwNmV/character-based-operations\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/algorithms-part2/lecture/jwNmV/character-based-operations\\"
   },
@@ -8397,8 +8397,8 @@
     "url": "https://git.savannah.gnu.org/cgit/nano.git/tree/\\",
     "name": "https://git.savannah.gnu.org/cgit/nano.git/tree/\\",
     "description": "访问 https://git.savannah.gnu.org/cgit/nano.git/tree/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://git.savannah.gnu.org/cgit/nano.git/tree/\\"
   },
@@ -8775,8 +8775,8 @@
     "url": "https://www.coursera.org/lecture/data-structures/tree-traversal-fr51b\\",
     "name": "https://www.coursera.org/lecture/data-structures/tree-traversal-fr51b\\",
     "description": "访问 https://www.coursera.org/lecture/data-structures/tree-traversal-fr51b\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/lecture/data-structures/tree-traversal-fr51b\\"
   },
@@ -8793,8 +8793,8 @@
     "url": "https://www.coursera.org/lecture/data-structures-optimizing-performance/in-the-real-world-lists-vs-arrays-QUaUd",
     "name": "https://www.coursera.org/lecture/data-structures-optimizing-performance/in-the-real-world-lists-vs-arrays-QUaUd",
     "description": "访问 https://www.coursera.org/lecture/data-structures-optimizing-performance/in-the-real-world-lists-vs-arrays-QUaUd 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/lecture/data-structures-optimizing-performance/in-the-real-world-lists-vs-arrays-QUaUd"
   },
@@ -8838,8 +8838,8 @@
     "url": "http://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/",
     "name": "http://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/",
     "description": "访问 http://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/"
   },
@@ -8865,8 +8865,8 @@
     "url": "https://cea-hpc.github.io/modules/\\",
     "name": "https://cea-hpc.github.io/modules/\\",
     "description": "访问 https://cea-hpc.github.io/modules/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://cea-hpc.github.io/modules/\\"
   },
@@ -8892,8 +8892,8 @@
     "url": "https://systemcrafters.net/emacs-essentials/absolute-beginners-guide-to-emacs/",
     "name": "https://systemcrafters.net/emacs-essentials/absolute-beginners-guide-to-emacs/",
     "description": "访问 https://systemcrafters.net/emacs-essentials/absolute-beginners-guide-to-emacs/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://systemcrafters.net/emacs-essentials/absolute-beginners-guide-to-emacs/"
   },
@@ -8955,8 +8955,8 @@
     "url": "http://www.amazon.com/Cracking-Coding-Interview-6th-Programming/dp/0984782850/",
     "name": "http://www.amazon.com/Cracking-Coding-Interview-6th-Programming/dp/0984782850/",
     "description": "访问 http://www.amazon.com/Cracking-Coding-Interview-6th-Programming/dp/0984782850/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://www.amazon.com/Cracking-Coding-Interview-6th-Programming/dp/0984782850/"
   },
@@ -8964,8 +8964,8 @@
     "url": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#dynamicProgramming",
     "name": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#dynamicProgramming",
     "description": "访问 http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#dynamicProgramming 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#dynamicProgramming"
   },
@@ -8973,8 +8973,8 @@
     "url": "https://startupnextdoor.com/important-pick-one-language-for-the-coding-interview/\\",
     "name": "https://startupnextdoor.com/important-pick-one-language-for-the-coding-interview/\\",
     "description": "访问 https://startupnextdoor.com/important-pick-one-language-for-the-coding-interview/\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://startupnextdoor.com/important-pick-one-language-for-the-coding-interview/\\"
   },
@@ -8991,8 +8991,8 @@
     "url": "https://www.hackerearth.com/for-developers/",
     "name": "https://www.hackerearth.com/for-developers/",
     "description": "访问 https://www.hackerearth.com/for-developers/ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.hackerearth.com/for-developers/"
   },
@@ -9000,8 +9000,8 @@
     "url": "https://developers.google.com/protocol-buffers/docs/tutorials",
     "name": "https://developers.google.com/protocol-buffers/docs/tutorials",
     "description": "访问 https://developers.google.com/protocol-buffers/docs/tutorials 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://developers.google.com/protocol-buffers/docs/tutorials"
   },
@@ -9018,8 +9018,8 @@
     "url": "https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems\\",
     "name": "https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems\\",
     "description": "访问 https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://leetcode.com/discuss/general-discussion/786126/python-powerful-ultimate-binary-search-template-solved-many-problems\\"
   },
@@ -9027,8 +9027,8 @@
     "url": "http://www.oodesign.com/interface-segregation-principle.html",
     "name": "http://www.oodesign.com/interface-segregation-principle.html",
     "description": "访问 http://www.oodesign.com/interface-segregation-principle.html 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://www.oodesign.com/interface-segregation-principle.html"
   },
@@ -9072,8 +9072,8 @@
     "url": "https://andrewchilds.github.io/overcast/\\",
     "name": "https://andrewchilds.github.io/overcast/\\",
     "description": "访问 https://andrewchilds.github.io/overcast/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://andrewchilds.github.io/overcast/\\"
   },
@@ -9081,8 +9081,8 @@
     "url": "https://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=tree\\",
     "name": "https://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=tree\\",
     "description": "访问 https://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=tree\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://thekelleys.org.uk/gitweb/?p=dnsmasq.git;a=tree\\"
   },
@@ -9090,8 +9090,8 @@
     "url": "https://codeforces.com/\\",
     "name": "https://codeforces.com/\\",
     "description": "访问 https://codeforces.com/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://codeforces.com/\\"
   },
@@ -9099,8 +9099,8 @@
     "url": "https://leetcode.com/problems/validate-binary-search-tree/\\",
     "name": "https://leetcode.com/problems/validate-binary-search-tree/\\",
     "description": "访问 https://leetcode.com/problems/validate-binary-search-tree/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://leetcode.com/problems/validate-binary-search-tree/\\"
   },
@@ -9108,8 +9108,8 @@
     "url": "https://www.topcoder.com/thrive/articles/The%20Importance%20of%20Algorithms\\",
     "name": "https://www.topcoder.com/thrive/articles/The%20Importance%20of%20Algorithms\\",
     "description": "访问 https://www.topcoder.com/thrive/articles/The%20Importance%20of%20Algorithms\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.topcoder.com/thrive/articles/The%20Importance%20of%20Algorithms\\"
   },
@@ -9117,8 +9117,8 @@
     "url": "https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode",
     "name": "https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode",
     "description": "访问 https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode"
   },
@@ -9252,8 +9252,8 @@
     "url": "https://www.coursera.org/learn/data-structures/lecture/GQQLN/analysis-optional",
     "name": "https://www.coursera.org/learn/data-structures/lecture/GQQLN/analysis-optional",
     "description": "访问 https://www.coursera.org/learn/data-structures/lecture/GQQLN/analysis-optional 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/data-structures/lecture/GQQLN/analysis-optional"
   },
@@ -9279,8 +9279,8 @@
     "url": "https://www.coursera.org/lecture/data-structures/stacks-UdKzQ",
     "name": "https://www.coursera.org/lecture/data-structures/stacks-UdKzQ",
     "description": "访问 https://www.coursera.org/lecture/data-structures/stacks-UdKzQ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/lecture/data-structures/stacks-UdKzQ"
   },
@@ -9315,8 +9315,8 @@
     "url": "http://spinroot.com/courses/summer/Papers/hoare_1978.pdf",
     "name": "http://spinroot.com/courses/summer/Papers/hoare_1978.pdf",
     "description": "访问 http://spinroot.com/courses/summer/Papers/hoare_1978.pdf 了解更多信息",
-    "category": "AI工具/人工智能/文档分析",
-    "_cat": "AI工具/人工智能/文档分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://spinroot.com/courses/summer/Papers/hoare_1978.pdf"
   },
@@ -9423,8 +9423,8 @@
     "url": "https://www.coursera.org/learn/data-structures/lecture/qb4c2/union-by-rank\\",
     "name": "https://www.coursera.org/learn/data-structures/lecture/qb4c2/union-by-rank\\",
     "description": "访问 https://www.coursera.org/learn/data-structures/lecture/qb4c2/union-by-rank\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/data-structures/lecture/qb4c2/union-by-rank\\"
   },
@@ -9432,8 +9432,8 @@
     "url": "https://www.coursera.org/learn/data-structures/lecture/h4ZLc/optimization-implementation-and-analysis\\",
     "name": "https://www.coursera.org/learn/data-structures/lecture/h4ZLc/optimization-implementation-and-analysis\\",
     "description": "访问 https://www.coursera.org/learn/data-structures/lecture/h4ZLc/optimization-implementation-and-analysis\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/data-structures/lecture/h4ZLc/optimization-implementation-and-analysis\\"
   },
@@ -9450,8 +9450,8 @@
     "url": "https://www.coursera.org/lecture/algorithms-part1/sorting-complexity-xAltF",
     "name": "https://www.coursera.org/lecture/algorithms-part1/sorting-complexity-xAltF",
     "description": "访问 https://www.coursera.org/lecture/algorithms-part1/sorting-complexity-xAltF 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/lecture/algorithms-part1/sorting-complexity-xAltF"
   },
@@ -9477,8 +9477,8 @@
     "url": "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
     "name": "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256",
     "description": "访问 https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.udacity.com/course/data-structures-and-algorithms-nanodegree--nd256"
   },
@@ -9495,8 +9495,8 @@
     "url": "https://gitlab.com/duplicity/duplicity\\",
     "name": "https://gitlab.com/duplicity/duplicity\\",
     "description": "访问 https://gitlab.com/duplicity/duplicity\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://gitlab.com/duplicity/duplicity\\"
   },
@@ -11952,8 +11952,8 @@
     "url": "https://gitpod.io/button/open-in-gitpod.svg\\",
     "name": "https://gitpod.io/button/open-in-gitpod.svg\\",
     "description": "访问 https://gitpod.io/button/open-in-gitpod.svg\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://gitpod.io/button/open-in-gitpod.svg\\"
   },
@@ -11997,8 +11997,8 @@
     "url": "https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124\\",
     "name": "https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124\\",
     "description": "访问 https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124\\"
   },
@@ -12015,8 +12015,8 @@
     "url": "https://www.coursera.org/learn/algorithms-part2/home/week/4",
     "name": "https://www.coursera.org/learn/algorithms-part2/home/week/4",
     "description": "访问 https://www.coursera.org/learn/algorithms-part2/home/week/4 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/algorithms-part2/home/week/4"
   },
@@ -12024,8 +12024,8 @@
     "url": "https://www.coursera.org/learn/algorithms-part2/lecture/yQM8K/ternary-search-tries",
     "name": "https://www.coursera.org/learn/algorithms-part2/lecture/yQM8K/ternary-search-tries",
     "description": "访问 https://www.coursera.org/learn/algorithms-part2/lecture/yQM8K/ternary-search-tries 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/algorithms-part2/lecture/yQM8K/ternary-search-tries"
   },
@@ -12051,8 +12051,8 @@
     "url": "https://research.google.com/archive/chubby-osdi06.pdf",
     "name": "https://research.google.com/archive/chubby-osdi06.pdf",
     "description": "访问 https://research.google.com/archive/chubby-osdi06.pdf 了解更多信息",
-    "category": "AI工具/人工智能/文档分析",
-    "_cat": "AI工具/人工智能/文档分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://research.google.com/archive/chubby-osdi06.pdf"
   },
@@ -12087,8 +12087,8 @@
     "url": "https://www.coursera.org/learn/algorithms-part2/lecture/2Kn5i/brute-force-substring-search\\",
     "name": "https://www.coursera.org/learn/algorithms-part2/lecture/2Kn5i/brute-force-substring-search\\",
     "description": "访问 https://www.coursera.org/learn/algorithms-part2/lecture/2Kn5i/brute-force-substring-search\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/algorithms-part2/lecture/2Kn5i/brute-force-substring-search\\"
   },
@@ -12105,8 +12105,8 @@
     "url": "https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124",
     "name": "https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124",
     "description": "访问 https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124"
   },
@@ -12132,8 +12132,8 @@
     "url": "https://www.coursera.org/learn/algorithms-part2/home/week/4\\",
     "name": "https://www.coursera.org/learn/algorithms-part2/home/week/4\\",
     "description": "访问 https://www.coursera.org/learn/algorithms-part2/home/week/4\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.coursera.org/learn/algorithms-part2/home/week/4\\"
   },
@@ -12240,8 +12240,8 @@
     "url": "http://ijcai13.org/files/tutorial_slides/td3.pdf",
     "name": "http://ijcai13.org/files/tutorial_slides/td3.pdf",
     "description": "访问 http://ijcai13.org/files/tutorial_slides/td3.pdf 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "http://ijcai13.org/files/tutorial_slides/td3.pdf"
   },
@@ -12258,8 +12258,8 @@
     "url": "https://www.zyro.com/ai-image-upscaler",
     "name": "https://www.zyro.com/ai-image-upscaler",
     "description": "访问 https://www.zyro.com/ai-image-upscaler 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.zyro.com/ai-image-upscaler"
   },
@@ -12375,8 +12375,8 @@
     "url": "https://sourcemaking.com/design-patterns-and-tips",
     "name": "https://sourcemaking.com/design-patterns-and-tips",
     "description": "访问 https://sourcemaking.com/design-patterns-and-tips 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://sourcemaking.com/design-patterns-and-tips"
   },
@@ -12447,8 +12447,8 @@
     "url": "https://www.ltb-project.org/documentation/self-service-password.html\\",
     "name": "https://www.ltb-project.org/documentation/self-service-password.html\\",
     "description": "访问 https://www.ltb-project.org/documentation/self-service-password.html\\ 了解更多信息",
-    "category": "AI工具/人工智能/文档分析",
-    "_cat": "AI工具/人工智能/文档分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.ltb-project.org/documentation/self-service-password.html\\"
   },
@@ -13230,8 +13230,8 @@
     "url": "https://bits.stephan-brumme.com/swap.html",
     "name": "https://bits.stephan-brumme.com/swap.html",
     "description": "访问 https://bits.stephan-brumme.com/swap.html 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能/数据分析/子类-3",
+    "_cat": "AI工具/人工智能/数据分析/子类-3",
     "phase3_split": true,
     "title": "https://bits.stephan-brumme.com/swap.html"
   },
@@ -13293,8 +13293,8 @@
     "url": "https://www.thunderbird.net/\\",
     "name": "https://www.thunderbird.net/\\",
     "description": "访问 https://www.thunderbird.net/\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.thunderbird.net/\\"
   },
@@ -13302,8 +13302,8 @@
     "url": "https://git.kernel.org/pub/scm/virt/kvm/kvm.git/",
     "name": "https://git.kernel.org/pub/scm/virt/kvm/kvm.git/",
     "description": "访问 https://git.kernel.org/pub/scm/virt/kvm/kvm.git/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://git.kernel.org/pub/scm/virt/kvm/kvm.git/"
   },
@@ -13320,8 +13320,8 @@
     "url": "https://oozie.apache.org/\\",
     "name": "https://oozie.apache.org/\\",
     "description": "访问 https://oozie.apache.org/\\ 了解更多信息",
-    "category": "AI工具/人工智能",
-    "_cat": "AI工具/人工智能",
+    "category": "AI工具/人工智能/图生图",
+    "_cat": "AI工具/人工智能/图生图",
     "phase3_split": true,
     "phase3_merged": true,
     "title": "https://oozie.apache.org/\\"
@@ -13501,8 +13501,8 @@
     "url": "https://git.proxmox.com/",
     "name": "https://git.proxmox.com/",
     "description": "访问 https://git.proxmox.com/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://git.proxmox.com/"
   },
@@ -13609,8 +13609,8 @@
     "url": "https://roundup.getdbt.com/s/the-analytics-engineering-podcast\\",
     "name": "https://roundup.getdbt.com/s/the-analytics-engineering-podcast\\",
     "description": "访问 https://roundup.getdbt.com/s/the-analytics-engineering-podcast\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://roundup.getdbt.com/s/the-analytics-engineering-podcast\\"
   },
@@ -13663,8 +13663,8 @@
     "url": "https://datastackshow.com/\\",
     "name": "https://datastackshow.com/\\",
     "description": "访问 https://datastackshow.com/\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://datastackshow.com/\\"
   },
@@ -13708,8 +13708,8 @@
     "url": "https://bitbucket.org/tildeslash/monit/src/master/\\",
     "name": "https://bitbucket.org/tildeslash/monit/src/master/\\",
     "description": "访问 https://bitbucket.org/tildeslash/monit/src/master/\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://bitbucket.org/tildeslash/monit/src/master/\\"
   },
@@ -13753,8 +13753,8 @@
     "url": "https://about.gitlab.com/solutions/continuous-integration/",
     "name": "https://about.gitlab.com/solutions/continuous-integration/",
     "description": "访问 https://about.gitlab.com/solutions/continuous-integration/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://about.gitlab.com/solutions/continuous-integration/"
   },
@@ -13762,8 +13762,8 @@
     "url": "https://docs.openstack.org/developer/swift/",
     "name": "https://docs.openstack.org/developer/swift/",
     "description": "访问 https://docs.openstack.org/developer/swift/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://docs.openstack.org/developer/swift/"
   },
@@ -13789,8 +13789,8 @@
     "url": "https://datakitchen.io/\\",
     "name": "https://datakitchen.io/\\",
     "description": "访问 https://datakitchen.io/\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://datakitchen.io/\\"
   },
@@ -13924,8 +13924,8 @@
     "url": "https://www.bitwizard.nl/mtr/\\",
     "name": "https://www.bitwizard.nl/mtr/\\",
     "description": "访问 https://www.bitwizard.nl/mtr/\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.bitwizard.nl/mtr/\\"
   },
@@ -13960,8 +13960,8 @@
     "url": "https://nicolargo.github.io/glances/",
     "name": "https://nicolargo.github.io/glances/",
     "description": "访问 https://nicolargo.github.io/glances/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://nicolargo.github.io/glances/"
   },
@@ -13987,8 +13987,8 @@
     "url": "https://crustdata.com\\",
     "name": "https://crustdata.com\\",
     "description": "访问 https://crustdata.com\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://crustdata.com\\"
   },
@@ -14050,8 +14050,8 @@
     "url": "https://git.sr.ht/~rjarry/aerc\\",
     "name": "https://git.sr.ht/~rjarry/aerc\\",
     "description": "访问 https://git.sr.ht/~rjarry/aerc\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://git.sr.ht/~rjarry/aerc\\"
   },
@@ -14068,8 +14068,8 @@
     "url": "https://mermaid-js.github.io/mermaid-live-editor/",
     "name": "https://mermaid-js.github.io/mermaid-live-editor/",
     "description": "访问 https://mermaid-js.github.io/mermaid-live-editor/ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://mermaid-js.github.io/mermaid-live-editor/"
   },
@@ -14095,8 +14095,8 @@
     "url": "https://git.zabbix.com/projects/ZBX/repos/zabbix/browse",
     "name": "https://git.zabbix.com/projects/ZBX/repos/zabbix/browse",
     "description": "访问 https://git.zabbix.com/projects/ZBX/repos/zabbix/browse 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://git.zabbix.com/projects/ZBX/repos/zabbix/browse"
   },
@@ -14167,8 +14167,8 @@
     "url": "https://cea-hpc.github.io/modules/",
     "name": "https://cea-hpc.github.io/modules/",
     "description": "访问 https://cea-hpc.github.io/modules/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://cea-hpc.github.io/modules/"
   },
@@ -14302,8 +14302,8 @@
     "url": "https://databasus.com/",
     "name": "https://databasus.com/",
     "description": "访问 https://databasus.com/ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://databasus.com/"
   },
@@ -14383,8 +14383,8 @@
     "url": "https://www.thunderbird.net/",
     "name": "https://www.thunderbird.net/",
     "description": "访问 https://www.thunderbird.net/ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.thunderbird.net/"
   },
@@ -14392,8 +14392,8 @@
     "url": "https://gitlab.com/chrony/chrony",
     "name": "https://gitlab.com/chrony/chrony",
     "description": "访问 https://gitlab.com/chrony/chrony 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://gitlab.com/chrony/chrony"
   },
@@ -14572,8 +14572,8 @@
     "url": "https://www.artie.com/",
     "name": "https://www.artie.com/",
     "description": "访问 https://www.artie.com/ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.artie.com/"
   },
@@ -14590,8 +14590,8 @@
     "url": "https://www.flightpathdata.com\\",
     "name": "https://www.flightpathdata.com\\",
     "description": "访问 https://www.flightpathdata.com\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.flightpathdata.com\\"
   },
@@ -14734,8 +14734,8 @@
     "url": "https://www.manning.com/books/learn-ai-data-engineering-in-a-month-of-lunches\\",
     "name": "https://www.manning.com/books/learn-ai-data-engineering-in-a-month-of-lunches\\",
     "description": "访问 https://www.manning.com/books/learn-ai-data-engineering-in-a-month-of-lunches\\ 了解更多信息",
-    "category": "AI工具/人工智能/数据分析",
-    "_cat": "AI工具/人工智能/数据分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.manning.com/books/learn-ai-data-engineering-in-a-month-of-lunches\\"
   },
@@ -14752,8 +14752,8 @@
     "url": "https://beanstalkd.github.io/\\",
     "name": "https://beanstalkd.github.io/\\",
     "description": "访问 https://beanstalkd.github.io/\\ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://beanstalkd.github.io/\\"
   },
@@ -14851,8 +14851,8 @@
     "url": "https://duplicity.gitlab.io/",
     "name": "https://duplicity.gitlab.io/",
     "description": "访问 https://duplicity.gitlab.io/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://duplicity.gitlab.io/"
   },
@@ -15022,8 +15022,8 @@
     "url": "https://gitlab.com/duplicity/duplicity",
     "name": "https://gitlab.com/duplicity/duplicity",
     "description": "访问 https://gitlab.com/duplicity/duplicity 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://gitlab.com/duplicity/duplicity"
   },
@@ -15031,8 +15031,8 @@
     "url": "https://strider-cd.github.io/",
     "name": "https://strider-cd.github.io/",
     "description": "访问 https://strider-cd.github.io/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://strider-cd.github.io/"
   },
@@ -15157,8 +15157,8 @@
     "url": "https://awesome-selfhosted.net/tags/database-management.html",
     "name": "https://awesome-selfhosted.net/tags/database-management.html",
     "description": "访问 https://awesome-selfhosted.net/tags/database-management.html 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://awesome-selfhosted.net/tags/database-management.html"
   },
@@ -15166,8 +15166,8 @@
     "url": "https://micro-editor.github.io/",
     "name": "https://micro-editor.github.io/",
     "description": "访问 https://micro-editor.github.io/ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://micro-editor.github.io/"
   },
@@ -15175,8 +15175,8 @@
     "url": "https://www.ltb-project.org/documentation/self-service-password.html",
     "name": "https://www.ltb-project.org/documentation/self-service-password.html",
     "description": "访问 https://www.ltb-project.org/documentation/self-service-password.html 了解更多信息",
-    "category": "AI工具/人工智能/文档分析",
-    "_cat": "AI工具/人工智能/文档分析",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.ltb-project.org/documentation/self-service-password.html"
   },
@@ -15265,8 +15265,8 @@
     "url": "https://www.artie.com/\\",
     "name": "https://www.artie.com/\\",
     "description": "访问 https://www.artie.com/\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://www.artie.com/\\"
   },
@@ -15364,8 +15364,8 @@
     "url": "https://nano-editor.org",
     "name": "https://nano-editor.org",
     "description": "访问 https://nano-editor.org 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://nano-editor.org"
   },
@@ -15382,8 +15382,8 @@
     "url": "https://xenbits.xenproject.org/gitweb/?p=xen.git;a=tree;hb=HEAD",
     "name": "https://xenbits.xenproject.org/gitweb/?p=xen.git;a=tree;hb=HEAD",
     "description": "访问 https://xenbits.xenproject.org/gitweb/?p=xen.git;a=tree;hb=HEAD 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://xenbits.xenproject.org/gitweb/?p=xen.git;a=tree;hb=HEAD"
   },
@@ -15409,8 +15409,8 @@
     "url": "https://capistranorb.com/",
     "name": "https://capistranorb.com/",
     "description": "访问 https://capistranorb.com/ 了解更多信息",
-    "category": "AI工具/人工智能/代码助手",
-    "_cat": "AI工具/人工智能/代码助手",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://capistranorb.com/"
   },
@@ -15418,8 +15418,8 @@
     "url": "https://opendev.org/openstack/designate",
     "name": "https://opendev.org/openstack/designate",
     "description": "访问 https://opendev.org/openstack/designate 了解更多信息",
-    "category": "AI工具/人工智能/图像处理",
-    "_cat": "AI工具/人工智能/图像处理",
+    "category": "AI工具/人工智能",
+    "_cat": "AI工具/人工智能",
     "phase3_split": true,
     "title": "https://opendev.org/openstack/designate"
   },
@@ -15778,8 +15778,8 @@
     "url": "http://www.cs.toronto.edu/~ilya/\\",
     "name": "http://www.cs.toronto.edu/~ilya/\\",
     "description": "访问 http://www.cs.toronto.edu/~ilya/\\ 了解更多信息",
-    "category": "效率办公/技术写作",
-    "_cat": "效率办公/技术写作",
+    "category": "效率办公/技术写作/子类-5",
+    "_cat": "效率办公/技术写作/子类-5",
     "phase3_split": true,
     "title": "http://www.cs.toronto.edu/~ilya/\\"
   },
@@ -15787,8 +15787,8 @@
     "url": "http://ludovicarnold.altervista.org/home/\\",
     "name": "http://ludovicarnold.altervista.org/home/\\",
     "description": "访问 http://ludovicarnold.altervista.org/home/\\ 了解更多信息",
-    "category": "效率办公/技术写作",
-    "_cat": "效率办公/技术写作",
+    "category": "效率办公/技术写作/子类-5",
+    "_cat": "效率办公/技术写作/子类-5",
     "phase3_split": true,
     "title": "http://ludovicarnold.altervista.org/home/\\"
   },
