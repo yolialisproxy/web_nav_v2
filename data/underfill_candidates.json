@@ -1,0 +1,311 @@
+{
+  "cleaned_websites": [],
+  "flat_sites": [
+    {
+      "url": "http://www.awstats.org",
+      "category": "办公工具/工具服务"
+    },
+    {
+      "url": "http://karpathy.github.io/2015/05/21/rnn-effectiveness",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://digiboard.app",
+      "category": "系统工具/实用工具/安全工具"
+    },
+    {
+      "url": "http://torch.ch",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://dagshub.com",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "http://singa.incubator.apache.org",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://montrealaisymposium.wordpress.com",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://datarhei.github.io/restreamer",
+      "category": "效率办公/电子书服务"
+    },
+    {
+      "url": "https://alf.io",
+      "category": "多媒体/素材社区"
+    },
+    {
+      "url": "https://oupala.github.io/apaxy",
+      "category": "设计工具/资源开源"
+    },
+    {
+      "url": "https://tidesdb.com",
+      "category": "设计工具/字体教程"
+    },
+    {
+      "url": "https://www.codesynthesis.com/products/odb",
+      "category": "设计工具/思维导图教程"
+    },
+    {
+      "url": "https://gogs.io",
+      "category": "多媒体/特效生成"
+    },
+    {
+      "url": "https://mlem.ai",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://indieweb.org",
+      "category": "多媒体/视频娱乐/动漫教程"
+    },
+    {
+      "url": "https://demo.silverstripe.org",
+      "category": "学术科研/教材生成"
+    },
+    {
+      "url": "https://cml.dev",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://andreasfertig.com/cpp-resources",
+      "category": "多媒体/视频娱乐/动漫资源"
+    },
+    {
+      "url": "https://bifroest.engity.org",
+      "category": "效率办公/教程工具"
+    },
+    {
+      "url": "https://luau.org",
+      "category": "开发工具/学习生成/代码训练"
+    },
+    {
+      "url": "https://www.audiobookshelf.org",
+      "category": "效率办公/教程社区"
+    },
+    {
+      "url": "http://rnnlm.org",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://www.azuracast.com",
+      "category": "开发工具/在线工具"
+    },
+    {
+      "url": "http://www.seqan.de",
+      "category": "开发工具/学习生成/代码训练"
+    },
+    {
+      "url": "https://titra.io",
+      "category": "设计工具/字体教程"
+    },
+    {
+      "url": "http://www.raylib.com",
+      "category": "设计工具/字体社区"
+    },
+    {
+      "url": "https://hitkeep.com",
+      "category": "多媒体/视频娱乐/音乐服务"
+    },
+    {
+      "url": "https://pocketbase.io",
+      "category": "设计工具/图片工具"
+    },
+    {
+      "url": "https://www.gophercon.org.il",
+      "category": "设计工具/资源生成"
+    },
+    {
+      "url": "https://centrifugal.dev",
+      "category": "多媒体/字幕教程"
+    },
+    {
+      "url": "https://www.scm-manager.org",
+      "category": "效率办公/博客服务"
+    },
+    {
+      "url": "http://raftlib.io",
+      "category": "多媒体/字幕教程"
+    },
+    {
+      "url": "https://turtl.it",
+      "category": "系统工具/实用工具/网络工具"
+    },
+    {
+      "url": "https://casaos.zimaspace.com",
+      "category": "学术科研/AI学习开源"
+    },
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/code-finder-catalyzex",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://projectchrono.org",
+      "category": "开发工具/API开源"
+    },
+    {
+      "url": "https://ollama.com",
+      "category": "学术科研/课程生成"
+    },
+    {
+      "url": "https://metabase.com",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://cachethq.io",
+      "category": "多媒体/视频娱乐/工具"
+    },
+    {
+      "url": "https://www.privacytools.io",
+      "category": "设计工具/UI设计教程"
+    },
+    {
+      "url": "http://superset.apache.org",
+      "category": "开发工具/IDE资源"
+    },
+    {
+      "url": "http://ocw.mit.edu/courses/brain-and-cognitive-sciences/9-520-a-networks-for-learning-regression-and-classification-spring-2001",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://jujucharms.com",
+      "category": "开发工具/API工具"
+    },
+    {
+      "url": "http://molpopgen.github.io/libsequence",
+      "category": "多媒体/视频娱乐/直播工具"
+    },
+    {
+      "url": "https://dvc.org",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/research/project/visual-studio-code-tools-ai",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://tsuru.io",
+      "category": "多媒体/剪辑教程"
+    },
+    {
+      "url": "https://poloclub.github.io/cnn-explainer",
+      "category": "开发工具/学习生成/文档教程"
+    },
+    {
+      "url": "https://developer.mapquest.com/documentation/api/geocoding",
+      "category": "开发工具/IDE开源"
+    },
+    {
+      "url": "https://amusewiki.org",
+      "category": "办公工具/表单社区"
+    },
+    {
+      "url": "https://ezbookkeeping-demo.mayswind.net",
+      "category": "多媒体/视频娱乐/视频游戏"
+    },
+    {
+      "url": "https://librekb.com",
+      "category": "设计工具/白板资源"
+    },
+    {
+      "url": "https://demo.papra.app",
+      "category": "开发工具/API服务"
+    },
+    {
+      "url": "https://nuskooler.github.io/enigma-bbs",
+      "category": "开发工具/学习生成/代码训练"
+    },
+    {
+      "url": "https://gophercon.africa",
+      "category": "系统工具/实用工具/网络工具"
+    },
+    {
+      "url": "https://runsql.com",
+      "category": "系统工具/实用工具/网络工具"
+    },
+    {
+      "url": "https://fess.codelibs.org",
+      "category": "多媒体/录屏服务"
+    },
+    {
+      "url": "https://demo.clipbucket.oxygenz.fr",
+      "category": "开发工具/IDE资源"
+    },
+    {
+      "url": "http://ltsv.org",
+      "category": "办公工具/工具服务"
+    },
+    {
+      "url": "https://farmos.org",
+      "category": "设计工具/资源社区"
+    },
+    {
+      "url": "https://bencher.dev",
+      "category": "多媒体/视频娱乐/服务"
+    },
+    {
+      "url": "https://www.godays.io",
+      "category": "开发工具/平台开源/GitHub替代"
+    },
+    {
+      "url": "https://demo.prestashop.com",
+      "category": "系统工具/实用工具/网络工具"
+    },
+    {
+      "url": "http://site.icu-project.org",
+      "category": "开发工具/在线工具"
+    },
+    {
+      "url": "https://discount-bandit.cybrarist.com",
+      "category": "设计工具/平台教程"
+    },
+    {
+      "url": "https://mybb.com",
+      "category": "多媒体/视频娱乐/音乐生成"
+    },
+    {
+      "url": "https://docmost.com",
+      "category": "开发工具/学习生成/代码训练"
+    },
+    {
+      "url": "https://www.seafile.com/en/home",
+      "category": "多媒体/视频娱乐/工具"
+    },
+    {
+      "url": "https://homebox.software",
+      "category": "系统工具/实用工具/网络工具"
+    },
+    {
+      "url": "https://gopherconindia.org",
+      "category": "多媒体/录屏资源"
+    },
+    {
+      "url": "https://s-cart.org",
+      "category": "开发工具/学习生成/代码训练"
+    },
+    {
+      "url": "http://oxygine.org",
+      "category": "设计工具/图片工具"
+    },
+    {
+      "url": "https://goharbor.io",
+      "category": "多媒体/特效教程"
+    },
+    {
+      "url": "https://docs.librephotos.com/docs/user-guide/mobile",
+      "category": "多媒体/视频娱乐/音乐服务"
+    },
+    {
+      "url": "https://docs.slinkapp.io",
+      "category": "开发工具/部署服务"
+    },
+    {
+      "url": "https://www.xwikiplayground.org/xwiki/bin/view/Main",
+      "category": "多媒体/视频娱乐/服务"
+    }
+  ],
+  "ods_raw_sites": [],
+  "enriched_websites": []
+}

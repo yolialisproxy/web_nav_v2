@@ -1,0 +1,31 @@
+{
+  "phase": "V12 Phase 2",
+  "timestamp": "2026-04-25T12:25:54.294426",
+  "total_sites_before": 6365,
+  "healthy_count": 3313,
+  "broken_count": 3052,
+  "health_rate": 0.5205027494108405,
+  "chunks": [
+    {
+      "chunk": 1,
+      "healthy": 842,
+      "broken": 749
+    },
+    {
+      "chunk": 2,
+      "healthy": 628,
+      "broken": 963
+    },
+    {
+      "chunk": 3,
+      "healthy": 695,
+      "broken": 896
+    },
+    {
+      "chunk": 4,
+      "healthy": 1148,
+      "broken": 444
+    }
+  ],
+  "backup": "/home/yoli/GitHub/web_nav_v2/.backup/websites.json.v12_pre_final_clean_20260425_122553"
+}

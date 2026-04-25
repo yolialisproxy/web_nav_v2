@@ -1,0 +1,1652 @@
+{
+  "phase": "V12 Phase 3 - 分类平衡优化",
+  "current_balance": {
+    "balanced": 0,
+    "over": 51,
+    "under": 131
+  },
+  "secondary_split": {
+    "开发工具/平台开源/GitHub": {
+      "current_count": 206,
+      "split_into": [
+        {
+          "name": "开发工具/平台开源/GitHub/GitHub-层级1",
+          "estimated_count": 42
+        },
+        {
+          "name": "开发工具/平台开源/GitHub/GitHub-层级2",
+          "estimated_count": 41
+        },
+        {
+          "name": "开发工具/平台开源/GitHub/GitHub-层级3",
+          "estimated_count": 41
+        },
+        {
+          "name": "开发工具/平台开源/GitHub/GitHub-层级4",
+          "estimated_count": 41
+        },
+        {
+          "name": "开发工具/平台开源/GitHub/GitHub-层级5",
+          "estimated_count": 41
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/数据分析": {
+      "current_count": 196,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/数据分析/数据分析-层级1",
+          "estimated_count": 40
+        },
+        {
+          "name": "AI工具/人工智能/数据分析/数据分析-层级2",
+          "estimated_count": 39
+        },
+        {
+          "name": "AI工具/人工智能/数据分析/数据分析-层级3",
+          "estimated_count": 39
+        },
+        {
+          "name": "AI工具/人工智能/数据分析/数据分析-层级4",
+          "estimated_count": 39
+        },
+        {
+          "name": "AI工具/人工智能/数据分析/数据分析-层级5",
+          "estimated_count": 39
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "多媒体/视频娱乐/教程": {
+      "current_count": 192,
+      "split_into": [
+        {
+          "name": "多媒体/视频娱乐/教程/教程-层级1",
+          "estimated_count": 39
+        },
+        {
+          "name": "多媒体/视频娱乐/教程/教程-层级2",
+          "estimated_count": 39
+        },
+        {
+          "name": "多媒体/视频娱乐/教程/教程-层级3",
+          "estimated_count": 38
+        },
+        {
+          "name": "多媒体/视频娱乐/教程/教程-层级4",
+          "estimated_count": 38
+        },
+        {
+          "name": "多媒体/视频娱乐/教程/教程-层级5",
+          "estimated_count": 38
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/代码助手": {
+      "current_count": 177,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/代码助手/代码助手-层级1",
+          "estimated_count": 36
+        },
+        {
+          "name": "AI工具/人工智能/代码助手/代码助手-层级2",
+          "estimated_count": 36
+        },
+        {
+          "name": "AI工具/人工智能/代码助手/代码助手-层级3",
+          "estimated_count": 35
+        },
+        {
+          "name": "AI工具/人工智能/代码助手/代码助手-层级4",
+          "estimated_count": 35
+        },
+        {
+          "name": "AI工具/人工智能/代码助手/代码助手-层级5",
+          "estimated_count": 35
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/视频生成": {
+      "current_count": 153,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/视频生成/视频生成-层级1",
+          "estimated_count": 31
+        },
+        {
+          "name": "AI工具/人工智能/视频生成/视频生成-层级2",
+          "estimated_count": 31
+        },
+        {
+          "name": "AI工具/人工智能/视频生成/视频生成-层级3",
+          "estimated_count": 31
+        },
+        {
+          "name": "AI工具/人工智能/视频生成/视频生成-层级4",
+          "estimated_count": 30
+        },
+        {
+          "name": "AI工具/人工智能/视频生成/视频生成-层级5",
+          "estimated_count": 30
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/图像识别": {
+      "current_count": 140,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/图像识别/图像识别-层级1",
+          "estimated_count": 28
+        },
+        {
+          "name": "AI工具/人工智能/图像识别/图像识别-层级2",
+          "estimated_count": 28
+        },
+        {
+          "name": "AI工具/人工智能/图像识别/图像识别-层级3",
+          "estimated_count": 28
+        },
+        {
+          "name": "AI工具/人工智能/图像识别/图像识别-层级4",
+          "estimated_count": 28
+        },
+        {
+          "name": "AI工具/人工智能/图像识别/图像识别-层级5",
+          "estimated_count": 28
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "设计工具/UI设计工具": {
+      "current_count": 125,
+      "split_into": [
+        {
+          "name": "设计工具/UI设计工具/UI设计工具-层级1",
+          "estimated_count": 25
+        },
+        {
+          "name": "设计工具/UI设计工具/UI设计工具-层级2",
+          "estimated_count": 25
+        },
+        {
+          "name": "设计工具/UI设计工具/UI设计工具-层级3",
+          "estimated_count": 25
+        },
+        {
+          "name": "设计工具/UI设计工具/UI设计工具-层级4",
+          "estimated_count": 25
+        },
+        {
+          "name": "设计工具/UI设计工具/UI设计工具-层级5",
+          "estimated_count": 25
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "系统工具/实用工具/文件工具": {
+      "current_count": 121,
+      "split_into": [
+        {
+          "name": "系统工具/实用工具/文件工具/文件工具-层级1",
+          "estimated_count": 25
+        },
+        {
+          "name": "系统工具/实用工具/文件工具/文件工具-层级2",
+          "estimated_count": 24
+        },
+        {
+          "name": "系统工具/实用工具/文件工具/文件工具-层级3",
+          "estimated_count": 24
+        },
+        {
+          "name": "系统工具/实用工具/文件工具/文件工具-层级4",
+          "estimated_count": 24
+        },
+        {
+          "name": "系统工具/实用工具/文件工具/文件工具-层级5",
+          "estimated_count": 24
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/搜索引擎": {
+      "current_count": 104,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/搜索引擎/搜索引擎-层级1",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/搜索引擎/搜索引擎-层级2",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/搜索引擎/搜索引擎-层级3",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/搜索引擎/搜索引擎-层级4",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/搜索引擎/搜索引擎-层级5",
+          "estimated_count": 20
+        }
+      ],
+      "total_sub": 5,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/AI平台": {
+      "current_count": 100,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/AI平台/AI平台-层级1",
+          "estimated_count": 25
+        },
+        {
+          "name": "AI工具/人工智能/AI平台/AI平台-层级2",
+          "estimated_count": 25
+        },
+        {
+          "name": "AI工具/人工智能/AI平台/AI平台-层级3",
+          "estimated_count": 25
+        },
+        {
+          "name": "AI工具/人工智能/AI平台/AI平台-层级4",
+          "estimated_count": 25
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/知识图谱": {
+      "current_count": 94,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/知识图谱/知识图谱-层级1",
+          "estimated_count": 24
+        },
+        {
+          "name": "AI工具/人工智能/知识图谱/知识图谱-层级2",
+          "estimated_count": 24
+        },
+        {
+          "name": "AI工具/人工智能/知识图谱/知识图谱-层级3",
+          "estimated_count": 23
+        },
+        {
+          "name": "AI工具/人工智能/知识图谱/知识图谱-层级4",
+          "estimated_count": 23
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/写作助手": {
+      "current_count": 90,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/写作助手/写作助手-层级1",
+          "estimated_count": 23
+        },
+        {
+          "name": "AI工具/人工智能/写作助手/写作助手-层级2",
+          "estimated_count": 23
+        },
+        {
+          "name": "AI工具/人工智能/写作助手/写作助手-层级3",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/写作助手/写作助手-层级4",
+          "estimated_count": 22
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/聊天对话": {
+      "current_count": 88,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/聊天对话/聊天对话-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/聊天对话/聊天对话-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/聊天对话/聊天对话-层级3",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/聊天对话/聊天对话-层级4",
+          "estimated_count": 22
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/语音识别": {
+      "current_count": 88,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/语音识别/语音识别-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/语音识别/语音识别-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/语音识别/语音识别-层级3",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/语音识别/语音识别-层级4",
+          "estimated_count": 22
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/摘要生成": {
+      "current_count": 88,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/摘要生成/摘要生成-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/摘要生成/摘要生成-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/摘要生成/摘要生成-层级3",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/摘要生成/摘要生成-层级4",
+          "estimated_count": 22
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/推荐系统": {
+      "current_count": 86,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/推荐系统/推荐系统-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/推荐系统/推荐系统-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/推荐系统/推荐系统-层级3",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/推荐系统/推荐系统-层级4",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/翻译服务": {
+      "current_count": 86,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/翻译服务/翻译服务-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/翻译服务/翻译服务-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/翻译服务/翻译服务-层级3",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/翻译服务/翻译服务-层级4",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/情感分析": {
+      "current_count": 86,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/情感分析/情感分析-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/情感分析/情感分析-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/情感分析/情感分析-层级3",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/情感分析/情感分析-层级4",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/预测分析": {
+      "current_count": 86,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/预测分析/预测分析-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/预测分析/预测分析-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/预测分析/预测分析-层级3",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/预测分析/预测分析-层级4",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/自动化流程": {
+      "current_count": 86,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/自动化流程/自动化流程-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/自动化流程/自动化流程-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/自动化流程/自动化流程-层级3",
+          "estimated_count": 21
+        },
+        {
+          "name": "AI工具/人工智能/自动化流程/自动化流程-层级4",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 4,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/协作工具": {
+      "current_count": 69,
+      "split_into": [
+        {
+          "name": "效率办公/协作工具/协作工具-层级1",
+          "estimated_count": 23
+        },
+        {
+          "name": "效率办公/协作工具/协作工具-层级2",
+          "estimated_count": 23
+        },
+        {
+          "name": "效率办公/协作工具/协作工具-层级3",
+          "estimated_count": 23
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/产品图生成": {
+      "current_count": 65,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/产品图生成/产品图生成-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/产品图生成/产品图生成-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "AI工具/人工智能/产品图生成/产品图生成-层级3",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/博客管理": {
+      "current_count": 65,
+      "split_into": [
+        {
+          "name": "效率办公/博客管理/博客管理-层级1",
+          "estimated_count": 22
+        },
+        {
+          "name": "效率办公/博客管理/博客管理-层级2",
+          "estimated_count": 22
+        },
+        {
+          "name": "效率办公/博客管理/博客管理-层级3",
+          "estimated_count": 21
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/文生图": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/文生图/文生图-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/文生图/文生图-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/文生图/文生图-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/图生图": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/图生图/图生图-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图生图/图生图-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图生图/图生图-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/图像修复": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/图像修复/图像修复-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图像修复/图像修复-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图像修复/图像修复-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/图像扩展": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/图像扩展/图像扩展-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图像扩展/图像扩展-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图像扩展/图像扩展-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/风格迁移": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/风格迁移/风格迁移-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/风格迁移/风格迁移-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/风格迁移/风格迁移-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/超分辨率": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/超分辨率/超分辨率-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/超分辨率/超分辨率-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/超分辨率/超分辨率-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/背景移除": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/背景移除/背景移除-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/背景移除/背景移除-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/背景移除/背景移除-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/人脸编辑": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/人脸编辑/人脸编辑-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/人脸编辑/人脸编辑-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/人脸编辑/人脸编辑-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/3D生成": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/3D生成/3D生成-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/3D生成/3D生成-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/3D生成/3D生成-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/剧本创作": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "效率办公/剧本创作/剧本创作-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/剧本创作/剧本创作-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/剧本创作/剧本创作-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/社交媒体": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "效率办公/社交媒体/社交媒体-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/社交媒体/社交媒体-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/社交媒体/社交媒体-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/总结摘要": {
+      "current_count": 59,
+      "split_into": [
+        {
+          "name": "效率办公/总结摘要/总结摘要-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/总结摘要/总结摘要-层级2",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/总结摘要/总结摘要-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/内容写作": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "效率办公/内容写作/内容写作-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/内容写作/内容写作-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/内容写作/内容写作-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/文案优化": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "效率办公/文案优化/文案优化-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/文案优化/文案优化-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/文案优化/文案优化-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/AI写作": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "效率办公/AI写作/AI写作-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/AI写作/AI写作-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/AI写作/AI写作-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/诗歌创作": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "效率办公/诗歌创作/诗歌创作-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/诗歌创作/诗歌创作-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/诗歌创作/诗歌创作-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/营销文案": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "效率办公/营销文案/营销文案-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/营销文案/营销文案-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/营销文案/营销文案-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/色彩调整": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/色彩调整/色彩调整-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/色彩调整/色彩调整-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "AI工具/人工智能/色彩调整/色彩调整-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/图像增强": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/图像增强/图像增强-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/图像增强/图像增强-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "AI工具/人工智能/图像增强/图像增强-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/草图转图": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/草图转图/草图转图-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/草图转图/草图转图-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "AI工具/人工智能/草图转图/草图转图-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/场景生成": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/场景生成/场景生成-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/场景生成/场景生成-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "AI工具/人工智能/场景生成/场景生成-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "AI工具/人工智能/动漫风格": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "AI工具/人工智能/动漫风格/动漫风格-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "AI工具/人工智能/动漫风格/动漫风格-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "AI工具/人工智能/动漫风格/动漫风格-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/技术写作": {
+      "current_count": 58,
+      "split_into": [
+        {
+          "name": "效率办公/技术写作/技术写作-层级1",
+          "estimated_count": 20
+        },
+        {
+          "name": "效率办公/技术写作/技术写作-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/技术写作/技术写作-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/邮件写作": {
+      "current_count": 57,
+      "split_into": [
+        {
+          "name": "效率办公/邮件写作/邮件写作-层级1",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/邮件写作/邮件写作-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/邮件写作/邮件写作-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/创意激发": {
+      "current_count": 57,
+      "split_into": [
+        {
+          "name": "效率办公/创意激发/创意激发-层级1",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/创意激发/创意激发-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/创意激发/创意激发-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/标题生成": {
+      "current_count": 57,
+      "split_into": [
+        {
+          "name": "效率办公/标题生成/标题生成-层级1",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/标题生成/标题生成-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/标题生成/标题生成-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/改写重述": {
+      "current_count": 57,
+      "split_into": [
+        {
+          "name": "效率办公/改写重述/改写重述-层级1",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/改写重述/改写重述-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/改写重述/改写重述-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    },
+    "效率办公/故事生成": {
+      "current_count": 57,
+      "split_into": [
+        {
+          "name": "效率办公/故事生成/故事生成-层级1",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/故事生成/故事生成-层级2",
+          "estimated_count": 19
+        },
+        {
+          "name": "效率办公/故事生成/故事生成-层级3",
+          "estimated_count": 19
+        }
+      ],
+      "total_sub": 3,
+      "rationale": "V11拆分后仍超容，需二次细分"
+    }
+  },
+  "merge_candidates": {
+    "开发工具/平台开源": [
+      {
+        "name": "开发工具/平台开源/GitLab",
+        "count": 1
+      },
+      {
+        "name": "开发工具/平台开源/Gitee",
+        "count": 1
+      },
+      {
+        "name": "开发工具/平台开源/Bitbucket",
+        "count": 1
+      },
+      {
+        "name": "开发工具/平台开源/SourceForge",
+        "count": 1
+      },
+      {
+        "name": "开发工具/平台开源/GitHub替代",
+        "count": 2
+      },
+      {
+        "name": "开发工具/平台开源/文档托管",
+        "count": 1
+      },
+      {
+        "name": "开发工具/平台开源/依赖管理",
+        "count": 1
+      },
+      {
+        "name": "开发工具/平台开源/项目展示",
+        "count": 1
+      }
+    ],
+    "AI工具/人工智能": [
+      {
+        "name": "AI工具/人工智能/AI视频分析",
+        "count": 1
+      }
+    ],
+    "学术科研/工具教程": [
+      {
+        "name": "学术科研/工具教程/数据集",
+        "count": 1
+      }
+    ],
+    "设计工具": [
+      {
+        "name": "设计工具/图片社区",
+        "count": 1
+      },
+      {
+        "name": "设计工具/字体工具",
+        "count": 2
+      },
+      {
+        "name": "设计工具/字体资源",
+        "count": 1
+      },
+      {
+        "name": "设计工具/字体社区",
+        "count": 2
+      },
+      {
+        "name": "设计工具/字体服务",
+        "count": 1
+      },
+      {
+        "name": "设计工具/模板教程",
+        "count": 1
+      },
+      {
+        "name": "设计工具/模板社区",
+        "count": 1
+      },
+      {
+        "name": "设计工具/模板服务",
+        "count": 1
+      },
+      {
+        "name": "设计工具/模板开源",
+        "count": 2
+      },
+      {
+        "name": "设计工具/UI设计教程",
+        "count": 3
+      },
+      {
+        "name": "设计工具/UI设计社区",
+        "count": 1
+      },
+      {
+        "name": "设计工具/UI设计生成",
+        "count": 3
+      },
+      {
+        "name": "设计工具/平面设计开源",
+        "count": 1
+      },
+      {
+        "name": "设计工具/平台工具",
+        "count": 3
+      },
+      {
+        "name": "设计工具/平台服务",
+        "count": 1
+      },
+      {
+        "name": "设计工具/资源开源",
+        "count": 2
+      },
+      {
+        "name": "设计工具/思维导图教程",
+        "count": 2
+      },
+      {
+        "name": "设计工具/思维导图社区",
+        "count": 1
+      },
+      {
+        "name": "设计工具/思维导图开源",
+        "count": 1
+      },
+      {
+        "name": "设计工具/流程图社区",
+        "count": 1
+      },
+      {
+        "name": "设计工具/流程图生成",
+        "count": 1
+      },
+      {
+        "name": "设计工具/白板资源",
+        "count": 3
+      },
+      {
+        "name": "设计工具/白板教程",
+        "count": 3
+      },
+      {
+        "name": "设计工具/白板开源",
+        "count": 1
+      },
+      {
+        "name": "设计工具/图片工具",
+        "count": 7
+      },
+      {
+        "name": "设计工具/字体教程",
+        "count": 6
+      },
+      {
+        "name": "设计工具/模板工具",
+        "count": 6
+      },
+      {
+        "name": "设计工具/UI设计开源",
+        "count": 4
+      },
+      {
+        "name": "设计工具/平台教程",
+        "count": 9
+      },
+      {
+        "name": "设计工具/资源社区",
+        "count": 8
+      },
+      {
+        "name": "设计工具/资源生成",
+        "count": 10
+      },
+      {
+        "name": "设计工具/资源教程",
+        "count": 6
+      },
+      {
+        "name": "设计工具/UI套件",
+        "count": 4
+      }
+    ],
+    "开发工具": [
+      {
+        "name": "开发工具/代码仓库",
+        "count": 3
+      },
+      {
+        "name": "开发工具/IDE工具",
+        "count": 2
+      },
+      {
+        "name": "开发工具/IDE社区",
+        "count": 2
+      },
+      {
+        "name": "开发工具/IDE服务",
+        "count": 1
+      },
+      {
+        "name": "开发工具/IDE开源",
+        "count": 2
+      },
+      {
+        "name": "开发工具/API工具",
+        "count": 2
+      },
+      {
+        "name": "开发工具/API社区",
+        "count": 1
+      },
+      {
+        "name": "开发工具/API开源",
+        "count": 2
+      },
+      {
+        "name": "开发工具/文档工具",
+        "count": 1
+      },
+      {
+        "name": "开发工具/文档资源",
+        "count": 3
+      },
+      {
+        "name": "开发工具/文档社区",
+        "count": 1
+      },
+      {
+        "name": "开发工具/文档服务",
+        "count": 1
+      },
+      {
+        "name": "开发工具/文档开源",
+        "count": 2
+      },
+      {
+        "name": "开发工具/学习资源",
+        "count": 1
+      },
+      {
+        "name": "开发工具/学习教程",
+        "count": 1
+      },
+      {
+        "name": "开发工具/部署资源",
+        "count": 1
+      },
+      {
+        "name": "开发工具/API服务",
+        "count": 4
+      },
+      {
+        "name": "开发工具/IDE资源",
+        "count": 9
+      },
+      {
+        "name": "开发工具/API生成",
+        "count": 10
+      },
+      {
+        "name": "开发工具/文档教程",
+        "count": 4
+      },
+      {
+        "name": "开发工具/学习服务",
+        "count": 6
+      },
+      {
+        "name": "开发工具/平台生成",
+        "count": 9
+      },
+      {
+        "name": "开发工具/在线工具",
+        "count": 7
+      },
+      {
+        "name": "开发工具/部署服务",
+        "count": 5
+      }
+    ],
+    "开发工具/学习生成": [
+      {
+        "name": "开发工具/学习生成/视频课程",
+        "count": 1
+      },
+      {
+        "name": "开发工具/学习生成/学习平台",
+        "count": 1
+      },
+      {
+        "name": "开发工具/学习生成/代码训练",
+        "count": 7
+      }
+    ],
+    "多媒体/视频娱乐": [
+      {
+        "name": "多媒体/视频娱乐/直播工具",
+        "count": 3
+      },
+      {
+        "name": "多媒体/视频娱乐/直播社区",
+        "count": 3
+      },
+      {
+        "name": "多媒体/视频娱乐/音乐开源",
+        "count": 3
+      },
+      {
+        "name": "多媒体/视频娱乐/社区",
+        "count": 2
+      },
+      {
+        "name": "多媒体/视频娱乐/影视资源",
+        "count": 3
+      },
+      {
+        "name": "多媒体/视频娱乐/资源",
+        "count": 1
+      },
+      {
+        "name": "多媒体/视频娱乐/音乐工具",
+        "count": 7
+      },
+      {
+        "name": "多媒体/视频娱乐/音乐服务",
+        "count": 6
+      },
+      {
+        "name": "多媒体/视频娱乐/音乐社区",
+        "count": 8
+      },
+      {
+        "name": "多媒体/视频娱乐/服务",
+        "count": 7
+      },
+      {
+        "name": "多媒体/视频娱乐/生成器",
+        "count": 7
+      },
+      {
+        "name": "多媒体/视频娱乐/音乐生成",
+        "count": 4
+      },
+      {
+        "name": "多媒体/视频娱乐/视频游戏",
+        "count": 10
+      },
+      {
+        "name": "多媒体/视频娱乐/工具",
+        "count": 6
+      },
+      {
+        "name": "多媒体/视频娱乐/动漫资源",
+        "count": 7
+      },
+      {
+        "name": "多媒体/视频娱乐/动漫教程",
+        "count": 5
+      }
+    ],
+    "效率办公": [
+      {
+        "name": "效率办公/网文社区",
+        "count": 1
+      },
+      {
+        "name": "效率办公/网文服务",
+        "count": 1
+      },
+      {
+        "name": "效率办公/博客教程",
+        "count": 1
+      },
+      {
+        "name": "效率办公/电子书社区",
+        "count": 1
+      },
+      {
+        "name": "效率办公/电子书服务",
+        "count": 2
+      },
+      {
+        "name": "效率办公/电子书生成",
+        "count": 1
+      },
+      {
+        "name": "效率办公/创作教程",
+        "count": 3
+      },
+      {
+        "name": "效率办公/创作开源",
+        "count": 2
+      },
+      {
+        "name": "效率办公/出版教程",
+        "count": 1
+      },
+      {
+        "name": "效率办公/出版社区",
+        "count": 1
+      },
+      {
+        "name": "效率办公/教程社区",
+        "count": 2
+      },
+      {
+        "name": "效率办公/教程生成",
+        "count": 1
+      },
+      {
+        "name": "效率办公/博客工具",
+        "count": 5
+      },
+      {
+        "name": "效率办公/博客服务",
+        "count": 7
+      },
+      {
+        "name": "效率办公/出版工具",
+        "count": 4
+      },
+      {
+        "name": "效率办公/教程工具",
+        "count": 6
+      }
+    ],
+    "办公工具": [
+      {
+        "name": "办公工具/笔记工具",
+        "count": 1
+      },
+      {
+        "name": "办公工具/笔记开源",
+        "count": 1
+      },
+      {
+        "name": "办公工具/协作社区",
+        "count": 3
+      },
+      {
+        "name": "办公工具/日程生成",
+        "count": 1
+      },
+      {
+        "name": "办公工具/工具服务",
+        "count": 10
+      },
+      {
+        "name": "办公工具/表单社区",
+        "count": 6
+      }
+    ],
+    "学术科研": [
+      {
+        "name": "学术科研/搜索教程",
+        "count": 1
+      },
+      {
+        "name": "学术科研/课程生成",
+        "count": 2
+      },
+      {
+        "name": "学术科研/数据集教程",
+        "count": 1
+      },
+      {
+        "name": "学术科研/数据集生成",
+        "count": 2
+      },
+      {
+        "name": "学术科研/教材资源",
+        "count": 2
+      },
+      {
+        "name": "学术科研/教材生成",
+        "count": 2
+      },
+      {
+        "name": "学术科研/AI学习开源",
+        "count": 6
+      },
+      {
+        "name": "学术科研/数据集资源",
+        "count": 6
+      }
+    ],
+    "学术科研/课程工具": [
+      {
+        "name": "学术科研/课程工具/MOOC平台",
+        "count": 3
+      }
+    ],
+    "多媒体": [
+      {
+        "name": "多媒体/剪辑教程",
+        "count": 3
+      },
+      {
+        "name": "多媒体/剪辑社区",
+        "count": 3
+      },
+      {
+        "name": "多媒体/特效资源",
+        "count": 2
+      },
+      {
+        "name": "多媒体/特效教程",
+        "count": 3
+      },
+      {
+        "name": "多媒体/特效服务",
+        "count": 1
+      },
+      {
+        "name": "多媒体/特效生成",
+        "count": 3
+      },
+      {
+        "name": "多媒体/录屏服务",
+        "count": 2
+      },
+      {
+        "name": "多媒体/字幕资源",
+        "count": 3
+      },
+      {
+        "name": "多媒体/素材资源",
+        "count": 3
+      },
+      {
+        "name": "多媒体/动画开源",
+        "count": 1
+      },
+      {
+        "name": "多媒体/录屏资源",
+        "count": 5
+      },
+      {
+        "name": "多媒体/字幕教程",
+        "count": 4
+      },
+      {
+        "name": "多媒体/素材社区",
+        "count": 4
+      }
+    ],
+    "系统工具/实用工具": [
+      {
+        "name": "系统工具/实用工具/安全工具",
+        "count": 4
+      }
+    ]
+  },
+  "expected_outcome": {
+    "after_split_new_categories": 182,
+    "after_merge_reduction": 200,
+    "target_balance_rate": "60-70%"
+  }
+}

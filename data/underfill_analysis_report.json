@@ -1,0 +1,1220 @@
+{
+  "metadata": {
+    "task": "啃魂导航 V12 Phase 1 - 欠容填充数据准备",
+    "timestamp": "2026-04-25",
+    "existing_websites_count": 6289,
+    "underfill_categories_count": 132,
+    "total_gap": 968
+  },
+  "summary": {
+    "description": "各数据源可用于填充欠容分类的候选站点统计",
+    "total_candidate_sites": 76,
+    "fillable": false,
+    "shortfall": 892,
+    "empty_categories": 86,
+    "partial_categories": 41,
+    "filled_categories": 5
+  },
+  "data_source_analysis": {
+    "cleaned_websites": {
+      "file": "data/cleaned_websites.json",
+      "total_items": 702,
+      "url_already_in_websites": 702,
+      "unique_new_urls": 0,
+      "candidate_count": 0,
+      "categories_covered": 0,
+      "note": "所有URL已在websites.json中，无新增候选"
+    },
+    "flat_sites": {
+      "file": "data/flat_sites.json",
+      "total_items": 226,
+      "url_already_in_websites": 116,
+      "unique_new_urls": 110,
+      "candidate_count": 76,
+      "categories_covered": 46,
+      "unmapped_categories": [
+        "开发资源/ai编程/生成器",
+        "视频娱乐/音乐/教程",
+        "AI智能/工具/生成器",
+        "开发资源/api/生成器",
+        "视频娱乐/国内视频/资源",
+        "阅读写作/创作/生成器",
+        "视频娱乐/国外视频/生成器",
+        "开发资源/平台/社区",
+        "AI智能/工具/社区",
+        "AI智能/AI音乐/教程",
+        "AI智能/AI其他/工具",
+        "AI智能/工具/教程",
+        "视频娱乐/国外视频/资源",
+        "AI智能/AI开发/生成器",
+        "AI智能/AI视频/生成器",
+        "阅读写作/网文/资源",
+        "视频娱乐/游戏/生成器",
+        "视频娱乐/国外视频/教程",
+        "办公效率/工具/社区",
+        "视频娱乐/国内视频/开源",
+        "视频娱乐/国内视频/服务"
+      ]
+    },
+    "ods_raw_sites": {
+      "file": "data/ods_raw_sites.json",
+      "total_items": 9903,
+      "url_already_in_websites": 9903,
+      "unique_new_urls": 0,
+      "candidate_count": 0,
+      "categories_covered": 0,
+      "unmapped_categories": []
+    },
+    "enriched_websites": {
+      "file": "data/enriched_websites.json",
+      "total_items": 72,
+      "url_already_in_websites": 65,
+      "unique_new_urls": 7,
+      "candidate_count": 0,
+      "categories_covered": 0,
+      "unmapped_categories": [
+        "设计创意/设计资源/图标素材",
+        "设计创意/设计工具/在线配色",
+        "设计创意/设计工具/Colors",
+        "开发工具/资源文档/API文档",
+        "设计创意/灵感采集/界面灵感",
+        "设计创意/设计工具/UI资源",
+        "设计创意/灵感采集/网页灵感"
+      ]
+    }
+  },
+  "ods_category_mapping": {
+    "description": "将ods旧格式category (例如 'AI智能>LLM>工具') 转换为新三级分类的映射表",
+    "conversion_rule": "将websites.json中的_cat字段的'/'替换为'>'，然后对应到相同的category",
+    "mapping_count": 158,
+    "sample_mappings": {
+      "AI智能>AI视频>资源": "开发工具/学习生成/文档教程",
+      "AI智能>AI视频>库": "开发工具/API服务",
+      "AI智能>AI视频>教程": "开发工具/学习生成/文档教程",
+      "AI智能>AI视频>服务": "开发工具/API服务",
+      "AI智能>AI视频>社区": "开发工具/平台开源/GitHub替代",
+      "资源素材>图片>工具": "设计工具/图片工具",
+      "资源素材>图片>社区": "设计工具/图片社区",
+      "资源素材>字体>工具": "设计工具/字体工具",
+      "资源素材>字体>资源": "设计工具/字体资源",
+      "资源素材>字体>教程": "设计工具/字体教程",
+      "资源素材>字体>社区": "设计工具/字体社区",
+      "资源素材>字体>服务": "设计工具/字体服务",
+      "资源素材>ppt模板>工具": "设计工具/模板工具",
+      "资源素材>ppt模板>教程": "设计工具/模板教程",
+      "资源素材>ppt模板>社区": "设计工具/模板社区",
+      "资源素材>ppt模板>服务": "设计工具/模板服务",
+      "资源素材>ppt模板>开源": "设计工具/模板开源",
+      "创意工具>ui设计>教程": "设计工具/UI设计教程",
+      "创意工具>ui设计>社区": "设计工具/UI设计社区",
+      "创意工具>ui设计>开源": "设计工具/UI设计开源"
+    }
+  },
+  "total_candidates_by_category": {
+    "办公工具/工具服务": 2,
+    "办公工具/表单社区": 1,
+    "多媒体/剪辑教程": 1,
+    "多媒体/字幕教程": 2,
+    "多媒体/录屏服务": 1,
+    "多媒体/录屏资源": 1,
+    "多媒体/特效教程": 1,
+    "多媒体/特效生成": 1,
+    "多媒体/素材社区": 1,
+    "多媒体/视频娱乐/动漫教程": 1,
+    "多媒体/视频娱乐/动漫资源": 1,
+    "多媒体/视频娱乐/工具": 2,
+    "多媒体/视频娱乐/服务": 2,
+    "多媒体/视频娱乐/直播工具": 1,
+    "多媒体/视频娱乐/视频游戏": 1,
+    "多媒体/视频娱乐/音乐服务": 2,
+    "多媒体/视频娱乐/音乐生成": 1,
+    "学术科研/AI学习开源": 1,
+    "学术科研/教材生成": 1,
+    "学术科研/课程生成": 1,
+    "开发工具/API工具": 1,
+    "开发工具/API开源": 1,
+    "开发工具/API服务": 1,
+    "开发工具/IDE开源": 1,
+    "开发工具/IDE资源": 2,
+    "开发工具/在线工具": 2,
+    "开发工具/学习生成/代码训练": 5,
+    "开发工具/学习生成/文档教程": 14,
+    "开发工具/平台开源/GitHub替代": 1,
+    "开发工具/部署服务": 1,
+    "效率办公/博客服务": 1,
+    "效率办公/教程工具": 1,
+    "效率办公/教程社区": 1,
+    "效率办公/电子书服务": 1,
+    "系统工具/实用工具/安全工具": 1,
+    "系统工具/实用工具/网络工具": 5,
+    "设计工具/UI设计教程": 1,
+    "设计工具/图片工具": 2,
+    "设计工具/字体教程": 2,
+    "设计工具/字体社区": 1,
+    "设计工具/平台教程": 1,
+    "设计工具/思维导图教程": 1,
+    "设计工具/白板资源": 1,
+    "设计工具/资源开源": 1,
+    "设计工具/资源生成": 1,
+    "设计工具/资源社区": 1
+  },
+  "category_coverage_detail": {
+    "多媒体/素材社区": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 1,
+      "remaining_gap": 6,
+      "status": "partial"
+    },
+    "AI工具/人工智能/AI视频分析": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "效率办公/创作开源": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "开发工具/文档工具": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "效率办公/教程生成": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "效率办公/网文服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "办公工具/协作社区": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "效率办公/博客工具": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 0,
+      "remaining_gap": 5,
+      "status": "empty"
+    },
+    "开发工具/IDE资源": {
+      "current": 7,
+      "target": 10,
+      "gap": 3,
+      "candidates": 2,
+      "remaining_gap": 1,
+      "status": "partial"
+    },
+    "效率办公/教程社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "办公工具/工具服务": {
+      "current": 8,
+      "target": 10,
+      "gap": 2,
+      "candidates": 2,
+      "remaining_gap": 0,
+      "status": "filled"
+    },
+    "效率办公/出版教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/学习资源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/模板开源": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "设计工具/字体社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "开发工具/API开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "效率办公/创作教程": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/工具": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 2,
+      "remaining_gap": 4,
+      "status": "partial"
+    },
+    "设计工具/流程图社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/学习生成/文档教程": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 14,
+      "remaining_gap": 0,
+      "status": "filled"
+    },
+    "多媒体/字幕教程": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 2,
+      "remaining_gap": 6,
+      "status": "partial"
+    },
+    "开发工具/平台开源/Bitbucket": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/学习生成/学习平台": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/特效教程": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 1,
+      "remaining_gap": 7,
+      "status": "partial"
+    },
+    "设计工具/资源教程": {
+      "current": 6,
+      "target": 10,
+      "gap": 4,
+      "candidates": 0,
+      "remaining_gap": 4,
+      "status": "empty"
+    },
+    "办公工具/表单社区": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 1,
+      "remaining_gap": 4,
+      "status": "partial"
+    },
+    "效率办公/网文社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/UI设计生成": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "效率办公/教程工具": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 1,
+      "remaining_gap": 4,
+      "status": "partial"
+    },
+    "开发工具/代码仓库": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "设计工具/UI设计开源": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 0,
+      "remaining_gap": 6,
+      "status": "empty"
+    },
+    "效率办公/博客教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/字体工具": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "设计工具/字体教程": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 2,
+      "remaining_gap": 4,
+      "status": "partial"
+    },
+    "多媒体/特效服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/API社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/UI设计社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/平台开源/依赖管理": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "学术科研/教材生成": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "开发工具/IDE开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "多媒体/视频娱乐/视频游戏": {
+      "current": 9,
+      "target": 10,
+      "gap": 1,
+      "candidates": 1,
+      "remaining_gap": 0,
+      "status": "filled"
+    },
+    "学术科研/课程工具/MOOC平台": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "效率办公/博客服务": {
+      "current": 6,
+      "target": 10,
+      "gap": 4,
+      "candidates": 1,
+      "remaining_gap": 3,
+      "status": "partial"
+    },
+    "系统工具/实用工具/网络工具": {
+      "current": 8,
+      "target": 10,
+      "gap": 2,
+      "candidates": 5,
+      "remaining_gap": 0,
+      "status": "filled"
+    },
+    "多媒体/动画开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "效率办公/出版社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/学习服务": {
+      "current": 6,
+      "target": 10,
+      "gap": 4,
+      "candidates": 0,
+      "remaining_gap": 4,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/直播社区": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "设计工具/流程图生成": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/平台生成": {
+      "current": 9,
+      "target": 10,
+      "gap": 1,
+      "candidates": 0,
+      "remaining_gap": 1,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/生成器": {
+      "current": 7,
+      "target": 10,
+      "gap": 3,
+      "candidates": 0,
+      "remaining_gap": 3,
+      "status": "empty"
+    },
+    "开发工具/部署服务": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 1,
+      "remaining_gap": 5,
+      "status": "partial"
+    },
+    "学术科研/教材资源": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "设计工具/UI设计教程": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 1,
+      "remaining_gap": 7,
+      "status": "partial"
+    },
+    "设计工具/字体服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/白板开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "学术科研/搜索教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/特效资源": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "学术科研/课程生成": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "开发工具/学习生成/视频课程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/平台工具": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "开发工具/IDE社区": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/音乐服务": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 2,
+      "remaining_gap": 4,
+      "status": "partial"
+    },
+    "开发工具/文档开源": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "多媒体/素材资源": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "效率办公/电子书服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "办公工具/笔记工具": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "效率办公/电子书生成": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/直播工具": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 1,
+      "remaining_gap": 7,
+      "status": "partial"
+    },
+    "开发工具/文档资源": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "多媒体/录屏资源": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 1,
+      "remaining_gap": 5,
+      "status": "partial"
+    },
+    "开发工具/IDE服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/字体资源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "学术科研/数据集教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "办公工具/日程生成": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "学术科研/数据集生成": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/服务": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 2,
+      "remaining_gap": 3,
+      "status": "partial"
+    },
+    "设计工具/资源社区": {
+      "current": 7,
+      "target": 10,
+      "gap": 3,
+      "candidates": 1,
+      "remaining_gap": 2,
+      "status": "partial"
+    },
+    "设计工具/平台服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/图片工具": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 2,
+      "remaining_gap": 3,
+      "status": "partial"
+    },
+    "多媒体/特效生成": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 1,
+      "remaining_gap": 7,
+      "status": "partial"
+    },
+    "开发工具/IDE工具": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "开发工具/API服务": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 1,
+      "remaining_gap": 6,
+      "status": "partial"
+    },
+    "开发工具/平台开源/Gitee": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/录屏服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "设计工具/思维导图开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/资源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/API工具": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "开发工具/平台开源/项目展示": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/平台开源/GitLab": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/字幕资源": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/音乐社区": {
+      "current": 8,
+      "target": 10,
+      "gap": 2,
+      "candidates": 0,
+      "remaining_gap": 2,
+      "status": "empty"
+    },
+    "开发工具/部署资源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/音乐生成": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 1,
+      "remaining_gap": 6,
+      "status": "partial"
+    },
+    "设计工具/模板社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "效率办公/出版工具": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 0,
+      "remaining_gap": 6,
+      "status": "empty"
+    },
+    "设计工具/模板教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/白板教程": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "开发工具/学习教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/学习生成/代码训练": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 5,
+      "remaining_gap": 3,
+      "status": "partial"
+    },
+    "设计工具/平台教程": {
+      "current": 8,
+      "target": 10,
+      "gap": 2,
+      "candidates": 1,
+      "remaining_gap": 1,
+      "status": "partial"
+    },
+    "开发工具/平台开源/文档托管": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/在线工具": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 2,
+      "remaining_gap": 3,
+      "status": "partial"
+    },
+    "多媒体/剪辑教程": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 1,
+      "remaining_gap": 7,
+      "status": "partial"
+    },
+    "系统工具/实用工具/安全工具": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 1,
+      "remaining_gap": 6,
+      "status": "partial"
+    },
+    "学术科研/数据集资源": {
+      "current": 6,
+      "target": 10,
+      "gap": 4,
+      "candidates": 0,
+      "remaining_gap": 4,
+      "status": "empty"
+    },
+    "设计工具/UI套件": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 0,
+      "remaining_gap": 6,
+      "status": "empty"
+    },
+    "开发工具/平台开源/SourceForge": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/文档教程": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 0,
+      "remaining_gap": 6,
+      "status": "empty"
+    },
+    "设计工具/思维导图社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/动漫资源": {
+      "current": 6,
+      "target": 10,
+      "gap": 4,
+      "candidates": 1,
+      "remaining_gap": 3,
+      "status": "partial"
+    },
+    "效率办公/电子书社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/影视资源": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/社区": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 0,
+      "remaining_gap": 8,
+      "status": "empty"
+    },
+    "设计工具/思维导图教程": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "设计工具/模板服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "开发工具/文档服务": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/白板资源": {
+      "current": 2,
+      "target": 10,
+      "gap": 8,
+      "candidates": 1,
+      "remaining_gap": 7,
+      "status": "partial"
+    },
+    "开发工具/文档社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/图片社区": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "学术科研/工具教程/数据集": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/平面设计开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "多媒体/视频娱乐/音乐开源": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "办公工具/笔记开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 0,
+      "remaining_gap": 9,
+      "status": "empty"
+    },
+    "设计工具/资源开源": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "设计工具/资源生成": {
+      "current": 9,
+      "target": 10,
+      "gap": 1,
+      "candidates": 1,
+      "remaining_gap": 0,
+      "status": "filled"
+    },
+    "设计工具/模板工具": {
+      "current": 6,
+      "target": 10,
+      "gap": 4,
+      "candidates": 0,
+      "remaining_gap": 4,
+      "status": "empty"
+    },
+    "学术科研/AI学习开源": {
+      "current": 5,
+      "target": 10,
+      "gap": 5,
+      "candidates": 1,
+      "remaining_gap": 4,
+      "status": "partial"
+    },
+    "多媒体/视频娱乐/音乐工具": {
+      "current": 7,
+      "target": 10,
+      "gap": 3,
+      "candidates": 0,
+      "remaining_gap": 3,
+      "status": "empty"
+    },
+    "多媒体/剪辑社区": {
+      "current": 3,
+      "target": 10,
+      "gap": 7,
+      "candidates": 0,
+      "remaining_gap": 7,
+      "status": "empty"
+    },
+    "开发工具/平台开源/GitHub替代": {
+      "current": 1,
+      "target": 10,
+      "gap": 9,
+      "candidates": 1,
+      "remaining_gap": 8,
+      "status": "partial"
+    },
+    "多媒体/视频娱乐/动漫教程": {
+      "current": 4,
+      "target": 10,
+      "gap": 6,
+      "candidates": 1,
+      "remaining_gap": 5,
+      "status": "partial"
+    }
+  },
+  "fillable": false
+}

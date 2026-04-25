@@ -1,0 +1,1454 @@
+{
+  "开发工具/平台开源/GitLab": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/Gitee": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "AI工具/人工智能/AI视频分析": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/Bitbucket": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/SourceForge": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/工具教程/数据集": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/GitHub替代": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/图片社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/字体资源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/字体社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/字体服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/模板教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/模板社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/模板服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/UI设计社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/平面设计开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/平台服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/资源开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/IDE服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/IDE开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/API工具": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/API社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/API开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/文档工具": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/文档社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/文档服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习资源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习生成/视频课程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习生成/学习平台": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/文档托管": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/思维导图教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/思维导图社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/思维导图开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/流程图社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/流程图生成": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/白板开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/资源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/网文社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/网文服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/博客教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/电子书社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/电子书服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/电子书生成": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/出版教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/出版社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/教程社区": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/教程生成": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/部署资源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "办公工具/笔记工具": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "办公工具/笔记开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "办公工具/日程生成": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/搜索教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/课程生成": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/数据集教程": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/教材生成": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/特效服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/录屏服务": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/动画开源": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/依赖管理": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台开源/项目展示": {
+    "current_count": 1,
+    "target_count": 10,
+    "gap": 9,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/字体工具": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/模板开源": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/UI设计教程": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/IDE工具": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/IDE社区": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/文档开源": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习生成/代码训练": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/白板资源": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/直播工具": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/社区": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/创作开源": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/数据集生成": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/教材资源": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/剪辑教程": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/特效资源": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/特效教程": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/特效生成": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/字幕教程": {
+    "current_count": 2,
+    "target_count": 10,
+    "gap": 8,
+    "priority": "HIGH",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/API服务": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习生成/文档教程": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/UI设计生成": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/平台工具": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/代码仓库": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/文档资源": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/白板教程": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "系统工具/实用工具/安全工具": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/直播社区": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/音乐开源": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/音乐生成": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/影视资源": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/创作教程": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "办公工具/协作社区": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/课程工具/MOOC平台": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/剪辑社区": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/字幕资源": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/素材资源": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/素材社区": {
+    "current_count": 3,
+    "target_count": 10,
+    "gap": 7,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/字体教程": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/UI设计开源": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/文档教程": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/音乐服务": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/工具": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/动漫教程": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/出版工具": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/UI套件": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/部署服务": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/录屏资源": {
+    "current_count": 4,
+    "target_count": 10,
+    "gap": 6,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/图片工具": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/在线工具": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/服务": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/博客工具": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/教程工具": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "办公工具/表单社区": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/AI学习开源": {
+    "current_count": 5,
+    "target_count": 10,
+    "gap": 5,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/模板工具": {
+    "current_count": 6,
+    "target_count": 10,
+    "gap": 4,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/学习服务": {
+    "current_count": 6,
+    "target_count": 10,
+    "gap": 4,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/动漫资源": {
+    "current_count": 6,
+    "target_count": 10,
+    "gap": 4,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "效率办公/博客服务": {
+    "current_count": 6,
+    "target_count": 10,
+    "gap": 4,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/资源教程": {
+    "current_count": 6,
+    "target_count": 10,
+    "gap": 4,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "学术科研/数据集资源": {
+    "current_count": 6,
+    "target_count": 10,
+    "gap": 4,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/资源社区": {
+    "current_count": 7,
+    "target_count": 10,
+    "gap": 3,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/IDE资源": {
+    "current_count": 7,
+    "target_count": 10,
+    "gap": 3,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/音乐工具": {
+    "current_count": 7,
+    "target_count": 10,
+    "gap": 3,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/生成器": {
+    "current_count": 7,
+    "target_count": 10,
+    "gap": 3,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/平台教程": {
+    "current_count": 8,
+    "target_count": 10,
+    "gap": 2,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "办公工具/工具服务": {
+    "current_count": 8,
+    "target_count": 10,
+    "gap": 2,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "系统工具/实用工具/网络工具": {
+    "current_count": 8,
+    "target_count": 10,
+    "gap": 2,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/音乐社区": {
+    "current_count": 8,
+    "target_count": 10,
+    "gap": 2,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "设计工具/资源生成": {
+    "current_count": 9,
+    "target_count": 10,
+    "gap": 1,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "开发工具/平台生成": {
+    "current_count": 9,
+    "target_count": 10,
+    "gap": 1,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  },
+  "多媒体/视频娱乐/视频游戏": {
+    "current_count": 9,
+    "target_count": 10,
+    "gap": 1,
+    "priority": "MEDIUM",
+    "suggested_sources": [
+      "cleaned_websites",
+      "flat_sites",
+      "external_search"
+    ]
+  }
+}

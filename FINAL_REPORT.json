@@ -1,0 +1,109 @@
+{
+  "task": "啃魂导航 V12 Phase 1 - 欠容填充数据准备",
+  "timestamp": "2026-04-25",
+  "execution_summary": {
+    "total_existing_sites": 6289,
+    "total_underfill_categories": 132,
+    "total_gap": 968
+  },
+  "data_source_analysis": {
+    "cleaned_websites": {
+      "file": "data/cleaned_websites.json",
+      "total_items": 702,
+      "new_unique_urls": 0,
+      "candidate_count": 0,
+      "reason": "所有702个URL已在websites.json中，无新增候选"
+    },
+    "flat_sites": {
+      "file": "data/flat_sites.json",
+      "total_items": 226,
+      "new_unique_urls": 110,
+      "candidate_count": 76,
+      "categories_covered": 46,
+      "contribution_rate": "62.5%"
+    },
+    "ods_raw_sites": {
+      "file": "data/ods_raw_sites.json",
+      "total_items": 9903,
+      "new_unique_urls": 0,
+      "candidate_count": 0,
+      "reason": "所有9903个URL已在websites.json中，无新增候选"
+    },
+    "enriched_websites": {
+      "file": "data/enriched_websites.json",
+      "total_items": 72,
+      "new_unique_urls": 7,
+      "candidate_count": 0,
+      "reason": "_cat格式不匹配，无法映射到目标分类"
+    }
+  },
+  "mapping_strategy": {
+    "description": "使用websites.json中的_cat字段建立映射规则",
+    "mapping_count": 158,
+    "conversion_rule": "将_cat的'/'替换为'>'用于ods_raw_sites映射",
+    "sample_mappings": [
+      {
+        "old_format": "AI智能/AI视频/资源",
+        "ods_format": "AI智能>AI视频>资源",
+        "new_category": "开发工具/学习生成/文档教程"
+      },
+      {
+        "old_format": "资源素材/图片/工具",
+        "ods_format": "资源素材>图片>工具",
+        "new_category": "设计工具/图片工具"
+      }
+    ]
+  },
+  "candidate_summary": {
+    "total_candidate_sites": 76,
+    "categories_with_candidates": 46,
+    "categories_without_candidates": 86,
+    "fillable": false,
+    "shortfall": 892
+  },
+  "category_coverage_stats": {
+    "fully_satisfied": 5,
+    "partially_covered": 41,
+    "empty": 86
+  },
+  "top_contributing_categories": [
+    {
+      "category": "开发工具/学习生成/文档教程",
+      "candidate_count": 14,
+      "gap": 7,
+      "status": "filled"
+    },
+    {
+      "category": "开发工具/学习生成/代码训练",
+      "candidate_count": 5,
+      "gap": 8,
+      "status": "partial"
+    },
+    {
+      "category": "系统工具/实用工具/网络工具",
+      "candidate_count": 5,
+      "gap": 2,
+      "status": "filled"
+    }
+  ],
+  "critical_gap_categories": [
+    "AI工具/人工智能/AI视频分析",
+    "开发工具/平台开源/GitLab",
+    "开发工具/平台开源/Gitee",
+    "开发工具/平台开源/Bitbucket",
+    "开发工具/平台开源/SourceForge",
+    "效率办公/创作开源",
+    "设计工具/图片社区"
+  ],
+  "output_files": {
+    "candidates": "data/underfill_candidates.json",
+    "analysis_report": "data/underfill_analysis_report.json",
+    "category_detail": "data/underfill_category_detail.json"
+  },
+  "conclusion": {
+    "status": "无法填满所有欠容",
+    "primary_source": "flat_sites.json (唯一贡献源)",
+    "total_shortfall": 892,
+    "recommendation": "需要从其他渠道或外部搜索补充剩余欠容分类"
+  }
+}
