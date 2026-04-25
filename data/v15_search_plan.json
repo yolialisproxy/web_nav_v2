@@ -1,0 +1,962 @@
+{
+  "total_batches": 32,
+  "completed_batches": 0,
+  "total_imported": 0,
+  "batches": [
+    {
+      "batch_id": 1,
+      "tasks": [
+        {
+          "cat": "效率办公/文案优化/子类-5",
+          "need": 8,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-5",
+          "need": 8,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-5",
+          "need": 8,
+          "query": "top  services"
+        },
+        {
+          "cat": "设计工具/平台资源",
+          "need": 7,
+          "query": "best 平台资源 tools 2025"
+        },
+        {
+          "cat": "设计工具/平台资源",
+          "need": 7,
+          "query": "平台资源 platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 2,
+      "tasks": [
+        {
+          "cat": "设计工具/平台资源",
+          "need": 7,
+          "query": "top 平台资源 services"
+        },
+        {
+          "cat": "开发工具/文档资源",
+          "need": 7,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "开发工具/文档资源",
+          "need": 7,
+          "query": "best ai copywriting tools"
+        },
+        {
+          "cat": "开发工具/文档资源",
+          "need": 7,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "设计工具/流程图生成",
+          "need": 7,
+          "query": "best 流程图生成 tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 3,
+      "tasks": [
+        {
+          "cat": "设计工具/流程图生成",
+          "need": 7,
+          "query": "流程图生成 platforms"
+        },
+        {
+          "cat": "设计工具/流程图生成",
+          "need": 7,
+          "query": "top 流程图生成 services"
+        },
+        {
+          "cat": "设计工具/白板资源",
+          "need": 7,
+          "query": "best 白板资源 tools 2025"
+        },
+        {
+          "cat": "设计工具/白板资源",
+          "need": 7,
+          "query": "白板资源 platforms"
+        },
+        {
+          "cat": "设计工具/白板资源",
+          "need": 7,
+          "query": "top 白板资源 services"
+        }
+      ]
+    },
+    {
+      "batch_id": 4,
+      "tasks": [
+        {
+          "cat": "设计工具/白板教程",
+          "need": 7,
+          "query": "best 白板教程 tools 2025"
+        },
+        {
+          "cat": "设计工具/白板教程",
+          "need": 7,
+          "query": "白板教程 platforms"
+        },
+        {
+          "cat": "设计工具/白板教程",
+          "need": 7,
+          "query": "top 白板教程 services"
+        },
+        {
+          "cat": "设计工具/白板开源",
+          "need": 7,
+          "query": "best 白板开源 tools 2025"
+        },
+        {
+          "cat": "设计工具/白板开源",
+          "need": 7,
+          "query": "白板开源 platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 5,
+      "tasks": [
+        {
+          "cat": "设计工具/白板开源",
+          "need": 7,
+          "query": "top 白板开源 services"
+        },
+        {
+          "cat": "系统工具/实用工具/网络工具",
+          "need": 7,
+          "query": "best 网络工具 tools 2025"
+        },
+        {
+          "cat": "系统工具/实用工具/网络工具",
+          "need": 7,
+          "query": "网络工具 platforms"
+        },
+        {
+          "cat": "系统工具/实用工具/网络工具",
+          "need": 7,
+          "query": "top 网络工具 services"
+        },
+        {
+          "cat": "多媒体/视频娱乐/音乐生成",
+          "need": 7,
+          "query": "ai writing tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 6,
+      "tasks": [
+        {
+          "cat": "多媒体/视频娱乐/音乐生成",
+          "need": 7,
+          "query": "best ai copywriting tools"
+        },
+        {
+          "cat": "多媒体/视频娱乐/音乐生成",
+          "need": 7,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "多媒体/视频娱乐/视频游戏",
+          "need": 7,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "多媒体/视频娱乐/视频游戏",
+          "need": 7,
+          "query": "best ai copywriting tools"
+        },
+        {
+          "cat": "多媒体/视频娱乐/视频游戏",
+          "need": 7,
+          "query": "ai text generator platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 7,
+      "tasks": [
+        {
+          "cat": "效率办公/网文作者工具",
+          "need": 7,
+          "query": "best 网文作者工具 tools 2025"
+        },
+        {
+          "cat": "效率办公/网文作者工具",
+          "need": 7,
+          "query": "网文作者工具 platforms"
+        },
+        {
+          "cat": "效率办公/网文作者工具",
+          "need": 7,
+          "query": "top 网文作者工具 services"
+        },
+        {
+          "cat": "效率办公/营销文案/子类-5",
+          "need": 7,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/营销文案/子类-5",
+          "need": 7,
+          "query": " platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 8,
+      "tasks": [
+        {
+          "cat": "效率办公/营销文案/子类-5",
+          "need": 7,
+          "query": "top  services"
+        },
+        {
+          "cat": "办公工具/协作社区",
+          "need": 7,
+          "query": "best 协作社区 tools 2025"
+        },
+        {
+          "cat": "办公工具/协作社区",
+          "need": 7,
+          "query": "协作社区 platforms"
+        },
+        {
+          "cat": "办公工具/协作社区",
+          "need": 7,
+          "query": "top 协作社区 services"
+        },
+        {
+          "cat": "办公工具/表单社区",
+          "need": 7,
+          "query": "best 表单社区 tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 9,
+      "tasks": [
+        {
+          "cat": "办公工具/表单社区",
+          "need": 7,
+          "query": "表单社区 platforms"
+        },
+        {
+          "cat": "办公工具/表单社区",
+          "need": 7,
+          "query": "top 表单社区 services"
+        },
+        {
+          "cat": "多媒体/特效生成",
+          "need": 7,
+          "query": "best 特效生成 tools 2025"
+        },
+        {
+          "cat": "多媒体/特效生成",
+          "need": 7,
+          "query": "特效生成 platforms"
+        },
+        {
+          "cat": "多媒体/特效生成",
+          "need": 7,
+          "query": "top 特效生成 services"
+        }
+      ]
+    },
+    {
+      "batch_id": 10,
+      "tasks": [
+        {
+          "cat": "开发工具/API服务",
+          "need": 6,
+          "query": "best API服务 tools 2025"
+        },
+        {
+          "cat": "开发工具/API服务",
+          "need": 6,
+          "query": "API服务 platforms"
+        },
+        {
+          "cat": "开发工具/API服务",
+          "need": 6,
+          "query": "top API服务 services"
+        },
+        {
+          "cat": "设计工具/模板社区",
+          "need": 6,
+          "query": "best 模板社区 tools 2025"
+        },
+        {
+          "cat": "设计工具/模板社区",
+          "need": 6,
+          "query": "模板社区 platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 11,
+      "tasks": [
+        {
+          "cat": "设计工具/模板社区",
+          "need": 6,
+          "query": "top 模板社区 services"
+        },
+        {
+          "cat": "设计工具/UI设计开源",
+          "need": 6,
+          "query": "best UI设计开源 tools 2025"
+        },
+        {
+          "cat": "设计工具/UI设计开源",
+          "need": 6,
+          "query": "UI设计开源 platforms"
+        },
+        {
+          "cat": "设计工具/UI设计开源",
+          "need": 6,
+          "query": "top UI设计开源 services"
+        },
+        {
+          "cat": "开发工具/API生成",
+          "need": 6,
+          "query": "best API生成 tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 12,
+      "tasks": [
+        {
+          "cat": "开发工具/API生成",
+          "need": 6,
+          "query": "API生成 platforms"
+        },
+        {
+          "cat": "开发工具/API生成",
+          "need": 6,
+          "query": "top API生成 services"
+        },
+        {
+          "cat": "效率办公/网络小说平台",
+          "need": 6,
+          "query": "best 网络小说平台 tools 2025"
+        },
+        {
+          "cat": "效率办公/网络小说平台",
+          "need": 6,
+          "query": "网络小说平台 platforms"
+        },
+        {
+          "cat": "效率办公/网络小说平台",
+          "need": 6,
+          "query": "top 网络小说平台 services"
+        }
+      ]
+    },
+    {
+      "batch_id": 13,
+      "tasks": [
+        {
+          "cat": "效率办公",
+          "need": 6,
+          "query": "best 效率办公 tools 2025"
+        },
+        {
+          "cat": "效率办公",
+          "need": 6,
+          "query": "效率办公 platforms"
+        },
+        {
+          "cat": "效率办公",
+          "need": 6,
+          "query": "top 效率办公 services"
+        },
+        {
+          "cat": "效率办公/网文写作教程",
+          "need": 6,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "效率办公/网文写作教程",
+          "need": 6,
+          "query": "best ai copywriting tools"
+        }
+      ]
+    },
+    {
+      "batch_id": 14,
+      "tasks": [
+        {
+          "cat": "效率办公/网文写作教程",
+          "need": 6,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-2",
+          "need": 6,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-2",
+          "need": 6,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-2",
+          "need": 6,
+          "query": "top  services"
+        },
+        {
+          "cat": "AI工具/人工智能/效率办公",
+          "need": 6,
+          "query": "best 效率办公 tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 15,
+      "tasks": [
+        {
+          "cat": "AI工具/人工智能/效率办公",
+          "need": 6,
+          "query": "效率办公 platforms"
+        },
+        {
+          "cat": "AI工具/人工智能/效率办公",
+          "need": 6,
+          "query": "top 效率办公 services"
+        },
+        {
+          "cat": "效率办公/技术写作/子类-4",
+          "need": 6,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "效率办公/技术写作/子类-4",
+          "need": 6,
+          "query": "best ai copywriting tools"
+        },
+        {
+          "cat": "效率办公/技术写作/子类-4",
+          "need": 6,
+          "query": "ai text generator platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 16,
+      "tasks": [
+        {
+          "cat": "设计工具/字体教程",
+          "need": 5,
+          "query": "best 字体教程 tools 2025"
+        },
+        {
+          "cat": "设计工具/字体教程",
+          "need": 5,
+          "query": "字体教程 platforms"
+        },
+        {
+          "cat": "设计工具/字体教程",
+          "need": 5,
+          "query": "top 字体教程 services"
+        },
+        {
+          "cat": "设计工具/模板工具",
+          "need": 5,
+          "query": "best 模板工具 tools 2025"
+        },
+        {
+          "cat": "设计工具/模板工具",
+          "need": 5,
+          "query": "模板工具 platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 17,
+      "tasks": [
+        {
+          "cat": "设计工具/模板工具",
+          "need": 5,
+          "query": "top 模板工具 services"
+        },
+        {
+          "cat": "设计工具/资源社区",
+          "need": 5,
+          "query": "best 资源社区 tools 2025"
+        },
+        {
+          "cat": "设计工具/资源社区",
+          "need": 5,
+          "query": "资源社区 platforms"
+        },
+        {
+          "cat": "设计工具/资源社区",
+          "need": 5,
+          "query": "top 资源社区 services"
+        },
+        {
+          "cat": "多媒体/视频娱乐/国内视频",
+          "need": 5,
+          "query": "ai writing tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 18,
+      "tasks": [
+        {
+          "cat": "多媒体/视频娱乐/国内视频",
+          "need": 5,
+          "query": "best ai copywriting tools"
+        },
+        {
+          "cat": "多媒体/视频娱乐/国内视频",
+          "need": 5,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-1",
+          "need": 5,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-1",
+          "need": 5,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-1",
+          "need": 5,
+          "query": "top  services"
+        }
+      ]
+    },
+    {
+      "batch_id": 19,
+      "tasks": [
+        {
+          "cat": "开发工具/部署服务",
+          "need": 5,
+          "query": "best 部署服务 tools 2025"
+        },
+        {
+          "cat": "开发工具/部署服务",
+          "need": 5,
+          "query": "部署服务 platforms"
+        },
+        {
+          "cat": "开发工具/部署服务",
+          "need": 5,
+          "query": "top 部署服务 services"
+        },
+        {
+          "cat": "效率办公/邮件写作/子类-5",
+          "need": 5,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "效率办公/邮件写作/子类-5",
+          "need": 5,
+          "query": "best ai copywriting tools"
+        }
+      ]
+    },
+    {
+      "batch_id": 20,
+      "tasks": [
+        {
+          "cat": "效率办公/邮件写作/子类-5",
+          "need": 5,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "效率办公/改写重述/子类-4",
+          "need": 5,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/改写重述/子类-4",
+          "need": 5,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/改写重述/子类-4",
+          "need": 5,
+          "query": "top  services"
+        },
+        {
+          "cat": "学术科研/学术社交",
+          "need": 5,
+          "query": "best 学术社交 tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 21,
+      "tasks": [
+        {
+          "cat": "学术科研/学术社交",
+          "need": 5,
+          "query": "学术社交 platforms"
+        },
+        {
+          "cat": "学术科研/学术社交",
+          "need": 5,
+          "query": "top 学术社交 services"
+        },
+        {
+          "cat": "开发工具/平台开源",
+          "need": 4,
+          "query": "best 平台开源 tools 2025"
+        },
+        {
+          "cat": "开发工具/平台开源",
+          "need": 4,
+          "query": "平台开源 platforms"
+        },
+        {
+          "cat": "开发工具/平台开源",
+          "need": 4,
+          "query": "top 平台开源 services"
+        }
+      ]
+    },
+    {
+      "batch_id": 22,
+      "tasks": [
+        {
+          "cat": "开发工具/在线工具",
+          "need": 4,
+          "query": "best 在线工具 tools 2025"
+        },
+        {
+          "cat": "开发工具/在线工具",
+          "need": 4,
+          "query": "在线工具 platforms"
+        },
+        {
+          "cat": "开发工具/在线工具",
+          "need": 4,
+          "query": "top 在线工具 services"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-4",
+          "need": 4,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-4",
+          "need": 4,
+          "query": " platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 23,
+      "tasks": [
+        {
+          "cat": "效率办公/文案优化/子类-4",
+          "need": 4,
+          "query": "top  services"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-3",
+          "need": 4,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-3",
+          "need": 4,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/文案优化/子类-3",
+          "need": 4,
+          "query": "top  services"
+        },
+        {
+          "cat": "AI工具/人工智能/场景生成/子类-5",
+          "need": 4,
+          "query": "best  tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 24,
+      "tasks": [
+        {
+          "cat": "AI工具/人工智能/场景生成/子类-5",
+          "need": 4,
+          "query": " platforms"
+        },
+        {
+          "cat": "AI工具/人工智能/场景生成/子类-5",
+          "need": 4,
+          "query": "top  services"
+        },
+        {
+          "cat": "设计工具/图片社区",
+          "need": 3,
+          "query": "best 图片社区 tools 2025"
+        },
+        {
+          "cat": "设计工具/图片社区",
+          "need": 3,
+          "query": "图片社区 platforms"
+        },
+        {
+          "cat": "设计工具/图片社区",
+          "need": 3,
+          "query": "top 图片社区 services"
+        }
+      ]
+    },
+    {
+      "batch_id": 25,
+      "tasks": [
+        {
+          "cat": "效率办公/改写重述/子类-5",
+          "need": 3,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/改写重述/子类-5",
+          "need": 3,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/改写重述/子类-5",
+          "need": 3,
+          "query": "top  services"
+        },
+        {
+          "cat": "效率办公/总结摘要/子类-5",
+          "need": 3,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/总结摘要/子类-5",
+          "need": 3,
+          "query": " platforms"
+        }
+      ]
+    },
+    {
+      "batch_id": 26,
+      "tasks": [
+        {
+          "cat": "效率办公/总结摘要/子类-5",
+          "need": 3,
+          "query": "top  services"
+        },
+        {
+          "cat": "效率办公/邮件写作/子类-4",
+          "need": 2,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "效率办公/邮件写作/子类-4",
+          "need": 2,
+          "query": "best ai copywriting tools"
+        },
+        {
+          "cat": "效率办公/邮件写作/子类-4",
+          "need": 2,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "效率办公/标题生成/子类-4",
+          "need": 2,
+          "query": "best  tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 27,
+      "tasks": [
+        {
+          "cat": "效率办公/标题生成/子类-4",
+          "need": 2,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/标题生成/子类-4",
+          "need": 2,
+          "query": "top  services"
+        },
+        {
+          "cat": "效率办公/标题生成/子类-5",
+          "need": 2,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/标题生成/子类-5",
+          "need": 2,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/标题生成/子类-5",
+          "need": 2,
+          "query": "top  services"
+        }
+      ]
+    },
+    {
+      "batch_id": 28,
+      "tasks": [
+        {
+          "cat": "效率办公/故事生成/子类-5",
+          "need": 2,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/故事生成/子类-5",
+          "need": 2,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/故事生成/子类-5",
+          "need": 2,
+          "query": "top  services"
+        },
+        {
+          "cat": "开发工具/文档托管",
+          "need": 2,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "开发工具/文档托管",
+          "need": 2,
+          "query": "best ai copywriting tools"
+        }
+      ]
+    },
+    {
+      "batch_id": 29,
+      "tasks": [
+        {
+          "cat": "开发工具/文档托管",
+          "need": 2,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "效率办公/协作工具/子类-4",
+          "need": 2,
+          "query": "best  tools 2025"
+        },
+        {
+          "cat": "效率办公/协作工具/子类-4",
+          "need": 2,
+          "query": " platforms"
+        },
+        {
+          "cat": "效率办公/协作工具/子类-4",
+          "need": 2,
+          "query": "top  services"
+        },
+        {
+          "cat": "设计工具/字体资源",
+          "need": 1,
+          "query": "best 字体资源 tools 2025"
+        }
+      ]
+    },
+    {
+      "batch_id": 30,
+      "tasks": [
+        {
+          "cat": "设计工具/字体资源",
+          "need": 1,
+          "query": "字体资源 platforms"
+        },
+        {
+          "cat": "设计工具/字体资源",
+          "need": 1,
+          "query": "top 字体资源 services"
+        },
+        {
+          "cat": "办公工具",
+          "need": 1,
+          "query": "best 办公工具 tools 2025"
+        },
+        {
+          "cat": "办公工具",
+          "need": 1,
+          "query": "办公工具 platforms"
+        },
+        {
+          "cat": "办公工具",
+          "need": 1,
+          "query": "top 办公工具 services"
+        }
+      ]
+    },
+    {
+      "batch_id": 31,
+      "tasks": [
+        {
+          "cat": "效率办公/营销文案",
+          "need": 1,
+          "query": "best 营销文案 tools 2025"
+        },
+        {
+          "cat": "效率办公/营销文案",
+          "need": 1,
+          "query": "营销文案 platforms"
+        },
+        {
+          "cat": "效率办公/营销文案",
+          "need": 1,
+          "query": "top 营销文案 services"
+        },
+        {
+          "cat": "学术科研/学术写作",
+          "need": 1,
+          "query": "ai writing tools 2025"
+        },
+        {
+          "cat": "学术科研/学术写作",
+          "need": 1,
+          "query": "best ai copywriting tools"
+        }
+      ]
+    },
+    {
+      "batch_id": 32,
+      "tasks": [
+        {
+          "cat": "学术科研/学术写作",
+          "need": 1,
+          "query": "ai text generator platforms"
+        },
+        {
+          "cat": "学术科研/课程资料",
+          "need": 1,
+          "query": "best 课程资料 tools 2025"
+        },
+        {
+          "cat": "学术科研/课程资料",
+          "need": 1,
+          "query": "课程资料 platforms"
+        },
+        {
+          "cat": "学术科研/课程资料",
+          "need": 1,
+          "query": "top 课程资料 services"
+        }
+      ]
+    }
+  ]
+}

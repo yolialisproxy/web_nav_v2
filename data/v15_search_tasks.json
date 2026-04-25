@@ -1,0 +1,801 @@
+{
+  "tasks": [
+    {
+      "cat": "效率办公/文案优化/子类-5",
+      "need": 8,
+      "query": "文案优化 productivity tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-5",
+      "need": 8,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-5",
+      "need": 8,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "设计工具/平台资源",
+      "need": 7,
+      "query": "best 平台资源 design tools"
+    },
+    {
+      "cat": "设计工具/平台资源",
+      "need": 7,
+      "query": "平台资源 platforms"
+    },
+    {
+      "cat": "设计工具/平台资源",
+      "need": 7,
+      "query": "design software tools"
+    },
+    {
+      "cat": "开发工具/文档资源",
+      "need": 7,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/文档资源",
+      "need": 7,
+      "query": "文档资源 api services"
+    },
+    {
+      "cat": "开发工具/文档资源",
+      "need": 7,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "设计工具/流程图生成",
+      "need": 7,
+      "query": "best 流程图生成 design tools"
+    },
+    {
+      "cat": "设计工具/流程图生成",
+      "need": 7,
+      "query": "流程图生成 platforms"
+    },
+    {
+      "cat": "设计工具/流程图生成",
+      "need": 7,
+      "query": "design software tools"
+    },
+    {
+      "cat": "设计工具/白板资源",
+      "need": 7,
+      "query": "best 白板资源 design tools"
+    },
+    {
+      "cat": "设计工具/白板资源",
+      "need": 7,
+      "query": "白板资源 platforms"
+    },
+    {
+      "cat": "设计工具/白板资源",
+      "need": 7,
+      "query": "design software tools"
+    },
+    {
+      "cat": "设计工具/白板教程",
+      "need": 7,
+      "query": "best 白板教程 design tools"
+    },
+    {
+      "cat": "设计工具/白板教程",
+      "need": 7,
+      "query": "白板教程 platforms"
+    },
+    {
+      "cat": "设计工具/白板教程",
+      "need": 7,
+      "query": "design software tools"
+    },
+    {
+      "cat": "设计工具/白板开源",
+      "need": 7,
+      "query": "best 白板开源 design tools"
+    },
+    {
+      "cat": "设计工具/白板开源",
+      "need": 7,
+      "query": "白板开源 platforms"
+    },
+    {
+      "cat": "设计工具/白板开源",
+      "need": 7,
+      "query": "design software tools"
+    },
+    {
+      "cat": "系统工具/实用工具/网络工具",
+      "need": 7,
+      "query": "best 网络工具 tools 2025"
+    },
+    {
+      "cat": "系统工具/实用工具/网络工具",
+      "need": 7,
+      "query": "网络工具 platforms"
+    },
+    {
+      "cat": "系统工具/实用工具/网络工具",
+      "need": 7,
+      "query": "online 网络工具 services"
+    },
+    {
+      "cat": "多媒体/视频娱乐/音乐生成",
+      "need": 7,
+      "query": "音乐生成 creation tools"
+    },
+    {
+      "cat": "多媒体/视频娱乐/音乐生成",
+      "need": 7,
+      "query": "multimedia software"
+    },
+    {
+      "cat": "多媒体/视频娱乐/音乐生成",
+      "need": 7,
+      "query": "creative content platforms"
+    },
+    {
+      "cat": "多媒体/视频娱乐/视频游戏",
+      "need": 7,
+      "query": "视频游戏 creation tools"
+    },
+    {
+      "cat": "多媒体/视频娱乐/视频游戏",
+      "need": 7,
+      "query": "multimedia software"
+    },
+    {
+      "cat": "多媒体/视频娱乐/视频游戏",
+      "need": 7,
+      "query": "creative content platforms"
+    },
+    {
+      "cat": "效率办公/网文作者工具",
+      "need": 7,
+      "query": "网文作者工具 productivity tools"
+    },
+    {
+      "cat": "效率办公/网文作者工具",
+      "need": 7,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/网文作者工具",
+      "need": 7,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/营销文案/子类-5",
+      "need": 7,
+      "query": "营销文案 productivity tools"
+    },
+    {
+      "cat": "效率办公/营销文案/子类-5",
+      "need": 7,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/营销文案/子类-5",
+      "need": 7,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "办公工具/协作社区",
+      "need": 7,
+      "query": "协作社区 productivity tools"
+    },
+    {
+      "cat": "办公工具/协作社区",
+      "need": 7,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "办公工具/协作社区",
+      "need": 7,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "办公工具/表单社区",
+      "need": 7,
+      "query": "表单社区 productivity tools"
+    },
+    {
+      "cat": "办公工具/表单社区",
+      "need": 7,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "办公工具/表单社区",
+      "need": 7,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "多媒体/特效生成",
+      "need": 7,
+      "query": "特效生成 creation tools"
+    },
+    {
+      "cat": "多媒体/特效生成",
+      "need": 7,
+      "query": "multimedia software"
+    },
+    {
+      "cat": "多媒体/特效生成",
+      "need": 7,
+      "query": "creative content platforms"
+    },
+    {
+      "cat": "开发工具/API服务",
+      "need": 6,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/API服务",
+      "need": 6,
+      "query": "API服务 api services"
+    },
+    {
+      "cat": "开发工具/API服务",
+      "need": 6,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "设计工具/模板社区",
+      "need": 6,
+      "query": "best 模板社区 design tools"
+    },
+    {
+      "cat": "设计工具/模板社区",
+      "need": 6,
+      "query": "模板社区 platforms"
+    },
+    {
+      "cat": "设计工具/模板社区",
+      "need": 6,
+      "query": "design software tools"
+    },
+    {
+      "cat": "设计工具/UI设计开源",
+      "need": 6,
+      "query": "best UI设计开源 design tools"
+    },
+    {
+      "cat": "设计工具/UI设计开源",
+      "need": 6,
+      "query": "UI设计开源 platforms"
+    },
+    {
+      "cat": "设计工具/UI设计开源",
+      "need": 6,
+      "query": "design software tools"
+    },
+    {
+      "cat": "开发工具/API生成",
+      "need": 6,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/API生成",
+      "need": 6,
+      "query": "API生成 api services"
+    },
+    {
+      "cat": "开发工具/API生成",
+      "need": 6,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "效率办公/网络小说平台",
+      "need": 6,
+      "query": "网络小说平台 productivity tools"
+    },
+    {
+      "cat": "效率办公/网络小说平台",
+      "need": 6,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/网络小说平台",
+      "need": 6,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公",
+      "need": 6,
+      "query": "效率办公 productivity tools"
+    },
+    {
+      "cat": "效率办公",
+      "need": 6,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公",
+      "need": 6,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/网文写作教程",
+      "need": 6,
+      "query": "网文写作教程 productivity tools"
+    },
+    {
+      "cat": "效率办公/网文写作教程",
+      "need": 6,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/网文写作教程",
+      "need": 6,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-2",
+      "need": 6,
+      "query": "文案优化 productivity tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-2",
+      "need": 6,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-2",
+      "need": 6,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "AI工具/人工智能/效率办公",
+      "need": 6,
+      "query": "ai 效率办公 tools"
+    },
+    {
+      "cat": "AI工具/人工智能/效率办公",
+      "need": 6,
+      "query": "artificial intelligence platforms"
+    },
+    {
+      "cat": "AI工具/人工智能/效率办公",
+      "need": 6,
+      "query": "效率办公 ai solutions"
+    },
+    {
+      "cat": "效率办公/技术写作/子类-4",
+      "need": 6,
+      "query": "技术写作 productivity tools"
+    },
+    {
+      "cat": "效率办公/技术写作/子类-4",
+      "need": 6,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/技术写作/子类-4",
+      "need": 6,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "设计工具/字体教程",
+      "need": 5,
+      "query": "best 字体教程 design tools"
+    },
+    {
+      "cat": "设计工具/字体教程",
+      "need": 5,
+      "query": "字体教程 platforms"
+    },
+    {
+      "cat": "设计工具/字体教程",
+      "need": 5,
+      "query": "design software tools"
+    },
+    {
+      "cat": "设计工具/模板工具",
+      "need": 5,
+      "query": "best 模板工具 design tools"
+    },
+    {
+      "cat": "设计工具/模板工具",
+      "need": 5,
+      "query": "模板工具 platforms"
+    },
+    {
+      "cat": "设计工具/模板工具",
+      "need": 5,
+      "query": "design software tools"
+    },
+    {
+      "cat": "设计工具/资源社区",
+      "need": 5,
+      "query": "best 资源社区 design tools"
+    },
+    {
+      "cat": "设计工具/资源社区",
+      "need": 5,
+      "query": "资源社区 platforms"
+    },
+    {
+      "cat": "设计工具/资源社区",
+      "need": 5,
+      "query": "design software tools"
+    },
+    {
+      "cat": "多媒体/视频娱乐/国内视频",
+      "need": 5,
+      "query": "国内视频 creation tools"
+    },
+    {
+      "cat": "多媒体/视频娱乐/国内视频",
+      "need": 5,
+      "query": "multimedia software"
+    },
+    {
+      "cat": "多媒体/视频娱乐/国内视频",
+      "need": 5,
+      "query": "creative content platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-1",
+      "need": 5,
+      "query": "文案优化 productivity tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-1",
+      "need": 5,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-1",
+      "need": 5,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "开发工具/部署服务",
+      "need": 5,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/部署服务",
+      "need": 5,
+      "query": "部署服务 api services"
+    },
+    {
+      "cat": "开发工具/部署服务",
+      "need": 5,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-5",
+      "need": 5,
+      "query": "邮件写作 productivity tools"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-5",
+      "need": 5,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-5",
+      "need": 5,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-4",
+      "need": 5,
+      "query": "改写重述 productivity tools"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-4",
+      "need": 5,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-4",
+      "need": 5,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "学术科研/学术社交",
+      "need": 5,
+      "query": "best 学术社交 tools 2025"
+    },
+    {
+      "cat": "学术科研/学术社交",
+      "need": 5,
+      "query": "学术社交 platforms"
+    },
+    {
+      "cat": "学术科研/学术社交",
+      "need": 5,
+      "query": "online 学术社交 services"
+    },
+    {
+      "cat": "开发工具/平台开源",
+      "need": 4,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/平台开源",
+      "need": 4,
+      "query": "平台开源 api services"
+    },
+    {
+      "cat": "开发工具/平台开源",
+      "need": 4,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "开发工具/在线工具",
+      "need": 4,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/在线工具",
+      "need": 4,
+      "query": "在线工具 api services"
+    },
+    {
+      "cat": "开发工具/在线工具",
+      "need": 4,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-4",
+      "need": 4,
+      "query": "文案优化 productivity tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-4",
+      "need": 4,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-4",
+      "need": 4,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-3",
+      "need": 4,
+      "query": "文案优化 productivity tools"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-3",
+      "need": 4,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-3",
+      "need": 4,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "AI工具/人工智能/场景生成/子类-5",
+      "need": 4,
+      "query": "ai 场景生成 tools"
+    },
+    {
+      "cat": "AI工具/人工智能/场景生成/子类-5",
+      "need": 4,
+      "query": "artificial intelligence platforms"
+    },
+    {
+      "cat": "AI工具/人工智能/场景生成/子类-5",
+      "need": 4,
+      "query": "场景生成 ai solutions"
+    },
+    {
+      "cat": "设计工具/图片社区",
+      "need": 3,
+      "query": "best 图片社区 design tools"
+    },
+    {
+      "cat": "设计工具/图片社区",
+      "need": 3,
+      "query": "图片社区 platforms"
+    },
+    {
+      "cat": "设计工具/图片社区",
+      "need": 3,
+      "query": "design software tools"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-5",
+      "need": 3,
+      "query": "改写重述 productivity tools"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-5",
+      "need": 3,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-5",
+      "need": 3,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/总结摘要/子类-5",
+      "need": 3,
+      "query": "总结摘要 productivity tools"
+    },
+    {
+      "cat": "效率办公/总结摘要/子类-5",
+      "need": 3,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/总结摘要/子类-5",
+      "need": 3,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-4",
+      "need": 2,
+      "query": "邮件写作 productivity tools"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-4",
+      "need": 2,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-4",
+      "need": 2,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-4",
+      "need": 2,
+      "query": "标题生成 productivity tools"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-4",
+      "need": 2,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-4",
+      "need": 2,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-5",
+      "need": 2,
+      "query": "标题生成 productivity tools"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-5",
+      "need": 2,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-5",
+      "need": 2,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/故事生成/子类-5",
+      "need": 2,
+      "query": "故事生成 productivity tools"
+    },
+    {
+      "cat": "效率办公/故事生成/子类-5",
+      "need": 2,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/故事生成/子类-5",
+      "need": 2,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "开发工具/文档托管",
+      "need": 2,
+      "query": "developer tools platforms"
+    },
+    {
+      "cat": "开发工具/文档托管",
+      "need": 2,
+      "query": "文档托管 api services"
+    },
+    {
+      "cat": "开发工具/文档托管",
+      "need": 2,
+      "query": "coding tools for developers"
+    },
+    {
+      "cat": "效率办公/协作工具/子类-4",
+      "need": 2,
+      "query": "协作工具 productivity tools"
+    },
+    {
+      "cat": "效率办公/协作工具/子类-4",
+      "need": 2,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/协作工具/子类-4",
+      "need": 2,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "设计工具/字体资源",
+      "need": 1,
+      "query": "best 字体资源 design tools"
+    },
+    {
+      "cat": "设计工具/字体资源",
+      "need": 1,
+      "query": "字体资源 platforms"
+    },
+    {
+      "cat": "设计工具/字体资源",
+      "need": 1,
+      "query": "design software tools"
+    },
+    {
+      "cat": "办公工具",
+      "need": 1,
+      "query": "办公工具 productivity tools"
+    },
+    {
+      "cat": "办公工具",
+      "need": 1,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "办公工具",
+      "need": 1,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "效率办公/营销文案",
+      "need": 1,
+      "query": "营销文案 productivity tools"
+    },
+    {
+      "cat": "效率办公/营销文案",
+      "need": 1,
+      "query": "office efficiency platforms"
+    },
+    {
+      "cat": "效率办公/营销文案",
+      "need": 1,
+      "query": "workflow automation tools"
+    },
+    {
+      "cat": "学术科研/学术写作",
+      "need": 1,
+      "query": "best 学术写作 tools 2025"
+    },
+    {
+      "cat": "学术科研/学术写作",
+      "need": 1,
+      "query": "学术写作 platforms"
+    },
+    {
+      "cat": "学术科研/学术写作",
+      "need": 1,
+      "query": "online 学术写作 services"
+    },
+    {
+      "cat": "学术科研/课程资料",
+      "need": 1,
+      "query": "best 课程资料 tools 2025"
+    },
+    {
+      "cat": "学术科研/课程资料",
+      "need": 1,
+      "query": "课程资料 platforms"
+    },
+    {
+      "cat": "学术科研/课程资料",
+      "need": 1,
+      "query": "online 课程资料 services"
+    }
+  ],
+  "total_gap": 257,
+  "total_tasks": 159
+}

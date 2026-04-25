@@ -1,0 +1,127 @@
+{
+  "version": "V15_Final_Report",
+  "timestamp": "2026-04-25T19:17:06.117252",
+  "project": "啃魂导航网站 - 第十一次开发",
+  "summary": {
+    "starting_point": "V13恢复基础 (3,370站)",
+    "offline_expansion_added": 81,
+    "total_sites": 3451,
+    "target_sites": 5000,
+    "gap_remaining": 1549,
+    "completion_percentage": 69.0
+  },
+  "core_categories": {
+    "安全工具/子类-VPN安全": {
+      "current": 27,
+      "target": 50,
+      "gap": 23
+    },
+    "知识库/子类-知识库软件": {
+      "current": 27,
+      "target": 50,
+      "gap": 23
+    },
+    "密码工具/子类-密码管理器": {
+      "current": 33,
+      "target": 50,
+      "gap": 17
+    },
+    "DNS工具/子类-DNS安全工具": {
+      "current": 30,
+      "target": 50,
+      "gap": 20
+    }
+  },
+  "top_categories": [
+    [
+      "多媒体/视频娱乐/教程/子类-4",
+      42
+    ],
+    [
+      "开发工具/平台开源/GitHub/子类-1",
+      42
+    ],
+    [
+      "开发工具/平台开源/GitHub/子类-4",
+      41
+    ],
+    [
+      "开发工具/平台开源/GitHub/子类-5",
+      38
+    ],
+    [
+      "多媒体/视频娱乐/教程/子类-2",
+      37
+    ],
+    [
+      "多媒体/视频娱乐/教程/子类-1",
+      36
+    ],
+    [
+      "AI工具/人工智能/数据分析/子类-2",
+      34
+    ],
+    [
+      "开发工具/平台开源/GitHub/子类-3",
+      33
+    ],
+    [
+      "AI工具/人工智能/数据分析/子类-5",
+      33
+    ],
+    [
+      "AI工具/人工智能/视频生成/子类-3",
+      33
+    ],
+    [
+      "密码工具/子类-密码管理器",
+      33
+    ],
+    [
+      "DNS工具/子类-DNS安全工具",
+      30
+    ],
+    [
+      "AI工具/人工智能/综合平台",
+      29
+    ],
+    [
+      "开发工具/平台开源/GitHub/子类-2",
+      28
+    ],
+    [
+      "设计工具/UI设计工具/子类-2",
+      27
+    ]
+  ],
+  "blockers": {
+    "tavily_api": "HTTP 432 rate limit (30分钟)",
+    "duckduckgo": "Network connect timeout",
+    "browser": "Navigation timeout",
+    "status": "All external search channels blocked"
+  },
+  "what_works": [
+    "✅ V13数据集恢复 (3,370站)",
+    "✅ 4个隐藏欠容类识别并补充（VPN/Wiki/Password/DNS）",
+    "✅ 离线知识扩展补充81个权威网站",
+    "✅ websites.json原子写入并备份",
+    "✅ 核心类数据从0/8/8/10提升至27/27/33/30"
+  ],
+  "what_remains": {
+    "total_gap": 1549,
+    "core_gap": 83,
+    "required_searches": "约300-400个搜索批次",
+    "estimated_time": "API恢复后需要2-3小时"
+  },
+  "next_actions": [
+    "方案A: 等待30分钟，Tavily API自动恢复后继续执行搜索批次",
+    "方案B: 切换Firecrawl MCP搜索（需配置API key）",
+    "方案C: 使用browser工具手动验证并导入（速度较慢但稳定）",
+    "方案D: 提交当前版本为V15 interim，V16继续扩展"
+  ],
+  "files": {
+    "main_data": "data/websites.json",
+    "backup": "data/backup/websites.json.v15_offline_*",
+    "report": "data/v15_completion_report.json"
+  }
+}

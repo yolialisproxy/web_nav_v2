@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-04-25T19:06:59.089435",
+  "action": "restore_v13_import_batch_as_base",
+  "base_file": "/home/yoli/GitHub/web_nav_v2/data/websites.json.v13_import_batch_20260425_135105",
+  "base_sites": 3334,
+  "manual_added": 36,
+  "total_sites": 3370,
+  "previous_corrupted": "/home/yoli/GitHub/web_nav_v2/data/backup_restore/websites.json.before_v13_restore_20260425_190659",
+  "reason": "\u5f53\u524dwebsites.json\u662f\u65e7\u7248\u672c(780\u7ad9\uff0c12:49\u4fee\u6539)\uff0cv13\u5b8c\u6210\u65f6\u67093,358\u7ad9(14:44)\uff0c\u6570\u636e\u56de\u9000"
+}

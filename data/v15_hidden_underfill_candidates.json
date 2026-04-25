@@ -1,0 +1,230 @@
+[
+  {
+    "name": "NordVPN",
+    "url": "https://nordvpn.com",
+    "description": "流行的商业VPN服务，全球服务器和强加密",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "ExpressVPN",
+    "url": "https://www.expressvpn.com",
+    "description": "高速VPN服务，多平台支持",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "Surfshark",
+    "url": "https://surfshark.com",
+    "description": "性价比VPN，无设备限制",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "ProtonVPN",
+    "url": "https://protonvpn.com",
+    "description": "瑞士公司，注重隐私",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "Mullvad",
+    "url": "https://mullvad.net",
+    "description": "隐私优先，匿名注册",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "Windscribe",
+    "url": "https://windscribe.com",
+    "description": "VPN+防火墙组合",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "TunnelBear",
+    "url": "https://www.tunnelbear.com",
+    "description": "用户友好的VPN服务",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "PIA",
+    "url": "https://www.privateinternetaccess.com",
+    "description": "长期运营的VPN提供商",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "CyberGhost",
+    "url": "https://www.cyberghostvpn.com",
+    "description": "易于使用的VPN服务",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "IVPN",
+    "url": "https://www.ivpn.net",
+    "description": "隐私保护VPN，无日志策略",
+    "category": "安全工具/子类-VPN安全"
+  },
+  {
+    "name": "MediaWiki",
+    "url": "https://www.mediawiki.org",
+    "description": "维基百科使用的开源wiki",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "DokuWiki",
+    "url": "https://www.dokuwiki.org",
+    "description": "无需数据库的轻量级wiki",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "TiddlyWiki",
+    "url": "https://tiddlywiki.com",
+    "description": "非线性个人知识管理wiki",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "Outline",
+    "url": "https://www.getoutline.com",
+    "description": "团队知识库协作平台",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "BookStack",
+    "url": "https://www.bookstackapp.com",
+    "description": "书籍式知识管理系统",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "Confluence",
+    "url": "https://www.atlassian.com/software/confluence",
+    "description": "企业级知识管理",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "Notion",
+    "url": "https://www.notion.so",
+    "description": "一体化工作空间",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "Slab",
+    "url": "https://slab.com",
+    "description": "团队知识库和文档",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "HelpDocs",
+    "url": "https://www.helpdocs.io",
+    "description": "帮助中心和知识库",
+    "category": "知识库/子类-知识库软件"
+  },
+  {
+    "name": "Cloudflare DNS",
+    "url": "https://www.cloudflare.com/dns/",
+    "description": "1.1.1.1 隐私优先DNS",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "Quad9",
+    "url": "https://quad9.net",
+    "description": "安全DNS，阻止恶意域名",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "AdGuard DNS",
+    "url": "https://adguard-dns.io",
+    "description": "广告拦截隐私DNS",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "CleanBrowsing",
+    "url": "https://cleanbrowsing.org",
+    "description": "家庭安全DNS过滤",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "NextDNS",
+    "url": "https://nextdns.io",
+    "description": "可配置云DNS防火墙",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "OpenDNS",
+    "url": "https://www.opendns.com",
+    "description": "思科DNS安全服务",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "Google DNS",
+    "url": "https://dns.google",
+    "description": "Google公共DNS",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "Comodo Secure DNS",
+    "url": "https://www.comodo.com/secure-dns",
+    "description": "安全DNS过滤",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "Alternate DNS",
+    "url": "https://alternate-dns.com",
+    "description": "广告拦截DNS服务",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "Cisco Umbrella",
+    "url": "https://umbrella.cisco.com",
+    "description": "企业级DNS安全",
+    "category": "DNS工具/子类-DNS安全工具"
+  },
+  {
+    "name": "Bitwarden",
+    "url": "https://bitwarden.com",
+    "description": "开源密码管理器，跨平台",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "1Password",
+    "url": "https://1password.com",
+    "description": "商业密码管理器",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "LastPass",
+    "url": "https://www.lastpass.com",
+    "description": "老牌密码管理服务",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "KeePass",
+    "url": "https://keepass.info",
+    "description": "开源本地密码管理器",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "Dashlane",
+    "url": "https://www.dashlane.com",
+    "description": "密码管理和暗网监控",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "RoboForm",
+    "url": "https://www.roboform.com",
+    "description": "密码管理和表单填充",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "Zoho Vault",
+    "url": "https://www.zoho.com/vault",
+    "description": "团队密码管理",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "Sticky Password",
+    "url": "https://www.stickypassword.com",
+    "description": "密码和表单管理",
+    "category": "密码工具/子类-密码管理器"
+  },
+  {
+    "name": "Enpass",
+    "url": "https://www.enpass.io",
+    "description": "本地密码管理器",
+    "category": "密码工具/子类-密码管理器"
+  }
+]

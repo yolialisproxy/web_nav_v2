@@ -1,0 +1,1215 @@
+{
+  "total_batches": 32,
+  "batches": [
+    {
+      "batch_num": 0,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-5",
+          "need": 8,
+          "query": "\u6587\u6848\u4f18\u5316 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-5",
+          "need": 8,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-5",
+          "need": 8,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5e73\u53f0\u8d44\u6e90",
+          "need": 7,
+          "query": "best \u5e73\u53f0\u8d44\u6e90 design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5e73\u53f0\u8d44\u6e90",
+          "need": 7,
+          "query": "\u5e73\u53f0\u8d44\u6e90 platforms"
+        }
+      ],
+      "queries": [
+        "\u6587\u6848\u4f18\u5316 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "best \u5e73\u53f0\u8d44\u6e90 design tools",
+        "\u5e73\u53f0\u8d44\u6e90 platforms"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 1,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5e73\u53f0\u8d44\u6e90",
+          "need": 7,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u8d44\u6e90",
+          "need": 7,
+          "query": "developer tools platforms"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u8d44\u6e90",
+          "need": 7,
+          "query": "\u6587\u6863\u8d44\u6e90 api services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u8d44\u6e90",
+          "need": 7,
+          "query": "coding tools for developers"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6d41\u7a0b\u56fe\u751f\u6210",
+          "need": 7,
+          "query": "best \u6d41\u7a0b\u56fe\u751f\u6210 design tools"
+        }
+      ],
+      "queries": [
+        "design software tools",
+        "developer tools platforms",
+        "\u6587\u6863\u8d44\u6e90 api services",
+        "coding tools for developers",
+        "best \u6d41\u7a0b\u56fe\u751f\u6210 design tools"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u5e73\u53f0\u8d44\u6e90"
+    },
+    {
+      "batch_num": 2,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6d41\u7a0b\u56fe\u751f\u6210",
+          "need": 7,
+          "query": "\u6d41\u7a0b\u56fe\u751f\u6210 platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6d41\u7a0b\u56fe\u751f\u6210",
+          "need": 7,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u8d44\u6e90",
+          "need": 7,
+          "query": "best \u767d\u677f\u8d44\u6e90 design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u8d44\u6e90",
+          "need": 7,
+          "query": "\u767d\u677f\u8d44\u6e90 platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u8d44\u6e90",
+          "need": 7,
+          "query": "design software tools"
+        }
+      ],
+      "queries": [
+        "\u6d41\u7a0b\u56fe\u751f\u6210 platforms",
+        "design software tools",
+        "best \u767d\u677f\u8d44\u6e90 design tools",
+        "\u767d\u677f\u8d44\u6e90 platforms",
+        "design software tools"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u6d41\u7a0b\u56fe\u751f\u6210"
+    },
+    {
+      "batch_num": 3,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u6559\u7a0b",
+          "need": 7,
+          "query": "best \u767d\u677f\u6559\u7a0b design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u6559\u7a0b",
+          "need": 7,
+          "query": "\u767d\u677f\u6559\u7a0b platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u6559\u7a0b",
+          "need": 7,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u5f00\u6e90",
+          "need": 7,
+          "query": "best \u767d\u677f\u5f00\u6e90 design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u5f00\u6e90",
+          "need": 7,
+          "query": "\u767d\u677f\u5f00\u6e90 platforms"
+        }
+      ],
+      "queries": [
+        "best \u767d\u677f\u6559\u7a0b design tools",
+        "\u767d\u677f\u6559\u7a0b platforms",
+        "design software tools",
+        "best \u767d\u677f\u5f00\u6e90 design tools",
+        "\u767d\u677f\u5f00\u6e90 platforms"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u6559\u7a0b"
+    },
+    {
+      "batch_num": 4,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u5f00\u6e90",
+          "need": 7,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u7cfb\u7edf\u5de5\u5177/\u5b9e\u7528\u5de5\u5177/\u7f51\u7edc\u5de5\u5177",
+          "need": 7,
+          "query": "best \u7f51\u7edc\u5de5\u5177 tools 2025"
+        },
+        {
+          "cat": "\u7cfb\u7edf\u5de5\u5177/\u5b9e\u7528\u5de5\u5177/\u7f51\u7edc\u5de5\u5177",
+          "need": 7,
+          "query": "\u7f51\u7edc\u5de5\u5177 platforms"
+        },
+        {
+          "cat": "\u7cfb\u7edf\u5de5\u5177/\u5b9e\u7528\u5de5\u5177/\u7f51\u7edc\u5de5\u5177",
+          "need": 7,
+          "query": "online \u7f51\u7edc\u5de5\u5177 services"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u97f3\u4e50\u751f\u6210",
+          "need": 7,
+          "query": "\u97f3\u4e50\u751f\u6210 creation tools"
+        }
+      ],
+      "queries": [
+        "design software tools",
+        "best \u7f51\u7edc\u5de5\u5177 tools 2025",
+        "\u7f51\u7edc\u5de5\u5177 platforms",
+        "online \u7f51\u7edc\u5de5\u5177 services",
+        "\u97f3\u4e50\u751f\u6210 creation tools"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u767d\u677f\u5f00\u6e90"
+    },
+    {
+      "batch_num": 5,
+      "tasks": [
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u97f3\u4e50\u751f\u6210",
+          "need": 7,
+          "query": "multimedia software"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u97f3\u4e50\u751f\u6210",
+          "need": 7,
+          "query": "creative content platforms"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u89c6\u9891\u6e38\u620f",
+          "need": 7,
+          "query": "\u89c6\u9891\u6e38\u620f creation tools"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u89c6\u9891\u6e38\u620f",
+          "need": 7,
+          "query": "multimedia software"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u89c6\u9891\u6e38\u620f",
+          "need": 7,
+          "query": "creative content platforms"
+        }
+      ],
+      "queries": [
+        "multimedia software",
+        "creative content platforms",
+        "\u89c6\u9891\u6e38\u620f creation tools",
+        "multimedia software",
+        "creative content platforms"
+      ],
+      "category": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u97f3\u4e50\u751f\u6210"
+    },
+    {
+      "batch_num": 6,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u4f5c\u8005\u5de5\u5177",
+          "need": 7,
+          "query": "\u7f51\u6587\u4f5c\u8005\u5de5\u5177 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u4f5c\u8005\u5de5\u5177",
+          "need": 7,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u4f5c\u8005\u5de5\u5177",
+          "need": 7,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848/\u5b50\u7c7b-5",
+          "need": 7,
+          "query": "\u8425\u9500\u6587\u6848 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848/\u5b50\u7c7b-5",
+          "need": 7,
+          "query": "office efficiency platforms"
+        }
+      ],
+      "queries": [
+        "\u7f51\u6587\u4f5c\u8005\u5de5\u5177 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u8425\u9500\u6587\u6848 productivity tools",
+        "office efficiency platforms"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u4f5c\u8005\u5de5\u5177"
+    },
+    {
+      "batch_num": 7,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848/\u5b50\u7c7b-5",
+          "need": 7,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177/\u534f\u4f5c\u793e\u533a",
+          "need": 7,
+          "query": "\u534f\u4f5c\u793e\u533a productivity tools"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177/\u534f\u4f5c\u793e\u533a",
+          "need": 7,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177/\u534f\u4f5c\u793e\u533a",
+          "need": 7,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177/\u8868\u5355\u793e\u533a",
+          "need": 7,
+          "query": "\u8868\u5355\u793e\u533a productivity tools"
+        }
+      ],
+      "queries": [
+        "workflow automation tools",
+        "\u534f\u4f5c\u793e\u533a productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u8868\u5355\u793e\u533a productivity tools"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 8,
+      "tasks": [
+        {
+          "cat": "\u529e\u516c\u5de5\u5177/\u8868\u5355\u793e\u533a",
+          "need": 7,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177/\u8868\u5355\u793e\u533a",
+          "need": 7,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u7279\u6548\u751f\u6210",
+          "need": 7,
+          "query": "\u7279\u6548\u751f\u6210 creation tools"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u7279\u6548\u751f\u6210",
+          "need": 7,
+          "query": "multimedia software"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u7279\u6548\u751f\u6210",
+          "need": 7,
+          "query": "creative content platforms"
+        }
+      ],
+      "queries": [
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u7279\u6548\u751f\u6210 creation tools",
+        "multimedia software",
+        "creative content platforms"
+      ],
+      "category": "\u529e\u516c\u5de5\u5177/\u8868\u5355\u793e\u533a"
+    },
+    {
+      "batch_num": 9,
+      "tasks": [
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/API\u670d\u52a1",
+          "need": 6,
+          "query": "developer tools platforms"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/API\u670d\u52a1",
+          "need": 6,
+          "query": "API\u670d\u52a1 api services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/API\u670d\u52a1",
+          "need": 6,
+          "query": "coding tools for developers"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u793e\u533a",
+          "need": 6,
+          "query": "best \u6a21\u677f\u793e\u533a design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u793e\u533a",
+          "need": 6,
+          "query": "\u6a21\u677f\u793e\u533a platforms"
+        }
+      ],
+      "queries": [
+        "developer tools platforms",
+        "API\u670d\u52a1 api services",
+        "coding tools for developers",
+        "best \u6a21\u677f\u793e\u533a design tools",
+        "\u6a21\u677f\u793e\u533a platforms"
+      ],
+      "category": "\u5f00\u53d1\u5de5\u5177/API\u670d\u52a1"
+    },
+    {
+      "batch_num": 10,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u793e\u533a",
+          "need": 6,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/UI\u8bbe\u8ba1\u5f00\u6e90",
+          "need": 6,
+          "query": "best UI\u8bbe\u8ba1\u5f00\u6e90 design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/UI\u8bbe\u8ba1\u5f00\u6e90",
+          "need": 6,
+          "query": "UI\u8bbe\u8ba1\u5f00\u6e90 platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/UI\u8bbe\u8ba1\u5f00\u6e90",
+          "need": 6,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/API\u751f\u6210",
+          "need": 6,
+          "query": "developer tools platforms"
+        }
+      ],
+      "queries": [
+        "design software tools",
+        "best UI\u8bbe\u8ba1\u5f00\u6e90 design tools",
+        "UI\u8bbe\u8ba1\u5f00\u6e90 platforms",
+        "design software tools",
+        "developer tools platforms"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u793e\u533a"
+    },
+    {
+      "batch_num": 11,
+      "tasks": [
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/API\u751f\u6210",
+          "need": 6,
+          "query": "API\u751f\u6210 api services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/API\u751f\u6210",
+          "need": 6,
+          "query": "coding tools for developers"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u7edc\u5c0f\u8bf4\u5e73\u53f0",
+          "need": 6,
+          "query": "\u7f51\u7edc\u5c0f\u8bf4\u5e73\u53f0 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u7edc\u5c0f\u8bf4\u5e73\u53f0",
+          "need": 6,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u7edc\u5c0f\u8bf4\u5e73\u53f0",
+          "need": 6,
+          "query": "workflow automation tools"
+        }
+      ],
+      "queries": [
+        "API\u751f\u6210 api services",
+        "coding tools for developers",
+        "\u7f51\u7edc\u5c0f\u8bf4\u5e73\u53f0 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools"
+      ],
+      "category": "\u5f00\u53d1\u5de5\u5177/API\u751f\u6210"
+    },
+    {
+      "batch_num": 12,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c",
+          "need": 6,
+          "query": "\u6548\u7387\u529e\u516c productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c",
+          "need": 6,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c",
+          "need": 6,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u5199\u4f5c\u6559\u7a0b",
+          "need": 6,
+          "query": "\u7f51\u6587\u5199\u4f5c\u6559\u7a0b productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u5199\u4f5c\u6559\u7a0b",
+          "need": 6,
+          "query": "office efficiency platforms"
+        }
+      ],
+      "queries": [
+        "\u6548\u7387\u529e\u516c productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u7f51\u6587\u5199\u4f5c\u6559\u7a0b productivity tools",
+        "office efficiency platforms"
+      ],
+      "category": "\u6548\u7387\u529e\u516c"
+    },
+    {
+      "batch_num": 13,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u5199\u4f5c\u6559\u7a0b",
+          "need": 6,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-2",
+          "need": 6,
+          "query": "\u6587\u6848\u4f18\u5316 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-2",
+          "need": 6,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-2",
+          "need": 6,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u6548\u7387\u529e\u516c",
+          "need": 6,
+          "query": "ai \u6548\u7387\u529e\u516c tools"
+        }
+      ],
+      "queries": [
+        "workflow automation tools",
+        "\u6587\u6848\u4f18\u5316 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "ai \u6548\u7387\u529e\u516c tools"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u7f51\u6587\u5199\u4f5c\u6559\u7a0b"
+    },
+    {
+      "batch_num": 14,
+      "tasks": [
+        {
+          "cat": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u6548\u7387\u529e\u516c",
+          "need": 6,
+          "query": "artificial intelligence platforms"
+        },
+        {
+          "cat": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u6548\u7387\u529e\u516c",
+          "need": 6,
+          "query": "\u6548\u7387\u529e\u516c ai solutions"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6280\u672f\u5199\u4f5c/\u5b50\u7c7b-4",
+          "need": 6,
+          "query": "\u6280\u672f\u5199\u4f5c productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6280\u672f\u5199\u4f5c/\u5b50\u7c7b-4",
+          "need": 6,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6280\u672f\u5199\u4f5c/\u5b50\u7c7b-4",
+          "need": 6,
+          "query": "workflow automation tools"
+        }
+      ],
+      "queries": [
+        "artificial intelligence platforms",
+        "\u6548\u7387\u529e\u516c ai solutions",
+        "\u6280\u672f\u5199\u4f5c productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools"
+      ],
+      "category": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u6548\u7387\u529e\u516c"
+    },
+    {
+      "batch_num": 15,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u6559\u7a0b",
+          "need": 5,
+          "query": "best \u5b57\u4f53\u6559\u7a0b design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u6559\u7a0b",
+          "need": 5,
+          "query": "\u5b57\u4f53\u6559\u7a0b platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u6559\u7a0b",
+          "need": 5,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u5de5\u5177",
+          "need": 5,
+          "query": "best \u6a21\u677f\u5de5\u5177 design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u5de5\u5177",
+          "need": 5,
+          "query": "\u6a21\u677f\u5de5\u5177 platforms"
+        }
+      ],
+      "queries": [
+        "best \u5b57\u4f53\u6559\u7a0b design tools",
+        "\u5b57\u4f53\u6559\u7a0b platforms",
+        "design software tools",
+        "best \u6a21\u677f\u5de5\u5177 design tools",
+        "\u6a21\u677f\u5de5\u5177 platforms"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u6559\u7a0b"
+    },
+    {
+      "batch_num": 16,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u5de5\u5177",
+          "need": 5,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u8d44\u6e90\u793e\u533a",
+          "need": 5,
+          "query": "best \u8d44\u6e90\u793e\u533a design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u8d44\u6e90\u793e\u533a",
+          "need": 5,
+          "query": "\u8d44\u6e90\u793e\u533a platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u8d44\u6e90\u793e\u533a",
+          "need": 5,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u56fd\u5185\u89c6\u9891",
+          "need": 5,
+          "query": "\u56fd\u5185\u89c6\u9891 creation tools"
+        }
+      ],
+      "queries": [
+        "design software tools",
+        "best \u8d44\u6e90\u793e\u533a design tools",
+        "\u8d44\u6e90\u793e\u533a platforms",
+        "design software tools",
+        "\u56fd\u5185\u89c6\u9891 creation tools"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u6a21\u677f\u5de5\u5177"
+    },
+    {
+      "batch_num": 17,
+      "tasks": [
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u56fd\u5185\u89c6\u9891",
+          "need": 5,
+          "query": "multimedia software"
+        },
+        {
+          "cat": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u56fd\u5185\u89c6\u9891",
+          "need": 5,
+          "query": "creative content platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-1",
+          "need": 5,
+          "query": "\u6587\u6848\u4f18\u5316 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-1",
+          "need": 5,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-1",
+          "need": 5,
+          "query": "workflow automation tools"
+        }
+      ],
+      "queries": [
+        "multimedia software",
+        "creative content platforms",
+        "\u6587\u6848\u4f18\u5316 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools"
+      ],
+      "category": "\u591a\u5a92\u4f53/\u89c6\u9891\u5a31\u4e50/\u56fd\u5185\u89c6\u9891"
+    },
+    {
+      "batch_num": 18,
+      "tasks": [
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u90e8\u7f72\u670d\u52a1",
+          "need": 5,
+          "query": "developer tools platforms"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u90e8\u7f72\u670d\u52a1",
+          "need": 5,
+          "query": "\u90e8\u7f72\u670d\u52a1 api services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u90e8\u7f72\u670d\u52a1",
+          "need": 5,
+          "query": "coding tools for developers"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-5",
+          "need": 5,
+          "query": "\u90ae\u4ef6\u5199\u4f5c productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-5",
+          "need": 5,
+          "query": "office efficiency platforms"
+        }
+      ],
+      "queries": [
+        "developer tools platforms",
+        "\u90e8\u7f72\u670d\u52a1 api services",
+        "coding tools for developers",
+        "\u90ae\u4ef6\u5199\u4f5c productivity tools",
+        "office efficiency platforms"
+      ],
+      "category": "\u5f00\u53d1\u5de5\u5177/\u90e8\u7f72\u670d\u52a1"
+    },
+    {
+      "batch_num": 19,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-5",
+          "need": 5,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-4",
+          "need": 5,
+          "query": "\u6539\u5199\u91cd\u8ff0 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-4",
+          "need": 5,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-4",
+          "need": 5,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u793e\u4ea4",
+          "need": 5,
+          "query": "best \u5b66\u672f\u793e\u4ea4 tools 2025"
+        }
+      ],
+      "queries": [
+        "workflow automation tools",
+        "\u6539\u5199\u91cd\u8ff0 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "best \u5b66\u672f\u793e\u4ea4 tools 2025"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 20,
+      "tasks": [
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u793e\u4ea4",
+          "need": 5,
+          "query": "\u5b66\u672f\u793e\u4ea4 platforms"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u793e\u4ea4",
+          "need": 5,
+          "query": "online \u5b66\u672f\u793e\u4ea4 services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u5e73\u53f0\u5f00\u6e90",
+          "need": 4,
+          "query": "developer tools platforms"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u5e73\u53f0\u5f00\u6e90",
+          "need": 4,
+          "query": "\u5e73\u53f0\u5f00\u6e90 api services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u5e73\u53f0\u5f00\u6e90",
+          "need": 4,
+          "query": "coding tools for developers"
+        }
+      ],
+      "queries": [
+        "\u5b66\u672f\u793e\u4ea4 platforms",
+        "online \u5b66\u672f\u793e\u4ea4 services",
+        "developer tools platforms",
+        "\u5e73\u53f0\u5f00\u6e90 api services",
+        "coding tools for developers"
+      ],
+      "category": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u793e\u4ea4"
+    },
+    {
+      "batch_num": 21,
+      "tasks": [
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u5728\u7ebf\u5de5\u5177",
+          "need": 4,
+          "query": "developer tools platforms"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u5728\u7ebf\u5de5\u5177",
+          "need": 4,
+          "query": "\u5728\u7ebf\u5de5\u5177 api services"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u5728\u7ebf\u5de5\u5177",
+          "need": 4,
+          "query": "coding tools for developers"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-4",
+          "need": 4,
+          "query": "\u6587\u6848\u4f18\u5316 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-4",
+          "need": 4,
+          "query": "office efficiency platforms"
+        }
+      ],
+      "queries": [
+        "developer tools platforms",
+        "\u5728\u7ebf\u5de5\u5177 api services",
+        "coding tools for developers",
+        "\u6587\u6848\u4f18\u5316 productivity tools",
+        "office efficiency platforms"
+      ],
+      "category": "\u5f00\u53d1\u5de5\u5177/\u5728\u7ebf\u5de5\u5177"
+    },
+    {
+      "batch_num": 22,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-4",
+          "need": 4,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-3",
+          "need": 4,
+          "query": "\u6587\u6848\u4f18\u5316 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-3",
+          "need": 4,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-3",
+          "need": 4,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u573a\u666f\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 4,
+          "query": "ai \u573a\u666f\u751f\u6210 tools"
+        }
+      ],
+      "queries": [
+        "workflow automation tools",
+        "\u6587\u6848\u4f18\u5316 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "ai \u573a\u666f\u751f\u6210 tools"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u6587\u6848\u4f18\u5316/\u5b50\u7c7b-4"
+    },
+    {
+      "batch_num": 23,
+      "tasks": [
+        {
+          "cat": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u573a\u666f\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 4,
+          "query": "artificial intelligence platforms"
+        },
+        {
+          "cat": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u573a\u666f\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 4,
+          "query": "\u573a\u666f\u751f\u6210 ai solutions"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u56fe\u7247\u793e\u533a",
+          "need": 3,
+          "query": "best \u56fe\u7247\u793e\u533a design tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u56fe\u7247\u793e\u533a",
+          "need": 3,
+          "query": "\u56fe\u7247\u793e\u533a platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u56fe\u7247\u793e\u533a",
+          "need": 3,
+          "query": "design software tools"
+        }
+      ],
+      "queries": [
+        "artificial intelligence platforms",
+        "\u573a\u666f\u751f\u6210 ai solutions",
+        "best \u56fe\u7247\u793e\u533a design tools",
+        "\u56fe\u7247\u793e\u533a platforms",
+        "design software tools"
+      ],
+      "category": "AI\u5de5\u5177/\u4eba\u5de5\u667a\u80fd/\u573a\u666f\u751f\u6210/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 24,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-5",
+          "need": 3,
+          "query": "\u6539\u5199\u91cd\u8ff0 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-5",
+          "need": 3,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-5",
+          "need": 3,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u603b\u7ed3\u6458\u8981/\u5b50\u7c7b-5",
+          "need": 3,
+          "query": "\u603b\u7ed3\u6458\u8981 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u603b\u7ed3\u6458\u8981/\u5b50\u7c7b-5",
+          "need": 3,
+          "query": "office efficiency platforms"
+        }
+      ],
+      "queries": [
+        "\u6539\u5199\u91cd\u8ff0 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u603b\u7ed3\u6458\u8981 productivity tools",
+        "office efficiency platforms"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u6539\u5199\u91cd\u8ff0/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 25,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u603b\u7ed3\u6458\u8981/\u5b50\u7c7b-5",
+          "need": 3,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "\u90ae\u4ef6\u5199\u4f5c productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u90ae\u4ef6\u5199\u4f5c/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "\u6807\u9898\u751f\u6210 productivity tools"
+        }
+      ],
+      "queries": [
+        "workflow automation tools",
+        "\u90ae\u4ef6\u5199\u4f5c productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u6807\u9898\u751f\u6210 productivity tools"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u603b\u7ed3\u6458\u8981/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 26,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 2,
+          "query": "\u6807\u9898\u751f\u6210 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 2,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 2,
+          "query": "workflow automation tools"
+        }
+      ],
+      "queries": [
+        "office efficiency platforms",
+        "workflow automation tools",
+        "\u6807\u9898\u751f\u6210 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u6807\u9898\u751f\u6210/\u5b50\u7c7b-4"
+    },
+    {
+      "batch_num": 27,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6545\u4e8b\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 2,
+          "query": "\u6545\u4e8b\u751f\u6210 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6545\u4e8b\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 2,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u6545\u4e8b\u751f\u6210/\u5b50\u7c7b-5",
+          "need": 2,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u6258\u7ba1",
+          "need": 2,
+          "query": "developer tools platforms"
+        },
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u6258\u7ba1",
+          "need": 2,
+          "query": "\u6587\u6863\u6258\u7ba1 api services"
+        }
+      ],
+      "queries": [
+        "\u6545\u4e8b\u751f\u6210 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "developer tools platforms",
+        "\u6587\u6863\u6258\u7ba1 api services"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u6545\u4e8b\u751f\u6210/\u5b50\u7c7b-5"
+    },
+    {
+      "batch_num": 28,
+      "tasks": [
+        {
+          "cat": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u6258\u7ba1",
+          "need": 2,
+          "query": "coding tools for developers"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u534f\u4f5c\u5de5\u5177/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "\u534f\u4f5c\u5de5\u5177 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u534f\u4f5c\u5de5\u5177/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u534f\u4f5c\u5de5\u5177/\u5b50\u7c7b-4",
+          "need": 2,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u8d44\u6e90",
+          "need": 1,
+          "query": "best \u5b57\u4f53\u8d44\u6e90 design tools"
+        }
+      ],
+      "queries": [
+        "coding tools for developers",
+        "\u534f\u4f5c\u5de5\u5177 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "best \u5b57\u4f53\u8d44\u6e90 design tools"
+      ],
+      "category": "\u5f00\u53d1\u5de5\u5177/\u6587\u6863\u6258\u7ba1"
+    },
+    {
+      "batch_num": 29,
+      "tasks": [
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u8d44\u6e90",
+          "need": 1,
+          "query": "\u5b57\u4f53\u8d44\u6e90 platforms"
+        },
+        {
+          "cat": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u8d44\u6e90",
+          "need": 1,
+          "query": "design software tools"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177",
+          "need": 1,
+          "query": "\u529e\u516c\u5de5\u5177 productivity tools"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177",
+          "need": 1,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u529e\u516c\u5de5\u5177",
+          "need": 1,
+          "query": "workflow automation tools"
+        }
+      ],
+      "queries": [
+        "\u5b57\u4f53\u8d44\u6e90 platforms",
+        "design software tools",
+        "\u529e\u516c\u5de5\u5177 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools"
+      ],
+      "category": "\u8bbe\u8ba1\u5de5\u5177/\u5b57\u4f53\u8d44\u6e90"
+    },
+    {
+      "batch_num": 30,
+      "tasks": [
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848",
+          "need": 1,
+          "query": "\u8425\u9500\u6587\u6848 productivity tools"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848",
+          "need": 1,
+          "query": "office efficiency platforms"
+        },
+        {
+          "cat": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848",
+          "need": 1,
+          "query": "workflow automation tools"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u5199\u4f5c",
+          "need": 1,
+          "query": "best \u5b66\u672f\u5199\u4f5c tools 2025"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u5199\u4f5c",
+          "need": 1,
+          "query": "\u5b66\u672f\u5199\u4f5c platforms"
+        }
+      ],
+      "queries": [
+        "\u8425\u9500\u6587\u6848 productivity tools",
+        "office efficiency platforms",
+        "workflow automation tools",
+        "best \u5b66\u672f\u5199\u4f5c tools 2025",
+        "\u5b66\u672f\u5199\u4f5c platforms"
+      ],
+      "category": "\u6548\u7387\u529e\u516c/\u8425\u9500\u6587\u6848"
+    },
+    {
+      "batch_num": 31,
+      "tasks": [
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u5199\u4f5c",
+          "need": 1,
+          "query": "online \u5b66\u672f\u5199\u4f5c services"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u8bfe\u7a0b\u8d44\u6599",
+          "need": 1,
+          "query": "best \u8bfe\u7a0b\u8d44\u6599 tools 2025"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u8bfe\u7a0b\u8d44\u6599",
+          "need": 1,
+          "query": "\u8bfe\u7a0b\u8d44\u6599 platforms"
+        },
+        {
+          "cat": "\u5b66\u672f\u79d1\u7814/\u8bfe\u7a0b\u8d44\u6599",
+          "need": 1,
+          "query": "online \u8bfe\u7a0b\u8d44\u6599 services"
+        }
+      ],
+      "queries": [
+        "online \u5b66\u672f\u5199\u4f5c services",
+        "best \u8bfe\u7a0b\u8d44\u6599 tools 2025",
+        "\u8bfe\u7a0b\u8d44\u6599 platforms",
+        "online \u8bfe\u7a0b\u8d44\u6599 services"
+      ],
+      "category": "\u5b66\u672f\u79d1\u7814/\u5b66\u672f\u5199\u4f5c"
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "tasks": [
+    {
+      "cat": "开发工具/平台开源",
+      "need": 4,
+      "query": "open source development platforms"
+    },
+    {
+      "cat": "开发工具/API服务",
+      "need": 6,
+      "query": "rest api management"
+    },
+    {
+      "cat": "设计工具/图片社区",
+      "need": 3,
+      "query": "stock image community"
+    },
+    {
+      "cat": "设计工具/字体资源",
+      "need": 1,
+      "query": "free font downloads"
+    },
+    {
+      "cat": "设计工具/字体教程",
+      "need": 5,
+      "query": "font tutorial typography"
+    },
+    {
+      "cat": "设计工具/模板工具",
+      "need": 5,
+      "query": "design template tools"
+    },
+    {
+      "cat": "设计工具/模板社区",
+      "need": 6,
+      "query": "design templates marketplace"
+    },
+    {
+      "cat": "设计工具/UI设计开源",
+      "need": 6,
+      "query": "open source ui design"
+    },
+    {
+      "cat": "办公工具",
+      "need": 1,
+      "query": "办公工具 productivity tools"
+    },
+    {
+      "cat": "设计工具/平台资源",
+      "need": 7,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "设计工具/资源社区",
+      "need": 5,
+      "query": "best 资源社区 design tools 2025"
+    },
+    {
+      "cat": "开发工具/API生成",
+      "need": 6,
+      "query": "automatic api generator"
+    },
+    {
+      "cat": "开发工具/文档资源",
+      "need": 7,
+      "query": "developer documentation tools"
+    },
+    {
+      "cat": "设计工具/流程图生成",
+      "need": 7,
+      "query": "flowchart maker diagram"
+    },
+    {
+      "cat": "设计工具/白板资源",
+      "need": 7,
+      "query": "collaborative whiteboard"
+    },
+    {
+      "cat": "设计工具/白板教程",
+      "need": 7,
+      "query": "whiteboard tutorial platforms"
+    },
+    {
+      "cat": "设计工具/白板开源",
+      "need": 7,
+      "query": "open source whiteboard"
+    },
+    {
+      "cat": "系统工具/实用工具/网络工具",
+      "need": 7,
+      "query": "network diagnostic tools"
+    },
+    {
+      "cat": "开发工具/在线工具",
+      "need": 4,
+      "query": "developer 在线工具 tools"
+    },
+    {
+      "cat": "多媒体/视频娱乐/国内视频",
+      "need": 5,
+      "query": "best 国内视频 platforms 2025"
+    },
+    {
+      "cat": "多媒体/视频娱乐/音乐生成",
+      "need": 7,
+      "query": "ai music generator"
+    },
+    {
+      "cat": "多媒体/视频娱乐/视频游戏",
+      "need": 7,
+      "query": "game development platforms"
+    },
+    {
+      "cat": "效率办公/网络小说平台",
+      "need": 6,
+      "query": "网络小说平台 productivity tools"
+    },
+    {
+      "cat": "效率办公/网文作者工具",
+      "need": 7,
+      "query": "novel writing software"
+    },
+    {
+      "cat": "效率办公",
+      "need": 6,
+      "query": "productivity software"
+    },
+    {
+      "cat": "效率办公/网文写作教程",
+      "need": 6,
+      "query": "fiction writing guide"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-2",
+      "need": 6,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-4",
+      "need": 4,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-3",
+      "need": 4,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-1",
+      "need": 5,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/文案优化/子类-5",
+      "need": 8,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/营销文案",
+      "need": 1,
+      "query": "marketing copy generator"
+    },
+    {
+      "cat": "效率办公/营销文案/子类-5",
+      "need": 7,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "开发工具/部署服务",
+      "need": 5,
+      "query": "developer 部署服务 tools"
+    },
+    {
+      "cat": "办公工具/协作社区",
+      "need": 7,
+      "query": "team collaboration platforms"
+    },
+    {
+      "cat": "办公工具/表单社区",
+      "need": 7,
+      "query": "online form builder"
+    },
+    {
+      "cat": "多媒体/特效生成",
+      "need": 7,
+      "query": "visual effects software"
+    },
+    {
+      "cat": "AI工具/人工智能/效率办公",
+      "need": 6,
+      "query": "productivity software"
+    },
+    {
+      "cat": "AI工具/人工智能/场景生成/子类-5",
+      "need": 4,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/技术写作/子类-4",
+      "need": 6,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-5",
+      "need": 5,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/邮件写作/子类-4",
+      "need": 2,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-4",
+      "need": 2,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/标题生成/子类-5",
+      "need": 2,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-5",
+      "need": 3,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/改写重述/子类-4",
+      "need": 5,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/故事生成/子类-5",
+      "need": 2,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "效率办公/总结摘要/子类-5",
+      "need": 3,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "开发工具/文档托管",
+      "need": 2,
+      "query": "developer 文档托管 tools"
+    },
+    {
+      "cat": "效率办公/协作工具/子类-4",
+      "need": 2,
+      "query": "design resources platforms"
+    },
+    {
+      "cat": "学术科研/学术社交",
+      "need": 5,
+      "query": "best 学术社交 platforms 2025"
+    },
+    {
+      "cat": "学术科研/学术写作",
+      "need": 1,
+      "query": "best 学术写作 platforms 2025"
+    },
+    {
+      "cat": "学术科研/课程资料",
+      "need": 1,
+      "query": "best 课程资料 platforms 2025"
+    }
+  ]
+}
