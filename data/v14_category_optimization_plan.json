@@ -1,0 +1,492 @@
+{
+  "metadata": {
+    "analysis_date": "2026-04-29",
+    "total_websites": 3360,
+    "total_categories_original": 212,
+    "balance_score_original": 37.1
+  },
+  "overview": {
+    "ai_tools_total": 1098,
+    "ai_direct_main_category": 329,
+    "ai_in_subcategories": 769,
+    "ai_problematic_suffix_categories": 35,
+    "ai_subcategories_count": 27
+  },
+  "ai_category_current_structure": {
+    "main_category": "AI工具/人工智能",
+    "issues": [
+      "单分类包含1098个站点，严重超容",
+      "35个子分类使用'子类-X'占位符命名，语义不明确",
+      "部分功能类（如聊天对话、视频生成）拆散到多个子类中，无法聚合"
+    ]
+  },
+  "ai_splitting_proposal": {
+    "strategy": "将AI工具拆分为一组语义清晰的二级分类，每个AI能力作为独立分类",
+    "new_structure": [
+      "AI工具/大语言模型",
+      "AI工具/代码助手",
+      "AI工具/图像生成",
+      "AI工具/视频生成",
+      "AI工具/音频处理",
+      "AI工具/数据分析",
+      "AI工具/知识图谱",
+      "AI工具/搜索引擎",
+      "AI工具/对话聊天",
+      "AI工具/写作助手",
+      "AI工具/摘要总结",
+      "AI工具/综合平台"
+    ],
+    "rationale": "每个AI能力独立分类，提高可发现性和维护性，消除模糊的'子类-X'命名"
+  },
+  "detailed_splitting_plan": [
+    {
+      "name": "AI视频生成",
+      "current_count": 3,
+      "direct_sites": 3,
+      "suffix_subcats": {},
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/AI视频生成",
+      "needs_cleanup": false
+    },
+    {
+      "name": "代码助手",
+      "current_count": 52,
+      "direct_sites": 52,
+      "suffix_subcats": {},
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/代码助手",
+      "needs_cleanup": false
+    },
+    {
+      "name": "写作助手",
+      "current_count": 77,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-4": 20,
+        "子类-3": 9,
+        "子类-1": 15,
+        "子类-5": 20,
+        "子类-2": 13
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/写作助手",
+      "needs_cleanup": true
+    },
+    {
+      "name": "写作生成",
+      "current_count": 2,
+      "direct_sites": 2,
+      "suffix_subcats": {},
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/写作生成",
+      "needs_cleanup": false
+    },
+    {
+      "name": "图像处理",
+      "current_count": 28,
+      "direct_sites": 28,
+      "suffix_subcats": {},
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/图像处理",
+      "needs_cleanup": false
+    },
+    {
+      "name": "图像扩展",
+      "current_count": 2,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-3": 2
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/图像扩展",
+      "needs_cleanup": true
+    },
+    {
+      "name": "图像识别",
+      "current_count": 6,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 6
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/图像识别",
+      "needs_cleanup": true
+    },
+    {
+      "name": "图生图",
+      "current_count": 4,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 4
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/图生图",
+      "needs_cleanup": true
+    },
+    {
+      "name": "场景生成",
+      "current_count": 6,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 6
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/场景生成",
+      "needs_cleanup": true
+    },
+    {
+      "name": "情感分析",
+      "current_count": 8,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 8
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/情感分析",
+      "needs_cleanup": true
+    },
+    {
+      "name": "推荐系统",
+      "current_count": 7,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 7
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/推荐系统",
+      "needs_cleanup": true
+    },
+    {
+      "name": "搜索引擎",
+      "current_count": 36,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-4": 16,
+        "子类-5": 20
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/搜索引擎",
+      "needs_cleanup": true
+    },
+    {
+      "name": "摘要生成",
+      "current_count": 72,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-3": 20,
+        "子类-2": 13,
+        "子类-4": 16,
+        "子类-1": 12,
+        "子类-5": 11
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/摘要生成",
+      "needs_cleanup": true
+    },
+    {
+      "name": "数据分析",
+      "current_count": 106,
+      "direct_sites": 21,
+      "suffix_subcats": {
+        "子类-5": 33,
+        "子类-2": 34,
+        "子类-4": 18
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/数据分析",
+      "needs_cleanup": true
+    },
+    {
+      "name": "文档分析",
+      "current_count": 4,
+      "direct_sites": 4,
+      "suffix_subcats": {},
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/文档分析",
+      "needs_cleanup": false
+    },
+    {
+      "name": "文生图",
+      "current_count": 1,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 1
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/文生图",
+      "needs_cleanup": true
+    },
+    {
+      "name": "知识图谱",
+      "current_count": 71,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-2": 15,
+        "子类-5": 17,
+        "子类-3": 12,
+        "子类-1": 10,
+        "子类-4": 17
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/知识图谱",
+      "needs_cleanup": true
+    },
+    {
+      "name": "综合平台",
+      "current_count": 29,
+      "direct_sites": 29,
+      "suffix_subcats": {},
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/综合平台",
+      "needs_cleanup": false
+    },
+    {
+      "name": "聊天对话",
+      "current_count": 86,
+      "direct_sites": 5,
+      "suffix_subcats": {
+        "子类-1": 17,
+        "子类-4": 12,
+        "子类-3": 19,
+        "子类-5": 16,
+        "子类-2": 17
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/聊天对话",
+      "needs_cleanup": true
+    },
+    {
+      "name": "背景移除",
+      "current_count": 3,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 1,
+        "子类-4": 2
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/背景移除",
+      "needs_cleanup": true
+    },
+    {
+      "name": "自动化流程",
+      "current_count": 4,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-4": 4
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/自动化流程",
+      "needs_cleanup": true
+    },
+    {
+      "name": "草图转图",
+      "current_count": 11,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 11
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/草图转图",
+      "needs_cleanup": true
+    },
+    {
+      "name": "视频工具",
+      "current_count": 2,
+      "direct_sites": 2,
+      "suffix_subcats": {},
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/视频工具",
+      "needs_cleanup": false
+    },
+    {
+      "name": "视频生成",
+      "current_count": 113,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-4": 21,
+        "子类-5": 19,
+        "子类-1": 17,
+        "子类-3": 33,
+        "子类-2": 23
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/视频生成",
+      "needs_cleanup": true
+    },
+    {
+      "name": "语音识别",
+      "current_count": 16,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-4": 5,
+        "子类-5": 11
+      },
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/语音识别",
+      "needs_cleanup": true
+    },
+    {
+      "name": "音频生成",
+      "current_count": 15,
+      "direct_sites": 15,
+      "suffix_subcats": {},
+      "recommended_action": "独立为AI工具二级分类",
+      "target_new_category": "AI工具/音频生成",
+      "needs_cleanup": false
+    },
+    {
+      "name": "预测分析",
+      "current_count": 4,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-5": 4
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/预测分析",
+      "needs_cleanup": true
+    },
+    {
+      "name": "风格迁移",
+      "current_count": 1,
+      "direct_sites": 0,
+      "suffix_subcats": {
+        "子类-2": 1
+      },
+      "recommended_action": "合并到相关父类或删除",
+      "target_new_category": "AI工具/风格迁移",
+      "needs_cleanup": true
+    }
+  ],
+  "category_cleanup_rules": {
+    "子类-X_merging": "所有'子类-X'类别的站点应合并到其父类中",
+    "orphan_categories": "站点数<5且无明确语义的类别应与相关父类合并或删除",
+    "target_balance": "每个三级类8-30个站点"
+  },
+  "over_capacity_categories": [
+    {
+      "category": "AI工具/人工智能",
+      "count": 1098,
+      "severity": "critical",
+      "reason": "严重超容: 包含所有AI子类,需要整体拆分"
+    },
+    {
+      "category": "开发工具/平台开源/GitHub",
+      "count": 181,
+      "severity": "high",
+      "reason": "超容: GitHub资源集中需分流"
+    },
+    {
+      "category": "多媒体/视频娱乐/教程",
+      "count": 165,
+      "severity": "high",
+      "reason": "超容: 教程类资源过多"
+    },
+    {
+      "category": "设计工具/UI设计工具",
+      "count": 92,
+      "severity": "medium",
+      "reason": "超容: UI设计资源过多"
+    },
+    {
+      "category": "AI工具/人工智能/代码助手",
+      "count": 52,
+      "severity": "medium",
+      "reason": "超容: 代码助手可考虑分拆"
+    },
+    {
+      "category": "设计工具/资源",
+      "count": 46,
+      "severity": "medium",
+      "reason": "超容: 设计资源需分流"
+    },
+    {
+      "category": "效率办公/创意激发",
+      "count": 39,
+      "severity": "medium",
+      "reason": "超容: 创意激发资源过多"
+    },
+    {
+      "category": "AI工具/人工智能/数据分析/子类-2",
+      "count": 34,
+      "severity": "medium",
+      "reason": "超容: 需合并到父类"
+    },
+    {
+      "category": "效率办公/AI写作",
+      "count": 33,
+      "severity": "medium",
+      "reason": "超容: AI写作可细分"
+    },
+    {
+      "category": "AI工具/人工智能/数据分析/子类-5",
+      "count": 33,
+      "severity": "medium",
+      "reason": "超容: 需合并到父类"
+    },
+    {
+      "category": "AI工具/人工智能/视频生成/子类-3",
+      "count": 33,
+      "severity": "medium",
+      "reason": "超容: 需合并到父类"
+    },
+    {
+      "category": "效率办公/协作工具",
+      "count": 31,
+      "severity": "medium",
+      "reason": "超容: 协作工具资源过多"
+    }
+  ],
+  "under_capacity_categories": [
+    {
+      "category": "AI工具/人工智能/文生图/子类-5",
+      "count": 1
+    },
+    {
+      "category": "AI工具/人工智能/风格迁移/子类-2",
+      "count": 1
+    },
+    {
+      "category": "AI工具/人工智能/背景移除/子类-5",
+      "count": 1
+    },
+    {
+      "category": "效率办公/文案优化/子类-5",
+      "count": 2
+    },
+    {
+      "category": "AI工具/人工智能/写作生成",
+      "count": 2
+    },
+    {
+      "category": "AI工具/人工智能/图像扩展/子类-3",
+      "count": 2
+    },
+    {
+      "category": "AI工具/人工智能/背景移除/子类-4",
+      "count": 2
+    },
+    {
+      "category": "AI工具/人工智能/视频工具",
+      "count": 2
+    },
+    {
+      "category": "系统工具/实用工具/网络工具",
+      "count": 3
+    },
+    {
+      "category": "AI工具/人工智能/AI视频生成",
+      "count": 3
+    }
+  ],
+  "health_check_result": {
+    "timestamp": "2026-04-29 12:11:44.378112",
+    "method": "random_sample_200",
+    "total_sites": 3360,
+    "sample_size": 200,
+    "raw_health_rate": 52.5,
+    "real_fail_rate": 34.5,
+    "blocked_sites_rate": 13.0,
+    "adjusted_health_rate": 60.3,
+    "conclusion": "需要清理约1000个死链，建议优先清理connection失败站点"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "version": "V14",
+  "generated_at": "2026-04-29T12:20:00",
+  "data_source": "data/websites.json",
+  "statistics": {
+    "total_sites": 3360,
+    "total_categories": 445,
+    "avg_sites_per_category": 7.55,
+    "max_category": {
+      "name": "AI工具/人工智能",
+      "count": 329
+    },
+    "min_category": {
+      "name": "AI智能/工具/工具",
+      "count": 1
+    }
+  },
+  "balance_metrics": {
+    "categories_500_percent_above_avg": 7,
+    "categories_below_5": 283,
+    "distribution_by_size": {
+      "tiny (<5)": 283,
+      "small (5-9)": 76,
+      "target (10-50)": 81,
+      "large (51-99)": 2,
+      "xl (100+)": 3
+    },
+    "balance_score_10_50_target": 18.2
+  },
+  "quality_status": {
+    "over_capacity_categories": [
+      {
+        "category": "AI工具/人工智能",
+        "count": 329,
+        "recommendation": "Split into subcategories"
+      },
+      {
+        "category": "开发工具/平台开源/GitHub",
+        "count": 181,
+        "recommendation": "Split into subcategories"
+      },
+      {
+        "category": "多媒体/视频娱乐/教程",
+        "count": 165,
+        "recommendation": "Split into subcategories"
+      }
+    ],
+    "under_capacity_categories_sample": [
+      {
+        "category": "AI智能/工具/工具",
+        "count": 1
+      },
+      {
+        "category": "AI智能/工具/库",
+        "count": 1
+      },
+      {
+        "category": "视频娱乐/国外视频/生成器",
+        "count": 1
+      }
+    ],
+    "under_capacity_total": 283
+  },
+  "v14_balance_note": {
+    "previous_balance_metric": "68.5% (V14 earlier stage, 3451 sites, 380 categories)",
+    "current_balance_metric": "18.2% (10-50 sites per category target)",
+    "analysis": "Balance score decreased because category count increased (more granular structure) and average size decreased. The 10-50 target range metric is stricter. 3 oversized categories remain.",
+    "recommended_next_steps": [
+      "Split AI工具/人工智能 into AI聊天、AI写作、AI图像、AI代码、AI视频等 subcategories",
+      "Split GitHub category into GitHub工具、GitHub资源、GitHub托管等",
+      "Split 视频教程 into 教程/视频制作、教程/编程视频、教程/设计视频等",
+      "Merge or fill 283 tiny categories (<5 sites) by consolidating similar ones or adding relevant sites"
+    ]
+  }
+}

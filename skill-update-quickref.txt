@@ -1,0 +1,299 @@
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│           skill-update v6.0 Enhanced  - 快速参考卡                    │
+│                                                                     │
+│  📦 一句话定义: 读取任务说明 → 条件执行 → 诊断-修复-重试闭环          │
+│                   → 多级验证 → 详细报告 → 清理 → 安装激活             │
+│                                                                     │
+│  🎯 核心定位: 元技能（Meta-Skill）- 专门更新/升级其他技能（包括自己）  │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🏗️  架构总览                                                       │
+╰─────────────────────────────────────────────────────────────────────╯
+   skill-update (父技能 - 调度+诊断+报告)
+        │
+        ├─► skill-improver     (步骤1: 完善技能配置)
+        ├─► skill-optimizer    (步骤2: 优化技能结构)
+        ├─► code-implementer   (步骤3: 完善功能代码)
+        ├─► binding-manager    (步骤4: 建立关联绑定)
+        ├─► cleanup-manager    (步骤5: 清理收尾)
+        ├─► activation-manager  (步骤6: 安装激活)
+        └─► final-reviewer     (步骤7: 最终审核 - CRITICAL)
+
+   核心组件: task_parser_v6 + skill_state + action_executor + dag_scheduler
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  ⚡ 六大神力（用户需求映射）                                          │
+╰─────────────────────────────────────────────────────────────────────╯
+   1. 🔍 分析策划能力极强  → SkillState深度诊断 + TASK_TEMPLATES模板系统
+   2. 🔄 自适应能力极强    → 条件执行引擎 + 动态路径解析 + 智能跳过
+   3. 📦 版本管理能力极强  → 检查点/回滚 + 历史追踪DB + 依赖图DAG
+   4. 🐛 纠错能力极强      → 诊断-修复-验证闭环 + error-patterns自动修复
+   5. 🧹 清理垃圾能力极强  → cleanup-manager子技能 + 自动清理旧备份
+   6. ⚙️  执行监控能力极强  → 结构化日志 + JSON报告 + 性能预测
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🎬 七步标准流程（铁律：不可跳过、不可调序）                           │
+╰─────────────────────────────────────────────────────────────────────╯
+   Step1: skill-improver    → 补齐9个triggers / 添加depends / 补全scripts
+   Step2: skill-optimizer   → 删占位符 / 修正编码 / 规范化排版
+   Step3: code-implementer  → 创建scripts/目录 / run.sh / chmod +x
+   Step4: binding-manager   → depends声明 / 验证子技能路径
+   Step5: cleanup-manager   → 清理临时/无用/多余文件
+   Step6: activation-manager → 安装激活 / 设置权限 / 注册系统
+   Step7: final-reviewer    → 三重验证（skill-improver + agent-verification
+                              + independent-referee）
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🔧 原子操作速查表（8种类型）                                        │
+╰─────────────────────────────────────────────────────────────────────╯
+   append_field   追加字段到SKILL.md        where: after_field / end_of_file
+   ensure_count   确保列表项达到指定数量      template: "  - {n}: 待定义"
+   set_if_missing 字段缺失时才设置          支持多行value（YAML块）
+   ensure_line    条件性执行系统命令         check + value（chmod/git add）
+   delete_lines   删除匹配正则的行          pattern: ".*TODO.*"
+   replace_text   精确文本替换              old → new（支持count限制）
+   create_file    创建文件到磁盘            path + content + mode
+   run_shell      执行shell命令             command + check（可选）
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  📋 任务文件模板 (task_v6.yaml)                                     │
+╰─────────────────────────────────────────────────────────────────────╯
+   skill: skill-improver
+   objective: 完善基础配置（9个triggers、depends、scripts补全）
+
+   actions:
+     - id: s1_ensure_9_triggers
+       type: ensure_count
+       field: triggers
+       count: 9
+       template: "  - {n}: 待定义"
+       expected:
+         - "grep -c '^- ' SKILL.md | grep -q '^9$'"
+
+     - id: s1_add_depends
+       type: append_field
+       field: depends
+       value: |
+         depends:
+           - agent-verification
+       where: after_field: triggers
+       expected:
+         - "grep -q '^depends:' SKILL.md"
+
+   expected_state:
+     triggers_count: 9
+     depends_present: true
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🚀 快速开始（3种方式）                                             │
+╰─────────────────────────────────────────────────────────────────────╯
+   方式1: 模板引用（需要TASK_TEMPLATES.yaml）
+   $ python3 run_enhanced.py skill-improver TASK_TEMPLATES.yaml::step1_improve
+
+   方式2: 自定义任务文件（推荐）
+   $ cp TASK_TEMPLATES.yaml my_task.yaml
+   $ vim my_task.yaml  # 替换 <TARGET_SKILL> 为实际技能名
+   $ python3 run_enhanced.py --dry-run my-skill my_task.yaml   # 预览
+   $ python3 run_enhanced.py my-skill my_task.yaml            # 执行
+
+   方式3: 交互式
+   $ python3 run_enhanced.py /path/to/skill /path/to/task.yaml
+   # 会提示"执行这些操作？(y/N)"
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  ⚙️  执行流程（10步）                                               │
+╰─────────────────────────────────────────────────────────────────────╯
+   1.  解析任务文件 (task_parser_v6)
+   2.  加载模板 (TASK_TEMPLATES.yaml) - 如有
+   3.  展开 composite actions（模板展开为原子操作）
+   4.  诊断当前状态 (SkillState)
+   5.  过滤（基于 check 条件，已满足则跳过）
+   6.  用户确认（--yes/-y 跳过）
+   7.  执行原子操作 (ActionExecutor)
+        ├─ 前置检查 (check)
+        ├─ 创建检查点（首次修改前）
+        ├─ 根据 type 分发到具体执行器
+        └─ 后置断言验证 (expected)
+   8.  最终状态验证 (expected_state)
+   9.  生成执行报告 (JSON)
+   10. 输出执行摘要
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🔍 诊断-修复-验证闭环                                              │
+╰─────────────────────────────────────────────────────────────────────╯
+   执行失败
+      ↓
+   diagnose_failure() 查询 error-patterns.json
+      ↓
+   输出: 错误ID、严重性、修复步骤
+      ↓
+   auto_fixable?
+      ├─ 是 → attempt_auto_fix() → 重试执行
+      └─ 否 → 输出 fix_suggestions → 人工干预
+
+   错误模式库 (8种):
+   ID                    名称                    自动修复
+   ──────────────────────────────────────────────────────────
+   SUBAGENT_PATH_NOT_FOUND  子技能路径解析失败       ✅
+   MISSING_ENTRYPOINT        缺少入口脚本           ✅
+   EXECUTION_FAILED          子技能执行失败         ❌
+   VERIFICATION_MISMATCH      验证不一致            ❌
+   CHECKPOINT_FAILED         检查点创建失败         ❌
+   REFEREE_DISAGREED         独立裁判否决          ❌
+   ROLLBACK_FAILED           回滚失败              ❌
+   CORRUPTED_FRONTMATTER     Frontmatter损坏        ✅
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  📊 验证强度自适应                                                  │
+╰─────────────────────────────────────────────────────────────────────╰
+   风险等级   判定条件                   验证强度
+   ──────────────────────────────────────────────────────────────
+   LOW       单文件、只读、临时文件       BASIC（存在+语法）
+   MEDIUM    多文件、配置、有失败历史     STANDARD（完整性+基本功能）
+   HIGH      生产部署、核心架构          FULL（三层验证+独立裁判）
+   CRITICAL  最终审核（步骤7）           CRITICAL（FULL+系统钩子）
+
+   三层验证管道:
+   Step1: skill-improver 验证  → 文件存在、备份、UTF-8编码
+   Step2: agent-verification   → 快速验证（最后3行铁证）
+   Step3: independent-referee  → 完全隔离，纯客观评审
+   Step4: mandatory-verification（系统钩子，透明触发）
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🛡️  铁律（违反即致命错误）                                          │
+╰─────────────────────────────────────────────────────────────────────╯
+   ❌ 没有实现代码的技能 = 文档空壳 = 0% 完成
+   ❌ 没有建立关联的技能 = 零散文件 = 没有完成
+   ❌ 跳过任何一个步骤 = 没有完成
+   ❌ 调整步骤顺序 = 没有完成
+   ✅ 只有完整执行7步，任务才算真正完成
+
+   父技能职责:
+   ✅ 父技能只调度（skill run 子技能名）
+   ✅ 父技能传递参数、校验结果、处理错误
+   ❌ 父技能绝不直接操作目标技能文件系统
+   ❌ 父技能绝不代替子技能干活
+
+   完善/优化铁律 (来自 skill-improver/skill-optimizer):
+   ✅ 永远只追加，不删除原有内容
+   ✅ 修改前必须创建备份（至少3份）
+   ✅ 每次修改≤10%内容，修改后立刻验证
+   ✅ 独立裁判审核通过后才可宣称完成
+   ✅ 文件大小必须变大（优化也必须变大！）
+   ✅ 无法1秒内回滚 = 未完成
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  📁 目录结构（关键路径）                                            │
+╰─────────────────────────────────────────────────────────────────────╯
+   skill-update/                    # 父技能目录
+   ├── SKILL.md                     # 主文档（48KB, 1274行）
+   ├── scripts/
+   │   ├── run_enhanced.py          # 主引擎（条件执行）
+   │   ├── task_parser_v6.py        # 任务解析器
+   │   ├── action_executor.py       # 原子操作执行器（8种类型）
+   │   ├── skill_state.py           # 状态诊断器
+   │   ├── config_manager.py        # 配置管理器（热重载）
+   │   ├── dag_scheduler.py         # 依赖图拓扑排序
+   │   ├── error-patterns.json      # 8种错误模式库
+   │   ├── history_tracker.py       # 历史追踪（v8预测模块）
+   │   ├── predictive_planner.py    # 预测规划（v8预测模块）
+   │   ├── dependency_graph.py      # 依赖图构建（v8预测模块）
+   │   └── ...（共26个脚本）
+   ├── activation-manager/          # 子技能1（步骤6）
+   ├── binding-manager/             # 子技能2（步骤4）
+   ├── cleanup-manager/             # 子技能3（步骤5）
+   ├── code-implementer/            # 子技能4（步骤3）
+   ├── final-reviewer/              # 子技能5（步骤7）
+   ├── skill-improver/              # 子技能6（步骤1）
+   ├── skill-optimizer/             # 子技能7（步骤2）
+   └── reports/                     # 执行报告（JSON）
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🐛 已知BUG及修复历史                                               │
+╰─────────────────────────────────────────────────────────────────────╯
+   BUG1 (v6.0): 路径解析错误
+     现象: _resolve_skill_path() 忽略传入的 skill_dir 参数
+     修复: 优先使用 skill_dir，回退到 task_file.parent
+
+   BUG2: ActionExecutor check条件逻辑反转
+     现象: check返回true时反而跳过，false时反而执行
+     修复: 将 if not self._check_condition() 改为 if self._check_condition()
+
+   BUG3: YAML格式错误（after_field语法）
+     现象: yaml.scanner.ScannerError
+     修复: where值加引号 -> where: "after_field: triggers"
+
+   BUG4: 模板与技能不匹配
+     现象: 通用模板的trigger列表与实际语义不符
+     修复: 创建定制化任务文件，不依赖通用模板
+
+   BUG5:Composite Action展开失败
+     现象: task_parser_v6.Action 丢弃agent字段
+     修复: _load_task中使用原始data字典展开composite
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  📈 性能与监控                                                      │
+╰─────────────────────────────────────────────────────────────────────╯
+   配置文件: ~/.hermes/config.yaml
+   - log_level: INFO
+   - max_workers: 4
+   - retry_attempts: 3
+   - retry_delay: 2
+   - checkpoint_enabled: true
+   - prediction_enabled: true  （v8预测模块）
+
+   历史数据库: ~/.hermes/skills/.hermes-history.db
+   - executions表: 500+ 行（每次执行记录）
+   - statistics表: skill/action_type维度统计
+
+   执行报告: skill_dir/reports/self_upgrade_YYYYMMDD_HHMMSS.json
+   检查点: skill_dir/.checkpoints/skill.md.YYYYMMDD_HHMMSS.bak
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  💡 核心经验教训（黄金法则）                                          │
+╰─────────────────────────────────────────────────────────────────────╰
+   1. 任务说明必须详细、可测量、可执行（子技能无需猜测意图）
+   2. 工作流必须支持条件分支和回路（skip_condition / on_failure）
+   3. 诊断和修复必须形成闭环（error-patterns + auto_fix）
+   4. 系统设计必须简单，避免过度工程
+   5. 父技能永远只调度，不代劳（skill run 子技能名）
+   6. 所有代码执行必须附带任务说明参数（否则=裸奔）
+   7. 只有真实可运行的代码才算完成，文档/计划=0%
+   8. 完善不是修改，是追加（文件必须变大）
+   9. 优化不是删除，是改进（功能必须保持）
+   10. 独立裁判验证通过前，不可宣称完成
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🎯 核心指标                                                        │
+╰─────────────────────────────────────────────────────────────────────╯
+   版本:           v6.0 Enhanced
+   子技能数:       7 个
+   原子操作类型:   8 种
+   错误模式:       8 种
+   验证强度等级:   4 级（LOW/MEDIUM/HIGH/CRITICAL）
+   失败策略:       4 种（rollback/warn/diagnose/retry）
+   已知BUG修复:    5 个
+   代码文件数:     26 个
+   SKILL.md行数:   1,274 行
+   文件大小:       48,384 字节
+   路径:           ~/.hermes/skills/skill-update/
+
+╭─────────────────────────────────────────────────────────────────────╮
+│  🚀 下一步行动建议                                                   │
+╰─────────────────────────────────────────────────────────────────────╯
+   □ 创建 TASK_TEMPLATES.yaml（当前缺失）
+   □ 完善7个子技能的 task_parser.py（当前为简化版）
+   □ 集成 predictive_planner 到主执行流程（v8预测模块）
+   □ 实现 performance_monitor 资源采样
+   □ 创建 skill-update2 目录（v8.0 升级版）
+   □ 实现可视化报表（HTML趋势图+热力图）
+   □ 集成五阶段验证（verify_five_stages.py）
+   □ 创建监控仪表板（数据库 + 实时面板）
+
+└─────────────────────────────────────────────────────────────────────┘
+   生成时间: 2026-04-27
+   数据来源: SKILL.md + 26个脚本 + 7个子技能目录
+   分析深度: 完整架构 + 核心逻辑 + 使用方式 + 经验总结

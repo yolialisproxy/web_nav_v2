@@ -1,0 +1,41 @@
+{
+  "project": "啃魂导航网站",
+  "phase": "Phase 2 - 小类填充",
+  "path": "/home/yoli/GitHub/web_nav_v2",
+  "current_status": {
+    "total_sites": 3398,
+    "categories": {
+      "big": 288,
+      "mid": 61,
+      "small": 49
+    },
+    "needs_fill": {
+      "small_classes": 27,
+      "mid_classes": 33,
+      "websites_to_add_to_small_classes": 189
+    },
+    "data_health": {
+      "missing_fields": 0,
+      "other_label_usage": 3,
+      "completeness": "100% - all sites have url, title, name, description"
+    }
+  },
+  "task": "Phase 2 Complete Fill - bring every small class to minimum 9 sites",
+  "subtasks": [
+    "Analyze which small classes need filling (already identified: 27 classes with 1-8 sites each)",
+    "For each under-filled small class, find and add 9-n new relevant websites",
+    "Ensure each added website has complete data (url, title, name, description)",
+    "Auto-classify new sites to correct small class",
+    "Maintain data integrity - atomic write with backup",
+    "After filling, verify all small classes have >=9 sites",
+    "Generate Phase 2 completion report"
+  ],
+  "agent_info": {
+    "version": "my-agent v3.1 - 4-prompt architecture",
+    "team_mode": "9-person team",
+    "prompt_system_default": "固定系统提示词 - 架构铁律与数据一致性",
+    "prompt_system_task": "动态系统提示词 - 基于当前任务的定制规则",
+    "prompt_task_default": "固定任务提示词 - 标准Phase 2流程",
+    "prompt_task_custom": "动态任务提示词 - 当前具体执行细节"
+  }
+}

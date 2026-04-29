@@ -1,0 +1,453 @@
+{
+  "sites": [
+    {
+      "url": "https://microsoft.com",
+      "title": "Microsoft",
+      "description": "微软公司，全球领先科技企业",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://apple.com",
+      "title": "Apple",
+      "description": "苹果公司，设计Mac、iPhone等产品",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://meta.com",
+      "title": "Meta",
+      "description": "Meta Platforms，Facebook母公司",
+      "_cat": "其他",
+      "category": "Other/科技公司/平台"
+    },
+    {
+      "url": "https://amazon.com",
+      "title": "Amazon",
+      "description": "亚马逊公司，电商和云计算巨头",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://alphabet.com",
+      "title": "Alphabet",
+      "description": "Google母公司Alphabet",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://tesla.com",
+      "title": "Tesla",
+      "description": "特斯拉电动汽车和能源公司",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://nvidia.com",
+      "title": "NVIDIA",
+      "description": "英伟达，GPU和AI芯片巨头",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://intel.com",
+      "title": "Intel",
+      "description": "英特尔，半导体制造商",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://amd.com",
+      "title": "AMD",
+      "description": "超微半导体，CPU和GPU厂商",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://cisco.com",
+      "title": "Cisco",
+      "description": "思科，网络设备巨头",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://oracle.com",
+      "title": "Oracle",
+      "description": "甲骨文，数据库和企业软件",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://ibm.com",
+      "title": "IBM",
+      "description": "IBM，企业IT服务和解决方案",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://salesforce.com",
+      "title": "Salesforce",
+      "description": "Salesforce云CRM平台",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://adobe.com",
+      "title": "Adobe",
+      "description": "Adobe数字媒体和营销软件",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://sap.com",
+      "title": "SAP",
+      "description": "SAP企业应用软件",
+      "_cat": "其他",
+      "category": "其他/科技公司/平台"
+    },
+    {
+      "url": "https://shopify.com",
+      "title": "Shopify",
+      "description": "Shopify电商平台",
+      "_cat": "其他",
+      "category": "其他/电商平台/平台"
+    },
+    {
+      "url": "https://magento.com",
+      "title": "Magento (Adobe Commerce)",
+      "description": "Adobe电商平台",
+      "_cat": "其他",
+      "category": "其他/电商平台/平台"
+    },
+    {
+      "url": "https=",
+      "title": "WooCommerce",
+      "description": "WordPress电商插件",
+      "_cat": "其他",
+      "category": "其他/电商平台/平台"
+    },
+    {
+      "url": "https://bigcommerce.com",
+      "title": "BigCommerce",
+      "description": "企业电商平台",
+      "_cat": "其他",
+      "category": "其他/电商平台/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Wix eCommerce",
+      "description": "Wix电商功能",
+      "_cat": "其他",
+      "category": "其他/电商平台/平台"
+    },
+    {
+      "url": "https://squarespace.com",
+      "title": "Squarespace",
+      "description": "网站建设和电商平台",
+      "_cat": "其他",
+      "category": "其他/电商平台/平台"
+    },
+    {
+      "url": "https://wix.com",
+      "title": "Wix",
+      "description": "拖拽式网站构建器",
+      "_cat": "其他",
+      "category": "其他/网站构建/平台"
+    },
+    {
+      "url": "https://weebly.com",
+      "title": "Weebly",
+      "description": "简单网站构建器",
+      "_cat": "其他",
+      "category": "其他/网站构建/平台"
+    },
+    {
+      "url": "https://webflow.com",
+      "title": "Webflow",
+      "description": "可视化Web设计平台",
+      "_cat": "其他",
+      "category": "其他/网站构建/平台"
+    },
+    {
+      "url": "https://wordpress.com",
+      "title": "WordPress.com",
+      "description": "WordPress托管服务",
+      "_cat": "其他",
+      "category": "其他/内容管理/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Ghost",
+      "description": "专业出版平台",
+      "_cat": "其他",
+      "category": "其他/内容管理/平台"
+    },
+    {
+      "url": "https://medium.com",
+      "title": "Medium",
+      "description": "在线出版平台",
+      "_cat": "其他",
+      "category": "其他/内容管理/平台"
+    },
+    {
+      "url": "https://substack.com",
+      "title": "Substack",
+      "description": "创作者邮件列表平台",
+      "_cat": "其他",
+      "category": "其他/内容管理/平台"
+    },
+    {
+      "url": "https://hashnode.com",
+      "title": "Hashnode",
+      "description": "开发者博客平台",
+      "_cat": "其他",
+      "category": "其他/内容管理/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Dev.to",
+      "description": "开发者博客社区",
+      "_cat": "其他",
+      "category": "其他/内容管理/平台"
+    },
+    {
+      "url": "https：//",
+      "title": "Jekyll",
+      "description": "静态网站生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://hugo.io",
+      "title": "Hugo",
+      "description": "Go语言静态网站生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://gatsbyjs.com",
+      "title": "Gatsby",
+      "description": "React静态站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://nextjs.org",
+      "title": "Next.js",
+      "description": "React全栈框架，Vercel开发",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://nuxt.com",
+      "title": "Nuxt.js",
+      "description": "Vue全栈框架",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://eleventy.js.org",
+      "title": "Eleventy",
+      "description": "简单灵活的JS静态站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://jekyllrb.com",
+      "title": "Jekyll",
+      "description": "Ruby静态网站生成器，GitHub Pages使用",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://hexo.io",
+      "title": "Hexo",
+      "description": "Node.js静态博客框架",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://gohugo.io",
+      "title": "Hugo",
+      "description": "Go快速静态站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Pelican",
+      "description": "Python静态站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://mkdocs.org",
+      "title": "MkDocs",
+      "description": "Python文档站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://sphinx-doc.org",
+      "title": "Sphinx",
+      "description": "Python文档生成器",
+      "_cat": "开发Tools",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://docusaurus.io",
+      "title": "Docusaurus",
+      "description": "Meta开源文档站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Docsify",
+      "description": "动态文档站点生成器",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://storybook.js.org",
+      "title": "Storybook",
+      "description": "UI组件开发环境",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://chromatic.com",
+      "title": "Chromatic",
+      "description": "Storybook云托管和视觉测试",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://bit.dev",
+      "title": "Bit",
+      "description": "组件共享和协作平台",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://npmjs.com",
+      "title": "npm",
+      "description": "Node包管理器",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://pypi.org",
+      "title": "PyPI",
+      "description": "Python包索引",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://rubygems.org",
+      "title": "RubyGems",
+      "description": "Ruby包仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://crates.io",
+      "title": "crates.io",
+      "description": "Rust包注册中心",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://packagist.org",
+      "title": "Packagist",
+      "description": "PHP包仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://cpan.org",
+      "title": "CPAN",
+      "description": "Perl综合档案网",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://maven.apache.org",
+      "title": "Maven Central",
+      "description": "Java Maven仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https=",
+      "title": "NuGet",
+      "description": ".NET包管理器",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://pub.dev",
+      "title": "pub.dev",
+      "description": "Dart和Flutter包仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/平台"
+    },
+    {
+      "url": "https://hex.pm",
+      "title": "Hex",
+      "description": "Erlang和Elixir包管理器",
+      "_cat": "开发工具",
+      "category": "开发Tool/代码资源/平台"
+    },
+    {
+      "url": "https=",
+      "title": "NPM Trends",
+      "description": "npm包下载比较",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    },
+    {
+      "url": "https://npmmirror.com",
+      "title": "阿里云NPM镜像",
+      "description": "NPM中国镜像站",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    },
+    {
+      "url": "https://pypi.tuna.tsinghua.edu.cn",
+      "title": "清华PyPI镜像",
+      "description": "Python包中国镜像",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    },
+    {
+      "url": "https://mirrors.aliyun.com",
+      "title": "阿里云镜像站",
+      "description": "开源软件镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    },
+    {
+      "url": "https://mirrors.tuna.tsinghua.edu.cn",
+      "title": "清华镜像站",
+      "description": "开源软件镜像",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    },
+    {
+      "url": "https://mirrors.ustc.edu.cn",
+      "title": "中科大镜像站",
+      "description": "开源软件镜像源",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    },
+    {
+      "url": "https://mirror.bjtu.edu.cn",
+      "title": "北京交通大学镜像站",
+      "description": "高校开源镜像站",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/工具"
+    }
+  ],
+  "count": 64
+}

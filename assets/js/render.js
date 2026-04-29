@@ -186,12 +186,12 @@ class Renderer {
     _createCardHtml(site) {
         // 检测是否为搜索结果并应用高亮
         const query = site._query;
-        const name = query ? SearchEngine.highlight(site.name, query) : site.name;
-        const desc = query ? SearchEngine.highlight(site.desc, query) : site.desc;
+        const name = query ? SearchEngine.highlight(site.title, query) : site.title;
+        const desc = query ? SearchEngine.highlight(site.description, query) : site.description;
 
         return `
             <a href="${site.url}" target="_blank" class="site-card" data-id="${site.id}">
-                <img src="${site.icon}" class="card-icon" onerror="if(!this.dataset.error) {this.dataset.error='1'; this.src='assets/images/favicon.png'; this.onerror=null;}">
+                <img src="https://www.google.com/s2/favicons?domain=${new URL(site.url).hostname}&sz=32" class="card-icon" onerror="if(!this.dataset.error) {this.dataset.error='1'; this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2218%22 font-size=%2214%22>🔗</text></svg>'; this.onerror=null;}">
                 <span class="card-title">${name}</span>
                 <span class="card-desc">${desc}</span>
             </a>

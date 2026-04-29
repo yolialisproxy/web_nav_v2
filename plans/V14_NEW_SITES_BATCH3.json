@@ -1,0 +1,726 @@
+{
+  "sites": [
+    {
+      "url": "https://heylogin.com",
+      "title": "HeyLogin",
+      "description": "密码管理和双因素认证工具，简化登录流程",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/平台"
+    },
+    {
+      "url": "https://mfa.com",
+      "title": "MFA Platform",
+      "description": "多因素认证平台，保护账户安全",
+      "_cat": "密码工具",
+      "category": "密码工具/双因素认证/平台"
+    },
+    {
+      "url": "https://authy.com",
+      "title": "Authy",
+      "description": "双因素认证应用，支持多设备和离线备份",
+      "_cat": "密码工具",
+      "category": "密码工具/双因素认证/平台"
+    },
+    {
+      "url": "https://google.com/authenticator",
+      "title": "Google Authenticator",
+      "description": "谷歌双因素认证应用，生成验证码",
+      "_cat": "密码工具",
+      "category": "密码工具/双因素认证/工具"
+    },
+    {
+      "url": "https://duo.com",
+      "title": "Duo Security",
+      "description": "思科双因素认证平台，企业级MFA解决方案",
+      "_cat": "密码工具",
+      "category": "密码工具/双因素认证/平台"
+    },
+    {
+      "url": "https://okta.com",
+      "title": "Okta",
+      "description": "企业身份和访问管理平台，提供单点登录和MFA",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://auth0.com",
+      "title": "Auth0",
+      "description": "身份认证平台，为应用添加登录和授权功能",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://onelogin.com",
+      "title": "OneLogin",
+      "description": "统一身份管理平台，提供SSO和MFA",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://jumpcloud.com",
+      "title": "JumpCloud",
+      "description": "目录即服务平台，统一管理用户和设备",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://pingidentity.com",
+      "title": "Ping Identity",
+      "description": "身份安全解决方案，提供SSO和访问管理",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://centrify.com",
+      "title": "Centrify",
+      "description": "特权访问管理平台，保护关键基础设施",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://sailpoint.com",
+      "title": "SailPoint",
+      "description": "企业身份治理平台，管理用户访问权限",
+      "_cat": "密码工具",
+      "category": "密码工具/身份管理/平台"
+    },
+    {
+      "url": "https://evernote.com",
+      "title": "Evernote",
+      "description": "笔记和组织工具，跨平台同步和整理信息",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/平台"
+    },
+    {
+      "url": "https://bear.app",
+      "title": "Bear",
+      "description": "优雅的Markdown笔记应用，Mac和iOS平台",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Ulysses",
+      "description": "写作应用，用于长文写作和博客发布",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https://standardnotes.org",
+      "title": "Standard Notes",
+      "description": "开源加密笔记应用，注重隐私和简洁",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https://joplinapp.org",
+      "title": "Joplin",
+      "description": "开源笔记和待办应用，支持Markdown和同步",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https://zettlr.com",
+      "title": "Zettlr",
+      "description": "Markdown编辑器，专为学术写作和知识管理设计",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https://typora.io",
+      "title": "Typora",
+      "description": "简洁的Markdown编辑器，实时预览",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https://iawriter.com",
+      "title": "iA Writer",
+      "description": "专注写作的文本编辑器，提供 undistracted 环境",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Bear",
+      "description": "优雅的Markdown笔记应用",
+      "_cat": "效率办公",
+      "category": "效率办公/笔记工具/工具"
+    },
+    {
+      "url": "https://craft.do",
+      "title": "Craft",
+      "description": "优雅的文档协作工具，支持团队文档和知识库",
+      "_cat": "效率办公",
+      "category": "效率办公/在线文档/工具"
+    },
+    {
+      "url": "https://coda.io",
+      "title": "Coda",
+      "description": "一体化文档平台，结合文档、表格和应用构建",
+      "_cat": "效率办公",
+      "category": "效率办公/在线文档/平台"
+    },
+    {
+      "url": "https://quip.com",
+      "title": "Quip",
+      "description": "Salesforce旗下协作平台，整合文档、表格和聊天",
+      "_cat": "效率办公",
+      "category": "效率办公/在线文档/平台"
+    },
+    {
+      "url": "https://dropbox.com",
+      "title": "Dropbox",
+      "description": "云存储和文件同步服务，支持协作和版本历史",
+      "_cat": "效率办公",
+      "category": "效率办公/云存储/平台"
+    },
+    {
+      "url": "https://box.com",
+      "title": "Box",
+      "description": "企业云存储和内容管理平台",
+      "_cat": "效率办公",
+      "category": "效率办公/云存储/平台"
+    },
+    {
+      "url": "https://pcloud.com",
+      "title": "pCloud",
+      "description": "安全云存储服务，提供加密和终身套餐",
+      "_cat": "效率办公",
+      "category": "效率办公/云存储/平台"
+    },
+    {
+      "url": "https://sync.com",
+      "title": "Sync.com",
+      "description": "端到端加密云存储，注重隐私",
+      "_cat": "效率办公",
+      "category": "效率办公/云存储/平台"
+    },
+    {
+      "url": "https://midjourney.com",
+      "title": "Midjourney",
+      "description": "AI图像生成工具，通过文字描述生成高质量艺术图像",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/图像生成"
+    },
+    {
+      "url": "https://stable-diffusion.com",
+      "title": "Stable Diffusion",
+      "description": "开源图像生成模型，由Stability AI开发",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/图像生成"
+    },
+    {
+      "url": "https://dalle.openai.com",
+      "title": "DALL-E",
+      "description": "OpenAI图像生成系统，根据文字描述生成图像",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/图像生成"
+    },
+    {
+      "url": "https://leonardo.ai",
+      "title": "Leonardo.ai",
+      "description": "AI图像生成和编辑平台，专为游戏和创意产业",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/图像生成"
+    },
+    {
+      "url": "https=",
+      "title": "RunwayML",
+      "description": "AI创意套件，提供视频生成、编辑和特效工具",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/视频生成"
+    },
+    {
+      "url": "https://pika.art",
+      "title": "Pika",
+      "description": "AI视频生成平台，将文字转成短视频",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/视频生成"
+    },
+    {
+      "url": "https=",
+      "title": "ElevenLabs",
+      "description": "AI语音合成平台，生成逼真人声",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/语音合成"
+    },
+    {
+      "url": "https://play.ht",
+      "title": "Play.ht",
+      "description": "AI语音生成和播客托管平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/语音合成"
+    },
+    {
+      "url": "https://krisp.ai",
+      "title": "Krisp",
+      "description": "AI降噪工具，实时消除背景噪音",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/音频处理"
+    },
+    {
+      "url": "https://descript.com",
+      "title": "Descript",
+      "description": "AI音频和视频编辑工具，像编辑文档一样编辑媒体",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/视频编辑"
+    },
+    {
+      "url": "https://otter.ai",
+      "title": "Otter.ai",
+      "description": "AI会议转录和笔记工具，自动记录和总结",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/语音识别"
+    },
+    {
+      "url": "https://fireflies.ai",
+      "title": "Fireflies.ai",
+      "description": "AI会议助手，自动转录、分析和总结会议",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/语音识别"
+    },
+    {
+      "url": "https://deepgram.com",
+      "title": "Deepgram",
+      "description": "AI语音识别平台，提供实时和批量转录",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/语音识别"
+    },
+    {
+      "url": "https://assemblyai.com",
+      "title": "AssemblyAI",
+      "description": "AI语音和视频理解API，提供转录、摘要等",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/语音识别"
+    },
+    {
+      "url": "https://synthesia.io",
+      "title": "Synthesia",
+      "description": "AI视频生成平台，用AI头像创建多语言视频",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/视频生成"
+    },
+    {
+      "url": "https://d-id.com",
+      "title": "D-ID",
+      "description": "AI视频创作平台，用照片创建说话视频",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/视频生成"
+    },
+    {
+      "url": "https://behance.net",
+      "title": "Behance",
+      "description": "Adobe旗下创意作品展示平台，设计师社区和作品集",
+      "_cat": "设计工具",
+      "category": "设计工具/设计灵感/社区"
+    },
+    {
+      "url": "https://dribbble.com",
+      "title": "Dribbble",
+      "description": "设计师展示作品和招聘平台，UI/UX社区",
+      "_cat": "设计工具",
+      "category": "设计工具/设计灵感/社区"
+    },
+    {
+      "url": "https://deviantart.com",
+      "title": "DeviantArt",
+      "description": "在线艺术社区，展示和分享数字艺术作品",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/社区"
+    },
+    {
+      "url": "https=",
+      "title": "ArtStation",
+      "description": "游戏、电影和娱乐行业艺术家作品展示平台",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/社区"
+    },
+    {
+      "url": "https://creativebloq.com",
+      "title": "Creative Bloq",
+      "description": "设计创意新闻和资源网站",
+      "_cat": "设计工具",
+      "category": "设计工具/设计灵感/教程"
+    },
+    {
+      "url": "https=",
+      "title": "Smashing Magazine",
+      "description": "Web设计和开发在线杂志",
+      "_cat": "设计工具",
+      "category": "设计工具/设计灵感/教程"
+    },
+    {
+      "url": "https://line25.com",
+      "title": "Line25",
+      "description": "网页设计灵感博客和教程",
+      "_cat": "设计工具",
+      "category": "设计工具/设计灵感/教程"
+    },
+    {
+      "url": "https=",
+      "title": "WebDesignerDepot",
+      "description": "网页设计资源、新闻和教程",
+      "_cat": "设计工具",
+      "category": "设计工具/设计灵感/教程"
+    },
+    {
+      "url": "https://typo.com",
+      "title": "Typewolf",
+      "description": "字体设计和排版资源，网站设计灵感",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://fonts.google.com",
+      "title": "Google Fonts",
+      "description": "谷歌免费开源字体库，Web字体服务",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https=",
+      "title": "Adobe Fonts",
+      "description": "Adobe字体服务，提供高质量字体订阅",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://myfonts.com",
+      "title": "MyFonts",
+      "description": "字体在线商店，提供海量字体资源",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://fontshop.com",
+      "title": "FontShop",
+      "description": "专业字体零售商，提供高质量字体",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://urbanfonts.com",
+      "title": "Urban Fonts",
+      "description": "免费和商业字体资源库",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://fontspace.com",
+      "title": "FontSpace",
+      "description": "免费字体下载平台，由创作者分享",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://dafont.com",
+      "title": "DaFont",
+      "description": "免费字体下载网站，按类别分类",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://fontsinuse.com",
+      "title": "Fonts In Use",
+      "description": "字体使用案例展示，设计和排版参考",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://typekit.com",
+      "title": "Typekit (Adobe Fonts)",
+      "description": "Adobe字体订阅服务，高质量字体库",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://justfont.com",
+      "title": "JustFont",
+      "description": "中文字体平台，提供商业字体授权",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://foundertype.com",
+      "title": "方正字库",
+      "description": "方正旗下商业字体库，中文字体资源",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https=",
+      "title": "汉仪字库",
+      "description": "汉仪旗下商业字体库，中文字体设计",
+      "_cat": "设计工具",
+      "category": "设计工具/图标字体/资源"
+    },
+    {
+      "url": "https://unsplash.com",
+      "title": "Unsplash",
+      "description": "免费高质量图片库，提供CC0许可照片",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/资源"
+    },
+    {
+      "url": "https://pexels.com",
+      "title": "Pexels",
+      "description": "免费照片和视频库，CC0许可可商用",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/资源"
+    },
+    {
+      "url": "https://pixabay.com",
+      "title": "Pixabay",
+      "description": "免费图片、视频和音乐库，CC0许可",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/资源"
+    },
+    {
+      "url": "https://picsum.photos",
+      "title": "Lorem Picsum",
+      "description": "随机图片占位符服务，用于设计和开发测试",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/工具"
+    },
+    {
+      "url": "https://placehold.it",
+      "title": "Placeholder.com",
+      "description": "在线图片占位符生成器",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/工具"
+    },
+    {
+      "url": "https://lipsum.com",
+      "title": "Lorem Ipsum",
+      "description": "占位文本生成器，模拟 latin 文本",
+      "_cat": "设计工具",
+      "category": "设计工具/设计资源/工具"
+    },
+    {
+      "url": "https://colorhunt.co",
+      "title": "ColorHunt",
+      "description": "配色方案收集和生成器，设计师灵感",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/工具"
+    },
+    {
+      "url": "https://coolors.co",
+      "title": "Coolors",
+      "description": "快速配色方案生成器，一键生成、导出配色",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Adobe Color",
+      "description": "Adobe配色工具，创建和探索配色方案",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/工具"
+    },
+    {
+      "url": "https://paletton.com",
+      "title": "Paletton",
+      "description": "配色方案设计器，生成调色板",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/工具"
+    },
+    {
+      "url": "https://gradienta.io",
+      "title": "Gradienta",
+      "description": "免费CSS渐变生成器，提供渐变配色",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/工具"
+    },
+    {
+      "url": "https://uigradients.com",
+      "title": "uiGradients",
+      "description": "漂亮的CSS渐变背景集合",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/资源"
+    },
+    {
+      "url": "https://gradienthunt.com",
+      "title": "Gradient Hunt",
+      "description": "精选渐变配色库，设计师资源",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/资源"
+    },
+    {
+      "url": "https://flatuicolorpicker.com",
+      "title": "Flat UI Colors",
+      "description": "扁平化配色选择器，Material Design颜色",
+      "_cat": "设计工具",
+      "category": "设计工具/配色工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Product Hunt",
+      "description": "发现新产品的社区，每日上线科技产品",
+      "_cat": "其他",
+      "category": "其他/产品发现/平台"
+    },
+    {
+      "url": "https://huggingface.co",
+      "title": "Hugging Face",
+      "description": "机器学习模型和数据集托管平台",
+      "_cat": "其他",
+      "category": "其他/机器学习/平台"
+    },
+    {
+      "url": "https://paperswithcode.com",
+      "title": "Papers with Code",
+      "description": "最新AI论文和代码实现的索引网站",
+      "_cat": "其他",
+      "category": "其他/机器学习/资源"
+    },
+    {
+      "url": "https://arxiv-sanity.com",
+      "title": "ArXiv Sanity",
+      "description": "arXiv论文过滤和推荐系统",
+      "_cat": "其他",
+      "category": "其他/机器学习/资源"
+    },
+    {
+      "url": "https://serializer.com",
+      "title": "Chatbot Arena",
+      "description": "聊天机器人排行榜和比较平台",
+      "_cat": "其他",
+      "category": "其他/机器学习/平台"
+    },
+    {
+      "url": "https://lmsys.org",
+      "title": "LMSYS Chatbot Arena",
+      "description": "大语言模型排行榜和比较平台",
+      "_cat": "其他",
+      "category": "其他/机器学习/平台"
+    },
+    {
+      "url": "https://together.ai",
+      "title": "Together AI",
+      "description": "分布式AI计算平台，提供GPU集群和模型部署",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://modal.com",
+      "title": "Modal",
+      "description": "无服务器计算平台，专为AI和ML工作负载",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Vercel",
+      "description": "前端开发和部署平台，支持Next.js和无服务器",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://netlify.com",
+      "title": "Netlify",
+      "description": "Web开发和部署平台，持续集成和CDN",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://railway.app",
+      "title": "Railway",
+      "description": "云部署平台，简化应用部署和扩展",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://fly.io",
+      "title": "Fly.io",
+      "description": "全球应用部署平台，边缘计算和容器",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://render.com",
+      "title": "Render",
+      "description": "全云托管平台，部署Web应用、数据库等",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://platform.sh",
+      "title": "Platform.sh",
+      "description": "企业级云平台，持续部署和集群管理",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://clever-cloud.com",
+      "title": "Clever Cloud",
+      "description": "欧洲云托管平台，支持多语言和数据库",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://scaleway.com",
+      "title": "Scaleway",
+      "description": "欧洲云服务商，提供计算、存储和GPU实例",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://ovhcloud.com",
+      "title": "OVHcloud",
+      "description": "全球云提供商，提供托管和云基础设施",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://digitalocean.com",
+      "title": "DigitalOcean",
+      "description": "云基础设施提供商，专注开发者和初创公司",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://linode.com",
+      "title": "Linode",
+      "description": "云托管服务商，提供简单易用的云服务器",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://vultr.com",
+      "title": "Vultr",
+      "description": "云服务器提供商，全球节点和高性能实例",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://aws.amazon.com",
+      "title": "Amazon Web Services",
+      "description": "亚马逊云计算服务平台，提供200+云服务",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Microsoft Azure",
+      "description": "微软云计算平台，企业级云服务",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://cloud.google.com",
+      "title": "Google Cloud Platform",
+      "description": "谷歌云平台，提供计算、存储、AI等服务",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    },
+    {
+      "url": "https://ibm.com/cloud",
+      "title": "IBM Cloud",
+      "description": "IBM云平台，提供混合云和AI服务",
+      "_cat": "其他",
+      "category": "其他/云计算/平台"
+    }
+  ],
+  "count": 103
+}

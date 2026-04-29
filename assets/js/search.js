@@ -19,11 +19,11 @@ class SearchEngine {
             let score = 0;
             const matches = { name: false, desc: false, tags: [] };
 
-            if (site.name.toLowerCase().includes(query)) {
+            if (site.title.toLowerCase().includes(query)) {
                 score += 100;
                 matches.name = true;
             }
-            if (site.desc.toLowerCase().includes(query)) {
+            if (site.description.toLowerCase().includes(query)) {
                 score += 30;
                 matches.desc = true;
             }

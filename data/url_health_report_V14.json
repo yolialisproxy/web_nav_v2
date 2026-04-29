@@ -1,0 +1,1308 @@
+{
+  "timestamp": "2026-04-29 12:11:44.378112",
+  "method": "random_sample_200",
+  "total_sites": 3360,
+  "sample_size": 200,
+  "healthy": 105,
+  "failed": 95,
+  "health_rate": 52.5,
+  "estimated_healthy_sites": 1764,
+  "estimated_failed_sites": 1596,
+  "details": [
+    {
+      "url": "https://www.usenix.org/conference/atc12/technical-sessions/presentation/serebryany\\",
+      "name": "https://www.usenix.org/conference/atc12/technical-sessions/presentation/serebryany\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://httpd.apache.org/",
+      "name": "https://httpd.apache.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X",
+      "name": "https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://github.githubassets.com/assets/36505-d881e4fdaa1f52d2.js",
+      "name": "https://github.githubassets.com/assets/36505-d881e4fdaa1f52d2.js",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://go-proverbs.github.io/",
+      "name": "https://go-proverbs.github.io/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.deepai.org",
+      "name": "https://www.deepai.org",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://camo.githubusercontent.com/6a4edb76a7e92e0faad09a11e42cba7c39803ee6723f8cb1b801f91113d59695/68747470733a2f2f676974706f642e696f2f627574746f6e2f6f70656e2d696e2d676974706f642e737667\\",
+      "name": "https://camo.githubusercontent.com/6a4edb76a7e92e0faad09a11e42cba7c39803ee6723f8cb1b801f91113d59695/68747470733a2f2f676974706f642e696f2f627574746f6e2f6f70656e2d696e2d676974706f642e737667\\",
+      "status": 403,
+      "ok": true
+    },
+    {
+      "url": "https://www.autosar.org/fileadmin/standards/R21-11/AP/AUTOSAR_RS_CPP14Guidelines.pdf",
+      "name": "https://www.autosar.org/fileadmin/standards/R21-11/AP/AUTOSAR_RS_CPP14Guidelines.pdf",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/\\",
+      "name": "https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://codidact.com/",
+      "name": "https://codidact.com/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.xreader.org",
+      "name": "https://www.xreader.org",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://chairnerd.seatgeek.com/building-out-the-seatgeek-data-pipeline/",
+      "name": "https://chairnerd.seatgeek.com/building-out-the-seatgeek-data-pipeline/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "http://www.libarchive.org/",
+      "name": "http://www.libarchive.org/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.videvo.com",
+      "name": "https://www.videvo.com",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5cKTP36HVgI\\",
+      "name": "https://www.youtube.com/watch?v=5cKTP36HVgI\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JWD1Fpdd4Pc\\",
+      "name": "https://www.youtube.com/watch?v=JWD1Fpdd4Pc\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rvdJDijO2Ro&amp;index=10&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb",
+      "name": "https://www.youtube.com/watch?v=rvdJDijO2Ro&amp;index=10&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.music.youtube.com",
+      "name": "https://www.music.youtube.com",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=c4BRHC7kTaQ&amp;index=2&amp;list=PL89B61F78B552C1AB",
+      "name": "https://www.youtube.com/watch?v=c4BRHC7kTaQ&amp;index=2&amp;list=PL89B61F78B552C1AB",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1611.07004v1.pdf",
+      "name": "https://arxiv.org/pdf/1611.07004v1.pdf",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://onsi.github.io/ginkgo/",
+      "name": "https://onsi.github.io/ginkgo/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf",
+      "name": "http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://gocql.github.io",
+      "name": "https://gocql.github.io",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "http://www.cs.cmu.edu/0.000000E+003dvision/",
+      "name": "http://www.cs.cmu.edu/0.000000E+003dvision/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.zoneminder.com/",
+      "name": "https://www.zoneminder.com/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://git.freepbx.org/projects/FREEPBX",
+      "name": "FreePBX · GitHub",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.streamyard.com",
+      "name": "https://www.streamyard.com",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg",
+      "name": "https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "http://www.ee.surrey.ac.uk/Research/CVSSP",
+      "name": "http://www.ee.surrey.ac.uk/Research/CVSSP",
+      "status": 403,
+      "ok": true
+    },
+    {
+      "url": "https://depay.com/products/payments",
+      "name": "https://depay.com/products/payments",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://interviewing.io\\",
+      "name": "https://interviewing.io\\",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://youtu.be/O4nwUqQodAg",
+      "name": "https://youtu.be/O4nwUqQodAg",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://app.diagrams.net",
+      "name": "Draw.io",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://affine.pro/",
+      "name": "https://affine.pro/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://libusb.info/",
+      "name": "https://libusb.info/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://wikisuite.org/Source-Code",
+      "name": "WikiSuite",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "name": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "status": 400,
+      "ok": true
+    },
+    {
+      "url": "https://www.aliasvault.net",
+      "name": "AliasVault - Privacy-First Password & Email Alias Manager",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://rll.berkeley.edu/deeprlcourse/\\",
+      "name": "http://rll.berkeley.edu/deeprlcourse/\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://hudi.apache.org/",
+      "name": "https://hudi.apache.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://getindico.io/",
+      "name": "Indico - Home",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://github.githubassets.com/assets/github-elements-f78f5f1cfce010ca.js",
+      "name": "https://github.githubassets.com/assets/github-elements-f78f5f1cfce010ca.js",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://stocksnap.io",
+      "name": "StockSnap",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://avatars.githubusercontent.com/u/3388604?s=64&amp;v=4",
+      "name": "https://avatars.githubusercontent.com/u/3388604?s=64&amp;v=4",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://archive.org/details/ucberkeley_webcast_MAEGXTwmUsI",
+      "name": "https://archive.org/details/ucberkeley_webcast_MAEGXTwmUsI",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.showdoc.com.cn",
+      "name": "ShowDoc",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.capcut.cn",
+      "name": "https://www.capcut.cn",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0.html",
+      "name": "https://spdx.org/licenses/Apache-2.0.html",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://blog.michaelschmatz.com/2016/04/11/how-to-write-a-bloom-filter-cpp/",
+      "name": "http://blog.michaelschmatz.com/2016/04/11/how-to-write-a-bloom-filter-cpp/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.permit.io/blog/role-based-access-control-rbac-authorization-in-golang",
+      "name": "How to Implement Role-Based Access Control (RBAC) Authorizat",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://crustdata.com\\",
+      "name": "https://crustdata.com\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://github.githubassets.com/assets/sessions-e74d03d993e84335.js",
+      "name": "https://github.githubassets.com/assets/sessions-e74d03d993e84335.js",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://tclap.sourceforge.net",
+      "name": "http://tclap.sourceforge.net",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://chiyogami.myaddr.dev/",
+      "name": "https://chiyogami.myaddr.dev/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.pomerium.io/\\",
+      "name": "https://www.pomerium.io/\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://hive.apache.org\\",
+      "name": "https://hive.apache.org\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.gamma.app",
+      "name": "https://www.gamma.app",
+      "status": 403,
+      "ok": true
+    },
+    {
+      "url": "https://www.manning.com/books/deep-learning-patterns-and-practices",
+      "name": "https://www.manning.com/books/deep-learning-patterns-and-practices",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://programiz.pro/\\",
+      "name": "https://programiz.pro/\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "http://marathon.csee.usf.edu/Mammography/Database.html",
+      "name": "http://marathon.csee.usf.edu/Mammography/Database.html",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://cmocka.org/",
+      "name": "https://cmocka.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://opengraph.githubassets.com/f0848389c094e436c13dc3effa86a09c7db159c8be2fef941dafa977658676ba/trimstray/the-book-of-secret-knowledge",
+      "name": "https://opengraph.githubassets.com/f0848389c094e436c13dc3effa86a09c7db159c8be2fef941dafa977658676ba/trimstray/the-book-of-secret-knowledge",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://studygolang.com",
+      "name": "https://studygolang.com",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://yopass.se/",
+      "name": "https://yopass.se/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://statistics-for-strava.robiningelbrecht.be/",
+      "name": "https://statistics-for-strava.robiningelbrecht.be/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/\\",
+      "name": "https://www.amazon.com/Algorithms-4th-Robert-Sedgewick/dp/032157351X/\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://avatars.githubusercontent.com/u/3012311?s=64&amp;v=4",
+      "name": "https://avatars.githubusercontent.com/u/3012311?s=64&amp;v=4",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://lethain.com/introduction-to-architecting-systems-for-scale/\\",
+      "name": "http://lethain.com/introduction-to-architecting-systems-for-scale/\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.originality.ai",
+      "name": "https://www.originality.ai",
+      "status": 403,
+      "ok": true
+    },
+    {
+      "url": "https://sandbox.amusewiki.org",
+      "name": "https://sandbox.amusewiki.org",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://www.portaudio.com/",
+      "name": "http://www.portaudio.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://spdx.org/licenses/EPL-1.0.html",
+      "name": "https://spdx.org/licenses/EPL-1.0.html",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://www.robots.ox.ac.uk/~vgg/practicals/cnn/index.html\\",
+      "name": "http://www.robots.ox.ac.uk/~vgg/practicals/cnn/index.html\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "http://ltsv.org/",
+      "name": "Labeled Tab-separated Values (LTSV)",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://oss.oetiker.ch/rrdtool/\\",
+      "name": "https://oss.oetiker.ch/rrdtool/\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.anaconda.com",
+      "name": "Anaconda",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://v1.scnlib.dev/",
+      "name": "https://v1.scnlib.dev/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://mlem.ai",
+      "name": "mlem.ai",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=red",
+      "name": "https://img.shields.io/badge/join-us%20on%20slack-gray.svg?longCache=true&logo=slack&colorB=red",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.coursera.org/learn/algorithms-part1/lecture/pvvLZ/stability\\",
+      "name": "https://www.coursera.org/learn/algorithms-part1/lecture/pvvLZ/stability\\",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://bigcapital.app/",
+      "name": "https://bigcapital.app/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://www.assimp.org",
+      "name": "http://www.assimp.org",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://avatars.githubusercontent.com/u/79398?s=64&amp;v=4",
+      "name": "https://avatars.githubusercontent.com/u/79398?s=64&amp;v=4",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://iceshrimp.dev/iceshrimp/iceshrimp.net",
+      "name": "https://iceshrimp.dev/iceshrimp/iceshrimp.net",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2QJi0ArLq7s&amp;list=PL78U8qQHXgrhP9aZraxTT5-X1RccTcUYT",
+      "name": "https://www.youtube.com/watch?v=2QJi0ArLq7s&amp;list=PL78U8qQHXgrhP9aZraxTT5-X1RccTcUYT",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://lists.mailman3.org/",
+      "name": "https://lists.mailman3.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=s3bCdZGrgpA\\u0026amp;index=7\\u0026amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6\\",
+      "name": "https://www.youtube.com/watch?v=s3bCdZGrgpA\\u0026amp;index=7\\u0026amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=NinWEPPrkDQ&amp;index=16&amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf",
+      "name": "https://www.youtube.com/watch?v=NinWEPPrkDQ&amp;index=16&amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://artalk.js.org/",
+      "name": "https://artalk.js.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://www.fit.vutbr.cz/~imikolov/rnnlm/thesis.pdf\\",
+      "name": "http://www.fit.vutbr.cz/~imikolov/rnnlm/thesis.pdf\\",
+      "status": 400,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=kQ-UQAzcnzA&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&amp;index=28",
+      "name": "https://www.youtube.com/watch?v=kQ-UQAzcnzA&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&amp;index=28",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://tvm.ai/",
+      "name": "https://tvm.ai/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.geany.org/",
+      "name": "https://www.geany.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=svfnVhJOfMc&amp;index=8&amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6",
+      "name": "https://www.youtube.com/watch?v=svfnVhJOfMc&amp;index=8&amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://fmd-foss.org",
+      "name": "https://fmd-foss.org",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://github.githubassets.com/assets/dark_dimmed_high_contrast-9ab7fa96747a4402.css",
+      "name": "https://github.githubassets.com/assets/dark_dimmed_high_contrast-9ab7fa96747a4402.css",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://digistorm.app/",
+      "name": "https://digistorm.app/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://adarkroom.doublespeakgames.com/",
+      "name": "https://adarkroom.doublespeakgames.com/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.sanebox.com",
+      "name": "SaneBox",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://galene.org/",
+      "name": "https://galene.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.figma.com",
+      "name": "Figma",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.chainofthought.show/",
+      "name": "Chain of Thought",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://01.org/onednn",
+      "name": "https://01.org/onednn",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://github.githubassets.com/assets/89627-9ab4452238989035.js",
+      "name": "https://github.githubassets.com/assets/89627-9ab4452238989035.js",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.rytr.me",
+      "name": "https://www.rytr.me",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://git.joeyh.name/index.cgi/git-annex.git/",
+      "name": "https://git.joeyh.name/index.cgi/git-annex.git/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.joomla.org/",
+      "name": "https://www.joomla.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://chatdoc.com",
+      "name": "https://chatdoc.com",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://git.linux-kernel.at/oliver/ivatar/\\",
+      "name": "https://git.linux-kernel.at/oliver/ivatar/\\",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JAMLuxdHH8o\\",
+      "name": "https://www.youtube.com/watch?v=JAMLuxdHH8o\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.reddit.com/r/datasets/comments/3mk1vg/realtime_data_is_available_including_comments/",
+      "name": "https://www.reddit.com/r/datasets/comments/3mk1vg/realtime_data_is_available_including_comments/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://trae.ai",
+      "name": "Trae AI",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.kdenlive.org",
+      "name": "https://www.kdenlive.org",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://pugixml.org/",
+      "name": "http://pugixml.org/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=NinWEPPrkDQ\\u0026amp;index=16\\u0026amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf\\",
+      "name": "https://www.youtube.com/watch?v=NinWEPPrkDQ\\u0026amp;index=16\\u0026amp;list=PLUl4u3cNGP61hsJNdULdudlRL493b-XZf\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://digibuzzer.app/",
+      "name": "https://digibuzzer.app/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://openolitor.org/",
+      "name": "https://openolitor.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://wamp.ws/",
+      "name": "http://wamp.ws/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://demo.aimeos.org/",
+      "name": "https://demo.aimeos.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode",
+      "name": "https://www.coursera.org/learn/data-structures/lecture/HxQo9/pseudocode",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/\\",
+      "name": "https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/\\",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.fontsquirrel.com",
+      "name": "https://www.fontsquirrel.com",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://ombi.io/",
+      "name": "https://ombi.io/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.scaler.com/topics/what-is-deep-learning/",
+      "name": "https://www.scaler.com/topics/what-is-deep-learning/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://actor-framework.org/",
+      "name": "http://actor-framework.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZOUFgdIeOPuH6cfSnNRMau-\\",
+      "name": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZOUFgdIeOPuH6cfSnNRMau-\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html",
+      "name": "http://jasonpolites.github.io/tao-of-testing/ch4-1.1.html",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=y_G9BkAm6B8\\u0026amp;index=4\\u0026amp;list=PL89B61F78B552C1AB\\",
+      "name": "https://www.youtube.com/watch?v=y_G9BkAm6B8\\u0026amp;index=4\\u0026amp;list=PL89B61F78B552C1AB\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://accessory.github.io/minus_games_user_guide",
+      "name": "https://accessory.github.io/minus_games_user_guide",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://beanstalkd.github.io/\\",
+      "name": "https://beanstalkd.github.io/\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://go-database-sql.org/",
+      "name": "http://go-database-sql.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://adagios.org/\\",
+      "name": "http://adagios.org/\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://www.coursera.org/learn/data-structures/lecture/GQQLN/analysis-optional\\",
+      "name": "https://www.coursera.org/learn/data-structures/lecture/GQQLN/analysis-optional\\",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://github.githubassets.com/assets/repository-6ec84ae2261fecf8.css",
+      "name": "https://github.githubassets.com/assets/repository-6ec84ae2261fecf8.css",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JrNF0KRAlyo",
+      "name": "https://www.youtube.com/watch?v=JrNF0KRAlyo",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "http://research.microsoft.com/en-us/people/fseide/",
+      "name": "http://research.microsoft.com/en-us/people/fseide/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.archbee.com",
+      "name": "Archbee",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://webcms3.cse.unsw.edu.au/COMP9444/19T3/\\",
+      "name": "https://webcms3.cse.unsw.edu.au/COMP9444/19T3/\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://ccache.dev/",
+      "name": "https://ccache.dev/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ufj5_bppBsA\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=7\\",
+      "name": "https://www.youtube.com/watch?v=ufj5_bppBsA\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=7\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.bun.sh",
+      "name": "https://www.bun.sh",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://demo.barassistant.app/",
+      "name": "https://demo.barassistant.app/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://netron.app/",
+      "name": "https://netron.app/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=86g8jAQug04\\u0026amp;index=33\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "name": "https://www.youtube.com/watch?v=86g8jAQug04\\u0026amp;index=33\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XM4lGflQFvA\\",
+      "name": "https://www.youtube.com/watch?v=XM4lGflQFvA\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.ilias.de",
+      "name": "https://www.ilias.de",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_server",
+      "name": "https://en.wikipedia.org/wiki/Web_server",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://avatars.githubusercontent.com/u/5369016?s=64&amp;v=4",
+      "name": "https://avatars.githubusercontent.com/u/5369016?s=64&amp;v=4",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://gotenberg.dev",
+      "name": "https://gotenberg.dev",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=G75vN2mnJeQ",
+      "name": "https://www.youtube.com/watch?v=G75vN2mnJeQ",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://wiki.archlinux.org/",
+      "name": "https://wiki.archlinux.org/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.avidemux.org",
+      "name": "https://www.avidemux.org",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://linksta.cc/",
+      "name": "https://linksta.cc/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.manning.com/books/learn-ai-data-engineering-in-a-month-of-lunches",
+      "name": "https://www.manning.com/books/learn-ai-data-engineering-in-a-month-of-lunches",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://introtodeeplearning.com\\",
+      "name": "https://introtodeeplearning.com\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://addons.mozilla.org/en-US/firefox/addon/code-finder-catalyzex/",
+      "name": "AI Code Finder & Alerts for Papers: CatalyzeX – Get this Ext",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.ecyrd.com/cassandracalculator/",
+      "name": "https://www.ecyrd.com/cassandracalculator/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.coze.com",
+      "name": "https://www.coze.com",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://nodebb.org/",
+      "name": "https://nodebb.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://awesome.re",
+      "name": "GitHub - sindresorhus/awesome: 😎 Awesome lists about all kin",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.coursera.org/learn/algorithmic-thinking-2/lecture/M999a/dp-vs-recursive-implementation",
+      "name": "https://www.coursera.org/learn/algorithmic-thinking-2/lecture/M999a/dp-vs-recursive-implementation",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513\\",
+      "name": "https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "http://savannah.nongnu.org/projects/lwip/",
+      "name": "http://savannah.nongnu.org/projects/lwip/",
+      "status": 400,
+      "ok": true
+    },
+    {
+      "url": "https://youtu.be/QCGSS3kyGo0\\",
+      "name": "https://youtu.be/QCGSS3kyGo0\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://precice.org/",
+      "name": "https://precice.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.fireworks.ai",
+      "name": "Fireworks AI",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.coursera.org/lecture/algorithmic-thinking-2/global-pairwise-sequence-alignment-UZ7o6\\",
+      "name": "https://www.coursera.org/lecture/algorithmic-thinking-2/global-pairwise-sequence-alignment-UZ7o6\\",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://mainnet.demo.btcpayserver.org/",
+      "name": "https://mainnet.demo.btcpayserver.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://cs224d.stanford.edu/\\",
+      "name": "http://cs224d.stanford.edu/\\",
+      "status": 400,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TMuno5RZNeE",
+      "name": "https://www.youtube.com/watch?v=TMuno5RZNeE",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.open-emr.org/demo/",
+      "name": "https://www.open-emr.org/demo/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://netbox.dev/",
+      "name": "https://netbox.dev/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://paiza.io/en",
+      "name": "https://paiza.io/en",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "http://thesecretlivesofdata.com/raft/",
+      "name": "http://thesecretlivesofdata.com/raft/",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://www.ultimatepp.org/",
+      "name": "http://www.ultimatepp.org/",
+      "status": 400,
+      "ok": true
+    },
+    {
+      "url": "http://numenta.org/nupic.html",
+      "name": "http://numenta.org/nupic.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://blog.clevertap.com/how-to-remove-duplicates-in-large-datasets/\\",
+      "name": "https://blog.clevertap.com/how-to-remove-duplicates-in-large-datasets/\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://www-prima.inrialpes.fr/Prima/",
+      "name": "http://www-prima.inrialpes.fr/Prima/",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://keithpotz.github.io/CrashCatch",
+      "name": "https://keithpotz.github.io/CrashCatch",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://hubzilla.org",
+      "name": "https://hubzilla.org",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.filmora.wondershare.com",
+      "name": "https://www.filmora.wondershare.com",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://www.cs.otago.ac.nz/research/vision/Research/OpticalFlow/opticalflow.html",
+      "name": "http://www.cs.otago.ac.nz/research/vision/Research/OpticalFlow/opticalflow.html",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "http://jasonpolites.github.io/tao-of-testing/ch3-1.1.html\\",
+      "name": "http://jasonpolites.github.io/tao-of-testing/ch3-1.1.html\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html",
+      "name": "http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://kodi.tv/",
+      "name": "https://kodi.tv/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://defguard.net/\\",
+      "name": "https://defguard.net/\\",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://qwik.builder.io",
+      "name": "Qwik",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "http://cs.stanford.edu/~acoates/\\",
+      "name": "http://cs.stanford.edu/~acoates/\\",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://www.concretecms.com",
+      "name": "Concrete CMS is a Free and Open Source Content Management Sy",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.manning.com/books/engineering-deep-learning-platforms",
+      "name": "https://www.manning.com/books/engineering-deep-learning-platforms",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.corel.com/en/products/video-studio",
+      "name": "https://www.corel.com/en/products/video-studio",
+      "status": 404,
+      "ok": true
+    },
+    {
+      "url": "https://jitsi.org/Projects/JitsiVideobridge",
+      "name": "https://jitsi.org/Projects/JitsiVideobridge",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RIkxVci-R4k\\",
+      "name": "https://www.youtube.com/watch?v=RIkxVci-R4k\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://www.modal.com",
+      "name": "https://www.modal.com",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://ml-cheatsheet.readthedocs.io",
+      "name": "ML Glossary",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.openstreetmap.org/",
+      "name": "https://www.openstreetmap.org/",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=NKLDp3Rch3M\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=18\\",
+      "name": "https://www.youtube.com/watch?v=NKLDp3Rch3M\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=18\\",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    },
+    {
+      "url": "https://heroicons.com",
+      "name": "Heroicons",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "url": "https://www.runway.com",
+      "name": "https://www.runway.com",
+      "status": null,
+      "ok": false,
+      "error": "connection"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=QDZpzctPf10",
+      "name": "https://www.youtube.com/watch?v=QDZpzctPf10",
+      "status": null,
+      "ok": false,
+      "error": "timeout"
+    }
+  ]
+}

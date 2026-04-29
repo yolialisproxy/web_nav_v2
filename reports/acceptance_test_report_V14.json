@@ -1,0 +1,54 @@
+{
+  "test_version": "V14",
+  "test_timestamp": "2026-04-29T12:23:17.557937",
+  "base_url": "http://localhost:8080",
+  "console_errors": [
+    {
+      "type": "console",
+      "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
+      "location": "http://localhost:8080/favicon.ico:0",
+      "timestamp": "2026-04-29T12:22:45.914013"
+    },
+    {
+      "type": "pageerror",
+      "text": "Cannot read properties of undefined (reading 'toLowerCase')",
+      "timestamp": "2026-04-29T12:22:59.905185"
+    }
+  ],
+  "tested_features": [
+    "homepage_navigation",
+    "screenshot",
+    "category_navigation",
+    "responsive_design"
+  ],
+  "passed": true,
+  "issues": [
+    "Search result state unclear",
+    "No site links found for click test",
+    "Missing page elements: ['site_links']"
+  ],
+  "details": {
+    "homepage_status": 200,
+    "screenshot_path": "/home/yoli/GitHub/web_nav_v2/reports/acceptance_test_screenshot.png",
+    "categories_found": 9,
+    "subcategories_found": 23,
+    "leaf_categories_found": 2,
+    "viewport_tests": [
+      {
+        "name": "Desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "name": "Tablet",
+        "width": 768,
+        "height": 1024
+      },
+      {
+        "name": "Mobile",
+        "width": 375,
+        "height": 667
+      }
+    ]
+  }
+}

@@ -1,0 +1,617 @@
+{
+  "version": "V14",
+  "source": "手动 curated 2026 高质量站点",
+  "count": 87,
+  "created_at": "2026-04-25T22:23:12",
+  "sites": [
+    {
+      "url": "https://openai.com",
+      "title": "OpenAI",
+      "description": "创建安全通用AGI的AI研究公司，发布ChatGPT、GPT-4、DALL-E等里程碑产品",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://anthropic.com",
+      "title": "Anthropic",
+      "description": "AI安全研究公司，推出Claude系列大模型，专注于安全的AI系统",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://google.ai",
+      "title": "Google AI",
+      "description": "谷歌AI研究部门，发布Gemini、Imagen等AI模型和工具",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://huggingface.co",
+      "title": "Hugging Face",
+      "description": "机器学习模型托管平台，提供Transformers、Datasets等开源工具",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://replicate.com",
+      "title": "Replicate",
+      "description": "云端运行开源AI模型，支持Stable Diffusion、LLaMA等模型一键部署",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/视频生成"
+    },
+    {
+      "url": "https://together.ai",
+      "title": "Together AI",
+      "description": "云端GPU平台，提供Llama、Mistral等开源模型的推理API服务",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://modal.com",
+      "title": "Modal",
+      "description": "云端代码执行平台，专为AI/ML工作负载设计的无服务器计算",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/平台"
+    },
+    {
+      "url": "https://anyscale.com",
+      "title": "Anyscale",
+      "description": "Ray框架的商业化公司，提供分布式AI计算平台",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/平台"
+    },
+    {
+      "url": "https://runpod.io",
+      "title": "RunPod",
+      "description": "云端GPU租赁平台，支持按需启动AI训练和推理实例",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/服务"
+    },
+    {
+      "url": "https://cerebras.ai",
+      "title": "Cerebras",
+      "description": " wafer-scale AI芯片公司，推出一站式AI训练系统",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/平台"
+    },
+    {
+      "url": "https://notion.so",
+      "title": "Notion",
+      "description": "一体化工作空间，整合笔记、任务、数据库、文档协作功能",
+      "_cat": "效率办公",
+      "category": "效率办公/在线文档/综合平台"
+    },
+    {
+      "url": "https://slack.com",
+      "title": "Slack",
+      "description": "企业级团队协作沟通平台，支持频道、消息、文件共享和集成",
+      "_cat": "效率办公",
+      "category": "效率办公/团队协作/综合平台"
+    },
+    {
+      "url": "https://asana.com",
+      "title": "Asana",
+      "description": "项目管理与任务协作工具，帮助团队组织、跟踪和管理工作",
+      "_cat": "效率办公",
+      "category": "效率办公/项目管理/综合平台"
+    },
+    {
+      "url": "https://monday.com",
+      "title": "monday.com",
+      "description": "可视化工作操作系统，提供工作流自动化、项目管理和协作功能",
+      "_cat": "效率办公",
+      "category": "效率办公/项目管理/综合平台"
+    },
+    {
+      "url": "https://clickup.com",
+      "title": "ClickUp",
+      "description": "一体化生产力平台，整合任务、文档、目标、聊天等功能",
+      "_cat": "效率办公",
+      "category": "效率办公/项目管理/综合平台"
+    },
+    {
+      "url": "https://linear.app",
+      "title": "Linear",
+      "description": "为软件团队设计的项目管理工具，专注于问题跟踪和产品路线图",
+      "_cat": "效率办公",
+      "category": "效率办公/项目管理/综合平台"
+    },
+    {
+      "url": "https://shortcut.com",
+      "title": "Shortcut",
+      "description": "专注于软件开发的项目管理平台，整合任务、文档、里程碑",
+      "_cat": "效率办公",
+      "category": "效率办公/项目管理/综合平台"
+    },
+    {
+      "url": "https://tray.io",
+      "title": "Tray.io",
+      "description": "低代码自动化平台，帮助企业连接和自动化业务流程",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/综合平台"
+    },
+    {
+      "url": "https://zapier.com",
+      "title": "Zapier",
+      "description": "无代码自动化平台，连接5000+应用，自动执行重复性任务",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/综合平台"
+    },
+    {
+      "url": "https://make.com",
+      "title": "Make (Integromat)",
+      "description": "可视化自动化平台，构建复杂工作流连接多个应用和服务",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/综合平台"
+    },
+    {
+      "url": "https://github.com",
+      "title": "GitHub",
+      "description": "全球最大的代码托管平台，提供Git仓库、协作、CI/CD和项目管理",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/GitHub/主站"
+    },
+    {
+      "url": "https://gitlab.com",
+      "title": "GitLab",
+      "description": "一体化DevOps平台，提供代码托管、CI/CD、安全扫描等功能",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/GitLab/主站"
+    },
+    {
+      "url": "https://bitbucket.org",
+      "title": "Bitbucket",
+      "description": "Atlassian旗下的Git代码托管服务，集成了Jira和Confluence",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/Bitbucket/主站"
+    },
+    {
+      "url": "https://stackoverflow.com",
+      "title": "Stack Overflow",
+      "description": "全球最大的程序员问答社区，提供技术问题和解决方案",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/社区"
+    },
+    {
+      "url": "https://git-scm.com",
+      "title": "Git",
+      "description": "分布式版本控制系统Git官方文档和下载站点",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://phabricator.com",
+      "title": "Phabricator",
+      "description": "开源软件协作平台，提供代码审查、任务跟踪、Wiki等功能",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/主站"
+    },
+    {
+      "url": "https://sourceforge.net",
+      "title": "SourceForge",
+      "description": "开源软件开发和发布平台，托管大量开源项目",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/主站"
+    },
+    {
+      "url": "https://codeberg.org",
+      "title": "Codeberg",
+      "description": "非营利性Git托管平台，专注于自由和开源软件",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/GitHub/主站"
+    },
+    {
+      "url": "https://gitea.io",
+      "title": "Gitea",
+      "description": "轻量级自托管Git服务，易于安装和使用的开源项目",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/GitHub/主站"
+    },
+    {
+      "url": "https://forgestars.com",
+      "title": "ForgeStar",
+      "description": "现代代码协作平台，提供PR审查、CI/CD和项目管理功能",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://readthedocs.org",
+      "title": "Read the Docs",
+      "description": "文档托管和构建平台，为开源项目提供自动化文档生成",
+      "_cat": "开发工具",
+      "category": "开发工具/文档API/平台"
+    },
+    {
+      "url": "https://codesandbox.io",
+      "title": "CodeSandbox",
+      "description": "在线代码编辑器和沙盒环境，支持前端框架和Node.js",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://stackblitz.com",
+      "title": "StackBlitz",
+      "description": "快速在线IDE，直接在浏览器中运行Node.js和前端项目",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://replit.com",
+      "title": "Replit",
+      "description": "在线IDE和协作编程环境，支持50+语言和模板项目",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://glitch.com",
+      "title": "Glitch",
+      "description": "轻松创建和部署Web应用，实时协作编程平台",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://figma.com",
+      "title": "Figma",
+      "description": "在线协作设计工具，支持UI/UX设计、原型、设计系统管理",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://sketch.com",
+      "title": "Sketch",
+      "description": "Mac平台数字设计工具，专注于矢量设计和界面设计",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://adobe.com/creativecloud",
+      "title": "Adobe Creative Cloud",
+      "description": "Adobe创意云套件，包含Photoshop、Illustrator、Premiere等专业设计软件",
+      "_cat": "设计工具",
+      "category": "设计工具/平面设计/工具"
+    },
+    {
+      "url": "https://affinity.serif.com",
+      "title": "Affinity Suite",
+      "description": "专业创意软件套件（Photo、Design、Publisher），一次性买断",
+      "_cat": "设计工具",
+      "category": "设计工具/平面设计/工具"
+    },
+    {
+      "url": "https://canva.com",
+      "title": "Canva",
+      "description": "在线图形设计平台，提供模板、协作和品牌管理工具",
+      "_cat": "设计工具",
+      "category": "设计工具/平面设计/工具"
+    },
+    {
+      "url": "https://framer.com",
+      "title": "Framer",
+      "description": "交互式设计工具和网站构建器，支持原型和发布",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://princelform.com",
+      "title": "Principle",
+      "description": "交互设计工具，用于创建动画和高保真原型",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://proto.io",
+      "title": "Proto.io",
+      "description": "快速原型设计工具，创建高保真可交互原型",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://invisionapp.com",
+      "title": "InVision",
+      "description": "数字产品设计平台，提供原型、设计系统和团队协作",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://marvelapp.com",
+      "title": "Marvel",
+      "description": "快速原型和用户测试平台，从设计到交互原型一站式解决",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://uxpin.com",
+      "title": "UXPin",
+      "description": "基于浏览器的UI设计工具，支持交互原型和设计系统",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://penpot.app",
+      "title": "Penpot",
+      "description": "开源设计工具，支持UI设计和原型，可在浏览器中使用",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://penpot.app",
+      "title": "Penpot",
+      "description": "开源设计工具，支持UI设计和原型，可在浏览器中使用",
+      "_cat": "设计工具",
+      "category": "设计工具/UI设计/工具"
+    },
+    {
+      "url": "https://arxiv.org",
+      "title": "arXiv",
+      "description": "免费预印本学术论文库，覆盖物理、数学、计算机科学等领域",
+      "_cat": "学术科研",
+      "category": "学术科研/论文预印/平台"
+    },
+    {
+      "url": "https://scholar.google.com",
+      "title": "Google Scholar",
+      "description": "谷歌学术搜索，免费学术文献搜索引擎",
+      "_cat": "学术科研",
+      "category": "学术科研/论文检索/工具"
+    },
+    {
+      "url": "https://semanticscholar.org",
+      "title": "Semantic Scholar",
+      "description": "AI驱动的学术搜索引擎，由Allen Institute创建",
+      "_cat": "学术科研",
+      "category": "学术科研/论文检索/工具"
+    },
+    {
+      "url": "https://researchgate.net",
+      "title": "ResearchGate",
+      "description": "科研人员社交网络，分享论文、提问和专业交流",
+      "_cat": "学术科研",
+      "category": "学术科研/学术社区/平台"
+    },
+    {
+      "url": "https://academia.edu",
+      "title": "Academia.edu",
+      "description": "学术论文分享平台，研究人员分享论文和跟踪引用",
+      "_cat": "学术科研",
+      "category": "学术科研/学术社区/平台"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov",
+      "title": "PubMed",
+      "description": "免费生物医学文献数据库，由美国国立医学图书馆维护",
+      "_cat": "学术科研",
+      "category": "学术科研/专业数据库/平台"
+    },
+    {
+      "url": "https://ieee.org",
+      "title": "IEEE",
+      "description": "电气电子工程师学会，提供科技文献、标准和会议信息",
+      "_cat": "学术科研",
+      "category": "学术科研/学会组织/平台"
+    },
+    {
+      "url": "https://acm.org",
+      "title": "ACM",
+      "description": "美国计算机协会，提供计算领域的文献、会议和教育资源",
+      "_cat": "学术科研",
+      "category": "学术科研/学会组织/平台"
+    },
+    {
+      "url": "https://springer.com",
+      "title": "Springer",
+      "description": "全球学术出版集团，提供科技、医学、人文社科类书籍和期刊",
+      "_cat": "学术科研",
+      "category": "学术科研/出版社/平台"
+    },
+    {
+      "url": "https://elsevier.com",
+      "title": "Elsevier",
+      "description": "学术出版公司，出版大量科学、技术和医学期刊",
+      "_cat": "学术科研",
+      "category": "学术科研/出版社/平台"
+    },
+    {
+      "url": "https://wiley.com",
+      "title": "Wiley",
+      "description": "国际学术出版机构，覆盖科学、技术、医学、社会科学",
+      "_cat": "学术科研",
+      "category": "学术科研/出版社/平台"
+    },
+    {
+      "url": "https://nature.com",
+      "title": "Nature",
+      "description": "世界顶级科学期刊，发表高影响力的学术研究",
+      "_cat": "学术科研",
+      "category": "学术科研/出版社/平台"
+    },
+    {
+      "url": "https://science.org",
+      "title": "Science",
+      "description": "美国科学促进会期刊，发表重要科学发现",
+      "_cat": "学术科研",
+      "category": "学术科研/出版社/平台"
+    },
+    {
+      "url": "https://pnas.org",
+      "title": "PNAS",
+      "description": "美国国家科学院院刊，发表前沿跨学科研究",
+      "_cat": "学术科研",
+      "category": "学术科研/出版社/平台"
+    },
+    {
+      "url": "https://dl.acm.org",
+      "title": "ACM Digital Library",
+      "description": "计算机协会数字图书馆，提供文献和会议录",
+      "_cat": "学术科研",
+      "category": "学术科研/论文检索/工具"
+    },
+    {
+      "url": "https://ieeexplore.ieee.org",
+      "title": "IEEE Xplore",
+      "description": "IEEE文献数据库，提供技术文献、标准和会议录",
+      "_cat": "学术科研",
+      "category": "学术科研/论文检索/工具"
+    },
+    {
+      "url": "https://doi.org",
+      "title": "DOI",
+      "description": "数字对象标识符系统，为学术资源提供永久链接",
+      "_cat": "学术科研",
+      "category": "学术科研/论文检索/工具"
+    },
+    {
+      "url": "https://openaccess.com",
+      "title": "OpenAccess",
+      "description": "开放获取学术资源平台，免费获取研究论文",
+      "_cat": "学术科研",
+      "category": "学术科研/论文检索/工具"
+    },
+    {
+      "url": "https://youtube.com",
+      "title": "YouTube",
+      "description": "全球最大视频分享平台，支持上传、观看、分享和互动",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://bilibili.com",
+      "title": "Bilibili",
+      "description": "中国年轻世代文化社区，视频弹幕网站",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://twitch.tv",
+      "title": "Twitch",
+      "description": "实时流媒体平台，专注于游戏直播和内容创作者",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://netflix.com",
+      "title": "Netflix",
+      "description": "流媒体视频点播服务，提供电影、电视剧和原创内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://spotify.com",
+      "title": "Spotify",
+      "description": "音乐流媒体服务，提供数百万歌曲和播客内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://soundcloud.com",
+      "title": "SoundCloud",
+      "description": "音频分享平台，音乐人上传和分享音乐的社区",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://apple.com/music",
+      "title": "Apple Music",
+      "description": "苹果音乐流媒体服务，提供数百万歌曲和独家内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://deezer.com",
+      "title": "Deezer",
+      "description": "音乐流媒体服务，提供高保真音质和个性化推荐",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://tidal.com",
+      "title": "Tidal",
+      "description": "高保真音乐流媒体服务，专注于无损音质和艺人分成",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://audiomack.com",
+      "title": "Audiomack",
+      "description": "音乐发现和分享平台，支持独立音乐人",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://vimeo.com",
+      "title": "Vimeo",
+      "description": "高质量视频平台，面向创意专业人士和团队",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://dailymotion.com",
+      "title": "Dailymotion",
+      "description": "视频分享平台，提供用户生成内容和授权视频",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://youku.com",
+      "title": "优酷",
+      "description": "中国领先视频平台，提供影视、综艺、动漫等内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://iqiyi.com",
+      "title": "爱奇艺",
+      "description": "中国视频流媒体平台，提供正版高清影视内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://qq.com/video",
+      "title": "腾讯视频",
+      "description": "腾讯旗下视频平台，提供海量影视和独家内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://miguvideo.com",
+      "title": "咪咕视频",
+      "description": "中国移动旗下视频平台，提供体育、影视等内容",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://bilibili.com",
+      "title": "Bilibili",
+      "description": "中国年轻世代文化社区，视频弹幕网站",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://acfun.cn",
+      "title": "AcFun",
+      "description": "中国弹幕视频网站，ACG内容社区",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://ted.com",
+      "title": "TED",
+      "description": " ideas worth spreading，思想传播平台，提供 TED 演讲视频",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://coursera.org",
+      "title": "Coursera",
+      "description": "在线课程平台，与全球顶尖大学和公司合作提供课程",
+      "_cat": "学术科研",
+      "category": "学术科研/课程教材/平台"
+    },
+    {
+      "url": "https://edx.org",
+      "title": "edX",
+      "description": "大规模开放在线课程平台，由哈佛和MIT创建",
+      "_cat": "学术科研",
+      "category": "学术科研/课程教材/平台"
+    }
+  ]
+}

@@ -1,0 +1,677 @@
+{
+  "sites": [
+    {
+      "url": "https://civitai.com",
+      "title": "Civitai",
+      "description": "AI艺术模型共享平台，专注于Stable Diffusion模型",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/图像生成"
+    },
+    {
+      "url": "https=",
+      "title": "TensorFlow",
+      "description": "谷歌开源机器学习框架",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/库"
+    },
+    {
+      "url": "https://pytorch.org",
+      "title": "PyTorch",
+      "description": "Facebook开源机器学习框架，研究友好",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/库"
+    },
+    {
+      "url": "https://jax.dev",
+      "title": "JAX",
+      "description": "Google高性能数值计算库，支持自动微分",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/库"
+    },
+    {
+      "url": "https://scikit-learn.org",
+      "title": "Scikit-learn",
+      "description": "Python机器学习库，经典算法实现",
+      "_cat": "AI工具",
+      "category": "AI工具/AI开发/库"
+    },
+    {
+      "url": "https://rapidapi.com",
+      "title": "RapidAPI",
+      "description": "API市场，数千个API集成平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://api2cart.com",
+      "title": "API2Cart",
+      "description": "电商API集成平台，连接购物车和平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://n8n.io",
+      "title": "n8n",
+      "description": "工作流自动化工具，事件驱动无代码平台",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https=",
+      "title": "n8n.cloud",
+      "description": "n8n云端托管版本",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://automate.io",
+      "title": "Automate.io",
+      "description": "SaaS应用自动化集成平台",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://workato.com",
+      "title": "Workato",
+      "description": "企业级集成平台，连接应用和自动化流程",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Boomi",
+      "description": "Dell iPaaS平台，集成云和本地应用",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://informatica.com",
+      "title": "Informatica",
+      "description": "企业数据管理和云集成平台",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://mulesoft.com",
+      "title": "MuleSoft",
+      "description": "Salesforce集成平台，API管理和连接",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://snapLogic.com",
+      "title": "SnapLogic",
+      "description": "智能集成平台，连接应用和数据",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://jitterbit.com",
+      "title": "Jitterbit",
+      "description": "API集成和自动化平台",
+      "_cat": "效率办公",
+      "category": "效率办公/自动化/平台"
+    },
+    {
+      "url": "https://trello.com",
+      "title": "Trello",
+      "description": "看板式项目管理工具，Atlassian旗下",
+      "_cat": "效率办公",
+      "category": "效率办公/项目管理/平台"
+    },
+    {
+      "url": "https://airtable.com",
+      "title": "Airtable",
+      "description": "表格和数据库混合工具，低代码平台",
+      "_cat": "效率办公",
+      "category": "效率办公/在线表格/平台"
+    },
+    {
+      "url": "https://smartsheet.com",
+      "title": "Smartsheet",
+      "description": "工作管理和自动化平台，表格界面",
+      "_cat": "效率办公",
+      "category": "效率办公/在线表格/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Airtable",
+      "description": "表格和数据库混合平台",
+      "_cat": "效率办公",
+      "category": "效率办公/在线表格/平台"
+    },
+    {
+      "url": "https://coda.io",
+      "title": "Coda",
+      "description": "一体化文档和表格平台",
+      "_cat": "效率办公",
+      "category": "效率办公/在线表格/平台"
+    },
+    {
+      "url": "https://stacksea.com",
+      "title": "SeaTable",
+      "description": "低代码数据库平台，德国开发",
+      "_cat": "效率办公",
+      "category": "效率办公/在线表格/平台"
+    },
+    {
+      "url": "https://rows.com",
+      "title": "Rows",
+      "description": "智能表格和自动化平台",
+      "_cat": "效率办公",
+      "category": "效率办公/在线表格/平台"
+    },
+    {
+      "url": "https://office.com",
+      "title": "Microsoft 365 Online",
+      "description": "微软在线Office套件",
+      "_cat": "效率办公",
+      "category": "效率办公/办公软件/平台"
+    },
+    {
+      "url": "https://googledocs.com",
+      "title": "Google Docs",
+      "description": "谷歌在线文档编辑器",
+      "_cat": "效率办公",
+      "category": "效率办公/在线文档/平台"
+    },
+    {
+      "url": "https=",
+      "title": "OnlyOffice",
+      "description": "开源在线Office套件",
+      "_cat": "效率办公",
+      "category": "效率办公/办公软件/平台"
+    },
+    {
+      "url": "https://ethereum.org",
+      "title": "Ethereum",
+      "description": "去中心化智能合约平台",
+      "_cat": "其他",
+      "category": "其他/区块链/平台"
+    },
+    {
+      "url": "https://bitcoin.org",
+      "title": "Bitcoin",
+      "description": "点对点电子现金系统",
+      "_cat": "其他",
+      "category": "其他/区块链/平台"
+    },
+    {
+      "url": "https://solana.com",
+      "title": "Solana",
+      "description": "高性能区块链平台",
+      "_cat": "其他",
+      "category": "其他/区块链/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Polkadot",
+      "description": "跨链互操作协议",
+      "_cat": "其他",
+      "category": "其他/区块链/平台"
+    },
+    {
+      "url": "https://cosmos.network",
+      "title": "Cosmos",
+      "description": "区块链网络互联协议",
+      "_cat": "其他",
+      "category": "其他/区块链/平台"
+    },
+    {
+      "url": "https://chain.link",
+      "title": "Chainlink",
+      "description": "去中心化预言机网络",
+      "_cat": "其他",
+      "category": "其他/区块链/平台"
+    },
+    {
+      "url": "https://openai.com",
+      "title": "OpenAI API",
+      "description": "OpenAI大语言模型API",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://anthropic.com",
+      "title": "Claude API",
+      "description": "Anthropic Claude大模型API",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https=",
+      "title": "Vertex AI",
+      "description": "谷歌云机器学习平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://bedrock.ai",
+      "title": "Amazon Bedrock",
+      "description": "AWS大模型托管服务",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://azure.ai",
+      "title": "Azure AI",
+      "description": "微软Azure AI服务",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https=",
+      "title": "HuggingFace Inference API",
+      "description": "HuggingFace托管模型API",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://together.ai",
+      "title": "Together AI",
+      "description": "开源模型推理平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/综合平台"
+    },
+    {
+      "url": "https://perplexity.ai",
+      "title": "Perplexity AI",
+      "description": "AI驱动的搜索引擎",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https=",
+      "title": "You.com",
+      "description": "AI搜索引擎平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://andisearch.com",
+      "title": "Andi Search",
+      "description": "新一代AI搜索引擎",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://komo.ai",
+      "title": "Komo Search",
+      "description": "AI驱动的私密搜索引擎",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://you.com",
+      "title": "You.com",
+      "description": "AI搜索和聊天平台",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://phind.com",
+      "title": "Phind",
+      "description": "面向开发者的AI搜索引擎",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://kagi.com",
+      "title": "Kagi",
+      "description": "无广告搜索引擎，注重隐私",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://startpage.com",
+      "title": "Startpage",
+      "description": "隐私保护搜索引擎",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://duckduckgo.com",
+      "title": "DuckDuckGo",
+      "description": "隐私优先搜索引擎",
+      "_cat": "AI工具",
+      "category": "AI工具/人工智能/搜索引擎"
+    },
+    {
+      "url": "https://calendar.google.com",
+      "title": "Google Calendar",
+      "description": "谷歌在线日历服务",
+      "_cat": "效率办公",
+      "category": "效率办公/日历工具/平台"
+    },
+    {
+      "url": "https://outlook.live.com/calendar",
+      "title": "Outlook Calendar",
+      "description": "微软日历服务",
+      "_cat": "效率办公",
+      "category": "效率办公/日历工具/平台"
+    },
+    {
+      "url": "https://fantastical.com",
+      "title": "Fantastical",
+      "description": "Mac/iOS日历应用，自然语言输入",
+      "_cat": "效率办公",
+      "category": "效率办公/日历工具/工具"
+    },
+    {
+      "url": "https://cron.com",
+      "title": "Cron",
+      "description": "现代日历应用，团队协作和调度",
+      "_cat": "效率办公",
+      "category": "效率办公/日历工具/平台"
+    },
+    {
+      "url": "https://superhuman.com",
+      "title": "Superhuman",
+      "description": "付费邮件客户端，快速高效",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件管理/工具"
+    },
+    {
+      "url": "https://HEY.com",
+      "title": "HEY Email",
+      "description": "Basecamp出品邮件服务，重新定义邮箱",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件管理/平台"
+    },
+    {
+      "url": "https://sparkmailapp.com",
+      "title": "Spark",
+      "description": "智能邮箱客户端，团队协作功能",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件管理/工具"
+    },
+    {
+      "url": "https://mimestream.com",
+      "title": "Mimestream",
+      "description": "Mac Gmail客户端，原生集成",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件管理/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Canary Mail",
+      "description": "Mac邮件客户端，注重隐私",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件管理/工具"
+    },
+    {
+      "url": "https://nylas.com",
+      "title": "Nylas",
+      "description": "电子邮件和日历API平台",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件管理/平台"
+    },
+    {
+      "url": "https://postmarkapp.com",
+      "title": "Postmark",
+      "description": "事务性邮件送达服务",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件服务/平台"
+    },
+    {
+      "url": "https=",
+      "title": "SendGrid",
+      "description": "Twilio旗下邮件送达平台",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件服务/平台"
+    },
+    {
+      "url": "https://mailgun.com",
+      "title": "Mailgun",
+      "description": "邮件API服务，发送和接收邮件",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件服务/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Amazon SES",
+      "description": "亚马逊邮件服务",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件服务/平台"
+    },
+    {
+      "url": "https://brevo.com",
+      "title": "Brevo (Sendinblue)",
+      "description": "邮件营销和交易邮件平台",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件服务/平台"
+    },
+    {
+      "url": "https://mailjet.com",
+      "title": "Mailjet",
+      "description": "邮件营销和事务邮件平台",
+      "_cat": "效率办公",
+      "category": "效率办公/邮件服务/平台"
+    },
+    {
+      "url": "https://sentry.io",
+      "title": "Sentry",
+      "description": "应用监控和错误追踪平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://datadog.com",
+      "title": "Datadog",
+      "description": "全栈可观测平台，监控基础设施和应用",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://newrelic.com",
+      "title": "New Relic",
+      "description": "可观测性平台，监控应用性能",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://dynatrace.com",
+      "title": "Dynatrace",
+      "description": "AI驱动的可观测性平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://appdynamics.com",
+      "title": "AppDynamics",
+      "description": "应用性能监控平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://elastic.co",
+      "title": "Elastic",
+      "description": "Elastic Stack（ELK）提供商，搜索和分析平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://logz.io",
+      "title": "Logz.io",
+      "description": "ELK和Grafana云托管服务",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://splunk.com",
+      "title": "Splunk",
+      "description": "机器数据平台，安全和IT监控",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Sumo Logic",
+      "description": "云原生日志管理和分析平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://sumologic.com",
+      "title": "Sumo Logic",
+      "description": "云原生日志管理平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Papertrail",
+      "description": "云日志管理服务",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Loggly",
+      "description": "云日志管理服务",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://sematext.com",
+      "title": "Sematext",
+      "description": "日志监控和APM平台",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://papertrailapp.com",
+      "title": "Papertrail",
+      "description": "云日志聚合和搜索",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://logentries.com",
+      "title": "Logentries",
+      "description": "实时日志管理",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://postgresql.org",
+      "title": "PostgreSQL",
+      "description": "开源关系型数据库，功能丰富",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://mysql.com",
+      "title": "MySQL",
+      "description": "开源关系型数据库，Oracle旗下",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://mariadb.org",
+      "title": "MariaDB",
+      "description": "MySQL分支，社区维护的开源数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://mongodb.com",
+      "title": "MongoDB",
+      "description": "文档型NoSQL数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://redis.io",
+      "title": "Redis",
+      "description": "内存键值数据库，缓存和消息队列",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://sqlite.org",
+      "title": "SQLite",
+      "description": "嵌入式SQL数据库，零配置",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://cassandra.apache.org",
+      "title": "Cassandra",
+      "description": "Apache分布式NoSQL数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://elastic.co",
+      "title": "Elasticsearch",
+      "description": "分布式搜索和分析引擎",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://influxdata.com",
+      "title": "InfluxDB",
+      "description": "时间序列数据库",
+      "_cat": "开发工具",
+      "category": "开发Tools/代码资源/库"
+    },
+    {
+      "url": "https://clickhouse.com",
+      "title": "ClickHouse",
+      "description": "列式分析数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://timescale.com",
+      "title": "TimescaleDB",
+      "description": "PostgreSQL扩展的时间序列数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://cockroachlabs.com",
+      "title": "CockroachDB",
+      "description": "分布式SQL数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://yugabyte.com",
+      "title": "YugabyteDB",
+      "description": "分布式PostgreSQL兼容数据库",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://etcd.io",
+      "title": "etcd",
+      "description": "分布式键值存储，Kubernetes使用",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https=",
+      "title": "Consul",
+      "description": "HashiCorp服务网格和配置工具",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://zookeeper.apache.org",
+      "title": "ZooKeeper",
+      "description": "分布式协调服务",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    },
+    {
+      "url": "https://etcd.io",
+      "title": "etcd",
+      "description": "分布式键值存储",
+      "_cat": "开发工具",
+      "category": "开发工具/代码资源/库"
+    }
+  ],
+  "count": 96
+}

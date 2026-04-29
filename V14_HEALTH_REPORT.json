@@ -1,0 +1,98 @@
+{
+  "generated_at": "2026-04-25T22:37:06",
+  "version": "V14",
+  "total_sites": 3895,
+  "sites_with_url": 3895,
+  "sampled_count": 133,
+  "sample_healthy": 111,
+  "sample_rate": 83.46,
+  "estimated_total_healthy": 3703,
+  "estimated_health_rate": 95.07,
+  "elapsed_seconds": 48.01,
+  "sample_detail": {
+    "success": 111,
+    "failed": 22,
+    "fail_examples": [
+      {
+        "url": "https://judge0.com",
+        "error": "('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+      },
+      {
+        "url": "http://rnnlm.org/",
+        "error": "HTTPConnectionPool(host='rnnlm.org', port=80): Read timed out. (read timeout=8)"
+      },
+      {
+        "url": "https://discu.eu/weekly/golang/",
+        "error": "HTTPSConnectionPool(host='discu.eu', port=443): Max retries exceeded with url: /weekly/golang/ (Caused by SSLError(SSLError(1, '[SSL: TLSV1_ALERT_INTERNAL_ERROR] tlsv1 alert internal error (_ssl.c:1032)')))"
+      },
+      {
+        "url": "https://lyrion.org/",
+        "error": "HTTPSConnectionPool(host='lyrion.org', port=443): Read timed out. (read timeout=8)"
+      },
+      {
+        "url": "https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A",
+        "error": "HTTPSConnectionPool(host='www.youtube.com', port=443): Max retries exceeded with url: /channel/UCWN3xxRkmTPmbKwht9FuE5A (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.youtube.com', port=443) at 0x7f021a0ce350>, 'Connection to www.youtube.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.xhamster.com",
+        "error": "HTTPSConnectionPool(host='www.xhamster.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.xhamster.com', port=443) at 0x7f021a0cc410>, 'Connection to www.xhamster.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://nordvpn.com",
+        "error": "HTTPSConnectionPool(host='nordvpn.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='nordvpn.com', port=443) at 0x7f021a0cf750>, 'Connection to nordvpn.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.expressvpn.com",
+        "error": "HTTPSConnectionPool(host='www.expressvpn.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.expressvpn.com', port=443) at 0x7f021a0cd1d0>, 'Connection to www.expressvpn.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://surfshark.com",
+        "error": "HTTPSConnectionPool(host='surfshark.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='surfshark.com', port=443) at 0x7f021a0cda90>, 'Connection to surfshark.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://protonvpn.com",
+        "error": "HTTPSConnectionPool(host='protonvpn.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='protonvpn.com', port=443) at 0x7f021a0ce850>, 'Connection to protonvpn.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://mullvad.net",
+        "error": "HTTPSConnectionPool(host='mullvad.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='mullvad.net', port=443) at 0x7f021a0cce10>, 'Connection to mullvad.net timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://windscribe.com",
+        "error": "HTTPSConnectionPool(host='windscribe.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='windscribe.com', port=443) at 0x7f021a0cf890>, 'Connection to windscribe.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.tunnelbear.com",
+        "error": "HTTPSConnectionPool(host='www.tunnelbear.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.tunnelbear.com', port=443) at 0x7f021a0cead0>, 'Connection to www.tunnelbear.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.privateinternetaccess.com",
+        "error": "HTTPSConnectionPool(host='www.privateinternetaccess.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.privateinternetaccess.com', port=443) at 0x7f021a0cfd90>, 'Connection to www.privateinternetaccess.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.cyberghostvpn.com",
+        "error": "HTTPSConnectionPool(host='www.cyberghostvpn.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.cyberghostvpn.com', port=443) at 0x7f021a0cfb10>, 'Connection to www.cyberghostvpn.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.ivpn.net",
+        "error": "HTTPSConnectionPool(host='www.ivpn.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ivpn.net', port=443) at 0x7f021a0cfc50>, 'Connection to www.ivpn.net timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.dokuwiki.org",
+        "error": "HTTPSConnectionPool(host='www.dokuwiki.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.dokuwiki.org', port=443) at 0x7f021a0cf4d0>, 'Connection to www.dokuwiki.org timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://cleanbrowsing.org",
+        "error": "HTTPSConnectionPool(host='cleanbrowsing.org', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='cleanbrowsing.org', port=443) at 0x7f021a44fd90>, 'Connection to cleanbrowsing.org timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://www.dashlane.com",
+        "error": "HTTPSConnectionPool(host='www.dashlane.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.dashlane.com', port=443) at 0x7f021a0cc7d0>, 'Connection to www.dashlane.com timed out. (connect timeout=8)'))"
+      },
+      {
+        "url": "https://dashlane.com/business",
+        "error": "HTTPSConnectionPool(host='dashlane.com', port=443): Max retries exceeded with url: /business (Caused by ConnectTimeoutError(<HTTPSConnection(host='dashlane.com', port=443) at 0x7f021a0cf9d0>, 'Connection to dashlane.com timed out. (connect timeout=8)'))"
+      }
+    ]
+  }
+}

@@ -1,0 +1,208 @@
+{
+  "sites": [
+    {
+      "url": "https://steamcommunity.com",
+      "title": "Steam Community",
+      "description": "Valve游戏社区平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/社区"
+    },
+    {
+      "url": "https://epicgames.com",
+      "title": "Epic Games Store",
+      "description": "Epic游戏商店和平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://gog.com",
+      "title": "GOG.com",
+      "description": "DRM自由数字游戏平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https=",
+      "title": "itch.io",
+      "description": "独立游戏平台和商店",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://origin.com",
+      "title": "EA App",
+      "description": "EA游戏平台和商店",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Ubisoft Connect",
+      "description": "育碧游戏平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Xbox",
+      "description": "微软Xbox游戏平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://playstation.com",
+      "title": "PlayStation",
+      "description": "索尼PlayStation平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://nintendo.com",
+      "title": "Nintendo",
+      "description": "任天堂游戏平台",
+      "_cat": "多媒体",
+      "category": "多媒体/视频娱乐/平台"
+    },
+    {
+      "url": "https://hub.docker.com",
+      "title": "Docker Hub",
+      "description": "Docker官方容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https://gcr.io",
+      "title": "Google Container Registry",
+      "description": "谷歌容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https://mcr.microsoft.com",
+      "title": "Microsoft Container Registry",
+      "description": "微软容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https://quay.io",
+      "title": "Quay",
+      "description": "RedHat容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https://github.com/features/packages",
+      "title": "GitHub Container Registry",
+      "description": "GitHub容器镜像服务",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/GitHub/服务"
+    },
+    {
+      "url": "https://gitlab.com/packages",
+      "title": "GitLab Container Registry",
+      "description": "GitLab容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/GitLab/服务"
+    },
+    {
+      "url": "https://harbor.apache.org",
+      "title": "Apache Harbor",
+      "description": "企业级容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https=",
+      "title": "JFrog Artifactory",
+      "description": "通用包管理仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/仓库"
+    },
+    {
+      "url": "https://nexusrepository.org",
+      "title": "Sonatype Nexus",
+      "description": "软件仓库管理平台",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/仓库"
+    },
+    {
+      "url": "https=",
+      "title": "AWS ECR",
+      "description": "AWS容器镜像仓库",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https://azurecr.io",
+      "title": "Azure Container Registry",
+      "description": "Azure容器镜像服务",
+      "_cat": "开发工具",
+      "category": "开发工具/平台开源/docker/仓库"
+    },
+    {
+      "url": "https://gitkraken.com",
+      "title": "GitKraken",
+      "description": "跨平台Git客户端",
+      "_cat": "开发工具",
+      "category": "开发工具/开发工具/工具"
+    },
+    {
+      "url": "https://sourcetreeapp.com",
+      "title": "Sourcetree",
+      "description": "Atlassian免费Git客户端",
+      "_cat": "开发工具",
+      "category": "开发工具/开发工具/工具"
+    },
+    {
+      "url": "https://tortoisegit.org",
+      "title": "TortoiseGit",
+      "description": "Windows shell Git客户端",
+      "_cat": "开发工具",
+      "category": "开发工具/开发工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Git Extensions",
+      "description": "Windows Git GUI客户端",
+      "_cat": "开发工具",
+      "category": "开发工具/开发工具/工具"
+    },
+    {
+      "url": "https://smartgit.com",
+      "title": "SmartGit",
+      "description": "跨平台Git客户端",
+      "_cat": "开发工具",
+      "category": "开发工具/开发Tools/工具"
+    },
+    {
+      "url": "https://gitblame.com",
+      "title": "GitBlame",
+      "description": "在线Git仓库浏览工具",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://git-scm.com",
+      "title": "Git",
+      "description": "分布式版本控制系统",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://svn.apache.org",
+      "title": "Apache Subversion",
+      "description": "集中式版本控制系统",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    },
+    {
+      "url": "https://mercurial-scm.org",
+      "title": "Mercurial",
+      "description": "分布式版本控制系统",
+      "_cat": "开发工具",
+      "category": "开发工具/在线工具/工具"
+    }
+  ],
+  "count": 29
+}

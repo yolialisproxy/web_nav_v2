@@ -1,5 +1,5 @@
 # Category Balance Analysis Report
-Generated: 2026-04-23 19:25:50
+Generated: 2026-04-29 12:15:32
 
 ✅ Target rules: **10 - 50 sites per leaf category**
 
@@ -8,11 +8,11 @@ Generated: 2026-04-23 19:25:50
 | Metric | Value |
 |--------|-------|
 | Total leaf categories | 48 |
-| Total indexed websites | 704 |
-| ✅ Properly balanced | 1 |
+| Total indexed websites | 3360 |
+| ✅ Properly balanced | 0 |
 | ⚠️ Underfilled (< 10) | 0 |
 | ⛔ Overfilled (> 50) | 0 |
-| ❌ Empty (0 sites) | 47 |
+| ❌ Empty (0 sites) | 48 |
 | ❓ Uncategorized sites | 0 |
 
 ## Issues Requiring Balancing
@@ -54,6 +54,7 @@ Generated: 2026-04-23 19:25:50
 | 开发工具 > 前端开发 > 代码资源 | 0 | empty | Fill from pool, minimum 10 sites |
 | 效率办公 > 文档演示 > PPT | 0 | empty | Fill from pool, minimum 10 sites |
 | 效率办公 > 文档演示 > PPT资源 | 0 | empty | Fill from pool, minimum 10 sites |
+| 效率办公 > 文档演示 > 文档工具 | 0 | empty | Fill from pool, minimum 10 sites |
 | 效率办公 > 文档演示 > 表格工具 | 0 | empty | Fill from pool, minimum 10 sites |
 | 效率办公 > 协作交流 > 团队协作 | 0 | empty | Fill from pool, minimum 10 sites |
 | 效率办公 > 协作交流 > 沟通工具 | 0 | empty | Fill from pool, minimum 10 sites |

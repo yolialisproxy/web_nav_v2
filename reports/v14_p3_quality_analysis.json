@@ -1,0 +1,29 @@
+{
+  "total_sites": 3360,
+  "completeness": {
+    "missing_name": 0,
+    "missing_name_pct": 0.0,
+    "missing_description": 0,
+    "missing_description_pct": 0.0,
+    "empty_name": 0,
+    "empty_desc": 0
+  },
+  "duplicates": {
+    "duplicate_url_count": 0,
+    "duplicate_entries": 0,
+    "duplicate_details": {}
+  },
+  "category_format": {
+    "whitespace_issues": 0,
+    "other_category_sites": 0,
+    "unique_patterns": 166,
+    "level_distribution": {
+      "2": 873,
+      "3": 854,
+      "1": 1025,
+      "4": 608
+    }
+  },
+  "missing_name_samples": [],
+  "missing_desc_samples": []
+}

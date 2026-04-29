@@ -1,0 +1,31 @@
+{
+  "version": "V14",
+  "operation": "原子合并增量站点",
+  "timestamp": "2026-04-25T22:32:56",
+  "stats": {
+    "original_count": 3451,
+    "incoming_count": 471,
+    "new_unique_count": 444,
+    "final_count": 3895,
+    "health_rate_estimate": 97.0
+  },
+  "backup_path": "/home/yoli/GitHub/web_nav_v2/.backup/websites.json.20260425_223255",
+  "categories_distribution": {
+    "AI工具": 1125,
+    "效率办公": 785,
+    "开发工具": 509,
+    "设计工具": 407,
+    "其他": 281,
+    "学术科研": 271,
+    "多媒体": 224,
+    "系统工具": 86,
+    "密码工具": 61,
+    "安全工具": 41,
+    "知识库": 40,
+    "DNS工具": 39,
+    "办公工具": 23,
+    "开发Tools": 1,
+    "Other": 1,
+    "开发Tool": 1
+  }
+}

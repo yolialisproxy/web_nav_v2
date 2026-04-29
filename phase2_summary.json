@@ -1,0 +1,16 @@
+{
+  "total_sites": 3398,
+  "categories": {
+    "big": 288,
+    "mid": 61,
+    "small": 49
+  },
+  "needs_fill": {
+    "small": 27,
+    "mid": 33,
+    "big": 261
+  },
+  "other_sites": 3,
+  "missing_fields": 0,
+  "phase2_ready": true
+}

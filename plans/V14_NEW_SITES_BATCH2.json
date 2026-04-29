@@ -1,0 +1,775 @@
+{
+  "sites": [
+    {
+      "url": "https://brew.sh",
+      "title": "Homebrew",
+      "description": "macOS和Linux缺失的软件包管理器，快速安装开发者工具",
+      "_cat": "系统工具",
+      "category": "系统工具/实用工具/工具"
+    },
+    {
+      "url": "https://ffmpeg.org",
+      "title": "FFmpeg",
+      "description": "音视频处理领域的瑞士军刀，开源跨平台的流媒体框架",
+      "_cat": "系统工具",
+      "category": "系统工具/多媒体工具/工具"
+    },
+    {
+      "url": "https://imagemagick.org",
+      "title": "ImageMagick",
+      "description": "图像处理软件套件，支持200+图像格式的转换、编辑",
+      "_cat": "系统工具",
+      "category": "系统工具/图形工具/工具"
+    },
+    {
+      "url": "https://git-scm.com",
+      "title": "Git",
+      "description": "分布式版本控制系统，Linux内核开发者Linus Torvalds创建",
+      "_cat": "系统工具",
+      "category": "系统工具/版本控制/工具"
+    },
+    {
+      "url": "https://docker.com",
+      "title": "Docker",
+      "description": "容器化平台，简化应用开发、部署和运行",
+      "_cat": "系统工具",
+      "category": "系统工具/容器化/平台"
+    },
+    {
+      "url": "https://kubernetes.io",
+      "title": "Kubernetes",
+      "description": "开源容器编排系统，自动化部署、扩展和管理容器化应用",
+      "_cat": "系统工具",
+      "category": "系统工具/容器化/平台"
+    },
+    {
+      "url": "https://ansible.com",
+      "title": "Ansible",
+      "description": "自动化配置管理工具，简化IT基础设施的部署和管理",
+      "_cat": "系统工具",
+      "category": "系统工具/自动化/工具"
+    },
+    {
+      "url": "https://terraform.io",
+      "title": "Terraform",
+      "description": "基础设施即代码工具，安全高效地构建、变更云基础设施",
+      "_cat": "系统工具",
+      "category": "系统工具/自动化/工具"
+    },
+    {
+      "url": "https://pulumi.com",
+      "title": "Pulumi",
+      "description": "基础设施即代码平台，使用编程语言定义云资源",
+      "_cat": "系统工具",
+      "category": "系统工具/自动化/工具"
+    },
+    {
+      "url": "https://chef.io",
+      "title": "Chef",
+      "description": "自动化配置管理平台，企业级基础设施自动化",
+      "_cat": "系统工具",
+      "category": "系统工具/自动化/工具"
+    },
+    {
+      "url": "https://puppet.com",
+      "title": "Puppet",
+      "description": "IT自动化软件，管理服务器配置和部署",
+      "_cat": "系统工具",
+      "category": "系统工具/自动化/工具"
+    },
+    {
+      "url": "https://saltproject.io",
+      "title": "SaltStack",
+      "description": "事件驱动的IT自动化平台，用于配置管理和远程执行",
+      "_cat": "系统工具",
+      "category": "系统工具/自动化/工具"
+    },
+    {
+      "url": "https://vagrantup.com",
+      "title": "Vagrant",
+      "description": "开发和运维环境管理工具，创建可重复的虚拟环境",
+      "_cat": "系统工具",
+      "category": "系统工具/虚拟化/工具"
+    },
+    {
+      "url": "https://virtualbox.org",
+      "title": "VirtualBox",
+      "description": "跨平台虚拟化软件，支持x86虚拟化",
+      "_cat": "系统工具",
+      "category": "系统工具/虚拟化/工具"
+    },
+    {
+      "url": "https://vmware.com",
+      "title": "VMware",
+      "description": "虚拟化和云计算基础设施提供商",
+      "_cat": "系统工具",
+      "category": "系统工具/虚拟化/平台"
+    },
+    {
+      "url": "https://qemu.org",
+      "title": "QEMU",
+      "description": "开源机器模拟器和虚拟器",
+      "_cat": "系统工具",
+      "category": "系统工具/虚拟化/工具"
+    },
+    {
+      "url": "https://wireshark.org",
+      "title": "Wireshark",
+      "description": "网络协议分析器，捕获和分析网络数据包",
+      "_cat": "系统工具",
+      "category": "系统工具/网络工具/工具"
+    },
+    {
+      "url": "https://nmap.org",
+      "title": "Nmap",
+      "description": "网络安全扫描器，用于网络发现和安全审计",
+      "_cat": "系统工具",
+      "category": "系统工具/网络工具/工具"
+    },
+    {
+      "url": "https=",
+      "title": "htop",
+      "description": "交互式进程查看器，Linux系统性能监控工具",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/工具"
+    },
+    {
+      "url": "https://top.com",
+      "title": "Glances",
+      "description": "跨平台系统监控工具，提供CPU、内存、网络等实时信息",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/工具"
+    },
+    {
+      "url": "https://prometheus.io",
+      "title": "Prometheus",
+      "description": "开源监控和警报系统，专为云原生环境设计",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://grafana.com",
+      "title": "Grafana",
+      "description": "可视化和监控平台，支持多种数据源和仪表板",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://kibana.com",
+      "title": "Kibana",
+      "description": "数据可视化平台，用于探索、可视化和分析Elasticsearch数据",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://logstash.com",
+      "title": "Logstash",
+      "description": "服务器端数据处理管道，从多个来源采集数据并转换",
+      "_cat": "系统工具",
+      "category": "系统工具/监控工具/平台"
+    },
+    {
+      "url": "https://filezilla-project.org",
+      "title": "FileZilla",
+      "description": "免费FTP、FTPS和SFTP客户端，跨平台文件传输",
+      "_cat": "系统工具",
+      "category": "系统工具/网络工具/工具"
+    },
+    {
+      "url": "https://winmerge.org",
+      "title": "WinMerge",
+      "description": "Windows平台开源差异比较和合并工具",
+      "_cat": "系统工具",
+      "category": "系统工具/开发辅助/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Beyond Compare",
+      "description": "文件和文件夹比较工具，支持多种格式",
+      "_cat": "系统工具",
+      "category": "系统工具/开发辅助/工具"
+    },
+    {
+      "url": "https://curl.se",
+      "title": "cURL",
+      "description": "命令行数据传输工具，支持HTTP、FTP、SCP等多种协议",
+      "_cat": "系统工具",
+      "category": "系统工具/网络工具/工具"
+    },
+    {
+      "url": "https://wget.org",
+      "title": "Wget",
+      "description": "免费网络工具包，用于从网络下载文件",
+      "_cat": "系统工具",
+      "category": "系统工具/网络工具/工具"
+    },
+    {
+      "url": "https://bitwarden.com",
+      "title": "Bitwarden",
+      "description": "开源密码管理器，提供密码、笔记、身份信息的安全存储",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/平台"
+    },
+    {
+      "url": "https://1password.com",
+      "title": "1Password",
+      "description": "商业密码管理器，提供安全的密码存储和自动填充",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/平台"
+    },
+    {
+      "url": "https://lastpass.com",
+      "title": "LastPass",
+      "description": "密码管理服务，安全存储和自动填充密码",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/平台"
+    },
+    {
+      "url": "https://dashlane.com",
+      "title": "Dashlane",
+      "description": "密码管理器和数字钱包，提供安全存储和身份保护",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/平台"
+    },
+    {
+      "url": "https://keepass.info",
+      "title": "KeePass",
+      "description": "免费开源密码管理器，强加密本地存储",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/工具"
+    },
+    {
+      "url": "https://passbolt.com",
+      "title": "Passbolt",
+      "description": "开源密码管理器，专为团队协作设计",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/平台"
+    },
+    {
+      "url": "https://padlock.io",
+      "title": "Padlock",
+      "description": "简单易用的密码管理器，专注于个人安全",
+      "_cat": "密码工具",
+      "category": "密码工具/密码管理器/工具"
+    },
+    {
+      "url": "https://lesspass.com",
+      "title": "LessPass",
+      "description": "无存储密码管理器，基于算法生成密码",
+      "_cat": "密码工具",
+      "category": "密码工具/密码生成器/工具"
+    },
+    {
+      "url": "https://masterpassword.app",
+      "title": "Master Password",
+      "description": "基于算法的密码生成器，无需云存储",
+      "_cat": "密码工具",
+      "category": "密码工具/密码生成器/工具"
+    },
+    {
+      "url": "https://spideroak.com",
+      "title": "SpiderOak",
+      "description": "端到端加密的备份和同步服务",
+      "_cat": "密码工具",
+      "category": "密码工具/加密备份/平台"
+    },
+    {
+      "url": "https://cryptomator.org",
+      "title": "Cryptomator",
+      "description": "开源云文件加密工具，透明加密保护隐私",
+      "_cat": "密码工具",
+      "category": "密码工具/文件加密/工具"
+    },
+    {
+      "url": "https=",
+      "title": "VeraCrypt",
+      "description": "开源磁盘加密软件，保护敏感数据",
+      "_cat": "密码工具",
+      "category": "密码工具/文件加密/工具"
+    },
+    {
+      "url": "https://gpg4win.org",
+      "title": "Gpg4win",
+      "description": "GNU隐私 Guard  Windows版，电子邮件和文件加密",
+      "_cat": "密码工具",
+      "category": "密码工具/加密工具/平台"
+    },
+    {
+      "url": "https://gnupg.org",
+      "title": "GnuPG",
+      "description": "开源加密软件，实现OpenPGP标准",
+      "_cat": "密码工具",
+      "category": "密码工具/加密工具/平台"
+    },
+    {
+      "url": "https://keybase.io",
+      "title": "Keybase",
+      "description": "端到端加密的通信和文件共享平台",
+      "_cat": "密码工具",
+      "category": "密码工具/加密通讯/平台"
+    },
+    {
+      "url": "https://signal.org",
+      "title": "Signal",
+      "description": "端到端加密的即时通讯应用，注重隐私保护",
+      "_cat": "密码工具",
+      "category": "密码工具/加密通讯/平台"
+    },
+    {
+      "url": "https://telegram.org",
+      "title": "Telegram",
+      "description": "云基即时通讯软件，支持加密聊天和大文件传输",
+      "_cat": "密码工具",
+      "category": "密码工具/加密通讯/平台"
+    },
+    {
+      "url": "https://whatsapp.com",
+      "title": "WhatsApp",
+      "description": "跨平台即时通讯应用，提供端到端加密",
+      "_cat": "密码工具",
+      "category": "密码工具/加密通讯/平台"
+    },
+    {
+      "url": "https://viber.com",
+      "title": "Viber",
+      "description": "即时通讯和 VoIP 电话应用",
+      "_cat": "密码工具",
+      "category": "密码工具/加密通讯/平台"
+    },
+    {
+      "url": "https://threema.ch",
+      "title": "Threema",
+      "description": "瑞士开发的端到端加密即时通讯应用",
+      "_cat": "密码工具",
+      "category": "密码工具/加密通讯/平台"
+    },
+    {
+      "url": "https://cloudflare.com/dns",
+      "title": "Cloudflare DNS",
+      "description": "Cloudflare 1.1.1.1公共DNS服务，快速安全的DNS解析",
+      "_cat": "DNS工具",
+      "category": "DNS工具/DNS安全工具/平台"
+    },
+    {
+      "url": "https://quad9.net",
+      "title": "Quad9",
+      "description": "公共DNS服务，提供恶意软件和钓鱼网站防护",
+      "_cat": "DNS工具",
+      "category": "DNS工具/DNS安全工具/平台"
+    },
+    {
+      "url": "https://adguard.com/en/dns.html",
+      "title": "AdGuard DNS",
+      "description": "广告拦截DNS服务，过滤广告和跟踪器",
+      "_cat": "DNS工具",
+      "category": "DNS工具/DNS安全工具/平台"
+    },
+    {
+      "url": "https://nextdns.io",
+      "title": "NextDNS",
+      "description": "下一代DNS防火墙，提供实时保护和过滤",
+      "_cat": "DNS工具",
+      "category": "DNS工具/DNS安全工具/平台"
+    },
+    {
+      "url": "https://openDNS.com",
+      "title": "Cisco OpenDNS",
+      "description": "思科提供的DNS服务，提供安全内容和过滤",
+      "_cat": "DNS工具",
+      "category": "DNS工具/DNS安全工具/平台"
+    },
+    {
+      "url": "https://protonvpn.com",
+      "title": "ProtonVPN",
+      "description": "瑞士VPN服务，专注于隐私和安全",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://mullvad.net",
+      "title": "Mullvad VPN",
+      "description": "瑞典隐私优先的VPN服务，匿名性强",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://ivpn.net",
+      "title": "IVPN",
+      "description": "隐私保护VPN服务，无日志政策",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://nordvpn.com",
+      "title": "NordVPN",
+      "description": "商业VPN服务，提供高速连接和安全功能",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://expressvpn.com",
+      "title": "ExpressVPN",
+      "description": "高速VPN服务，支持多平台和强大加密",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://windscribe.com",
+      "title": "Windscribe",
+      "description": "VPN和代理服务，提供免费套餐和强大功能",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://surfshark.com",
+      "title": "Surfshark",
+      "description": "性价比VPN，无限设备连接和无日志政策",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://privateinternetaccess.com",
+      "title": "PIA",
+      "description": "性价比VPN，开源客户端和无日志政策",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://cyberghostvpn.com",
+      "title": "CyberGhost",
+      "description": "用户友好型VPN，专注于易用性和隐私保护",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https://hide.me",
+      "title": "Hide.me",
+      "description": "马来西亚VPN服务，提供免费和付费套餐",
+      "_cat": "安全工具",
+      "category": "安全工具/VPN安全/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Obsidian",
+      "description": "本地优先的知识管理和笔记软件，基于Markdown和双向链接",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/工具"
+    },
+    {
+      "url": "https://logseq.com",
+      "title": "Logseq",
+      "description": "开源知识管理和笔记应用，支持大纲和网络图",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/工具"
+    },
+    {
+      "url": "https://roamresearch.com",
+      "title": "Roam Research",
+      "description": "双向链接笔记工具，用于网络思考和知识管理",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/工具"
+    },
+    {
+      "url": "https=",
+      "title": "Notion",
+      "description": "一体化工作空间，整合笔记、任务、数据库功能",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/工具"
+    },
+    {
+      "url": "https://confluence.atlassian.com",
+      "title": "Confluence",
+      "description": "企业级团队协作文档和知识管理平台",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://mattermost.com",
+      "title": "Mattermost",
+      "description": "开源团队协作和消息平台，支持集成和自动化",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://slack.com",
+      "title": "Slack",
+      "description": "企业级团队协作平台，支持频道、消息和集成",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://discord.com",
+      "title": "Discord",
+      "description": "语音、视频和文本聊天应用，社区和团队协作",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://zulip.com",
+      "title": "Zulip",
+      "description": "开源团队聊天应用，以主题流式组织对话",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://rocket.chat",
+      "title": "Rocket.Chat",
+      "description": "开源团队沟通平台，支持聊天、视频会议和文件共享",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://matrix.org",
+      "title": "Matrix",
+      "description": "开源实时通信协议，端到端加密和去中心化",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://element.io",
+      "title": "Element",
+      "description": "Matrix协议客户端，安全团队协作和消息",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://wire.com",
+      "title": "Wire",
+      "description": "安全团队协作平台，端到端加密消息和通话",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://rixy.com",
+      "title": "Rixy",
+      "description": "团队知识库和文档中心，支持搜索和协作",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://guru.com",
+      "title": "Guru",
+      "description": "企业知识管理平台，验证信息并推荐给团队",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://slab.com",
+      "title": "Slab",
+      "description": "现代团队知识库，整合文档、对话和知识",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://helpjuice.com",
+      "title": "HelpJuice",
+      "description": "知识库软件，创建内部和客户帮助中心",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://document360.com",
+      "title": "Document360",
+      "description": "知识库和文档管理平台，用于创建内部和客户文档",
+      "_cat": "知识库",
+      "category": "知识库/知识库软件/平台"
+    },
+    {
+      "url": "https://microsoft.com/office",
+      "title": "Microsoft 365",
+      "description": "微软办公套件，包含Word、Excel、PowerPoint等",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/平台"
+    },
+    {
+      "url": "https://google.com/docs",
+      "title": "Google Workspace",
+      "description": "谷歌云办公套件，包含Docs、Sheets、Slides等在线工具",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/平台"
+    },
+    {
+      "url": "https://zoho.com",
+      "title": "Zoho Office Suite",
+      "description": "Zoho在线办公套件，提供Writer、Sheet、Show等",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/平台"
+    },
+    {
+      "url": "https://onlyoffice.com",
+      "title": "ONLYOFFICE",
+      "description": "开源办公套件，支持文档、表格、演示文稿",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/平台"
+    },
+    {
+      "url": "https://libreoffice.org",
+      "title": "LibreOffice",
+      "description": "免费开源办公套件，兼容Microsoft Office格式",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/工具"
+    },
+    {
+      "url": "https://calligra.org",
+      "title": "Calligra Suite",
+      "description": "开源办公和图形创作套件",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/工具"
+    },
+    {
+      "url": "https://wps.cn",
+      "title": "WPS Office",
+      "description": "金山办公软件，兼容Office格式的国产办公套件",
+      "_cat": "办公工具",
+      "category": "办公工具/办公软件/平台"
+    },
+    {
+      "url": "https://tencent.com/office",
+      "title": "腾讯文档",
+      "description": "腾讯推出的在线协作文档工具",
+      "_cat": "办公工具",
+      "category": "办公工具/在线文档/平台"
+    },
+    {
+      "url": "https://shimo.im",
+      "title": "石墨文档",
+      "description": "中国在线协作文档平台，支持多人实时编辑",
+      "_cat": "办公工具",
+      "category": "办公工具/在线文档/平台"
+    },
+    {
+      "url": "https://shiyanlou.com",
+      "title": "实验楼",
+      "description": "在线IT学习平台，提供实验环境和实战课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://jikexueyuan.com",
+      "title": "极客学院",
+      "description": "IT技能学习平台，提供在线课程和实践环境",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://ke.qq.com",
+      "title": "腾讯课堂",
+      "description": "腾讯在线教育平台，提供职业和兴趣课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https=",
+      "title": "网易云课堂",
+      "description": "网易在线教育平台，提供职业技能和生活兴趣课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://icourse163.org",
+      "title": "中国大学MOOC",
+      "description": "中国 MOOCs 平台，提供高校优质课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://mooc.org",
+      "title": "MOOC.org",
+      "description": "开放在线课程平台，汇聚全球教育资源",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://futurelearn.com",
+      "title": "FutureLearn",
+      "description": "英国在线学习平台，提供大学课程和专业技能培训",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://udacity.com",
+      "title": "Udacity",
+      "description": "在线教育平台，提供纳米学位和技术技能课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://udemy.com",
+      "title": "Udemy",
+      "description": "在线课程市场，提供12万+门各类课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://pluralsight.com",
+      "title": "Pluralsight",
+      "description": "技术技能学习平台，提供IT和开发者课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://linkedin.com/learning",
+      "title": "LinkedIn Learning",
+      "description": "领英学习平台，提供商业、技术和创意课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://khanacademy.org",
+      "title": "Khan Academy",
+      "description": "非盈利教育组织，提供免费K-12和大学课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://skillshare.com",
+      "title": "Skillshare",
+      "description": "创意技能学习社区，提供设计、摄影、写作等课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://domestika.org",
+      "title": "Domestika",
+      "description": "创意课程平台，提供设计、摄影、艺术课程",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://masterclass.com",
+      "title": "MasterClass",
+      "description": "大师级在线课程，由世界知名专家授课",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://brilliant.org",
+      "title": "Brilliant",
+      "description": "互动学习平台，通过问题解决学习STEM科目",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://duolingo.com",
+      "title": "Duolingo",
+      "description": "语言学习应用，游戏化多语言学习平台",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https://memrise.com",
+      "title": "Memrise",
+      "description": "语言学习平台，使用记忆科学和真实语境",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    },
+    {
+      "url": "https=",
+      "title": "Busuu",
+      "description": "语言学习社区，与母语者和算法学习",
+      "_cat": "学术科研",
+      "category": "学术科研/在线教育/平台"
+    }
+  ],
+  "count": 110
+}

@@ -17,13 +17,13 @@ class DataManager {
         if (this.isLoaded) return;
 
         try {
-            const response = await fetch('websites.json');
+            const response = await fetch('data/websites.json');
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             this.raw = await response.json();
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);

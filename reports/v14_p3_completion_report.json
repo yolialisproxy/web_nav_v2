@@ -1,0 +1,30 @@
+{
+  "task": "V14-P3 数据质量补全",
+  "timestamp": "2026-04-29",
+  "input_file": "/home/yoli/GitHub/web_nav_v2/data/websites.json",
+  "output_file": "/home/yoli/GitHub/web_nav_v2/data/websites.json",
+  "statistics": {
+    "original_total": 3398,
+    "cleaned_total": 3360,
+    "removed_duplicates": 37,
+    "filled_name": 0,
+    "filled_description": 0,
+    "categories_standardized": 0,
+    "final_missing_name": 0,
+    "final_missing_description": 0
+  },
+  "quality_targets": {
+    "name_missing_rate_target": "0%",
+    "desc_missing_rate_target": "0%",
+    "duplicate_url_target": "0",
+    "name_missing_rate_actual": "0.00%",
+    "desc_missing_rate_actual": "0.00%",
+    "duplicate_url_actual": 0
+  },
+  "details": {
+    "duplicates_removed": [],
+    "category_format_changes": [],
+    "still_missing_name_indices": [],
+    "still_missing_desc_indices": []
+  }
+}
