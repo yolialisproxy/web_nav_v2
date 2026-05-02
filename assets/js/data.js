@@ -23,7 +23,7 @@ class DataManager {
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -75,18 +75,36 @@ class DataManager {
             const leafNode = this.categories[cat].subCategories[sub].leafCategories[leaf];
             leafNode.siteIds.push(site.id);
 
-            // 建立映射索引
+            // 构建映射索引
             const leafId = `${cat}/${sub}/${leaf}`;
             if (!this.mappings.has(leafId)) {
                 this.mappings.set(leafId, []);
             }
             this.mappings.get(leafId).push(site.id);
+
+            // 兼容两级分类路径: 如果 leaf == sub (只有两级), 额外创建 sub-level 映射
+            if (leaf === sub) {
+                const subLevelId = `${cat}/${sub}`;
+                if (!this.mappings.has(subLevelId)) {
+                    this.mappings.set(subLevelId, []);
+                }
+                this.mappings.get(subLevelId).push(site.id);
+            }
         });
     }
 
     getSitesByLeafId(leafId) {
-        const siteIds = this.mappings.get(leafId) || [];
-        return siteIds.map(id => this.sites.get(id)).filter(Boolean);
+        // 先尝试完整三级分类映射
+        if (this.mappings.has(leafId)) {
+            const siteIds = this.mappings.get(leafId) || [];
+            return siteIds.map(id => this.sites.get(id)).filter(Boolean);
+        }
+        // 回退: 尝试二级分类映射 (兼容两级路径)
+        if (this.mappings.has(`./${leafId}`)) {
+            const siteIds = this.mappings.get(`./${leafId}`) || [];
+            return siteIds.map(id => this.sites.get(id)).filter(Boolean);
+        }
+return [];
     }
 
     getAllSites() {

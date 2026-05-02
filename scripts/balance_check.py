@@ -9,7 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 PROJECT_ROOT = Path("/home/yoli/GitHub/web_nav_v2")
-WEBSITES_PATH = PROJECT_ROOT / "websites.json"
+WEBSITES_PATH = PROJECT_ROOT / "data" / "websites.json"
 REPORTS_PATH = PROJECT_ROOT / "reports"
 REPORTS_PATH.mkdir(exist_ok=True)
 

@@ -1,0 +1,33 @@
+{
+  "dead_urls_sample": [
+    "https://www.usenix.org/conference/atc12/technical-sessions/presentation/serebryany\\",
+    "https://httpd.apache.org/",
+    "https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X",
+    "https://go-proverbs.github.io/",
+    "https://www.deepai.org",
+    "https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/\\",
+    "https://codidact.com/",
+    "https://www.xreader.org",
+    "https://chairnerd.seatgeek.com/building-out-the-seatgeek-data-pipeline/",
+    "http://www.libarchive.org/",
+    "https://www.videvo.com",
+    "https://arxiv.org/pdf/1611.07004v1.pdf",
+    "https://onsi.github.io/ginkgo/",
+    "http://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf",
+    "https://gocql.github.io",
+    "http://www.cs.cmu.edu/0.000000E+003dvision/",
+    "https://www.zoneminder.com/",
+    "https://git.freepbx.org/projects/FREEPBX",
+    "https://www.streamyard.com",
+    "https://depay.com/products/payments"
+  ],
+  "estimated_total_dead": 1159,
+  "domains_to_delete": [
+    "www.youtube.com",
+    "www.amazon.com",
+    "youtu.be",
+    "spdx.org",
+    "jasonpolites.github.io"
+  ],
+  "deletion_strategy": "删除失败次数>=2的域名所有站点"
+}

@@ -1,111 +1,9 @@
 {
-  "AI工具/人工智能/AI视频生成": {
-    "current_count": 3,
-    "target_count": 9,
-    "gap": 6,
-    "priority": "high"
-  },
-  "AI工具/人工智能/写作生成": {
-    "current_count": 2,
-    "target_count": 9,
-    "gap": 7,
-    "priority": "high"
-  },
-  "AI工具/人工智能/图像扩展/子类-3": {
-    "current_count": 2,
-    "target_count": 9,
-    "gap": 7,
-    "priority": "high"
-  },
-  "AI工具/人工智能/图像识别/子类-5": {
-    "current_count": 6,
-    "target_count": 9,
-    "gap": 3,
-    "priority": "medium"
-  },
-  "AI工具/人工智能/图生图/子类-5": {
-    "current_count": 4,
-    "target_count": 9,
-    "gap": 5,
-    "priority": "high"
-  },
-  "AI工具/人工智能/场景生成/子类-5": {
-    "current_count": 6,
-    "target_count": 9,
-    "gap": 3,
-    "priority": "medium"
-  },
-  "AI工具/人工智能/情感分析/子类-5": {
-    "current_count": 8,
-    "target_count": 9,
-    "gap": 1,
-    "priority": "low"
-  },
-  "AI工具/人工智能/推荐系统/子类-5": {
+  "办公工具": {
     "current_count": 7,
     "target_count": 9,
     "gap": 2,
     "priority": "low"
-  },
-  "AI工具/人工智能/文档分析": {
-    "current_count": 4,
-    "target_count": 9,
-    "gap": 5,
-    "priority": "high"
-  },
-  "AI工具/人工智能/文生图/子类-5": {
-    "current_count": 1,
-    "target_count": 9,
-    "gap": 8,
-    "priority": "high"
-  },
-  "AI工具/人工智能/聊天对话": {
-    "current_count": 5,
-    "target_count": 9,
-    "gap": 4,
-    "priority": "medium"
-  },
-  "AI工具/人工智能/背景移除/子类-4": {
-    "current_count": 2,
-    "target_count": 9,
-    "gap": 7,
-    "priority": "high"
-  },
-  "AI工具/人工智能/背景移除/子类-5": {
-    "current_count": 1,
-    "target_count": 9,
-    "gap": 8,
-    "priority": "high"
-  },
-  "AI工具/人工智能/自动化流程/子类-4": {
-    "current_count": 4,
-    "target_count": 9,
-    "gap": 5,
-    "priority": "high"
-  },
-  "AI工具/人工智能/视频工具": {
-    "current_count": 2,
-    "target_count": 9,
-    "gap": 7,
-    "priority": "high"
-  },
-  "AI工具/人工智能/语音识别/子类-4": {
-    "current_count": 5,
-    "target_count": 9,
-    "gap": 4,
-    "priority": "medium"
-  },
-  "AI工具/人工智能/预测分析/子类-5": {
-    "current_count": 4,
-    "target_count": 9,
-    "gap": 5,
-    "priority": "high"
-  },
-  "AI工具/人工智能/风格迁移/子类-2": {
-    "current_count": 1,
-    "target_count": 9,
-    "gap": 8,
-    "priority": "high"
   },
   "办公工具/协作社区": {
     "current_count": 3,
@@ -120,9 +18,9 @@
     "priority": "high"
   },
   "多媒体/特效生成": {
-    "current_count": 3,
+    "current_count": 2,
     "target_count": 9,
-    "gap": 6,
+    "gap": 7,
     "priority": "high"
   },
   "多媒体/视频娱乐/国内视频": {
@@ -150,9 +48,9 @@
     "priority": "medium"
   },
   "开发工具/API服务": {
-    "current_count": 4,
+    "current_count": 3,
     "target_count": 9,
-    "gap": 5,
+    "gap": 6,
     "priority": "high"
   },
   "开发工具/API生成": {
@@ -167,11 +65,23 @@
     "gap": 3,
     "priority": "medium"
   },
-  "开发工具/平台开源": {
-    "current_count": 6,
+  "开发工具/学习生成/文档教程": {
+    "current_count": 5,
     "target_count": 9,
-    "gap": 3,
+    "gap": 4,
     "priority": "medium"
+  },
+  "开发工具/库": {
+    "current_count": 2,
+    "target_count": 9,
+    "gap": 7,
+    "priority": "high"
+  },
+  "开发工具/数据库": {
+    "current_count": 4,
+    "target_count": 9,
+    "gap": 5,
+    "priority": "high"
   },
   "开发工具/文档托管": {
     "current_count": 8,
@@ -180,16 +90,16 @@
     "priority": "low"
   },
   "开发工具/文档资源": {
-    "current_count": 3,
+    "current_count": 8,
     "target_count": 9,
-    "gap": 6,
-    "priority": "high"
+    "gap": 1,
+    "priority": "low"
   },
   "开发工具/部署服务": {
-    "current_count": 5,
+    "current_count": 4,
     "target_count": 9,
-    "gap": 4,
-    "priority": "medium"
+    "gap": 5,
+    "priority": "high"
   },
   "效率办公": {
     "current_count": 4,
@@ -275,6 +185,12 @@
     "gap": 1,
     "priority": "low"
   },
+  "效率办公/笔记": {
+    "current_count": 4,
+    "target_count": 9,
+    "gap": 5,
+    "priority": "high"
+  },
   "效率办公/网文作者工具": {
     "current_count": 3,
     "target_count": 9,
@@ -311,10 +227,28 @@
     "gap": 4,
     "priority": "medium"
   },
+  "效率办公/面试技巧": {
+    "current_count": 2,
+    "target_count": 9,
+    "gap": 7,
+    "priority": "high"
+  },
   "系统工具/实用工具/网络工具": {
     "current_count": 3,
     "target_count": 9,
     "gap": 6,
+    "priority": "high"
+  },
+  "系统工具/容器管理": {
+    "current_count": 3,
+    "target_count": 9,
+    "gap": 6,
+    "priority": "high"
+  },
+  "系统工具/网络安全": {
+    "current_count": 4,
+    "target_count": 9,
+    "gap": 5,
     "priority": "high"
   },
   "设计工具/UI设计开源": {
@@ -324,16 +258,22 @@
     "priority": "high"
   },
   "设计工具/图片社区": {
-    "current_count": 7,
-    "target_count": 9,
-    "gap": 2,
-    "priority": "low"
-  },
-  "设计工具/字体教程": {
     "current_count": 5,
     "target_count": 9,
     "gap": 4,
     "priority": "medium"
+  },
+  "设计工具/字体教程": {
+    "current_count": 4,
+    "target_count": 9,
+    "gap": 5,
+    "priority": "high"
+  },
+  "设计工具/字体资源": {
+    "current_count": 8,
+    "target_count": 9,
+    "gap": 1,
+    "priority": "low"
   },
   "设计工具/平台资源": {
     "current_count": 3,
@@ -348,9 +288,9 @@
     "priority": "medium"
   },
   "设计工具/模板社区": {
-    "current_count": 4,
+    "current_count": 3,
     "target_count": 9,
-    "gap": 5,
+    "gap": 6,
     "priority": "high"
   },
   "设计工具/流程图生成": {
@@ -372,9 +312,9 @@
     "priority": "high"
   },
   "设计工具/白板资源": {
-    "current_count": 3,
+    "current_count": 4,
     "target_count": 9,
-    "gap": 6,
+    "gap": 5,
     "priority": "high"
   },
   "设计工具/资源社区": {

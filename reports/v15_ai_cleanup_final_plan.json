@@ -1,0 +1,2204 @@
+{
+  "summary": {
+    "keep_original": 1,
+    "purge_original": 115,
+    "review_original": 213,
+    "auto_purge": 8,
+    "auto_keep": 0,
+    "still_review": 205,
+    "projected_final_ai_count": 1
+  },
+  "keep_sites": [
+    {
+      "url": "https://huggingface.co",
+      "name": "Hugging Face",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches AI pattern: huggingface"
+    }
+  ],
+  "purge_sites": [
+    {
+      "url": "https://sindresorhus.com/assets/thanks/nitric-logo.svg\\",
+      "name": "https://sindresorhus.com/assets/thanks/nitric-logo.svg\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: assets/thanks"
+    },
+    {
+      "url": "https://d3j2pkmjtin6ou.cloudfront.net/fork-button.png\\",
+      "name": "https://d3j2pkmjtin6ou.cloudfront.net/fork-button.png\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: fork-button"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=i_AQT_XfvD8\\u0026amp;index=6\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\",
+      "name": "https://www.youtube.com/watch?v=i_AQT_XfvD8\\u0026amp;index=6\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=P-8Z0-MhdQs\\u0026amp;list=PLdzf4Clw0VbOEWOS_sLhT_9zaiQDrS5AR\\u0026amp;index=3\\",
+      "name": "https://www.youtube.com/watch?v=P-8Z0-MhdQs\\u0026amp;list=PLdzf4Clw0VbOEWOS_sLhT_9zaiQDrS5AR\\u0026amp;index=3\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "http://activemq.apache.org/\\",
+      "name": "http://activemq.apache.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: activemq.apache.org"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=76dhtgZt38A&amp;ab_channel=MITOpenCourseWare",
+      "name": "https://www.youtube.com/watch?v=76dhtgZt38A&amp;ab_channel=MITOpenCourseWare",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=i_AQT_XfvD8&amp;index=6&amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm",
+      "name": "https://www.youtube.com/watch?v=i_AQT_XfvD8&amp;index=6&amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh",
+      "name": "https://www.youtube.com/playlist?list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=z1mkCe3kVUA\\",
+      "name": "https://www.youtube.com/watch?v=z1mkCe3kVUA\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TDo3r5M1LNo\\u0026amp;ab_channel=MITOpenCourseWare\\",
+      "name": "https://www.youtube.com/watch?v=TDo3r5M1LNo\\u0026amp;ab_channel=MITOpenCourseWare\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq\\",
+      "name": "https://www.youtube.com/playlist?list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2T-A_GFuoTo&amp;t=650s",
+      "name": "https://www.youtube.com/watch?v=2T-A_GFuoTo&amp;t=650s",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=xhr26ia4k38",
+      "name": "https://www.youtube.com/watch?v=xhr26ia4k38",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JrNF0KRAlyo",
+      "name": "https://www.youtube.com/watch?v=JrNF0KRAlyo",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Backup\\",
+      "name": "https://en.wikipedia.org/wiki/Backup\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=T3A4jlHlhtA\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=19\\",
+      "name": "https://www.youtube.com/watch?v=T3A4jlHlhtA\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=19\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JrNF0KRAlyo\\",
+      "name": "https://www.youtube.com/watch?v=JrNF0KRAlyo\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=T3A4jlHlhtA&amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&amp;index=19",
+      "name": "https://www.youtube.com/watch?v=T3A4jlHlhtA&amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&amp;index=19",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=COZK7NATh4k\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\u0026amp;index=28\\",
+      "name": "https://www.youtube.com/watch?v=COZK7NATh4k\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\u0026amp;index=28\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=5cKTP36HVgI\\",
+      "name": "https://www.youtube.com/watch?v=5cKTP36HVgI\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JAMLuxdHH8o",
+      "name": "https://www.youtube.com/watch?v=JAMLuxdHH8o",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://sindresorhus.com/assets/thanks/circleback-logo.png?x\\",
+      "name": "https://sindresorhus.com/assets/thanks/circleback-logo.png?x\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: assets/thanks"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MiyLo8adrWw\\",
+      "name": "https://www.youtube.com/watch?v=MiyLo8adrWw\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=RpgcYiky7uw",
+      "name": "https://www.youtube.com/watch?v=RpgcYiky7uw",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0EzHjQ_SOeU&amp;index=11&amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm",
+      "name": "https://www.youtube.com/watch?v=0EzHjQ_SOeU&amp;index=11&amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=WGJrLqtX7As",
+      "name": "https://www.youtube.com/watch?v=WGJrLqtX7As",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=86g8jAQug04\\u0026amp;index=33\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "name": "https://www.youtube.com/watch?v=86g8jAQug04\\u0026amp;index=33\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0EzHjQ_SOeU\\u0026amp;index=11\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\",
+      "name": "https://www.youtube.com/watch?v=0EzHjQ_SOeU\\u0026amp;index=11\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL9D558D49CA734A02",
+      "name": "https://www.youtube.com/playlist?list=PL9D558D49CA734A02",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=H4vMcD7zKM0",
+      "name": "https://www.youtube.com/watch?v=H4vMcD7zKM0",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=VEV74hwASeU&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh&amp;index=6",
+      "name": "https://www.youtube.com/watch?v=VEV74hwASeU&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh&amp;index=6",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZNFPPv98DjTdD9X6UI9KMHz",
+      "name": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZNFPPv98DjTdD9X6UI9KMHz",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=gm8DUJJhmY4\\u0026amp;index=34\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "name": "https://www.youtube.com/watch?v=gm8DUJJhmY4\\u0026amp;index=34\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=R5ON3iwx78M\\",
+      "name": "https://www.youtube.com/watch?v=R5ON3iwx78M\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9nWyWwY2Onc\\",
+      "name": "https://www.youtube.com/watch?v=9nWyWwY2Onc\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JWD1Fpdd4Pc\\",
+      "name": "https://www.youtube.com/watch?v=JWD1Fpdd4Pc\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=JAMLuxdHH8o\\",
+      "name": "https://www.youtube.com/watch?v=JAMLuxdHH8o\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=z1mkCe3kVUA",
+      "name": "https://www.youtube.com/watch?v=z1mkCe3kVUA",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MCs5OvhV9S4\\",
+      "name": "https://www.youtube.com/watch?v=MCs5OvhV9S4\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLamzFoFxwoNjPfxzaWqs7cZGsPYy0x_gI\\",
+      "name": "https://www.youtube.com/playlist?list=PLamzFoFxwoNjPfxzaWqs7cZGsPYy0x_gI\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=yEwSGhSsT0U\\u0026amp;index=35\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "name": "https://www.youtube.com/watch?v=yEwSGhSsT0U\\u0026amp;index=35\\u0026amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=0SARbwvhupQ\\",
+      "name": "https://www.youtube.com/watch?v=0SARbwvhupQ\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Xxut2PN-V8Q\\",
+      "name": "https://www.youtube.com/watch?v=Xxut2PN-V8Q\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=44pAWI7v5Zk\\",
+      "name": "https://www.youtube.com/watch?v=44pAWI7v5Zk\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=G-lGCC4KKok",
+      "name": "https://www.youtube.com/watch?v=G-lGCC4KKok",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=EBQIGy1ROLY\\u0026amp;index=8\\u0026amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh\\",
+      "name": "https://www.youtube.com/watch?v=EBQIGy1ROLY\\u0026amp;index=8\\u0026amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZMxejjIyFHWa-4nKg6sdoIv\\",
+      "name": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZMxejjIyFHWa-4nKg6sdoIv\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ujODL7MD04Q\\",
+      "name": "https://www.youtube.com/watch?v=ujODL7MD04Q\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=kPRA0W1kECg\\",
+      "name": "https://www.youtube.com/watch?v=kPRA0W1kECg\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZOUFgdIeOPuH6cfSnNRMau-\\",
+      "name": "https://www.youtube.com/playlist?list=PL9xmBV_5YoZOUFgdIeOPuH6cfSnNRMau-\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=rvdJDijO2Ro&amp;index=10&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb",
+      "name": "https://www.youtube.com/watch?v=rvdJDijO2Ro&amp;index=10&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Ut90klNN264&amp;index=30&amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P",
+      "name": "https://www.youtube.com/watch?v=Ut90klNN264&amp;index=30&amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=kPRA0W1kECg",
+      "name": "https://www.youtube.com/watch?v=kPRA0W1kECg",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=modXC5IWTJI",
+      "name": "https://www.youtube.com/watch?v=modXC5IWTJI",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vjYF_fAZI5E\\u0026amp;list=PLrRW1w6CGAcXbMtDFj205vALOGmiRc82-\\u0026amp;index=24\\",
+      "name": "https://www.youtube.com/watch?v=vjYF_fAZI5E\\u0026amp;list=PLrRW1w6CGAcXbMtDFj205vALOGmiRc82-\\u0026amp;index=24\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Strace",
+      "name": "https://en.wikipedia.org/wiki/Strace",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Skip_list\\",
+      "name": "https://en.wikipedia.org/wiki/Skip_list\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=MUe5DXRhyAo\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=15\\",
+      "name": "https://www.youtube.com/watch?v=MUe5DXRhyAo\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=15\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ItHp5laE1VE&amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&amp;index=23",
+      "name": "https://www.youtube.com/watch?v=ItHp5laE1VE&amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&amp;index=23",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=BRO7mVIFt08&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&amp;index=9",
+      "name": "https://www.youtube.com/watch?v=BRO7mVIFt08&amp;list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb&amp;index=9",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TJ8SkcUSdbU\\",
+      "name": "https://www.youtube.com/watch?v=TJ8SkcUSdbU\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6G_W54zuadg\\u0026amp;t=6s\\",
+      "name": "https://www.youtube.com/watch?v=6G_W54zuadg\\u0026amp;t=6s\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=P9Ydif5_qvE\\",
+      "name": "https://www.youtube.com/watch?v=P9Ydif5_qvE\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=3vV4YiqKm1o\\",
+      "name": "https://www.youtube.com/watch?v=3vV4YiqKm1o\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iYvBtGKsqSg\\u0026amp;index=3\\u0026amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6\\",
+      "name": "https://www.youtube.com/watch?v=iYvBtGKsqSg\\u0026amp;index=3\\u0026amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=p-gpaIGRCQI&amp;list=PLFE6E58F856038C69&amp;index=11",
+      "name": "https://www.youtube.com/watch?v=p-gpaIGRCQI&amp;list=PLFE6E58F856038C69&amp;index=11",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/High_Level_Assembly",
+      "name": "https://en.wikipedia.org/wiki/High_Level_Assembly",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Circular_buffer\\",
+      "name": "https://en.wikipedia.org/wiki/Circular_buffer\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ufj5_bppBsA\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=7\\",
+      "name": "https://www.youtube.com/watch?v=ufj5_bppBsA\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=7\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iPnPVcZmRbE\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=20\\",
+      "name": "https://www.youtube.com/watch?v=iPnPVcZmRbE\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=20\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=XM4lGflQFvA",
+      "name": "https://www.youtube.com/watch?v=XM4lGflQFvA",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=oBSuXP-1Tc0",
+      "name": "https://www.youtube.com/watch?v=oBSuXP-1Tc0",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZusiKXcz_ac\\",
+      "name": "https://www.youtube.com/watch?v=ZusiKXcz_ac\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ufj5_bppBsA&amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;index=7",
+      "name": "https://www.youtube.com/watch?v=ufj5_bppBsA&amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;index=7",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://0xacab.org/liberate/backupninja\\",
+      "name": "https://0xacab.org/liberate/backupninja\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: backup"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=ZusiKXcz_ac",
+      "name": "https://www.youtube.com/watch?v=ZusiKXcz_ac",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mUBmcbbJNf4&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&amp;index=27",
+      "name": "https://www.youtube.com/watch?v=mUBmcbbJNf4&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&amp;index=27",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=uY85GkaYzBk\\",
+      "name": "https://www.youtube.com/watch?v=uY85GkaYzBk\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=l1BCv3qqW4A\\u0026amp;index=20\\u0026amp;list=PLB7540DEDD482705B\\",
+      "name": "https://www.youtube.com/watch?v=l1BCv3qqW4A\\u0026amp;index=20\\u0026amp;list=PLB7540DEDD482705B\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2P-yW7LQr08\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\",
+      "name": "https://www.youtube.com/watch?v=2P-yW7LQr08\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=6bwzNg5qQ0o&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh&amp;index=2",
+      "name": "https://www.youtube.com/watch?v=6bwzNg5qQ0o&amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh&amp;index=2",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PL1H1sBF1VAKVMONJWJkmUh6_p8g4F2oy1\\",
+      "name": "https://www.youtube.com/playlist?list=PL1H1sBF1VAKVMONJWJkmUh6_p8g4F2oy1\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/playlist"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=9TNI2wHmaeI\\u0026amp;index=31\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\",
+      "name": "https://www.youtube.com/watch?v=9TNI2wHmaeI\\u0026amp;index=31\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=TOb1tuEZ2X4\\u0026amp;index=5\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\",
+      "name": "https://www.youtube.com/watch?v=TOb1tuEZ2X4\\u0026amp;index=5\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=mUBmcbbJNf4\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\u0026amp;index=27\\",
+      "name": "https://www.youtube.com/watch?v=mUBmcbbJNf4\\u0026amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp\\u0026amp;index=27\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=f9cVS_URPc0&amp;ab_channel=MITOpenCourseWare",
+      "name": "https://www.youtube.com/watch?v=f9cVS_URPc0&amp;ab_channel=MITOpenCourseWare",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2xPE4Wq8coQ&amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&amp;index=21",
+      "name": "https://www.youtube.com/watch?v=2xPE4Wq8coQ&amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx&amp;index=21",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=4q-jmGrmxKs&amp;index=25&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp",
+      "name": "https://www.youtube.com/watch?v=4q-jmGrmxKs&amp;index=25&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=YJZCUhxNCv8",
+      "name": "https://www.youtube.com/watch?v=YJZCUhxNCv8",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=2g9OSRKJuzM&amp;index=10&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp",
+      "name": "https://www.youtube.com/watch?v=2g9OSRKJuzM&amp;index=10&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=NzgFUwOaoIw&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&amp;index=15",
+      "name": "https://www.youtube.com/watch?v=NzgFUwOaoIw&amp;list=PLUl4u3cNGP6317WaSNfmCvGym2ucw3oGp&amp;index=15",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: youtube.com/watch"
+    },
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0.html",
+      "name": "https://spdx.org/licenses/Apache-2.0.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://0xacab.org/liberate/backupninja",
+      "name": "https://0xacab.org/liberate/backupninja",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: backup"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Name_server",
+      "name": "https://en.wikipedia.org/wiki/Name_server",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://spdx.org/licenses/AGPL-3.0.html\\",
+      "name": "https://spdx.org/licenses/AGPL-3.0.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "http://i.creativecommons.org/l/by-sa/4.0/88x31.png\\",
+      "name": "http://i.creativecommons.org/l/by-sa/4.0/88x31.png\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: .png"
+    },
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0.html\\",
+      "name": "https://spdx.org/licenses/Apache-2.0.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://spdx.org/licenses/LGPL-3.0.html\\",
+      "name": "https://spdx.org/licenses/LGPL-3.0.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://www.urbackup.org/",
+      "name": "https://www.urbackup.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: backup"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol",
+      "name": "https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://dd-wrt.com/\\",
+      "name": "https://dd-wrt.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: dd-wrt.com"
+    },
+    {
+      "url": "https://spdx.org/licenses/BSD-2-Clause.html\\",
+      "name": "https://spdx.org/licenses/BSD-2-Clause.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Message_broker\\",
+      "name": "https://en.wikipedia.org/wiki/Message_broker\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://spdx.org/licenses/MPL-2.0.html\\",
+      "name": "https://spdx.org/licenses/MPL-2.0.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://spdx.org/licenses/BSD-3-Clause.html\\",
+      "name": "https://spdx.org/licenses/BSD-3-Clause.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://spdx.org/licenses/BUSL-1.1.html\\",
+      "name": "https://spdx.org/licenses/BUSL-1.1.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://spdx.org/licenses/GPL-3.0.html",
+      "name": "https://spdx.org/licenses/GPL-3.0.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Shared-nothing_architecture",
+      "name": "https://en.wikipedia.org/wiki/Shared-nothing_architecture",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://spdx.org/licenses/OLDAP-2.8.html\\",
+      "name": "https://spdx.org/licenses/OLDAP-2.8.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Web_server",
+      "name": "https://en.wikipedia.org/wiki/Web_server",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://spdx.org/licenses/IPL-1.0.html",
+      "name": "https://spdx.org/licenses/IPL-1.0.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/OS-level_virtualization",
+      "name": "https://en.wikipedia.org/wiki/OS-level_virtualization",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://en.wikipedia.org/wiki/Reverse_proxy",
+      "name": "https://en.wikipedia.org/wiki/Reverse_proxy",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: wikipedia.org/wiki"
+    },
+    {
+      "url": "https://spdx.org/licenses/EPL-1.0.html\\",
+      "name": "https://spdx.org/licenses/EPL-1.0.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://spdx.org/licenses/LGPL-2.0.html",
+      "name": "https://spdx.org/licenses/LGPL-2.0.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Matches non-AI pattern: spdx.org"
+    },
+    {
+      "url": "https://youtu.be/zltgXvg6r3k",
+      "name": "https://youtu.be/zltgXvg6r3k",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: youtu\\.be"
+    },
+    {
+      "url": "https://archive.org/details/ucberkeley_webcast_Wp8oiO_CZZE\\",
+      "name": "https://archive.org/details/ucberkeley_webcast_Wp8oiO_CZZE\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: archive\\.org"
+    },
+    {
+      "url": "https://youtu.be/1W3x0f_RmUo?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=3871",
+      "name": "https://youtu.be/1W3x0f_RmUo?list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm&amp;t=3871",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: youtu\\.be"
+    },
+    {
+      "url": "https://archive.org/details/ucberkeley_webcast_qNMQ4ly43p4",
+      "name": "https://archive.org/details/ucberkeley_webcast_qNMQ4ly43p4",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: archive\\.org"
+    },
+    {
+      "url": "https://web.archive.org/web/20220217064329/https://adayinthelifeof.nl/2011/02/06/memcache-internals/\\",
+      "name": "https://web.archive.org/web/20220217064329/https://adayinthelifeof.nl/2011/02/06/memcache-internals/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: archive\\.org"
+    },
+    {
+      "url": "https://archive.org/details/ucberkeley_webcast_htzJdKoEmO0\\",
+      "name": "https://archive.org/details/ucberkeley_webcast_htzJdKoEmO0\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: archive\\.org"
+    },
+    {
+      "url": "https://archive.org/details/ucberkeley_webcast_VIS4YDpuP98\\",
+      "name": "https://archive.org/details/ucberkeley_webcast_VIS4YDpuP98\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: archive\\.org"
+    },
+    {
+      "url": "https://youtu.be/Hoixgm4-P4M\\",
+      "name": "https://youtu.be/Hoixgm4-P4M\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "URL pattern: youtu\\.be"
+    }
+  ],
+  "review_sites": [
+    {
+      "url": "https://interviewing.io\\",
+      "name": "https://interviewing.io\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://woodpecker-ci.org/\\",
+      "name": "https://woodpecker-ci.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb\\",
+      "name": "http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.usenix.org/conference/atc12/technical-sessions/presentation/serebryany\\",
+      "name": "https://www.usenix.org/conference/atc12/technical-sessions/presentation/serebryany\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://interviewing.io",
+      "name": "https://interviewing.io",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.pomerium.io/\\",
+      "name": "https://www.pomerium.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.cs.yale.edu/homes/aspnes/classes/223/examples/randomization/quick.c\\",
+      "name": "http://www.cs.yale.edu/homes/aspnes/classes/223/examples/randomization/quick.c\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://coredns.io/\\",
+      "name": "https://coredns.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://fl.readthedocs.io/en/latest/",
+      "name": "https://fl.readthedocs.io/en/latest/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://kroki.io\\",
+      "name": "https://kroki.io\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://ankiweb.net/shared/info/25173560\\u003c/a\\u003e",
+      "name": "https://ankiweb.net/shared/info/25173560\\u003c/a\\u003e",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://demo.hestiacp.com:8083/login/\\",
+      "name": "https://demo.hestiacp.com:8083/login/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.dabeaz.com/GIL\\",
+      "name": "http://www.dabeaz.com/GIL\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://awesome-selfhosted.net/tags/dns.html\\",
+      "name": "https://awesome-selfhosted.net/tags/dns.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://roadmap.sh/computer-science</a",
+      "name": "https://roadmap.sh/computer-science</a",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.askamathematician.com/2012/09/q-what-is-a-fourier-transform-what-is-it-used-for/\\",
+      "name": "http://www.askamathematician.com/2012/09/q-what-is-a-fourier-transform-what-is-it-used-for/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://ankisrs.net/",
+      "name": "http://ankisrs.net/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://stackoverflow.com/questions/62539/what-is-the-dependency-inversion-principle-and-why-is-it-important",
+      "name": "http://stackoverflow.com/questions/62539/what-is-the-dependency-inversion-principle-and-why-is-it-important",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.ispconfig.org\\",
+      "name": "https://www.ispconfig.org\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.nlnetlabs.nl/projects/nsd/about/\\",
+      "name": "https://www.nlnetlabs.nl/projects/nsd/about/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#Tries",
+      "name": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#Tries",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.factor.io/\\",
+      "name": "https://www.factor.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://goauthentik.io/\\",
+      "name": "https://goauthentik.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://ksat.me/a-plain-english-introduction-to-cap-theorem\\",
+      "name": "http://ksat.me/a-plain-english-introduction-to-cap-theorem\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://froxlor.org/\\",
+      "name": "https://froxlor.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.chef.io/products/chef-infra\\",
+      "name": "https://www.chef.io/products/chef-infra\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://schema.org/abstract",
+      "name": "https://schema.org/abstract",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://vscodium.com/\\",
+      "name": "https://vscodium.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.duplicati.com\\",
+      "name": "https://www.duplicati.com\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://netbox.dev/\\",
+      "name": "https://netbox.dev/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://getoutline.org/",
+      "name": "https://getoutline.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sindresorhus.com/donate&quot;}",
+      "name": "https://sindresorhus.com/donate&quot;}",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://ferd.ca/simhashing-hopefully-made-simple.html\\",
+      "name": "http://ferd.ca/simhashing-hopefully-made-simple.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.cs.cmu.edu/~crary/819-f09/\\",
+      "name": "https://www.cs.cmu.edu/~crary/819-f09/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.quora.com/What-is-the-difference-between-a-process-and-a-thread",
+      "name": "https://www.quora.com/What-is-the-difference-between-a-process-and-a-thread",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://msgpack.org/index.html",
+      "name": "http://msgpack.org/index.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://ajenti.org/\\",
+      "name": "https://ajenti.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.aosabook.org/en/distsys.html",
+      "name": "http://www.aosabook.org/en/distsys.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://cr.yp.to/djbdns.html\\",
+      "name": "https://cr.yp.to/djbdns.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://thrift.apache.org/",
+      "name": "https://thrift.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://davidbyttow.medium.com/how-to-pass-the-engineering-interview-in-2021-45f1b389a1",
+      "name": "https://davidbyttow.medium.com/how-to-pass-the-engineering-interview-in-2021-45f1b389a1",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://msgpack.org/index.html\\",
+      "name": "http://msgpack.org/index.html\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.hellointerview.com/?utm_source=ciu",
+      "name": "https://www.hellointerview.com/?utm_source=ciu",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://rclone.org/\\",
+      "name": "https://rclone.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.alephalpha.com",
+      "name": "https://www.alephalpha.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.strongswan.org/\\",
+      "name": "https://www.strongswan.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://woodpecker-ci.org/",
+      "name": "https://woodpecker-ci.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://kafka.apache.org/",
+      "name": "https://kafka.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sensu.io/",
+      "name": "https://sensu.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.bonobo-project.org/\\",
+      "name": "https://www.bonobo-project.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://oozie.apache.org/\\",
+      "name": "https://oozie.apache.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://adagios.org/\\",
+      "name": "http://adagios.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://status.enshittification.social/",
+      "name": "https://status.enshittification.social/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://goauthentik.io/",
+      "name": "https://goauthentik.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://pgbarman.org",
+      "name": "https://pgbarman.org",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://wiki.apache.org/hadoop/SequenceFile\\",
+      "name": "https://wiki.apache.org/hadoop/SequenceFile\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://spftoolbox.com",
+      "name": "https://spftoolbox.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://coolify.io/",
+      "name": "https://coolify.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://nakadi.io",
+      "name": "https://nakadi.io",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://samza.apache.org",
+      "name": "https://samza.apache.org",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.factor.io/",
+      "name": "https://www.factor.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://gatus.io",
+      "name": "https://gatus.io",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://podman.io",
+      "name": "https://podman.io",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://aws.amazon.com/rds/\\",
+      "name": "https://aws.amazon.com/rds/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.couchbase.com/\\",
+      "name": "https://www.couchbase.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://beam.apache.org/\\",
+      "name": "https://beam.apache.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://livy.incubator.apache.org\\",
+      "name": "https://livy.incubator.apache.org\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-sa/4.0/\\",
+      "name": "http://creativecommons.org/licenses/by-sa/4.0/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.observium.org/",
+      "name": "http://www.observium.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://rethinkdb.com/\\",
+      "name": "https://rethinkdb.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://oss.oetiker.ch/rrdtool/\\",
+      "name": "https://oss.oetiker.ch/rrdtool/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://burp.grke.org/",
+      "name": "https://burp.grke.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.fluentd.org\\",
+      "name": "https://www.fluentd.org\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://nifi.apache.org/",
+      "name": "https://nifi.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sensu.io/\\",
+      "name": "https://sensu.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.docker.com/\\",
+      "name": "https://www.docker.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://dokku.com/",
+      "name": "https://dokku.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://ssdb.io",
+      "name": "https://ssdb.io",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://defguard.net/\\",
+      "name": "https://defguard.net/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.qemu.org/",
+      "name": "https://www.qemu.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://aws.amazon.com/emr/\\",
+      "name": "https://aws.amazon.com/emr/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://mahout.apache.org/",
+      "name": "https://mahout.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://aerc-mail.org/\\",
+      "name": "https://aerc-mail.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://easybuild.io/",
+      "name": "https://easybuild.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://meshcentral.com",
+      "name": "https://meshcentral.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sourceforge.net/projects/dadamail/files/",
+      "name": "https://sourceforge.net/projects/dadamail/files/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.fossil-scm.org/home/dir?ci=trunk",
+      "name": "https://www.fossil-scm.org/home/dir?ci=trunk",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.arangodb.com/",
+      "name": "https://www.arangodb.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://checkmk.com/\\",
+      "name": "https://checkmk.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://dockovpn.io\\",
+      "name": "https://dockovpn.io\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://opendev.org/openstack/swift",
+      "name": "https://opendev.org/openstack/swift",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://snipeitapp.com/",
+      "name": "https://snipeitapp.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://arstechnica.com/civis/",
+      "name": "https://arstechnica.com/civis/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://ceph.com/",
+      "name": "https://ceph.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.geany.org/",
+      "name": "https://www.geany.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://redis.io/\\",
+      "name": "https://redis.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://hudi.apache.org/",
+      "name": "https://hudi.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.thruk.org/\\",
+      "name": "https://www.thruk.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://directory.apache.org/apacheds/",
+      "name": "https://directory.apache.org/apacheds/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.fogproject.org/",
+      "name": "https://www.fogproject.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://wiki.archlinux.org/",
+      "name": "https://wiki.archlinux.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sqoop.apache.org\\",
+      "name": "https://sqoop.apache.org\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://victoriametrics.com/\\",
+      "name": "https://victoriametrics.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://linuxcontainers.org/lxc/\\",
+      "name": "https://linuxcontainers.org/lxc/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.sysdig.com/\\",
+      "name": "https://www.sysdig.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://maven.apache.org/",
+      "name": "https://maven.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.go.cd/",
+      "name": "https://www.go.cd/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sentora.org/",
+      "name": "https://sentora.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://demo.openitcockpit.io/",
+      "name": "https://demo.openitcockpit.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://storm.apache.org\\",
+      "name": "https://storm.apache.org\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.ecyrd.com/cassandracalculator/",
+      "name": "https://www.ecyrd.com/cassandracalculator/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://checkcle.io\\",
+      "name": "https://checkcle.io\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://deb.sury.org/\\",
+      "name": "https://deb.sury.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://titan.thinkaurelius.com",
+      "name": "https://titan.thinkaurelius.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://airbyte.io/",
+      "name": "https://airbyte.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.naemon.org/\\",
+      "name": "https://www.naemon.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://opennebula.org/\\",
+      "name": "https://opennebula.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://perkeep.org/",
+      "name": "https://perkeep.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.fluentd.org/",
+      "name": "https://www.fluentd.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sylpheed.sraoss.jp/en/",
+      "name": "https://sylpheed.sraoss.jp/en/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://arcadedb.com/\\",
+      "name": "https://arcadedb.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.orangefs.org/",
+      "name": "https://www.orangefs.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://www.claws-mail.org/\\",
+      "name": "http://www.claws-mail.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.virtualmin.com/",
+      "name": "https://www.virtualmin.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://awesome-selfhosted.net/tags/file-transfer---object-storage--file-servers.html",
+      "name": "https://awesome-selfhosted.net/tags/file-transfer---object-storage--file-servers.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://samza.apache.org\\",
+      "name": "https://samza.apache.org\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://hbase.apache.org/",
+      "name": "https://hbase.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://dash.mauz.dev/\\",
+      "name": "https://dash.mauz.dev/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://linuxcontainers.org/lxd/\\",
+      "name": "https://linuxcontainers.org/lxd/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.freeipa.org/",
+      "name": "https://www.freeipa.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://oneuptime.com",
+      "name": "https://oneuptime.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://neo4j.com/\\",
+      "name": "https://neo4j.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.datomic.com",
+      "name": "https://www.datomic.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.phplist.org/",
+      "name": "https://www.phplist.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.virtualbox.org/",
+      "name": "https://www.virtualbox.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://aws.amazon.com/dynamodb/\\",
+      "name": "https://aws.amazon.com/dynamodb/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.bazel.io/",
+      "name": "https://www.bazel.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://flume.apache.org/",
+      "name": "https://flume.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.gns3.com/",
+      "name": "https://www.gns3.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://awesome-selfhosted.net/tags/remote-access.html",
+      "name": "https://awesome-selfhosted.net/tags/remote-access.html",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://wiki.gentoo.org/",
+      "name": "https://wiki.gentoo.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://tailscale.com\\",
+      "name": "https://tailscale.com\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://clonezilla.org/\\",
+      "name": "https://clonezilla.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://ceph.com/en/",
+      "name": "https://ceph.com/en/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.pomerium.io/",
+      "name": "https://www.pomerium.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.ezservermonitor.com\\",
+      "name": "https://www.ezservermonitor.com\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://goaccess.io/",
+      "name": "https://goaccess.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://openwisp.org/",
+      "name": "https://openwisp.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.reddit.com/r/linuxquestions",
+      "name": "https://www.reddit.com/r/linuxquestions",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sysadmin.libhunt.com",
+      "name": "https://sysadmin.libhunt.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://avro.apache.org",
+      "name": "https://avro.apache.org",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.nagios.org/\\",
+      "name": "https://www.nagios.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://play.tirreno.com/\\",
+      "name": "https://play.tirreno.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://mahout.apache.org/\\",
+      "name": "https://mahout.apache.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.packer.io/\\",
+      "name": "https://www.packer.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.xtreemfs.org/",
+      "name": "https://www.xtreemfs.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://pagure.io/freeipa",
+      "name": "https://pagure.io/freeipa",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://hg.mozilla.org/comm-central/file",
+      "name": "https://hg.mozilla.org/comm-central/file",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://geode.apache.org/",
+      "name": "https://geode.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://imapsync.lamiral.info/\\",
+      "name": "http://imapsync.lamiral.info/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://clonezilla.org/downloads/src/\\",
+      "name": "https://clonezilla.org/downloads/src/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://uptime.kuma.pet/\\",
+      "name": "https://uptime.kuma.pet/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://invent.kde.org/kdevelop/kdevelop",
+      "name": "https://invent.kde.org/kdevelop/kdevelop",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://subversion.apache.org/",
+      "name": "https://subversion.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.kontena.io/\\",
+      "name": "https://www.kontena.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.elastic.co/beats/",
+      "name": "https://www.elastic.co/beats/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://ceph.com/\\",
+      "name": "https://ceph.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://parquet.apache.org",
+      "name": "https://parquet.apache.org",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.xenproject.org/",
+      "name": "https://www.xenproject.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://dokku.com/\\",
+      "name": "https://dokku.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://download.samba.org/pub/samba/",
+      "name": "https://download.samba.org/pub/samba/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://kuvasz-uptime.dev/demo/",
+      "name": "https://kuvasz-uptime.dev/demo/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://airbyte.io/\\",
+      "name": "https://airbyte.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://voltdb.com/\\",
+      "name": "https://voltdb.com/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://clickhouse.tech",
+      "name": "https://clickhouse.tech",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.ecyrd.com/cassandracalculator/\\",
+      "name": "https://www.ecyrd.com/cassandracalculator/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.timescale.com/",
+      "name": "https://www.timescale.com/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://zlib.net/pigz/",
+      "name": "https://zlib.net/pigz/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://sourceforge.net/projects/dadamail/files/\\",
+      "name": "https://sourceforge.net/projects/dadamail/files/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://hadoop.apache.org/",
+      "name": "https://hadoop.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://basho.com/products/riak-ts/\\",
+      "name": "https://basho.com/products/riak-ts/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.reddit.com/r/ETL/\\",
+      "name": "https://www.reddit.com/r/ETL/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://basho.com/products/riak-ts/",
+      "name": "https://basho.com/products/riak-ts/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://spark.apache.org/",
+      "name": "https://spark.apache.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://openitcockpit.io/\\",
+      "name": "https://openitcockpit.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://landscape.cncf.io/?group=projects-and-products\\u0026amp;view-mode=card#app-definition-and-development--streaming-messaging\\",
+      "name": "https://landscape.cncf.io/?group=projects-and-products\\u0026amp;view-mode=card#app-definition-and-development--streaming-messaging\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://smallstep.com/certificates/",
+      "name": "https://smallstep.com/certificates/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://spark.apache.org/graphx/\\",
+      "name": "https://spark.apache.org/graphx/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.suprsend.com/products/workflows\\",
+      "name": "https://www.suprsend.com/products/workflows\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.mongodb.com",
+      "name": "https://www.mongodb.com",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.fossil-scm.org/\\",
+      "name": "https://www.fossil-scm.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.ganeti.org/",
+      "name": "https://www.ganeti.org/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.cascading.org/\\",
+      "name": "https://www.cascading.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.pfsense.org/\\",
+      "name": "https://www.pfsense.org/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.librenms.org",
+      "name": "https://www.librenms.org",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://prometheus.io/",
+      "name": "https://prometheus.io/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.shrubbery.net/rancid/",
+      "name": "https://www.shrubbery.net/rancid/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://grml.org",
+      "name": "https://grml.org",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://stackexchange.com/sites#technology",
+      "name": "https://stackexchange.com/sites#technology",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.portainer.io/\\",
+      "name": "https://www.portainer.io/\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.knot-dns.cz/",
+      "name": "https://www.knot-dns.cz/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://landscape.cncf.io/?group=projects-and-products&amp;view-mode=card#app-definition-and-development--streaming-messaging",
+      "name": "https://landscape.cncf.io/?group=projects-and-products&amp;view-mode=card#app-definition-and-development--streaming-messaging",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://wiki.x2go.org/doku.php",
+      "name": "https://wiki.x2go.org/doku.php",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "name": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    },
+    {
+      "url": "https://www.datomic.com\\",
+      "name": "https://www.datomic.com\\",
+      "current_category": "AI工具/人工智能",
+      "reason": "Current category suggests AI but unclear metadata",
+      "auto_reason": "No clear pattern match"
+    }
+  ]
+}

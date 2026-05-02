@@ -161,12 +161,17 @@ class Renderer {
     renderView(state) {
         if (state.currentView === 'category') {
             const leafId = state.sidebar.activeLeafId;
-            if (!leafId) {
+            const catId = state.sidebar.activeCategoryId;
+            const subId = state.sidebar.activeSubCategoryId;
+
+            if (!leafId || !catId) {
                 this.container.innerHTML = this._getEmptyState();
                 return;
             }
 
-            const sites = dataManager.getSitesByLeafId(leafId);
+            // 构建完整三级分类路径用于查询
+            const fullLeafId = subId && leafId !== subId ? `${catId}/${subId}/${leafId}` : `${catId}/${leafId}`;
+            const sites = dataManager.getSitesByLeafId(fullLeafId);
             if (sites.length === 0) {
                 this.container.innerHTML = this._getEmptyState('该分类暂无内容');
                 return;
@@ -227,6 +232,9 @@ class Renderer {
                 e.stopPropagation();
                 const catId = el.dataset.catId;
                 state.set('sidebar.activeCategoryId', catId);
+                // 点击大类时清除搜索
+                state.set('search.active', false);
+                state.set('currentView', 'category');
 
                 const firstSub = el.querySelector('.menu-subcategory');
                 if (firstSub) {
@@ -253,6 +261,20 @@ class Renderer {
                 e.preventDefault();
                 e.stopPropagation();
                 state.set('sidebar.activeLeafId', el.dataset.leafId);
+                // 点击叶子时切回分类视图
+                state.set('currentView', 'category');
+                state.set('search.active', false);
+                state.set('search.query', '');
+                const searchInput = document.getElementById('search-input');
+                if (searchInput) searchInput.value = '';
+                const searchClear = document.getElementById('search-clear');
+                if (searchClear) searchClear.classList.add('hidden');
+
+                // 如果点击的叶子与当前子分类同名，表示是二级分类的直接站点
+                const currentSubId = state.get('sidebar.activeSubCategoryId');
+                if (currentSubId && el.dataset.leafId === currentSubId) {
+                    // 保持当前选择，没有额外操作
+                }
             });
         });
     }

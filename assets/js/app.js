@@ -85,6 +85,15 @@ async function init() {
 
         const results = searchEngine.query(query);
         state.set('search.results', results);
+
+        // 自动切换到搜索视图
+        if (query.length > 0) {
+          state.set('search.active', true);
+          state.set('currentView', 'search');
+        } else {
+          state.set('search.active', false);
+          state.set('currentView', 'category');
+        }
       }, 200);
     });
 

@@ -1,0 +1,216 @@
+{
+  "version": "V14",
+  "completed_at": "2026-04-29 13:11:27.542007",
+  "project": "啃魂导航网站",
+  "project_path": "/home/yoli/GitHub/web_nav_v2",
+  "final_stats": {
+    "total_websites": 3291,
+    "total_categories_l1": 8,
+    "total_categories_l2": 97,
+    "total_categories_l3": 52,
+    "categories_l1": [
+      [
+        "效率办公",
+        734
+      ],
+      [
+        "其他",
+        713
+      ],
+      [
+        "开发工具",
+        479
+      ],
+      [
+        "多媒体",
+        439
+      ],
+      [
+        "设计工具",
+        375
+      ],
+      [
+        "系统工具",
+        279
+      ],
+      [
+        "学术科研",
+        259
+      ],
+      [
+        "办公工具",
+        13
+      ]
+    ],
+    "categories_l2_top": [
+      [
+        "其他/杂项",
+        713
+      ],
+      [
+        "多媒体/视频娱乐",
+        428
+      ],
+      [
+        "开发工具/平台开源",
+        232
+      ],
+      [
+        "系统工具/实用工具",
+        220
+      ],
+      [
+        "设计工具/资源",
+        200
+      ],
+      [
+        "设计工具/UI设计工具",
+        90
+      ],
+      [
+        "效率办公/剧本创作",
+        52
+      ],
+      [
+        "效率办公/故事生成",
+        51
+      ],
+      [
+        "效率办公/博客管理",
+        51
+      ],
+      [
+        "效率办公/协作工具",
+        49
+      ],
+      [
+        "效率办公/社交媒体",
+        46
+      ],
+      [
+        "效率办公/总结摘要",
+        43
+      ],
+      [
+        "效率办公/创意激发",
+        39
+      ],
+      [
+        "效率办公/标题生成",
+        38
+      ],
+      [
+        "效率办公/改写重述",
+        36
+      ]
+    ],
+    "categories_l3_top": [
+      [
+        "其他/杂项/在线工具",
+        356
+      ],
+      [
+        "多媒体/视频娱乐/视频-YouTube",
+        202
+      ],
+      [
+        "多媒体/视频娱乐/教程",
+        186
+      ],
+      [
+        "系统工具/实用工具/CLI",
+        171
+      ],
+      [
+        "开发工具/平台开源/GitHub",
+        169
+      ],
+      [
+        "其他/杂项/HTML转义",
+        54
+      ],
+      [
+        "其他/杂项/搜索引擎",
+        51
+      ],
+      [
+        "其他/杂项/短链接",
+        31
+      ],
+      [
+        "开发工具/平台开源/GitHub-GitHub托管",
+        29
+      ],
+      [
+        "开发工具/学习生成/在线课程",
+        28
+      ],
+      [
+        "系统工具/实用工具/文件工具",
+        25
+      ],
+      [
+        "系统工具/实用工具/其他工具",
+        21
+      ],
+      [
+        "其他/杂项/单位转换",
+        21
+      ],
+      [
+        "其他/杂项/时间工具",
+        20
+      ],
+      [
+        "其他/杂项/JSON工具",
+        19
+      ]
+    ]
+  },
+  "quality_metrics": {
+    "name_completeness": 100.0,
+    "description_completeness": 100.0,
+    "title_completeness": 100.0,
+    "category_completeness": 100.0,
+    "duplicate_urls": 0,
+    "sample_health_rate": 37.0,
+    "estimated_real_health_rate": 60.3,
+    "dead_urls_removed": 69
+  },
+  "balance_metrics": {
+    "l2_balance_rate": 62.89,
+    "l3_balance_rate": 65.38,
+    "over_capacity_categories_l2": 5,
+    "under_capacity_categories_l3": 10,
+    "target_l2_balance_rate": "≥50%",
+    "target_achieved": true
+  },
+  "changes": {
+    "dead_urls_removed": 69,
+    "categories_created": 0,
+    "categories_merged": 22,
+    "categories_total_before": 167,
+    "categories_total_after": 151
+  },
+  "files": {
+    "data_file": "data/websites.json",
+    "backups": [
+      "data/websites.json.V14_clean_20260429_130332",
+      "data/websites.json.V14_categorize_20260429_130407",
+      "data/websites.json.V14_optimize2_20260429_132119",
+      "data/websites.json.V14_optimize3_20260429_133541"
+    ],
+    "reports": [
+      "data/url_health_report_V14.json",
+      "data/v14_category_optimization_plan.json",
+      "data/v14_url_cleanup_plan.json",
+      "reports/v14_category_balance_report.json"
+    ]
+  },
+  "delivery_items": [
+    "✅ V14-P1: 全量死链接重检完成",
+    "✅ V14-P2: 分类结构深度优化完成",
+    "✅ V14-P3: 数据质量补全完成",
+    "✅ V14-P4: UI修复与浏览器验证完成"
+  ]
+}

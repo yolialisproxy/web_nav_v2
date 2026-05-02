@@ -1,0 +1,240 @@
+[
+  {
+    "title": "GitHub Gist",
+    "url": "https://gist.github.com",
+    "domain": "gist.github.com",
+    "category": "开发工具/代码资源/代码仓库",
+    "description": "GitHub 代码片段分享服务"
+  },
+  {
+    "title": "GitHub Pages",
+    "url": "https://pages.github.com",
+    "domain": "pages.github.com",
+    "category": "开发工具/部署托管/静态站点",
+    "description": "GitHub 静态网站托管"
+  },
+  {
+    "title": "GitHub Blog",
+    "url": "https://github.blog",
+    "domain": "github.blog",
+    "category": "开发工具/平台开源/资讯博客",
+    "description": "GitHub 官方博客"
+  },
+  {
+    "title": "GitHub Education",
+    "url": "https://education.github.com",
+    "domain": "education.github.com",
+    "category": "开发工具/平台开源/教育",
+    "description": "GitHub 教育计划"
+  },
+  {
+    "title": "GitHub Sponsors",
+    "url": "https://github.com/sponsors",
+    "domain": "github.com",
+    "category": "开发工具/平台开源/开源资助",
+    "description": "开源项目捐赠平台"
+  },
+  {
+    "title": "Anthropic Claude",
+    "url": "https://claude.ai",
+    "domain": "claude.ai",
+    "category": "AI工具/AI对话/Claude",
+    "description": "Anthropic 开发的 AI 助手"
+  },
+  {
+    "title": "Perplexity AI",
+    "url": "https://perplexity.ai",
+    "domain": "perplexity.ai",
+    "category": "AI工具/AI搜索/搜索引擎",
+    "description": "AI 驱动的搜索引擎"
+  },
+  {
+    "title": "Hugging Face Spaces",
+    "url": "https://huggingface.co/spaces",
+    "domain": "huggingface.co",
+    "category": "AI工具/机器学习/模型托管",
+    "description": "HuggingFace 机器学习应用托管"
+  },
+  {
+    "title": "Replicate",
+    "url": "https://replicate.com",
+    "domain": "replicate.com",
+    "category": "AI工具/机器学习/推理服务",
+    "description": "运行开源 ML 模型"
+  },
+  {
+    "title": "RunwayML",
+    "url": "https://runwayml.com",
+    "domain": "runwayml.com",
+    "category": "AI工具/视频生成/视频编辑",
+    "description": "AI 视频生成与编辑平台"
+  },
+  {
+    "title": "Stability AI",
+    "url": "https://stability.ai",
+    "domain": "stability.ai",
+    "category": "AI工具/图像生成/Stable Diffusion",
+    "description": "Stable Diffusion 开发公司"
+  },
+  {
+    "title": "Midjourney Official",
+    "url": "https://www.midjourney.com",
+    "domain": "midjourney.com",
+    "category": "AI工具/图像生成/Midjourney",
+    "description": "Midjourney 官方网站"
+  },
+  {
+    "title": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "domain": "elevenlabs.io",
+    "category": "AI工具/语音合成/语音生成",
+    "description": "AI 语音合成平台"
+  },
+  {
+    "title": "Docker Hub",
+    "url": "https://hub.docker.com",
+    "domain": "hub.docker.com",
+    "category": "开发工具/容器化/镜像仓库",
+    "description": "Docker 官方镜像仓库"
+  },
+  {
+    "title": "Kubernetes.io",
+    "url": "https://kubernetes.io",
+    "domain": "kubernetes.io",
+    "category": "开发工具/容器编排/文档",
+    "description": "Kubernetes 官网"
+  },
+  {
+    "title": "NPM Registry",
+    "url": "https://www.npmjs.com",
+    "domain": "npmjs.com",
+    "category": "开发工具/包管理器/Node.js",
+    "description": "Node.js 包管理器"
+  },
+  {
+    "title": "PyPI",
+    "url": "https://pypi.org",
+    "domain": "pypi.org",
+    "category": "开发工具/包管理器/Python",
+    "description": "Python 包索引"
+  },
+  {
+    "title": "crates.io",
+    "url": "https://crates.io",
+    "domain": "crates.io",
+    "category": "开发工具/包管理器/Rust",
+    "description": "Rust 包注册中心"
+  },
+  {
+    "title": "Stack Overflow",
+    "url": "https://stackoverflow.com",
+    "domain": "stackoverflow.com",
+    "category": "开发工具/技术问答/综合问答",
+    "description": "程序员问答社区"
+  },
+  {
+    "title": "Dev.to",
+    "url": "https://dev.to",
+    "domain": "dev.to",
+    "category": "开发工具/开发者博客/技术博客",
+    "description": "开发者技术博客平台"
+  },
+  {
+    "title": "Smashing Magazine",
+    "url": "https://www.smashingmagazine.com",
+    "domain": "smashingmagazine.com",
+    "category": "设计工具/设计资源/UI设计",
+    "description": "Web 设计杂志"
+  },
+  {
+    "title": "Notion Templates",
+    "url": "https://www.notion.so/templates",
+    "domain": "notion.so",
+    "category": "效率办公/笔记管理/模板库",
+    "description": "Notion 官方模板"
+  },
+  {
+    "title": "Trello",
+    "url": "https://trello.com",
+    "domain": "trello.com",
+    "category": "效率办公/项目管理/看板",
+    "description": "看板式项目管理工具"
+  },
+  {
+    "title": "Asana",
+    "url": "https://asana.com",
+    "domain": "asana.com",
+    "category": "效率办公/项目管理/任务追踪",
+    "description": "团队任务管理平台"
+  },
+  {
+    "title": "Slack",
+    "url": "https://slack.com",
+    "domain": "slack.com",
+    "category": "效率办公/团队协作/即时通讯",
+    "description": "团队沟通工具"
+  },
+  {
+    "title": "Discord",
+    "url": "https://discord.com",
+    "domain": "discord.com",
+    "category": "社交/社区/社群平台",
+    "description": "游戏与社区聊天平台"
+  },
+  {
+    "title": "Zapier",
+    "url": "https://zapier.com",
+    "domain": "zapier.com",
+    "category": "效率办公/自动化/工作流",
+    "description": "应用连接自动化平台"
+  },
+  {
+    "title": "IFTTT",
+    "url": "https://ifttt.com",
+    "domain": "ifttt.com",
+    "category": "效率办公/自动化/条件触发",
+    "description": "If This Then That"
+  },
+  {
+    "title": "YouTube Music",
+    "url": "https://music.youtube.com",
+    "domain": "music.youtube.com",
+    "category": "多媒体/音乐平台/流媒体",
+    "description": "YouTube 音乐服务"
+  },
+  {
+    "title": "SoundCloud",
+    "url": "https://soundcloud.com",
+    "domain": "soundcloud.com",
+    "category": "多媒体/音乐平台/分享平台",
+    "description": "独立音乐分享平台"
+  },
+  {
+    "title": "Bandcamp",
+    "url": "https://bandcamp.com",
+    "domain": "bandcamp.com",
+    "category": "多媒体/音乐平台/独立音乐",
+    "description": "独立音乐商店"
+  },
+  {
+    "title": "Twitch",
+    "url": "https://twitch.tv",
+    "domain": "twitch.tv",
+    "category": "多媒体/视频娱乐/直播平台",
+    "description": "游戏直播平台"
+  },
+  {
+    "title": "Vimeo",
+    "url": "https://vimeo.com",
+    "domain": "vimeo.com",
+    "category": "多媒体/视频娱乐/高清视频",
+    "description": "高质量视频托管"
+  },
+  {
+    "title": "TED Talks",
+    "url": "https://www.ted.com",
+    "domain": "ted.com",
+    "category": "多媒体/视频娱乐/演讲",
+    "description": "TED 演讲官网"
+  }
+]
