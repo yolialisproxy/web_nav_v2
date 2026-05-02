@@ -12,7 +12,7 @@ async function init() {
     initSearchEngine(dataManager);
 
     state.subscribe((s) => {
-        // console.log('[STATE]', JSON.parse(JSON.stringify(s.sidebar)));
+        // // console.log('[STATE]', JSON.parse(JSON.stringify(s.sidebar)));
         renderer.renderSidebar(s);
         renderer.renderView(s);
         syncStateToHash(s);
@@ -233,3 +233,11 @@ window.state = state;
 window.dataManager = dataManager;
 window.searchEngine = searchEngine;
 
+
+// Global error capture
+window.addEventListener('error', (e) => {
+    console.warn('[Global Error]', e.error?.message || e.message);
+    if (e.target && e.target.tagName === 'IMG') {
+        e.target.src = 'assets/images/favicon.png';
+    }
+});

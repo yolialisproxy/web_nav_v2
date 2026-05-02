@@ -1,6 +1,6 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-05-02T17:41:04.965415",
+  "test_timestamp": "2026-05-02T17:51:59.676852",
   "base_url": "http://localhost:8080",
   "console_errors": [],
   "tested_features": [
@@ -14,7 +14,8 @@
   ],
   "passed": true,
   "issues": [
-    "Link click test 2 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================"
+    "Link click test 2 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================",
+    "Link click test 3 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================"
   ],
   "details": {
     "homepage_status": 200,
