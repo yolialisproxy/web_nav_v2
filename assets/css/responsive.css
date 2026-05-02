@@ -122,3 +122,19 @@ html {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Fix: Ensure subcategory content is properly handled */
+.subcategory-content {
+    display: none !important;
+    padding-left: 12px !important;
+}
+
+.menu-subcategory.expanded > .subcategory-content {
+    display: block !important;
+}
+
+/* Ensure menu-leaf is always visible when parent is expanded */
+.menu-subcategory.expanded .menu-leaf {
+    display: flex !important;
+    opacity: 1 !important;
+}

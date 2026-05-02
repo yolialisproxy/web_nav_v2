@@ -23,7 +23,7 @@ class DataManager {
 
             this._buildIndexes();
             this.isLoaded = true;
-            //            // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
+            //            // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log('✅ WebNav V2: Data loaded and indexed successfully.');
         } catch (e) {
             console.error('❌ WebNav V2: Data load failed:', e);
             this._handleLoadError(e);
@@ -99,10 +99,15 @@ class DataManager {
             const siteIds = this.mappings.get(leafId) || [];
             return siteIds.map(id => this.sites.get(id)).filter(Boolean);
         }
-        // 回退: 尝试二级分类映射 (兼容两级路径)
-        if (this.mappings.has(`./${leafId}`)) {
-            const siteIds = this.mappings.get(`./${leafId}`) || [];
-            return siteIds.map(id => this.sites.get(id)).filter(Boolean);
+        // 回退: 尝试二级分类映射 (兼容 leaf === sub 的两级路径)
+        // leafId 是 category/leaf 格式，需要检查 category/leaf/leaf
+        const parts = leafId.split('/');
+        if (parts.length === 2) {
+            const altId = `${parts[0]}/${parts[1]}/${parts[1]}`;
+            if (this.mappings.has(altId)) {
+                const siteIds = this.mappings.get(altId) || [];
+                return siteIds.map(id => this.sites.get(id)).filter(Boolean);
+            }
         }
 return [];
     }

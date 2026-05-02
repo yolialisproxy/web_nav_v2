@@ -200,7 +200,7 @@ class Renderer {
 
     // 卡\u7247\u89c6\u56fe - \u5e26\u641c\u7d22\u9ad8\u4eae
     _createCardGridHtml(sites) {
-        let html = '<div class="card-grid">';
+        let html = '<div class="grid">';
         sites.forEach(site => {
             html += this._createCardHtml(site);
         });

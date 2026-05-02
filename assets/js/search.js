@@ -65,10 +65,9 @@ let searchEngine;
 function initSearchEngine(dataManager) {
     searchEngine = new SearchEngine(dataManager);
     window.searchEngine = searchEngine;
+    return searchEngine;
 }
-
-
-
 
 // Global exports
 window.searchEngine = searchEngine;
+window.initSearchEngine = initSearchEngine;
