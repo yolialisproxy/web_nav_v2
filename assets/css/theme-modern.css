@@ -282,6 +282,15 @@ body.bg-gray-50 {
    ============================================ */
 #main-content {
     transition: all var(--transition-medium) !important;
+    width: 100%;
+    min-width: 0; /* Allow flex child to shrink */
+}
+
+/* Constrain card grid within reasonable bounds */
+.grid {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .site.site-card {
