@@ -93,3 +93,5 @@ class State {
 
 const state = new State();
 window.state = state;
+// Global export for backwards compatibility
+window.state = state;

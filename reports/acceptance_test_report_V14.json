@@ -1,38 +1,30 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-04-29T12:23:17.557937",
+  "test_timestamp": "2026-05-02T17:41:04.965415",
   "base_url": "http://localhost:8080",
-  "console_errors": [
-    {
-      "type": "console",
-      "text": "Failed to load resource: the server responded with a status of 404 (File not found)",
-      "location": "http://localhost:8080/favicon.ico:0",
-      "timestamp": "2026-04-29T12:22:45.914013"
-    },
-    {
-      "type": "pageerror",
-      "text": "Cannot read properties of undefined (reading 'toLowerCase')",
-      "timestamp": "2026-04-29T12:22:59.905185"
-    }
-  ],
+  "console_errors": [],
   "tested_features": [
     "homepage_navigation",
     "screenshot",
+    "search",
     "category_navigation",
-    "responsive_design"
+    "link_clicks",
+    "responsive_design",
+    "page_rendering"
   ],
   "passed": true,
   "issues": [
-    "Search result state unclear",
-    "No site links found for click test",
-    "Missing page elements: ['site_links']"
+    "Link click test 2 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================"
   ],
   "details": {
     "homepage_status": 200,
     "screenshot_path": "/home/yoli/GitHub/web_nav_v2/reports/acceptance_test_screenshot.png",
-    "categories_found": 9,
-    "subcategories_found": 23,
-    "leaf_categories_found": 2,
+    "search_test_query": "百度",
+    "search_results_count": 0,
+    "categories_found": 16,
+    "subcategories_found": 28,
+    "leaf_categories_found": 11,
+    "links_tested": 3,
     "viewport_tests": [
       {
         "name": "Desktop",
@@ -49,6 +41,14 @@
         "width": 375,
         "height": 667
       }
-    ]
+    ],
+    "page_elements": {
+      "header": true,
+      "sidebar": true,
+      "main_content": true,
+      "view_container": true,
+      "search_input": true,
+      "site_links": true
+    }
   }
 }

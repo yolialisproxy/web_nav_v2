@@ -69,3 +69,6 @@ function initSearchEngine(dataManager) {
 
 
 
+
+// Global exports
+window.searchEngine = searchEngine;

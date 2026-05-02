@@ -29206,7 +29206,7 @@
     "category": "系统工具/网络工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "htop",
     "description": "交互式进程查看器，Linux系统性能监控工具",
     "_cat": "系统工具",
@@ -29262,7 +29262,7 @@
     "category": "系统工具/开发辅助/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Beyond Compare",
     "description": "文件和文件夹比较工具，支持多种格式",
     "_cat": "系统工具",
@@ -29360,7 +29360,7 @@
     "category": "密码工具/文件加密/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "VeraCrypt",
     "description": "开源磁盘加密软件，保护敏感数据",
     "_cat": "密码工具",
@@ -29528,7 +29528,7 @@
     "category": "安全工具/VPN安全/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Obsidian",
     "description": "本地优先的知识管理和笔记软件，基于Markdown和双向链接",
     "_cat": "知识库",
@@ -29549,7 +29549,7 @@
     "category": "知识库/知识库软件/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Notion",
     "description": "一体化工作空间，整合笔记、任务、数据库功能",
     "_cat": "知识库",
@@ -29738,7 +29738,7 @@
     "category": "学术科研/在线教育/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "网易云课堂",
     "description": "网易在线教育平台，提供职业技能和生活兴趣课程",
     "_cat": "学术科研",
@@ -29843,7 +29843,7 @@
     "category": "学术科研/在线教育/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Busuu",
     "description": "语言学习社区，与母语者和算法学习",
     "_cat": "学术科研",
@@ -29948,7 +29948,7 @@
     "category": "效率办公/笔记工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Ulysses",
     "description": "写作应用，用于长文写作和博客发布",
     "_cat": "效率办公",
@@ -29990,7 +29990,7 @@
     "category": "效率办公/笔记工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Bear",
     "description": "优雅的Markdown笔记应用",
     "_cat": "效率办公",
@@ -30074,7 +30074,7 @@
     "category": "AI工具/人工智能/图像生成"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "RunwayML",
     "description": "AI创意套件，提供视频生成、编辑和特效工具",
     "_cat": "AI工具",
@@ -30088,7 +30088,7 @@
     "category": "AI工具/人工智能/视频生成"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "ElevenLabs",
     "description": "AI语音合成平台，生成逼真人声",
     "_cat": "AI工具",
@@ -30179,7 +30179,7 @@
     "category": "设计工具/设计资源/社区"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "ArtStation",
     "description": "游戏、电影和娱乐行业艺术家作品展示平台",
     "_cat": "设计工具",
@@ -30193,7 +30193,7 @@
     "category": "设计工具/设计灵感/教程"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Smashing Magazine",
     "description": "Web设计和开发在线杂志",
     "_cat": "设计工具",
@@ -30207,7 +30207,7 @@
     "category": "设计工具/设计灵感/教程"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "WebDesignerDepot",
     "description": "网页设计资源、新闻和教程",
     "_cat": "设计工具",
@@ -30228,7 +30228,7 @@
     "category": "设计工具/图标字体/资源"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Adobe Fonts",
     "description": "Adobe字体服务，提供高质量字体订阅",
     "_cat": "设计工具",
@@ -30298,7 +30298,7 @@
     "category": "设计工具/图标字体/资源"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "汉仪字库",
     "description": "汉仪旗下商业字体库，中文字体设计",
     "_cat": "设计工具",
@@ -30361,7 +30361,7 @@
     "category": "设计工具/配色工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Adobe Color",
     "description": "Adobe配色工具，创建和探索配色方案",
     "_cat": "设计工具",
@@ -30403,7 +30403,7 @@
     "category": "设计工具/配色工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Product Hunt",
     "description": "发现新产品的社区，每日上线科技产品",
     "_cat": "其他",
@@ -30459,7 +30459,7 @@
     "category": "其他/云计算/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Vercel",
     "description": "前端开发和部署平台，支持Next.js和无服务器",
     "_cat": "其他",
@@ -30550,7 +30550,7 @@
     "category": "其他/云计算/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Microsoft Azure",
     "description": "微软云计算平台，企业级云服务",
     "_cat": "其他",
@@ -30928,7 +30928,7 @@
     "category": "AI工具/人工智能/图像生成"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "TensorFlow",
     "description": "谷歌开源机器学习框架",
     "_cat": "AI工具",
@@ -30977,7 +30977,7 @@
     "category": "效率办公/自动化/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "n8n.cloud",
     "description": "n8n云端托管版本",
     "_cat": "效率办公",
@@ -30998,7 +30998,7 @@
     "category": "效率办公/自动化/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Boomi",
     "description": "Dell iPaaS平台，集成云和本地应用",
     "_cat": "效率办公",
@@ -31054,7 +31054,7 @@
     "category": "效率办公/在线表格/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Airtable",
     "description": "表格和数据库混合平台",
     "_cat": "效率办公",
@@ -31096,7 +31096,7 @@
     "category": "效率办公/在线文档/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "OnlyOffice",
     "description": "开源在线Office套件",
     "_cat": "效率办公",
@@ -31124,7 +31124,7 @@
     "category": "其他/区块链/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Polkadot",
     "description": "跨链互操作协议",
     "_cat": "其他",
@@ -31159,7 +31159,7 @@
     "category": "AI工具/人工智能/综合平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Vertex AI",
     "description": "谷歌云机器学习平台",
     "_cat": "AI工具",
@@ -31180,7 +31180,7 @@
     "category": "AI工具/人工智能/综合平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "HuggingFace Inference API",
     "description": "HuggingFace托管模型API",
     "_cat": "AI工具",
@@ -31201,7 +31201,7 @@
     "category": "AI工具/人工智能/搜索引擎"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "You.com",
     "description": "AI搜索引擎平台",
     "_cat": "AI工具",
@@ -31313,7 +31313,7 @@
     "category": "效率办公/邮件管理/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Canary Mail",
     "description": "Mac邮件客户端，注重隐私",
     "_cat": "效率办公",
@@ -31334,7 +31334,7 @@
     "category": "效率办公/邮件服务/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "SendGrid",
     "description": "Twilio旗下邮件送达平台",
     "_cat": "效率办公",
@@ -31348,7 +31348,7 @@
     "category": "效率办公/邮件服务/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Amazon SES",
     "description": "亚马逊邮件服务",
     "_cat": "效率办公",
@@ -31425,7 +31425,7 @@
     "category": "系统工具/监控工具/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Sumo Logic",
     "description": "云原生日志管理和分析平台",
     "_cat": "系统工具",
@@ -31439,14 +31439,14 @@
     "category": "系统工具/监控工具/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Papertrail",
     "description": "云日志管理服务",
     "_cat": "系统工具",
     "category": "系统工具/监控工具/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Loggly",
     "description": "云日志管理服务",
     "_cat": "系统工具",
@@ -31572,7 +31572,7 @@
     "category": "开发工具/代码资源/库"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Consul",
     "description": "HashiCorp服务网格和配置工具",
     "_cat": "开发工具",
@@ -31614,7 +31614,7 @@
     "category": "多媒体/视频娱乐/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "itch.io",
     "description": "独立游戏平台和商店",
     "_cat": "多媒体",
@@ -31628,14 +31628,14 @@
     "category": "多媒体/视频娱乐/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Ubisoft Connect",
     "description": "育碧游戏平台",
     "_cat": "多媒体",
     "category": "多媒体/视频娱乐/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Xbox",
     "description": "微软Xbox游戏平台",
     "_cat": "多媒体",
@@ -31705,7 +31705,7 @@
     "category": "开发工具/平台开源/docker/仓库"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "JFrog Artifactory",
     "description": "通用包管理仓库",
     "_cat": "开发工具",
@@ -31719,7 +31719,7 @@
     "category": "开发工具/平台开源/仓库"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "AWS ECR",
     "description": "AWS容器镜像仓库",
     "_cat": "开发工具",
@@ -31754,7 +31754,7 @@
     "category": "开发工具/开发工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Git Extensions",
     "description": "Windows Git GUI客户端",
     "_cat": "开发工具",
@@ -31915,7 +31915,7 @@
     "category": "其他/电商平台/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "WooCommerce",
     "description": "WordPress电商插件",
     "_cat": "其他",
@@ -31929,7 +31929,7 @@
     "category": "其他/电商平台/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Wix eCommerce",
     "description": "Wix电商功能",
     "_cat": "其他",
@@ -31971,7 +31971,7 @@
     "category": "其他/内容管理/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Ghost",
     "description": "专业出版平台",
     "_cat": "其他",
@@ -31999,7 +31999,7 @@
     "category": "其他/内容管理/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Dev.to",
     "description": "开发者博客社区",
     "_cat": "其他",
@@ -32069,7 +32069,7 @@
     "category": "开发工具/在线工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Pelican",
     "description": "Python静态站点生成器",
     "_cat": "开发工具",
@@ -32097,7 +32097,7 @@
     "category": "开发工具/在线工具/工具"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "Docsify",
     "description": "动态文档站点生成器",
     "_cat": "开发工具",
@@ -32174,7 +32174,7 @@
     "category": "开发工具/代码资源/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "NuGet",
     "description": ".NET包管理器",
     "_cat": "开发工具",
@@ -32195,7 +32195,7 @@
     "category": "开发Tool/代码资源/平台"
   },
   {
-    "url": "",
+    "url": "https=",
     "title": "NPM Trends",
     "description": "npm包下载比较",
     "_cat": "开发工具",

@@ -78,29 +78,6 @@
     display: none;
 }
 
-
-
-.subcategory-header {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px 8px 24px;
-    font-size: 13px;
-    color: var(--color-text-dim);
-    transition: all var(--transition-duration) var(--transition-curve);
-}
-
-.subcategory-header:hover {
-    color: var(--color-text);
-    background-color: var(--color-primary-soft);
-}
-
-.subcategory-arrow {
-    width: 12px;
-    height: 12px;
-    margin-right: 8px;
-    transition: transform var(--transition-duration) var(--transition-curve);
-}
-
 /* 小类样式 */
 .menu-leaf {
     display: block;
@@ -251,6 +228,10 @@
     padding-left: 12px;
 }
 
+.menu-subcategory.expanded > .subcategory-content {
+    display: block;
+}
+
 /* 搜索覆盖层 */
 #search-overlay {
     display: none;
@@ -270,4 +251,18 @@
 }
 
 /* 修复: 子类别最大高度动画 */
+.menu-subcategory {
+    cursor: pointer;
+    user-select: none;
+    overflow: visible;
+    transition: none;
+}
+
+.menu-subcategory.expanded > .subcategory-content {
+    display: block;
+}
+
 /* 当折叠时强制隐藏内容 */
+.menu-subcategory:not(.expanded) > .subcategory-content {
+    display: none !important;
+}
