@@ -12,7 +12,7 @@ async function init() {
     initSearchEngine(dataManager);
 
     state.subscribe((s) => {
-        // // console.log('[STATE]', JSON.parse(JSON.stringify(s.sidebar)));
+        // // // console.log('[STATE]', JSON.parse(JSON.stringify(s.sidebar)));
         renderer.renderSidebar(s);
         renderer.renderView(s);
         syncStateToHash(s);
