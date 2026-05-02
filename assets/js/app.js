@@ -12,7 +12,6 @@ async function init() {
     initSearchEngine(dataManager);
 
     state.subscribe((s) => {
-        // // // console.log('[STATE]', JSON.parse(JSON.stringify(s.sidebar)));
         renderer.renderSidebar(s);
         renderer.renderView(s);
         syncStateToHash(s);
@@ -26,11 +25,25 @@ async function init() {
     const hashLoaded = syncHashToState();
 
     if (!hashLoaded && categories.length > 0) {
-        // Set first category as active (expanded)
+        // Set first category as active and auto-select first content
         const [firstCatId] = categories[0];
+        const firstCat = dataManager.categories[firstCatId];
+
+        // Auto-expand first category
         state.set('sidebar.activeCategoryId', firstCatId);
-        // NOTE: Do NOT pre-set subcategory or leaf state.
-        // Let user interaction expand subcategories.
+
+        // Auto-select first subcategory and leaf if available
+        const subCats = firstCat.subCategories;
+        const firstSubId = Object.keys(subCats)[0];
+        if (firstSubId) {
+            state.set('sidebar.activeSubCategoryId', firstSubId);
+            const subCat = subCats[firstSubId];
+            const leafIds = Object.keys(subCat.leafCategories);
+            const firstLeafId = leafIds[0];
+            if (firstLeafId) {
+                state.set('sidebar.activeLeafId', firstLeafId);
+            }
+        }
     }
 
     window.addEventListener('keydown', (e) => {

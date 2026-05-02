@@ -1,33 +1,25 @@
+/* ============================================
+   核心基础样式
+   ============================================ */
+
+/* CSS 变量系统 - 轻量版，为兼容老版本保留 */
 :root {
-    /* --- 核心尺寸 --- */
     --sidebar-width: 280px;
     --sidebar-collapsed-width: 64px;
     --nav-height: 60px;
-    --card-radius: 10px;
+    --card-radius: 12px;
     --transition-duration: 180ms;
     --transition-curve: cubic-bezier(0.25, 0.1, 0.25, 1);
     --grid-gap: 16px;
 
-    /* --- 颜色系统 (Light) --- */
-    --color-bg: #ffffff;
-    --color-bg-alt: #f9fafb;
-    --color-text: #111827;
-    --color-text-dim: #6b7280;
+    --color-bg: #0a0a0f;
+    --color-bg-alt: #12121a;
+    --color-text: #f0f0f5;
+    --color-text-dim: #6a6a7e;
     --color-primary: #7c3aed;
     --color-primary-soft: rgba(124, 58, 237, 0.1);
-    --color-border: #e5e7eb;
-    --color-shadow: rgba(0, 0, 0, 0.05);
-}
-
-[data-theme="dark"] {
-    --color-bg: #0a0a0a;
-    --color-bg-alt: #141414;
-    --color-text: #f3f4f6;
-    --color-text-dim: #9ca3af;
-    --color-primary: #a78bfa;
-    --color-primary-soft: rgba(167, 139, 250, 0.1);
-    --color-border: #262626;
-    --color-shadow: rgba(0, 0, 0, 0.3);
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-shadow: rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -48,7 +40,6 @@ html, body {
     transition: background-color var(--transition-duration) var(--transition-curve);
 }
 
-/* 布局容器 */
 #app-shell {
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
@@ -61,7 +52,6 @@ html, body {
     grid-template-columns: var(--sidebar-collapsed-width) 1fr;
 }
 
-/* 侧边栏 */
 #sidebar {
     height: 100vh;
     background-color: var(--color-bg-alt);
@@ -72,7 +62,6 @@ html, body {
     position: relative;
 }
 
-/* 主内容区 */
 #main-content {
     height: 100vh;
     display: flex;
@@ -97,42 +86,37 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* WCAG Compliant Touch Targets */
 button,
 a[role="button"],
 .sidebar-link,
 .nav-item,
 .card {
-  min-height: 48px;
-  min-width: 48px;
-  padding: 12px 16px;
-  touch-action: manipulation;
+    min-height: 48px;
+    min-width: 48px;
+    padding: 12px 16px;
+    touch-action: manipulation;
 }
 
-/* Interactive control sizing */
-.sidebar-toggle,
-.theme-toggle,
-.action-btn {
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  transition: background-color var(--transition-duration) var(--transition-curve);
+button,
+a[role="button"] {
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color var(--transition-duration) var(--transition-curve);
 }
 
-.sidebar-toggle:hover,
-.theme-toggle:hover,
-.action-btn:hover {
-  background-color: var(--color-bg-alt);
+button:hover,
+a[role="button"]:hover {
+    background-color: var(--color-bg-alt);
 }
 
-/* Ensure sufficient spacing between touch targets */
 button + button,
 a + a {
-  margin-left: 8px;
+    margin-left: 8px;
 }

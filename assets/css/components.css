@@ -1,11 +1,12 @@
-/* Components CSS - 专注实现 Menu_System.md 和 Haptic_Feel.md */
+/* ============================================
+   组件样式 - 兼容性层
+   ============================================ */
 
-/* --- 侧边栏菜单系统 --- */
+/* 侧边栏菜单 */
 .menu-group {
     margin-bottom: 12px;
 }
 
-/* 大类样式 */
 .menu-category {
     cursor: pointer;
     user-select: none;
@@ -26,7 +27,6 @@
     color: var(--color-primary);
 }
 
-/* 激活大类指示线 */
 .menu-category.active > .category-header::before {
     content: "";
     position: absolute;
@@ -37,7 +37,7 @@
     background-color: var(--color-primary);
 }
 
-/* 中类样式 */
+/* 子类别 */
 .menu-subcategory {
     cursor: pointer;
     user-select: none;
@@ -74,34 +74,16 @@
     display: block;
 }
 
-.menu-subcategory:not(.expanded) > .subcategory-content {
+.subcategory-content {
     display: none;
+    padding-left: 12px;
 }
 
-
-
-.subcategory-header {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px 8px 24px;
-    font-size: 13px;
-    color: var(--color-text-dim);
-    transition: all var(--transition-duration) var(--transition-curve);
+.menu-subcategory.expanded > .subcategory-content {
+    display: block;
 }
 
-.subcategory-header:hover {
-    color: var(--color-text);
-    background-color: var(--color-primary-soft);
-}
-
-.subcategory-arrow {
-    width: 12px;
-    height: 12px;
-    margin-right: 8px;
-    transition: transform var(--transition-duration) var(--transition-curve);
-}
-
-/* 小类样式 */
+/* 叶子节点 */
 .menu-leaf {
     display: block;
     padding: 6px 16px 6px 40px;
@@ -133,7 +115,7 @@
     border-radius: 50%;
 }
 
-/* --- 触觉交互：卡片系统 --- */
+/* 卡片 */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -152,8 +134,6 @@
                 box-shadow var(--transition-duration) var(--transition-curve),
                 border-color var(--transition-duration) var(--transition-curve);
     box-shadow: 0 2px 4px var(--color-shadow);
-
-    /* 触觉规范：使用 content-visibility 优化 9000 条目渲染 */
     content-visibility: auto;
     contain-intrinsic-size: 100px;
 }
@@ -199,7 +179,7 @@
     hyphens: auto;
 }
 
-/* --- 搜索面板 --- */
+/* 搜索 */
 .search-overlay {
     position: fixed;
     top: 0;
@@ -244,30 +224,3 @@
     border-color: var(--color-primary);
     box-shadow: 0 0 0 4px var(--color-primary-soft);
 }
-
-/* 小类别内容区域 */
-.subcategory-content {
-    display: none;
-    padding-left: 12px;
-}
-
-/* 搜索覆盖层 */
-#search-overlay {
-    display: none;
-}
-
-#search-overlay:not(.hidden) {
-    display: block;
-}
-
-/* Search overlay styles */
-#search-overlay {
-    display: none;
-}
-
-#search-overlay:not(.hidden) {
-    display: block;
-}
-
-/* 修复: 子类别最大高度动画 */
-/* 当折叠时强制隐藏内容 */
