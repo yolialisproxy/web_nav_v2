@@ -108,3 +108,8 @@
 /* Font Awesome fallback */
 .fas { font-family: 'Font Awesome 5 Free'; font-weight: 900; font-style: normal; line-height: 1; }
 .fa-search::before { content: '\f002'; display: inline-block; }
+
+/* Additional hover states for sidebar toggle */
+#sidebar-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}

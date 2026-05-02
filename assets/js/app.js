@@ -5,15 +5,25 @@
  */
 
 async function init() {
-    window.renderSites = renderSites;
+        window.renderSites = renderSites;
     renderSites(null);
 
     await dataManager.load();
-    initSearchEngine(dataManager);
+        initSearchEngine(dataManager);
 
     state.subscribe((s) => {
-        renderer.renderSidebar(s);
-        renderer.renderView(s);
+        // console.log('[APP] State update:', {
+            activeCategory: s.sidebar.activeCategoryId,
+            activeSub: s.sidebar.activeSubCategoryId,
+            activeLeaf: s.sidebar.activeLeafId,
+            categories: Object.keys(dataManager.categories || {}).length
+        });
+        try {
+            renderer.renderSidebar(s);
+                    } catch(e) { console.error('[APP] Sidebar render error:', e); }
+        try {
+            renderer.renderView(s);
+                    } catch(e) { console.error('[APP] View render error:', e); }
         syncStateToHash(s);
     });
 
