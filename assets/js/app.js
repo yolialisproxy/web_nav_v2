@@ -12,12 +12,12 @@ async function init() {
         initSearchEngine(dataManager);
 
     state.subscribe((s) => {
-        // console.log('[APP] State update:', {
-            activeCategory: s.sidebar.activeCategoryId,
-            activeSub: s.sidebar.activeSubCategoryId,
-            activeLeaf: s.sidebar.activeLeafId,
-            categories: Object.keys(dataManager.categories || {}).length
-        });
+        // // console.log('[APP] State update:', {
+        //     activeCategory: s.sidebar.activeCategoryId,
+        //     activeSub: s.sidebar.activeSubCategoryId,
+        //     activeLeaf: s.sidebar.activeLeafId,
+        //     categories: Object.keys(dataManager.categories || {}).length
+        // });
         try {
             renderer.renderSidebar(s);
                     } catch(e) { console.error('[APP] Sidebar render error:', e); }

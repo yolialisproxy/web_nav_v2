@@ -23,6 +23,11 @@
                     </svg>
                 </button>
                 <h1 class="text-lg font-bold">啃魂导航</h1>
+<div style="display:flex;align-items:center;">
+<button id="favorite-toggle" class="favorite-btn" onclick="if(window.favoriteUI)window.favoriteUI.open()" title="查看收藏">
+♡
+</button>
+</div>
             </div>
 
             <div class="relative flex-1 max-w-md ml-auto">
@@ -73,7 +78,38 @@
     <script src="assets/js/data.js"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/render.js"></script>
+    <script src="assets/js/favorite.js"></script>
     <script src="assets/js/app.js"></script>
     <div id="view-container" style="display:none"></div>
+
+<!-- 收藏弹窗 -->
+<div id="favorite-modal" class="modal-overlay">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>📁 我的收藏</h3>
+            <button class="modal-close" onclick="favoriteUI.closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div id="favorite-count" class="favorite-count">正在加载...</div>
+            <div id="favorite-list" class="favorite-list"></div>
+            <div id="favorite-empty" class="favorite-empty" style="display: none;">
+                <p>还没有收藏任何站点</p>
+                <p>去浏览并收藏你喜欢的网站吧！</p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" onclick="favoriteUI.clearAll()" id="clear-favorites" style="display: none;">
+                🗑️ 清空所有
+            </button>
+            <button class="btn btn-primary" onclick="favoriteUI.exportFavorites()">
+                📋 导出数据
+            </button>
+        </div>
+    </div>
+</div>
+<div id="toast-container"></div>
+
+<script src="assets/js/favorite-ui-bootstrap.js"></script>
+    <script src="assets/js/init-favorites.js"></script>
 </body>
 </html>

@@ -1,30 +1,28 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-05-02T21:10:24.165340",
+  "test_timestamp": "2026-05-03T13:38:10.241241",
   "base_url": "http://localhost:8080",
   "console_errors": [],
   "tested_features": [
     "homepage_navigation",
     "screenshot",
     "search",
-    "category_navigation",
     "link_clicks",
     "responsive_design",
     "page_rendering"
   ],
   "passed": true,
   "issues": [
-    "Link click test 1 failed: Timeout 5000ms exceeded while waiting for event \"page\"",
-    "Link click test 2 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================"
+    "Category navigation failed: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\".menu-category\").first.locator(\".category-content\").locator(\".menu-subcategory\").first.locator(\".subcategory-content\").locator(\".menu-leaf\").first\n    - locator resolved to <a href=\"#\" data-leaf-id=\"平台开源\" class=\"menu-leaf active\">平台开源</a>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    56 × waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n",
+    "Link click test 1 failed: Timeout 10000ms exceeded.",
+    "Link click test 2 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================",
+    "Link click test 3 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================"
   ],
   "details": {
     "homepage_status": 200,
     "screenshot_path": "/home/yoli/GitHub/web_nav_v2/reports/acceptance_test_screenshot.png",
     "search_test_query": "百度",
     "search_results_count": 17,
-    "categories_found": 16,
-    "subcategories_found": 28,
-    "leaf_categories_found": 11,
     "links_tested": 3,
     "viewport_tests": [
       {

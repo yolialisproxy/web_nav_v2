@@ -56,7 +56,7 @@ function renderSites(sites, containerId) {
                 favicon = 'https://www.google.com/s2/favicons?domain=' + hn + '&sz=32';
             } catch(e) {}
         }
-        var title = site.title || '';
+        var title = site.name || '';
         var desc = site.description || '';
         html += '<a href="' + url + '" class="site site-card" ' + target + ' ' + rel + '>' +
             '<img src="' + favicon + '" class="card-icon" onerror="this.onerror=null;this.src=\'assets/images/favicon.png\';">' +
@@ -107,7 +107,7 @@ class Renderer {
             var leavesHtml = _this2._leaves(sub, s);
             h += '<div class="menu-subcategory ' + (exp ? 'expanded' : '') + '" data-sub-id="' + sid + '">' +
                 '<div class="subcategory-header"><svg class="subcategory-arrow" viewBox="0 0 24 24" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>' + sub.name + '</div>' +
-                '<div class="subcategory-content" style="display:' + (exp ? 'block' : 'none') + '">' + leavesHtml + '</div>' +
+                '<div class="subcategory-content">' + leavesHtml + '</div>' +
                 '</div>';
         });
         return h;
@@ -156,7 +156,7 @@ class Renderer {
                     fav = 'https://www.google.com/s2/favicons?domain=' + hn + '&sz=32';
                 } catch(e) {}
             }
-            var title = site.title || '';
+            var title = site.name || '';
             var desc = site.description || '';
             h += '<a href="' + url + '" target="_blank" class="site site-card" rel="noopener">' +
                 '<img src="' + fav + '" class="card-icon" onerror="this.src=\'assets/images/favicon.png\'">' +

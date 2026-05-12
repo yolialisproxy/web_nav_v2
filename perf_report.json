@@ -1,0 +1,58 @@
+{
+  "url": "http://localhost:8080",
+  "runs": 3,
+  "avg_navigation_ms": 434.6,
+  "avg_dom_content_loaded_ms": 424.6,
+  "avg_load_event_ms": 434.6,
+  "avg_fcp_ms": 680.0,
+  "avg_lcp_ms": 680.0,
+  "avg_total_blocking_time_ms": 477.3,
+  "avg_js_heap_mb": 6.31,
+  "avg_tti_ms": 477.3,
+  "avg_resource_count": 18,
+  "avg_resource_bytes": 114621,
+  "threshold_lcp_ms": 3000.0,
+  "lcp_pass": true,
+  "all_metrics": [
+    {
+      "navigation_ms": 1057.3,
+      "dom_content_loaded_ms": 1049.4,
+      "load_event_ms": 1057.3,
+      "first_contentful_paint_ms": 888,
+      "largest_contentful_paint_ms": 888,
+      "total_blocking_time_ms": 1377,
+      "js_heap_used_mb": 4.42,
+      "resource_count": 18,
+      "resource_total_bytes": 114621,
+      "time_to_interactive_ms": 1377,
+      "errors": []
+    },
+    {
+      "navigation_ms": 133.3,
+      "dom_content_loaded_ms": 123,
+      "load_event_ms": 133.3,
+      "first_contentful_paint_ms": 700,
+      "largest_contentful_paint_ms": 700,
+      "total_blocking_time_ms": 55,
+      "js_heap_used_mb": 6.27,
+      "resource_count": 18,
+      "resource_total_bytes": 114621,
+      "time_to_interactive_ms": 55,
+      "errors": []
+    },
+    {
+      "navigation_ms": 113.3,
+      "dom_content_loaded_ms": 101.4,
+      "load_event_ms": 113.3,
+      "first_contentful_paint_ms": 452,
+      "largest_contentful_paint_ms": 452,
+      "total_blocking_time_ms": 0,
+      "js_heap_used_mb": 8.24,
+      "resource_count": 18,
+      "resource_total_bytes": 114621,
+      "time_to_interactive_ms": 0,
+      "errors": []
+    }
+  ],
+  "errors": []
+}

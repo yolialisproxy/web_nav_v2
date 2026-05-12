@@ -1,0 +1,28 @@
+{
+  "name": "web_nav_v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yolialisproxy/web_nav_v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yolialisproxy/web_nav_v2/issues"
+  },
+  "homepage": "https://github.com/yolialisproxy/web_nav_v2#readme",
+  "devDependencies": {
+    "puppeteer": "^24.43.1"
+  }
+}
