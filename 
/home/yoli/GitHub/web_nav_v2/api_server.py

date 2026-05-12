@@ -1,0 +1,336 @@
+
+#!/usr/bin/env python3
+"""
+FastAPI Backend Server for web_nav_v2
+Provides RESTful API for managing navigation websites
+"""
+
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
+from typing import List, Optional
+import json
+import os
+from datetime import datetime
+from contextlib import asynccontextmanager
+
+# Project root
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+DATA_PATH = os.path.join(PROJECT_ROOT, "data", "websites.json")
+
+# Data models
+class WebsiteBase(BaseModel):
+    url: str = Field(..., description="Website URL")
+    name: str = Field(..., description="Website name")
+    description: str = Field(..., description="Website description")
+    category: str = Field(..., description="Website category")
+
+class WebsiteCreate(WebsiteBase):
+    pass
+
+class Website(WebsiteBase):
+    id: int
+    phase3_merged: bool = False
+    created_at: Optional[str] = None
+    updated_at: Optional[str] = None
+    
+    class Config:
+        from_attributes = True
+
+class CategoryStats(BaseModel):
+    category: str
+    count: int
+    percentage: float
+
+class SearchResponse(BaseModel):
+    query: str
+    total_results: int
+    results: List[Website]
+
+class HealthResponse(BaseModel):
+    status: str
+    timestamp: str
+    total_websites: int
+    total_categories: int
+    data_file: str
+    uptime: str
+
+# Global variable for storing websites
+websites_db: List[dict] = []
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Startup
+    load_websites()
+    yield
+    # Shutdown
+    websites_db.clear()
+
+app = FastAPI(
+    title="WebNav V2 API",
+    description="RESTful API for managing navigation websites",
+    version="2.0.0",
+    lifespan=lifespan
+)
+
+# CORS middleware
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+def load_websites():
+    """Load websites from JSON file"""
+    global websites_db
+    try:
+        with open(DATA_PATH, 'r', encoding='utf-8') as f:
+            websites_db = json.load(f)
+        # Ensure each website has an ID
+        for i, site in enumerate(websites_db):
+            site.setdefault('id', i + 1)
+            site.setdefault('phase3_merged', site.get('_cat', False) or site.get('phase3_merged', False))
+            site.setdefault('created_at', datetime.now().isoformat())
+            site.setdefault('updated_at', datetime.now().isoformat())
+    except Exception as e:
+        print(f"Error loading websites: {e}")
+        websites_db = []
+
+def save_websites():
+    """Save websites to JSON file"""
+    try:
+        # Create backup
+        backup_path = DATA_PATH + '.backup'
+        if os.path.exists(DATA_PATH):
+            import shutil
+            shutil.copy2(DATA_PATH, backup_path)
+        
+        # Save data
+        with open(DATA_PATH, 'w', encoding='utf-8') as f:
+            json.dump(websites_db, f, ensure_ascii=False, indent=2)
+        return True
+    except Exception as e:
+        print(f"Error saving websites: {e}")
+        return False
+
+@app.get("/", include_in_schema=False)
+async def root():
+    return {
+        "message": "WebNav V2 API",
+        "version": "2.0.0",
+        "endpoints": {
+            "health": "/health",
+            "websites": "/api/websites",
+            "categories": "/api/categories",
+            "search": "/api/search",
+            "stats": "/api/stats"
+        }
+    }
+
+@app.get("/health", response_model=HealthResponse)
+async def health_check():
+    """Health check endpoint"""
+    return HealthResponse(
+        status="healthy",
+        timestamp=datetime.now().isoformat(),
+        total_websites=len(websites_db),
+        total_categories=len(set(site.get('category', '') for site in websites_db)),
+        data_file=DATA_PATH,
+        uptime="running"
+    )
+
+@app.get("/api/websites", response_model=List[Website])
+async def get_websites(
+    skip: int = Query(0, ge=0, description="Number of items to skip"),
+    limit: int = Query(100, ge=1, le=1000, description="Maximum number of items to return"),
+    category: Optional[str] = Query(None, description="Filter by category"),
+    merged: Optional[bool] = Query(None, description="Filter by phase3_merged status")
+):
+    """Get list of websites with pagination"""
+    filtered = websites_db
+    
+    if category:
+        filtered = [s for s in filtered if s.get('category', '').lower() == category.lower()]
+    
+    if merged is not None:
+        filtered = [s for s in filtered if s.get('phase3_merged', False) == merged]
+    
+    total = len(filtered)
+    result = filtered[skip:skip + limit]
+    
+    return result
+
+@app.get("/api/websites/{website_id}", response_model=Website)
+async def get_website(website_id: int):
+    """Get a specific website by ID"""
+    for site in websites_db:
+        if site.get('id') == website_id:
+            return site
+    raise HTTPException(status_code=404, detail="Website not found")
+
+@app.post("/api/websites", response_model=Website)
+async def create_website(website: WebsiteCreate):
+    """Create a new website"""
+    new_id = max([s.get('id', 0) for s in websites_db], default=0) + 1
+    new_website = {
+        "id": new_id,
+        "url": website.url,
+        "name": website.name,
+        "description": website.description,
+        "category": website.category,
+        "_cat": website.category,
+        "phase3_merged": False,
+        "created_at": datetime.now().isoformat(),
+        "updated_at": datetime.now().isoformat(),
+        "title": website.name,
+        "name": website.name
+    }
+    websites_db.append(new_website)
+    save_websites()
+    return new_website
+
+@app.put("/api/websites/{website_id}", response_model=Website)
+async def update_website(website_id: int, website: WebsiteCreate):
+    """Update an existing website"""
+    for i, site in enumerate(websites_db):
+        if site.get('id') == website_id:
+            websites_db[i].update({
+                "url": website.url,
+                "name": website.name,
+                "description": website.description,
+                "category": website.category,
+                "_cat": website.category,
+                "title": website.name,
+                "updated_at": datetime.now().isoformat()
+            })
+            save_websites()
+            return websites_db[i]
+    raise HTTPException(status_code=404, detail="Website not found")
+
+@app.delete("/api/websites/{website_id}")
+async def delete_website(website_id: int):
+    """Delete a website"""
+    global websites_db
+    original_length = len(websites_db)
+    websites_db = [s for s in websites_db if s.get('id') != website_id]
+    
+    if len(websites_db) < original_length:
+        save_websites()
+        return {"message": "Website deleted successfully"}
+    raise HTTPException(status_code=404, detail="Website not found")
+
+@app.get("/api/search", response_model=SearchResponse)
+async def search_websites(
+    q: str = Query(..., min_length=1, description="Search query"),
+    category: Optional[str] = Query(None, description="Filter by category"),
+    limit: int = Query(100, ge=1, le=1000, description="Maximum results")
+):
+    """Search websites"""
+    query_lower = q.lower()
+    results = []
+    
+    for site in websites_db:
+        if (
+            query_lower in site.get('name', '').lower() or
+            query_lower in site.get('description', '').lower() or
+            query_lower in site.get('category', '').lower() or
+            query_lower in site.get('url', '').lower()
+        ):
+            if category and category.lower() != site.get('category', '').lower():
+                continue
+            results.append(site)
+        
+        if len(results) >= limit:
+            break
+    
+    return SearchResponse(
+        query=q,
+        total_results=len(results),
+        results=results
+    )
+
+@app.get("/api/categories")
+async def get_categories():
+    """Get all categories with statistics"""
+    category_map = {}
+    for site in websites_db:
+        cat = site.get('category', 'Uncategorized')
+        if cat not in category_map:
+            category_map[cat] = []
+        category_map[cat].append(site)
+    
+    total = len(websites_db)
+    categories = []
+    for cat, sites in sorted(category_map.items()):
+        categories.append(CategoryStats(
+            category=cat,
+            count=len(sites),
+            percentage=round((len(sites) / total) * 100, 2) if total > 0 else 0
+        ))
+    
+    return {
+        "total": total,
+        "categories_count": len(categories),
+        "categories": categories
+    }
+
+@app.get("/api/stats")
+async def get_statistics():
+    """Get detailed statistics"""
+    total = len(websites_db)
+    categories = set(site.get('category', '') for site in websites_db)
+    merged = sum(1 for site in websites_db if site.get('phase3_merged', False))
+    not_merged = total - merged
+    
+    # Count by category
+    category_counts = {}
+    for site in websites_db:
+        cat = site.get('category', 'Uncategorized')
+        category_counts[cat] = category_counts.get(cat, 0) + 1
+    
+    # Top categories
+    top_categories = sorted(category_counts.items(), key=lambda x: x[1], reverse=True)[:10]
+    
+    return {
+        "total_websites": total,
+        "active_websites": merged,
+        "pending_websites": not_merged,
+        "total_categories": len(categories),
+        "completion_rate": f"{round((merged/total)*100, 2) if total > 0 else 0}%",
+        "top_categories": [{"category": cat, "count": count} for cat, count in top_categories],
+        "updated_at": datetime.now().isoformat()
+    }
+
+@app.post("/api/websites/batch")
+async def batch_import(websites: List[WebsiteCreate]):
+    """Batch import websites"""
+    imported = []
+    for website in websites:
+        new_id = max([s.get('id', 0) for s in websites_db], default=0) + 1
+        new_website = {
+            "id": new_id,
+            "url": website.url,
+            "name": website.name,
+            "description": website.description,
+            "category": website.category,
+            "_cat": website.category,
+            "phase3_merged": False,
+            "created_at": datetime.now().isoformat(),
+            "updated_at": datetime.now().isoformat(),
+            "title": website.name,
+            "name": website.name
+        }
+        websites_db.append(new_website)
+        imported.append(new_website)
+    
+    save_websites()
+    return {
+        "message": f"Successfully imported {len(imported)} websites",
+        "imported": imported
+    }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

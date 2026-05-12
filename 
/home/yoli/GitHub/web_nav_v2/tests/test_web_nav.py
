@@ -1,0 +1,249 @@
+
+#!/usr/bin/env python3
+"""
+Test suite for web_nav_v2
+Testing frontend and backend functionality
+"""
+
+import json
+import os
+import sys
+import unittest
+from pathlib import Path
+
+# Add project root to path
+PROJECT_ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(PROJECT_ROOT))
+
+# Test data paths
+DATA_PATH = PROJECT_ROOT / "data" / "websites.json"
+
+def load_sites():
+    """Load websites data"""
+    with open(DATA_PATH, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+class TestDataIntegrity(unittest.TestCase):
+    """Test data integrity and structure"""
+
+    def test_data_file_exists(self):
+        """Verify data file exists"""
+        self.assertTrue(DATA_PATH.exists(), "Data file should exist")
+
+    def test_data_is_valid_json(self):
+        """Verify data is valid JSON"""
+        sites = load_sites()
+        self.assertIsInstance(sites, list, "Data should be a list")
+
+    def test_data_not_empty(self):
+        """Verify data is not empty"""
+        sites = load_sites()
+        self.assertGreater(len(sites), 0, "Data should not be empty")
+
+    def test_each_site_has_required_fields(self):
+        """Verify each site has required fields"""
+        sites = load_sites()
+        required_fields = ['name', 'url', 'category']
+        
+        for site in sites:
+            for field in required_fields:
+                self.assertIn(field, site, f"Site missing required field: {field}")
+                self.assertTrue(site[field], f"Field '{field}' should not be empty")
+
+    def test_url_format(self):
+        """Verify URL format is valid"""
+        sites = load_sites()
+        for site in sites:
+            url = site['url']
+            self.assertTrue(
+                url.startswith('http://') or url.startswith('https://'),
+                f"URL should start with http:// or https://: {url}"
+            )
+
+    def test_category_count(self):
+        """Verify reasonable number of categories"""
+        sites = load_sites()
+        categories = set(site['category'] for site in sites)
+        self.assertGreater(len(categories), 10, "Should have more than 10 categories")
+        self.assertLess(len(categories), 300, "Should have less than 300 categories")
+
+
+class TestCategoryBalance(unittest.TestCase):
+    """Test category distribution"""
+
+    def test_category_distribution(self):
+        """Verify category distribution is reasonable"""
+        sites = load_sites()
+        category_counts = {}
+        
+        for site in sites:
+            cat = site['category']
+            category_counts[cat] = category_counts.get(cat, 0) + 1
+        
+        # Check that most categories have sites
+        self.assertGreater(len(category_counts), 50, "Should have diverse categories")
+        
+        # Check for outliers (categories with very few or very many sites)
+        valid_categories = [count for count in category_counts.values() if 5 <= count <= 1000]
+        self.assertGreater(len(valid_categories), len(category_counts) * 0.8, 
+                          "Most categories should have reasonable site counts")
+
+
+class TestPerformance(unittest.TestCase):
+    """Test performance requirements"""
+
+    def test_json_load_time(self):
+        """Verify JSON loads within acceptable time"""
+        import time
+        
+        start = time.time()
+        sites = load_sites()
+        load_time = time.time() - start
+        
+        # Should load within 2 seconds
+        self.assertLess(load_time, 2.0, f"JSON load time too high: {load_time:.2f}s")
+
+    def test_data_size(self):
+        """Verify data size is reasonable"""
+        size = DATA_PATH.stat().st_size
+        # Should be less than 10MB
+        self.assertLess(size, 10 * 1024 * 1024, f"Data size too large: {size / 1024 / 1024:.2f}MB")
+
+
+class TestFileStructure(unittest.TestCase):
+    """Test project file structure"""
+
+    def test_required_directories_exist(self):
+        """Verify required directories exist"""
+        required_dirs = ['assets', 'assets/css', 'assets/js', 'pages', 'scripts', 'tests']
+        
+        for dir_path in required_dirs:
+            full_path = PROJECT_ROOT / dir_path
+            self.assertTrue(full_path.exists(), f"Directory should exist: {dir_path}")
+
+    def test_key_files_exist(self):
+        """Verify key files exist"""
+        required_files = [
+            'index.html',
+            'assets/css/core.css',
+            'assets/js/app.js',
+            'pages/category.html',
+            'pages/site-detail.html',
+            'pages/search-results.html',
+            'serve.py',
+        ]
+        
+        for file_path in required_files:
+            full_path = PROJECT_ROOT / file_path
+            self.assertTrue(full_path.exists(), f"File should exist: {file_path}")
+
+
+class TestFrontendIntegration(unittest.TestCase):
+    """Test frontend integration"""
+
+    def test_html_structure(self):
+        """Verify main HTML has correct structure"""
+        index_path = PROJECT_ROOT / "index.html"
+        with open(index_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        # Check for essential elements
+        self.assertIn('<html', content, "HTML should have <html> tag")
+        self.assertIn('charset="UTF-8"', content, "HTML should have UTF-8 charset")
+        self.assertIn('viewport', content, "HTML should have viewport meta tag")
+        self.assertIn('</body>', content, "HTML should have closing body tag")
+
+    def test_css_loaded(self):
+        """Verify CSS files are linked"""
+        index_path = PROJECT_ROOT / "index.html"
+        with open(index_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        css_files = ['core.css', 'theme-modern.css', 'components.css', 'responsive.css']
+        for css_file in css_files:
+            self.assertIn(css_file, content, f"HTML should link to {css_file}")
+
+    def test_js_loaded(self):
+        """Verify JS files are linked"""
+        index_path = PROJECT_ROOT / "index.html"
+        with open(index_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        js_files = ['state.js', 'data.js', 'search.js', 'render.js', 'app.js']
+        for js_file in js_files:
+            self.assertIn(js_file, content, f"HTML should include {js_file}")
+
+
+class TestBackend(unittest.TestCase):
+    """Test backend functionality"""
+
+    def test_serve_py_exists(self):
+        """Verify serve.py exists and is executable"""
+        serve_path = PROJECT_ROOT / "serve.py"
+        self.assertTrue(serve_path.exists(), "serve.py should exist")
+        
+        # Check it's a Python file
+        with open(serve_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        self.assertIn('http.server', content, "serve.py should use http.server")
+        self.assertIn('SimpleHTTPRequestHandler', content, "serve.py should use SimpleHTTPRequestHandler")
+
+    def test_scripts_executable(self):
+        """Verify key scripts are executable"""
+        scripts = [
+            'scripts/migrate_ai_sites.py',
+            'scripts/migrate_ai_subcategories.py',
+            'scripts/purge_ai_category.py',
+        ]
+        
+        for script in scripts:
+            script_path = PROJECT_ROOT / script
+            if script_path.exists():
+                # Check it has a shebang
+                with open(script_path, 'r', encoding='utf-8') as f:
+                    first_line = f.readline()
+                self.assertIn('#!', first_line, f"Script should have shebang: {script}")
+
+
+class TestPages(unittest.TestCase):
+    """Test page templates"""
+
+    def test_category_page_exists(self):
+        """Verify category page exists"""
+        page_path = PROJECT_ROOT / "pages" / "category.html"
+        self.assertTrue(page_path.exists(), "category.html should exist")
+
+    def test_site_detail_page_exists(self):
+        """Verify site detail page exists"""
+        page_path = PROJECT_ROOT / "pages" / "site-detail.html"
+        self.assertTrue(page_path.exists(), "site-detail.html should exist")
+
+    def test_search_results_page_exists(self):
+        """Verify search results page exists"""
+        page_path = PROJECT_ROOT / "pages" / "search-results.html"
+        self.assertTrue(page_path.exists(), "search-results.html should exist")
+
+    def test_pages_have_proper_structure(self):
+        """Verify pages have proper HTML structure"""
+        pages = [
+            ('category.html', 'category'),
+            ('site-detail.html', 'site-detail'),
+            ('search-results.html', 'search-results'),
+        ]
+        
+        for page_file, page_type in pages:
+            page_path = PROJECT_ROOT / "pages" / page_file
+            with open(page_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            
+            self.assertIn('<html', content, f"{page_file} should have <html> tag")
+            self.assertIn('<body', content, f"{page_file} should have <body> tag")
+            self.assertIn('</html>', content, f"{page_file} should have closing </html> tag")
+
+
+if __name__ == '__main__':
+    # Run tests with verbose output
+    unittest.main(verbosity=2)
+

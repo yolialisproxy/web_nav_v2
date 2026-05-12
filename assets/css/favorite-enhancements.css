@@ -1,0 +1,121 @@
+/* ============================================
+   收藏功能增强
+   ============================================ */
+
+/* 网站详情页 - 星形收藏按钮 */
+#favorite-detail-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(167, 139, 250, 0.6)) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 12px 24px !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3) !important;
+    margin: 10px 0 !important;
+}
+
+#favorite-detail-btn:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5) !important;
+}
+
+#favorite-detail-btn.favorited {
+    background: linear-gradient(135deg, rgba(255, 107, 157, 0.8), rgba(255, 136, 170, 0.6)) !important;
+}
+
+/* 收藏弹窗叠加动画 */
+@keyframes favoriteBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.favorite-btn.favorited {
+    animation: favoriteBounce 0.5s ease;
+}
+
+/* 涨幅悬浮 */
+@keyframes floatUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.favorite-item:hover {
+    animation: floatUp 2s ease-in-out infinite;
+}
+
+/* 水波起伏
+@keyframes wavePulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
+}
+
+.favorite-btn:hover {
+    animation: wavePulse 1.5s ease-in-out infinite;
+} */
+
+/* 微交互光效 */
+.favorite-btn::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #ff6b9d, #a78bfa, #7c3aed, #ff6b9d);
+    background-size: 400%;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: gradientRotate 3s linear infinite;
+}
+
+.favorite-btn.favorited::before {
+    opacity: 0.3;
+}
+
+@keyframes gradientRotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 滚入动画 */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.favorite-item {
+    animation: slideInUp 0.5s ease forwards;
+}
+
+.favorite-item:nth-child(1) { animation-delay: 0.05s; }
+.favorite-item:nth-child(2) { animation-delay: 0.1s; }
+.favorite-item:nth-child(3) { animation-delay: 0.15s; }
+.favorite-item:nth-child(4) { animation-delay: 0.2s; }
+.favorite-item:nth-child(5) { animation-delay: 0.25s; }
+
+/* 缩放动画 */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-primary:hover {
+    animation: pulse 0.6s ease-in-out;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站详情 - 啃魂导航 V2</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/core.css">
+    <link rel="stylesheet" href="../assets/css/theme-modern.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/tailwind-local.css">
+    <style>
+        .detail-card { background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.95) 100%); backdrop-filter: blur(20px); }
+        .detail-header { background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); }
+        .visit-btn { background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); transition: all 0.3s ease; }
+        .visit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px var(--primary-color); }
+        @media (prefers-color-scheme: dark) {
+            .detail-card { background: linear-gradient(135deg, rgba(31,41,55,0.9) 0%, rgba(17,24,39,0.95) 100%); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <header id="header" class="sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <button onclick="history.back()" class="p-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                </button>
+                <h1 class="text-lg font-bold">啃魂导航</h1>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-4xl mx-auto px-4 py-6">
+        <div id="site-detail" class="detail-card rounded-3xl p-8 shadow-2xl">
+            <div class="detail-header rounded-2xl p-8 text-white mb-8">
+                <div class="flex items-center gap-6">
+                    <div id="site-icon" class="w-20 h-20 rounded-2xl bg-white/20 flex items-center justify-center text-3xl backdrop-blur-sm">🌐</div>
+                    <div>
+                        <h1 id="site-name" class="text-3xl font-bold mb-2"></h1>
+                        <p id="site-category" class="text-lg opacity-80"></p>
+                        <button onclick="visitSite()" class="visit-btn mt-4 px-6 py-3 rounded-xl text-white font-semibold flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                            访问网站
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white/50 dark:bg-gray-800/50 rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">📍 基本信息</h3>
+                    <div id="site-info" class="space-y-3"></div>
+                </div>
+                <div class="bg-white/50 dark:bg-gray-800/50 rounded-2xl p-6">
+                    <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">📈 快捷操作</h3>
+                    <div class="space-y-3">
+                        <button onclick="copyUrl()" class="w-full px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/30 transition-colors flex items-center justify-center gap-2">
+                            🔗 复制链接
+                        </button>
+                        <button onclick="toggleFavorite()" class="w-full px-4 py-2 rounded-xl bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/20 dark:hover:bg-purple-900/30 transition-colors flex items-center justify-center gap-2">
+                            ⭐ 收藏
+                        </button>
+                        <button onclick="shareSite()" class="w-full px-4 py-2 rounded-xl bg-green-50 hover:bg-green-100 dark:bg-green-900/20 dark:hover:bg-green-900/30 transition-colors flex items-center justify-center gap-2">
+                            📤 分享
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white/50 dark:bg-gray-800/50 rounded-2xl p-6">
+                <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">📝 详细描述</h3>
+                <p id="site-description" class="text-gray-700 dark:text-gray-300 leading-relaxed"></p>
+            </div>
+            <div class="mt-8 flex gap-4">
+                <button onclick="backToList()" class="px-6 py-3 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    ← 返回列表
+                </button>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/js/state.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const siteName = urlParams.get('name');
+        let currentSite = null;
+        function getBaseUrl() {
+            const baseUrl = window.location.href.split('/pages/')[0];
+            return baseUrl;
+        }
+        async function loadSiteDetail() {
+            if (!siteName) {
+                document.getElementById('site-detail').innerHTML = '<p class="text-red-500">未指定网站</p>';
+                return;
+            }
+            try {
+                const baseUrl = getBaseUrl();
+                const response = await fetch(`${baseUrl}/data/websites.json`, { cache: 'no-cache' });
+                const sites = await response.json();
+                if (window.dataManager) await window.dataManager.load();
+                currentSite = sites.find(s => s.name === siteName || encodeURIComponent(s.name) === siteName);
+                if (!currentSite) {
+                    document.getElementById('site-detail').innerHTML = '<p class="text-red-500">未找到网站</p>';
+                    return;
+                }
+                renderSiteDetail(currentSite);
+            } catch (error) {
+                console.error('Error loading site detail:', error);
+                document.getElementById('site-detail').innerHTML = '<p class="text-red-500">加载失败</p>';
+            }
+        }
+        function renderSiteDetail(site) {
+            document.getElementById('site-name').textContent = site.name;
+            document.getElementById('site-category').textContent = site.category || 'Uncategorized';
+            document.getElementById('site-description').textContent = site.description || 'No description available';
+            const iconElement = document.getElementById('site-icon');
+            if (site.name.includes('GitHub')) iconElement.innerHTML = '\ud83d\udc76';
+            else if (site.name.includes('AI') || site.name.includes('Artificial')) iconElement.innerHTML = '\ud83e\udd16';
+            else if (site.name.includes('Tool')) iconElement.innerHTML = '\u2699\ufe0f';
+            else if (site.name.includes('Design')) iconElement.innerHTML = '\ud83c\udfa8';
+            else iconElement.innerHTML = '\ud83c\udf10';
+            const infoDiv = document.getElementById('site-info');
+            infoDiv.innerHTML = `
+                <div class="flex justify-between"><span class="text-gray-600 dark:text-gray-400">分类</span><span class="font-semibold">${site.category || 'N/A'}</span></div>
+                <div class="flex justify-between"><span class="text-gray-600 dark:text-gray-400">URL</span><a href="${site.url}" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline truncate">${site.url}</a></div>
+                <div class="flex justify-between"><span class="text-gray-600 dark:text-gray-400">Status</span><span class="px-2 py-1 rounded-full text-xs ${site.phase3_merged ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'}">${site.phase3_merged ? 'Active' : 'Pending'}</span></div>`;
+            document.title = `${site.name} - 啃魂导航`;
+        }
+        function visitSite() { if (currentSite) window.open(currentSite.url, '_blank'); }
+        function copyUrl() {
+            if (currentSite) {
+                navigator.clipboard.writeText(currentSite.url).then(() => alert('链接已复制')).catch(err => {
+                    console.error('Copy failed:', err); alert('复制失败');
+                });
+            }
+        }
+        function toggleFavorite() { alert('收藏功能开发中...'); }
+        function shareSite() {
+            if (currentSite) {
+                if (navigator.share) navigator.share({ title: currentSite.name, text: currentSite.description, url: currentSite.url });
+                else copyUrl();
+            }
+        }
+        function backToList() { history.back(); }
+        document.addEventListener('DOMContentLoaded', loadSiteDetail);
+    </script>
+function toggleDetailFavorite() {
+    if (currentSite) {
+        var btn = document.getElementById('favorite-detail-btn');
+        var isFav = window.favoriteManager && window.favoriteManager.isFavorite(currentSite.name);
+        window.toggleFavorite(btn, currentSite.name, currentSite.url, currentSite.description, currentSite.category);
+    }
+}
+
+// Update button when page loads
+if (window.favoriteManager) {
+    setTimeout(function() {
+        var btn = document.getElementById('favorite-detail-btn');
+        if (btn && currentSite && window.favoriteManager.isFavorite(currentSite.name)) {
+            btn.innerHTML = '❤️ 取消收藏';
+            btn.classList.add('favorited');
+        }
+    }, 100);
+}
+</script>
+</body>
+</html>

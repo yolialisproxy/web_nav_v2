@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理后台 - WebNav V2</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/core.css">
+    <link rel="stylesheet" href="assets/css/theme-modern.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/tailwind-local.css">
+    <style>
+        .admin-card { background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.98) 100%); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.2); }
+        .stat-card { position: relative; overflow: hidden; }
+        .stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--primary-color), var(--accent-color)); }
+        .data-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+        .data-table th { background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); color: white; padding: 12px 16px; text-align: left; font-weight: 600; }
+        .data-table td { padding: 12px 16px; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .data-table tr:hover td { background: rgba(59,130,246,0.05); }
+        .badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 500; }
+        .badge-success { background: #d1fae5; color: #065f46; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-info { background: #dbeafe; color: #1e40af; }
+        .modal { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal-content { background: white; border-radius: 20px; padding: 32px; max-width: 600px; width: 90%; max-height: 90vh; overflow-y: auto; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); }
+        @media (prefers-color-scheme: dark) {
+            .admin-card { background: linear-gradient(135deg, rgba(31,41,55,0.95) 0%, rgba(17,24,39,0.98) 100%); }
+            .data-table th { background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); }
+            .data-table td { border-bottom: 1px solid rgba(255,255,255,0.05); }
+            .data-table tr:hover td { background: rgba(59,130,246,0.1); }
+        }
+        .sidebar { width: 240px; background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); border-right: 1px solid rgba(0,0,0,0.05); height: 100vh; position: fixed; left: 0; top: 0; padding: 24px 16px; overflow-y: auto; transition: transform 0.3s ease; z-index: 100; }
+        .sidebar.collapsed { transform: translateX(-100%); }
+        .main-content { margin-left: 240px; padding: 24px; min-height: 100vh; transition: margin-left 0.3s ease; }
+        .main-content.expanded { margin-left: 0; }
+        @media (max-width: 1024px) {
+            .sidebar { transform: translateX(-100%); }
+            .sidebar.active { transform: translateX(0); }
+            .main-content.expanded, .main-content { margin-left: 0; }
+        }
+        .nav-item { padding: 12px 16px; border-radius: 12px; margin-bottom: 8px; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; gap: 12px; color: #6b7280; }
+        .nav-item:hover, .nav-item.active { background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); color: white; }
+        .nav-item i { font-size: 20px; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%); color: white; border: none; padding: 12px 24px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: all 0.3s ease; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -10px var(--primary-color); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #374151; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px 16px; border: 2px solid #e5e7eb; border-radius: 12px; font-size: 14px; transition: border-color 0.3s ease; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--primary-color); }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900">
+    <!-- 侧边栏 -->
+    <aside class="sidebar" id="sidebar">
+        <div class="flex items-center gap-3 mb-8 p-2">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold">👶</div>
+            <span class="font-bold text-lg">WebNav Admin</span>
+        </div>
+        <nav class="nav-menu">
+            <div class="nav-item active" data-page="dashboard" onclick="switchPage('dashboard')">
+                <i>📊</i>
+                <span>仪表盘</span>
+            </div>
+            <div class="nav-item" data-page="websites" onclick="switchPage('websites')">
+                <i>📚</i>
+                <span>网站管理</span>
+            </div>
+            <div class="nav-item" data-page="categories" onclick="switchPage('categories')">
+                <i>📂</i>
+                <span>分类管理</span>
+            </div>
+            <div class="nav-item" data-page="audit" onclick="switchPage('audit')">
+                <i>🔍</i>
+                <span>内容审核</span>
+            </div>
+            <div class="nav-item" data-page="import" onclick="switchPage('import')">
+                <i>📥</i>
+                <span>批量导入</span>
+            </div>
+            <div class="nav-item" data-page="settings" onclick="switchPage('settings')">
+                <i>⚙️</i>
+                <span>系统设置</span>
+            </div>
+        </nav>
+    </aside>
+
+    <!-- 主内容 -->
+    <main class="main-content" id="mainContent">
+        <!-- 顶部工具栏 -->
+        <header class="flex justify-between items-center mb-8 p-4 admin-card rounded-2xl">
+            <div class="flex items-center gap-4">
+                <button onclick="toggleSidebar()" class="p-2 rounded-lg hover:bg-gray-100 transition-colors lg:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <h1 class="text-2xl font-bold text-gray-900 dark:text-white">管理后台</h1>
+            </div>
+            <div class="flex items-center gap-4">
+                <span id="current-time" class="text-gray-600 dark:text-gray-400"></span>
+                <button onclick="refreshData()" class="btn-primary text-sm">刷新数据</button>
+            </div>
+        </header>
+
+        <!-- 仪表盘页面 -->
+        <div id="page-dashboard" class="page-content">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="admin-card stat-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <span class="badge badge-success">在线</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white" id="stat-total">0</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">总网站数</p>
+                </div>
+                <div class="admin-card stat-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <span class="badge badge-success">已同步</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white" id="stat-active">0</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">活跃网站</p>
+                </div>
+                <div class="admin-card stat-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-yellow-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                            </svg>
+                        </div>
+                        <span class="badge badge-warning">待处理</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white" id="stat-pending">0</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">待同步网站</p>
+                </div>
+                <div class="admin-card stat-card rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-100 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                            </svg>
+                        </div>
+                        <span class="badge badge-info">分类</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white" id="stat-categories">0</h3>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">总分类数</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="admin-card rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                        分类分布统计
+                    </h3>
+                    <div id="category-stats" class="space-y-4">
+                        <div class="text-gray-500 text-center py-8">加载中...</div>
+                    </div>
+                </div>
+                <div class="admin-card rounded-2xl p-6 shadow-lg">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                        <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                        近期更新
+                    </h3>
+                    <div id="recent-updates" class="space-y-4">
+                        <div class="text-gray-500 text-center py-8">加载中...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 网站管理页面 -->
+        <div id="page-websites" class="page-content hidden">
+            <div class="flex flex-col md:flex-row gap-4 mb-6">
+                <div class="relative flex-1">
+                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" id="search-websites" placeholder="搜索网站..." class="w-full pl-10 pr-4 py-2 rounded-xl border-2 border-gray-200 focus:border-blue-500 outline-none">
+                </div>
+                <select id="filter-category" class="px-4 py-2 rounded-xl border-2 border-gray-200 focus:border-blue-500 outline-none">
+                    <option value="">所有分类</option>
+                </select>
+                <button onclick="openAddModal()" class="btn-primary">
+                    <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    添加网站
+                </button>
+            </div>
+            <div class="admin-card rounded-2xl overflow-hidden shadow-lg">
+                <div class="overflow-x-auto">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>名称</th>
+                                <th>分类</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="websites-table-body">
+                            <tr><td colspan="5" class="text-center py-8 text-gray-500">加载中...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- 分类管理页面 -->
+        <div id="page-categories" class="page-content hidden">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">分类管理</h2>
+                <button onclick="openCategoryModal()" class="btn-primary">
+                    <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                    创建分类
+                </button>
+            </div>
+            <div class="admin-card rounded-2xl p-6 shadow-lg" id="categories-list">
+                <div class="text-center py-8 text-gray-500">加载中...</div>
+            </div>
+        </div>
+
+        <!-- 内容审核页面 -->
+        <div id="page-audit" class="page-content hidden">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">内容审核</h2>
+                <div class="flex gap-4">
+                    <button onclick="filterAudit('pending')" class="audit-filter btn-primary bg-yellow-500 hover:bg-yellow-600">待审核 <span id="pending-count">0</span></button>
+                    <button onclick="filterAudit('approved')" class="audit-filter btn-primary bg-green-500 hover:bg-green-600">已审核 <span id="approved-count">0</span></button>
+                </div>
+            </div>
+            <div id="audit-list" class="space-y-4">
+                <div class="text-center py-8 text-gray-500">加载中...</div>
+            </div>
+        </div>
+
+        <!-- 批量导入页面 -->
+        <div id="page-import" class="page-content hidden">
+            <div class="admin-card rounded-2xl p-6 shadow-lg mb-6">
+                <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">批量导入网站</h3>
+                <div class="form-group">
+                    <label for="import-data">JSON 数据（或 CSV 格式）</label>
+                    <textarea id="import-data" placeholder='[
+  {
+    &quot;url&quot;: &quot;https://example.com&quot;,
+    &quot;name&quot;: &quot;网站名称&quot;,
+    &quot;description&quot;: &quot;网站描述&quot;,
+    &quot;category&quot;: &quot;分类&quot;
+  }
+]'>[
+  {
+    "url": "https://example.com",
+    "name": "示例网站",
+    "description": "这是一个示例",
+    "category": "AI工具"
+  }
+]</textarea>
+                </div>
+                <button onclick="processImport()" class="btn-primary">
+                    <svg class="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"></path>
+                    </svg>
+                    开始导入
+                </button>
+                <div id="import-log" class="mt-4 p-4 bg-gray-100 dark:bg-gray-800 rounded-lg hidden">
+                    <h4 class="font-bold mb-2">导入日志</h4>
+                    <pre id="import-details" class="text-sm overflow-auto"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- 系统设置页面 -->
+        <div id="page-settings" class="page-content hidden">
+            <div class="max-w-2xl">
+                <div class="admin-card rounded-2xl p-6 shadow-lg mb-6">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6">API 配置</h3>
+                    <div class="form-group">
+                        <label>API 地址</label>
+                        <input type="text" id="api-url" value="http://localhost:8000" readonly class="bg-gray-100 cursor-not-allowed">
+                    </div>
+                    <div class="form-group">
+                        <label>API 文档</label>
+                        <div class="flex gap-2">
+                            <button onclick="window.open('/docs', '_blank')" class="btn-primary flex-1">查看 API 文档</button>
+                            <button onclick="window.open('/openapi.json', '_blank')" class="btn-primary flex-1 bg-gray-600">OpenAPI JSON</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-card rounded-2xl p-6 shadow-lg mb-6">
+                    <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">操作</h3>
+                    <button onclick="backupData()" class="w-full p-4 text-left rounded-xl bg-yellow-50 hover:bg-yellow-100 transition-colors flex items-center gap-4">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path>
+                        </svg>
+                        <div>
+                            <div class="font-bold">备份数据</div>
+                            <div class="text-sm text-gray-600">创建数据文件的备份</div>
+                        </div>
+                    </button>
+                    <button onclick="exportData()" class="w-full p-4 text-left rounded-xl bg-green-50 hover:bg-green-100 transition-colors flex items-center gap-4 mt-2">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        <div>
+                            <div class="font-bold">导出数据</div>
+                            <div class="text-sm text-gray-600">导出所有网站数据</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 添加/编辑弹窗 -->
+    <div id="website-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white" id="modal-title">添加网站</h3>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <form id="website-form" onsubmit="saveWebsite(event)">
+                <input type="hidden" id="website-id">
+                <div class="form-group">
+                    <label for="website-url">网站 URL</label>
+                    <input type="url" id="website-url" required placeholder="https://example.com">
+                </div>
+                <div class="form-group">
+                    <label for="website-name">网站名称</label>
+                    <input type="text" id="website-name" required placeholder="网站名称">
+                </div>
+                <div class="form-group">
+                    <label for="website-description">描述</label>
+                    <textarea id="website-description" required placeholder="网站描述"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="website-category">分类</label>
+                    <input type="text" id="website-category" required placeholder="例: AI工具/人工智能/综合平台">
+                </div>
+                <div class="flex gap-4 mt-6">
+                    <button type="button" onclick="closeModal()" class="flex-1 px-4 py-2 rounded-xl border-2 border-gray-300 hover:bg-gray-50 transition-colors">取消</button>
+                    <button type="submit" class="flex-1 btn-primary">保存</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 分类弹窗 -->
+    <div id="category-modal" class="modal">
+        <div class="modal-content">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">新建分类</h3>
+                <button onclick="closeCategoryModal()" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <form onsubmit="saveCategory(event)">
+                <div class="form-group">
+                    <label>...</label>
+                    <input type="text" placeholder="分类名称"><input type="text" placeholder="请使用 / 分隔符号" class="mt-2">
+                </div>
+                <div class="flex gap-4 mt66">
+                    <button type="button" onclick="closeCategoryModal()" class="flex-1 px-4 py-2 rounded-xl border-2 border-gray-300 hover:bg-gray-50 transition-colors">取消</button>
+                    <button type="submit" class="flex-1 btn-primary">创建</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let websitesData = [];
+        
+        function updateTime() {
+            document.getElementById('current-time').textContent = new Date().toLocaleString('zh-CN');
+        }
+        
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const main = document.getElementById('mainContent');
+            sidebar.classList.toggle('active');
+            main.classList.toggle('expanded');
+        }
+        
+        function switchPage(page) {
+            document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
+            document.querySelector(`[data-page="${page}"]`).classList.add('active');
+            document.querySelectorAll('.page-content').forEach(content => content.classList.add('hidden'));
+            document.getElementById(`page-${page}`).classList.remove('hidden');
+            if (window.innerWidth <= 1024) toggleSidebar();
+            if (page === 'websites') loadWebsitesTable();
+            if (page === 'categories') loadCategoriesList();
+            if (page === 'audit') loadAuditList();
+            if (page === 'dashboard') loadDashboard();
+        }
+        
+        async function loadDashboard() {
+            try {
+                const statsRes = await fetch('/api/stats');
+                const stats = await statsRes.json();
+                document.getElementById('stat-total').textContent = stats.total_websites || 0;
+                document.getElementById('stat-active').textContent = stats.active_websites || 0;
+                document.getElementById('stat-pending').textContent = stats.pending_websites || 0;
+                document.getElementById('stat-categories').textContent = stats.total_categories || 0;
+                
+                const catRes = await fetch('/api/categories');
+                const catData = await catRes.json();
+                const container = document.getElementById('category-stats');
+                container.innerHTML = catData.categories?.slice(0, 8).map(c => `
+                    <div class="flex justify-between items-center">
+                        <span class="text-gray-700 dark:text-gray-300 truncate max-w-32">${c.category}</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-semibold">${c.count}</span>
+                            <div class="w-20 bg-gray-200 rounded-full h-2">
+                                <div class="bg-blue-500 h-2 rounded-full" style="width: ${c.percentage}%"></div>
+                            </div>
+                        </div>
+                    </div>
+                `).join('') || '<div class="text-center py-4 text-gray-500">无数据</div>';
+            } catch (e) {
+                console.error('Error:', e);
+            }
+        }
+        
+        async function loadWebsitesTable(filters = {}) {
+            try {
+                let url = '/api/websites?limit=500';
+                if (filters.category) url += `&category=${encodeURIComponent(filters.category)}`;
+                const res = await fetch(url);
+                websitesData = await res.json();
+                const tbody = document.getElementById('websites-table-body');
+                tbody.innerHTML = websitesData.map((w, i) => `
+                    <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                        <td class="text-sm">${w.id}</td>
+                        <td class="font-medium max-w-xs truncate">${w.name}</td>
+                        <td class="text-sm">${w.category}</td>
+                        <td><span class="badge ${w.phase3_merged ? 'badge-success' : 'badge-warning'}">${w.phase3_merged ? '已同步' : '待同步'}</span></td>
+                        <td><button onclick="editWebsite(${w.id})" class="text-blue-600 hover:text-blue-800 text-sm font-medium">编辑</button></td>
+                    </tr>
+                `).join('');
+                populateCategoryFilter();
+            } catch (e) {
+                console.error('Error:', e);
+                document.getElementById('websites-table-body').innerHTML = '<tr><td colspan="5" class="text-center py-8 text-red-500">加载失败</td></tr>';
+            }
+        }
+        
+        function populateCategoryFilter() {
+            const cats = [...new Set(websitesData.map(w => w.category).filter(Boolean))];
+            const sel = document.getElementById('filter-category');
+            sel.innerHTML = '<option value="">所有分类</option>' + cats.map(c => `<option value="${c}">${c}</option>`).join('');
+            sel.onchange = () => loadWebsitesTable({ category: sel.value });
+        }
+        
+        document.getElementById('search-websites').addEventListener('input', (e) => {
+            const q = e.target.value.toLowerCase();
+            const filtered = websitesData.filter(w => w.name.toLowerCase().includes(q) || w.category.toLowerCase().includes(q));
+            const tbody = document.getElementById('websites-table-body');
+            tbody.innerHTML = filtered.map((w, i) => `
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
+                    <td class="text-sm">${w.id}</td>
+                    <td class="font-medium max-w-xs truncate">${w.name}</td>
+                    <td class="text-sm">${w.category}</td>
+                    <td><span class="badge ${w.phase3_merged ? 'badge-success' : 'badge-warning'}">${w.phase3_merged ? '已同步' : '待同步'}</span></td>
+                    <td><button onclick="editWebsite(${w.id})" class="text-blue-600 hover:text-blue-800 text-sm font-medium">编辑</button></td>
+                </tr>
+            `).join('');
+        });
+        
+        async function loadCategoriesList() {
+            try {
+                const res = await fetch('/api/categories');
+                const data = await res.json();
+                const container = document.getElementById('categories-list');
+                container.innerHTML = (data.categories || []).map(c => `
+                    <div class="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-xl mb-3">
+                        <div>
+                            <h4 class="font-bold text-gray-900 dark:text-white">${c.category}</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-400">${c.count} 个网站 (${c.percentage}%)</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="px-3 py-1 rounded-lg bg-blue-500 text-white text-sm">编辑</button>
+                            <button class="px-3 py-1 rounded-lg bg-red-500 text-white text-sm">删除</button>
+                        </div>
+                    </div>
+                `).join('') || '<div class="text-center py-8 text-gray-500">暂无数据</div>';
+            } catch (e) {
+                console.error('Error:', e);
+            }
+        }
+        
+        async function loadAuditList() {
+            try {
+                const res = await fetch('/api/websites?limit=200');
+                const data = await res.json();
+                const pending = data.filter(w => !w.phase3_merged);
+                const approved = data.filter(w => w.phase3_merged);
+                document.getElementById('pending-count').textContent = pending.length;
+                document.getElementById('approved-count').textContent = approved.length;
+                const container = document.getElementById('audit-list');
+                container.innerHTML = pending.slice(0, 20).map(w => `
+                    <div class="admin-card rounded-xl p-4 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h4 class="font-bold text-gray-900 dark:text-white">${w.name}</h4>
+                                <span class="badge badge-warning">待审核</span>
+                            </div>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2">${w.category}</p>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 truncate">${w.description}</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="approveWebsite(${w.id})" class="px-4 py-2 rounded-lg bg-green-500 text-white text-sm hover:bg-green-600 transition-colors">通过</button>
+                            <button onclick="rejectWebsite(${w.id})" class="px-4 py-2 rounded-lg bg-red-500 text-white text-sm hover:bg-red-600 transition-colors">拒绝</button>
+                        </div>
+                    </div>
+                `).join('') || '<div class="text-center py-8 text-gray-500">暂无待审核的网站</div>';
+            } catch (e) {
+                console.error('Error:', e);
+            }
+        }
+        
+        function filterAudit(status) {
+            document.querySelectorAll('.audit-filter').forEach(b => b.classList.remove('bg-yellow-500', 'bg-green-500', 'bg-gray-600'));
+            event.target.classList.add(status === 'pending' ? 'bg-yellow-500' : 'bg-green-500');
+            loadAuditList();
+        }
+        
+        async function approveWebsite(id) {
+            try {
+                const res = await fetch(`/api/websites/${id}`);
+                const w = await res.json();
+                w.phase3_merged = true;
+                await fetch(`/api/websites/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(w) });
+                loadAuditList();
+                loadDashboard();
+            } catch (e) { console.error('Error:', e); }
+        }
+        
+        async function rejectWebsite(id) {
+            if (confirm('确定拒绝这个网站？')) {
+                try {
+                    await fetch(`/api/websites/${id}`, { method: 'DELETE' });
+                    loadAuditList();
+                    loadDashboard();
+                } catch (e) { console.error('Error:', e); }
+            }
+        }
+        
+        function openAddModal() {
+            document.getElementById('modal-title').textContent = '添加网站';
+            document.getElementById('website-form').reset();
+            document.getElementById('website-id').value = '';
+            document.getElementById('website-modal').classList.add('active');
+        }
+        
+        async function editWebsite(id) {
+            try {
+                const res = await fetch(`/api/websites/${id}`);
+                const w = await res.json();
+                document.getElementById('modal-title').textContent = '编辑网站';
+                document.getElementById('website-id').value = w.id;
+                document.getElementById('website-url').value = w.url;
+                document.getElementById('website-name').value = w.name;
+                document.getElementById('website-description').value = w.description;
+                document.getElementById('website-category').value = w.category;
+                document.getElementById('website-modal').classList.add('active');
+            } catch (e) { console.error('Error:', e); }
+        }
+        
+        async function saveWebsite(e) {
+            e.preventDefault();
+            const id = document.getElementById('website-id').value;
+            const data = {
+                url: document.getElementById('website-url').value,
+                name: document.getElementById('website-name').value,
+                description: document.getElementById('website-description').value,
+                category: document.getElementById('website-category').value
+            };
+            try {
+                if (id) {
+                    await fetch(`/api/websites/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                } else {
+                    await fetch('/api/websites', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                }
+                closeModal();
+                loadWebsitesTable();
+                loadDashboard();
+                loadAuditList();
+            } catch (e) { console.error('Error:', e); }
+        }
+        
+        function closeModal() { document.getElementById('website-modal').classList.remove('active'); }
+        function closeCategoryModal() { document.getElementById('category-modal').classList.remove('active'); }
+        
+        function openCategoryModal() {
+            document.getElementById('category-modal').classList.add('active');
+        }
+        
+        async function saveCategory(e) {
+            e.preventDefault();
+            closeCategoryModal();
+            alert('功能开发中...');
+        }
+        
+        async function backupData() {
+            try {
+                const res = await fetch('/data/websites.json');
+                const blob = await res.blob();
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `websites_backup_${Date.now()}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                alert('备份成功');
+            } catch (e) { console.error('Error:', e); }
+        }
+        
+        async function exportData() {
+            try {
+                const res = await fetch('/api/websites?limit=1000');
+                const data = await res.json();
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `websites_export_${Date.now()}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+            } catch (e) { console.error('Error:', e); }
+        }
+        
+        async function processImport() {
+            const log = document.getElementById('import-log');
+            const details = document.getElementById('import-details');
+            log.classList.remove('hidden');
+            try {
+                const data = JSON.parse(document.getElementById('import-data').value);
+                if (!Array.isArray(data)) throw new Error('数据必须是数组');
+                const res = await fetch('/api/websites/batch', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                const result = await res.json();
+                details.textContent = JSON.stringify(result, null, 2);
+                loadWebsitesTable();
+                loadDashboard();
+            } catch (e) {
+                details.textContent = '错误: ' + e.message;
+            }
+        }
+        
+        async function refreshData() {
+            loadDashboard();
+            if (!document.getElementById('page-websites').classList.contains('hidden')) loadWebsitesTable();
+            if (!document.getElementById('page-categories').classList.contains('hidden')) loadCategoriesList();
+            if (!document.getElementById('page-audit').classList.contains('hidden')) loadAuditList();
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+        loadDashboard();
+    </script>
+</body>
+</html>
+

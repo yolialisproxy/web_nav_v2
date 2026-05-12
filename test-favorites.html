@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>收藏功能测试</title>
+    <script src="assets/js/favorite.js"></script>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .test-result { padding: 10px; margin: 5px 0; border-radius: 5px; }
+        .pass { background: #d4edda; color: #155724; }
+        .fail { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>收藏功能测试</h1>
+    <div id="results"></div>
+    <script>
+        function test(name, fn) {
+            try {
+                fn();
+                document.getElementById('results').innerHTML += 
+                    '<div class="test-result pass">✓ ' + name + '</div>';
+            } catch(e) {
+                document.getElementById('results').innerHTML += 
+                    '<div class="test-result fail">✗ ' + name + ': ' + e.message + '</div>';
+            }
+        }
+        
+        // Wait for favoriteManager to be ready
+        setTimeout(function() {
+            test('FavoriteManager exists', function() {
+                if (!window.favoriteManager) throw new Error('Not found');
+            });
+            
+            test('Can add favorite', function() {
+                var site = { name: 'Test Site', url: 'http://test.com' };
+                var result = window.favoriteManager.add(site);
+                if (!result.success) throw new Error('Add failed');
+            });
+            
+            test('Can check favorite', function() {
+                if (!window.favoriteManager.isFavorite('Test Site')) {
+                    throw new Error('Should be favorite');
+                }
+            });
+            
+            test('Can remove favorite', function() {
+                window.favoriteManager.remove('Test Site');
+                if (window.favoriteManager.isFavorite('Test Site')) {
+                    throw new Error('Should not be favorite');
+                }
+            });
+            
+            test('Can clear all', function() {
+                window.favoriteManager.add({ name: 'Site 1', url: 'http://1.com' });
+                window.favoriteManager.add({ name: 'Site 2', url: 'http://2.com' });
+                window.favoriteManager.clear();
+                if (window.favoriteManager.getCount() !== 0) {
+                    throw new Error('Clear failed');
+                }
+            });
+            
+            test('Count is correct', function() {
+                window.favoriteManager.add({ name: 'A', url: 'http://a.com' });
+                window.favoriteManager.add({ name: 'B', url: 'http://b.com' });
+                if (window.favoriteManager.getCount() !== 2) {
+                    throw new Error('Count wrong: ' + window.favoriteManager.getCount());
+                }
+                window.favoriteManager.clear();
+            });
+            
+            test('Export works', function() {
+                window.favoriteManager.add({ name: 'Export Test', url: 'http://export.com' });
+                var data = window.favoriteManager.export();
+                if (!data || data.indexOf('Export Test') === -1) {
+                    throw new Error('Export failed');
+                }
+                window.favoriteManager.clear();
+            });
+        }, 100);
+    </script>
+</body>
+</html>
