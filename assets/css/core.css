@@ -1,45 +1,137 @@
 /* ============================================
-   核心基础样式
+   core.css - 核心基础样式 & 设计 Token 系统
+   单一变量源 (Single Source of Truth)
    ============================================ */
 
-/* CSS 变量系统 - 轻量版，为兼容老版本保留 */
+/* ===== 设计 Token 系统 ===== */
 :root {
+    /* --- 布局 --- */
     --sidebar-width: 280px;
     --sidebar-collapsed-width: 64px;
     --nav-height: 60px;
-    --card-radius: 12px;
-    --transition-duration: 180ms;
-    --transition-curve: cubic-bezier(0.25, 0.1, 0.25, 1);
     --grid-gap: 16px;
 
+    /* --- 圆角 --- */
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* --- 过渡动画 --- */
+    --transition-fast: 0.12s ease;
+    --transition-duration: 180ms;
+    --transition-medium: 250ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-slow: 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-curve: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    /* --- 颜色 (Color Primitives) --- */
     --color-bg: #0a0a0f;
     --color-bg-alt: #12121a;
+    --color-bg-hover: rgba(255, 255, 255, 0.05);
+    --color-bg-card: rgba(20, 20, 30, 0.75);
+    --color-bg-card-hover: rgba(30, 30, 45, 0.85);
+    --color-bg-input: rgba(255, 255, 255, 0.05);
+    --color-bg-overlay: rgba(10, 10, 15, 0.85);
+
+    /* --- 文字颜色 --- */
     --color-text: #f0f0f5;
     --color-text-dim: #6a6a7e;
+    --color-text-muted: #5a5a6e;
+    --color-text-inverse: #1a1a2e;
+
+    /* --- 品牌色 --- */
     --color-primary: #7c3aed;
+    --color-primary-light: #a78bfa;
     --color-primary-soft: rgba(124, 58, 237, 0.1);
+    --color-primary-hover: rgba(124, 58, 237, 0.2);
+    --color-accent: #06b6d4;
+    --color-accent-soft: rgba(6, 182, 212, 0.1);
+
+    /* --- 渐变色 --- */
+    --gradient-brand: linear-gradient(135deg, #7c3aed 0%, #a78bfa 50%, #06b6d4 100%);
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    --gradient-text: linear-gradient(135deg, #7c3aed, #a78bfa, #06b6d4);
+
+    /* --- 边框 --- */
     --color-border: rgba(255, 255, 255, 0.08);
-    --color-shadow: rgba(0, 0, 0, 0.4);
+    --color-border-active: rgba(124, 58, 237, 0.6);
+    --color-border-hover: rgba(255, 255, 255, 0.15);
+
+    /* --- 阴影 --- */
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 60px rgba(124, 58, 237, 0.15);
+    --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+    /* --- 字体 --- */
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", Menlo, Consolas, monospace;
+
+    /* --- 间距 --- */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 12px;
+    --space-lg: 16px;
+    --space-xl: 24px;
+    --space-2xl: 32px;
+
+    /* --- 功能色 --- */
+    --color-error: #ff6b6b;
+    --color-error-soft: rgba(255, 107, 107, 0.1);
+    --color-rose: #ff6b9d;
+    --color-rose-soft: rgba(255, 107, 157, 0.1);
+    --color-rose-light: rgba(255, 107, 157, 0.3);
+    --color-rose-pale: rgba(255, 136, 170, 0.6);
 }
 
-* {
+/* ===== 全局重置 ===== */
+*,
+*::before,
+*::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 100vw;
-    overflow-x: hidden;
+body {
+    font-family: var(--font-sans);
     background-color: var(--color-bg);
     color: var(--color-text);
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    transition: background-color var(--transition-duration) var(--transition-curve);
+    line-height: 1.6;
+    transition: background-color var(--transition-duration) var(--transition-curve),
+                color var(--transition-duration) var(--transition-curve);
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: inherit;
+}
+
+/* ===== 布局基础 ===== */
 #app-shell {
     display: grid;
     grid-template-columns: var(--sidebar-width) 1fr;
@@ -52,71 +144,196 @@ html, body {
     grid-template-columns: var(--sidebar-collapsed-width) 1fr;
 }
 
-#sidebar {
-    height: 100vh;
-    background-color: var(--color-bg-alt);
-    border-right: 1px solid var(--color-border);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    position: relative;
+/* ===== 毛玻璃效果 ===== */
+.glass {
+    background: rgba(10, 10, 15, 0.75);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
 
-#main-content {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.glass-solid {
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
 }
 
-#top-nav {
-    height: var(--nav-height);
-    border-bottom: 1px solid var(--color-border);
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Toast 通知 ===== */
+.toast-notification {
+    position: fixed;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    pointer-events: none;
+}
+
+.toast-msg {
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 13px;
+    box-shadow: var(--shadow-md);
+    animation: toastIn 0.3s ease, toastOut 0.3s ease 2.7s forwards;
+    pointer-events: auto;
+    max-width: 360px;
+}
+
+.toast-msg.toast-success { border-left: 3px solid var(--color-accent); }
+.toast-msg.toast-error   { border-left: 3px solid var(--color-error); }
+.toast-msg.toast-info    { border-left: 3px solid var(--color-primary); }
+
+@keyframes toastIn  { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes toastOut { from { opacity: 1; } to { opacity: 0; transform: translateY(10px); } }
+
+/* ===== 搜索建议下拉 ===== */
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    margin-top: var(--space-xs);
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
     display: flex;
     align-items: center;
-    padding: 0 var(--grid-gap);
-    background-color: var(--color-bg);
-    z-index: 100;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 13px;
+    transition: background var(--transition-fast);
+    cursor: pointer;
 }
 
-#view-container {
-    flex: 1;
-    overflow-y: auto;
-    padding: var(--grid-gap);
-    scroll-behavior: smooth;
-}
+.suggestion-item:hover { background: rgba(124, 58, 237, 0.08); }
 
-button,
-a[role="button"],
-.sidebar-link,
-.nav-item,
-.card {
-    min-height: 48px;
-    min-width: 48px;
-    padding: 12px 16px;
-    touch-action: manipulation;
-}
-
-button,
-a[role="button"] {
-    min-width: 48px;
-    min-height: 48px;
-    display: inline-flex;
+.suggestion-item .si-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    transition: background-color var(--transition-duration) var(--transition-curve);
+    flex-shrink: 0;
 }
 
-button:hover,
-a[role="button"]:hover {
-    background-color: var(--color-bg-alt);
+.suggestion-item .si-name {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-button + button,
-a + a {
-    margin-left: 8px;
+.suggestion-item .si-cat {
+    font-size: 11px;
+    color: var(--color-text-dim);
+}
+
+/* ===== 列表视图模式 ===== */
+.grid.list-mode .site-card {
+    flex-direction: row;
+    min-height: auto;
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.grid.list-mode .card-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 0;
+    margin-right: var(--space-md);
+    flex-shrink: 0;
+}
+
+.grid.list-mode .card-title,
+.grid.list-mode .card-desc {
+    text-align: left;
+    white-space: normal;
+}
+
+.grid.list-mode .card-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+/* ===== 批量操作浮动工具栏 ===== */
+.batch-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+    padding: var(--space-md) var(--space-lg);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    z-index: 800;
+    transform: translateY(100%);
+    transition: transform var(--transition-medium);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.batch-toolbar.visible { transform: translateY(0); }
+
+.batch-toolbar .batch-info {
+    font-size: 13px;
+    color: var(--color-text-dim);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+/* ===== 选中样式 ===== */
+::selection {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* ===== 屏幕阅读器专用 ===== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }

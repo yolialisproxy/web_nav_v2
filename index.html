@@ -2,114 +2,203 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>啃魂导航 V2 - 智能开发者导航</title>
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <!-- 核心样式系统 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>啃魂导航 V3 - 智能开发者导航</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
+    <meta name="description" content="啃魂导航 - 智能开发者导航站，聚合AI、编程、设计、工具等优质资源。支持Trie搜索、标签筛选、收藏功能。">
+    <meta name="keywords" content="开发者导航,AI导航,编程工具,设计资源,技术网站导航">
+    <meta name="author" content="啃魂导航">
+    <meta property="og:title" content="啃魂导航 V3 - 智能开发者导航">
+    <meta property="og:description" content="聚合AI、编程、设计、工具等优质资源，智能搜索，快速导航。">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#0a0a0f">
     <link rel="stylesheet" href="assets/css/core.css">
     <link rel="stylesheet" href="assets/css/theme-modern.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/tailwind-local.css">
+    <link rel="stylesheet" href="assets/css/favorite-enhancements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- PWA manifest -->
+    <link rel="manifest" href="manifest.json">
 </head>
-<body class="min-h-screen">
-    <!-- 毛玻璃顶栏 -->
-    <header id="header" class="sticky top-0 z-50">
+<body class="min-h-screen" id="app-root" data-theme="system">
+    <!-- 骨架屏 -->
+    <div id="skeleton-screen" class="skeleton-screen">
+        <div class="skeleton-header"></div>
+        <div class="skeleton-layout">
+            <div class="skeleton-sidebar">
+                <div class="skeleton-line w-3/4"></div>
+                <div class="skeleton-line w-1/2"></div>
+                <div class="skeleton-line w-2/3"></div>
+                <div class="skeleton-line w-5/6"></div>
+            </div>
+            <div class="skeleton-main">
+                <div class="skeleton-line w-full"></div>
+                <div class="skeleton-line w-5/6"></div>
+                <div class="skeleton-grid">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顶栏 -->
+    <header id="header" class="sticky top-0 z-50" role="banner">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
-            <div class="flex items-center gap-3">
-                <button id="sidebar-toggle" class="p-2 rounded-lg hover:bg-white/10 transition-colors lg:hidden">
+            <div class="flex items-center gap-3 min-w-0">
+                <button id="sidebar-toggle" class="p-2 rounded-lg hover:bg-white/10 transition-colors lg:hidden" aria-label="切换侧边栏" aria-expanded="false" aria-controls="sidebar">
                     <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
-                <h1 class="text-lg font-bold">啃魂导航</h1>
-<div style="display:flex;align-items:center;">
-<button id="favorite-toggle" class="favorite-btn" onclick="if(window.favoriteUI)window.favoriteUI.open()" title="查看收藏">
-♡
-</button>
-</div>
+                <h1 class="text-lg font-bold whitespace-nowrap">啃魂导航</h1>
+                <div class="hidden md:inline-flex items-center">
+                    <button id="favorite-toggle" class="favorite-btn" onclick="if(window.favoriteUI)window.favoriteUI.openModal()" title="查看收藏" aria-label="打开收藏面板">
+                        ♡
+                    </button>
+                </div>
             </div>
 
             <div class="relative flex-1 max-w-md ml-auto">
                 <svg class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-sm pointer-events-none" aria-hidden="true"></svg>
-                <input type="text" id="search-input" placeholder="搜索资源... (Ctrl/Cmd + K)"
-                       class="w-full pl-10 pr-10 py-2.5 rounded-xl">
-                <button id="search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 hidden">
+                <input type="text" id="search-input" placeholder="搜索资源... (Ctrl + K)"
+                       class="w-full pl-10 pr-10 py-2.5 rounded-xl"
+                       aria-label="搜索资源"
+                       autocomplete="off"
+                       role="searchbox">
+                <button id="search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 hidden" aria-label="清除搜索">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
+                <div id="search-suggestions" class="search-suggestions hidden" role="listbox" aria-label="搜索建议"></div>
             </div>
         </div>
     </header>
 
     <!-- 侧边栏遮罩 -->
-    <div id="sidebar-overlay" class="fixed inset-0 z-40 hidden lg:hidden"></div>
+    <div id="sidebar-overlay" class="fixed inset-0 z-40 hidden lg:hidden" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto px-4 py-4 flex gap-6">
         <!-- 侧边栏 -->
-        <aside id="sidebar" class="w-64 shrink-0 transition-all duration-300 ease-in-out overflow-hidden fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] z-40 shadow-2xl lg:shadow-none -translate-x-full lg:translate-x-0 lg:w-64">
-            <nav id="sidebar-content" class="sticky top-4 space-y-1 p-2 overflow-y-auto h-full"></nav>
+        <aside id="sidebar" class="w-64 shrink-0 transition-all duration-300 ease-in-out overflow-hidden fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] z-40 shadow-2xl lg:shadow-none -translate-x-full lg:translate-x-0 lg:w-64" role="navigation" aria-label="主导航">
+            <nav id="sidebar-content" class="sticky top-4 space-y-1 p-2 overflow-y-auto h-full" aria-label="分类导航"></nav>
+            <div id="tag-cloud-section" class="tag-cloud-section border-t border-white/10" role="complementary" aria-label="热门标签">
+                <div class="tag-cloud-header" id="tag-cloud-toggle" role="button" aria-expanded="false" aria-label="展开/收起热门标签" tabindex="0">
+                    🏷️ 热门标签
+                </div>
+                <div id="tag-cloud-container" class="tag-cloud-container" style="display:none;" role="list"></div>
+            </div>
         </aside>
 
         <!-- 主内容 -->
-        <main id="main-content" class="flex-1 transition-all duration-300 ease-in-out min-w-0 lg:min-h-[calc(100vh-8rem)] overflow-y-auto"></main>
+        <main id="main-content" class="flex-1 transition-all duration-300 ease-in-out min-w-0 lg:min-h-[calc(100vh-8rem)] overflow-y-auto" role="main" aria-label="主要内容区域">
+        </main>
     </div>
 
     <!-- 搜索覆盖层 -->
-    <div id="search-overlay" class="search-overlay fixed inset-0 z-50 hidden">
+    <div id="search-overlay" class="search-overlay fixed inset-0 z-50 hidden" role="dialog" aria-label="全局搜索" aria-hidden="true">
         <div class="search-container max-w-2xl mx-auto px-4 py-20">
             <div class="search-input relative">
                 <svg class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-2xl pointer-events-none" aria-hidden="true"></svg>
-                <input type="text" id="search-overlay-input" placeholder="输入关键词搜索资源..."
-                       class="w-full pl-12 pr-12 py-4 border-0 rounded-xl">
-                <button id="search-overlay-clear" class="absolute right-4 top-1/2 -translate-y-1/2 hidden">
+                <input type="text" id="search-overlay-input" placeholder="输入关键词搜索资源..." class="w-full pl-12 pr-12 py-4 border-0 rounded-xl" aria-label="搜索输入">
+                <button id="search-overlay-clear" class="absolute right-4 top-1/2 -translate-y-1/2 hidden" aria-label="清除搜索">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
-            <div id="search-results" class="mt-6 space-y-2 max-h-96 overflow-y-auto"></div>
+            <div id="search-results" class="mt-6 space-y-2 max-h-96 overflow-y-auto overlay-search-results" role="listbox"></div>
         </div>
     </div>
+
+    <!-- Toast通知容器 -->
+    <div id="toast-container" class="toast-notification" role="status" aria-live="polite"></div>
 
     <!-- 脚本 -->
     <script src="assets/js/state.js"></script>
     <script src="assets/js/data.js"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/render.js"></script>
+    <script src="assets/js/tags.js"></script>
     <script src="assets/js/favorite.js"></script>
+    <script src="assets/js/favorite-ui-bootstrap.js"></script>
+    <script src="assets/js/toast.js"></script>
     <script src="assets/js/app.js"></script>
-    <div id="view-container" style="display:none"></div>
 
-<!-- 收藏弹窗 -->
-<div id="favorite-modal" class="modal-overlay">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>📁 我的收藏</h3>
-            <button class="modal-close" onclick="favoriteUI.closeModal()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <div id="favorite-count" class="favorite-count">正在加载...</div>
-            <div id="favorite-list" class="favorite-list"></div>
-            <div id="favorite-empty" class="favorite-empty" style="display: none;">
-                <p>还没有收藏任何站点</p>
-                <p>去浏览并收藏你喜欢的网站吧！</p>
+    <!-- 收藏弹窗（增强版） -->
+    <div id="favorite-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="收藏面板">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>📁 我的收藏</h3>
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <button id="favorite-collect-current" class="btn btn-primary" style="padding:6px 12px;font-size:12px;white-space:nowrap;" onclick="window.favoriteUI.collectCurrentPage()" title="一键收藏当前页面">
+                        ⭐ 收藏当前页
+                    </button>
+                    <button class="modal-close" onclick="favoriteUI.closeModal()" aria-label="关闭">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="favorite-search-bar" style="position:relative;margin-bottom:12px;">
+                    <input type="text" id="favorite-search-input" placeholder="搜索收藏的站点..." class="w-full pl-8 pr-8 py-2 rounded-lg" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:var(--color-text);font-size:13px;outline:none;" aria-label="搜索收藏">
+                    <button id="favorite-search-clear" class="fav-search-clear-btn" style="display:none;" aria-label="清除搜索">&times;</button>
+                </div>
+
+                <div class="fav-group-tabs" id="fav-group-tabs" role="tablist">
+                    <button class="fav-group-tab active" data-group="all" role="tab" aria-selected="true">全部</button>
+                    <button class="fav-group-tab" data-group="category" role="tab" aria-selected="false">分类</button>
+                    <button class="fav-group-tab" data-group="recent" role="tab" aria-selected="false">最近收藏</button>
+                    <button class="fav-group-tab" data-group="frequent" role="tab" aria-selected="false">最多访问</button>
+                </div>
+
+                <div id="favorite-count" class="favorite-count">正在加载...</div>
+
+                <div id="favorite-list" class="favorite-list" role="list"></div>
+                <div id="favorite-empty" class="favorite-empty" style="display:none;" role="status">
+                    <p>还没有收藏任何站点</p>
+                    <p>去浏览并收藏你喜欢的网站吧！</p>
+                </div>
+            </div>
+            <div class="modal-footer" style="justify-content:space-between;">
+                <button class="btn btn-secondary" id="clear-favorites" style="display:none;" onclick="favoriteUI.clearAll()">🗑️ 清空所有</button>
+                <div style="display:flex;gap:8px;">
+                    <button class="btn btn-secondary" onclick="favoriteUI.exportFavorites()">📋 导出数据</button>
+                </div>
             </div>
         </div>
-        <div class="modal-footer">
-            <button class="btn btn-secondary" onclick="favoriteUI.clearAll()" id="clear-favorites" style="display: none;">
-                🗑️ 清空所有
-            </button>
-            <button class="btn btn-primary" onclick="favoriteUI.exportFavorites()">
-                📋 导出数据
-            </button>
-        </div>
     </div>
-</div>
-<div id="toast-container"></div>
 
-<script src="assets/js/favorite-ui-bootstrap.js"></script>
-    <script src="assets/js/init-favorites.js"></script>
+    <!-- 页脚 -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-links">
+            <a href="#">关于</a>
+            <a href="#">反馈</a>
+            <a href="#">提交网站</a>
+            <a href="#">GitHub</a>
+        </div>
+        <p>啃魂导航 V3 &copy; 2026 &mdash; 聚合优质开发者资源</p>
+    </footer>
+
+    <!-- PWA: 注册Service Worker -->
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                    console.log('[SW] 注册成功:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.warn('[SW] 注册失败:', error);
+                });
+        });
+    }
+    </script>
 </body>
 </html>

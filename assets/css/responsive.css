@@ -1,74 +1,141 @@
 /* ============================================
-   响应式设计
+   responsive.css - 响应式补充 & 移动端增强
+   注意：基础组件样式由 components.css 定义，此处仅补充响应式覆盖
    ============================================ */
 
-/* 移动端适配 */
+/* ===== 移动端 ===== */
 @media (max-width: 1023px) {
-    #sidebar {
-        transform: translateX(-100%);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
+    /* 修正 components.css 中可能在移动端不适用的样式 */
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 10px;
+        padding: 4px;
     }
 
-    #sidebar:not(.translate-x-full) {
-        transform: translateX(0);
+    .site-card {
+        padding: 16px;
+        min-height: 110px;
     }
 
-    #sidebar-overlay {
-        display: none;
+    .card-icon {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 8px;
     }
 
-    #sidebar-overlay:not(.hidden) {
-        display: block;
+    .card-title {
+        font-size: 13px;
     }
 
-    #main-content {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
+    .card-desc {
+        font-size: 11px;
+        -webkit-line-clamp: 2;
+    }
+
+    .menu-leaf {
+        padding: 6px 12px 6px 32px;
+        font-size: 12px;
+    }
+
+    .menu-leaf.active::before {
+        left: 16px;
+        width: 3px;
+        height: 3px;
+    }
+
+    .subcategory-header {
+        padding: 8px 12px 8px 24px;
+        font-size: 12px;
+    }
+
+    .view-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .view-breadcrumb {
+        font-size: 18px;
+    }
+
+    .view-toolbar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .sort-select {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+
+    .search-container {
+        top: 8%;
+        width: 95vw;
+        padding: 12px;
+    }
+
+    .search-input {
+        font-size: 16px; /* 防止iOS缩放 */
+        padding: 12px 16px;
+    }
+
+    .search-result-header {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    /* 收藏弹框移动端适配 */
+    .modal-content {
+        width: 95%;
+        max-height: 85vh;
+        border-radius: var(--radius-lg);
+    }
+
+    .fav-site-desc {
+        max-width: 200px;
     }
 }
 
 @media (max-width: 640px) {
-    header > div {
-        padding: 12px !important;
-    }
-
-    #search-input {
-        font-size: 16px;
-    }
-
     .grid {
-        grid-template-columns: 1fr !important;
-        gap: 10px !important;
+        grid-template-columns: 1fr;
+        gap: 8px;
     }
 
     .site-card {
-        padding: 12px !important;
-        min-height: 120px !important;
+        flex-direction: row;
+        min-height: auto;
+        padding: 12px 16px;
+        text-align: left;
+        align-items: center;
     }
 
     .card-icon {
-        width: 28px !important;
-        height: 28px !important;
+        width: 32px;
+        height: 32px;
+        margin-bottom: 0;
+        margin-right: 12px;
     }
 
-    .card-title {
-        font-size: 14px !important;
+    .card-title, .card-desc {
+        text-align: left;
+        white-space: normal;
     }
 
-    .card-desc {
-        font-size: 12px !important;
-    }
-
-    #header h1 {
-        font-size: 16px !important;
+    /* 移动端底部导航占位提示 */
+    .mobile-nav-hint {
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        font-size: 12px;
+        color: var(--color-text-dim);
     }
 }
 
-/* Desktop */
+/* ===== 桌面端 ===== */
 @media (min-width: 1024px) {
     #sidebar {
-        transform: translateX(0) !important;
+        transform: translateX(0);
     }
 }
 
@@ -81,18 +148,25 @@ html {
     scroll-behavior: smooth;
 }
 
-/* 防止选中 */
-.no-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+/* Focus visible for accessibility */
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+    }
 }
 
 /* 滚动条 */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -101,40 +175,9 @@ html {
 
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.2);
-}
-
-/* Focus visible for accessibility */
-:focus-visible {
-    outline: 2px solid var(--accent-primary);
-    outline-offset: 2px;
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* Fix: Ensure subcategory content is properly handled */
-.subcategory-content {
-    display: none !important;
-    padding-left: 12px !important;
-}
-
-.menu-subcategory.expanded > .subcategory-content {
-    display: block !important;
-}
-
-/* Ensure menu-leaf is always visible when parent is expanded */
-.menu-subcategory.expanded .menu-leaf {
-    display: flex !important;
-    opacity: 1 !important;
 }

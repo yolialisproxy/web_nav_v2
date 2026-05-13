@@ -10,7 +10,7 @@
     }
     
     function initFavoriteFeature() {
-        // console.log('[FavoriteFeature] 初始化收藏功能...');
+        // // console.log('[FavoriteFeature] 初始化收藏功能...');
         
         // 确保必须对象存在
         if (!window.favoriteManager) {
@@ -42,6 +42,6 @@
             window.favoriteUI.updateFavoriteCount();
         };
         
-        // console.log('[FavoriteFeature] 功能注入完成');
+        // // console.log('[FavoriteFeature] 功能注入完成');
     }
 })();

@@ -15,7 +15,7 @@ class FavoriteUI {
         this.bindGlobalEvents();
         this.updateFavoriteCount();
         
-        // console.log('[FavoriteUI] UI控制初始化完成');
+        // // console.log('[FavoriteUI] UI控制初始化完成');
     }
     
     createModal() {
@@ -506,4 +506,4 @@ const style = document.createElement('style');
 style.textContent = favoriteCSS;
 document.head.appendChild(style);
 
-// console.log('[FavoriteUI] CSS注册完成');
+// // console.log('[FavoriteUI] CSS注册完成');

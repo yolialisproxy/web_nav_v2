@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果 - 啃魂导航 V2</title>
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/core.css">
+    <link rel="stylesheet" href="../assets/css/theme-modern.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/tailwind-local.css">
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <header id="header" class="sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <button onclick="history.back()" class="p-2 rounded-lg hover:bg-white/10 transition-colors">
+                    <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                </button>
+                <h1 class="text-lg font-bold">啃魂导航</h1>
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-4 py-6">
+        <div class="mb-6">
+            <h1 id="search-title" class="text-3xl font-bold mb-2">搜索结果</h1>
+            <p id="search-stats" class="text-gray-600 dark:text-gray-400">正在搜索...</p>
+        </div>
+        <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        <div id="no-results" class="hidden text-center py-16">
+            <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <h3 class="text-xl font-semibold mb-2">没有找到结果</h3>
+            <p class="text-gray-600 dark:text-gray-400">尝试使用其他关键词</p>
+        </div>
+    </main>
+    <script src="../assets/js/state.js"></script>
+    <script src="../assets/js/data.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        async function performSearch() {
+            if (!query) {
+                document.getElementById('search-title').textContent = '请输入搜索词';
+                return;
+            }
+            document.getElementById('search-title').textContent = `"${query}的结果"`;
+            try {
+                const response = await fetch('../data/websites.json');
+                const sites = await response.json();
+                const lowerQuery = query.toLowerCase();
+                const results = sites.filter(site =>
+                    site.name.toLowerCase().includes(lowerQuery) ||
+                    site.description.toLowerCase().includes(lowerQuery) ||
+                    site.category.toLowerCase().includes(lowerQuery) ||
+                    site.url.toLowerCase().includes(lowerQuery)
+                );
+                document.getElementById('search-stats').textContent = `找到 ${results.length} 个结果`;
+                const resultsContainer = document.getElementById('search-results');
+                const noResultsContainer = document.getElementById('no-results');
+                if (results.length === 0) {
+                    noResultsContainer.classList.remove('hidden');
+                } else {
+                    results.forEach(site => {
+                        const card = document.createElement('div');
+                        card.className = 'bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer';
+                        card.onclick = () => window.open(`pages/site-detail.html?name=${encodeURIComponent(site.name)}`, '_blank');
+                        const icon = site.name.includes('GitHub') ? '\ud83d\udc76' : site.name.includes('AI') ? '\ud83e\udd16' : site.name.includes('Tool') ? '\u2699\ufe0f' : site.name.includes('Design') ? '\ud83c\udfa8' : '\ud83c\udf10';
+                        card.innerHTML = `
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-white font-bold text-lg flex-shrink-0">${icon}</div>
+                                <div class="flex-1 min-w-0">
+                                    <h3 class="font-semibold text-lg text-gray-900 dark:text-white truncate">${site.name}</h3>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 mt-1 truncate">${site.description || '暂无描述'}</p>
+                                    <div class="flex items-center gap-2 mt-3">
+                                        <span class="px-2 py-1 bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400 rounded-full text-xs font-medium truncate">${site.category || '未分类'}</span>
+                                        <span class="text-xs text-gray-400 dark:text-gray-500">💬 ${site.phase3_merged ? '已同步' : '待同步'}</span>
+                                    </div>
+                                </div>
+                            </div>`;
+                        resultsContainer.appendChild(card);
+                    });
+                }
+            } catch (error) {
+                console.error('Search failed:', error);
+                document.getElementById('search-title').textContent = '搜索失败';
+            }
+        }
+        document.addEventListener('DOMContentLoaded', performSearch);
+    </script>
+</body>
+</html>

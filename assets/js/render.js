@@ -1,237 +1,609 @@
 /**
- * render.js - 渲染引擎
- * 职责：DOM 渲染、状态UI输出
+ * render.js - 渲染引擎 (V3.1)
+ * 职责：DOM渲染、分页管理、视图切换、骨架屏控制
+ * 优化：分页加载(每页40条)，避免一次性渲染3800+ DOM节点
+ * 新增：虚拟滚动DOM回收（超过3页时自动回收最早的页面DOM并保留滚动位置）
  */
+
+const PAGE_SIZE = 40;
+// 最大保留的渲染页数（超过此值触发DOM回收）
+const MAX_RENDERED_PAGES = 3;
 
 const StateUI = {
     loading() {
-        return '<div class="state-container state-loading"><div class="loading-spinner"></div><div class="state-title">正在加载<span class="loading-dots"></span></div></div>';
+        return '<div class="state-container state-loading">' +
+            '<div class="loading-spinner"></div>' +
+            '<div class="state-title">正在加载<span class="loading-dots"></span></div>' +
+            '</div>';
     },
     error(msg) {
-        return '<div class="state-container state-error"><div class="state-icon">⚠️</div><div class="state-title">加载失败</div><div class="state-desc">' + msg + '</div></div>';
+        return '<div class="state-container state-error">' +
+            '<div class="state-icon">⚠️</div>' +
+            '<div class="state-title">加载失败</div>' +
+            '<div class="state-desc">' + msg + '</div>' +
+            '<button class="btn btn-primary" style="margin-top:12px" onclick="window.location.reload()">重新加载</button>' +
+            '</div>';
     },
     empty(msg) {
-        return '<div class="state-container state-empty"><div class="state-icon">📁</div><div class="state-title">暂无内容</div><div class="state-desc">' + msg + '</div></div>';
+        return '<div class="state-container state-empty">' +
+            '<div class="state-icon">📁</div>' +
+            '<div class="state-title">暂无内容</div>' +
+            '<div class="state-desc">' + msg + '</div>' +
+            '</div>';
     },
     searchEmpty(q) {
-        return '<div class="state-container state-empty"><div class="state-icon">🔍</div><div class="state-title">未找到匹配</div><div class="state-desc">未找到与 "' + q + '" 相关内容</div></div>';
+        return '<div class="state-container state-empty">' +
+            '<div class="state-icon">🔍</div>' +
+            '<div class="state-title">未找到匹配</div>' +
+            '<div class="state-desc">未找到与 "' + _escapeHtml(q) + '" 相关内容</div>' +
+            '</div>';
     }
-};
+}
 
 window.StateUI = StateUI;
 
+/**
+ * 分页渲染器（含DOM回收）
+ */
+class PaginatedRenderer {
+    constructor(pageSize = PAGE_SIZE) {
+        this.pageSize = pageSize;
+        this.currentPage = 0;
+        this.currentSites = [];
+        this.totalPages = 0;
+        this.isSearchMode = false;
+        // 虚拟滚动：追踪当前在DOM中渲染的页面索引
+        this._renderedPages = [];
+    }
+
+    setData(sites) {
+        this.currentSites = sites || [];
+        this.totalPages = Math.ceil(this.currentSites.length / this.pageSize);
+        this.currentPage = 0;
+        this._renderedPages = [];
+    }
+
+    getCurrentPageData() {
+        const start = this.currentPage * this.pageSize;
+        const end = start + this.pageSize;
+        // 修复：返回当前页数据而非从0开始的全部数据
+        return this.currentSites.slice(start, end);
+    }
+
+    hasMore() {
+        return this.currentPage < this.totalPages - 1;
+    }
+
+    nextPage() {
+        if (this.hasMore()) {
+            this.currentPage++;
+            return true;
+        }
+        return false;
+    }
+
+    reset() {
+        this.currentPage = 0;
+        this._renderedPages = [];
+    }
+
+    /** 标记某页已渲染到DOM中 */
+    markPageRendered(pageIdx) {
+        if (!this._renderedPages.includes(pageIdx)) {
+            this._renderedPages.push(pageIdx);
+        }
+    }
+
+    /** 标记某页已从DOM中移除 */
+    markPageRemoved(pageIdx) {
+        var idx = this._renderedPages.indexOf(pageIdx);
+        if (idx !== -1) {
+            this._renderedPages.splice(idx, 1);
+        }
+    }
+
+    /** 获取最早渲染的页面索引 */
+    getOldestRenderedPage() {
+        return this._renderedPages.length > 0 ? this._renderedPages[0] : -1;
+    }
+
+    /** 是否需要回收（超过最大保留页数） */
+    needsRecycling() {
+        return this._renderedPages.length > MAX_RENDERED_PAGES;
+    }
+
+    /** 获取当前DOM中卡片总数 */
+    getRenderedCardCount() {
+        var grid = document.getElementById('sites-grid');
+        return grid ? grid.querySelectorAll('.site-card').length : 0;
+    }
+
+    /** 获取当前DOM中的页数 */
+    getRenderedPageCount() {
+        return this._renderedPages.length;
+    }
+}
+
+const paginatedRenderer = new PaginatedRenderer();
+window.paginatedRenderer = paginatedRenderer;
+
+/* ========== 纯函数：构建HTML ========== */
+
+function _escapeHtml(text) {
+    if (!text) return '';
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(text));
+    return div.innerHTML;
+}
+
+function _buildCard(site, pageIdx) {
+    var url = '#';
+    var target = '';
+    var rel = '';
+    if (site.url) {
+        try {
+            new URL(site.url);
+            url = site.url;
+            target = 'target="_blank"';
+            rel = 'rel="noopener noreferrer"';
+        } catch(e) {}
+    }
+    var favicon = 'assets/images/favicon.png';
+    if (site.url) {
+        try {
+            var hn = new URL(site.url).hostname;
+            favicon = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(hn) + '&sz=32';
+        } catch(e) {}
+    }
+    var title = site.name || '';
+    var desc = site.description || '';
+
+    if (site._query) {
+        title = SearchEngine ? SearchEngine.highlight(title, site._query) : title;
+        desc = SearchEngine ? SearchEngine.highlight(desc, site._query) : desc;
+    }
+
+    // 虚拟滚动：为卡片添加 data-page 属性以便回收
+    var dataAttr = '';
+    if (pageIdx !== undefined) {
+        dataAttr = ' data-page="' + pageIdx + '"';
+    }
+
+    return '<a href="' + url + '" class="site site-card"' + dataAttr + ' ' + target + ' ' + rel +
+           ' aria-label="' + _escapeHtml(title) + '"' +
+           (url !== '#' ? ' onclick="trackSiteClick(\'' + _escapeHtml(site.name) + '\')"' : '') +
+           '>' +
+           '<img src="' + favicon + '" class="card-icon" loading="lazy" alt="" ' +
+           'onerror="this.onerror=null;this.src=\'assets/images/favicon.png\';">' +
+           '<span class="card-title">' + title + '</span>' +
+           '<span class="card-desc">' + desc + '</span>' +
+           '</a>';
+}
+
+function _buildGrid(sites, append, pageIdx) {
+    if (!sites || sites.length === 0) {
+        return '';
+    }
+    var html = '';
+    if (!append) {
+        html = '<div class="grid" id="sites-grid">';
+    }
+    sites.forEach(function(site) {
+        html += _buildCard(site, pageIdx);
+    });
+    if (!append) {
+        html += '</div>';
+        html += '<div id="page-loading-indicator" class="page-loading-indicator" style="display:none">' +
+                '<div class="loading-spinner-small"></div><span>加载更多...</span></div>';
+    }
+    return html;
+}
+
+function _getBreadcrumb(cid, sid, lid) {
+    var parts = [];
+    var cat = dataManager ? dataManager.categories[cid] : null;
+    if (cat) parts.push(cat.name);
+    if (sid && cat && cat.subCategories && cat.subCategories[sid]) {
+        parts.push(cat.subCategories[sid].name);
+    }
+    if (lid && lid !== sid && cat && cat.subCategories && cat.subCategories[sid]) {
+        var sub = cat.subCategories[sid];
+        if (sub.leafCategories && sub.leafCategories[lid]) {
+            parts.push(sub.leafCategories[lid].name);
+        }
+    }
+    return parts.join(' <span class="bc-sep">›</span> ') || '全部';
+}
+
+/* ========== 核心渲染函数 ========== */
+
+/**
+ * 渲染站点列表（SPA统一入口）
+ */
 function renderSites(sites, containerId) {
     var cid = containerId || 'main-content';
     var container = document.getElementById(cid);
     if (!container) return;
-    if (sites === null || sites === undefined) {
+
+    if (sites === null) {
         container.innerHTML = StateUI.loading();
         return;
     }
     if (sites === false) {
-        container.innerHTML = StateUI.error('无法加载数据');
+        container.innerHTML = StateUI.error('无法加载数据，请检查网络连接后重试');
         return;
     }
-    if (Array.isArray(sites) && sites.length === 0) {
-        container.innerHTML = StateUI.empty();
+
+    // 应用标签筛选
+    var activeTags = state.get('filterTags') || [];
+    if (activeTags.length > 0 && tagManager) {
+        sites = tagManager.filterByActiveTags(sites);
+    }
+
+    paginatedRenderer.setData(sites);
+    paginatedRenderer.isSearchMode = false;
+
+    if (sites.length === 0) {
+        container.innerHTML = StateUI.empty('当前分类暂无站点');
         return;
     }
-    var html = '<div class="grid">';
-    sites.forEach(function(site) {
-        var url = '#';
-        var target = '';
-        var rel = '';
-        if (site.url) {
-            try {
-                new URL(site.url);
-                url = site.url;
-                target = 'target="_blank"';
-                rel = 'rel="noopener"';
-            } catch(e) {}
-        }
-        var favicon = 'assets/images/favicon.png';
-        if (site.url) {
-            try {
-                var hn = new URL(site.url).hostname;
-                favicon = 'https://www.google.com/s2/favicons?domain=' + hn + '&sz=32';
-            } catch(e) {}
-        }
-        var title = site.name || '';
-        var desc = site.description || '';
-        html += '<a href="' + url + '" class="site site-card" ' + target + ' ' + rel + '>' +
-            '<img src="' + favicon + '" class="card-icon" onerror="this.onerror=null;this.src=\'assets/images/favicon.png\';">' +
-            '<span class="card-title">' + title + '</span>' +
-            '<span class="card-desc">' + desc + '</span>' +
-            '</a>';
-    });
-    html += '</div>';
+
+    container.innerHTML = _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
+    paginatedRenderer.markPageRendered(0);
+    _setupInfiniteScroll(container);
+    bindCardEvents();
+
+    // 动画
+    setTimeout(function() {
+        container.querySelectorAll('.site-card').forEach(function(card, i) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            setTimeout(function() {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 30 + i * 20);
+        });
+    }, 50);
+}
+
+/**
+ * 渲染分类视图（SPA视图）
+ */
+function renderCategoryView(s) {
+    var lid = s.sidebar.activeLeafId;
+    var cid = s.sidebar.activeCategoryId;
+    var sid = s.sidebar.activeSubCategoryId;
+
+    if (!lid || !cid) {
+        document.getElementById('main-content').innerHTML = StateUI.empty('请选择左侧分类浏览');
+        return;
+    }
+
+    var fullId = sid && lid !== sid ? cid + '/' + sid + '/' + lid : cid + '/' + lid;
+    var sites = dataManager.getSitesByLeafId(fullId);
+
+    paginatedRenderer.isSearchMode = false;
+    paginatedRenderer.setData(sites);
+    paginatedRenderer.reset();
+
+    var container = document.getElementById('main-content');
+
+    // 面包屑
+    var html = '<div class="view-header">' +
+            '<div class="view-breadcrumb">' + _getBreadcrumb(cid, sid, lid) + '</div>' +
+            '<div class="view-meta">' + sites.length + ' 个站点</div>' +
+            '</div>';
+
+    // 工具栏
+    html += '<div class="view-toolbar">' +
+            '<div class="toolbar-left">' +
+            '<button class="view-btn view-grid active" onclick="setViewMode(\'grid\')" aria-label="网格视图" title="网格视图">⊞</button>' +
+            '<button class="view-btn view-list" onclick="setViewMode(\'list\')" aria-label="列表视图" title="列表视图">☰</button>' +
+            '</div>' +
+            '<div class="toolbar-right">' +
+            '<select class="sort-select" onchange="handleSortChange(this.value)" aria-label="排序方式">' +
+            '<option value="default">默认排序</option>' +
+            '<option value="name-asc">名称 ↑</option>' +
+            '<option value="name-desc">名称 ↓</option>' +
+            '</select>' +
+            '</div>' +
+            '</div>';
+
+    // 标签筛选器
+    var activeTags = state.get('filterTags') || [];
+    if (tagManager && dataManager.tagIndexSorted && dataManager.tagIndexSorted.length > 0) {
+        html += '<div class="tag-filter-bar">';
+        html += '<span class="tag-filter-label">🏷️ 筛选:</span>';
+        activeTags.forEach(function(tag) {
+            html += '<button class="tag-active-filter" data-tag="' + _escapeHtml(tag) + '">' +
+                    _escapeHtml(tag) + ' ×</button>';
+        });
+        var topTags = dataManager.tagIndexSorted.slice(0, 10);
+        topTags.forEach(function(t) {
+            var isActive = activeTags.includes(t.tag);
+            if (!isActive) {
+                html += '<button class="tag-suggest" data-tag="' + _escapeHtml(t.tag) + '">+' + t.tag + '(' + t.count + ')</button>';
+            }
+        });
+        html += '</div>';
+    }
+
+    // 站点网格
+    html += _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
+    paginatedRenderer.markPageRendered(0);
+
     container.innerHTML = html;
+    _setupInfiniteScroll(container);
+    bindCardEvents();
+    _bindTagFilters();
+}
+
+/* ========== 搜索渲染 ========== */
+
+function _renderSearchResults(s) {
+    paginatedRenderer.isSearchMode = true;
+    paginatedRenderer.setData(s.search.results);
+    paginatedRenderer.reset();
+
+    var container = document.getElementById('main-content');
+    if (!container) return;
+
+    if (s.search.results.length === 0) {
+        container.innerHTML = StateUI.searchEmpty(s.search.query);
+    } else {
+        var headerHtml = '<div class="search-result-header">搜索 "<strong>' + _escapeHtml(s.search.query) +
+                         '</strong>"，共 ' + s.search.results.length + ' 个结果</div>';
+        container.innerHTML = headerHtml + _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
+        paginatedRenderer.markPageRendered(0);
+    }
+    _setupInfiniteScroll(container);
     bindCardEvents();
 }
 
-window.renderSites = renderSites;
+/* 渲染搜索覆盖层中的结果列表 */
+function renderOverlaySearchResults(results, query) {
+    var container = document.getElementById('search-results');
+    if (!container) return;
 
-class Renderer {
-    constructor() {
-        this.sidebar = document.getElementById('sidebar');
-        this.sidebarContent = document.getElementById('sidebar-content');
-        this.container = document.getElementById('main-content');
+    if (results.length === 0) {
+        container.innerHTML = '<div class="state-container state-empty" style="padding:20px">' +
+            '<div class="state-icon">🔍</div>' +
+            '<div class="state-desc">未找到与 "' + _escapeHtml(query) + '" 相关的内容</div>' +
+            '</div>';
+        return;
     }
 
-    renderSidebar(s) {
-        var cats = s.sidebar.activeCategoryId;
-        var h = '';
-        var _this = this;
-        Object.entries(dataManager.categories).forEach(function(_ref) {
-            var cid = _ref[0];
-            var c = _ref[1];
-            var act = cats === cid;
-            var subsHtml = _this._subs(c, s);
-            h += '<div class="menu-group"><div class="menu-category ' + (act ? 'active' : '') + '" data-cat-id="' + cid + '">' +
-                '<div class="category-header">' + c.name + '</div>' +
-                '<div class="category-content" style="display:' + (act ? 'block' : 'none') + '">' + subsHtml + '</div>' +
-                '</div></div>';
-        });
-        this.sidebarContent.innerHTML = h;
-        this._bindSidebar();
-    }
+    var html = '';
+    var baseUrl = window.location.origin || '';
+    results.slice(0, 50).forEach(function(site) {
+        var icon = '🌐';
+        if (site.name && site.name.includes('GitHub')) icon = '🐙';
+        else if (site.name && site.name.includes('AI')) icon = '🤖';
+        else if (site.name && site.name.includes('Tool')) icon = '🔧';
+        else if (site.name && site.name.includes('Design')) icon = '🎨';
 
-    _subs(cat, s) {
-        var h = '';
-        var activeSub = s.sidebar.activeSubCategoryId;
-        var _this2 = this;
-        Object.entries(cat.subCategories || {}).forEach(function(_ref2) {
-            var sid = _ref2[0];
-            var sub = _ref2[1];
-            var exp = activeSub === sid;
-            var leavesHtml = _this2._leaves(sub, s);
-            h += '<div class="menu-subcategory ' + (exp ? 'expanded' : '') + '" data-sub-id="' + sid + '">' +
-                '<div class="subcategory-header"><svg class="subcategory-arrow" viewBox="0 0 24 24" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg>' + sub.name + '</div>' +
-                '<div class="subcategory-content">' + leavesHtml + '</div>' +
-                '</div>';
-        });
-        return h;
-    }
-
-    _leaves(sub, s) {
-        var h = '';
-        var activeLeaf = s.sidebar.activeLeafId;
-        Object.entries(sub.leafCategories || {}).forEach(function(_ref3) {
-            var lid = _ref3[0];
-            var leaf = _ref3[1];
-            h += '<a href="#" class="menu-leaf ' + (activeLeaf === lid ? 'active' : '') + '" data-leaf-id="' + lid + '">' + leaf.name + '</a>';
-        });
-        return h;
-    }
-
-    renderView(s) {
-        if (s.currentView === 'category') {
-            var lid = s.sidebar.activeLeafId;
-            var cid = s.sidebar.activeCategoryId;
-            var sid = s.sidebar.activeSubCategoryId;
-            if (!lid || !cid) {
-                this.container.innerHTML = this._empty();
-                return;
-            }
-            var fullId = sid && lid !== sid ? cid + '/' + sid + '/' + lid : cid + '/' + lid;
-            var sites = dataManager.getSitesByLeafId(fullId);
-            this.container.innerHTML = sites.length ? this._cards(sites) : this._empty('暂无内容');
-        } else if (s.currentView === 'search') {
-            this._searchResults(s);
-        }
-    }
-
-    _cards(sites) {
-        var h = '<div class="grid">';
-        sites.forEach(function(site) {
-            var url = '#';
-            var fav = 'assets/images/favicon.png';
-            if (site.url) {
-                try {
-                    new URL(site.url);
-                    url = site.url;
-                } catch(e) {}
-                try {
-                    var hn = new URL(site.url).hostname;
-                    fav = 'https://www.google.com/s2/favicons?domain=' + hn + '&sz=32';
-                } catch(e) {}
-            }
-            var title = site.name || '';
-            var desc = site.description || '';
-            h += '<a href="' + url + '" target="_blank" class="site site-card" rel="noopener">' +
-                '<img src="' + fav + '" class="card-icon" onerror="this.src=\'assets/images/favicon.png\'">' +
-                '<span class="card-title">' + title + '</span>' +
-                '<span class="card-desc">' + desc + '</span>' +
+        var siteUrl = site.url || '';
+        html += '<a href="' + _escapeHtml(siteUrl) + '" class="overlay-search-item" target="_blank" rel="noopener noreferrer" aria-label="' + _escapeHtml(site.name) + '">' +
+                '<img src="https://www.google.com/s2/favicons?domain=' + encodeURIComponent((siteUrl.match(/\/\/[^\\/]+/) || [''])[0].replace('//','')) + '&sz=32" class="osi-icon" loading="lazy" alt="" onerror="this.src=\'assets/images/favicon.png\';">' +
+                '<div style="flex:1;min-width:0;">' +
+                '<div class="osi-name">' + _escapeHtml(site.name) + '</div>' +
+                '<div class="osi-desc">' + _escapeHtml(site.description || '暂无描述') + '</div>' +
+                '</div>' +
+                '<span class="osi-icon" style="width:auto;font-size:18px;">' + icon + '</span>' +
                 '</a>';
-        });
-        return h + '</div>';
-    }
-
-    _empty(msg) {
-        if (msg === void 0) msg = '请选择一个分类';
-        return '<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--color-text-dim);text-align:center;opacity:.6">' +
-            '<div style="font-size:48px;margin-bottom:16px">📁</div><p>' + msg + '</p></div>';
-    }
-
-    _searchResults(s) {
-        this.container.innerHTML = s.search.results.length ? this._cards(s.search.results) : StateUI.searchEmpty(s.search.query);
-    }
-
-    _bindSidebar() {
-        var _this3 = this;
-        this.sidebarContent.querySelectorAll('.menu-category').forEach(function(el) {
-            el.addEventListener('click', function(e) {
-                e.stopPropagation();
-                var cid = el.dataset.catId;
-                state.set('sidebar.activeCategoryId', cid);
-                var cat = dataManager.categories[cid];
-                if (cat) {
-                    var subs = Object.keys(cat.subCategories || {});
-                    if (subs[0]) {
-                        state.set('sidebar.activeSubCategoryId', subs[0]);
-                        var leaves = Object.keys(cat.subCategories[subs[0]].leafCategories || {});
-                        if (leaves[0]) state.set('sidebar.activeLeafId', leaves[0]);
-                    }
-                }
-                state.set('currentView', 'category');
-                state.set('search.active', false);
-            });
-        });
-        this.sidebarContent.querySelectorAll('.menu-subcategory').forEach(function(el) {
-            el.addEventListener('click', function(e) {
-                e.stopPropagation();
-                var sid = el.dataset.subId;
-                var exp = state.get('sidebar.activeSubCategoryId') === sid;
-                state.set('sidebar.activeSubCategoryId', exp ? null : sid);
-            });
-        });
-        this.sidebarContent.querySelectorAll('.menu-leaf').forEach(function(el) {
-            el.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                state.set('sidebar.activeLeafId', el.dataset.leafId);
-                state.set('currentView', 'category');
-                state.set('search.active', false);
-            });
-        });
-    }
-}
-
-var renderer = new Renderer();
-window.renderer = renderer;
-
-function bindCardEvents() {
-    document.querySelectorAll('.site-card').forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
-            var r = card.getBoundingClientRect();
-            var x = (e.clientX - r.left - r.width / 2) * 0.05;
-            var y = (e.clientY - r.top - r.height / 2) * 0.05;
-            card.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(1.02)';
-        });
-        card.addEventListener('mouseleave', function() {
-            card.style.transform = 'translate(0,0) scale(1)';
-        });
     });
+    container.innerHTML = html;
 }
 
-window.bindCardEvents = bindCardEvents;
+/* ========== 视图模式切换 ========== */
+var currentViewMode = 'grid';
+
+function setViewMode(mode) {
+    currentViewMode = mode;
+    var grid = document.getElementById('sites-grid');
+    if (!grid) return;
+
+    var btns = document.querySelectorAll('.view-btn');
+    btns.forEach(function(b) { b.classList.remove('active'); });
+
+    if (mode === 'list') {
+        grid.classList.add('list-mode');
+        document.querySelector('.view-btn.view-list').classList.add('active');
+    } else {
+        grid.classList.remove('list-mode');
+        document.querySelector('.view-btn.view-grid').classList.add('active');
+    }
+}
+
+function handleSortChange(value) {
+    var sites = paginatedRenderer.currentSites;
+    if (!sites) return;
+
+    switch (value) {
+        case 'name-asc':
+            sites.sort(function(a, b) { return (a.name || '').localeCompare(b.name || ''); });
+            break;
+        case 'name-desc':
+            sites.sort(function(a, b) { return (b.name || '').localeCompare(a.name || ''); });
+            break;
+        case 'url-asc':
+            sites.sort(function(a, b) { return (a.url || '').localeCompare(b.url || ''); });
+            break;
+        default:
+            break;
+    }
+
+    paginatedRenderer.setData(sites);
+    paginatedRenderer.reset();
+    var container = document.getElementById('main-content');
+    if (container) {
+        var gridHtml = _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
+        paginatedRenderer.markPageRendered(0);
+        // 保留 view-header, toolbar, tag-filter-bar
+        var headerPart = container.querySelector('.view-header');
+        var toolbarPart = container.querySelector('.view-toolbar');
+        var tagPart = container.querySelector('.tag-filter-bar');
+        container.innerHTML = '';
+        if (headerPart) container.appendChild(headerPart);
+        if (toolbarPart) container.appendChild(toolbarPart);
+        if (tagPart) container.appendChild(tagPart);
+        container.insertAdjacentHTML('beforeend', gridHtml);
+        _setupInfiniteScroll(container);
+        bindCardEvents();
+    }
+}
+
+/* ========== 虚拟滚动：DOM回收 ========== */
+
+/**
+ * 回收最早的页面DOM
+ * @param {HTMLElement} grid - sites-grid 元素
+ */
+function _recycleOldestPage(grid) {
+    var oldestPage = paginatedRenderer.getOldestRenderedPage();
+    if (oldestPage < 0) return;
+
+    var oldCards = grid.querySelectorAll('[data-page="' + oldestPage + '"]');
+    if (oldCards.length === 0) {
+        paginatedRenderer.markPageRemoved(oldestPage);
+        return;
+    }
+
+    // 回收前记录滚动位置和grid高度，用于补偿滚动偏移
+    var scrollTopBefore = window.pageYOffset;
+    var gridScrollHeightBefore = grid.scrollHeight;
+
+    // 移除旧卡片
+    oldCards.forEach(function(card) {
+        card.remove();
+    });
+
+    // 补偿滚动位置，保持视觉位置不变
+    var gridScrollHeightAfter = grid.scrollHeight;
+    var heightDiff = gridScrollHeightBefore - gridScrollHeightAfter;
+    if (heightDiff > 0) {
+        window.scrollTo(window.pageXOffset, scrollTopBefore - heightDiff);
+    }
+
+    paginatedRenderer.markPageRemoved(oldestPage);
+}
+
+/* ========== 无限滚动 ========== */
+
+function _removeSentinel() {
+    var old = document.getElementById('infinite-scroll-sentinel');
+    if (old) {
+        if (old._observer) old._observer.disconnect();
+        old.remove();
+    }
+    if (window._globalScrollHandler) {
+        window.removeEventListener('scroll', window._globalScrollHandler);
+        window._globalScrollHandler = null;
+    }
+}
+
+function _setupInfiniteScroll(container) {
+    _removeSentinel();
+    if (!paginatedRenderer.hasMore()) return;
+
+    var sentinel = document.createElement('div');
+    sentinel.id = 'infinite-scroll-sentinel';
+    sentinel.setAttribute('aria-hidden', 'true');
+    container.appendChild(sentinel);
+
+    if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) _loadNextPage(container);
+        }, { rootMargin: '300px' });
+        observer.observe(sentinel);
+        sentinel._observer = observer;
+    } else {
+        window._globalScrollHandler = function() {
+            if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 400) {
+                _loadNextPage(container);
+            }
+        };
+        window.addEventListener('scroll', window._globalScrollHandler);
+    }
+}
+
+/**
+ * 加载下一页（含DOM回收与loading指示器）
+ */
+function _loadNextPage(container) {
+    if (!paginatedRenderer.nextPage()) {
+        _removeSentinel();
+        return;
+    }
+
+    // 显示 loading 指示器
+    var loadingIndicator = document.getElementById('page-loading-indicator');
+    if (loadingIndicator) loadingIndicator.style.display = 'flex';
+
+    var currentPageIdx = paginatedRenderer.currentPage;
+    var nextData = paginatedRenderer.getCurrentPageData();  // 仅当前页数据
+    var grid = document.getElementById('sites-grid');
+    if (!grid) {
+        if (loadingIndicator) loadingIndicator.style.display = 'none';
+        return;
+    }
+
+    // 创建当前页卡片（带动画类和data-page属性）
+    var fragment = document.createDocumentFragment();
+    nextData.forEach(function(site) {
+        var card = document.createElement('a');
+        card.className = 'site site-card animate-in';
+        card.setAttribute('data-page', currentPageIdx);
+        card.href = site.url || '#';
+        card.setAttribute('aria-label', site.name || '');
+        if (site.url) {
+            try { new URL(site.url); card.target = '_blank'; card.rel = 'noopener noreferrer'; } catch(e) {}
+        }
+
+        var favicon = 'assets/images/favicon.png';
+        if (site.url) {
+            try { favicon = 'https://www.google.com/s2/favicons?domain=' + new URL(site.url).hostname + '&sz=32'; } catch(e) {}
+        }
+
+        var title = site.name || '';
+        var desc = site.description || '';
+        if (site._query) {
+            title = SearchEngine ? SearchEngine.highlight(title, site._query) : title;
+            desc = SearchEngine ? SearchEngine.highlight(desc, site._query) : desc;
+        }
+
+        card.innerHTML = '<img src="' + favicon + '" class="card-icon" loading="lazy" alt="" ' +
+                          'onerror="this.onerror=null;this.src=\'assets/images/favicon.png\';">' +
+                          '<span class="card-title">' + title + '</span>' +
+                          '<span class="card-desc">' + desc + '</span>';
+        fragment.appendChild(card);
+    });
+
+    grid.appendChild(fragment);
+    paginatedRenderer.markPageRendered(currentPageIdx);
+    bindCardEvents();
+
+    // DOM回收：当渲染页面超过阈值时，移除最早的页面
+    if (paginatedRenderer.needsRecycling()) {
+        _recycleOldestPage(grid);
+    }
+
+    if (!paginatedRenderer.hasMore()) _removeSentinel();
+
+    // 隐藏 loading 指示器
+    if (loadingIndicator) loadingIndicator.style.display = 'none';
+
+    // 仅对新加载的卡片执行入场动画
+    setTimeout(function() {
+        grid.querySelectorAll('.animate-in[data-page="' + currentPageIdx + '"]').forEach(function(card) {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            requestAnimationFrame(function() {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    }, 30);
+}

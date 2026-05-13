@@ -1,0 +1,21 @@
+{
+    "name": "啃魂导航",
+    "short_name": "啃魂导航",
+    "description": "智能开发者导航站 - 聚合AI、编程、设计、工具等优质资源",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0a0f",
+    "theme_color": "#7c3aed",
+    "icons": [
+        {
+            "src": "assets/images/favicon.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "assets/images/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

@@ -1,224 +1,362 @@
 /**
- * app.js - 入口与胶水代码
- * 职责：初始化、事件调度、路由同步
- * 规范：Technical_Architecture.md 4.1
+ * app.js - 应用入口与路由调度 (V3)
+ * 职责：初始化、事件调度、SPA路由、键盘快捷键
+ * 修复：统一所有功能到一个入口点
  */
 
 async function init() {
-        window.renderSites = renderSites;
-    renderSites(null);
+    // 暴露全局函数
+    window.renderSites = renderSites;
 
-    await dataManager.load();
+    // 骨架屏已经在HTML中默认显示，无需额外设置
+    // 只需确保state.loading为true
+    if (state) state.set('loading', true);
+
+    // 加载数据（带缓存降级）
+    let dataLoaded = false;
+    try {
+        await dataManager.load();
+        dataLoaded = true;
+    } catch (e) {
+        console.error('[App] 数据加载失败:', e);
+        // 尝试从缓存恢复
+        try {
+            const cached = dataManager._loadCache();
+            if (cached && cached.length > 0) {
+                // console.log('[App] 从缓存恢复数据:', cached.length, '条');
+                dataManager.raw = cached;
+                dataManager._buildIndexes();
+                dataManager.isLoaded = true;
+                dataLoaded = true;
+            }
+        } catch(cacheErr) {
+            console.error('[App] 缓存恢复也失败:', cacheErr);
+        }
+
+        if (!dataLoaded) {
+            renderSites(false);
+            return;
+        }
+    }
+
+    // 初始化标签系统
+    try {
+        await initTagManager(dataManager);
+        await tagManager.load();
+        renderTagCloud('tag-cloud-container');
+    } catch (e) {
+        console.warn('[App] 标签系统初始化失败:', e);
+    }
+
+    // 初始化搜索
+    try {
         initSearchEngine(dataManager);
+    } catch (e) {
+        console.error('[App] 搜索初始化失败:', e);
+    }
 
-    state.subscribe((s) => {
-        // // console.log('[APP] State update:', {
-        //     activeCategory: s.sidebar.activeCategoryId,
-        //     activeSub: s.sidebar.activeSubCategoryId,
-        //     activeLeaf: s.sidebar.activeLeafId,
-        //     categories: Object.keys(dataManager.categories || {}).length
-        // });
+    // 初始化收藏
+    if (window.favoriteManager) {
         try {
-            renderer.renderSidebar(s);
-                    } catch(e) { console.error('[APP] Sidebar render error:', e); }
-        try {
-            renderer.renderView(s);
-                    } catch(e) { console.error('[APP] View render error:', e); }
+            window.favoriteUI.updateCount();
+        } catch(e) {
+            console.warn('[App] 收藏计数初始化失败:', e);
+        }
+    }
+
+    Toast.init && Toast.init();
+
+    // 状态订阅 - 驱动UI渲染
+    state.subscribe(function(s) {
+        try { renderer.renderSidebar(s); } catch(e) { console.error('[APP] Sidebar error:', e); }
+        try { renderer.renderView(s); } catch(e) { console.error('[APP] View error:', e); }
         syncStateToHash(s);
     });
 
-    window.addEventListener('hashchange', () => {
+    // URL hash 路由
+    window.addEventListener('hashchange', function() {
         syncHashToState();
     });
 
-    const categories = Object.entries(dataManager.categories);
-    const hashLoaded = syncHashToState();
+    // 初始路由
+    var categories = Object.entries(dataManager.categories);
+    var hashLoaded = syncHashToState();
 
     if (!hashLoaded && categories.length > 0) {
-        // Set first category as active and auto-select first content
-        const [firstCatId] = categories[0];
-        const firstCat = dataManager.categories[firstCatId];
-
-        // Auto-expand first category
+        var firstCatId = categories[0][0];
         state.set('sidebar.activeCategoryId', firstCatId);
 
-        // Auto-select first subcategory and leaf if available
-        const subCats = firstCat.subCategories;
-        const firstSubId = Object.keys(subCats)[0];
-        if (firstSubId) {
-            state.set('sidebar.activeSubCategoryId', firstSubId);
-            const subCat = subCats[firstSubId];
-            const leafIds = Object.keys(subCat.leafCategories);
-            const firstLeafId = leafIds[0];
-            if (firstLeafId) {
-                state.set('sidebar.activeLeafId', firstLeafId);
+        var firstCat = dataManager.categories[firstCatId];
+        if (firstCat) {
+            var subCats = firstCat.subCategories;
+            if (subCats) {
+                var firstSubId = Object.keys(subCats)[0];
+                if (firstSubId) {
+                    state.set('sidebar.activeSubCategoryId', firstSubId);
+                    var subCat = subCats[firstSubId];
+                    if (subCat && subCat.leafCategories) {
+                        var leafIds = Object.keys(subCat.leafCategories);
+                        if (leafIds[0]) state.set('sidebar.activeLeafId', leafIds[0]);
+                    }
+                }
             }
         }
     }
 
-    window.addEventListener('keydown', (e) => {
-        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-            e.preventDefault();
-            toggleSearch();
-        }
-    });
-
-    const searchInput = document.getElementById('search-input');
-    const searchClear = document.getElementById('search-clear');
+    // ===== 搜索功能（顶栏输入框） =====
+    var searchInput = document.getElementById('search-input');
+    var searchClear = document.getElementById('search-clear');
+    var searchSuggestions = document.getElementById('search-suggestions');
 
     if (searchInput) {
-        let searchDebounceTimer = null;
-        searchInput.addEventListener('input', (e) => {
-            const query = e.target.value;
+        var searchDebounceTimer = null;
+
+        searchInput.addEventListener('input', function(e) {
+            var query = e.target.value.trim();
             state.set('search.query', query);
+
             if (searchDebounceTimer) clearTimeout(searchDebounceTimer);
-            searchDebounceTimer = setTimeout(() => {
+            searchDebounceTimer = setTimeout(function() {
                 if (!window.searchEngine) return;
-                const results = searchEngine.query(query);
-                state.set('search.results', results);
+
                 if (query.length > 0) {
+                    var suggestions = searchEngine.suggest(query);
+                    renderSearchSuggestions(suggestions, query);
+
+                    var results = searchEngine.query(query);
+                    state.set('search.results', results);
                     state.set('search.active', true);
                     state.set('currentView', 'search');
                 } else {
+                    hideSearchSuggestions();
                     state.set('search.active', false);
+                    state.set('search.results', []);
                     state.set('currentView', 'category');
                 }
-            }, 200);
+            }, 150);
         });
-        searchInput.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') toggleSearch();
+
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                hideSearchSuggestions();
+                toggleSearch();
+            }
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                hideSearchSuggestions();
+            }
         });
-        if (searchClear && searchInput) {
-            searchInput.addEventListener('input', () => {
+
+        searchInput.addEventListener('focus', function() {
+            if (searchInput.value.length > 0) {
+                showSearchSuggestions();
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.search-container')) {
+                hideSearchSuggestions();
+            }
+        });
+
+        if (searchClear) {
+            searchInput.addEventListener('input', function() {
                 searchClear.classList.toggle('hidden', searchInput.value.length === 0);
             });
-            searchClear.addEventListener('click', () => {
+            searchClear.addEventListener('click', function() {
                 searchInput.value = '';
                 searchClear.classList.add('hidden');
                 searchInput.focus();
+                hideSearchSuggestions();
                 state.set('search.query', '');
                 state.set('search.results', []);
+                state.set('search.active', false);
                 state.set('currentView', 'category');
             });
         }
     }
 
-    const sidebarToggle = document.getElementById('sidebar-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    // ===== 侧边栏切换 =====
+    var sidebarToggle = document.getElementById('sidebar-toggle');
+    var sidebar = document.getElementById('sidebar');
+    var sidebarOverlay = document.getElementById('sidebar-overlay');
+
     if (sidebarToggle && sidebar && sidebarOverlay) {
         function toggleSidebar() {
-            const isOpen = !sidebar.classList.contains('-translate-x-full');
-            if (isOpen) {
-                sidebar.classList.add('-translate-x-full');
-                sidebarOverlay.classList.add('hidden');
-            } else {
+            var isOpen = !sidebar.classList.contains('-translate-x-full');
+            if (!isOpen) {
                 sidebar.classList.remove('-translate-x-full');
                 sidebarOverlay.classList.remove('hidden');
+                sidebarOverlay.classList.add('visible');
+                sidebarOverlay.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('sidebar-open');
+            } else {
+                sidebar.classList.add('-translate-x-full');
+                sidebarOverlay.classList.add('hidden');
+                sidebarOverlay.classList.remove('visible');
+                sidebarOverlay.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('sidebar-open');
             }
+            sidebarToggle.setAttribute('aria-expanded', String(!isOpen));
         }
+
         sidebarToggle.addEventListener('click', toggleSidebar);
         sidebarOverlay.addEventListener('click', toggleSidebar);
     }
 
-    const searchOverlay = document.getElementById('search-overlay');
-    const searchOverlayInput = document.getElementById('search-overlay-input');
-    const searchOverlayClear = document.getElementById('search-overlay-clear');
+    // ===== 搜索覆盖层 =====
+    var searchOverlay = document.getElementById('search-overlay');
+    var searchOverlayInput = document.getElementById('search-overlay-input');
+    var searchOverlayClear = document.getElementById('search-overlay-clear');
 
     function toggleSearch() {
-        const active = state.get('search.active');
+        var active = state.get('search.active');
         state.set('search.active', !active);
         state.set('currentView', !active ? 'search' : 'category');
+
         if (searchOverlay) {
             if (!active) {
                 searchOverlay.classList.remove('hidden');
-                setTimeout(() => {
+                searchOverlay.setAttribute('aria-hidden', 'false');
+                requestAnimationFrame(function() {
                     if (searchOverlayInput) {
                         searchOverlayInput.focus();
-                        searchOverlayInput.value = state.get('search.query') || '';
-                        if (window.searchEngine && searchOverlayInput.value) {
-                            const results = searchEngine.query(searchOverlayInput.value);
+                        var query = state.get('search.query') || '';
+                        searchOverlayInput.value = query;
+                        if (window.searchEngine && query) {
+                            var results = searchEngine.query(query);
                             state.set('search.results', results);
+                            renderOverlaySearchResults(results, query);
                         }
                     }
-                }, 50);
+                });
             } else {
                 searchOverlay.classList.add('hidden');
+                searchOverlay.setAttribute('aria-hidden', 'true');
             }
         }
     }
 
     if (searchOverlayInput) {
-        let overlayDebounceTimer = null;
-        searchOverlayInput.addEventListener('input', (e) => {
-            const query = e.target.value;
+        var overlayDebounceTimer = null;
+
+        searchOverlayInput.addEventListener('input', function(e) {
+            var query = e.target.value;
             state.set('search.query', query);
             if (searchInput) searchInput.value = query;
+
             if (overlayDebounceTimer) clearTimeout(overlayDebounceTimer);
-            overlayDebounceTimer = setTimeout(() => {
+            overlayDebounceTimer = setTimeout(function() {
                 if (!window.searchEngine) return;
-                const results = searchEngine.query(query);
+                var results = searchEngine.query(query);
                 state.set('search.results', results);
-            }, 200);
+                renderOverlaySearchResults(results, query);
+            }, 150);
         });
-        searchOverlayInput.addEventListener('keydown', (e) => {
+
+        searchOverlayInput.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') toggleSearch();
         });
+
         if (searchOverlayClear) {
-            searchOverlayInput.addEventListener('input', () => {
+            searchOverlayInput.addEventListener('input', function() {
                 searchOverlayClear.classList.toggle('hidden', searchOverlayInput.value.length === 0);
             });
-            searchOverlayClear.addEventListener('click', () => {
+            searchOverlayClear.addEventListener('click', function() {
                 searchOverlayInput.value = '';
                 searchOverlayClear.classList.add('hidden');
                 if (searchInput) searchInput.value = '';
+                searchOverlayInput.focus();
                 state.set('search.query', '');
                 state.set('search.results', []);
-                searchOverlayInput.focus();
+                renderOverlaySearchResults([], '');
             });
         }
     }
 
     if (searchOverlay) {
-        searchOverlay.addEventListener('click', (e) => {
+        searchOverlay.addEventListener('click', function(e) {
             if (e.target === searchOverlay) toggleSearch();
         });
     }
 
-    window.addEventListener('keydown', (e) => {
+    window.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && state.get('search.active')) {
             toggleSearch();
         }
     });
 
+    // 全局键盘快捷键
+    window.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            toggleSearch();
+        }
+        if ((e.ctrlKey || e.metaKey) && e.key === '/') {
+            e.preventDefault();
+            toggleSidebar();
+        }
+    });
+
+    // 触发初始渲染
     state._notify();
 }
 
-init();
+function renderSearchSuggestions(suggestions, query) {
+    var container = document.getElementById('search-suggestions');
+    if (!container) return;
 
-document.addEventListener('error', function(e) {
-    const target = e.target;
-    if (target.tagName === 'IMG' && target.classList.contains('card-icon')) {
-        if (!target.dataset.error) {
-            target.dataset.error = '1';
-            target.src = 'assets/images/favicon.png';
-            target.onerror = null;
-        }
+    if (suggestions.length === 0) {
+        hideSearchSuggestions();
+        return;
     }
-}, true);
+
+    var html = '<div class="state-container" style="padding:6px">';
+    suggestions.forEach(function(s) {
+        html += '<a href="#" class="overlay-search-item" style="padding:6px 10px;border-radius:var(--radius-sm);margin-bottom:2px" ' +
+                'onclick="event.preventDefault();document.getElementById(\'search-input\').value=\'' + s.name.replace(/'/g, "\\'") + '\';hideSearchSuggestions();state.set(\'search.query\',\'' + s.name + '\');if(window.searchEngine){var r=searchEngine.query(\'' + s.name + '\');state.set(\'search.results\',r);state.set(\'search.active\',true);state.set(\'currentView\',\'search\');}" ' +
+                'aria-label="' + s.name + '">' +
+                '<span class="osi-icon" style="width:24px;height:24px;border-radius:4px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0">🔍</span>' +
+                '<div style="flex:1;min-width:0">' +
+                '<div class="osi-name" style="font-size:13px">' + _escapeHtml(s.name) + '</div>' +
+                '<div class="osi-desc" style="font-size:11px">' + _escapeHtml(s.url || '') + '</div>' +
+                '</div>' +
+                '</a>';
+    });
+    html += '</div>';
+
+    container.innerHTML = html;
+    showSearchSuggestions();
+}
+
+function showSearchSuggestions() {
+    var container = document.getElementById('search-suggestions');
+    if (container) {
+        container.classList.remove('hidden');
+        container.style.display = 'block';
+    }
+}
+
+function hideSearchSuggestions() {
+    var container = document.getElementById('search-suggestions');
+    if (container) {
+        container.classList.add('hidden');
+        container.style.display = 'none';
+    }
+}
 
 function syncStateToHash(s) {
     const parts = [];
     if (s.sidebar.activeCategoryId) {
-        parts.push(`category=${encodeURIComponent(s.sidebar.activeCategoryId)}`);
+        parts.push('category=' + encodeURIComponent(s.sidebar.activeCategoryId));
     }
     if (s.sidebar.activeSubCategoryId) {
-        parts.push(`sub=${encodeURIComponent(s.sidebar.activeSubCategoryId)}`);
+        parts.push('sub=' + encodeURIComponent(s.sidebar.activeSubCategoryId));
     }
     if (s.sidebar.activeLeafId) {
-        parts.push(`leaf=${encodeURIComponent(s.sidebar.activeLeafId)}`);
+        parts.push('leaf=' + encodeURIComponent(s.sidebar.activeLeafId));
     }
-    const newHash = parts.length > 0 ? `#${parts.join('&')}` : '';
+    const newHash = parts.length > 0 ? '#' + parts.join('&') : '';
     if (window.location.hash !== newHash) {
         history.replaceState(null, '', newHash);
     }
@@ -256,11 +394,17 @@ window.state = state;
 window.dataManager = dataManager;
 window.searchEngine = searchEngine;
 
-
-// Global error capture
-window.addEventListener('error', (e) => {
-    console.warn('[Global Error]', e.error?.message || e.message);
+// 全局错误捕获
+window.addEventListener('error', function(e) {
+    console.warn('[Global Error]', e.error ? e.error.message : e.message);
     if (e.target && e.target.tagName === 'IMG') {
         e.target.src = 'assets/images/favicon.png';
     }
 });
+
+// 页面加载完成初始化
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+} else {
+    setTimeout(init, 0);
+}

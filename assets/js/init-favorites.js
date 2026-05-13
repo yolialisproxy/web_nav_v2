@@ -7,7 +7,7 @@
     'use strict';
     
     function initFavoriteFeature() {
-        // console.log('[FavoriteFeature] Initializing...');
+        // // console.log('[FavoriteFeature] Initializing...');
         
         // 检查核心组件
         if (!window.favoriteManager) {
@@ -16,7 +16,7 @@
         }
         
         if (!window.favoriteUI) {
-            // console.log('[FavoriteFeature] Creating default UI...');
+            // // console.log('[FavoriteFeature] Creating default UI...');
             
             // 创建基础UI
             window.favoriteUI = {
@@ -182,8 +182,8 @@
             });
         }, 500);
         
-        // console.log('[FavoriteFeature] Initialized successfully!');
-        // console.log('[FavoriteFeature] Current count:', window.favoriteManager.getCount());
+        // // console.log('[FavoriteFeature] Initialized successfully!');
+        // // console.log('[FavoriteFeature] Current count:', window.favoriteManager.getCount());
     }
     
     // 延迟初始化确保DOM准备就绪

@@ -1,0 +1,310 @@
+{
+  "original_sites": 3398,
+  "cleaned_sites": 3398,
+  "original_categories": 212,
+  "cleaned_categories": 143,
+  "changes_made": 893,
+  "placeholder_cats_removed": 73,
+  "changes_sample": [
+    {
+      "name": "Elsa Speak",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://opencollective.com/sindresorhus",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://programiz.pro/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.geeksforgeeks.org/find-the-maximum-depth-or-height-of-a-tree/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=NdF1QDTRkck\\u0026amp;index=10\\u0026amp;list=PLFE6E58F856038C69\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.coursera.org/learn/algorithmic-thinking-2/lecture/nfK2r/running-time-of-the-dp-algorithm\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://exercism.org/tracks",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.coursera.org/lecture/data-structures/phone-book-problem-NYZZP",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=5cPbNCrdotA&amp;index=37&amp;list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=3vV4YiqKm1o",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "http://vim-adventures.com/",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://danielmiessler.com/study/tcpdump/",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=iYvBtGKsqSg&amp;index=3&amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.githubstatus.com",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.puppet.com/community/open-source/bolt\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://brackets.io/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://en.wikipedia.org/wiki/Identity_management\\",
+      "from": "AI工具/人工智能/聊天对话/子类-1",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://awesome-selfhosted.net/",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "http://www3.cs.stonybrook.edu/~skiena/algorist/book/errata\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://blog.clevertap.com/how-to-remove-duplicates-in-large-datasets/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=C3SsdUqasD4\\u0026amp;list=PLA5Lqm4uh9Bbq-E0ZnqTIa8LRaL77ica6\\u0026amp;index=2\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=Tl90tNtKvxs\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/playlist?list=PL3B08AE665AB9002A\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.coursera.org/lecture/data-structures/doubly-linked-lists-jpGKD",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "http://ferd.ca/simhashing-hopefully-made-simple.html",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://old.reddit.com/r/chatops\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://jenkins-ci.org/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.virtualmin.com/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.nsupdate.info/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-4",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://vshymanskyy.github.io/StandWithUkraine\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://codility.com/programmers/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://youtu.be/Urx87-NMm6c\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=RktgPx0MarY\\u0026amp;list=PLOtl7M3yp-DX6ic0HGT0PUX_wiNmkWkXx\\u0026amp;index=14\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=NKLDp3Rch3M\\u0026amp;list=PLFDnELG9dpVxQCxuD-9BSy2E7BWY3t5Sm\\u0026amp;index=18\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=t5xYI0jzOf4\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=s8JqcZtvnsM\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=SIEVvk3NVuk\\u0026amp;index=11\\u0026amp;list=PLUl4u3cNGP62K2DjQLRxDNRi0z2IRWnNh\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://aws.amazon.com/sns/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.coursera.org/learn/data-structures/lecture/nYrc8/optimization-precomputation\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://youtu.be/HZ5YTanv5QE",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=c4BRHC7kTaQ&amp;index=2&amp;list=PL89B61F78B552C1AB",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=NdF1QDTRkck&amp;index=10&amp;list=PLFE6E58F856038C69",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=ILkT_HV9DVU",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.udacity.com/course/data-structures-and-algorithms-in-python--ud513",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=P9Ydif5_qvE",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://sourceforge.net/projects/itop/files/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://gitlab.com/bounca/bounca/\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.racktables.org/demo.php\\",
+      "from": "AI工具/人工智能/聊天对话/子类-3",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://archive.org/details/ucberkeley_webcast_-c4I3gFYe3w\\",
+      "from": "AI工具/人工智能/聊天对话/子类-5",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    },
+    {
+      "name": "https://www.youtube.com/watch?v=c4BRHC7kTaQ\\u0026amp;index=2\\u0026amp;list=PL89B61F78B552C1AB\\",
+      "from": "AI工具/人工智能/聊天对话/子类-5",
+      "to": "AI工具/人工智能/聊天对话",
+      "action": "promoted"
+    }
+  ]
+}
