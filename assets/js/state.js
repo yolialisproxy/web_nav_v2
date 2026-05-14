@@ -18,7 +18,7 @@ class State {
                 query: '',
                 results: []
             },
-            currentView: 'category',
+            currentView: 'grid',  // 默认网格视图
             filterTags: [],
             loading: true,         // 全局加载状态
             searchMode: false      // 是否在搜索覆盖层模式
@@ -383,6 +383,18 @@ class State {
         console.warn('[State] window.tagManager 已废弃，请使用 state.tags 相关 API');
         return null;
     }
+
+    // ═══════════════════════════════════════════════
+    // 视图切换：网格 / 列表 / 分类
+    // ═══════════════════════════════════════════════
+    setView(mode) {
+        if (!['grid', 'list', 'category'].includes(mode)) {
+            console.warn('[State] 无效视图模式:', mode);
+            return;
+        }
+        this.set('currentView', mode);
+    }
+
 
 }
 

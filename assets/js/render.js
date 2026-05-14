@@ -301,6 +301,52 @@ function renderSites(sites, containerId) {
     }, 50);
 }
 
+// 列表视图渲染（列表模式）
+function renderSitesList(sites, containerId) {
+    var cid = containerId || 'main-content';
+    var container = document.getElementById(cid);
+    if (!container) return;
+
+    if (sites === null) {
+        container.innerHTML = StateUI.loading();
+        return;
+    }
+    if (sites === false) {
+        container.innerHTML = StateUI.error('无法加载数据');
+        return;
+    }
+    if (sites.length === 0) {
+        container.innerHTML = StateUI.empty('暂无站点');
+        return;
+    }
+
+    var html = '<div class="sites-list">';
+    sites.forEach(function(site) {
+        var favicon = site.favicon || '/favicon.ico';
+        var desc = site.description ? site.description.replace(/"/g, '&quot;') : '暂无描述';
+        var tags = site.tags ? site.tags.map(function(t) {
+            return '<span class="tag-pill small">' + t + '</span>';
+        }).join('') : '';
+        var safeName = site.name.replace(/"/g, '&quot;');
+
+        html += '<div class="site-list-item" data-id="' + site.id + '">';
+        html += '  <div class="site-list-content">';
+        html += '    <div class="site-list-header">';
+        html += '      <img src="' + favicon + '" alt="" class="site-list-favicon" loading="lazy" onerror="this.style.display=\'none\'">';
+        html += '      <a href="' + site.url + '" target="_blank" rel="noopener" class="site-list-name" title="' + safeName + '">' + safeName + '</a>';
+        html += '      <span class="site-list-arrow">→</span>';
+        html += '    </div>';
+        html += '    <div class="site-list-desc">' + desc + '</div>';
+        html += '    <div class="site-list-meta">' + tags + '</div>';
+        html += '  </div>';
+        html += '</div>';
+    });
+    html += '</div>';
+
+    container.innerHTML = html;
+}
+
+
 /**
  * 渲染分类视图（SPA视图）
  */
@@ -843,6 +889,15 @@ function renderView(s) {
         }
 
         // 分类视图
+        // 视图模式：网格 / 列表
+        var view = s.currentView;
+        if (view === 'grid' || view === 'list') {
+            var sites = state.get('sites') || [];
+            var renderFn = view === 'grid' ? renderSitesGrid : renderSitesList;
+            renderFn(sites, 'main-content');
+            return;
+        }
+
         var activeCat = s.sidebar.activeCategoryId;
         var activeSub = s.sidebar.activeSubCategoryId;
         var activeLeaf = s.sidebar.activeLeafId;
@@ -857,4 +912,3 @@ function renderView(s) {
         // // console.log('[Render] renderView error:', e.message);
     }
 }
-

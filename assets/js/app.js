@@ -122,6 +122,39 @@ async function init() {
     // 状态订阅 - 驱动UI渲染
     state.subscribe(function(s) {
         try { renderer.renderSidebar(s); } catch(e) { console.error('[APP] Sidebar error:', e); }
+
+    // 视图切换按钮绑定（Phase 7）
+    var viewGridBtn = document.getElementById('view-grid');
+    var viewListBtn = document.getElementById('view-list');
+    if (viewGridBtn && viewListBtn) {
+        // 从 state 恢复激活状态
+        var currentView = state.get('currentView') || 'grid';
+        if (currentView === 'grid') {
+            viewGridBtn.classList.add('active');
+            viewGridBtn.setAttribute('aria-pressed', 'true');
+            viewListBtn.setAttribute('aria-pressed', 'false');
+        } else if (currentView === 'list') {
+            viewListBtn.classList.add('active');
+            viewListBtn.setAttribute('aria-pressed', 'true');
+            viewGridBtn.setAttribute('aria-pressed', 'false');
+        }
+
+        viewGridBtn.addEventListener('click', function() {
+            state.setView('grid');
+            viewGridBtn.classList.add('active');
+            viewListBtn.classList.remove('active');
+            viewGridBtn.setAttribute('aria-pressed', 'true');
+            viewListBtn.setAttribute('aria-pressed', 'false');
+        });
+        viewListBtn.addEventListener('click', function() {
+            state.setView('list');
+            viewListBtn.classList.add('active');
+            viewGridBtn.classList.remove('active');
+            viewListBtn.setAttribute('aria-pressed', 'true');
+            viewGridBtn.setAttribute('aria-pressed', 'false');
+        });
+    }
+
         try { renderer.renderView(s); } catch(e) { console.error('[APP] View error:', e); }
         syncStateToHash(s);
     });

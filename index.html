@@ -116,6 +116,14 @@ html, body {
                     </svg>
                 </button>
                 <h1 class="text-lg font-bold whitespace-nowrap">啃魂导航</h1>
+                <div class="hidden md:flex items-center gap-2" id="view-switcher" role="group" aria-label="视图切换">
+                    <button id="view-grid" class="view-btn active p-2 rounded-lg hover:bg-white/10 transition-colors" title="网格视图" aria-pressed="true" aria-label="网格视图">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </button>
+                    <button id="view-list" class="view-btn p-2 rounded-lg hover:bg-white/10 transition-colors" title="列表视图" aria-pressed="false" aria-label="列表视图">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
                 <div class="hidden md:inline-flex items-center">
                     <button id="favorite-toggle" class="favorite-btn" onclick="if(window.favoriteUI)window.favoriteUI.openModal()" title="查看收藏" aria-label="打开收藏面板">
                         ♡
