@@ -55,10 +55,6 @@ Tetris.prototype.init = function() {
     this._resetBoard();
     this._startGame();
     this._bindKeys();
-        // 移动端触控初始化
-        this.initTouch();
-        this.onSwipe = this._onSwipe.bind(this);
-        this.onTouchTap = this._onTouchTap.bind(this);
 };
 
 Tetris.prototype._resetBoard = function() {

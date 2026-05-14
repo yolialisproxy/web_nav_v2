@@ -192,6 +192,11 @@ GameEngine.prototype = {
         this.canvas.addEventListener('touchstart', this._onTouchStart.bind(this), { passive: false });
         this.canvas.addEventListener('touchmove',  this._onTouchMove.bind(this),  { passive: false });
         this.canvas.addEventListener('touchend',   this._onTouchEnd.bind(this),  { passive: false });
+
+        // 默认触摸回退：如果游戏未提供 onTouchTap，使用合成鼠标事件
+        if (!this.onTouchTap) {
+            this.onTouchTap = this._defaultOnTouchTap.bind(this);
+        }
     },
 
     _onTouchStart: function(e) {
@@ -231,5 +236,32 @@ GameEngine.prototype = {
         }
     },
 
+
+
+    // 默认触摸回调：合成鼠标事件供无自定义的游戏使用
+    _defaultOnTouchTap: function(x, y) {
+        var rect = this.canvas.getBoundingClientRect();
+        var clientX = rect.left + x;
+        var clientY = rect.top + y;
+        var self = this;
+        // 触发 mousedown
+        var down = new MouseEvent('mousedown', {
+            clientX: clientX, clientY: clientY,
+            bubbles: true, cancelable: true
+        });
+        self.canvas.dispatchEvent(down);
+        // 立即 mouseup
+        var up = new MouseEvent('mouseup', {
+            clientX: clientX, clientY: clientY,
+            bubbles: true, cancelable: true
+        });
+        self.canvas.dispatchEvent(up);
+        // 触发 click
+        var click = new MouseEvent('click', {
+            clientX: clientX, clientY: clientY,
+            bubbles: true, cancelable: true
+        });
+        self.canvas.dispatchEvent(click);
+    },
 
 };
