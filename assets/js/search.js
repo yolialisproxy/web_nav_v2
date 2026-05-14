@@ -151,7 +151,7 @@ class SearchEngine {
         });
 
         const elapsed = performance.now() - startTime;
-        // // console.log(`[SearchEngine] 索引构建完成: ${allSites.length}站点, 耗时 ${elapsed.toFixed(0)}ms`);
+        // // // // console.log(`[SearchEngine] 索引构建完成: ${allSites.length}站点, 耗时 ${elapsed.toFixed(0)}ms`);
     }
 
     _computeBaseScore(name, desc, url, tags) {
@@ -239,7 +239,7 @@ class SearchEngine {
         results.sort((a, b) => b._score - a._score);
 
         const elapsed = performance.now() - startTime;
-        // // console.log(`[SearchEngine] 搜索"${query}": ${results.length}结果, 耗时 ${elapsed.toFixed(1)}ms`);
+        // // // // console.log(`[SearchEngine] 搜索"${query}": ${results.length}结果, 耗时 ${elapsed.toFixed(1)}ms`);
 
         return results.slice(0, 50).map(({ _score, ...site }) => ({
             ...site,

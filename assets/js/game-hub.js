@@ -1,5 +1,5 @@
 /**
- * GameHub - 游戏大厅管理与路由
+ * GameHub - 游戏大厅管理与路由（已完整：9游戏）
  */
 var GameHub = {
     games: {
@@ -9,7 +9,9 @@ var GameHub = {
         chess:     { name: '♟️ 象棋',      icon: '♟️', desc: '中国象棋在线对战AI',   cat: 'strategy', constructor: null },
         mahjong:   { name: '🀄 麻将',      icon: '🀄', desc: '四川麻将简约版',       cat: 'classic', constructor: null },
         wuxia:     { name: '⚔️ 武侠世界',   icon: '⚔️', desc: '武侠剧情杀怪升级',     cat: 'rpg', constructor: null },
-        dating:    { name: '💕 恋爱大富翁', icon: '💕', desc: '恋爱养成+大富翁',     cat: 'rpg', constructor: null }
+        dating:    { name: '💕 恋爱大富翁', icon: '💕', desc: '恋爱养成+大富翁',     cat: 'rpg', constructor: null },
+        game2048:  { name: '🔢 2048',       icon: '🔢', desc: '数字滑动合体挑战',     cat: 'puzzle', constructor: null },
+        gomoku:    { name: '⚫ 五子棋',     icon: '⚫', desc: '15路棋盘双人对弈',     cat: 'strategy', constructor: null }
     },
     currentGame: null,
     currentEngine: null,
@@ -26,7 +28,7 @@ var GameHub = {
             if (e.target === overlay) GameHub.closeHub();
         });
 
-        // 分类按钮
+        // 分类按钮（all, classic, strategy, rpg, puzzle 等）
         document.querySelectorAll('.game-cat-btn').forEach(function(btn) {
             btn.addEventListener('click', function() {
                 document.querySelectorAll('.game-cat-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -50,15 +52,19 @@ var GameHub = {
         var self = this;
         Object.keys(this.games).forEach(function(key) {
             var game = self.games[key];
+            if (game.hidden) return; // 支持隐藏标记
             if (category !== 'all' && game.cat !== category) return;
             var card = document.createElement('div');
             card.className = 'game-card';
             var saveData = GameUtils.load('gn_save_' + key);
             if (saveData) card.classList.add('has-save');
+
+            // 新游戏标签
+            var badge = saveData ? '<span class="game-card-badge">💾 继续</span>' : '';
+
             card.innerHTML = '<span class="game-card-icon">' + game.icon + '</span>' +
                 '<div class="game-card-name">' + game.name + '</div>' +
-                '<div class="game-card-desc">' + game.desc + '</div>' +
-                (saveData ? '<span class="game-card-badge">💾 继续</span>' : '');
+                '<div class="game-card-desc">' + game.desc + '</div>' + badge;
             card.addEventListener('click', function() { self.startGame(key); });
             grid.appendChild(card);
         });
@@ -84,17 +90,23 @@ var GameHub = {
         this.closeHub();
         this.currentGame = gameKey;
 
-        // 动态加载游戏模块
+        // 动态加载游戏模块映射（9个游戏）
         var gameMap = {
-            solitaire: 'Solitaire', tetris: 'Tetris', go: 'GoGame',
-            chess: 'ChessGame', mahjong: 'MahjongGame', wuxia: 'WuxiaGame', dating: 'DatingGame'
+            solitaire: 'Solitaire',
+            tetris:    'Tetris',
+            go:        'GoGame',
+            chess:     'ChessGame',
+            mahjong:   'MahjongGame',
+            wuxia:     'WuxiaGame',
+            dating:    'DatingGame',
+            game2048:  'Game2048',
+            gomoku:    'Gomoku'
         };
         var ctorName = gameMap[gameKey];
         var ctor = window[ctorName];
 
         if (!ctor) {
             GameHub.showToast('游戏模块 "' + gameKey + '" 尚未加载完成，请稍后再试');
-            // 如果尚未定义，创建占位
             document.getElementById('game-play-title').textContent = this.games[gameKey].name;
             document.getElementById('game-play-area').innerHTML =
                 '<div style="text-align:center;padding:60px;color:var(--color-text-dim)">' +
@@ -107,7 +119,6 @@ var GameHub = {
 
         this.currentEngine = new ctor();
 
-        // 绑定全局事件
         this.currentEngine.onGameOver = function(score, elapsed) {
             GameHub.showToast('🎮 游戏结束！得分: ' + score + ' | 用时: ' + GameUtils.formatTime(elapsed));
         };
@@ -118,14 +129,13 @@ var GameHub = {
         document.getElementById('game-play-score').textContent = 'Score: ' + this.currentEngine.score;
         playOverlay.classList.add('active');
 
-        // 初始化并启动
         this.currentEngine.init();
     },
 
     closeGame: function() {
         if (this.currentEngine) {
             if (this.currentEngine.save) this.currentEngine.save();
-            this.currentEngine.destroy();
+            if (this.currentEngine.destroy) this.currentEngine.destroy();
             this.currentEngine = null;
         }
         this.currentGame = null;
@@ -137,7 +147,6 @@ var GameHub = {
         if (t && typeof toast === 'function') {
             toast(msg, duration || 3000);
         } else {
-            // fallback
             var el = document.createElement('div');
             el.style.cssText = 'position:fixed;bottom:30px;left:50%;transform:translateX(-50%);' +
                 'background:var(--color-bg-alt, #1a1a2e);color:var(--color-text,#e2e8f0);' +
@@ -150,7 +159,6 @@ var GameHub = {
         }
     },
 
-    // 工具方法暴露给全局
     formatTime: GameUtils ? GameUtils.formatTime : function(ms) {
         var s = Math.floor(ms / 1000), m = Math.floor(s / 60);
         s = s % 60;
@@ -158,7 +166,6 @@ var GameHub = {
     }
 };
 
-// 初始化
 document.addEventListener('DOMContentLoaded', function() {
     GameHub.init();
 });

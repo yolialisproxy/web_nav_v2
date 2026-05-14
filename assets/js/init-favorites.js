@@ -5,49 +5,49 @@
 
 (function() {
     'use strict';
-    
+
     function initFavoriteFeature() {
-        // // console.log('[FavoriteFeature] Initializing...');
-        
+        // // // // console.log('[FavoriteFeature] Initializing...');
+
         // 检查核心组件
         if (!window.favoriteManager) {
             console.error('[FavoriteFeature] ERROR: favoriteManager not found!');
             return;
         }
-        
+
         if (!window.favoriteUI) {
-            // // console.log('[FavoriteFeature] Creating default UI...');
-            
+            // // // // console.log('[FavoriteFeature] Creating default UI...');
+
             // 创建基础UI
             window.favoriteUI = {
                 modal: document.getElementById('favorite-modal'),
                 favoriteList: document.getElementById('favorite-list'),
-                
+
                 open: function() {
                     if (this.modal) {
                         this.modal.style.display = 'flex';
                         this.render();
                     }
                 },
-                
+
                 close: function() {
                     if (this.modal) {
                         this.modal.style.display = 'none';
                     }
                 },
-                
+
                 render: function() {
                     if (!this.favoriteList) return;
-                    
+
                     var favorites = window.favoriteManager.getAll();
                     var countEl = document.getElementById('favorite-count');
                     var emptyEl = document.getElementById('favorite-empty');
                     var clearBtn = document.getElementById('clear-favorites');
-                    
+
                     if (countEl) {
                         countEl.textContent = 'Total: ' + favorites.length + ' items';
                     }
-                    
+
                     if (favorites.length === 0) {
                         if (this.favoriteList) this.favoriteList.style.display = 'none';
                         if (emptyEl) emptyEl.style.display = 'block';
@@ -72,7 +72,7 @@
                         if (clearBtn) clearBtn.style.display = 'block';
                     }
                 },
-                
+
                 clear: function() {
                     if (confirm('Clear all favorites?')) {
                         window.favoriteManager.clear();
@@ -80,7 +80,7 @@
                         updateFavoriteButtons();
                     }
                 },
-                
+
                 exportData: function() {
                     try {
                         var data = JSON.stringify({
@@ -89,7 +89,7 @@
                             count: window.favoriteManager.getCount(),
                             favorites: window.favoriteManager.getAll()
                         }, null, 2);
-                        
+
                         var blob = new Blob([data], {type: 'application/json'});
                         var url = URL.createObjectURL(blob);
                         var a = document.createElement('a');
@@ -101,11 +101,11 @@
                         console.error('Export failed:', e);
                     }
                 },
-                
+
                 updateCount: function() {
                     var count = window.favoriteManager.getCount();
                     var badge = document.getElementById('favorite-badge');
-                    
+
                     if (count === 0) {
                         if (badge) badge.style.display = 'none';
                     } else {
@@ -124,7 +124,7 @@
                         }
                     }
                 },
-                
+
                 toggle: function(element, name, url, description, category) {
                     if (window.favoriteManager.isFavorite(name)) {
                         window.favoriteManager.remove(name);
@@ -148,7 +148,7 @@
                 }
             };
         }
-        
+
         // 全局函数
         window.toggleFavorite = function(element, name, url, description, category) {
             if (window.favoriteUI && window.favoriteManager) {
@@ -156,7 +156,7 @@
                 updateFavoriteButtons();
             }
         };
-        
+
         window.updateFavoriteButtons = function() {
             document.querySelectorAll('.favorite-btn').forEach(function(btn) {
                 var container = btn.closest('.site-card-container, .site-card');
@@ -168,10 +168,10 @@
                 }
             });
         };
-        
+
         // 启动
         window.favoriteUI.updateCount();
-        
+
         // 其他页面的按钮初始化
         setTimeout(function() {
             document.querySelectorAll('.site-card a[href*="site-detail"]').forEach(function(link) {
@@ -181,11 +181,11 @@
                 });
             });
         }, 500);
-        
-        // // console.log('[FavoriteFeature] Initialized successfully!');
-        // // console.log('[FavoriteFeature] Current count:', window.favoriteManager.getCount());
+
+        // // // // console.log('[FavoriteFeature] Initialized successfully!');
+        // // // // console.log('[FavoriteFeature] Current count:', window.favoriteManager.getCount());
     }
-    
+
     // 延迟初始化确保DOM准备就绪
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initFavoriteFeature);

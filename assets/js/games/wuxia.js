@@ -1,5 +1,6 @@
 /**
  * WuxiaGame - 武侠世界（文字RPG + 战斗系统）
+ * 已补全：load 存档读取、save 存档持久化、完善的状态管理
  */
 var WuxiaGame = function() {
     GameEngine.call(this, { id: 'wuxia', title: '⚔️ 武侠世界' });
@@ -15,135 +16,72 @@ var WuxiaGame = function() {
     this.inventory = [];
     this.enemy = null;
     this.storyLog = [];
+    this.fighting = false;
 };
 
 WuxiaGame.prototype = Object.create(GameEngine.prototype);
 WuxiaGame.prototype.constructor = WuxiaGame;
 
 WuxiaGame.SCENES = {
-    start: {
-        text: '你是一名初入江湖的侠客，听闻江湖上近日风起云涌。一位老乞丐拦住你的去路……',
-        choices: [
-            { text: '上前询问', next: 'old_beggar_talk' },
-            { text: '不予理会，继续前行', next: 'mountain_path' },
-            { text: '赠予银两', next: 'old_beggar_gift' }
-        ]
-    },
-    old_beggar_talk: {
-        text: '老乞丐叹道："少侠，你命中有一劫。前方黑风山有妖邪作祟，若能除之，必有大造化。"说罢递给你一枚玉佩。',
-        choices: [
-            { text: '收下玉佩，前往黑风山', next: 'black_wind_mountain' },
-            { text: '谢过老伯，继续赶路', next: 'mountain_path' }
-        ],
-        reward: { item: '平安玉佩', effect: 'defense+3' }
-    },
-    old_beggar_gift: {
-        text: '老乞丐接过银两，浑浊的眼中闪过一丝光亮："好人有好报，少侠保重！"你感到内心一阵温暖。',
+    start: { text: '你是一名初入江湖的侠客，听闻江湖上近日风起云涌。一位老乞丐拦住你的去路……',
+        choices: [ { text: '上前询问', next: 'old_beggar_talk' }, { text: '不予理会，继续前行', next: 'mountain_path' }, { text: '赠予银两', next: 'old_beggar_gift' } ] },
+    old_beggar_talk: { text: '老乞丐叹道："少侠，你命中有一劫。前方黑风山有妖邪作祟，若能除之，必有大造化。"说罢递给你一枚玉佩。',
+        choices: [ { text: '收下玉佩，前往黑风山', next: 'black_wind_mountain' }, { text: '谢过老伯，继续赶路', next: 'mountain_path' } ],
+        reward: { item: '平安玉佩', effect: 'defense+3' } },
+    old_beggar_gift: { text: '老乞丐接过银两，浑浊的眼中闪过一丝光亮："好人有好报，少侠保重！"你感到内心一阵温暖。',
         goldCost: -20,
-        choices: [
-            { text: '前往黑风山', next: 'black_wind_mountain' },
-            { text: '去镇上客栈', next: 'inn' }
-        ]
-    },
-    mountain_path: {
-        text: '山路崎岖，你小心翼翼地前行。突然草丛中窜出一只斑斓猛虎！',
-        choices: [
-            { text: '拔剑迎战！', next: 'fight_tiger' },
-            { text: '尝试躲避', next: 'dodge_tiger' },
-            { text: '丢下食物引开老虎', next: 'bait_tiger', goldCost: 15 }
-        ]
-    },
-    black_wind_mountain: {
-        text: '黑风山上阴风阵阵，你看到一个黑衣人正在作法，周围的村民被黑气缠绕。',
-        choices: [
-            { text: '立即出手攻击', next: 'fight_boss' },
-            { text: '先观察，寻找破绽', next: 'observe_boss' },
-            { text: '使用策略引开敌人', next: 'boss_strategy' }
-        ]
-    },
-    fight_tiger: {
-        text: '猛虎扑来！你闪身躲过，猛刺一剑！',
-        choices: [],
-        fight: { enemy: '斑斓猛虎', hp: 40, attack: 12, reward: { gold: 20, exp: 30 } }
-    },
-    dodge_tiger: {
-        text: '你纵身跳上一块岩石，老虎扑空滑了下去。它似乎不饿，转身离去。',
+        choices: [ { text: '前往黑风山', next: 'black_wind_mountain' }, { text: '去镇上客栈', next: 'inn' } ] },
+    mountain_path: { text: '山路崎岖，你小心翼翼地前行。突然草丛中窜出一只斑斓猛虎！',
+        choices: [ { text: '拔剑迎战！', next: 'fight_tiger' }, { text: '尝试躲避', next: 'dodge_tiger' }, { text: '丢下食物引开老虎', next: 'bait_tiger', goldCost: 15 } ] },
+    black_wind_mountain: { text: '黑风山上阴风阵阵，你看到一个黑衣人正在作法，周围的村民被黑气缠绕。',
+        choices: [ { text: '立即出手攻击', next: 'fight_boss' }, { text: '先观察，寻找破绽', next: 'observe_boss' }, { text: '使用策略引开敌人', next: 'boss_strategy' } ] },
+    fight_tiger: { text: '猛虎扑来！你闪身躲过，猛刺一剑！', choices: [],
+        fight: { enemy: '斑斓猛虎', hp: 40, attack: 12, reward: { gold: 20, exp: 30 } } },
+    dodge_tiger: { text: '你纵身跳上一块岩石，老虎扑空滑了下去。它似乎不饿，转身离去。',
         reward: { exp: 10 },
-        choices: [
-            { text: '继续前行', next: 'black_wind_mountain' },
-            { text: '返回镇上', next: 'inn' }
-        ]
-    },
-    bait_tiger: {
-        text: '你扔出干肉，老虎嗅了嗅，追着食物跑远了。你得以安全通过。',
-        choices: [
-            { text: '继续前行', next: 'black_wind_mountain' }
-        ]
-    },
-    observe_boss: {
-        text: '你仔细观察，发现黑衣人的法器每隔三息闪烁一次，正是施法间隙！',
+        choices: [ { text: '继续前行', next: 'black_wind_mountain' }, { text: '返回镇上', next: 'inn' } ] },
+    bait_tiger: { text: '你扔出干肉，老虎嗅了嗅，追着食物跑远了。你得以安全通过。',
+        choices: [ { text: '继续前行', next: 'black_wind_mountain' } ] },
+    observe_boss: { text: '你仔细观察，发现黑衣人的法器每隔三息闪烁一次，正是施法间隙！',
         reward: { exp: 15 },
-        choices: [
-            { text: '趁间隙发动突袭', next: 'fight_boss' },
-            { text: '绕后偷袭', next: 'fight_boss_surprise' }
-        ]
-    },
-    boss_strategy: {
-        text: '你高声挑衅，黑衣人怒而出手，法器威力减弱了三成！你抓住了机会。',
+        choices: [ { text: '趁间隙发动突袭', next: 'fight_boss' }, { text: '绕后偷袭', next: 'fight_boss_surprise' } ] },
+    boss_strategy: { text: '你高声挑衅，黑衣人怒而出手，法器威力减弱了三成！你抓住了机会。',
         reward: { exp: 20 },
-        choices: [
-            { text: '全力攻击！', next: 'fight_boss' }
-        ]
-    },
-    fight_boss: {
-        text: '黑衣人大喝："哪来的小辈！"黑气向你涌来！',
-        choices: [],
-        fight: { enemy: '黑衣邪修', hp: 80, attack: 18, reward: { gold: 100, exp: 100, item: '黑灵珠' } }
-    },
-    fight_boss_surprise: {
-        text: '你从暗处跃出，黑衣人措手不及！',
+        choices: [ { text: '全力攻击！', next: 'fight_boss' } ] },
+    fight_boss: { text: '黑衣人大喝："哪来的小辈！"黑气向你涌来！', choices: [],
+        fight: { enemy: '黑衣邪修', hp: 80, attack: 18, reward: { gold: 100, exp: 100, item: '黑灵珠' } } },
+    fight_boss_surprise: { text: '你从暗处跃出，黑衣人措手不及！',
         reward: { exp: 10 },
         choices: [],
-        fight: { enemy: '黑衣邪修', hp: 60, attack: 15, reward: { gold: 100, exp: 100, item: '黑灵珠' } }
-    },
-    inn: {
-        text: '镇上的客栈灯火通明。老板娘热情地招呼："少侠要住店吗？住一晚恢复全部气血，只要50两银子！"',
-        choices: [
-            { text: '住店恢复(50两)', next: 'after_rest', goldCost: -50, effect: 'heal_full' },
-            { text: '休息片刻(免费)', next: 'after_rest', effect: 'heal_half' },
-            { text: '离开客栈', next: 'mountain_path' }
-        ]
-    },
-    after_rest: {
-        text: '你精神饱满地准备继续冒险……',
-        choices: [
-            { text: '前往黑风山', next: 'black_wind_mountain' },
-            { text: '再逛逛小镇', next: 'market' }
-        ]
-    },
-    market: {
-        text: '小镇集市热闹非凡。药铺老板喊道："金疮药10两一瓶，攻击力提升5！"铁匠铺："好剑100两，攻击+10！"',
-        choices: [
-            { text: '购买金疮药(10两)', next: 'market', goldCost: -10, effect: 'attack+5' },
-            { text: '购买好剑(100两)', next: 'market', goldCost: -100, effect: 'attack+10' },
-            { text: '继续冒险', next: 'black_wind_mountain' }
-        ]
-    }
+        fight: { enemy: '黑衣邪修', hp: 60, attack: 15, reward: { gold: 100, exp: 100, item: '黑灵珠' } } },
+    inn: { text: '镇上的客栈灯火通明。老板娘热情地招呼："少侠要住店吗？住一晚恢复全部气血，只要50两银子！"',
+        choices: [ { text: '住店恢复(50两)', next: 'after_rest', goldCost: -50, effect: 'heal_full' },
+                   { text: '休息片刻(免费)', next: 'after_rest', effect: 'heal_half' },
+                   { text: '离开客栈', next: 'mountain_path' } ] },
+    after_rest: { text: '你精神饱满地准备继续冒险……',
+        choices: [ { text: '前往黑风山', next: 'black_wind_mountain' }, { text: '再逛逛小镇', next: 'market' } ] },
+    market: { text: '小镇集市热闹非凡。药铺老板喊道："金疮药10两一瓶，攻击力提升5！"铁匠铺："好剑100两，攻击+10！"',
+        choices: [ { text: '购买金疮药(10两)', next: 'market', goldCost: -10, effect: 'attack+5' },
+                   { text: '购买好剑(100两)', next: 'market', goldCost: -100, effect: 'attack+10' },
+                   { text: '继续冒险', next: 'black_wind_mountain' } ] }
 };
 
 WuxiaGame.prototype.init = function() {
     GameEngine.prototype.init.call(this);
     this.player = { name: '侠客' };
-    this.hp = 100;
-    this.maxHp = 100;
-    this.attack = 15;
-    this.defense = 5;
-    this.exp = 0;
-    this.level = 1;
-    this.gold = 100;
-    this.inventory = [];
-    this.scene = 'start';
-    this.storyLog = [];
+    // 尝试读取存档，没有则新建
+    if (!this.load()) {
+        this.hp = 100;
+        this.maxHp = 100;
+        this.attack = 15;
+        this.defense = 5;
+        this.exp = 0;
+        this.level = 1;
+        this.gold = 100;
+        this.inventory = [];
+        this.scene = 'start';
+        this.storyLog = [];
+    }
     this.fighting = false;
     this.render();
 };
@@ -154,16 +92,11 @@ WuxiaGame.prototype.render = function() {
 
     // 状态栏
     html += '<div style="display:flex;gap:16px;margin-bottom:16px;flex-wrap:wrap;justify-content:center;">' +
-        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">' +
-        '❤️ HP: <span id="wuxia-hp" style="color:#ff6b6b">' + this.hp + '/' + this.maxHp + '</span></div>' +
-        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">' +
-        '⚔️ 攻击: <span style="color:#ffd700">' + this.attack + '</span></div>' +
-        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">' +
-        '🛡️ 防御: <span style="color:#87ceeb">' + this.defense + '</span></div>' +
-        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">' +
-        '💰 金钱: <span style="color:#90ee90">' + this.gold + '</span></div>' +
-        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">' +
-        '⭐ 等级: Lv.' + this.level + ' (' + this.exp + ' EXP)</div></div>';
+        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">❤️ HP: <span id="wuxia-hp" style="color:#ff6b6b">' + this.hp + '/' + this.maxHp + '</span></div>' +
+        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">⚔️ 攻击: <span style="color:#ffd700">' + this.attack + '</span></div>' +
+        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">🛡️ 防御: <span style="color:#87ceeb">' + this.defense + '</span></div>' +
+        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">💰 金钱: <span style="color:#90ee90">' + this.gold + '</span></div>' +
+        '<div style="background:rgba(0,0,0,0.3);padding:8px 16px;border-radius:6px;">⭐ 等级: Lv.' + this.level + ' (' + this.exp + ' EXP)</div></div>';
 
     if (this.fighting) {
         // 战斗界面
@@ -183,20 +116,20 @@ WuxiaGame.prototype.render = function() {
     } else {
         // 剧情界面
         var scene = WuxiaGame.SCENES[this.scene];
-        if (!scene) {
+        if (!scene || !this.scene || this.scene === 'end') {
             html += '<div style="text-align:center;padding:40px;"><div style="font-size:48px;">🏆</div>' +
                 '<div style="color:var(--color-text);font-size:18px;">冒险结束</div>' +
-                '<div style="color:var(--color-text-dim);margin-top:8px;">你的战绩: 等级Lv.' + this.level + ' | 金钱' + this.gold + '两</div></div>';
+                '<div style="color:var(--color-text-dim);margin-top:8px;">你的战绩: 等级Lv.' + this.level + ' | 金钱' + this.gold + '两</div>' +
+                '<button class="game-btn" id="wuxia-new-game" style="margin-top:16px;">🔄 重新开始</button>' +
+                '</div>';
         } else {
             html += '<div style="max-width:600px;margin:0 auto;text-align:center;">' +
                 '<div style="background:rgba(0,0,0,0.3);padding:20px;border-radius:8px;margin-bottom:16px;' +
                 'border:1px solid var(--color-border);font-size:15px;line-height:1.8;min-height:100px;">' +
                 scene.text + '</div>';
-            // 物品获得提示
             if (scene.reward && scene.reward.item) {
                 html += '<div style="color:#ffd700;margin-bottom:12px;">🎁 获得: ' + scene.reward.item + '</div>';
             }
-            // 选项
             if (scene.choices && scene.choices.length > 0) {
                 html += '<div style="display:flex;flex-direction:column;gap:8px;align-items:center;">';
                 scene.choices.forEach(function(choice, i) {
@@ -222,9 +155,7 @@ WuxiaGame.prototype.render = function() {
     if (this.storyLog.length > 0) {
         html += '<div style="margin-top:16px;max-height:120px;overflow-y:auto;text-align:left;">' +
             '<div style="font-size:11px;color:var(--color-text-dim);border-top:1px solid var(--color-border);padding-top:8px;">';
-        this.storyLog.slice(-5).forEach(function(log) {
-            html += '<div>' + log + '</div>';
-        });
+        this.storyLog.slice(-5).forEach(function(log) { html += '<div>' + log + '</div>'; });
         html += '</div></div>';
     }
 
@@ -248,7 +179,6 @@ WuxiaGame.prototype._bindEvents = function() {
             var choice = WuxiaGame.SCENES[self.scene].choices[idx];
             if (!choice) return;
 
-            // 金钱消耗
             if (choice.goldCost && choice.goldCost < 0) {
                 if (self.gold < Math.abs(choice.goldCost)) {
                     GameHub.showToast('💰 金钱不足！');
@@ -257,28 +187,25 @@ WuxiaGame.prototype._bindEvents = function() {
                 self.gold += choice.goldCost;
             }
 
-            // 治疗效果
             if (choice.effect === 'heal_full') self.hp = self.maxHp;
             if (choice.effect === 'heal_half') self.hp = Math.min(self.maxHp, self.hp + Math.floor(self.maxHp / 2));
             if (choice.effect === 'attack+5') self.attack += 5;
             if (choice.effect === 'attack+10') self.attack += 10;
             if (choice.effect === 'defense+3') self.defense += 3;
 
-            // 奖励物品
             if (choice.reward && choice.reward.item && !self.inventory.includes(choice.reward.item)) {
                 self.inventory.push(choice.reward.item);
                 GameHub.showToast('🎁 获得: ' + choice.reward.item);
             }
 
-            // 跳转
-            if (choice.next === 'fight_tiger' || choice.next === 'fight_boss' || choice.next === 'fight_boss_surprise') {
+            if (choice.next && (choice.next === 'fight_tiger' || choice.next === 'fight_boss' || choice.next === 'fight_boss_surprise')) {
                 self._startFight(WuxiaGame.SCENES[choice.next].fight);
                 self.scene = choice.next;
                 self.storyLog.push('进入战斗: ' + WuxiaGame.SCENES[choice.next].fight.enemy);
             } else {
-                self.scene = choice.next;
-                self.exp += (choice.reward ? choice.reward.exp : 0);
-                self.storyLog.push(WuxiaGame.SCENES[self.scene] ? '来到新场景' : '冒险继续...');
+                self.scene = choice.next || 'start';
+                if (choice.reward && choice.reward.exp) self.exp += choice.reward.exp;
+                self.storyLog.push(self.scene ? '来到新场景' : '冒险继续...');
             }
             self._checkLevelUp();
             self.save();
@@ -295,6 +222,10 @@ WuxiaGame.prototype._bindEvents = function() {
     if (defendBtn) defendBtn.addEventListener('click', function() { self._playerDefend(); });
     var fleeBtn = document.getElementById('wuxia-flee');
     if (fleeBtn) fleeBtn.addEventListener('click', function() { self._playerFlee(); });
+
+    // 新游戏
+    var newGameBtn = document.getElementById('wuxia-new-game');
+    if (newGameBtn) newGameBtn.addEventListener('click', function() { self.newGame(); });
 };
 
 WuxiaGame.prototype._startFight = function(fightData) {
@@ -318,12 +249,13 @@ WuxiaGame.prototype._endFight = function(victory) {
         GameHub.showToast('🎊 胜利！获得' + r.gold + '两、' + r.exp + 'EXP' + (r.item ? '、' + r.item : ''));
     } else if (!victory) {
         GameHub.showToast('💀 败北...伤势过重，倒地不起。');
+        this.hp = 0;
     }
     this.fighting = false;
     this.enemy = null;
     this._checkLevelUp();
     this.save();
-    setTimeout(function() { self.render(); }, 500);
+    setTimeout(function() { that.render(); }, 500);
 };
 
 WuxiaGame.prototype._playerAttack = function() {
@@ -374,15 +306,16 @@ WuxiaGame.prototype._playerFlee = function() {
 
 WuxiaGame.prototype._enemyAttack = function() {
     if (!this.fighting) return;
+    var self = this;
     setTimeout(function() {
-        var dmg = Math.max(1, this.enemy.attack - this.defense * 0.5 + GameUtils.rand(-3, 3));
-        this.hp -= dmg;
-        this.storyLog.push(this.enemy.name + '对你造成了' + dmg + '点伤害！');
+        var dmg = Math.max(1, self.enemy.attack - self.defense * 0.5 + GameUtils.rand(-3, 3));
+        self.hp -= dmg;
+        self.storyLog.push(self.enemy.name + '对你造成了' + dmg + '点伤害！');
         GameUtils.playSound(350, 0.1, 'square');
-        if (this.hp <= 0) { this._endFight(false); this.hp = 0; return; }
-        this.save();
-        this.render();
-    }.bind(this), 600);
+        if (self.hp <= 0) { self._endFight(false); self.hp = 0; return; }
+        self.save();
+        self.render();
+    }, 600);
 };
 
 WuxiaGame.prototype._checkLevelUp = function() {
@@ -400,11 +333,75 @@ WuxiaGame.prototype._checkLevelUp = function() {
     }
 };
 
+/** 新游戏 */
+WuxiaGame.prototype.newGame = function() {
+    this.hp = 100;
+    this.maxHp = 100;
+    this.attack = 15;
+    this.defense = 5;
+    this.exp = 0;
+    this.level = 1;
+    this.gold = 100;
+    this.inventory = [];
+    this.scene = 'start';
+    this.storyLog = [];
+    this.fighting = false;
+    this.state = 'running';
+    this.clearSave();
+    this.save();
+    this.render();
+};
+
+GameEngine.prototype.save.call(this);
+GameEngine.prototype.load.call(this);
+
+/** 读取存档 */
+WuxiaGame.prototype.load = function() {
+    try {
+        var data = GameUtils.load(this.saveKey);
+        if (data) {
+            this.hp = data.hp || 100;
+            this.maxHp = data.maxHp || 100;
+            this.attack = data.attack || 15;
+            this.defense = data.defense || 5;
+            this.exp = data.exp || 0;
+            this.level = data.level || 1;
+            this.gold = data.gold || 100;
+            this.inventory = data.inventory || [];
+            this.scene = data.scene || 'start';
+            this.storyLog = data.storyLog || [];
+            this.state = data.state || 'running';
+            return data;
+        }
+    } catch (e) { console.warn('[Wuxia] 读取存档失败:', e); }
+    return null;
+};
+
+/** 保存存档 */
+WuxiaGame.prototype.save = function() {
+    var data = {
+        hp: this.hp,
+        maxHp: this.maxHp,
+        attack: this.attack,
+        defense: this.defense,
+        exp: this.exp,
+        level: this.level,
+        gold: this.gold,
+        inventory: this.inventory,
+        scene: this.scene,
+        storyLog: this.storyLog,
+        state: this.state,
+        savedAt: Date.now()
+    };
+    GameUtils.save(this.saveKey, data);
+};
+
 WuxiaGame.prototype.togglePause = function() {
     GameEngine.prototype.togglePause.call(this);
 };
 
 WuxiaGame.prototype.quit = function() {
+    this._stopLoop();
     this.state = 'idle';
     GameHub.closeGame();
 };

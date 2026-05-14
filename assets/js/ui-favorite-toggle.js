@@ -9,15 +9,15 @@ class FavoriteUI {
         this.favoriteList = null;
         this.init();
     }
-    
+
     init() {
         this.createModal();
         this.bindGlobalEvents();
         this.updateFavoriteCount();
-        
-        // // console.log('[FavoriteUI] UI控制初始化完成');
+
+        // // // // console.log('[FavoriteUI] UI控制初始化完成');
     }
-    
+
     createModal() {
         const modalHTML = `
             <div id="favorite-modal" class="modal-overlay" style="display: none;">
@@ -45,23 +45,23 @@ class FavoriteUI {
                 </div>
             </div>
         `;
-        
+
         document.body.insertAdjacentHTML('beforeend', modalHTML);
-        
+
         this.modal = document.getElementById('favorite-modal');
         this.favoriteList = document.getElementById('favorite-list');
-        
+
         // 绑定全局函数
         window.favoriteUI = this;
     }
-    
+
     bindGlobalEvents() {
         // 监听收藏变化
         favoriteManager.on('favoriteAdded', () => this.updateFavoriteCount());
         favoriteManager.on('favoriteRemoved', () => this.updateFavoriteCount());
         favoriteManager.on('favoriteCleared', () => this.updateFavoriteCount());
     }
-    
+
     // 创建收藏按钮
     createFavoriteButton(site) {
         const isFav = favoriteManager.isFavorite(site.name);
@@ -75,7 +75,7 @@ class FavoriteUI {
         };
         return button;
     }
-    
+
     // 切换收藏状态
     toggleFavorite(site, button) {
         if (favoriteManager.isFavorite(site.name)) {
@@ -95,11 +95,11 @@ class FavoriteUI {
             }
             this.showToast('收藏成功！');
         }
-        
+
         // 在站点详情页更新按钮
         this.updateDetailPageButton(site.name, favoriteManager.isFavorite(site.name));
     }
-    
+
     // 更新详情页按钮
     updateDetailPageButton(siteName, isFav) {
         const detailBtn = document.getElementById('favorite-detail-btn');
@@ -111,27 +111,27 @@ class FavoriteUI {
             }
         }
     }
-    
+
     // 打开收藏弹窗
     openModal() {
         this.renderList();
         this.modal.style.display = 'block';
         document.body.style.overflow = 'hidden';
     }
-    
+
     // 关闭弹窗
     closeModal() {
         this.modal.style.display = 'none';
         document.body.style.overflow = '';
     }
-    
+
     // 渲染收藏列表
     renderList() {
         const favorites = favoriteManager.getAll();
         const count = favoriteManager.getCount();
-        
+
         document.getElementById('favorite-count').textContent = `总计 ${count} 个`;
-        
+
         if (count === 0) {
             this.favoriteList.style.display = 'none';
             document.getElementById('favorite-empty').style.display = 'block';
@@ -140,7 +140,7 @@ class FavoriteUI {
             this.favoriteList.style.display = 'block';
             document.getElementById('favorite-empty').style.display = 'none';
             document.getElementById('clear-favorites').style.display = 'block';
-            
+
             this.favoriteList.innerHTML = favorites.map(site => `
                 <div class="favorite-item">
                     <a href="javascript:void(0)" onclick="window.location.href='pages/site-detail.html?name=${encodeURIComponent(site.name)}'">
@@ -155,14 +155,14 @@ class FavoriteUI {
             `).join('');
         }
     }
-    
+
     // 移除单个收藏
     removeFavorite(siteName) {
         favoriteManager.remove(siteName);
         this.renderList();
         this.showToast('已移除收藏');
     }
-    
+
     // 清空收藏
     clearAll() {
         if (confirm('确定要清空所有收藏吗？')) {
@@ -171,7 +171,7 @@ class FavoriteUI {
             this.showToast('已清空收藏');
         }
     }
-    
+
     // 导出收藏
     exportFavorites() {
         const data = favoriteManager.export();
@@ -184,35 +184,35 @@ class FavoriteUI {
         URL.revokeObjectURL(url);
         this.showToast('导出成功！');
     }
-    
+
     // 显示提示
     showToast(message) {
         // 移除已有的toast
         const existing = document.querySelector('.toast-notification');
         if (existing) existing.remove();
-        
+
         const toast = document.createElement('div');
         toast.className = 'toast-notification';
         toast.textContent = message;
         document.body.appendChild(toast);
-        
+
         setTimeout(() => {
             toast.style.opacity = '1';
             toast.style.transform = 'translate(-50%, 0)';
         }, 10);
-        
+
         setTimeout(() => {
             toast.style.opacity = '0';
             toast.style.transform = 'translate(-50%, -20px)';
             setTimeout(() => toast.remove(), 300);
         }, 2000);
     }
-    
+
     // 更新收藏计数
     updateFavoriteCount() {
         const count = favoriteManager.getCount();
         let badge = document.getElementById('favorite-badge');
-        
+
         if (count === 0) {
             if (badge) badge.remove();
         } else {
@@ -506,4 +506,4 @@ const style = document.createElement('style');
 style.textContent = favoriteCSS;
 document.head.appendChild(style);
 
-// // console.log('[FavoriteUI] CSS注册完成');
+// // // // console.log('[FavoriteUI] CSS注册完成');

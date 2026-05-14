@@ -216,7 +216,7 @@
                     var entry = list.getEntries()[0];
                     if (entry) {
                         metrics.fcp = Math.round(entry.startTime);
-                        console.log('[Vitals] FCP:', metrics.fcp, 'ms');
+                        // // console.log('[Vitals] FCP:', metrics.fcp, 'ms');
                     }
                 }).observe({ type: 'first-contentful-paint', buffered: true });
             } catch (e) {}
@@ -228,7 +228,7 @@
                     var last = entries[entries.length - 1];
                     if (last) {
                         metrics.lcp = Math.round(last.startTime + last.duration);
-                        console.log('[Vitals] LCP:', metrics.lcp, 'ms');
+                        // // console.log('[Vitals] LCP:', metrics.lcp, 'ms');
                     }
                 }).observe({ type: 'largest-contentful-paint', buffered: true });
             } catch (e) {}
@@ -241,7 +241,7 @@
                         if (entry.hadRecentInput) return;
                         clsValue += entry.value;
                     });
-                    console.log('[Vitals] CLS:', clsValue.toFixed(3));
+                    // // console.log('[Vitals] CLS:', clsValue.toFixed(3));
                 }).observe({ type: 'layout-shift', buffered: true });
             } catch (e) {}
 
@@ -252,7 +252,7 @@
                     if (entries.length > 0) {
                         var inp = entries[entries.length - 1];
                         metrics.inp = Math.round(inp.processingStart - inp.startTime);
-                        console.log('[Vitals] INP:', metrics.inp, 'ms');
+                        // // console.log('[Vitals] INP:', metrics.inp, 'ms');
                     }
                 }).observe({ type: 'first-input', buffered: true });
             } catch (e) {}
@@ -260,7 +260,7 @@
             // 10秒后上报汇总
             setTimeout(function () {
                 if (metrics.lcp || metrics.fcp) {
-                    console.log('[Vitals Summary]', JSON.stringify(metrics));
+                    // // console.log('[Vitals Summary]', JSON.stringify(metrics));
                     // 可在此处上报到分析系统
                 }
             }, 10000);
@@ -278,7 +278,7 @@
             this.enhanceLazyLoading();
             this.optimizeFonts();
             this.reportMetrics();
-            console.log('[CoreVitals] 性能优化已启用');
+            // // console.log('[CoreVitals] 性能优化已启用');
         }
     };
 

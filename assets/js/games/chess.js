@@ -1,6 +1,6 @@
 /**
  * ChessGame - 中国象棋
- * DOM实现简化版
+ * DOM实现简化版（已补全：checkWin + newGame）
  */
 var ChessGame = function() {
     GameEngine.call(this, { id: 'chess', title: '♟️ 中国象棋' });
@@ -31,6 +31,14 @@ ChessGame.prototype.init = function() {
     this._bindEvents();
 };
 
+ChessGame.prototype.newGame = function() {
+    this._resetBoard();
+    this.moves = 0;
+    this.score = 0;
+    this.state = 'running';
+    this._render();
+};
+
 ChessGame.prototype._resetBoard = function() {
     // 10x9, 0=空, 正数=红, 负数=黑
     this.board = [
@@ -57,7 +65,6 @@ ChessGame.prototype._render = function() {
     var html = '<div style="display:flex;justify-content:center;">' +
         '<div style="position:relative;width:' + w + 'px;height:' + h + 'px;background:#dcb35c;border:3px solid #8b6914;border-radius:4px;">';
 
-    // 画线
     for (var r = 0; r < 10; r++) {
         for (var c = 0; c < 8; c++) {
             var x = 10 + c * cellSize, y = 10 + r * cellSize;
@@ -88,34 +95,19 @@ ChessGame.prototype._render = function() {
     }
     // 楚河汉界
     html += '<div style="position:absolute;left:10px;top:' + (10 + cellSize * 4.5) + 'px;width:' + (cellSize * 8) + 'px;height:' + (cellSize) + 'px;' +
-        'display:flex;align-items:center;justify-content:center;color:#8b6914;font-weight:bold;font-size:16px;border-top:2px solid #8b6914;border-bottom:2px solid #8b6914;">楚河 汉界</div>';
+        'display:flex;align-items:center;justify-content:center;color:#8b6914;font-weight:bold;font-size:16px;border-top:2px solid #8b6914;border-bottom:2px solid #8b6914;\">楚河 汉界</div>';
 
     html += '</div></div>';
     html += '<div style="margin-top:12px;text-align:center;">' +
         '<span style="font-size:18px;">' + (this.turn === 'red' ? '🔴 红方' : '⚫ 黑方') + ' 执子</span>' +
         '<div style="margin-top:8px;">' +
+        '<button class="game-btn" id="chess-new-game">🔄 新游戏</button>' +
         '<button class="game-btn" id="chess-undo">↩️ 悔棋</button>' +
         '<button class="game-btn game-btn-danger" id="chess-resign">🏳️ 认输</button>' +
         '</div></div>';
 
     this.el.innerHTML = html;
-
-    // 绑定点击
-    var cells = this.el.querySelectorAll('[data-row][data-col]');
-    cells.forEach(function(cell) {
-        cell.addEventListener('click', function() {
-            if (self.state !== 'running') return;
-            var r = parseInt(this.dataset.row), c = parseInt(this.dataset.col);
-            self._handleClick(r, c);
-        });
-    });
-
-    document.getElementById('chess-undo').addEventListener('click', function() { self._undo(); });
-    document.getElementById('chess-resign').addEventListener('click', function() {
-        var winner = self.turn === 'red' ? '黑方' : '红方';
-        self.gameOver();
-        GameHub.showToast('🏳️ ' + winner + '获胜！');
-    });
+    this._bindEvents();
 };
 
 ChessGame.prototype._handleClick = function(r, c) {
@@ -191,6 +183,17 @@ ChessGame.prototype._getMoves = function(r, c) {
                 var tr = r + d[0], tc = c + d[1];
                 if ((isRed && tr >= 7 && tr <= 9 && tc >= 3 && tc <= 5) ||
                     (!isRed && tr >= 0 && tr <= 2 && tc >= 3 && tc <= 5)) addMove(tr, tc);
+                // 飞将（对面将）- 简化：同列直线无子可吃将
+                if (tr === r) {
+                    var between = false;
+                    var minc = Math.min(c, tc), maxc = Math.max(c, tc);
+                    for (var cc = minc + 1; cc < maxc; cc++) {
+                        if (self.board[r][cc] !== 0) { between = true; break; }
+                    }
+                    if (!between && self.board[tr][tc] === -piece) {
+                        addMove(tr, tc);
+                    }
+                }
             });
             break;
         case 6: // 炮
@@ -216,7 +219,7 @@ ChessGame.prototype._getMoves = function(r, c) {
                 if (self.board[r][j] === 0) { addMove(r, j); }
                 else {
                     for (var k = j - 1; k >= 0; k--) {
-                        if (self.board[r][k] !== 0) { addMove(r, k); break; }
+                        if (self.board[r][k] !== 0) { addMove(k, c); break; }
                     }
                     break;
                 }
@@ -225,7 +228,7 @@ ChessGame.prototype._getMoves = function(r, c) {
                 if (self.board[r][j] === 0) { addMove(r, j); }
                 else {
                     for (var k = j + 1; k < 8; k++) {
-                        if (self.board[r][k] !== 0) { addMove(r, k); break; }
+                        if (self.board[r][k] !== 0) { addMove(k, c); break; }
                     }
                     break;
                 }
@@ -234,7 +237,7 @@ ChessGame.prototype._getMoves = function(r, c) {
         case 7: // 兵
             var dir = isRed ? -1 : 1;
             addMove(r + dir, c);
-            if ((isRed && r >= 5) || (!isRed && r <= 4)) {
+            if ((isRed && r <= 4) || (!isRed && r >= 5)) {
                 addMove(r, c - 1);
                 addMove(r, c + 1);
             }
@@ -245,7 +248,7 @@ ChessGame.prototype._getMoves = function(r, c) {
 
 ChessGame.prototype._move = function(fr, fc, tr, tc) {
     this.moveHistory.push({
-        board: GameUtils.clone(this.board),
+        board: JSON.parse(JSON.stringify(this.board)),
         turn: this.turn
     });
 
@@ -267,7 +270,7 @@ ChessGame.prototype._move = function(fr, fc, tr, tc) {
     this._render();
     this.save();
 
-    // 简单AI响应
+    // AI响应（简化）
     if (this.state === 'running') {
         this._aiMove();
     }
@@ -282,10 +285,66 @@ ChessGame.prototype._undo = function() {
     this._render();
 };
 
+/** 胜利检测：检查是否将军或将死 */
+ChessGame.prototype.checkWin = function() {
+    // 检测将/帅是否被吃
+    var redKing = false, blackKing = false;
+    for (var r = 0; r < 10; r++) {
+        for (var c = 0; c < 8; c++) {
+            if (this.board[r][c] === 1) redKing = true;
+            if (this.board[r][c] === -1) blackKing = true;
+        }
+    }
+    if (!redKing) {
+        this.gameOver();
+        GameHub.showToast('🏆 黑方胜利！黑将吃掉了红帅！');
+        return 'black';
+    }
+    if (!blackKing) {
+        this.gameOver();
+        GameHub.showToast('🏆 红方胜利！红帅吃掉了黑将！');
+        return 'red';
+    }
+
+    // 检测是否被将军（无路可逃即为输，简化：检测将是否被攻击）
+    var attacker = this._isKingInCheck(this.turn === 'red' ? 1 : -1);
+    var defender = this._isKingInCheck(this.turn === 'black' ? -1 : 1);
+    if (attacker && !defender) {
+        GameHub.showToast('⚠️ ' + (this.turn === 'red' ? '红' : '黑') + '方被将军！');
+        this.score += 50;
+        this._updateUI();
+    }
+
+    return null;
+};
+
+/** 检查某一方是否被将军 */
+ChessGame.prototype._isKingInCheck = function(kingPiece) {
+    var kingPos = null;
+    for (var r = 0; r < 10; r++) {
+        for (var c = 0; c < 8; c++) {
+            if (this.board[r][c] === kingPiece) kingPos = [r, c];
+        }
+    }
+    if (!kingPos) return false;
+
+    for (var i = 0; i < 10; i++) {
+        for (var j = 0; j < 8; j++) {
+            var p = this.board[i][j];
+            if (p !== 0 && (kingPiece === 1 ? p < 0 : p > 0)) {
+                var moves = this._getMoves(i, j);
+                if (moves.some(function(m) { return m[0] === kingPos[0] && m[1] === kingPos[1]; })) {
+                    return true;
+                }
+            }
+        }
+    }
+    return false;
+};
+
 // AI走子（简单随机）
 ChessGame.prototype._aiMove = function() {
     var self = this;
-    var allPieces = [];
     var allMoves = [];
     var aiColor = this.turn;
 
@@ -294,19 +353,14 @@ ChessGame.prototype._aiMove = function() {
             var p = this.board[r][c];
             if (p !== 0 && ((aiColor === 'black' && p < 0) || (aiColor === 'red' && p > 0))) {
                 var moves = this._getMoves(r, c);
-                if (moves.length > 0) {
-                    allPieces.push([r, c]);
-                    moves.forEach(function(m) { allMoves.push([r, c, m[0], m[1]]); });
-                }
+                moves.forEach(function(m) { allMoves.push([r, c, m[0], m[1]]); });
             }
         }
     }
 
     if (allMoves.length > 0) {
         var move = allMoves[GameUtils.rand(0, allMoves.length - 1)];
-        setTimeout(function() {
-            self._move(move[0], move[1], move[2], move[3]);
-        }, 500);
+        setTimeout(function() { self._move(move[0], move[1], move[2], move[3]); }, 400);
     }
 };
 
@@ -316,7 +370,35 @@ ChessGame.prototype.togglePause = function() {
 
 ChessGame.prototype.quit = function() {
     this.state = 'idle';
+    this._stopLoop();
     GameHub.closeGame();
+};
+
+
+ChessGame.prototype.save = function() {
+    var data = {
+        board: this.board,
+        turn: this.turn,
+        captured: this.captured || { black:0, red:0 },
+        moves: this.moves,
+        score: this.score,
+        state: this.state
+    };
+    GameUtils.save(this.saveKey, data);
+};
+
+ChessGame.prototype.load = function() {
+    var data = GameUtils.load(this.saveKey);
+    if (data) {
+        this.board = data.board || this.board;
+        this.turn = data.turn || 'red';
+        this.captured = data.captured || { black:0, red:0 };
+        this.moves = data.moves || 0;
+        this.score = data.score || 0;
+        this.state = data.state || 'running';
+        return data;
+    }
+    return null;
 };
 
 window.ChessGame = ChessGame;

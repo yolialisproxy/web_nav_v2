@@ -334,4 +334,37 @@ Tetris.prototype.quit = function() {
     GameHub.closeGame();
 };
 
+
+Tetris.prototype.save = function() {
+    var data = {
+        grid: this.grid,
+        score: this.score,
+        level: this.level,
+        lines: this.lines,
+        piece: this.piece,
+        nextPiece: this.nextPiece,
+        dropInterval: this.dropInterval,
+        lastTime: this.lastTime,
+        state: this.state
+    };
+    GameUtils.save(this.saveKey, data);
+};
+
+Tetris.prototype.load = function() {
+    var data = GameUtils.load(this.saveKey);
+    if (data) {
+        this.grid = data.grid || this.grid;
+        this.score = data.score || 0;
+        this.level = data.level || 1;
+        this.lines = data.lines || 0;
+        this.piece = data.piece || null;
+        this.nextPiece = data.nextPiece || null;
+        this.dropInterval = data.dropInterval || 1000;
+        this.lastTime = data.lastTime || 0;
+        this.state = data.state || 'running';
+        return true;
+    }
+    return false;
+};
+
 window.Tetris = Tetris;

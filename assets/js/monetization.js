@@ -95,7 +95,7 @@
                     list.getEntries().forEach(function (entry) {
                         if (entry.name === 'first-contentful-paint' || entry.name === 'largest-contentful-paint') {
                             // 上报到分析系统
-                            console.log('[Perf]', entry.name, ':', Math.round(entry.startTime), 'ms');
+                            // // console.log('[Perf]', entry.name, ':', Math.round(entry.startTime), 'ms');
                         }
                     });
                 });
@@ -106,7 +106,7 @@
                     var entries = list.getEntries();
                     var last = entries[entries.length - 1];
                     if (last) {
-                        console.log('[LCP]', Math.round(last.startTime + last.duration), 'ms');
+                        // // console.log('[LCP]', Math.round(last.startTime + last.duration), 'ms');
                     }
                 });
                 lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
@@ -118,7 +118,7 @@
         // 事件追踪
         trackEvent: function (category, action, label) {
             if (!this.enabled) return;
-            console.log('[Track]', category, action, label);
+            // // console.log('[Track]', category, action, label);
             // 接入 Google Analytics 或其他统计工具
         }
     };

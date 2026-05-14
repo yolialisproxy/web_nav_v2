@@ -30,11 +30,11 @@ class TagManager {
                     this.allTags.set(t.tag, t.count);
                 });
                 loadedFromJson = true;
-                // // console.log(`[TagManager] 从 tag_index.json 加载了 ${this.allTags.size} 个标签`);
+                // // // // console.log(`[TagManager] 从 tag_index.json 加载了 ${this.allTags.size} 个标签`);
             }
         } catch (e) {
             // tag_index.json 不存在时忽略，将从站点数据构建
-            // // console.log('[TagManager] tag_index.json 不可用，将从站点数据构建标签');
+            // // // // console.log('[TagManager] tag_index.json 不可用，将从站点数据构建标签');
         }
 
         // 无论是否从 JSON 加载成功，都从当前站点数据重新构建标签
@@ -42,7 +42,7 @@ class TagManager {
 
         this._initialized = true;
         if (!loadedFromJson) {
-            // // console.log(`[TagManager] 从站点数据构建了 ${this.allTags.size} 个标签`);
+            // // // // console.log(`[TagManager] 从站点数据构建了 ${this.allTags.size} 个标签`);
         }
     }
 

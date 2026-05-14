@@ -19,6 +19,15 @@ class DataManager {
     async load() {
         if (this.isLoaded) return Promise.resolve();
 
+        // 清理旧版本缓存（兼容性迁移）
+        try {
+            const oldCacheKey = 'webnav_sites_cache_v2';
+            if (localStorage.getItem(oldCacheKey)) {
+                localStorage.removeItem(oldCacheKey);
+                // console.log('[DataManager] 已清理旧版本缓存');
+            }
+        } catch (e) {}
+
         // 显示加载状态
         if (state) state.set('loading', true);
 
@@ -134,7 +143,7 @@ class DataManager {
         const sortedTags = [...this.tagCloud.values()].sort((a, b) => b.count - a.count);
         this.tagIndexSorted = sortedTags;
 
-        // // console.log(`[DataManager] 索引构建完成: ${this.sites.size} 站点, ${Object.keys(this.categories).length} 分类, ${this.tagCloud.size} 标签`);
+        // // // // console.log(`[DataManager] 索引构建完成: ${this.sites.size} 站点, ${Object.keys(this.categories).length} 分类, ${this.tagCloud.size} 标签`);
     }
 
     _addToCategoryIndex(site) {
@@ -221,7 +230,13 @@ _validateSites(sites) {
 
     _saveCache() {
         try {
-            localStorage.setItem('webnav_sites_cache_v2', JSON.stringify(this.raw));
+            const cacheData = {
+                version: 'v3',
+                timestamp: Date.now(),
+                data: this.raw
+            };
+            localStorage.setItem('webnav_sites_cache', JSON.stringify(cacheData));
+            // // console.log('[DataManager] 数据已缓存');
         } catch (e) {
             console.warn('[DataManager] 缓存保存失败:', e);
         }
@@ -229,17 +244,37 @@ _validateSites(sites) {
 
     _loadCache() {
         try {
-            const cached = localStorage.getItem('webnav_sites_cache_v2');
-            if (cached) {
-                const parsed = JSON.parse(cached);
-                if (Array.isArray(parsed)) {
-                    // 验证缓存数据格式
-                    this._validateSites(parsed);
-                    return parsed;
-                }
+            const cached = localStorage.getItem('webnav_sites_cache');
+            if (!cached) return null;
+
+            const parsed = JSON.parse(cached);
+            if (!parsed || !parsed.data || !Array.isArray(parsed.data)) {
+                console.warn('[DataManager] 缓存格式无效，清除旧缓存');
+                localStorage.removeItem('webnav_sites_cache');
+                return null;
             }
+
+            // 检查缓存版本
+            if (parsed.version !== 'v3') {
+                // console.log('[DataManager] 缓存版本不匹配，忽略缓存');
+                return null;
+            }
+
+            // 检查缓存过期时间
+            const maxAge = 7 * 24 * 60 * 60 * 1000; // 7天
+            if (Date.now() - parsed.timestamp > maxAge) {
+                // console.log('[DataManager] 缓存已过期');
+                localStorage.removeItem('webnav_sites_cache');
+                return null;
+            }
+
+            // 验证数据格式
+            this._validateSites(parsed.data);
+            // console.log('[DataManager] 从缓存恢复数据（版本: ' + parsed.version + '）');
+            return parsed.data;
         } catch (e) {
-            console.warn('[DataManager] 缓存加载/解析失败:', e);
+            console.warn('[DataManager] 缓存加载失败:', e);
+            localStorage.removeItem('webnav_sites_cache');
         }
         return null;
     }

@@ -1,6 +1,6 @@
 /**
  * MahjongGame - 四川麻将（简约版）
- * 使用DOM tile实现
+ * 使用DOM tile实现（已补全: newGame、save/load持久化）
  */
 var MahjongGame = function() {
     GameEngine.call(this, { id: 'mahjong', title: '🀄 麻将' });
@@ -16,7 +16,7 @@ var MahjongGame = function() {
 MahjongGame.prototype = Object.create(GameEngine.prototype);
 MahjongGame.prototype.constructor = MahjongGame;
 
-// 麻将符号定义
+// 麻将符号定义（14种）
 MahjongGame.TILE_TYPES = [
     { char: '🀇', name: '一筒', matchGroup: 0 },
     { char: '🀈', name: '二筒', matchGroup: 1 },
@@ -32,12 +32,6 @@ MahjongGame.TILE_TYPES = [
     { char: '🀛', name: '三万', matchGroup: 11 },
     { char: '🀜', name: '四万', matchGroup: 12 },
     { char: '🀝', name: '五万', matchGroup: 13 },
-    { char: '🀞', name: '六万', matchGroup: 14 },
-    { char: '🀟', name: '七万', matchGroup: 15 },
-    { char: '🀠', name: '东风', matchGroup: 16 },
-    { char: '🀡', name: '南风', matchGroup: 17 },
-    { char: '🀢', name: '西风', matchGroup: 18 },
-    { char: '🀣', name: '北风', matchGroup: 19 },
 ];
 
 MahjongGame.prototype.init = function() {
@@ -47,18 +41,20 @@ MahjongGame.prototype.init = function() {
     this._startTimer();
 };
 
+/** 生成两副相同的牌 */
 MahjongGame.prototype._generateTiles = function() {
     this.tiles = [];
-    var types = MahjongGame.TILE_TYPES.slice(0, 14); // 使用14种牌
+    var types = MahjongGame.TILE_TYPES.slice(0, 14);
     for (var i = 0; i < types.length; i++) {
         this.tiles.push({ ...types[i], uid: i * 2, faceUp: false, cleared: false });
         this.tiles.push({ ...types[i], uid: i * 2 + 1, faceUp: false, cleared: false });
     }
-    // Fisher-Yates 洗牌
     this.tiles = GameUtils.shuffle(this.tiles);
     this.totalPairs = this.tiles.length / 2;
     this.matches = 0;
     this.selected = [];
+    this._gameTime = 0;
+    this.score = 0;
 };
 
 MahjongGame.prototype._startTimer = function() {
@@ -66,7 +62,8 @@ MahjongGame.prototype._startTimer = function() {
     var timerStart = Date.now();
     this._timer = setInterval(function() {
         self._gameTime = Date.now() - timerStart;
-        document.getElementById('maj-time').textContent = GameUtils.formatTime(self._gameTime);
+        var timeEl = document.getElementById('maj-time');
+        if (timeEl) timeEl.textContent = GameUtils.formatTime(self._gameTime);
     }, 500);
 };
 
@@ -105,10 +102,9 @@ MahjongGame.prototype._render = function() {
 
     html += '</div>' +
         '<div style="margin-top:12px;display:flex;gap:8px;justify-content:center;">' +
-        '<button class="game-btn" style="font-size:12px;padding:4px 12px;" id="maj-new">' +
-        '🔄 新游戏</button>' +
-        '<button class="game-btn" style="font-size:12px;padding:4px 12px;" id="maj-reveal">' +
-        '👁️ 提示</button></div></div>';
+        '<button class="game-btn" style="font-size:12px;padding:4px 12px;" id="maj-new">🔄 新游戏</button>' +
+        '<button class="game-btn" style="font-size:12px;padding:4px 12px;" id="maj-reveal">👁️ 提示(揭示)</button>' +
+        '</div></div>';
 
     this.el.innerHTML = html;
     this._bindEvents();
@@ -131,14 +127,12 @@ MahjongGame.prototype._bindEvents = function() {
             if (self.selected.length === 2) {
                 var a = self.selected[0], b = self.selected[1];
                 if (a.matchGroup === b.matchGroup) {
-                    // 匹配成功
                     var cleared = self.tiles.filter(function(t) { return t.matchGroup === a.matchGroup; });
                     cleared.forEach(function(t) { t.cleared = true; t.faceUp = false; });
                     self.matches += 1;
                     self.score += 50 * self.matches; // 连击加分
                     GameUtils.playSound(600, 0.1, 'sine');
                 } else {
-                    // 匹配失败
                     a.faceUp = false;
                     b.faceUp = false;
                     self.score = Math.max(0, self.score - 5);
@@ -148,7 +142,6 @@ MahjongGame.prototype._bindEvents = function() {
                 self._updateUI();
                 self._render();
 
-                // 检查胜利
                 if (self.matches === self.totalPairs) {
                     self._stopTimer();
                     self.gameOver();
@@ -159,34 +152,69 @@ MahjongGame.prototype._bindEvents = function() {
         });
     }
 
-    document.getElementById('maj-new').addEventListener('click', function() {
-        self.score = 0; self.matches = 0; self._gameTime = 0;
-        self._stopTimer(); self._generateTiles(); self._startTimer(); self._render();
-    });
-
-    document.getElementById('maj-reveal').addEventListener('click', function() {
-        var faceDown = self.tiles.filter(function(t) { return !t.cleared && !t.faceUp; });
-        if (faceDown.length > 0) {
-            var idx = GameUtils.rand(0, faceDown.length - 1);
-            faceDown[idx].faceUp = true;
-            self._render();
-            setTimeout(function() {
-                faceDown[idx].faceUp = false;
-                self._render();
-            }, 2000);
-        }
-    });
+    document.getElementById('maj-new').addEventListener('click', function() { self.newGame(); });
+    document.getElementById('maj-reveal').addEventListener('click', function() { self._hint(); });
 };
 
 MahjongGame.prototype._stopTimer = function() {
     if (this._timer) { clearInterval(this._timer); this._timer = null; }
 };
 
-MahjongGame.prototype._updateUI = function() {
-    if (document.getElementById('maj-score')) {
-        document.getElementById('maj-score').textContent = this.score;
+/** 新游戏 */
+MahjongGame.prototype.newGame = function() {
+    this._generateTiles();
+    this.matches = 0;
+    this.score = 0;
+    this.selected = [];
+    this._gameTime = 0;
+    this._stopTimer();
+    this._startTimer();
+    this._render();
+    this.save();
+};
+
+/** 提示：翻开一对 */
+MahjongGame.prototype._hint = function() {
+    var faceDown = this.tiles.filter(function(t) { return !t.cleared && !t.faceUp; });
+    if (faceDown.length > 0) {
+        var pair = faceDown.filter(function(t) { return t.matchGroup === faceDown[0].matchGroup; });
+        if (pair.length >= 2) {
+            pair[0].faceUp = true; pair[1].faceUp = true;
+            this._render();
+            setTimeout(function() { pair.forEach(function(t){t.faceUp=false}); self._render(); }, 1500);
+        }
     }
+};
+
+MahjongGame.prototype._updateUI = function() {
+    var scoreEl = document.getElementById('maj-score');
+    if (scoreEl) scoreEl.textContent = this.score;
     this.scoreEl && (this.scoreEl.textContent = 'Score: ' + this.score);
+};
+
+MahjongGame.prototype.save = function() {
+    var data = {
+        tiles: this.tiles,
+        score: this.score,
+        matches: this.matches,
+        totalPairs: this.totalPairs,
+        _gameTime: this._gameTime,
+        state: this.state
+    };
+    GameUtils.save(this.saveKey, data);
+};
+
+MahjongGame.prototype.load = function() {
+    var data = GameUtils.load(this.saveKey);
+    if (data) {
+        this.tiles = data.tiles || this.tiles;
+        this.score = data.score || 0;
+        this.matches = data.matches || 0;
+        this.totalPairs = data.totalPairs || this.totalPairs;
+        this._gameTime = data._gameTime || 0;
+        return data;
+    }
+    return null;
 };
 
 MahjongGame.prototype.togglePause = function() {

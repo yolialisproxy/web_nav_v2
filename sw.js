@@ -1,18 +1,18 @@
 /**
  * Service Worker - 离线缓存与PWA支持
  * 缓存策略：Cache First for静态资源，Network First for数据文件
+ * V3.2 — 同步文件清单至实际项目结构
  */
 
-const CACHE_NAME = 'webnav-v3-' + '20260512';
+const CACHE_NAME = 'webnav-v3-' + '20260514';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
     '/assets/css/core.css',
-    '/assets/css/theme-modern.css',
-    '/assets/css/components.css',
-    '/assets/css/responsive.css',
+    '/assets/css/app.css',
     '/assets/css/favorite-enhancements.css',
-    '/assets/css/style.css',
+    '/assets/css/game-hub.css',
+    '/assets/css/monetization.css',
     '/assets/js/state.js',
     '/assets/js/data.js',
     '/assets/js/search.js',
@@ -22,6 +22,19 @@ const STATIC_ASSETS = [
     '/assets/js/favorite-ui-bootstrap.js',
     '/assets/js/toast.js',
     '/assets/js/app.js',
+    '/assets/js/game-utils.js',
+    '/assets/js/games/game-engine.js',
+    '/assets/js/games/solitaire.js',
+    '/assets/js/games/tetris.js',
+    '/assets/js/games/go.js',
+    '/assets/js/games/chess.js',
+    '/assets/js/games/mahjong.js',
+    '/assets/js/games/wuxia.js',
+    '/assets/js/games/dating.js',
+    '/assets/js/game-hub.js',
+    '/assets/js/monetization.js',
+    '/assets/js/core-vitals.js',
+    '/assets/js/schema.js',
 ];
 
 // 安装阶段：缓存静态资源

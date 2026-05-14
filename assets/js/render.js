@@ -252,10 +252,40 @@ function renderSites(sites, containerId) {
         return;
     }
 
-    container.innerHTML = _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
+    // 构建工具栏
+    var toolbarHtml = '<div class="view-toolbar">' +
+        '<div class="toolbar-left">' +
+        '<button class="view-btn view-grid active" onclick="setViewMode('grid')" aria-label="网格视图" title="网格视图">⊞</button>' +
+        '<button class="view-btn view-list" onclick="setViewMode('list')" aria-label="列表视图" title="列表视图">☰</button>' +
+        '</div>' +
+        '<div class="toolbar-right">' +
+        '<select class="sort-select" onchange="handleSortChange(this.value)" aria-label="排序方式">' +
+        '<option value="default">默认排序</option>' +
+        '<option value="name-asc">名称 ↑</option>' +
+        '<option value="name-desc">名称 ↓</option>' +
+        '</select>' +
+        '</div>' +
+        '</div>';
+
+    var gridHtml = _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
+    container.innerHTML = toolbarHtml + gridHtml;
     paginatedRenderer.markPageRendered(0);
     _setupInfiniteScroll(container);
     bindCardEvents();
+
+    // 恢复视图和排序状态
+    var savedViewMode = localStorage.getItem('kunhun-nav-view-mode') || 'grid';
+    setViewMode(savedViewMode);
+
+    var savedSort = localStorage.getItem('kunhun-nav-sort-order') || 'default';
+    var sortSelect = container.querySelector('.sort-select');
+    if (sortSelect) {
+        sortSelect.value = savedSort;
+        // 如果之前有排序，重新应用
+        if (savedSort !== 'default') {
+            handleSortChange(savedSort);
+        }
+    }
 
     // 动画
     setTimeout(function() {
@@ -310,6 +340,7 @@ function renderCategoryView(catId, subId, leafId) {
             '<option value="default">默认排序</option>' +
             '<option value="name-asc">名称 ↑</option>' +
             '<option value="name-desc">名称 ↓</option>' +
+            '<option value="url-asc">URL ↑</option>' +
             '</select>' +
             '</div>' +
             '</div>';
@@ -341,6 +372,23 @@ function renderCategoryView(catId, subId, leafId) {
     _setupInfiniteScroll(container);
     bindCardEvents();
     _bindTagFilters();
+
+    // 恢复排序状态
+    var savedSort = localStorage.getItem('kunhun-nav-sort-order') || 'default';
+    var sortSelect = container.querySelector('.sort-select');
+    if (sortSelect) {
+        sortSelect.value = savedSort;
+        if (savedSort !== 'default') {
+            // 需要重新获取当前分类的站点数据并排序
+            var currentSites = paginatedRenderer.currentSites;
+            if (currentSites) {
+                // 延迟应用排序，确保数据已加载
+                setTimeout(function() {
+                    handleSortChange(savedSort);
+                }, 0);
+            }
+        }
+    }
 }
 
 /* ========== 搜索渲染 ========== */
@@ -405,6 +453,11 @@ var currentViewMode = 'grid';
 
 function setViewMode(mode) {
     currentViewMode = mode;
+    // 持久化到 localStorage
+    try {
+        localStorage.setItem('kunhun-nav-view-mode', mode);
+    } catch (e) {}
+
     var grid = document.getElementById('sites-grid');
     if (!grid) return;
 
@@ -413,16 +466,26 @@ function setViewMode(mode) {
 
     if (mode === 'list') {
         grid.classList.add('list-mode');
-        document.querySelector('.view-btn.view-list').classList.add('active');
+        var listBtn = document.querySelector('.view-btn.view-list');
+        if (listBtn) listBtn.classList.add('active');
     } else {
         grid.classList.remove('list-mode');
-        document.querySelector('.view-btn.view-grid').classList.add('active');
+        var gridBtn = document.querySelector('.view-btn.view-grid');
+        if (gridBtn) gridBtn.classList.add('active');
     }
 }
 
 function handleSortChange(value) {
+    // 持久化排序选择
+    try {
+        localStorage.setItem('kunhun-nav-sort-order', value);
+    } catch (e) {}
+
     var sites = paginatedRenderer.currentSites;
     if (!sites) return;
+
+    // 复制数组以免影响原始数据顺序
+    sites = sites.slice();
 
     switch (value) {
         case 'name-asc':
@@ -435,8 +498,14 @@ function handleSortChange(value) {
             sites.sort(function(a, b) { return (a.url || '').localeCompare(b.url || ''); });
             break;
         default:
-            break;
+            // 恢复默认顺序
+            sites.sort(function(a, b) { return (a.id || 0) - (b.id || 0); });
     }
+
+    paginatedRenderer.reset();
+    paginatedRenderer.setData(sites);
+    renderSites(sites);
+}
 
     paginatedRenderer.setData(sites);
     paginatedRenderer.reset();
@@ -749,7 +818,7 @@ function renderSidebar(s) {
             if (leafEl) leafEl.classList.add('active');
         }
     } catch(e) {
-        console.log('[Render] renderSidebar error:', e.message);
+        // // console.log('[Render] renderSidebar error:', e.message);
     }
 }
 
@@ -786,7 +855,7 @@ function renderView(s) {
             renderSites(allSites);
         }
     } catch(e) {
-        console.log('[Render] renderView error:', e.message);
+        // // console.log('[Render] renderView error:', e.message);
     }
 }
 

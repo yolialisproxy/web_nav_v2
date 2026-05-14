@@ -23,7 +23,7 @@ async function init() {
         try {
             const cached = dataManager._loadCache();
             if (cached && cached.length > 0) {
-                // console.log('[App] 从缓存恢复数据:', cached.length, '条');
+                // // // console.log('[App] 从缓存恢复数据:', cached.length, '条');
                 dataManager.raw = cached;
                 dataManager._buildIndexes();
                 dataManager.isLoaded = true;
