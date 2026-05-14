@@ -24,6 +24,24 @@ class State {
             searchMode: false      // 是否在搜索覆盖层模式
         };
         this._subscribers = [];
+        // LocalForage 缓存配置
+        this._cache = {
+            version: 1,
+            keys: {
+                sites: 'nav_sites_v1',
+                tags: 'nav_tags_v1',
+                sidebar: 'nav_sidebar_v1',
+                theme: 'nav_theme_v1'
+            },
+            ttl: {
+                sites: 24 * 60 * 60 * 1000,    // 24h
+                tags: 60 * 60 * 1000,           // 1h
+                sidebar: 7 * 24 * 60 * 60 * 1000, // 7d
+                theme: 0  // 永不过期
+            }
+        };
+        this._cacheReady = false;
+        this._initCache();  // 异步初始化缓存
         // 标签系统（从 tags.js 合并而来）
         this.tagAll = new Map();      // tag -> count
         this.tagSites = new Map();   // site id -> tags[]
@@ -115,6 +133,113 @@ class State {
     }
 
     // ═══════════════════════════════════════════════
+    // LocalForage 缓存层
+    // ═══════════════════════════════════════════════
+
+    /** 异步初始化 localforage */
+    async _initCache() {
+        if (this._cacheReady || typeof localforage === 'undefined') {
+            // localforage 未加载时降级到 localStorage
+            this._cacheBackend = localStorage;
+            this._cacheReady = true;
+            return;
+        }
+        try {
+            await localforage.config({
+                name: 'nav_web',
+                storeName: 'cache_v1',
+                version: this._cache.version
+            });
+            this._cacheBackend = localforage;
+            this._cacheReady = true;
+            // 后台恢复
+            this._restoreFromCache();
+        } catch (e) {
+            console.warn('[State] LocalForage 不可用，降级到 localStorage', e);
+            this._cacheBackend = localStorage;
+            this._cacheReady = true;
+        }
+    }
+
+    /** 从缓存恢复状态 */
+    _restoreFromCache() {
+        if (!this._cacheReady) return;
+
+        const restore = async (key) => {
+            try {
+                const raw = await this._cacheBackend.getItem(key);
+                if (!raw) return null;
+                const {value, ts} = raw;
+                // TTL 检查
+                const ttl = this._cache.ttl[key.split('_')[1]] || 0;
+                if (ttl > 0 && Date.now() - ts > ttl) {
+                    await this._cacheBackend.removeItem(key);
+                    return null;
+                }
+                return value;
+            } catch (e) {
+                return null;
+            }
+        };
+
+        // 并行恢复
+        Promise.all([
+            restore(this._cache.keys.sites),
+            restore(this._cache.keys.tags),
+            restore(this._cache.keys.sidebar),
+            restore(this._cache.keys.theme)
+        ]).then(([sites, tagsData, sidebar, theme]) => {
+            if (sites && Array.isArray(sites)) {
+                this._state.sites = sites;
+                this._notify();
+            }
+            if (tagsData && tagsData.allTags) {
+                this.tagAll = new Map(Object.entries(tagsData.allTags));
+                this.tagSites = new Map(Object.entries(tagsData.tagSites).map(([k, v]) => [parseInt(k), v]));
+                this.activeTags = new Set(tagsData.activeTags || []);
+            }
+            if (sidebar) {
+                this._state.sidebar = {...this._state.sidebar, ...sidebar};
+            }
+            if (theme && ['light', 'dark', 'system'].includes(theme)) {
+                this._state.theme = theme;
+                document.documentElement.dataset.theme = this._resolveTheme(theme);
+            }
+            this._notify();
+        });
+    }
+
+    /** 保存到缓存（增量） */
+    async _saveToCache(key, value) {
+        if (!this._cacheReady) return;
+        try {
+            const payload = {
+                value,
+                ts: Date.now(),
+                v: this._cache.version
+            };
+            await this._cacheBackend.setItem(key, payload);
+        } catch (e) {
+            // 静默失败（配额超限等）
+        }
+    }
+
+    /** 强制清空所有缓存 */
+    async clearCache() {
+        if (!this._cacheReady) return;
+        try {
+            const keys = await this._cacheBackend.keys();
+            for (const key of keys) {
+                if (key.startsWith('nav_')) await this._cacheBackend.removeItem(key);
+            }
+            console.log('[State] 缓存已清空');
+        } catch (e) {
+            console.warn('[State] 清空缓存失败', e);
+        }
+    }
+
+
+    // ═══════════════════════════════════════════════
     // 标签系统（从 tags.js 合并）
     // ═══════════════════════════════════════════════
 
@@ -136,6 +261,13 @@ class State {
 
         this._buildTagsFromSites(dataManager);
         this._tagInitialized = true;
+        // 标签数据变更后持久化
+        const tagsData = {
+            allTags: Object.fromEntries(this.tagAll),
+            tagSites: Object.fromEntries(Array.from(this.tagSites.entries()).map(([k, v]) => [k, v])),
+            activeTags: Array.from(this.activeTags)
+        };
+        this._saveToCache(this._cache.keys.tags, tagsData);
     }
 
     /** 从站点数据构建标签索引 */
