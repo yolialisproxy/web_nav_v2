@@ -29,6 +29,10 @@ ChessGame.prototype.init = function() {
     this._resetBoard();
     this._render();
     this._bindEvents();
+        this._bindEvents();
+        // 触摸支持
+        this.initTouch();
+        this.onTouchTap = this._onTouchTap.bind(this);
 };
 
 ChessGame.prototype.newGame = function() {
@@ -400,5 +404,17 @@ ChessGame.prototype.load = function() {
     }
     return null;
 };
+
+
+// 触摸回调：将坐标转换为棋盘行列
+ChessGame.prototype._onTouchTap = function(x, y) {
+    var cellSize = Math.min(55, (window.innerWidth - 100) / 8);
+    var col = Math.floor(x / cellSize);
+    var row = Math.floor(y / cellSize);
+    if (col >= 0 && col < 8 && row >= 0 && row < 10) {
+        this._handleCellClick(row, col);
+    }
+};
+
 
 window.ChessGame = ChessGame;
