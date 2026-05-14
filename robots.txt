@@ -1,10 +1,7 @@
 User-agent: *
 Allow: /
-Allow: /assets/
-Allow: /prerendered/
 Disallow: /data/
-Disallow: /__pycache__/
-Disallow: /backups/
-Disallow: /pages/_deprecated/
+Disallow: /assets/js/*.js.map
+Disallow: /*.json
 
-Sitemap: https://nav.kunhunav.com/sitemap.xml
+Sitemap: https://yolialisproxy.github.io/web_nav_v2/sitemap.xml
