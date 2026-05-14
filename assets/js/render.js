@@ -255,8 +255,8 @@ function renderSites(sites, containerId) {
     // 构建工具栏
     var toolbarHtml = '<div class="view-toolbar">' +
         '<div class="toolbar-left">' +
-        '<button class="view-btn view-grid active" onclick="setViewMode('grid')" aria-label="网格视图" title="网格视图">⊞</button>' +
-        '<button class="view-btn view-list" onclick="setViewMode('list')" aria-label="列表视图" title="列表视图">☰</button>' +
+        '<button class="view-btn view-grid active" onclick="setViewMode(\'grid\')" aria-label="网格视图" title="网格视图">⊞</button>' +
+        '<button class="view-btn view-list" onclick="setViewMode(\'list\')" aria-label="列表视图" title="列表视图">☰</button>' +
         '</div>' +
         '<div class="toolbar-right">' +
         '<select class="sort-select" onchange="handleSortChange(this.value)" aria-label="排序方式">' +
@@ -525,7 +525,6 @@ function handleSortChange(value) {
         _setupInfiniteScroll(container);
         bindCardEvents();
     }
-}
 
 /* ========== 虚拟滚动：DOM回收 ========== */
 

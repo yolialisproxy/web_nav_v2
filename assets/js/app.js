@@ -4,6 +4,57 @@
  * 修复：统一所有功能到一个入口点
  */
 
+/**
+ * 主题切换功能 (暗色/亮色/系统自动)
+ */
+function initThemeToggle() {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    
+    if (!toggleBtn || !themeIcon) {
+        console.warn('[Theme] 主题切换按钮缺失');
+        return;
+    }
+    
+    // 更新按钮图标
+    function updateThemeIcon(theme) {
+        const displayTheme = theme === 'system' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+        if (displayTheme === 'dark') {
+            // 月亮图标
+            themeIcon.setAttribute('d', 'M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z');
+        } else {
+            // 太阳图标
+            themeIcon.setAttribute('d', 'M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zM9 7a1 1 0 011 1v1a1 1 0 11-2 0V8a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0V8a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0V8a1 1 0 011-1zM5 11a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-8 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5 19a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm4 0a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z');
+        }
+        toggleBtn.setAttribute('title', displayTheme === 'dark' ? '切换到亮色模式' : '切换到暗色模式');
+    }
+    
+    // 初始更新
+    updateThemeIcon(state.get('theme'));
+    
+    // 监听状态变化
+    state.subscribe(function(s) {
+        if (s.theme) {
+            updateThemeIcon(s.theme);
+        }
+    });
+    
+    // 绑定点击事件
+    toggleBtn.addEventListener('click', function() {
+        const currentTheme = state.get('theme');
+        let newTheme;
+        if (currentTheme === 'light') {
+            newTheme = 'dark';
+        } else if (currentTheme === 'dark') {
+            newTheme = 'system';
+        } else {
+            newTheme = 'light';
+        }
+        state.set('theme', newTheme);
+    });
+}
+
+
 async function init() {
     // 暴露全局函数
     window.renderSites = renderSites;
@@ -50,6 +101,9 @@ async function init() {
 
     // 搜索引擎初始化（后台任务）
     try { initSearchEngine(dataManager); } catch(e) { console.warn('[App] 搜索初始化失败:', e.message); }
+    // 初始化主题切换
+    initThemeToggle();
+
 
     // 初始化收藏
     if (window.favoriteManager) {

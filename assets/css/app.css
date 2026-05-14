@@ -1,6 +1,6 @@
 /* =====================================================
    app.css - 合并的组件样式
-   来源: theme-modern.css + components.css + responsive.css + style.css
+   来源: core.css(变量+工具类) + app.css(组件) + game-hub.css(游戏) + monetization.css(盈利) + favorite-enhancements.css(收藏)
    重复选择器已去重 (后面覆盖前面)
    ===================================================== */
 
@@ -210,6 +210,20 @@ body {
     font-weight: 900;
     font-style: normal;
     line-height: 1;
+}
+
+
+/* 主题切换按钮 */
+#theme-toggle {
+    color: var(--color-muted);
+    transition: all 0.2s ease;
+}
+#theme-toggle:hover {
+    color: var(--color-text);
+    background: var(--color-surface-soft);
+}
+#theme-toggle:active {
+    transform: scale(0.95);
 }
 
 /* ===== 侧边栏 & 导航菜单 ===== */
@@ -1051,6 +1065,63 @@ body {
     display: block;
     opacity: 1;
 }
+/* 平板断点优化 - 768px */
+@media (max-width: 768px) {
+    /* 填充类别区域的右侧间距调整 */
+    #category-area {
+        padding-right: 1rem;
+    }
+    
+    /* 卡片网格在平板上的列数调整 */
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    /* 顶栏布局调整 - 缩小字号与间距 */
+    #header .px-4 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* 缩小收藏按钮 */
+    #favorite-toggle {
+        font-size: 1.2rem;
+        padding: 0.25rem 0.5rem;
+    }
+    
+    /* 游戏大厅按钮缩小 */
+    #game-menu-toggle {
+        font-size: 0.875rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* 大屏/桌面断点优化 - 1280px+ */
+@media (min-width: 1280px) {
+    /* 增大顶栏容器 */
+    #header .max-w-7xl {
+        max-width: 1280px;
+    }
+    
+    /* 骨架屏卡片数量微调 */
+    .skeleton-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+/* 超宽屏优化 - 1536px+ */
+@media (min-width: 1536px) {
+    #header .max-w-7xl {
+        max-width: 1400px;
+    }
+    
+    /* 更宽的卡片 */
+    .grid {
+        gap: 20px;
+    }
+}
+
+
 @media (max-width: 1023px) {
     #sidebar {
         z-index: 1000;

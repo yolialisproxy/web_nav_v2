@@ -462,7 +462,49 @@
                         window.favoriteUI.closeModal();
                     }
                 });
+                // 兼容旧代码：closeModal 别名
+
+                window.favoriteUI.closeModal = window.favoriteUI.close;
+
             }
+        };
+
+        // 全局API（兼容旧脚本）
+
+        window.updateFavoriteButtons = function() {
+
+            document.querySelectorAll('.favorite-btn').forEach(function(btn) {
+
+                var container = btn.closest('.site-card-container, .site-card');
+
+                var titleEl = container ? container.querySelector('.card-title, .fav-site-name') : null;
+
+                if (titleEl && window.favoriteManager) {
+
+                    var isFav = window.favoriteManager.isFavorite(titleEl.textContent.trim());
+
+                    btn.innerHTML = isFav ? '❤️' : '♡';
+
+                    btn.classList.toggle('favorited', isFav);
+
+                }
+
+            });
+
+        };
+
+
+
+        window.toggleFavorite = function(element, name, url, description, category) {
+
+            if (window.favoriteUI && window.favoriteManager) {
+
+                window.favoriteUI.toggle(element, name, url, description, category);
+
+                window.updateFavoriteButtons();
+
+            }
+
         };
 
         window.favoriteUI.init();

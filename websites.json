@@ -10213,7 +10213,7 @@
     "description": "Restream is a simple live video platform that empowers you to create beautiful videos and multistream them to your favorite channels.",
     "title": "Restream",
     "_cat": "视频娱乐/平台/资源",
-    "category": "设计工具/平台资源",
+    "category": "设计工具",
     "tags": [
       "restream",
       "设计工具"
@@ -10226,7 +10226,7 @@
     "description": "Material Design - https://www.material.io/icons",
     "title": "Material Icons",
     "_cat": "视频创作/平台/资源",
-    "category": "设计工具/平台资源",
+    "category": "设计工具",
     "tags": [
       "icons",
       "material",
@@ -10240,7 +10240,7 @@
     "description": "Cut your team's email management time in half & get started on the road to a cleaner inbox and more productive day with SaneBox. Start your free trial now!",
     "title": "SaneBox",
     "_cat": "视频创作/平台/资源",
-    "category": "设计工具/平台资源",
+    "category": "设计工具",
     "tags": [
       "sanebox",
       "设计工具"
@@ -10426,7 +10426,7 @@
     "title": "C++ Cheat Sheets & Infographics",
     "description": "Graphics and cheat sheets, each capturing one aspect of C++: algorithms/containers/STL, language basics, libraries, best practices, terminology (信息图表和备忘录).",
     "_cat": "开发工具/文档资源",
-    "category": "开发工具/文档资源",
+    "category": "开发工具",
     "name": "C++ Cheat Sheets & Infographics",
     "phase3_merged": true,
     "tags": [
@@ -10441,7 +10441,7 @@
     "title": "Dawarich",
     "description": "The private alternative to Google Timeline. Import your location history, keep it forever. No ads, no data selling.",
     "_cat": "开发工具/文档资源",
-    "category": "开发工具/文档资源",
+    "category": "开发工具",
     "name": "Dawarich",
     "phase3_merged": true,
     "tags": [
@@ -10456,7 +10456,7 @@
     "description": "Colorize your black and white images within seconds. Try our online AI colorize tool for free, no sign-up needed.",
     "title": "Palette.fm",
     "_cat": "开发工具/文档资源",
-    "category": "开发工具/文档资源",
+    "category": "开发工具",
     "phase3_merged": true,
     "tags": [
       "palette",
@@ -10482,7 +10482,7 @@
     "title": "GPS Tracking Software - Free and Open Source System - Tracca",
     "description": "Traccar is the leading GPS tracking software. Vehicle and personal tracking. Self hosting and cloud-based solution. Real time view, reports, notifications.",
     "_cat": "设计工具/流程图生成",
-    "category": "设计工具/流程图生成",
+    "category": "设计工具",
     "name": "GPS Tracking Software - Free and Open Source System - Tracca",
     "phase3_merged": true,
     "tags": [
@@ -10497,7 +10497,7 @@
     "title": "GitHub - michaelstaake/LibreKB: Knowledge Base Web App - Fre",
     "description": "Knowledge Base Web App - Free, Open Source, Self Hosted, PHP/MySQL - michaelstaake/LibreKB",
     "_cat": "设计工具/白板资源",
-    "category": "设计工具/白板资源",
+    "category": "设计工具",
     "name": "GitHub - michaelstaake/LibreKB: Knowledge Base Web App - Fre",
     "phase3_merged": true,
     "tags": [
@@ -10512,7 +10512,7 @@
     "title": "Golang Tutorial Guide – A List of Free Courses to Learn the",
     "description": "By Andrew Walsh Why choose Go? Before I get into my list of Go learning resources, let me tell you about one of the most famous defections in all of programming history. There was a developer in the Node.js who was so prolific that many people believ...",
     "_cat": "设计工具/白板资源",
-    "category": "设计工具/白板资源",
+    "category": "设计工具",
     "name": "Golang Tutorial Guide – A List of Free Courses to Learn the",
     "phase3_merged": true,
     "tags": [
@@ -10527,7 +10527,7 @@
     "name": "librekb.com",
     "title": "librekb.com",
     "description": "librekb.com，设计工具、UI设计、设计资源相关的优质工具/资源。欠容填充站点 - 设计工具/白板资源",
-    "category": "设计工具/白板资源",
+    "category": "设计工具",
     "_cat": "设计工具/白板资源",
     "source": "v12_underfill_flat",
     "phase3_merged": true,
@@ -10541,7 +10541,7 @@
     "title": "QST Free Account",
     "description": "An easy to use yet feature rich method of developing, delivering and grading online quizzes, surveys, tests and other markable assignments. Installs on laptop, desktop, server or cloud. Windows 10/11, Linux and Mac OS. Create/import/export/convert questions.",
     "_cat": "设计工具/白板教程",
-    "category": "设计工具/白板教程",
+    "category": "设计工具",
     "name": "QST Free Account",
     "phase3_merged": true,
     "tags": [
@@ -10557,7 +10557,7 @@
     "description": "Humata is an AI agent that turns your documents into a fast, intelligent knowledge base for instant analysis, insights, and answers.",
     "title": "Humata",
     "_cat": "设计工具/白板教程",
-    "category": "设计工具/白板教程",
+    "category": "设计工具",
     "phase3_merged": true,
     "tags": [
       "humata",
@@ -10571,7 +10571,7 @@
     "description": "智谱大模型开放平台-新一代国产自主通用AI大模型开放平台，是国内大模型排名前列的大模型网站，研发了多款LLM模型，多模态视觉模型产品，致力于将AI产品技术与行业场景双轮驱动的中国先进的认知智能技术和千行百业应用相结合，构建更高精度、高效率、通用化的AI开发新模式和企业级解决方案，实现智谱大模型的产业化，将AI的好处带给每个人。",
     "title": "智谱AI",
     "_cat": "设计工具/白板教程",
-    "category": "设计工具/白板教程",
+    "category": "设计工具",
     "phase3_merged": true,
     "tags": [
       "ai",
@@ -10586,7 +10586,7 @@
     "title": "Documize",
     "description": "Documize provides self-hosted knowledge management solutions for enterprises of all sizes",
     "_cat": "设计工具/白板开源",
-    "category": "设计工具/白板开源",
+    "category": "设计工具",
     "name": "Documize",
     "phase3_merged": true,
     "tags": [
@@ -10687,7 +10687,7 @@
     "description": "Recurrent Neural Network Language Models",
     "source": "awesome",
     "_cat": "AI智能/AI音乐/平台",
-    "category": "效率办公/实用工具/网络工具",
+    "category": "效率办公",
     "name": "Recurrent Neural Network Language Models",
     "tags": [
       "neural",
@@ -10703,7 +10703,7 @@
     "description": "AI is reshaping infrastructure, strategy, and entire industries. Host Conor Bronsdon talks to the engineers, founders, and researchers building breakthrough AI systems about what it actually takes to ship AI in production, where the opportunities lie, and how leaders should think about the strategic bets ahead.\r\n\r\nChain of Thought translates techni",
     "source": "awesome",
     "_cat": "AI智能/AI开发/库",
-    "category": "效率办公/实用工具/网络工具",
+    "category": "效率办公",
     "name": "Chain of Thought",
     "tags": [
       "chain",
@@ -10718,7 +10718,7 @@
     "name": "gophercon.africa",
     "title": "gophercon.africa",
     "description": "gophercon.africa，优质效率办公工具。欠容填充站点 - 系统工具/实用工具/网络工具",
-    "category": "效率办公/实用工具/网络工具",
+    "category": "效率办公",
     "_cat": "系统工具/实用工具/网络工具",
     "source": "v12_underfill_flat",
     "tags": [
@@ -10778,7 +10778,7 @@
     "title": "Coding Games and Programming Challenges to Code Better",
     "description": "CodinGame is a challenge-based training platform for programmers where you can play with the hottest programming topics. Solve games, code AI bots, learn from your peers, have fun.",
     "_cat": "AI智能/AI音乐/生成器",
-    "category": "AI工具/人工智能/AI视频生成",
+    "category": "AI工具/人工智能",
     "name": "Coding Games and Programming Challenges to Code Better",
     "tags": [
       "AI工具",
@@ -10793,7 +10793,7 @@
     "title": "登录 - Tamari",
     "description": "登录 - Tamari，AI、人工智能、AI工具相关的优质工具/资源。登录 Tamari 网络应用程序。",
     "_cat": "AI智能/AI音乐/生成器",
-    "category": "AI工具/人工智能/AI视频生成",
+    "category": "AI工具/人工智能",
     "name": "登录 - Tamari",
     "tags": [
       "AI工具",
@@ -10808,7 +10808,7 @@
     "title": "Zammad Community",
     "description": "The Zammad - Help Desk and Ticket System - Community Page",
     "_cat": "AI智能/AI开发/生成器",
-    "category": "AI工具/人工智能/AI视频生成",
+    "category": "AI工具/人工智能",
     "name": "Zammad Community",
     "tags": [
       "AI工具",
@@ -10945,7 +10945,7 @@
     "title": "Cozy Cloud / Twake - Prenez le contrôle de toutes vos donnée",
     "description": "✅ Français ✅ Open source ✅ Sécurisé ✅ Gratuit jusqu’à 5 Go de stockage",
     "_cat": "视频娱乐/音乐/生成器",
-    "category": "多媒体/视频娱乐/音乐生成",
+    "category": "多媒体",
     "name": "Cozy Cloud / Twake - Prenez le contrôle de toutes vos donnée",
     "tags": [
       "cloud",
@@ -10960,7 +10960,7 @@
     "name": "mybb.com",
     "title": "mybb.com",
     "description": "欠容填充站点 - 多媒体/视频娱乐/音乐生成",
-    "category": "多媒体/视频娱乐/音乐生成",
+    "category": "多媒体",
     "_cat": "多媒体/视频娱乐/音乐生成",
     "source": "v12_underfill_flat",
     "tags": [
@@ -10974,7 +10974,7 @@
     "title": "autodiff",
     "description": "autodiff，优质多媒体工具。autodiff documentation.",
     "_cat": "视频娱乐/游戏/资源",
-    "category": "多媒体/视频娱乐/视频游戏",
+    "category": "多媒体",
     "name": "autodiff",
     "tags": [
       "多媒体",
@@ -10987,7 +10987,7 @@
     "title": "Layli",
     "description": "Web site created using create-react-app",
     "_cat": "视频娱乐/游戏/资源",
-    "category": "多媒体/视频娱乐/视频游戏",
+    "category": "多媒体",
     "name": "Layli",
     "tags": [
       "layli",
@@ -11001,7 +11001,7 @@
     "title": "ChartDB - Database schema diagrams visualizer",
     "description": "Database diagram and data modeling tool to visualize and design schemas with a single query. Create ER diagrams, collaborate, and export DDL scripts.",
     "_cat": "视频娱乐/游戏/开源",
-    "category": "多媒体/视频娱乐/视频游戏",
+    "category": "多媒体",
     "name": "ChartDB - Database schema diagrams visualizer",
     "tags": [
       "chartdb",
@@ -11015,7 +11015,7 @@
     "url": "https://www.webex.com",
     "name": "https://www.webex.com",
     "description": "访问 https://www.webex.com 了解更多信息",
-    "category": "效率办公/网络小说平台",
+    "category": "效率办公",
     "_cat": "阅读写作>网文>资源",
     "title": "https://www.webex.com",
     "tags": [
@@ -11028,7 +11028,7 @@
     "url": "https://talkpython.fm/",
     "name": "https://talkpython.fm/",
     "description": "访问 https://talkpython.fm/ 了解更多信息",
-    "category": "效率办公/网络小说平台",
+    "category": "效率办公",
     "_cat": "阅读写作>创作>社区",
     "title": "https://talkpython.fm/",
     "tags": [
@@ -11041,7 +11041,7 @@
     "url": "https://go.libhunt.com",
     "name": "https://go.libhunt.com",
     "description": "访问 https://go.libhunt.com 了解更多信息",
-    "category": "效率办公/网络小说平台",
+    "category": "效率办公",
     "_cat": "阅读写作>平台>开源",
     "title": "https://go.libhunt.com",
     "tags": [
@@ -11054,7 +11054,7 @@
     "url": "https://app.khoj.dev/",
     "name": "https://app.khoj.dev/",
     "description": "访问 https://app.khoj.dev/ 了解更多信息",
-    "category": "效率办公/网文作者工具",
+    "category": "效率办公",
     "_cat": "阅读写作>平台>工具",
     "title": "https://app.khoj.dev/",
     "tags": [
@@ -11066,7 +11066,7 @@
     "url": "https://www.linkace.org/",
     "name": "https://www.linkace.org/",
     "description": "访问 https://www.linkace.org/ 了解更多信息",
-    "category": "效率办公/网文作者工具",
+    "category": "效率办公",
     "_cat": "阅读写作>平台>教程",
     "title": "https://www.linkace.org/",
     "tags": [
@@ -11078,7 +11078,7 @@
     "url": "https://draw.io",
     "name": "https://draw.io",
     "description": "https://draw.io，优质效率办公工具。访问 https://draw.io 了解更多信息",
-    "category": "效率办公/网文作者工具",
+    "category": "效率办公",
     "_cat": "阅读写作>平台>开源",
     "title": "https://draw.io",
     "tags": [
@@ -12842,7 +12842,7 @@
     "title": "The RomM Project",
     "description": "RomM is a self-hosted rom manager for your game collection.",
     "_cat": "办公工具/协作社区",
-    "category": "效率办公/协作社区",
+    "category": "效率办公",
     "name": "The RomM Project",
     "phase3_merged": true,
     "tags": [
@@ -12857,7 +12857,7 @@
     "title": "Introduction - Tuwunel One",
     "description": "Tuwunel, a high performance successor to Conduit and Conduwuit",
     "_cat": "办公工具/协作社区",
-    "category": "效率办公/协作社区",
+    "category": "效率办公",
     "name": "Introduction - Tuwunel One",
     "phase3_merged": true,
     "tags": [
@@ -12872,7 +12872,7 @@
     "title": "ACME Storefront, powered by Saleor &amp; Next.js",
     "description": "Storefront Next.js Example for building performant e-commerce experiences with Saleor - the composable, headless commerce platform for global brands.",
     "_cat": "办公工具/协作社区",
-    "category": "效率办公/协作社区",
+    "category": "效率办公",
     "name": "ACME Storefront, powered by Saleor &amp; Next.js",
     "phase3_merged": true,
     "tags": [
@@ -12901,7 +12901,7 @@
     "title": "Manage money. Together.",
     "description": "Econumo is a beautiful application for managing personal, couple and family finances. Supports multiple currencies, joint accounts, and budgets. Join the waiting list for a discount, offering cloud-hosted or self-hosted options.",
     "_cat": "办公效率/表单/社区",
-    "category": "效率办公/表单社区",
+    "category": "效率办公",
     "name": "Manage money. Together.",
     "tags": [
       "manage",
@@ -12916,7 +12916,7 @@
     "description": "Anaconda is the birthplace of Python data science. We are a movement of data scientists, data-driven enterprises, and open source communities.",
     "title": "Anaconda",
     "_cat": "办公效率/表单/社区",
-    "category": "效率办公/表单社区",
+    "category": "效率办公",
     "tags": [
       "anaconda",
       "办公工具"
@@ -12928,7 +12928,7 @@
     "title": "Scoold",
     "description": "Scoold is open source and works great as a Q&#38;A platform, forum, knowledge base or customer support tool. Deploy on-premises or to any cloud in minutes.",
     "_cat": "办公效率/表单/社区",
-    "category": "效率办公/表单社区",
+    "category": "效率办公",
     "name": "Scoold",
     "tags": [
       "scoold",
@@ -13084,7 +13084,7 @@
     "description": "Use state-of-the-art, open-source LLMs and image models at blazing fast speed, or fine-tune and deploy your own at no additional cost with Fireworks AI!",
     "title": "Fireworks AI",
     "_cat": "多媒体/特效生成",
-    "category": "多媒体/特效生成",
+    "category": "多媒体",
     "phase3_merged": true,
     "tags": [
       "ai",
@@ -13098,7 +13098,7 @@
     "title": "Introduction - Gogs: A painless self-hosted Git service",
     "description": "The painless way to host your own Git service",
     "_cat": "多媒体/特效生成",
-    "category": "多媒体/特效生成",
+    "category": "多媒体",
     "name": "Introduction - Gogs: A painless self-hosted Git service",
     "phase3_merged": true,
     "tags": [
@@ -13113,7 +13113,7 @@
     "name": "gogs.io",
     "title": "gogs.io",
     "description": "gogs.io，多媒体、视频、音频相关的优质工具/资源。欠容填充站点 - 多媒体/特效生成",
-    "category": "多媒体/特效生成",
+    "category": "多媒体",
     "_cat": "多媒体/特效生成",
     "source": "v12_underfill_flat",
     "phase3_merged": true,
@@ -14658,7 +14658,7 @@
     "url": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#Writing_C_programs_with_Emacs\\",
     "name": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#Writing_C_programs_with_Emacs\\",
     "description": "访问 http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#Writing_C_programs_with_Emacs\\ 了解更多信息",
-    "category": "AI工具/人工智能/写作生成",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/写作生成",
     "phase3_split": true,
     "title": "http://www.cs.yale.edu/homes/aspnes/classes/223/notes.html#Writing_C_programs_with_Emacs\\",
@@ -22318,7 +22318,7 @@
     "url": "https://stackexchange.github.io/dnscontrol/",
     "name": "https://stackexchange.github.io/dnscontrol/",
     "description": "访问 https://stackexchange.github.io/dnscontrol/ 了解更多信息",
-    "category": "AI工具/人工智能/文生图",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/文生图/子类-5",
     "phase3_split": true,
     "title": "https://stackexchange.github.io/dnscontrol/",
@@ -22523,7 +22523,7 @@
     "url": "https://ocsinventory-ng.org/",
     "name": "https://ocsinventory-ng.org/",
     "description": "访问 https://ocsinventory-ng.org/ 了解更多信息",
-    "category": "AI工具/人工智能/图像扩展",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/图像扩展/子类-3",
     "phase3_split": true,
     "title": "https://ocsinventory-ng.org/",
@@ -22538,7 +22538,7 @@
     "url": "https://dataform.co/\\",
     "name": "https://dataform.co/\\",
     "description": "访问 https://dataform.co/\\ 了解更多信息",
-    "category": "AI工具/人工智能/图像扩展",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/图像扩展/子类-3",
     "phase3_split": true,
     "title": "https://dataform.co/\\",
@@ -22553,7 +22553,7 @@
     "url": "https://www.postgresql.org/\\",
     "name": "https://www.postgresql.org/\\",
     "description": "访问 https://www.postgresql.org/\\ 了解更多信息",
-    "category": "AI工具/人工智能/风格迁移",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/风格迁移/子类-2",
     "phase3_split": true,
     "title": "https://www.postgresql.org/\\",
@@ -22611,7 +22611,7 @@
     "url": "https://git.openafs.org/?p=openafs.git;a=summary",
     "name": "https://git.openafs.org/?p=openafs.git;a=summary",
     "description": "访问 https://git.openafs.org/?p=openafs.git;a=summary 了解更多信息",
-    "category": "AI工具/人工智能/背景移除",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/背景移除/子类-5",
     "phase3_split": true,
     "title": "https://git.openafs.org/?p=openafs.git;a=summary",
@@ -22626,7 +22626,7 @@
     "url": "https://www.netxms.org/",
     "name": "https://www.netxms.org/",
     "description": "访问 https://www.netxms.org/ 了解更多信息",
-    "category": "AI工具/人工智能/背景移除",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/背景移除/子类-4",
     "phase3_split": true,
     "title": "https://www.netxms.org/",
@@ -22641,7 +22641,7 @@
     "url": "https://spdx.org/licenses/EPL-1.0.html",
     "name": "https://spdx.org/licenses/EPL-1.0.html",
     "description": "访问 https://spdx.org/licenses/EPL-1.0.html 了解更多信息",
-    "category": "AI工具/人工智能/背景移除",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/背景移除/子类-4",
     "phase3_split": true,
     "title": "https://spdx.org/licenses/EPL-1.0.html",
@@ -22871,7 +22871,7 @@
     "url": "https://en.wikipedia.org/wiki/Email_client\\",
     "name": "https://en.wikipedia.org/wiki/Email_client\\",
     "description": "访问 https://en.wikipedia.org/wiki/Email_client\\ 了解更多信息",
-    "category": "AI工具/人工智能/写作生成",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/写作生成",
     "phase3_split": true,
     "title": "https://en.wikipedia.org/wiki/Email_client\\",
@@ -43823,7 +43823,7 @@
     "name": "Draw.io",
     "title": "Draw.io",
     "description": "Draw.io is a free online diagram software for making flowcharts, process diagrams, org charts and more.",
-    "category": "设计工具/流程图生成",
+    "category": "设计工具",
     "_cat": "设计工具/流程图生成",
     "tags": [
       "draw",
@@ -43836,7 +43836,7 @@
     "name": "Mermaid",
     "title": "Mermaid",
     "description": "Mermaid is a JavaScript-based diagramming and charting tool that generates diagrams from text.",
-    "category": "设计工具/流程图生成",
+    "category": "设计工具",
     "_cat": "设计工具/流程图生成",
     "tags": [
       "mermaid",
@@ -43849,7 +43849,7 @@
     "name": "Whimsical",
     "title": "Whimsical",
     "description": "Whimsical is a visual collaboration platform with flowcharts, wireframes, mind maps and sticky notes.",
-    "category": "设计工具/白板开源",
+    "category": "设计工具",
     "_cat": "设计工具/白板开源",
     "tags": [
       "whimsical",
@@ -43862,7 +43862,7 @@
     "name": "Miro",
     "title": "Miro",
     "description": "Miro is an online collaborative whiteboard platform for remote team collaboration with infinite canvas.",
-    "category": "设计工具/白板开源",
+    "category": "设计工具",
     "_cat": "设计工具/白板开源",
     "tags": [
       "miro",
@@ -44276,7 +44276,7 @@
     "name": "Runway ML",
     "title": "Runway ML",
     "description": "Runway ML，优质AI工具工具。Runway ML - 高效编程开发工具",
-    "category": "AI工具/人工智能/视频工具",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/视频工具",
     "source": "v14_search_batch",
     "tags": [
@@ -44403,7 +44403,7 @@
     "name": "ElevenLabs",
     "title": "ElevenLabs",
     "description": "ElevenLabs，优质AI工具工具。ElevenLabs - 高效编程开发工具",
-    "category": "AI工具/人工智能/视频工具",
+    "category": "AI工具/人工智能",
     "_cat": "AI工具/人工智能/视频工具",
     "source": "v14_search_batch",
     "tags": [

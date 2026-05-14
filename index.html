@@ -129,11 +129,17 @@ html, body {
             <div class="relative flex-1 max-w-md ml-auto">
                 <svg class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-sm pointer-events-none" aria-hidden="true"></svg>
                 <input type="text" id="search-input" placeholder="搜索资源... (Ctrl + K)"
-                       class="w-full pl-10 pr-10 py-2.5 rounded-xl"
+                       class="w-full pl-10 pr-22 py-2.5 rounded-xl"
                        aria-label="搜索资源"
                        autocomplete="off"
                        role="searchbox">
-                <button id="search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 hidden" aria-label="清除搜索">
+                <button                     <button id="theme-toggle" class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg hover:bg-white/10 transition-colors" 
+                            title="切换主题" aria-label="切换主题">
+                        <svg class="w-4 h-4 text-[var(--color-muted)]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" id="theme-icon"/>
+                        </svg>
+                    </button>
+id="search-clear" class="absolute right-9 top-1/2 -translate-y-1/2 hidden" aria-label="清除搜索">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>

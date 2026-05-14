@@ -13,6 +13,19 @@ class FavoriteManager {
         this.visitCounts = this.loadVisits();
     }
 
+    // ===== 工具：安全日期解析 =====
+
+    /**
+     * 安全解析日期字符串为时间戳
+     * @param {string|undefined|null} dateStr - ISO日期字符串
+     * @returns {number} 时间戳（无效日期返回0）
+     */
+    _safeTimestamp(dateStr) {
+        if (!dateStr) return 0;
+        const ts = new Date(dateStr).getTime();
+        return isNaN(ts) ? 0 : ts;
+    }
+
     // ===== 存储：收藏数据 =====
 
     loadFromStorage() {
@@ -135,13 +148,13 @@ class FavoriteManager {
 
     getAll() {
         return [...this.favorites].sort((a, b) =>
-            new Date(b.addedAt) - new Date(a.addedAt)
+            this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt)
         );
     }
 
     getRecent(limit) {
         const result = [...this.favorites].sort((a, b) =>
-            new Date(b.addedAt) - new Date(a.addedAt)
+            this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt)
         );
         if (limit) result.splice(limit);
         return result;
@@ -164,7 +177,9 @@ class FavoriteManager {
         });
         // 按分类内收藏时间排序
         Object.keys(grouped).forEach(cat => {
-            grouped[cat].sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+            grouped[cat].sort((a, b) =>
+                this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt)
+            );
         });
         return grouped;
     }
@@ -177,7 +192,9 @@ class FavoriteManager {
             (f.description && f.description.toLowerCase().includes(q)) ||
             (f.category && f.category.toLowerCase().includes(q)) ||
             (f.url && f.url.toLowerCase().includes(q))
-        ).sort((a, b) => new Date(b.addedAt) - new Date(a.addedAt));
+        ).sort((a, b) =>
+            this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt)
+        );
     }
 
     isFavorite(siteName) {
@@ -269,4 +286,3 @@ class FavoriteManager {
 }
 
 const favoriteManager = new FavoriteManager();
-window.favoriteManager = favoriteManager;
