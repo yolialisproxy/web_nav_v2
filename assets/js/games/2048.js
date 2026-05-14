@@ -19,6 +19,9 @@ Game2048.prototype.init = function() {
     this._reset();
     this._render();
     this._bindEvents();
+        // 触控手势绑定
+        this._setupTouchControls();
+
 };
 
 Game2048.prototype._reset = function() {
@@ -334,6 +337,50 @@ Game2048.prototype.load = function() {
         if (best) this.best = parseInt(best, 10) || 0;
     } catch(e){}
     return null;
+};
+
+
+// 触控手势：swipe → 方向键映射
+Game2048.prototype._setupTouchControls = function() {
+    var self = this;
+    var startX = 0, startY = 0, startTime = 0;
+    var el = this.el || document.getElementById('game-2048');
+    if (!el) return;
+
+    el.addEventListener('touchstart', function(e) {
+        var t = e.changedTouches[0];
+        startX = t.clientX;
+        startY = t.clientY;
+        startTime = Date.now();
+        e.preventDefault();
+    }, { passive: false });
+
+    el.addEventListener('touchend', function(e) {
+        var t = e.changedTouches[0];
+        var dx = t.clientX - startX;
+        var dy = t.clientY - startY;
+        var dt = Date.now() - startTime;
+
+        if (dt < 300 && (Math.abs(dx) > 30 || Math.abs(dy) > 30)) {
+            if (Math.abs(dx) > Math.abs(dy)) {
+                self._onSwipe(dx > 0 ? 'right' : 'left');
+            } else {
+                self._onSwipe(dy > 0 ? 'down' : 'up');
+            }
+        }
+        e.preventDefault();
+    }, { passive: false });
+};
+
+Game2048.prototype._onSwipe = function(dir) {
+    if (this.state !== 'running') return;
+    switch(dir) {
+        case 'left':  this._moveLeft();  break;
+        case 'right': this._moveRight(); break;
+        case 'up':    this._moveUp();    break;
+        case 'down':  this._moveDown();  break;
+    }
+    GameUtils.playSfx('move');
 };
 
 window.Game2048 = Game2048;
