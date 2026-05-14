@@ -24,6 +24,11 @@ class State {
             searchMode: false      // 是否在搜索覆盖层模式
         };
         this._subscribers = [];
+        // 标签系统（从 tags.js 合并而来）
+        this.tagAll = new Map();      // tag -> count
+        this.tagSites = new Map();   // site id -> tags[]
+        this.activeTags = new Set();
+        this._tagInitialized = false;
         this._isNotifying = false; // 防止 _notify 重入导致的无限循环
     }
 
@@ -108,6 +113,145 @@ class State {
             setTimeout(() => skeleton.remove(), 500);
         }
     }
+
+    // ═══════════════════════════════════════════════
+    // 标签系统（从 tags.js 合并）
+    // ═══════════════════════════════════════════════
+
+    /** 初始化标签索引 */
+    async loadTags(dataManager) {
+        if (this._tagInitialized) return;
+        let loadedFromJson = false;
+
+        try {
+            const resp = await fetch('data/tag_index.json');
+            if (resp.ok) {
+                const tagIndex = await resp.json();
+                tagIndex.forEach(t => this.tagAll.set(t.tag, t.count));
+                loadedFromJson = true;
+            }
+        } catch (e) {
+            // 忽略，将从站点数据构建
+        }
+
+        this._buildTagsFromSites(dataManager);
+        this._tagInitialized = true;
+    }
+
+    /** 从站点数据构建标签索引 */
+    _buildTagsFromSites(dm) {
+        this.tagAll.clear();
+        this.tagSites.clear();
+
+        if (!dm || !dm.sites) return;
+
+        dm.sites.forEach(site => {
+            if (!site.tags || !Array.isArray(site.tags)) return;
+            const validTags = [];
+            site.tags.forEach(tag => {
+                if (!tag || typeof tag !== 'string') return;
+                const key = tag.trim().toLowerCase();
+                if (!key) return;
+                validTags.push(tag.trim());
+                if (!this.tagAll.has(key)) this.tagAll.set(key, 0);
+                this.tagAll.set(key, this.tagAll.get(key) + 1);
+            });
+            if (validTags.length > 0) this.tagSites.set(site.id, validTags);
+        });
+    }
+
+    /** 获取站点的标签 */
+    getSiteTags(site) {
+        if (site && site.tags) return site.tags;
+        if (site && this.tagSites.has(site.id)) return this.tagSites.get(site.id);
+        return [];
+    }
+
+    /** 根据标签筛选站点 */
+    filterByTags(sites, tags) {
+        if (!tags || !tags.length) return sites;
+        const tagSet = new Set(tags.map(t => t.toLowerCase()));
+        return sites.filter(site => {
+            const keys = this.getSiteTags(site).map(t => t.toLowerCase());
+            return Array.from(tagSet).some(t => keys.includes(t));
+        });
+    }
+
+    /** 切换标签激活状态 */
+    toggleTag(tag, mode = 'toggle') {
+        const key = tag.toLowerCase();
+        if (mode === 'toggle') {
+            this.activeTags.has(key) ? this.activeTags.delete(key) : this.activeTags.add(key);
+        } else if (mode === 'set') {
+            this.activeTags.clear(); this.activeTags.add(key);
+        } else if (mode === 'clear') {
+            this.activeTags.clear();
+        } else if (mode === 'exact') {
+            this.activeTags.clear(); this.activeTags.add(key);
+        }
+        return this.activeTags.size;
+    }
+
+    /** 获取激活的标签列表 */
+    getActiveTags() {
+        return Array.from(this.activeTags);
+    }
+
+    /** 渲染标签云 UI */
+    renderTagCloud(containerId, options = {}) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        const limit = options.limit || 50;
+
+        const tags = [];
+        this.tagAll.forEach((count, tag) => {
+            tags.push({ tag, count, active: this.activeTags.has(tag) });
+        });
+        tags.sort((a, b) => b.count - a.count);
+        tags.splice(limit);
+
+        if (tags.length === 0) {
+            container.innerHTML = '<div class="tag-cloud"><span class="tag-pill" style="opacity:0.5">暂无标签</span></div>';
+            return;
+        }
+
+        let html = '<div class="tag-cloud">';
+        tags.forEach(t => {
+            const size = Math.max(0.8, Math.min(1.6, 0.8 + t.count / 500));
+            html += `<a href="#" class="tag-pill ${t.active ? 'active' : ''}" ` +
+                    `data-tag="${t.tag}" style="font-size:${size}em" ` +
+                    `title="${t.tag} (${t.count} sites)" tabindex="0" role="button" aria-pressed="${t.active}">` +
+                    `${this._escapeHtml(t.tag)}<span class="tag-count">${t.count}</span></a>`;
+        });
+        html += '</div>';
+        container.innerHTML = html;
+
+        container.querySelectorAll('.tag-pill').forEach(el => {
+            const handler = (e) => {
+                e.preventDefault(); e.stopPropagation();
+                const tag = el.dataset.tag;
+                this.toggleTag(tag);
+                this.renderTagCloud(containerId, options);
+                this._notify();
+                window.dispatchEvent(new CustomEvent('tags-filter-changed', {
+                    detail: { tags: this.getActiveTags() }
+                }));
+            };
+            el.addEventListener('click', handler);
+            el.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); handler(e);
+                }
+            });
+        });
+    }
+
+    /** 标签相关：禁用警告 */
+    get tagManagerDeprecationNotice() {
+        console.warn('[State] window.tagManager 已废弃，请使用 state.tags 相关 API');
+        return null;
+    }
+
 }
 
 const state = new State();

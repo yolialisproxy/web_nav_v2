@@ -92,8 +92,7 @@ async function init() {
 
     // 初始化标签系统
     try {
-        await initTagManager(dataManager);
-        await tagManager.load();
+        await state.loadTags(dataManager);  // 标签系统已集成到 State
         renderTagCloud('tag-cloud-container');
     } catch (e) {
         console.warn('[App] 标签系统初始化失败:', e);

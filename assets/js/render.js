@@ -240,8 +240,8 @@ function renderSites(sites, containerId) {
 
     // 应用标签筛选
     var activeTags = state.get('filterTags') || [];
-    if (activeTags.length > 0 && tagManager) {
-        sites = tagManager.filterByActiveTags(sites);
+    if (activeTags.length > 0 && state.tagAll.size > 0) {
+        sites = state.filterByTags(sites, state.getActiveTags());
     }
 
     paginatedRenderer.setData(sites);
@@ -347,7 +347,7 @@ function renderCategoryView(catId, subId, leafId) {
 
     // 标签筛选器
     var activeTags = state.get('filterTags') || [];
-    if (tagManager && dataManager.tagIndexSorted && dataManager.tagIndexSorted.length > 0) {
+    if (state.tagAll.size > 0) {
         html += '<div class="tag-filter-bar">';
         html += '<span class="tag-filter-label">🏷️ 筛选:</span>';
         activeTags.forEach(function(tag) {
@@ -857,5 +857,4 @@ function renderView(s) {
         // // console.log('[Render] renderView error:', e.message);
     }
 }
-
 
