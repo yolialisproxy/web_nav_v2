@@ -3,23 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>啃魂导航 V3 - 智能开发者导航</title>
+    <title>啃魂导航 - 开发者导航 | AI工具·编程资源·设计素材</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
     <meta name="description" content="啃魂导航 - 智能开发者导航站，聚合AI、编程、设计、工具等优质资源。支持Trie搜索、标签筛选、收藏功能。">
     <meta name="keywords" content="开发者导航,AI导航,编程工具,设计资源,技术网站导航">
-    <meta name="author" content="啃魂导航">
+        <meta name="author" content="啃魂导航">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="description" content="啃魂导航聚合AI、编程、设计、工具等3100+优质开发者资源。智能Trie搜索、标签筛选、收藏功能，支持小游戏娱乐，开发者一站式导航站。">
+    <meta name="keywords" content="开发者导航,AI导航,编程工具,设计资源,技术网站导航,前端开发,AI工具">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta property="og:title" content="啃魂导航 V3 - 智能开发者导航">
     <meta property="og:description" content="聚合AI、编程、设计、工具等优质资源，智能搜索，快速导航。">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://nav.kunhunav.com/assets/images/og-image.png">
+    <meta property="og:url" content="https://nav.kunhunav.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="啃魂导航 V3 - 智能开发者导航">
+    <meta name="twitter:description" content="聚合AI、编程、设计、工具等3100+优质开发者资源。智能搜索，快速导航，支持小游戏娱乐。">
+    <meta name="twitter:image" content="https://nav.kunhunav.com/assets/images/twitter-card.png">
+    <link rel="canonical" href="https://nav.kunhunav.com/">
+    <!-- Schema.org 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "啃魂导航",
+      "alternateName": "KunHun Nav",
+      "url": "https://nav.kunhunav.com/",
+      "description": "聚合AI、编程、设计、工具等3100+优质开发者资源，智能搜索，快速导航",
+      "inLanguage": "zh-CN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://nav.kunhunav.com/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
     <meta name="theme-color" content="#0a0a0f">
     <link rel="stylesheet" href="assets/css/core.css">
-    <link rel="stylesheet" href="assets/css/theme-modern.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="preload" href="assets/css/core.css" as="style">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <style>
+@font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("fonts/fa-solid-900.woff2") format("woff2");
+    size-adjust: 105%;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg, #0a0a0f);
+    color: var(--color-text, #e2e8f0);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
+}
+
+/* 内联过渡动画（首屏立即可用） */
+.fade-in { animation: fadeInUp 0.4s ease forwards; }
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+    </style>
     <link rel="stylesheet" href="assets/css/favorite-enhancements.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game-hub.css">
     <!-- PWA manifest -->
     <link rel="manifest" href="manifest.json">
 </head>
@@ -62,6 +120,9 @@
                 <div class="hidden md:inline-flex items-center">
                     <button id="favorite-toggle" class="favorite-btn" onclick="if(window.favoriteUI)window.favoriteUI.openModal()" title="查看收藏" aria-label="打开收藏面板">
                         ♡
+                    </button>
+                    <button id="game-menu-toggle" class="game-menu-btn" title="游戏大厅" aria-label="打开游戏大厅">
+                        🎮 游戏
                     </button>
                 </div>
             </div>
@@ -119,19 +180,67 @@
         </div>
     </div>
 
+    <!-- 游戏大厅模态框 -->
+    <div id="game-hub-overlay" class="game-hub-overlay" role="dialog" aria-modal="true" aria-label="游戏大厅">
+        <div class="game-hub-modal">
+            <div class="game-hub-header">
+                <h2>🎮 游戏大厅</h2>
+                <button class="game-hub-close" id="game-hub-close" aria-label="关闭">&times;</button>
+            </div>
+            <div class="game-hub-categories">
+                <button class="game-cat-btn active" data-cat="all">全部</button>
+                <button class="game-cat-btn" data-cat="classic">经典</button>
+                <button class="game-cat-btn" data-cat="strategy">策略</button>
+                <button class="game-cat-btn" data-cat="rpg">RPG</button>
+            </div>
+            <div class="game-hub-body">
+                <div class="game-grid" id="game-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 游戏运行覆盖层 -->
+    <div id="game-play-overlay" class="game-play-overlay">
+        <div class="game-play-header">
+            <span class="game-play-title" id="game-play-title">游戏</span>
+            <div style="display:flex;align-items:center;gap:12px;">
+                <span class="game-play-score" id="game-play-score"></span>
+                <div class="game-play-controls">
+                    <button class="game-btn" id="game-pause-btn" aria-label="暂停">⏸️ 暂停</button>
+                    <button class="game-btn game-btn-danger" id="game-quit-btn" aria-label="退出游戏">✕ 退出</button>
+                </div>
+            </div>
+        </div>
+        <div class="game-play-area" id="game-play-area"></div>
+        <div class="game-play-footer" id="game-play-footer"></div>
+    </div>
+
     <!-- Toast通知容器 -->
     <div id="toast-container" class="toast-notification" role="status" aria-live="polite"></div>
 
     <!-- 脚本 -->
+    <!-- 核心（同步，仅2个） -->
     <script src="assets/js/state.js"></script>
     <script src="assets/js/data.js"></script>
-    <script src="assets/js/search.js"></script>
-    <script src="assets/js/render.js"></script>
-    <script src="assets/js/tags.js"></script>
-    <script src="assets/js/favorite.js"></script>
-    <script src="assets/js/favorite-ui-bootstrap.js"></script>
-    <script src="assets/js/toast.js"></script>
-    <script src="assets/js/app.js"></script>
+    <!-- 非核心模块（defer延迟，不阻塞首屏渲染） -->
+    <script src="assets/js/search.js" defer></script>
+    <script src="assets/js/render.js" defer></script>
+    <script src="assets/js/tags.js" defer></script>
+    <script src="assets/js/favorite.js" defer></script>
+    <script src="assets/js/favorite-ui-bootstrap.js" defer></script>
+    <script src="assets/js/toast.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+    <!-- 游戏模块 -->
+    <script src="assets/js/game-utils.js" defer></script>
+    <script src="assets/js/games/game-engine.js" defer></script>
+    <script src="assets/js/games/solitaire.js" defer></script>
+    <script src="assets/js/games/tetris.js" defer></script>
+    <script src="assets/js/games/go.js" defer></script>
+    <script src="assets/js/games/chess.js" defer></script>
+    <script src="assets/js/games/mahjong.js" defer></script>
+    <script src="assets/js/games/wuxia.js" defer></script>
+    <script src="assets/js/games/dating.js" defer></script>
+    <script src="assets/js/game-hub.js" defer></script>
 
     <!-- 收藏弹窗（增强版） -->
     <div id="favorite-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="收藏面板">

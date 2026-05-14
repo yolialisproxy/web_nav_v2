@@ -169,7 +169,10 @@ function _buildCard(site, pageIdx) {
         dataAttr = ' data-page="' + pageIdx + '"';
     }
 
-    return '<a href="' + url + '" class="site site-card"' + dataAttr + ' ' + target + ' ' + rel +
+    var isFav = window.favoriteManager && window.favoriteManager.isFavorite(title);
+           var favClass = isFav ? 'favorite-btn favorited' : 'favorite-btn';
+           var favIcon = isFav ? '♥' : '♡';
+           return '<a href="' + url + '" class="site site-card" data-site-id="' + site.id + '" data-site-name="' + _escapeHtml(title) + '"' + dataAttr + ' ' + target + ' ' + rel +
            ' aria-label="' + _escapeHtml(title) + '"' +
            (url !== '#' ? ' onclick="trackSiteClick(\'' + _escapeHtml(site.name) + '\')"' : '') +
            '>' +
@@ -177,6 +180,7 @@ function _buildCard(site, pageIdx) {
            'onerror="this.onerror=null;this.src=\'assets/images/favicon.png\';">' +
            '<span class="card-title">' + title + '</span>' +
            '<span class="card-desc">' + desc + '</span>' +
+           '<button class="' + favClass + '" data-action="toggle-favorite" aria-label="收藏" title="收藏站点">' + favIcon + '</button>' +
            '</a>';
 }
 
@@ -607,3 +611,184 @@ function _loadNextPage(container) {
         });
     }, 30);
 }
+
+/**
+ * 绑定卡片点击事件
+ */
+function bindCardEvents() {
+    try {
+        var main = document.getElementById('main-content');
+        if (!main) return;
+
+        // 事件委托：一次性绑定，处理所有卡片收藏点击
+        main.addEventListener('click', function(e) {
+            var btn = e.target.closest('[data-action="toggle-favorite"]');
+            if (!btn) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            var card = btn.closest('.site-card');
+            if (!card) return;
+
+            // 通过 data-site-id 从 dataManager 获取完整 site 对象
+            var siteId = parseInt(card.getAttribute('data-site-id'), 10);
+            var site = null;
+            if (window.dataManager && typeof window.dataManager.getSite === 'function') {
+                site = window.dataManager.getSite(siteId);
+            }
+
+            if (!site) {
+                console.warn('[CardEvents] 无法获取站点数据 id:', siteId);
+                return;
+            }
+
+            // 调用 toggle
+            if (window.favoriteManager && typeof window.favoriteManager.toggle === 'function') {
+                var result = window.favoriteManager.toggle(site);
+                if (result && result.success) {
+                    // 实时更新按钮状态
+                    var isFav = window.favoriteManager.isFavorite(site.name);
+                    btn.textContent = isFav ? '♥' : '♡';
+                    btn.classList.toggle('favorited', isFav);
+                    // 更新收藏计数
+                    if (window.favoriteUI && typeof window.favoriteUI.updateCount === 'function') {
+                        window.favoriteUI.updateCount();
+                    }
+                    // 可选：toast 提示
+                    if (window.Toast && typeof window.Toast.show === 'function') {
+                        window.Toast.show(isFav ? '已添加到收藏' : '已取消收藏', isFav ? 'success' : 'info');
+                    }
+                }
+            } else {
+                console.warn('[CardEvents] favoriteManager 不可用');
+            }
+        });
+
+        // 标记绑定完成
+        var cards = document.querySelectorAll('.site-card');
+        cards.forEach(function(card) { card._eventsBound = true; });
+
+    } catch(e) {
+        console.error('[CardEvents] 绑定失败:', e);
+    }
+}
+
+
+/**
+ * 绑定标签筛选器事件
+ */
+
+
+/**
+ * 绑定标签筛选器事件（简化版 - 避免 state 递归）
+ */
+function _bindTagFilters() {
+    var bar = document.querySelector('.tag-filter-bar');
+    if (!bar) return;
+
+    bar.querySelectorAll('.tag-suggest, .tag-active-filter').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            var tag = this.getAttribute('data-tag');
+            // 直接操作 DOM 临时切换视觉效果
+            if (this.classList.contains('tag-suggest')) {
+                this.classList.remove('tag-suggest');
+                this.classList.add('tag-active-filter');
+                this.innerHTML = tag + ' ×';
+            } else {
+                this.classList.remove('tag-active-filter');
+                this.classList.add('tag-suggest');
+                this.innerHTML = '+' + tag + '(' + (this.dataset.count || '') + ')';
+            }
+            // TODO: 实现真正的标签筛选功能
+        });
+    });
+}
+
+
+/**
+ * 导出渲染器桥接对象，供 app.js 使用
+ */
+window.renderer = {
+    renderSidebar: renderSidebar,
+    renderView: renderView,
+    renderCategoryView: renderCategoryView,
+    renderSites: renderSites
+};
+
+
+/**
+ * 渲染侧边栏激活状态（根据 state 更新 DOM class）
+ * @param {Object} s - 当前状态对象
+ */
+function renderSidebar(s) {
+    try {
+        var activeCat = s.sidebar.activeCategoryId;
+        var activeSub = s.sidebar.activeSubCategoryId;
+        var activeLeaf = s.sidebar.activeLeafId;
+
+        // 移除所有激活状态
+        document.querySelectorAll('.nav-item.active, .nav-sub-item.active, .nav-leaf-item.active')
+            .forEach(el => el.classList.remove('active'));
+
+        if (!activeCat) return;
+
+        // 激活顶级分类
+        var catEl = document.querySelector('.nav-item[data-category="' + activeCat + '"]');
+        if (catEl) catEl.classList.add('active');
+
+        // 激活子分类（如果有）
+        if (activeSub) {
+            var subEl = document.querySelector('.nav-sub-item[data-sub="' + activeSub + '"]');
+            if (subEl) subEl.classList.add('active');
+        }
+
+        // 激活叶子分类（如果有）
+        if (activeLeaf && activeLeaf !== activeSub) {
+            var leafEl = document.querySelector('.nav-leaf-item[data-leaf="' + activeLeaf + '"]');
+            if (leafEl) leafEl.classList.add('active');
+        }
+    } catch(e) {
+        console.log('[Render] renderSidebar error:', e.message);
+    }
+}
+
+/**
+ * 渲染主视图（状态驱动的视图路由）
+ * @param {Object} s - 当前状态对象
+ */
+function renderView(s) {
+    try {
+        var currentView = s.currentView;
+        var isSearch = s.searchMode || currentView === 'search';
+
+        if (isSearch) {
+            var query = s.search.query;
+            var results = s.search.results;
+            if (query && results && results.length > 0) {
+                _renderSearchResults(results, query);
+            } else if (query) {
+                var container = document.getElementById('main-content');
+                if (container) container.innerHTML = StateUI.searchEmpty(query);
+            }
+            return;
+        }
+
+        // 分类视图
+        var activeCat = s.sidebar.activeCategoryId;
+        var activeSub = s.sidebar.activeSubCategoryId;
+        var activeLeaf = s.sidebar.activeLeafId;
+
+        if (activeCat) {
+            renderCategoryView(activeCat, activeSub, activeLeaf);
+        } else if (window.dataManager && window.dataManager.isLoaded) {
+            // 默认：渲染所有站点
+            var allSites = window.dataManager.raw || [];
+            renderSites(allSites);
+        }
+    } catch(e) {
+        console.log('[Render] renderView error:', e.message);
+    }
+}
+
+

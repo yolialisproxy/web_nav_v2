@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Allow: /assets/
-Allow: /data/
+Disallow: /data/
+Disallow: /prerendered/
 
-Sitemap: https://yolialisproxy.github.io/web_nav/sitemap.xml
+Sitemap: https://nav.kunhunav.com/sitemap.xml

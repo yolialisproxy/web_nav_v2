@@ -4,6 +4,9 @@
  * 修复：当 tag_index.json 不存在时，从站点数据动态构建标签索引
  */
 
+// 全局单例
+let tagManager = null;
+
 class TagManager {
     constructor(dataManager) {
         this.dataManager = dataManager;
@@ -223,9 +226,6 @@ class TagManager {
         this._initialized = false;
     }
 }
-
-let tagManager;
-
 function initTagManager(dm) {
     if (tagManager) tagManager.destroy();
     tagManager = new TagManager(dm);

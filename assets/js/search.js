@@ -96,6 +96,9 @@ class TrieIndex {
     }
 }
 
+// 搜索引擎单例
+let searchEngine = null;
+
 class SearchEngine {
     constructor(dataManager) {
         this.dataManager = dataManager;
@@ -305,9 +308,6 @@ class SearchEngine {
         }
     }
 }
-
-let searchEngine;
-
 function initSearchEngine(dm) {
     searchEngine = new SearchEngine(dm);
     window.searchEngine = searchEngine;

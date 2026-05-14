@@ -48,12 +48,8 @@ async function init() {
         console.warn('[App] 标签系统初始化失败:', e);
     }
 
-    // 初始化搜索
-    try {
-        initSearchEngine(dataManager);
-    } catch (e) {
-        console.error('[App] 搜索初始化失败:', e);
-    }
+    // 搜索引擎初始化（后台任务）
+    try { initSearchEngine(dataManager); } catch(e) { console.warn('[App] 搜索初始化失败:', e.message); }
 
     // 初始化收藏
     if (window.favoriteManager) {

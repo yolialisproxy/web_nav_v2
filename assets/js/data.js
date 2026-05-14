@@ -199,7 +199,7 @@ class DataManager {
         });
     }
 
-    _validateSites(sites) {
+_validateSites(sites) {
         const valid = sites.filter(site => {
             if (!site || typeof site !== 'object') return false;
             if (!site.name || typeof site.name !== 'string') return false;
@@ -212,6 +212,11 @@ class DataManager {
         if (invalid > 0) {
             console.warn(`[DataManager] 数据格式验证: 跳过 ${invalid} 条无效站点数据`);
         }
+        if (valid.length === 0 && sites.length > 0) {
+            console.warn('[DataManager] 全部站点验证失败，启用宽松模式');
+            return sites;
+        }
+        return valid;
     }
 
     _saveCache() {
@@ -287,6 +292,15 @@ class DataManager {
 
     getAllSites() {
         return Array.from(this.sites.values());
+    }
+
+    /**
+     * Get single site by ID
+     * @param {number} siteId
+     * @returns {Object|null}
+     */
+    getSite(siteId) {
+        return this.sites.get(siteId) || null;
     }
 
     getSitesByCategory(catId) {

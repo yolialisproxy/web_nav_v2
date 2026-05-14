@@ -1,0 +1,301 @@
+/* ============================================
+   game-hub.css - 游戏大厅样式
+   ============================================ */
+
+/* ===== 游戏菜单按钮（顶栏） ===== */
+.game-menu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.game-menu-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+.game-menu-btn .game-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* ===== 游戏大厅模态框 ===== */
+.game-hub-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 3000;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-hub-overlay.active {
+    display: flex;
+}
+
+.game-hub-modal {
+    background: var(--color-bg-alt);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: var(--shadow-lg);
+    animation: hubSlideIn 0.3s ease;
+}
+
+@keyframes hubSlideIn {
+    from { opacity: 0; transform: scale(0.95) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.game-hub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.game-hub-header h2 {
+    font-size: 20px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.game-hub-close {
+    background: none;
+    border: none;
+    color: var(--color-text-dim);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.game-hub-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-text);
+}
+
+/* ===== 游戏分类标签 ===== */
+.game-hub-categories {
+    display: flex;
+    gap: 8px;
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--color-border);
+    flex-wrap: wrap;
+}
+
+.game-cat-btn {
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-dim);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.game-cat-btn:hover,
+.game-cat-btn.active {
+    background: rgba(124, 58, 237, 0.15);
+    border-color: var(--color-primary);
+    color: var(--color-primary-light);
+}
+
+/* ===== 游戏卡片网格 ===== */
+.game-hub-body {
+    padding: 20px 24px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.game-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 20px;
+    cursor: pointer;
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.game-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(124, 58, 237, 0.15);
+}
+
+.game-card:active {
+    transform: translateY(-2px);
+}
+
+.game-card-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.game-card-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 4px;
+}
+
+.game-card-desc {
+    font-size: 12px;
+    color: var(--color-text-dim);
+    line-height: 1.4;
+}
+
+.game-card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(124, 58, 237, 0.2);
+    color: #a78bfa;
+    font-weight: 600;
+}
+
+.game-card.has-save::after {
+    content: '💾';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+}
+
+/* ===== 游戏容器（全屏覆盖层） ===== */
+.game-play-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-bg);
+    z-index: 4000;
+    flex-direction: column;
+}
+
+.game-play-overlay.active {
+    display: flex;
+}
+
+.game-play-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: var(--color-bg-alt);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.game-play-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.game-play-score {
+    font-size: 14px;
+    color: var(--color-primary-light);
+}
+
+.game-play-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.game-btn {
+    padding: 6px 14px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.game-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-primary);
+}
+
+.game-btn-danger {
+    color: #ff6b6b;
+}
+
+.game-btn-danger:hover {
+    background: rgba(255, 107, 107, 0.15);
+}
+
+.game-play-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.game-play-area canvas {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: var(--radius-md);
+}
+
+.game-play-footer {
+    padding: 12px 20px;
+    background: var(--color-bg-alt);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 12px;
+}
+
+/* ===== 游戏菜单覆盖层内 ===== */
+.game-actions-bar {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+.game-actions-bar .game-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+}

@@ -110,6 +110,21 @@ class FavoriteManager {
         return { success: true, message: '取消收藏' };
     }
 
+    /**
+     * Toggle favorite status (add if not exists, remove if exists)
+     * @param {Object} site - Site object {name, url, description, category}
+     */
+    toggle(site) {
+        if (!site || !site.name) {
+            return { success: false, message: '无效站点' };
+        }
+        if (this.isFavorite(site.name)) {
+            return this.remove(site.name);
+        } else {
+            return this.add(site);
+        }
+    }
+
     clear() {
         this.favorites = [];
         this.saveToStorage();

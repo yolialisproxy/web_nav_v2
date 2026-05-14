@@ -88,6 +88,28 @@
     --color-rose-pale: rgba(255, 136, 170, 0.6);
 }
 
+/* ===== @font-face with font-display: swap ===== */
+@font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("fonts/fa-solid-900.woff2") format("woff2");
+    size-adjust: 105%;  /* 微调以减少FA图标布局偏移 */
+}
+
+/* ===== 图片固有尺寸（CLS优化） ===== */
+img {
+    max-width: 100%;
+    aspect-ratio: attr(width) / attr(height);
+}
+img.card-icon {
+    width: 48px;
+    height: 48px;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
 /* ===== 全局重置 ===== */
 *,
 *::before,

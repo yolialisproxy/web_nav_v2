@@ -1,54 +1,33 @@
-# Dependencies
-node_modules/
-package-lock.json
-yarn.lock
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-Desktop.ini
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Build
-dist/
-build/
-.cache/
-
-# Environment
-.env
-.env.local
-.env.*.local
-
-# Temporary
-tmp/
-temp/
+__pycache__/
+*.pyc
+*.pyo
+*.bak
 *.tmp
-
-CLAUDE.md
-.claude/
-.codeartsdoer/
-/graphify-out
-.graphify_python
-.graphify_extract.json
-.graphify_extract.json
-
-hermes-agent/
-
-data/backups/
-data/.backup/
-.loop_state.json
-.loop_state.json
-.loop_state.json
-/backups
+*.swp
+backups/*.json
+*backup*.json
+*.json.bak*
+websites_backup.json
+websites_cleaned.json
+recommended_sites.json
+sitemap_generated.xml
+sitemap_urls.json
+validate-render.py
+analyze_*.py
+classify_*.py
+clean_*.py
+debug.log
+IMPROVEMENT_REPORT.md
+SPA_REFACTOR_COMPLETE.md
+cleaning_report*.md
+docs/
+plans/
+reports/
+webnovel/
+tools/
+data/__pycache__/
+scripts/__pycache__/
+tasks/__pycache__/
+tests/__pycache__/
+graphify-out/
+.hermes/

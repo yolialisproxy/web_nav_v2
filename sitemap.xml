@@ -1,1317 +1,1004 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-3d生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-ai平台</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_平台开源_GitHub.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_平台开源_GitHub.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-ai视频分析</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体_视频娱乐_教程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体_视频娱乐_教程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-ai视频生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_视频生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_视频生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-产品图生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_数据分析.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_数据分析.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-人脸编辑</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_UI设计工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_UI设计工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-代码助手</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_聊天对话.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_聊天对话.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-写作助手</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_写作助手.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_写作助手.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-动漫风格</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_知识图谱.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_知识图谱.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-图像修复</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_摘要生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_摘要生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-图像增强</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_协作工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_协作工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-图像扩展</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_故事生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_故事生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-图像识别</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_剧本创作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_剧本创作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-图生图</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_博客管理.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_博客管理.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-场景生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_代码助手.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_代码助手.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-情感分析</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-推荐系统</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_社交媒体.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_社交媒体.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-搜索引擎</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_总结摘要.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_总结摘要.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-摘要生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_创意激发.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_创意激发.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-数据分析</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_AI写作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_AI写作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-文生图</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_标题生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_标题生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-知识图谱</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_搜索引擎.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_搜索引擎.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-综合平台</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_改写重述.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_改写重述.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-翻译服务</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_技术写作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_技术写作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-聊天对话</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_邮件写作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_邮件写作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-背景移除</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_综合平台.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_综合平台.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-自动化流程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_图像处理.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_图像处理.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-色彩调整</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-草图转图</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/系统工具_实用工具_文件工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/系统工具_实用工具_文件工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-视频生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_文案优化.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_文案优化.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-语音识别</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_内容写作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_内容写作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-超分辨率</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文数据分析.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文数据分析.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-音频生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_PPT模板.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_PPT模板.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-预测分析</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术搜索.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术搜索.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-ai工具-人工智能-风格迁移</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术期刊.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术期刊.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-json工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_诗歌创作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_诗歌创作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-二维码工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文作家协会.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文作家协会.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-公共数据</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文辅助工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文辅助工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-单位转换</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_论文检索.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_论文检索.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-压力测试</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_数据集平台.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_数据集平台.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-在线测试</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_开放课程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_开放课程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-在线计算</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术地图.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术地图.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-平台市场</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_学习生成_在线课程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_学习生成_在线课程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-搜索引擎</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-政府服务</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_学习生成_文档教程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_学习生成_文档教程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-教育机构</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_语音识别.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_语音识别.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-时间工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文阅读应用.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文阅读应用.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-正则测试</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文版权交易.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文版权交易.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-短链接</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文推广平台.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文推广平台.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-其他-杂项-词典翻译</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术会议.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术会议.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-办公工具-协作社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_音频生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_音频生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-办公工具-工具服务</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_插画资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_插画资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-办公工具-杂项-合并分类</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_纹理贴图.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_纹理贴图.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-办公工具-表单社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_背景图案.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_背景图案.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-剪辑教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术委员会.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术委员会.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-剪辑社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文编辑工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文编辑工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-字幕教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文书评社区.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文书评社区.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-字幕资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_工具教程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_工具教程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-录屏资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_CI_CD服务.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_CI_CD服务.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-杂项-合并分类</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_容器镜像.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_容器镜像.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-特效教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_字体资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_字体资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-特效生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_研究工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_研究工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-特效资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_营销文案.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_营销文案.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-素材社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_云开发平台.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_云开发平台.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-素材资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_低代码平台.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_低代码平台.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-动漫教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_DevOps工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_DevOps工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-动漫资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_配色方案.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_配色方案.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-国内视频</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_3D模型.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_3D模型.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-国外视频</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_样机模板.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_样机模板.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_图标资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_图标资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-影视资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_实验室管理.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_实验室管理.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_研究助理.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_研究助理.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-服务</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_图片资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_图片资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-生成器</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体_视频娱乐.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体_视频娱乐.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-直播工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_草图转图.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_草图转图.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-直播社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_包管理.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_包管理.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_API网关.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_API网关.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-视频游戏</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_日志服务.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_日志服务.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-音乐工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_持续部署.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_持续部署.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-音乐开源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_设计素材.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_设计素材.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-音乐教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_设计灵感.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_设计灵感.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-音乐服务</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源_设计资源包.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源_设计资源包.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-音乐生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_工具教程_论文搜索.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_工具教程_论文搜索.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-多媒体-视频娱乐-音乐社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-ai学习开源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文资源下载.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文资源下载.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术会议</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术写作</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_代码托管.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_代码托管.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术地图</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_代码搜索.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_代码搜索.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术委员会</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_Serverless.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_Serverless.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术搜索</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_监控告警.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_监控告警.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术期刊</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_配置中心.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_配置中心.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-学术社交</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文榜单统计.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文榜单统计.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-实验室管理</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_引文管理.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_引文管理.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-工具教程-论文搜索</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_字体资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-工具社区</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-开放课程</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-引文管理</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-教材资源</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-数据集平台</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-数据集生成</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-数据集资源</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-杂项-合并分类</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-研究助理</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-研究工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-论文检索</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-课程工具-mooc平台</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-学术科研-课程资料</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-api服务</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-api生成</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-api网关</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-ci-cd服务</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-devops工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-ide工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-ide社区</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-ide资源</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-serverless</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-云开发平台</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-代码仓库</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-代码托管</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-代码搜索</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-低代码平台</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-包管理</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-在线工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-学习服务</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-学习生成-代码训练</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-学习生成-在线课程</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-学习生成-文档教程</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-容器镜像</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-平台开源-github</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-平台生成</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-平台社区</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-持续部署</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-文档开源</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-文档托管</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-文档教程</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-文档资源</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-日志服务</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-杂项-合并分类</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-监控告警</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-部署服务</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-开发工具-配置中心</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-ai写作</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-内容写作</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-出版工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-创作开源</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-创作教程</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-创意激发</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-剧本创作</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-协作工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-博客工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-博客服务</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-博客管理</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-总结摘要</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-技术写作</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-改写重述</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-故事生成</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-教程工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-文案优化</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-杂项-合并分类</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-标题生成</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-社交媒体</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文书评社区</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文作家协会</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文作者工具</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文写作教程</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文投稿平台</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文推广平台</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文数据分析</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_字体资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文榜单统计</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术写作.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文版权交易</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术写作.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文编辑工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/办公工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文论坛社区</loc>
-    <lastmod>2026-04-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/办公工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文资源下载</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_情感分析.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_情感分析.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文辅助工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_文档托管.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_文档托管.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网文阅读应用</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_课程资料.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_课程资料.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-网络小说平台</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_图片社区.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_图片社区.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-营销文案</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_推荐系统.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_推荐系统.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-诗歌创作</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_平台开源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_平台开源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-效率办公-邮件写作</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_在线工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_在线工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-系统工具-实用工具-其他工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_图像识别.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_图像识别.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-系统工具-实用工具-安全工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_场景生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_场景生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-系统工具-实用工具-文件工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_字体教程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_字体教程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-系统工具-实用工具-网络工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_模板工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_模板工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-ui套件</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_资源社区.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_资源社区.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-ui设计工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体_视频娱乐_国内视频.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体_视频娱乐_国内视频.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-ui设计开源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_部署服务.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_部署服务.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-ui设计教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/学术科研_学术社交.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/学术科研_学术社交.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-ui设计生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_API服务.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_API服务.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-图片工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_模板社区.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_模板社区.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-图片资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_UI设计开源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_UI设计开源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-字体工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_API生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_API生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-字体教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-平台工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文写作教程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文写作教程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-平台教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_预测分析.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_预测分析.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-平台资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_自动化流程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_自动化流程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-杂项-合并分类</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_文档分析.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_文档分析.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-模板工具</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_图生图.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_图生图.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-模板开源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_平台资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_平台资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-白板教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/开发工具_文档资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/开发工具_文档资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-白板资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_流程图生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_流程图生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-3d模型</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_白板资源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_白板资源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-ppt模板</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_白板教程.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_白板教程.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-ui套件</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/设计工具_白板开源.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/设计工具_白板开源.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-图库照片</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/系统工具_实用工具_网络工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/系统工具_实用工具_网络工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-图标资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_AI视频生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_AI视频生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-字体资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体_视频娱乐_视频游戏.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体_视频娱乐_视频游戏.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-插画资源</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网络小说平台.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网络小说平台.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-样机模板</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/效率办公_网文作者工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/效率办公_网文作者工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-矢量图标</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/办公工具_协作社区.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/办公工具_协作社区.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-纹理贴图</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/办公工具_表单社区.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/办公工具_表单社区.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-背景图案</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体_特效生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体_特效生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-设计灵感</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_背景移除.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_背景移除.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-设计素材</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/多媒体_视频娱乐_音乐生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/多媒体_视频娱乐_音乐生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-设计资源包</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_写作生成.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_写作生成.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源-配色方案</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_图像扩展.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_图像扩展.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源教程</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_视频工具.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_视频工具.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源生成</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_文生图.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_文生图.html"/>
   </url>
   <url>
-    <loc>https://yolialisproxy.github.io/web_nav/#category-设计工具-资源社区</loc>
-    <lastmod>2026-04-24</lastmod>
+    <loc>https://nav.kunhunav.com/AI工具_人工智能_风格迁移.html</loc>
+    <lastmod>2026-05-13</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://nav.kunhunav.com/AI工具_人工智能_风格迁移.html"/>
   </url>
 </urlset>
