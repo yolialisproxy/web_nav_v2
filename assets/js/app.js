@@ -435,6 +435,65 @@ async function init() {
     });
 
     // 触发初始渲染
+
+    // Phase 13: PWA 安装提示
+    let deferredPrompt = null;
+    window.addEventListener('beforeinstallprompt', function(e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        var banner = document.getElementById('install-banner');
+        if (banner) banner.classList.add('show');
+    });
+
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js')
+                .then(function(reg) {
+                    // console.log('[PWA] ServiceWorker 注册成功: scope=' + reg.scope);
+                })
+                .catch(function(err) {
+                    // console.warn('[PWA] ServiceWorker 注册失败:', err);
+                });
+
+    // PWA 安装按钮处理
+    var installBtn = document.getElementById('install-btn');
+    var dismissBtn = document.getElementById('install-dismiss');
+    if (installBtn) {
+        installBtn.addEventListener('click', function() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then(function(choiceResult) {
+                    if (choiceResult.outcome === 'accepted') {
+                        // 用户接受安装
+                    }
+                    deferredPrompt = null;
+                    var banner = document.getElementById('install-banner');
+                    if (banner) banner.classList.add('hidden');
+                });
+            }
+        });
+    }
+    if (dismissBtn) {
+        dismissBtn.addEventListener('click', function() {
+            var banner = document.getElementById('install-banner');
+            if (banner) {
+                banner.classList.add('hidden');
+                banner.classList.add('dont-show');
+            }
+        });
+    }
+
+    // 监听 appinstalled 事件
+    window.addEventListener('appinstalled', function() {
+        var banner = document.getElementById('install-banner');
+        if (banner) {
+            banner.classList.add('dont-show');
+        }
+    });
+
+        });
+    }
+
     state._notify();
 
     // 游戏关闭按钮（如果存在）
