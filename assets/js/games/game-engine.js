@@ -183,5 +183,53 @@ GameEngine.prototype = {
     destroy: function() {
         this._stopLoop();
         this.el = null;
-    }
+    },
+    // 触摸事件框架（移动端支持）
+    initTouch: function() {
+        var self = this;
+        this._touchStartTime = 0;
+        this._touchStartPos = { x: 0, y: 0 };
+        this.canvas.addEventListener('touchstart', this._onTouchStart.bind(this), { passive: false });
+        this.canvas.addEventListener('touchmove',  this._onTouchMove.bind(this),  { passive: false });
+        this.canvas.addEventListener('touchend',   this._onTouchEnd.bind(this),  { passive: false });
+    },
+
+    _onTouchStart: function(e) {
+        e.preventDefault();
+        var touch = e.changedTouches[0];
+        this._touchStartTime = Date.now();
+        this._touchStartPos = { x: touch.clientX, y: touch.clientY };
+    },
+
+    _onTouchMove: function(e) {
+        // 游戏可重写此方法
+    },
+
+    _onTouchEnd: function(e) {
+        var touch = e.changedTouches[0];
+        var endX = touch.clientX;
+        var endY = touch.clientY;
+        var dx = endX - this._touchStartPos.x;
+        var dy = endY - this._touchStartPos.y;
+        var dt = Date.now() - this._touchStartTime;
+        var rect = this.canvas.getBoundingClientRect();
+
+        if (dt < 200 && Math.abs(dx) < 10 && Math.abs(dy) < 10) {
+            // 视为点击
+            var x = endX - rect.left;
+            var y = endY - rect.top;
+            if (this.onTouchTap) this.onTouchTap(x, y);
+        } else {
+            var absDx = Math.abs(dx), absDy = Math.abs(dy);
+            if (absDx > absDy) {
+                if (dx > 30 && this.onSwipe) this.onSwipe('right');
+                else if (dx < -30 && this.onSwipe) this.onSwipe('left');
+            } else {
+                if (dy > 30 && this.onSwipe) this.onSwipe('down');
+                else if (dy < -30 && this.onSwipe) this.onSwipe('up');
+            }
+        }
+    },
+
+
 };
