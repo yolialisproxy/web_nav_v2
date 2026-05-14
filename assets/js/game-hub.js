@@ -97,7 +97,11 @@ var GameHub = {
             '<div class="game-wrapper">' +
                 '<header class="game-header">' +
                     '<span id="game-play-title" class="game-title">游戏</span>' +
-                    '<button id="game-close-btn" class="game-close" aria-label="关闭游戏">&times;</button>' +
+                    '<div class="game-header-controls">' +
+                        '<button id="game-sound-toggle" class="game-sound-toggle" title="音效" aria-label="切换音效">🔊</button>' +
+                        '<span id="game-play-level" class="game-level-display" title="当前等级">Lv.1</span>' +
+                        '<button id="game-close-btn" class="game-close" aria-label="关闭游戏">&times;</button>' +
+                    '</div>' +
                 '</header>' +
                 '<div id="game-canvas-container">' +
                     '<canvas id="game-canvas" class="game-canvas"></canvas>' +
@@ -115,6 +119,18 @@ var GameHub = {
         var self = this;
         this.closeHub();
         this.currentGame = gameKey;
+        // 重置游戏状态 UI
+        var scoreEl = document.getElementById('game-play-score');
+        var levelEl = document.getElementById('game-play-level');
+        if (scoreEl) scoreEl.textContent = 'Score: 0';
+        if (levelEl) levelEl.textContent = 'Lv.1';
+        // 恢复音效按钮状态
+        var soundBtn = document.getElementById('game-sound-toggle');
+        if (soundBtn) {
+            soundBtn.textContent = GameUtils.soundEnabled ? '🔊' : '🔇';
+            soundBtn.title = GameUtils.soundEnabled ? '音效开' : '音效关';
+        }
+
 
         // 动态加载游戏模块映射（9个游戏）
         var gameMap = {

@@ -119,6 +119,15 @@ GameEngine.prototype = {
         return Math.floor(this.lines / 10) + 1;
     },
 
+    // 提升一级
+    levelUp: function() {
+        this.level++;
+        this._calcLevel();
+        // 播放升级音效
+        GameUtils.playSfx('levelUp');
+    },
+
+
     // 更新UI
     _updateUI: function() {
         if (this.scoreEl) this.scoreEl.textContent = 'Score: ' + this.score;
