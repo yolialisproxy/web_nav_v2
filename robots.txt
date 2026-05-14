@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 Allow: /assets/
+Allow: /prerendered/
 Disallow: /data/
-Disallow: /prerendered/
+Disallow: /__pycache__/
+Disallow: /backups/
+Disallow: /pages/_deprecated/
 
 Sitemap: https://nav.kunhunav.com/sitemap.xml
