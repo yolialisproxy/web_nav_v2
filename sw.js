@@ -28,9 +28,11 @@ const STATIC_ASSETS = [
     '/assets/js/games/tetris.js',
     '/assets/js/games/go.js',
     '/assets/js/games/chess.js',
+    '/assets/js/games/game2048.js',
     '/assets/js/games/mahjong.js',
     '/assets/js/games/wuxia.js',
     '/assets/js/games/dating.js',
+    '/assets/js/games/gomoku.js',
     '/assets/js/game-hub.js',
     '/assets/js/monetization.js',
     '/assets/js/core-vitals.js',
@@ -59,6 +61,9 @@ self.addEventListener('activate', (event) => {
         })
     );
     self.clients.claim();
+
+// 离线回退：返回缓存的首页
+const OFFLINE_URL = '/';
 });
 
 // 请求拦截
