@@ -55,6 +55,10 @@ Tetris.prototype.init = function() {
     this._resetBoard();
     this._startGame();
     this._bindKeys();
+        // 移动端触控初始化
+        this.initTouch();
+        this.onSwipe = this._onSwipe.bind(this);
+        this.onTouchTap = this._onTouchTap.bind(this);
 };
 
 Tetris.prototype._resetBoard = function() {
@@ -365,6 +369,24 @@ Tetris.prototype.load = function() {
         return true;
     }
     return false;
+};
+
+
+Tetris.prototype._onSwipe = function(dir) {
+    switch(dir) {
+        case 'left':  this._moveLeft();  break;
+        case 'right': this._moveRight(); break;
+        case 'up':    this._rotate();    break;
+        case 'down':  this._moveDown();  break;
+    }
+    GameUtils.playSfx('move');
+};
+
+Tetris.prototype._onTouchTap = function(x, y) {
+    var mid = this.canvas.width / 2;
+    if (x < mid) this._moveLeft();
+    else this._moveRight();
+    GameUtils.playSfx('move');
 };
 
 window.Tetris = Tetris;
