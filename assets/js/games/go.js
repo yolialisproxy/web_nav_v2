@@ -16,6 +16,9 @@ GoGame.prototype = Object.create(GameEngine.prototype);
 GoGame.prototype.constructor = GoGame;
 
 GoGame.prototype.init = function() {
+        // 触摸落子音效反馈
+        this._lastMoveSound = 0;
+        // 音效在 _renderBoard 中触发
     GameEngine.prototype.init.call(this);
     this.canvas = document.createElement('canvas');
     this.canvas.width = Math.min(570, window.innerWidth - 80);

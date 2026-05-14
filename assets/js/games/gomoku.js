@@ -15,6 +15,7 @@ Gomoku.prototype = Object.create(GameEngine.prototype);
 Gomoku.prototype.constructor = Gomoku;
 
 Gomoku.prototype.init = function() {
+        // 触摸落子音效反馈
     GameEngine.prototype.init.call(this);
     this.canvas = document.createElement('canvas');
     this.canvas.width = Math.min(450, window.innerWidth - 80);

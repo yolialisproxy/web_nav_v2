@@ -32,6 +32,8 @@ Solitaire.CARDS = [];
 })();
 
 Solitaire.prototype.init = function() {
+        // 移动端触摸拖拽支持
+        this._initTouchDrag();
     GameEngine.prototype.init.call(this);
     this.render();
 };
@@ -389,6 +391,52 @@ Solitaire.prototype.tick = function() {}; // pass回合制
 Solitaire.prototype.quit = function() {
     this.state = 'idle';
     GameHub.closeGame();
+};
+
+
+// Solitaire 触摸拖拽支持
+Solitaire.prototype._initTouchDrag = function() {
+    var cards = this.el.querySelectorAll('[data-card]');
+    var self = this;
+    cards.forEach(function(card) {
+        card.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            var touch = e.touches[0];
+            card._touchStartX = touch.clientX;
+            card._touchStartY = touch.clientY;
+            card._touchMoved = false;
+            card._origTransform = card.style.transform || '';
+        }, { passive: false });
+
+        card.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+            var touch = e.touches[0];
+            var dx = touch.clientX - card._touchStartX;
+            var dy = touch.clientY - card._touchStartY;
+            if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
+                card._touchMoved = true;
+                card.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+                card.style.zIndex = 1000;
+            }
+        }, { passive: false });
+
+        card.addEventListener('touchend', function(e) {
+            if (card._touchMoved) {
+                card.style.transform = card._origTransform;
+                card.style.zIndex = '';
+                var endEvent = new CustomEvent('cardtouchend', {
+                    detail: {
+                        card: card,
+                        clientX: e.changedTouches[0].clientX,
+                        clientY: e.changedTouches[0].clientY
+                    }
+                });
+                card.dispatchEvent(endEvent);
+            } else {
+                card.click();
+            }
+        }, { passive: false });
+    });
 };
 
 window.Solitaire = Solitaire;
