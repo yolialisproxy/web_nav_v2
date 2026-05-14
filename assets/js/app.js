@@ -60,6 +60,10 @@ async function init() {
         }
     }
 
+    // 初始化盈利模块
+    Monetization.init({ enabled: true });
+
+    // Toast通知
     Toast.init && Toast.init();
 
     // 状态订阅 - 驱动UI渲染
@@ -177,27 +181,77 @@ async function init() {
     var sidebar = document.getElementById('sidebar');
     var sidebarOverlay = document.getElementById('sidebar-overlay');
 
-    if (sidebarToggle && sidebar && sidebarOverlay) {
-        function toggleSidebar() {
-            var isOpen = !sidebar.classList.contains('-translate-x-full');
-            if (!isOpen) {
-                sidebar.classList.remove('-translate-x-full');
-                sidebarOverlay.classList.remove('hidden');
-                sidebarOverlay.classList.add('visible');
-                sidebarOverlay.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('sidebar-open');
-            } else {
-                sidebar.classList.add('-translate-x-full');
-                sidebarOverlay.classList.add('hidden');
-                sidebarOverlay.classList.remove('visible');
-                sidebarOverlay.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('sidebar-open');
-            }
-            sidebarToggle.setAttribute('aria-expanded', String(!isOpen));
+    function closeSidebar() {
+        if (sidebar) sidebar.classList.add('-translate-x-full');
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.add('hidden');
+            sidebarOverlay.classList.remove('visible');
+            sidebarOverlay.setAttribute('aria-hidden', 'true');
         }
+        document.body.classList.remove('sidebar-open');
+        if (sidebarToggle) sidebarToggle.setAttribute('aria-expanded', 'false');
+    }
 
-        sidebarToggle.addEventListener('click', toggleSidebar);
-        sidebarOverlay.addEventListener('click', toggleSidebar);
+    function openSidebar() {
+        if (sidebar) sidebar.classList.remove('-translate-x-full');
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('hidden');
+            sidebarOverlay.classList.add('visible');
+            sidebarOverlay.setAttribute('aria-hidden', 'false');
+        }
+        document.body.classList.add('sidebar-open');
+        if (sidebarToggle) sidebarToggle.setAttribute('aria-expanded', 'true');
+    }
+
+    if (sidebarToggle && sidebar && sidebarOverlay) {
+        sidebarToggle.addEventListener('click', function() {
+            var isOpen = !sidebar.classList.contains('-translate-x-full');
+            if (isOpen) closeSidebar(); else openSidebar();
+        });
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    }
+
+    // ===== 侧边栏导航点击（事件委托） =====
+    var sidebarContent = document.getElementById('sidebar-content');
+    if (sidebarContent) {
+        sidebarContent.addEventListener('click', function(e) {
+            var navItem = e.target.closest('.nav-item[data-category]');
+            if (navItem) {
+                var cat = navItem.getAttribute('data-category');
+                // 切换子分类展开/折叠
+                var next = navItem.nextElementSibling;
+                if (next && next.classList.contains('nav-children')) {
+                    var isExpanded = next.style.display !== 'none';
+                    // 折叠所有其他子菜单
+                    sidebarContent.querySelectorAll('.nav-children').forEach(function(c) {
+                        if (c !== next) c.style.display = 'none';
+                    });
+                    next.style.display = isExpanded ? 'none' : 'block';
+                }
+                if (cat) {
+                    state.set('sidebar.activeCategoryId', cat);
+                    state.set('sidebar.activeSubCategoryId', null);
+                    state.set('sidebar.activeLeafId', null);
+                    closeSidebar();
+                }
+                e.preventDefault();
+                return;
+            }
+
+            var subItem = e.target.closest('.nav-sub-item[data-sub]');
+            if (subItem) {
+                var subCat = subItem.getAttribute('data-sub');
+                var parentItem = subItem.closest('.nav-item');
+                var mainCat = parentItem ? parentItem.getAttribute('data-category') : null;
+                if (mainCat && subCat) {
+                    state.set('sidebar.activeCategoryId', mainCat);
+                    state.set('sidebar.activeSubCategoryId', subCat);
+                    state.set('sidebar.activeLeafId', subCat);
+                }
+                closeSidebar();
+                e.preventDefault();
+            }
+        });
     }
 
     // ===== 搜索覆盖层 =====

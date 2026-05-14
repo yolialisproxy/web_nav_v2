@@ -274,12 +274,12 @@ function renderSites(sites, containerId) {
 /**
  * 渲染分类视图（SPA视图）
  */
-function renderCategoryView(s) {
-    var lid = s.sidebar.activeLeafId;
-    var cid = s.sidebar.activeCategoryId;
-    var sid = s.sidebar.activeSubCategoryId;
+function renderCategoryView(catId, subId, leafId) {
+    var cid = catId;
+    var sid = subId;
+    var lid = leafId || subId;
 
-    if (!lid || !cid) {
+    if (!cid) {
         document.getElementById('main-content').innerHTML = StateUI.empty('请选择左侧分类浏览');
         return;
     }
@@ -782,7 +782,6 @@ function renderView(s) {
         if (activeCat) {
             renderCategoryView(activeCat, activeSub, activeLeaf);
         } else if (window.dataManager && window.dataManager.isLoaded) {
-            // 默认：渲染所有站点
             var allSites = window.dataManager.raw || [];
             renderSites(allSites);
         }
