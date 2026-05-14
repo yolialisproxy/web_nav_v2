@@ -346,6 +346,45 @@ function renderSitesList(sites, containerId) {
     container.innerHTML = html;
 }
 
+// 游戏大厅渲染
+function renderGamesHub(containerId) {
+    var cid = containerId || 'main-content';
+    var container = document.getElementById(cid);
+    if (!container) return;
+
+    var html = '<div class="games-hub">';
+    html += '  <div class="games-header"><h2>🎮 游戏中心</h2><p class="games-subtitle">选择一款游戏开始娱乐</p></div>';
+    html += '  <div class="games-grid">';
+
+    var gameDefs = window.GameHub ? Object.entries(window.GameHub.games) : [];
+    gameDefs.forEach(function([key, game]) {
+        var icon = game.icon || '🎯';
+        var name = game.name || key;
+        var desc = game.desc || '游戏';
+        var cat = game.cat || 'other';
+        html += '<a href="#game=' + key + '" class="game-card" data-game="' + key + '" title="' + desc + '">';
+        html += '  <div class="game-icon">' + icon + '</div>';
+        html += '  <div class="game-name">' + name + '</div>';
+        html += '  <div class="game-category">' + cat + '</div>';
+        html += '</a>';
+    });
+
+    html += '  </div>';
+    html += '</div>';
+
+    container.innerHTML = html;
+
+    // 游戏卡片点击：通过 hash 触发路由（state -> renderView）
+    container.querySelectorAll('.game-card').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            var gameKey = el.dataset.game;
+            window.location.hash = 'game=' + gameKey;
+        });
+    });
+}
+
+
 
 /**
  * 渲染分类视图（SPA视图）
@@ -896,7 +935,23 @@ function renderView(s) {
             var renderFn = view === 'grid' ? renderSitesGrid : renderSitesList;
             renderFn(sites, 'main-content');
             return;
+        // 游戏大厅视图
+        if (view === 'games') {
+            // 解析 hash: #game=<key> 启动游戏，否则显示大厅
+            var gameHash = location.hash.match(/game=([a-z0-9]+)/);
+            if (gameHash && window.GameHub) {
+                var gameKey = gameHash[1];
+                // 渲染游戏容器（全屏覆盖）
+                GameHub.renderContainer();
+                // 异步启动游戏
+                setTimeout(function() { GameHub.startGame(gameKey); }, 50);
+            } else {
+                renderGamesHub('main-content');
+            }
+            return;
         }
+        }
+
 
         var activeCat = s.sidebar.activeCategoryId;
         var activeSub = s.sidebar.activeSubCategoryId;

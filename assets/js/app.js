@@ -436,6 +436,17 @@ async function init() {
 
     // 触发初始渲染
     state._notify();
+
+    // 游戏关闭按钮（如果存在）
+    var gameCloseBtn = document.getElementById('game-close-btn');
+    if (gameCloseBtn) {
+        gameCloseBtn.addEventListener('click', function() {
+            if (window.GameHub && GameHub.currentGame) GameHub.stop(GameHub.currentGame);
+            window.location.hash = '';
+            state.setView('grid');
+        });
+    }
+
 }
 
 function renderSearchSuggestions(suggestions, query) {
@@ -500,6 +511,22 @@ function syncStateToHash(s) {
 
 function syncHashToState() {
     const hash = window.location.hash.slice(1);
+
+    // Phase 9: 游戏路由支持 (#games 大厅 / #game=<key> 启动游戏)
+    if (hash === 'games' && window.GameHub) {
+        state.setView('games');
+        return true;
+    }
+    var gameMatch = hash.match(/^game=([a-z0-9]+)$/);
+    if (gameMatch && window.GameHub) {
+        var gameKey = gameMatch[1];
+        state.setView('games');
+        // 异步启动游戏（等待 DOM 渲染后）
+        // 游戏启动由 renderView 的 games 分支处理
+        // GameHub.startGame(gameKey);
+        return true;
+    }
+
     if (!hash) return false;
     const params = new URLSearchParams(hash);
     const category = params.get('category');

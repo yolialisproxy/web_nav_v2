@@ -18,9 +18,7 @@ class State {
                 query: '',
                 results: []
             },
-            currentView: 'grid',  // 默认网格视图
             filterTags: [],
-            loading: true,         // 全局加载状态
             searchMode: false      // 是否在搜索覆盖层模式
         };
         this._subscribers = [];
@@ -388,7 +386,7 @@ class State {
     // 视图切换：网格 / 列表 / 分类
     // ═══════════════════════════════════════════════
     setView(mode) {
-        if (!['grid', 'list', 'category'].includes(mode)) {
+        if (!['grid', 'list', 'category', 'games'].includes(mode)) {
             console.warn('[State] 无效视图模式:', mode);
             return;
         }

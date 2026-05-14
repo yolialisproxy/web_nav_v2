@@ -85,6 +85,32 @@ var GameHub = {
         document.getElementById('game-hub-overlay').classList.remove('active');
     },
 
+
+    renderContainer: function() {
+        // 如果容器已存在，跳过
+        if (document.getElementById('game-play-overlay')) return;
+
+        var container = document.createElement('div');
+        container.id = 'game-play-overlay';
+        container.className = 'game-play-overlay';
+        container.innerHTML = 
+            '<div class="game-wrapper">' +
+                '<header class="game-header">' +
+                    '<span id="game-play-title" class="game-title">游戏</span>' +
+                    '<button id="game-close-btn" class="game-close" aria-label="关闭游戏">&times;</button>' +
+                '</header>' +
+                '<div id="game-canvas-container">' +
+                    '<canvas id="game-canvas" class="game-canvas"></canvas>' +
+                    '<div id="game-play-area" style="display:none;"></div>' +
+                '</div>' +
+                '<footer class="game-footer">' +
+                    '<span id="game-play-score">Score: 0</span>' +
+                    '<span id="game-play-time">Time: 00:00</span>' +
+                '</footer>' +
+            '</div>';
+        document.body.appendChild(container);
+    },
+
     startGame: function(gameKey) {
         var self = this;
         this.closeHub();
