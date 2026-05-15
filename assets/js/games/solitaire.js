@@ -351,6 +351,7 @@ Solitaire.prototype._removeCardFromTableau = function(card) {
 
 Solitaire.prototype._checkWin = function() {
     if (this.foundation.every(function(f) { return f.length === 13; })) {
+        GameUtils.playSfx('win');
         this.gameOver();
         GameHub.showToast('🎉 恭喜完成纸牌接龙！最终得分: ' + this.score);
     }

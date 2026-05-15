@@ -248,6 +248,7 @@ Game2048.prototype._checkWin = function() {
     for (var r = 0; r < this.size; r++) {
         for (var c = 0; c < this.size; c++) {
             if (this.grid[r][c] === 2048) {
+                GameUtils.playSfx('win');
                 this.gameOver();
                 GameHub.showToast('🎉 恭喜达成2048！继续挑战更高分。');
                 return;
