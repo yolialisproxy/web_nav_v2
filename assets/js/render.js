@@ -301,7 +301,7 @@ function renderSites(sites, containerId) {
     }, 50);
 }
 
-// 列表视图渲染（列表模式）
+// 列表视图渲染（分页 + 工具栏 + 无限滚动）
 function renderSitesList(sites, containerId) {
     var cid = containerId || 'main-content';
     var container = document.getElementById(cid);
@@ -320,30 +320,73 @@ function renderSitesList(sites, containerId) {
         return;
     }
 
+    paginatedRenderer.setData(sites);
+    paginatedRenderer.isSearchMode = false;
+
+    // 工具栏（与网格视图保持一致）
+    var toolbarHtml = '<div class="view-toolbar">' +
+        '<div class="toolbar-left">' +
+        '<button class="view-btn view-grid" onclick="setViewMode(\'grid\')" aria-label="网格视图" title="网格视图">⊞</button>' +
+        '<button class="view-btn view-list active" onclick="setViewMode(\'list\')" aria-label="列表视图" title="列表视图">☰</button>' +
+        '</div>' +
+        '<div class="toolbar-right">' +
+        '<select class="sort-select" onchange="handleSortChange(this.value)" aria-label="排序方式">' +
+        '<option value="default">默认排序</option>' +
+        '<option value="name-asc">名称 ↑</option>' +
+        '<option value="name-desc">名称 ↓</option>' +
+        '<option value="url-asc">URL ↑</option>' +
+        '</select>' +
+        '</div>' +
+        '</div>';
+
+    // 列表项渲染（复用 _buildListItems 构建器，避免重复 code）
+    var listHtml = _buildListItems(paginatedRenderer.getCurrentPageData(), 0);
+    container.innerHTML = toolbarHtml + listHtml;
+    paginatedRenderer.markPageRendered(0);
+    _setupInfiniteScroll(container);
+    bindCardEvents();
+
+    // 恢复排序状态
+    var savedSort = localStorage.getItem('kunhun-nav-sort-order') || 'default';
+    var sortSelect = container.querySelector('.sort-select');
+    if (sortSelect) {
+        sortSelect.value = savedSort;
+        if (savedSort !== 'default') {
+            handleSortChange(savedSort);
+        }
+    }
+}
+
+/** 构建列表项 HTML（独立构建器，供 renderSitesList + 分页加载复用） */
+function _buildListItems(sites, pageIdx) {
+    if (!sites || sites.length === 0) return '';
     var html = '<div class="sites-list">';
     sites.forEach(function(site) {
-        var favicon = site.favicon || '/favicon.ico';
-        var desc = site.description ? site.description.replace(/"/g, '&quot;') : '暂无描述';
-        var tags = site.tags ? site.tags.map(function(t) {
-            return '<span class="tag-pill small">' + t + '</span>';
-        }).join('') : '';
-        var safeName = site.name.replace(/"/g, '&quot;');
+        // 使用 Google Favicon Service（与卡片视图一致）
+        var favicon = 'assets/images/favicon.png';
+        try {
+            favicon = 'https://www.google.com/s2/favicons?domain=' + encodeURIComponent(new URL(site.url).hostname) + '&sz=32';
+        } catch(e) {}
 
-        html += '<div class="site-list-item" data-id="' + site.id + '">';
-        html += '  <div class="site-list-content">';
-        html += '    <div class="site-list-header">';
-        html += '      <img src="' + favicon + '" alt="" class="site-list-favicon" loading="lazy" onerror="this.style.display=\'none\'">';
-        html += '      <a href="' + site.url + '" target="_blank" rel="noopener" class="site-list-name" title="' + safeName + '">' + safeName + '</a>';
-        html += '      <span class="site-list-arrow">→</span>';
-        html += '    </div>';
-        html += '    <div class="site-list-desc">' + desc + '</div>';
-        html += '    <div class="site-list-meta">' + tags + '</div>';
-        html += '  </div>';
-        html += '</div>';
+        var desc  = site.description ? site.description.replace(/"/g, '&quot;') : '暂无描述';
+        var tags  = site.tags ? site.tags.map(function(t) { return '<span class="tag-pill small">' + t + '</span>'; }).join('') : '';
+        var safeName = (site.name || '').replace(/"/g, '&quot;');
+
+        html += '<div class="site-list-item" data-id="' + (site.id || '') + '" data-page="' + pageIdx + '">' +
+            '<div class="site-list-content">' +
+            '<div class="site-list-header">' +
+            '<img src="' + favicon + '" alt="" class="site-list-favicon" loading="lazy" onerror="this.style.display=\'none\'">' +
+            '<a href="' + (site.url || '#') + '" target="_blank" rel="noopener" class="site-list-name" title="' + safeName + '">' + safeName + '</a>' +
+            '<span class="site-list-arrow">→</span>' +
+            '<button class="favorite-btn" data-action="toggle-favorite" aria-label="收藏" title="收藏站点">♡</button>' +
+            '</div>' +
+            '<div class="site-list-desc">' + desc + '</div>' +
+            '<div class="site-list-meta">' + tags + '</div>' +
+            '</div>' +
+            '</div>';
     });
     html += '</div>';
-
-    container.innerHTML = html;
+    return html;
 }
 
 // 游戏大厅渲染
@@ -538,25 +581,42 @@ var currentViewMode = 'grid';
 
 function setViewMode(mode) {
     currentViewMode = mode;
-    // 持久化到 localStorage
+    // 持久化
     try {
         localStorage.setItem('kunhun-nav-view-mode', mode);
     } catch (e) {}
 
-    var grid = document.getElementById('sites-grid');
-    if (!grid) return;
-
+    // 更新工具栏按钮状态
     var btns = document.querySelectorAll('.view-btn');
     btns.forEach(function(b) { b.classList.remove('active'); });
 
     if (mode === 'list') {
-        grid.classList.add('list-mode');
-        var listBtn = document.querySelector('.view-btn.view-list');
-        if (listBtn) listBtn.classList.add('active');
+        // 列表模式：检查 DOM 是否已经是 .sites-list，否则触发 state 驱动全量重渲染
+        var existingList = document.querySelector('.sites-list');
+        if (existingList) {
+            // DOM 结构已正确，仅更新按钮
+            var listBtn = document.querySelector('.view-btn.view-list');
+            if (listBtn) listBtn.classList.add('active');
+        } else {
+            // 切换为列表：通过 state 触发，确保 toolbar 和 list-DOM 完整替换
+            if (state && typeof state.set === 'function') {
+                state.set('currentView', 'list');
+            }
+        }
     } else {
-        grid.classList.remove('list-mode');
-        var gridBtn = document.querySelector('.view-btn.view-grid');
-        if (gridBtn) gridBtn.classList.add('active');
+        // 网格模式：检查 #sites-grid 是否存在
+        var existingGrid = document.getElementById('sites-grid');
+        if (existingGrid) {
+            // DOM 结构已正确，切换 CSS 类 + 按钮状态
+            existingGrid.classList.remove('list-mode');
+            var gridBtn = document.querySelector('.view-btn.view-grid');
+            if (gridBtn) gridBtn.classList.add('active');
+        } else {
+            // 切换为网格：通过 state 触发重渲染
+            if (state && typeof state.set === 'function') {
+                state.set('currentView', 'grid');
+            }
+        }
     }
 }
 
@@ -589,27 +649,14 @@ function handleSortChange(value) {
 
     paginatedRenderer.reset();
     paginatedRenderer.setData(sites);
-    renderSites(sites);
-}
 
-    paginatedRenderer.setData(sites);
-    paginatedRenderer.reset();
-    var container = document.getElementById('main-content');
-    if (container) {
-        var gridHtml = _buildGrid(paginatedRenderer.getCurrentPageData(), false, 0);
-        paginatedRenderer.markPageRendered(0);
-        // 保留 view-header, toolbar, tag-filter-bar
-        var headerPart = container.querySelector('.view-header');
-        var toolbarPart = container.querySelector('.view-toolbar');
-        var tagPart = container.querySelector('.tag-filter-bar');
-        container.innerHTML = '';
-        if (headerPart) container.appendChild(headerPart);
-        if (toolbarPart) container.appendChild(toolbarPart);
-        if (tagPart) container.appendChild(tagPart);
-        container.insertAdjacentHTML('beforeend', gridHtml);
-        _setupInfiniteScroll(container);
-        bindCardEvents();
+    // 根据当前视图模式选择渲染函数
+    if (currentViewMode === 'list') {
+        renderSitesList(sites, 'main-content');
+    } else {
+        renderSites(sites, 'main-content');
     }
+}
 
 /* ========== 虚拟滚动：DOM回收 ========== */
 
@@ -931,7 +978,7 @@ function renderView(s) {
         var view = s.currentView;
         if (view === 'grid' || view === 'list') {
             var sites = state.get('sites') || [];
-            var renderFn = view === 'grid' ? renderSitesGrid : renderSitesList;
+            var renderFn = view === 'grid' ? renderSites : renderSitesList;
             renderFn(sites, 'main-content');
             return;
         // 游戏大厅视图

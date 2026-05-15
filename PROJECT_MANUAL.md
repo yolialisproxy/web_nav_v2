@@ -254,14 +254,16 @@ GameHub (game-hub.js)
 
 ## 8. SEO 优化
 
-| 优化项 | 详情 |
-|---|---|
-| **Sitemap** | 自动生成，3107 个完整 URL |
-| **robots.txt** | 允许全站抓取，排除 /data/ 和 sourcemaps |
-| **JSON-LD** | WebSite + SearchAction 结构化数据 |
-| **Open Graph** | og:title / og:description / og:image |
-| **Twitter Card** | summary_large_image |
-| **Canonical** | 规范链接设置 |
+|| **优化项** | **详情** |
+||---|---|
+|| **Sitemap** | 分级权重：首页 1.0 / 一级分类 0.95 / 二级 0.80-0.88；148条URL，29KB（从450KB压缩） |
+|| **robots.txt** | 允许全站，排除 /data/ /backup/ /scripts/ /plans/ /reports/ 等30+非公开路径 |
+|| **JSON-LD** | 单份 @graph 结构：WebSite + CollectionPage + SearchAction + EntryPoint |
+|| **预渲染** | 155个分类页面，差异化 title/description，data-prerendered 标记 |
+|| **标签系统** | 1029标签/padded+path全覆盖/3107站点100%覆盖/展开收起交互 |
+|| **Open Graph** | og:title / og:description / og:image / og:url |
+|| **Twitter Card** | summary_large_image |
+|| **Canonical** | 规范链接设置 |
 
 ---
 
