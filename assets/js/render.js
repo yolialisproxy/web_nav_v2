@@ -43,6 +43,24 @@ const StateUI = {
 window.StateUI = StateUI;
 
 /**
+ * 更新页面 SEO meta（title / description / og:title / og:description）
+ * SPA 路由切换后调用，保证每页都有差异化的 meta 信息
+ */
+function updatePageMeta({ title, description }) {
+    if (title) {
+        document.title = title;
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', title);
+    }
+    if (description) {
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', description);
+        var ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', description);
+    }
+}
+
+/**
  * 分页渲染器（含DOM回收）
  */
 class PaginatedRenderer {
@@ -450,6 +468,15 @@ function renderCategoryView(catId, subId, leafId) {
     paginatedRenderer.reset();
 
     var container = document.getElementById('main-content');
+
+    // SEO meta 差异化：按分类生成 title + description
+    var breadcrumb = _getBreadcrumb(cid, sid, lid);
+    if (breadcrumb) {
+        updatePageMeta({
+            title: '啃魂导航 - ' + breadcrumb,
+            description: '啃魂导航 | ' + breadcrumb + ' 分类，共 ' + sites.length + ' 个优质站点'
+        });
+    }
 
     // 面包屑
     var html = '<div class="view-header">' +
