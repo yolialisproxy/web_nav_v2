@@ -9,6 +9,9 @@ backups/*.json
 *.json.bak*
 websites_backup.json
 websites_cleaned.json
+websites_backup_pre_clean.json
+websites_*.json
+!websites.json
 recommended_sites.json
 sitemap_generated.xml
 sitemap_urls.json
@@ -31,3 +34,10 @@ tasks/__pycache__/
 tests/__pycache__/
 graphify-out/
 .hermes/
+.prerendered/
+*.psd
+*.ai
+*.sketch
+*.fig
+*.xcf
+test_enrich*
