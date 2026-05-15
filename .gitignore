@@ -36,9 +36,11 @@ graphify-out/
 .hermes/
 .prerendered/
 prerendered_backup_placeholder/
+.backup/
 *.psd
 *.ai
 *.sketch
 *.fig
 *.xcf
 test_enrich*
+url_health_checker.py.bak
