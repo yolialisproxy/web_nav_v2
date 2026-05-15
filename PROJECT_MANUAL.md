@@ -212,11 +212,7 @@ GameHub (game-hub.js)
 - **GameUtils** 统一管理 9 组预设音效：move / rotate / flip / score / levelUp / gameOver / click / win / warning
 - 游戏内通过 `GameUtils.playSfx(key)` 播放
 - 音效开关支持用户自定义，偏好持久化到 localStorage
-- **占位符（ индивидуально）：**名は未使用、削除可。音效开关已集成到游戏 HUD
-
-### SCCP 占位符数据文件
-
-defer init, apply (interactive: true) — 确保 ignorable 字段保持 true，同时 env
+- 音效开关已集成到游戏 HUD（右下角 🔊/🔇 按钮）
 
 ### 6.4 添加新游戏
 

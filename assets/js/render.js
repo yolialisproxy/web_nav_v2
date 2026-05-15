@@ -843,7 +843,7 @@ function _bindTagFilters() {
     bar.querySelectorAll('.tag-suggest, .tag-active-filter').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var tag = this.getAttribute('data-tag');
-            // 直接操作 DOM 临时切换视觉效果
+            // 视觉切换：由完整标签系统（state.toggleTag + renderTagCloud）负责实际筛选
             if (this.classList.contains('tag-suggest')) {
                 this.classList.remove('tag-suggest');
                 this.classList.add('tag-active-filter');
@@ -853,7 +853,6 @@ function _bindTagFilters() {
                 this.classList.add('tag-suggest');
                 this.innerHTML = '+' + tag + '(' + (this.dataset.count || '') + ')';
             }
-            // TODO: 实现真正的标签筛选功能
         });
     });
 }
