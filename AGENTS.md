@@ -22,6 +22,10 @@ Rules:
 - For cross-module "how does X relate to Y" questions, prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over grep — these traverse the graph's EXTRACTED + INFERRED edges instead of scanning files
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost)
 
-## 当前状态
+| 阶段 | 主题 | Commit | 时间 |
+|---|---|---|---|
+| Phase 23 | 游戏版块 9 款 | `4999418` | 2026-05 |
+| Phase 24 | SEO 分级 + 标签云 + 预渲染 | `26f4771` | 2026-05-15 |
+| «此部分» | 列表视图 · 统一缓存 · 代码清理 | (head) | 2026-05-16 |
 
-游戏版块 ✅ 已在 Phase23 完成：首页菜单栏有 🎮 游戏入口（game-toggle + game-menu-toggle），9款小游戏均有独立脚本。
+*本手册由 Phase 系统持续维护，根据工作进展更新。*

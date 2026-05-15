@@ -90,6 +90,12 @@ async function init() {
         }
     }
 
+    // 同步 dataManager.raw → state.sites（数据源唯一化）
+    // 保证 renderSites() 从 state.get('sites') 取到的始终是最新数据
+    try {
+        state._state.sites = dataManager.raw || [];
+    } catch(_e) { console.warn('[App] state.sites 同步失败', _e); }
+
     // 初始化标签系统
     try {
         await state.loadTags(dataManager);  // 标签系统已集成到 State
