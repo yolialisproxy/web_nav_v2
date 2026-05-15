@@ -90,11 +90,13 @@ async function init() {
         }
     }
 
-    // 同步 dataManager.raw → state.sites（数据源唯一化）
-    // 保证 renderSites() 从 state.get('sites') 取到的始终是最新数据
-    try {
-        state._state.sites = dataManager.raw || [];
-    } catch(_e) { console.warn('[App] state.sites 同步失败', _e); }
+    // 将 dataManager.raw 同步入 state.sites，确保数据源唯一
+    // 使用 state.set 触发订阅者重渲染，保持 UI 与数据一致
+    if (dataManager.raw && dataManager.raw.length > 0) {
+        try {
+            state.set('sites', dataManager.raw);
+        } catch (_e) { console.warn('[App] state.sites set失败', _e); }
+    }
 
     // 初始化标签系统
     try {
