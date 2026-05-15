@@ -236,8 +236,8 @@ Solitaire.prototype._renderCard = function(card, faceUp) {
     var s = card.suit, v = card.value, c = card.color;
     var names = {1:'A',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'10',11:'J',12:'Q',13:'K'};
     var bg = c === 'red' ? 'rgba(255,80,80,0.15)' : 'rgba(255,255,255,0.08)';
-    var txt = c === 'red' ? '#ff6b6b' : '#e2e8f0';
-    return '<div class=\"sol-card-face\" style=\"width:100%;height:100%;background:' + bg +
+var txt = c === 'red' ? '#ff6b6b' : '#e2e8f0';
+    return '<div class=\"sol-card-face\" data-card=\"' + card.suit + '-' + card.value + '\" style=\"width:100%;height:100%;background:' + bg +
         ';border:1px solid var(--color-border);border-radius:6px;display:flex;flex-direction:column;' +
         'align-items:center;justify-content:center;color:' + txt + ';font-size:14px;font-weight:bold;\">' +
         '<div>' + s + '</div><div style=\"font-size:12px;opacity:0.7\">' + names[v] + '</div></div>';
@@ -400,47 +400,118 @@ Solitaire.prototype.quit = function() {
 
 // Solitaire 触摸拖拽支持
 Solitaire.prototype._initTouchDrag = function() {
-    var cards = this.el.querySelectorAll('[data-card]');
     var self = this;
-    cards.forEach(function(card) {
-        card.addEventListener('touchstart', function(e) {
-            e.preventDefault();
-            var touch = e.touches[0];
-            card._touchStartX = touch.clientX;
-            card._touchStartY = touch.clientY;
-            card._touchMoved = false;
-            card._origTransform = card.style.transform || '';
-        }, { passive: false });
+    var dragClone = null;
+    var dragSourceCol = -1;
+    var dragCardIndex = -1;
+    var scrollOffset = 0;
 
-        card.addEventListener('touchmove', function(e) {
-            e.preventDefault();
-            var touch = e.touches[0];
-            var dx = touch.clientX - card._touchStartX;
-            var dy = touch.clientY - card._touchStartY;
-            if (Math.abs(dx) > 5 || Math.abs(dy) > 5) {
-                card._touchMoved = true;
-                card.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
-                card.style.zIndex = 1000;
+    var getCardAtPoint = function(clientX, clientY) {
+        var el = self.el.elementFromPoint(clientX, clientY);
+        if (!el) return null;
+        // 找到包含 data-col 的列元素
+        while (el && el !== self.el) {
+            if (el.hasAttribute('data-col')) {
+                return parseInt(el.getAttribute('data-col'), 10);
             }
-        }, { passive: false });
+            el = el.parentElement;
+        }
+        return null;
+    };
 
-        card.addEventListener('touchend', function(e) {
-            if (card._touchMoved) {
-                card.style.transform = card._origTransform;
-                card.style.zIndex = '';
-                var endEvent = new CustomEvent('cardtouchend', {
-                    detail: {
-                        card: card,
-                        clientX: e.changedTouches[0].clientX,
-                        clientY: e.changedTouches[0].clientY
-                    }
-                });
-                card.dispatchEvent(endEvent);
-            } else {
-                card.click();
+    var getFoundationAtPoint = function(clientX, clientY) {
+        var el = self.el.elementFromPoint(clientX, clientY);
+        if (!el) return -1;
+        while (el && el !== self.el) {
+            var pileId = el.id || '';
+            if (pileId.indexOf('sol-foundation-') === 0) {
+                return parseInt(pileId.replace('sol-foundation-', ''), 10);
             }
+            el = el.parentElement;
+        }
+        return -1;
+    };
+
+    var cards = this.el.querySelectorAll('[data-col]');
+    cards.forEach(function(cardEl) {
+        cardEl.addEventListener('touchstart', function(e) {
+            if (self.state !== 'running') return;
+            var touch = e.touches[0];
+            var col = parseInt(cardEl.getAttribute('data-col'), 10);
+            var row = parseInt(cardEl.getAttribute('data-row'), 10);
+            var cardsInCol = self.tableau[col];
+            if (!cardsInCol || row !== cardsInCol.length - 1) return; // 只允许拖最上面的翻开牌
+            var card = cardsInCol[row];
+            if (!card || !card.faceUp) return;
+
+            e.preventDefault();
+            scrollOffset = window.pageYOffset;
+            dragSourceCol = col;
+            dragCardIndex = row;
+
+            // 创建拖拽视觉克隆
+            var rect = cardEl.getBoundingClientRect();
+            dragClone = cardEl.cloneNode(true);
+            dragClone.style.position = 'fixed';
+            dragClone.style.zIndex = '9999';
+            dragClone.style.width = rect.width + 'px';
+            dragClone.style.pointerEvents = 'none';
+            dragClone.style.left = (touch.clientX - rect.width / 2) + 'px';
+            dragClone.style.top = (touch.clientY - rect.height / 2) + 'px';
+            dragClone.style.transform = 'none';
+            document.body.appendChild(dragClone);
         }, { passive: false });
     });
+
+    document.addEventListener('touchmove', function(e) {
+        if (!dragClone) return;
+        e.preventDefault();
+        var touch = e.touches[0];
+        var cardW = dragClone.offsetWidth;
+        var cardH = dragClone.offsetHeight;
+        dragClone.style.left = (touch.clientX - cardW / 2) + 'px';
+        dragClone.style.top = (touch.clientY - cardH / 2 + (window.pageYOffset - scrollOffset)) + 'px';
+    }, { passive: false });
+
+    document.addEventListener('touchend', function(e) {
+        if (!dragClone) return;
+        var touch = e.changedTouches[0];
+        var targetCol = getCardAtPoint(touch.clientX, touch.clientY);
+        var targetFoundation = getFoundationAtPoint(touch.clientX, touch.clientY);
+
+        dragClone.remove();
+        dragClone = null;
+
+        if (dragSourceCol < 0) return;
+
+        var card = self.tableau[dragSourceCol] ? self.tableau[dragSourceCol][dragCardIndex] : null;
+        if (!card || !card.faceUp) { dragSourceCol = -1; return; }
+
+        // 尝试移到目标列
+        if (targetCol !== null && targetCol !== dragSourceCol) {
+            var moved = self.move(dragSourceCol, targetCol);
+            if (moved) {
+                GameUtils.playSfx('move');
+                return;
+            }
+        }
+
+        // 尝试移到基础堆
+        if (targetFoundation >= 0) {
+            var moved = self._autoToFoundation(card);
+            if (moved) {
+                GameUtils.playSfx('score');
+                return;
+            }
+        }
+
+        // 失败：抖动画回原位
+        cardEl.style.transition = 'transform 0.2s';
+        cardEl.style.transform = 'none';
+        setTimeout(function() { cardEl.style.transition = ''; }, 200);
+
+        dragSourceCol = -1;
+    }, { passive: false });
 };
 
 window.Solitaire = Solitaire;
