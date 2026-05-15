@@ -20,8 +20,8 @@ Rules:
 - ALWAYS read graphify-out/GRAPH_REPORT.md before reading any source files, running grep/glob searches, or answering codebase questions. The graph is your primary map of the codebase.
 - IF graphify-out/wiki/index.md EXISTS, navigate it instead of reading raw files
 - For cross-module "how does X relate to Y" questions, prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over grep — these traverse the graph's EXTRACTED + INFERRED edges instead of scanning files
-- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost)
 
-## 待完成：
+## 当前状态
 
-游戏版块 - 在主页菜单栏新增一个游戏版块的入口。游戏版块主要是为了增加用户对网站的粘性，所以只需要开发九个比较受大部分用户欢迎的小游戏即可，例如：纸牌、麻将、俄罗斯方块、围棋、象棋、虚拟武侠世界（武侠剧情配合杀怪升级）、虚拟现实世界（恋爱养成配合大富翁模式（一男一女、一男多女））
+游戏版块 ✅ 已在 Phase23 完成：首页菜单栏有 🎮 游戏入口（game-toggle + game-menu-toggle），9款小游戏均有独立脚本。
