@@ -106,16 +106,29 @@ websites.json → dataManager.load()
 
 ### 3.3 缓存策略
 
-| 数据类型 | 缓存键 | TTL | 底层存储 |
-|---|---|---|---|
-| 站点数据 | `nav_sites_v1` | 24h | LocalForage |
-| 标签索引 | `nav_tags_v1` | 1h | LocalForage |
-| 侧边栏状态 | `nav_sidebar_v1` | 7d | LocalForage |
-| 主题/视图 | `nav_theme_v1` | ∞ | LocalForage |
-| 音效偏好 | `gn_sound_enabled` | ∞ | localStorage |
-| 游戏存档 | `gn_game_<key>` | ∞ | localStorage |
+|| 数据类型 | 缓存键 | TTL | 底层存储 |
+||---|---|---|---|
+|| 站点数据 | `nav_sites_v1` | 24h | LocalForage |
+|| 标签索引 | `nav_tags_v1` | 1h | LocalForage |
+|| 侧边栏状态 | `nav_sidebar_v1` | 7d | LocalForage |
+|| 主题/视图 | `nav_theme_v1` | ∞ | LocalForage |
+|| 音效偏好 | `gn_sound_enabled` | ∞ | localStorage |
+|| 游戏存档 | `gn_game_<key>` | ∞ | localStorage |
 
 > LocalForage 不可用时自动降级到 `localStorage`。
+
+### 3.4 数据质量报告（2026-05-15）
+
+| 指标 | 数值 |
+|---|---|
+| 总站点数 | 3107 |
+| 分类数（清洗后） | 324 |
+| URL格式异常 | 0 |
+| 空标题 | 0 |
+| 重复URL | 0 |
+| 清洗详情 | 73个"子类-X"临时编号归并到父分类，838条目修正，1个重复词修复 |
+
+> 历史备份：`websites_backup_pre_clean.json`（清洗前快照）
 
 ---
 
