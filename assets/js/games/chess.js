@@ -314,6 +314,7 @@ ChessGame.prototype.checkWin = function() {
     var attacker = this._isKingInCheck(this.turn === 'red' ? 1 : -1);
     var defender = this._isKingInCheck(this.turn === 'black' ? -1 : 1);
     if (attacker && !defender) {
+        GameUtils.playSfx('warning');
         GameHub.showToast('⚠️ ' + (this.turn === 'red' ? '红' : '黑') + '方被将军！');
         this.score += 50;
         this._updateUI();

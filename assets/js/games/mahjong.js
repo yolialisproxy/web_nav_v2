@@ -123,6 +123,7 @@ MahjongGame.prototype._bindEvents = function() {
 
             tile.faceUp = true;
             self.selected.push(tile);
+            GameUtils.playSfx('click');
 
             if (self.selected.length === 2) {
                 var a = self.selected[0], b = self.selected[1];

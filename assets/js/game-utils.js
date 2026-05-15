@@ -74,6 +74,7 @@ var GameUtils = {
         levelUp: { freq: 880,  duration: 0.2,  type: 'sine' },
         gameOver:{ freq: 150,  duration: 0.4,  type: 'sawtooth' },
         click:   { freq: 800,  duration: 0.03, type: 'square' },
+        warning: { freq: 523,  duration: 0.15, type: 'triangle' },
         win:     { freq: 1000, duration: 0.4,  type: 'sine' },
     },
     playSfx: function(key) {
