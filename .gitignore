@@ -35,6 +35,7 @@ tests/__pycache__/
 graphify-out/
 .hermes/
 .prerendered/
+prerendered_backup_placeholder/
 *.psd
 *.ai
 *.sketch
