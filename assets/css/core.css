@@ -24,7 +24,7 @@
         --color-link: #2563eb;
         --color-link-hover: #1d4ed8;
         --color-success: #10b981;
-        --color-warning: #f59e0b;
+        --color-warning: var(--color-amber);
 
         --glass-bg: rgba(255,255,255,0.65);
         --glass-border: rgba(255,255,255,0.4);
@@ -78,7 +78,7 @@
     --color-link: #2563eb !important;
     --color-link-hover: #1d4ed8 !important;
     --color-success: #10b981 !important;
-    --color-warning: #f59e0b !important;
+    --color-warning: var(--color-amber) !important;
 
     --glass-bg: rgba(255,255,255,0.65) !important;
     --glass-border: rgba(255,255,255,0.4) !important;
@@ -208,9 +208,12 @@
     --white-08: rgba(255, 255, 255, 0.08);
     --white-10: rgba(255, 255, 255, 0.10);
     --white-15: rgba(255, 255, 255, 0.15);
+    --white-20: rgba(255, 255, 255, 0.20);
     --white-70: rgba(255, 255, 255, 0.70);
+    --black-04: rgba(0, 0, 0, 0.04);
+    --black-10: rgba(0, 0, 0, 0.10);
+    --black-12: rgba(0, 0, 0, 0.12);
     --black-15: rgba(0, 0, 0, 0.15);
-    --black-20: rgba(0, 0, 0, 0.20);
     --black-30: rgba(0, 0, 0, 0.30);
     --black-40: rgba(0, 0, 0, 0.40);
     --black-50: rgba(0, 0, 0, 0.50);
@@ -242,6 +245,7 @@
 
     /* --- 语义色 (Semantic) --- */
     --bg-header: rgba(10, 10, 15, 0.8);
+    --bg-main: rgba(10, 10, 15, 0.75);
     --bg-modal: rgba(10, 10, 15, 0.85);
     --border-active: rgba(255, 255, 255, 0.15);
     --border-default: rgba(255, 255, 255, 0.08);
@@ -329,7 +333,7 @@ button {
 
 /* ===== 毛玻璃效果 ===== */
 .glass {
-    background: rgba(10, 10, 15, 0.75);
+    background: var(--bg-main);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
 }
@@ -356,7 +360,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--white-20);
 }
 
 /* ===== 工具类 (原 tailwind-local.css) ===== */
@@ -403,8 +407,8 @@ button {
 .w-64 { width: 16rem; }
 .max-w-7xl { max-width: 80rem; }
 .max-w-md { max-width: 28rem; }
-.shadow-sm { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
-.shadow-xl { box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04); }
+.shadow-sm { box-shadow: 0 2px 8px var(--black-30); }
+.shadow-xl { box-shadow: 0 20px 25px -5px var(--black-10), 0 10px 10px -5px var(--black-04); }
 .border { border-width: 1px; border-style: solid; }
 .rounded-2xl { border-radius: 1rem; }
 .absolute-center {
@@ -417,7 +421,7 @@ button {
 .w-auto { width: auto; }
 .h-auto { height: auto; }
 .min-w-0 { min-width: 0; }
-.text-gray-600 { color: #4b5563; }
+.text-gray-600 { color: var(--color-gray); }
 
 /* ===== Toast 通知 ===== */
 .toast-notification {
@@ -550,7 +554,7 @@ button {
     z-index: 800;
     transform: translateY(100%);
     transition: transform var(--transition-medium);
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 20px var(--black-20);
 }
 
 .batch-toolbar.visible { transform: translateY(0); }

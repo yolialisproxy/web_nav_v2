@@ -229,7 +229,7 @@ body {
 /* ===== 侧边栏 & 导航菜单 ===== */
 
 #sidebar {
-    background: rgba(10, 10, 15, 0.75);
+    background: var(--bg-main);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     border-right: 1px solid var(--color-border);
@@ -827,7 +827,7 @@ hover {
     border-color: var(--color-border-active);
     background: var(--color-bg-card-hover);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover), 0 0 40px rgba(124, 58, 237, 0.1);
+    box-shadow: var(--shadow-card-hover), 0 0 40px var(--primary-10);
 }
 
 .site-card:active {
@@ -1537,7 +1537,7 @@ html { scroll-behavior: smooth; }
     color: var(--accent-primary);
     font-weight: 600;
     padding: 0.2rem 0.6rem;
-    background: rgba(124, 58, 237, 0.1);
+    background: var(--primary-10);
     border-radius: 0.5rem;
     border: 1px solid var(--accent-primary);
 }

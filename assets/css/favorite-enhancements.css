@@ -89,7 +89,7 @@
 
 .favorite-search-bar input:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+    box-shadow: 0 0 0 3px var(--primary-10);
 }
 
 .favorite-search-bar input::placeholder {
@@ -447,7 +447,7 @@
 /* 水波起伏
 @keyframes wavePulse {
     0%, 100% { box-shadow: 0 0 0 0 var(--primary-40); }
-    50% { box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
+    50% { box-shadow: 0 0 0 10px transparent; }
 }
 
 .favorite-btn:hover {
