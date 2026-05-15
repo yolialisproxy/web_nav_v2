@@ -140,9 +140,9 @@ body {
 }
 
 #search-input:focus {
-    background: var(--white-10);
+    background: rgba(255, 255, 255, 0.1);
     border-color: var(--color-primary);
-    box-shadow: 0 0 30px var(--primary-25);
+    box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
     outline: none;
 }
 
@@ -162,7 +162,7 @@ body {
 
 #search-clear:hover {
     color: var(--color-text);
-    background: var(--white-10);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .search-overlay {
@@ -229,7 +229,7 @@ body {
 /* ===== 侧边栏 & 导航菜单 ===== */
 
 #sidebar {
-    background: var(--bg-main);
+    background: rgba(10, 10, 15, 0.75);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     border-right: 1px solid var(--color-border);
@@ -240,7 +240,7 @@ body {
     cursor: pointer;
     user-select: none;
     position: relative;
-    background: var(--white-03);
+    background: var(--white-02);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     margin: 4px 8px;
@@ -432,12 +432,12 @@ body {
 
 .tag-pill:hover {
     color: var(--color-text);
-    border-color: var(--primary-30);
+    border-color: rgba(124, 58, 237, 0.3);
     background: var(--primary-12);
 }
 
 .tag-pill.active {
-    background: var(--primary-25);
+    background: rgba(124, 58, 237, 0.2);
     border-color: var(--color-primary);
     color: var(--color-primary-light);
 }
@@ -445,7 +445,7 @@ body {
 .tag-count {
     font-size: 0.7em;
     opacity: 0.7;
-    background: var(--white-10);
+    background: rgba(255, 255, 255, 0.1);
     padding: 1px 5px;
     border-radius: 999px;
 }
@@ -475,7 +475,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, var(--color-rose), var(--color-primary-light), var(--color-primary), var(--color-rose));
+    background: linear-gradient(45deg, var(--color-rose), var(--color-primary-light), #7c3aed, var(--color-rose));
     background-size: 400%;
     border-radius: 50%;
     z-index: -1;
@@ -492,7 +492,7 @@ body {
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: var(--black-60);
+    background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(8px);
     z-index: 2000;
     justify-content: center;
@@ -534,7 +534,7 @@ body {
 }
 
 .modal-close:hover {
-    background: var(--white-10);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--color-text);
 }
 
@@ -598,12 +598,12 @@ body {
 }
 
 .view-btn:hover {
-    background: var(--white-10);
+    background: rgba(255, 255, 255, 0.1);
     color: var(--text-primary);
 }
 
 .view-btn.active {
-    background: var(--indigo-20);
+    background: rgba(99, 102, 241, 0.2);
     color: var(--accent-primary);
 }
 
@@ -814,7 +814,7 @@ hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, var(--white-06), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
     transition: left 0.6s;
     z-index: 1;
 }
@@ -827,7 +827,7 @@ hover {
     border-color: var(--color-border-active);
     background: var(--color-bg-card-hover);
     transform: translateY(-4px);
-    box-shadow: var(--shadow-card-hover), 0 0 40px var(--primary-10);
+    box-shadow: var(--shadow-card-hover), 0 0 40px rgba(124, 58, 237, 0.1);
 }
 
 .site-card:active {
@@ -836,7 +836,7 @@ hover {
 
 .site-card:hover .card-icon {
     transform: scale(1.1) rotate(2deg);
-    filter: drop-shadow(0 4px 16px var(--primary-30));
+    filter: drop-shadow(0 4px 16px rgba(124, 58, 237, 0.3));
 }
 
 .site-card:hover .card-title {
@@ -936,7 +936,7 @@ hover {
 .loading-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid var(--white-10);
+    border: 3px solid rgba(255, 255, 255, 0.1);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -946,7 +946,7 @@ hover {
 .loading-spinner-small {
     width: 16px;
     height: 16px;
-    border: 2px solid var(--white-10);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -1042,7 +1042,7 @@ hover {
 .loading-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid var(--white-10);
+    border: 3px solid rgba(255, 255, 255, 0.1);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -1075,7 +1075,7 @@ hover {
 .loading-spinner-small {
     width: 16px;
     height: 16px;
-    border: 2px solid var(--white-10);
+    border: 2px solid rgba(255, 255, 255, 0.1);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -1248,17 +1248,20 @@ hover {
         z-index: 1000;
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
+}
 
 @media (max-width: 640px) {
     .grid {
         grid-template-columns: 1fr;
         gap: 10px;
     }
+}
 
 @media (min-width: 1024px) {
     #sidebar {
         transform: translateX(0);
     }
+}
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -1266,6 +1269,7 @@ hover {
         animation-iteration-count: 1;
         transition-duration: 0.01ms;
     }
+}
 
 /* ===== 无障碍 & 交互 ===== */
 
@@ -1323,7 +1327,7 @@ html { scroll-behavior: smooth; }
 
 .game-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px var(--black-12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .game-icon {
@@ -1426,7 +1430,7 @@ html { scroll-behavior: smooth; }
     z-index: 9999;
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 -4px 24px var(--black-30);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
 }
 
 .install-banner.show {
@@ -1537,7 +1541,7 @@ html { scroll-behavior: smooth; }
     color: var(--accent-primary);
     font-weight: 600;
     padding: 0.2rem 0.6rem;
-    background: var(--primary-10);
+    background: rgba(124, 58, 237, 0.1);
     border-radius: 0.5rem;
     border: 1px solid var(--accent-primary);
 }
