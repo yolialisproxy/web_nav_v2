@@ -1,7 +1,7 @@
 # 📘 啃魂导航 — 项目综合手册
 
 > 本文档由多个核心设计文档合并而成，是啃魂导航项目的唯一权威参考。
-> 最后更新：2026-05-14
+> 最后更新：2026-05-15
 
 ---
 
@@ -227,17 +227,15 @@ GameHub (game-hub.js)
 
 | 组件 | 说明 |
 |---|---|
-| **Service Worker** (`sw.js`) | Cache First 静态资源 + Network First 数据文件 |
-| **Manifest** (`manifest.json`) | standalone 模式 + 深色主题 + 图标 |
-| **安装横幅** | `beforeinstallprompt` 事件 + 自定义 UI |
-| **缓存清单** | 所有 JS/CSS + 9 款游戏 JS 文件 |
-| **离线回退** | 缓存首页 + 静态资源，API 失败走缓存 |
+| **Service Worker** (`sw.js`) | Cache First 静态资源 + Network First 数据文件；版本戳 `webnav-v3-20260515` |
+| **Manifest** (`manifest.json`) | standalone 模式 + 深色主题 `#0a0a0f` + 紫色主题色 `#7c3aed` + 双图标（32px/192px） |
+| **安装横幅** | `beforeinstallprompt` 事件 + 自定义 UI 按钮 |
+| **缓存清单** | 完整静态资源预缓存：主页 + 13 CSS + 26 JS（含 9 款游戏）+ manifest.json + favicon.ico/logo.png |
+| **离线回退** | 首页 `/` + 所有静态资源服务端缓存；`websites.json` / `data/` 取失败时走缓存降级 |
+| **PWA Meta 标签** | `apple-mobile-web-app-capable`, `apple-touch-icon`, `msapplication-TileColor`, `theme-color` |
+| **搜索引擎索引** | `sitemap.xml` + `robots.txt`；`prerendered/` 目录存放静态 SEO 页面 |
+| **触控手势** | 全站触摸优化（游戏卡片点击事件直接绑定）；无 TAP delay |
 
-### PWA Meta 标签
-- `apple-mobile-web-app-capable`
-- `apple-touch-icon`
-- `msapplication-TileColor`
-- `theme-color`
 
 ---
 
