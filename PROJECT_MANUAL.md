@@ -197,22 +197,26 @@ GameHub (game-hub.js)
 
 | 游戏 | 文件 | 类型 | 特色 |
 |---|---|---|---|
-| 🃏 纸牌接龙 | `solitaire.js` | 经典 | 鼠标操作 |
-| 🟩 俄罗斯方块 | `tetris.js` | 经典 | ←→ 移动，↑ 旋转，↓ 加速，Space 硬降 |
-| ⚫ 围棋 | `go.js` | 策略 | 鼠标点击落子 |
-| ♟️ 象棋 | `chess.js` | 策略 | 鼠标拖拽/点击落子 |
-| 🀄 麻将 | `mahjong.js` | 经典 | 鼠标点击选牌/打牌 |
-| ⚔️ 武侠世界 | `wuxia.js` | RPG | W/A/S/D 移动，空格攻击 |
-| 💕 恋爱大富翁 | `dating.js` | 养成 | 掷骰子+卡牌决策 |
-| 🔢 2048 | `2048.js` | 益智 | ←↑→↓ 滑动 |
-| ⚫ 五子棋 | `gomoku.js` | 策略 | 鼠标点击落子 |
+| 🃏 纸牌接龙 | `solitaire.js` | 经典 | 拖拽移动 + 触摸 + 音效 + 存档 |
+| 🟩 俄罗斯方块 | `tetris.js` | 经典 | ←→ 移动，↑ 旋转，↓ 加速，Space 硬降 + 触控 + 音效 |
+| ⚫ 围棋 | `go.js` | 策略 | 鼠标点击 + 虚着/终局 + 音效 |
+| ♟️ 象棋 | `chess.js` | 策略 | 鼠标拖拽/点击 + AI对战 + 将军警告音效 |
+| 🀄 麻将 | `mahjong.js` | 经典 | 点击选牌配对 + 音效反馈 + 存档 |
+| ⚔️ 武侠世界 | `wuxia.js` | RPG | W/A/S/D + 空格攻击 + 音效戰鬥 + 存檔 |
+| 💕 恋爱大富翁 | `dating.js` | 养成 | 掷骰子+卡牌决策 + 投电影票音效 + 存档 |
+| 🔢 2048 | `2048.js` | 益智 | ←↑→↓ 滑动 + 触控手势 + 合并音效 + 存档 |
+| ⚫ 五子棋 | `gomoku.js` | 策略 | 鼠标点击落子 + 悔棋 + 音效 + 存档 |
 
 ### 6.3 音效系统
 
-- **GameUtils** 统一管理 8 组预设音效：move / rotate / flip / score / levelUp / gameOver / click / win
+- **GameUtils** 统一管理 9 组预设音效：move / rotate / flip / score / levelUp / gameOver / click / win / warning
 - 游戏内通过 `GameUtils.playSfx(key)` 播放
 - 音效开关支持用户自定义，偏好持久化到 localStorage
-- 移动游戏卡片可展示等级/音效图标
+- **占位符（ индивидуально）：**名は未使用、削除可。音效开关已集成到游戏 HUD
+
+### SCCP 占位符数据文件
+
+defer init, apply (interactive: true) — 确保 ignorable 字段保持 true，同时 env
 
 ### 6.4 添加新游戏
 
