@@ -27,28 +27,39 @@
     <link rel="robots" href="robots.txt">
     <link rel="sitemap" href="sitemap.xml" type="application/xml">
     <!-- Schema.org 结构化数据 -->
-    
     <script type="application/ld+json">
     {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "啃魂导航",
-  "url": "https://yolialisproxy.github.io/web_nav_v2/",
-  "description": "聚合AI、编程、设计、工具等3100+优质开发者资源。智能Trie搜索、标签筛选、收藏功能，支持小游戏娱乐，开发者一站式导航站。",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {"url": "https://yolialisproxy.github.io/web_nav_v2/?q={search_term_string}"},
-    "query-input": "required name=search_term_string"
-  },
-  "inLanguage": "zh-CN",
-  "isPartOf": {
-    "@type": "CollectionPage",
-    "name": "啃魂导航网站集合",
-    "url": "https://yolialisproxy.github.io/web_nav_v2/"
-  }
-}
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "啃魂导航",
+          "url": "https://yolialisproxy.github.io/web_nav_v2/",
+          "description": "聚合AI、编程、设计、工具等3100+优质开发者资源。智能Trie搜索、标签筛选、收藏功能，支持小游戏娱乐，开发者一站式导航站。",
+          "inLanguage": "zh-CN",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://yolialisproxy.github.io/web_nav_v2/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "啃魂导航 - 开发者资源大全",
+          "url": "https://yolialisproxy.github.io/web_nav_v2/",
+          "description": "3107个优质开发者站点，涵盖AI工具、编程开发、设计素材、效率办公、学术科研等多领域资源。",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "啃魂导航",
+            "url": "https://yolialisproxy.github.io/web_nav_v2/"
+          }
+        }
+      ]
+    }
     </script>
-
     <meta name="theme-color" content="#0a0a0f">
     <link rel="stylesheet" href="assets/css/core.css">
         <link rel="preload" href="assets/css/core.css" as="style">
@@ -88,30 +99,6 @@ html, body {
     <link rel="stylesheet" href="assets/css/monetization.css">
     <!-- PWA manifest -->
     <link rel="manifest" href="manifest.json">
-
-    <script type="application/ld+json">
-    {"@context": "https://schema.org", "@graph": [
-  {
-    "@type": "WebSite",
-    "name": "啃魂导航",
-    "url": "https://yolialisproxy.github.io/web_nav_v2/",
-    "description": "聚合AI、编程、设计、工具等3100+优质开发者资源。智能Trie搜索、标签筛选、收藏功能，支持小游戏娱乐，开发者一站式导航站。",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{"http://yolialisproxy.github.io/web_nav_v2/?q={search_term_string}"}",
-      "query-input": "required name=search_term_string"
-    },
-    "inLanguage": "zh-CN"
-  },
-  {
-    "@type": "ItemList",
-    "numberOfItems": 3107,
-    "itemListElement": [
-      
-    ]
-  }
-]}
-    </script>
 </head>
 <body class="min-h-screen" id="app-root" data-theme="system">
     <!-- 骨架屏 -->

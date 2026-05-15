@@ -119,6 +119,25 @@ async function init() {
     // Toast通知
     Toast.init && Toast.init();
 
+    // 标签云展开/收起（tag-cloud-toggle）
+    var tagToggle = document.getElementById('tag-cloud-toggle');
+    var tagContainer = document.getElementById('tag-cloud-container');
+    if (tagToggle && tagContainer) {
+        tagToggle.setAttribute('role', 'button');
+        tagToggle.setAttribute('tabindex', '0');
+        tagToggle.addEventListener('click', function() {
+            var expanded = tagToggle.getAttribute('aria-expanded') === 'true';
+            tagToggle.setAttribute('aria-expanded', !expanded);
+            tagContainer.style.display = expanded ? 'none' : '';
+        });
+        tagToggle.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                tagToggle.click();
+            }
+        });
+    }
+
     // 状态订阅 - 驱动UI渲染
     state.subscribe(function(s) {
         try { renderer.renderSidebar(s); } catch(e) { console.error('[APP] Sidebar error:', e); }

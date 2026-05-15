@@ -40,19 +40,25 @@ with open("index.html", 'r', encoding='utf-8') as f:
 
 def generate_html(title, h1, content_html, css_active_cat="", description="", nav_html=""):
     """基于模板包装内容"""
-    html = template.replace("<title>啃魂导航 - 开发者导航 | AI工具与编程工具大全</title>",
-                            f"<title>{escape(title)}</title>")
-    html = html.replace(
-        '<meta name="description" content="啃魂导航是面向开发者的全能导航站，聚合AI工具、编程工具、设计资源及技术网站。支持智能搜索、标签筛选与收藏功能，助力开发者高效工作。">',
-        f'<meta name="description" content="{escape(description[:160])}">'
+    # 替换标题
+    html = template.replace(
+        "<title>啃魂导航 - 开发者导航 | AI工具·编程资源·设计素材</title>",
+        f"<title>{escape(title)}</title>"
     )
-    # 更新 Schema 中的 description
-    html = html.replace(
-        '{"@context": "https://schema.org",\n      "@type": "WebSite",\n      "name": "啃魂导航",\n      "url": "https://nav.kunhunav.com/",\n      "description": "面向开发者的智能导航站，聚合AI工具、编程工具、设计资源及技术网站",',
-        f'{{"@context": "https://schema.org",\n      "@type": "WebSite",\n      "name": "啃魂导航",\n      "url": "https://nav.kunhunav.com/",\n      "description": "{escape(description[:150])}",'
+    # 替换 meta description
+    html = re.sub(
+        r'<meta name="description" content="[^"]*">',
+        f'<meta name="description" content="{escape(description[:160])}">',
+        html
     )
-    # 插入预渲染标记和导航HTML
-    # 同时匹配 <main id="main-content" 和 <div id="main-content"
+    # 替换 Schema.org JSON-LD 中的 description（WebSite 节点）
+    html = re.sub(
+        r'("description":\s*)"[^"]*?"',
+        lambda m: m.group(1) + f'"{escape(description[:150])}"',
+        html,
+        count=1  # 只替换第一个（WebSite 的 description）
+    )
+    # 插入预渲染标记
     main_tag_pattern = re.search(r'<(main|div)\s+id="main-content"[^>]*>', html)
     if main_tag_pattern:
         original_tag = main_tag_pattern.group(0)

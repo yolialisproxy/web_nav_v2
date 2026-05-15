@@ -2,12 +2,15 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>啃魂导航 - 开发者导航 | AI工具·编程资源·设计素材</title>
+    <title>设计工具/资源/3D模型 - 啃魂导航</title>
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/favicon.png">
-    <meta name="description" content="啃魂导航聚合AI、编程、设计、工具等3100+优质开发者资源。智能Trie搜索、标签筛选、收藏功能，支持小游戏娱乐，开发者一站式导航站。">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#7c3aed">
+    <meta name="description" content="设计工具/资源/3D模型分类 - 收录12个优质网站资源">
     <meta name="keywords" content="开发者导航,AI导航,编程工具,设计资源,技术网站导航,前端开发,AI工具">
     <meta name="author" content="啃魂导航">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -21,21 +24,40 @@
     <meta name="twitter:description" content="聚合AI、编程、设计、工具等3100+优质开发者资源。智能搜索，快速导航，支持小游戏娱乐。">
     <meta name="twitter:image" content="https://nav.kunhunav.com/assets/images/twitter-card.png">
     <link rel="canonical" href="https://nav.kunhunav.com/">
+    <link rel="robots" href="robots.txt">
+    <link rel="sitemap" href="sitemap.xml" type="application/xml">
     <!-- Schema.org 结构化数据 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "啃魂导航",
-      "alternateName": "KunHun Nav",
-      "url": "https://nav.kunhunav.com/",
-      "description": "聚合AI、编程、设计、工具等3100+优质开发者资源，智能搜索，快速导航",
-      "inLanguage": "zh-CN",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://nav.kunhunav.com/?search={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "啃魂导航",
+          "url": "https://yolialisproxy.github.io/web_nav_v2/",
+          "description": "设计工具/资源/3D模型分类 - 收录12个优质网站资源",
+          "inLanguage": "zh-CN",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://yolialisproxy.github.io/web_nav_v2/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "啃魂导航 - 开发者资源大全",
+          "url": "https://yolialisproxy.github.io/web_nav_v2/",
+          "description": "3107个优质开发者站点，涵盖AI工具、编程开发、设计素材、效率办公、学术科研等多领域资源。",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "啃魂导航",
+            "url": "https://yolialisproxy.github.io/web_nav_v2/"
+          }
+        }
+      ]
     }
     </script>
     <meta name="theme-color" content="#0a0a0f">
@@ -114,6 +136,20 @@ html, body {
                     </svg>
                 </button>
                 <h1 class="text-lg font-bold whitespace-nowrap">啃魂导航</h1>
+                <div class="hidden md:flex items-center gap-2" id="view-switcher" role="group" aria-label="视图切换">
+                    <button id="view-grid" class="view-btn active p-2 rounded-lg hover:bg-white/10 transition-colors" title="网格视图" aria-pressed="true" aria-label="网格视图">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </button>
+                    <button id="view-list" class="view-btn p-2 rounded-lg hover:bg-white/10 transition-colors" title="列表视图" aria-pressed="false" aria-label="列表视图">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+                <!-- 游戏入口 -->
+                <a href="#game" id="game-toggle" class="hidden md:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg hover:bg-white/10 transition-colors text-sm font-medium" title="游戏中心" aria-label="打开游戏中心">
+                    <span class="text-base">🎮</span>
+                    <span>游戏</span>
+                </a>
+
                 <div class="hidden md:inline-flex items-center">
                     <button id="favorite-toggle" class="favorite-btn" onclick="if(window.favoriteUI)window.favoriteUI.openModal()" title="查看收藏" aria-label="打开收藏面板">
                         ♡
@@ -127,11 +163,17 @@ html, body {
             <div class="relative flex-1 max-w-md ml-auto">
                 <svg class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-sm pointer-events-none" aria-hidden="true"></svg>
                 <input type="text" id="search-input" placeholder="搜索资源... (Ctrl + K)"
-                       class="w-full pl-10 pr-10 py-2.5 rounded-xl"
+                       class="w-full pl-10 pr-22 py-2.5 rounded-xl"
                        aria-label="搜索资源"
                        autocomplete="off"
                        role="searchbox">
-                <button id="search-clear" class="absolute right-3 top-1/2 -translate-y-1/2 hidden" aria-label="清除搜索">
+                <button                     <button id="theme-toggle" class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-lg hover:bg-white/10 transition-colors" 
+                            title="切换主题" aria-label="切换主题">
+                        <svg class="w-4 h-4 text-[var(--color-muted)]" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" id="theme-icon"/>
+                        </svg>
+                    </button>
+id="search-clear" class="absolute right-9 top-1/2 -translate-y-1/2 hidden" aria-label="清除搜索">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -148,80 +190,46 @@ html, body {
         <!-- 侧边栏 -->
         <aside id="sidebar" class="w-64 shrink-0 transition-all duration-300 ease-in-out overflow-hidden fixed lg:sticky top-16 left-0 h-[calc(100vh-4rem)] z-40 shadow-2xl lg:shadow-none -translate-x-full lg:translate-x-0 lg:w-64" role="navigation" aria-label="主导航">
             <nav id="sidebar-content" class="sticky top-4 space-y-1 p-2 overflow-y-auto h-full" aria-label="分类导航"><nav class="sidebar-nav" aria-label="主导航">
-<div class="nav-item" data-category="AI工具"><span class="nav-icon">🤖</span><span class="nav-text">AI工具</span><span class="nav-badge">1101</span></div>
+<div class="nav-item" data-category="AI工具"><span class="nav-icon">🤖</span><span class="nav-text">AI工具</span><span class="nav-badge">1089</span></div>
 <div class="nav-children" data-parent="ai">
-<a class="nav-sub-item" data-sub="AI工具/人工智能" href="#AI工具_人工智能"><span class="nav-text">AI工具/人工智能</span><span class="nav-badge">332</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/代码助手" href="#AI工具_人工智能_代码助手"><span class="nav-text">AI工具/人工智能/代码助手</span><span class="nav-badge">52</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/数据分析/子类-2" href="#AI工具_人工智能_数据分析_子类-2"><span class="nav-text">AI工具/人工智能/数据分析/子类-2</span><span class="nav-badge">34</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/数据分析/子类-5" href="#AI工具_人工智能_数据分析_子类-5"><span class="nav-text">AI工具/人工智能/数据分析/子类-5</span><span class="nav-badge">33</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/视频生成/子类-3" href="#AI工具_人工智能_视频生成_子类-3"><span class="nav-text">AI工具/人工智能/视频生成/子类-3</span><span class="nav-badge">33</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/综合平台" href="#AI工具_人工智能_综合平台"><span class="nav-text">AI工具/人工智能/综合平台</span><span class="nav-badge">29</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能" href="#AI工具_人工智能"><span class="nav-text">AI工具/人工智能</span><span class="nav-badge">345</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/视频生成" href="#AI工具_人工智能_视频生成"><span class="nav-text">AI工具/人工智能/视频生成</span><span class="nav-badge">110</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/数据分析" href="#AI工具_人工智能_数据分析"><span class="nav-text">AI工具/人工智能/数据分析</span><span class="nav-badge">106</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话" href="#AI工具_人工智能_聊天对话"><span class="nav-text">AI工具/人工智能/聊天对话</span><span class="nav-badge">86</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/写作助手" href="#AI工具_人工智能_写作助手"><span class="nav-text">AI工具/人工智能/写作助手</span><span class="nav-badge">77</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/知识图谱" href="#AI工具_人工智能_知识图谱"><span class="nav-text">AI工具/人工智能/知识图谱</span><span class="nav-badge">70</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/摘要生成" href="#AI工具_人工智能_摘要生成"><span class="nav-text">AI工具/人工智能/摘要生成</span><span class="nav-badge">69</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/代码助手" href="#AI工具_人工智能_代码助手"><span class="nav-text">AI工具/人工智能/代码助手</span><span class="nav-badge">49</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/搜索引擎" href="#AI工具_人工智能_搜索引擎"><span class="nav-text">AI工具/人工智能/搜索引擎</span><span class="nav-badge">36</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/综合平台" href="#AI工具_人工智能_综合平台"><span class="nav-text">AI工具/人工智能/综合平台</span><span class="nav-badge">28</span></a>
 <a class="nav-sub-item" data-sub="AI工具/人工智能/图像处理" href="#AI工具_人工智能_图像处理"><span class="nav-text">AI工具/人工智能/图像处理</span><span class="nav-badge">28</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/视频生成/子类-2" href="#AI工具_人工智能_视频生成_子类-2"><span class="nav-text">AI工具/人工智能/视频生成/子类-2</span><span class="nav-badge">23</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/数据分析" href="#AI工具_人工智能_数据分析"><span class="nav-text">AI工具/人工智能/数据分析</span><span class="nav-badge">21</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/视频生成/子类-4" href="#AI工具_人工智能_视频生成_子类-4"><span class="nav-text">AI工具/人工智能/视频生成/子类-4</span><span class="nav-badge">21</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/摘要生成/子类-3" href="#AI工具_人工智能_摘要生成_子类-3"><span class="nav-text">AI工具/人工智能/摘要生成/子类-3</span><span class="nav-badge">20</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/写作助手/子类-4" href="#AI工具_人工智能_写作助手_子类-4"><span class="nav-text">AI工具/人工智能/写作助手/子类-4</span><span class="nav-badge">20</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/写作助手/子类-5" href="#AI工具_人工智能_写作助手_子类-5"><span class="nav-text">AI工具/人工智能/写作助手/子类-5</span><span class="nav-badge">20</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/搜索引擎/子类-5" href="#AI工具_人工智能_搜索引擎_子类-5"><span class="nav-text">AI工具/人工智能/搜索引擎/子类-5</span><span class="nav-badge">20</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话/子类-3" href="#AI工具_人工智能_聊天对话_子类-3"><span class="nav-text">AI工具/人工智能/聊天对话/子类-3</span><span class="nav-badge">19</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/视频生成/子类-5" href="#AI工具_人工智能_视频生成_子类-5"><span class="nav-text">AI工具/人工智能/视频生成/子类-5</span><span class="nav-badge">19</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/数据分析/子类-4" href="#AI工具_人工智能_数据分析_子类-4"><span class="nav-text">AI工具/人工智能/数据分析/子类-4</span><span class="nav-badge">18</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话/子类-1" href="#AI工具_人工智能_聊天对话_子类-1"><span class="nav-text">AI工具/人工智能/聊天对话/子类-1</span><span class="nav-badge">17</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话/子类-2" href="#AI工具_人工智能_聊天对话_子类-2"><span class="nav-text">AI工具/人工智能/聊天对话/子类-2</span><span class="nav-badge">17</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/知识图谱/子类-5" href="#AI工具_人工智能_知识图谱_子类-5"><span class="nav-text">AI工具/人工智能/知识图谱/子类-5</span><span class="nav-badge">17</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/知识图谱/子类-4" href="#AI工具_人工智能_知识图谱_子类-4"><span class="nav-text">AI工具/人工智能/知识图谱/子类-4</span><span class="nav-badge">17</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/视频生成/子类-1" href="#AI工具_人工智能_视频生成_子类-1"><span class="nav-text">AI工具/人工智能/视频生成/子类-1</span><span class="nav-badge">17</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话/子类-5" href="#AI工具_人工智能_聊天对话_子类-5"><span class="nav-text">AI工具/人工智能/聊天对话/子类-5</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/摘要生成/子类-4" href="#AI工具_人工智能_摘要生成_子类-4"><span class="nav-text">AI工具/人工智能/摘要生成/子类-4</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/搜索引擎/子类-4" href="#AI工具_人工智能_搜索引擎_子类-4"><span class="nav-text">AI工具/人工智能/搜索引擎/子类-4</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/写作助手/子类-1" href="#AI工具_人工智能_写作助手_子类-1"><span class="nav-text">AI工具/人工智能/写作助手/子类-1</span><span class="nav-badge">15</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/知识图谱/子类-2" href="#AI工具_人工智能_知识图谱_子类-2"><span class="nav-text">AI工具/人工智能/知识图谱/子类-2</span><span class="nav-badge">15</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/语音识别" href="#AI工具_人工智能_语音识别"><span class="nav-text">AI工具/人工智能/语音识别</span><span class="nav-badge">16</span></a>
 <a class="nav-sub-item" data-sub="AI工具/人工智能/音频生成" href="#AI工具_人工智能_音频生成"><span class="nav-text">AI工具/人工智能/音频生成</span><span class="nav-badge">15</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/摘要生成/子类-2" href="#AI工具_人工智能_摘要生成_子类-2"><span class="nav-text">AI工具/人工智能/摘要生成/子类-2</span><span class="nav-badge">13</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/写作助手/子类-2" href="#AI工具_人工智能_写作助手_子类-2"><span class="nav-text">AI工具/人工智能/写作助手/子类-2</span><span class="nav-badge">13</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话/子类-4" href="#AI工具_人工智能_聊天对话_子类-4"><span class="nav-text">AI工具/人工智能/聊天对话/子类-4</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/摘要生成/子类-1" href="#AI工具_人工智能_摘要生成_子类-1"><span class="nav-text">AI工具/人工智能/摘要生成/子类-1</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/知识图谱/子类-3" href="#AI工具_人工智能_知识图谱_子类-3"><span class="nav-text">AI工具/人工智能/知识图谱/子类-3</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/语音识别/子类-5" href="#AI工具_人工智能_语音识别_子类-5"><span class="nav-text">AI工具/人工智能/语音识别/子类-5</span><span class="nav-badge">11</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/摘要生成/子类-5" href="#AI工具_人工智能_摘要生成_子类-5"><span class="nav-text">AI工具/人工智能/摘要生成/子类-5</span><span class="nav-badge">11</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/草图转图/子类-5" href="#AI工具_人工智能_草图转图_子类-5"><span class="nav-text">AI工具/人工智能/草图转图/子类-5</span><span class="nav-badge">11</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/知识图谱/子类-1" href="#AI工具_人工智能_知识图谱_子类-1"><span class="nav-text">AI工具/人工智能/知识图谱/子类-1</span><span class="nav-badge">10</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/写作助手/子类-3" href="#AI工具_人工智能_写作助手_子类-3"><span class="nav-text">AI工具/人工智能/写作助手/子类-3</span><span class="nav-badge">9</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/情感分析/子类-5" href="#AI工具_人工智能_情感分析_子类-5"><span class="nav-text">AI工具/人工智能/情感分析/子类-5</span><span class="nav-badge">8</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/推荐系统/子类-5" href="#AI工具_人工智能_推荐系统_子类-5"><span class="nav-text">AI工具/人工智能/推荐系统/子类-5</span><span class="nav-badge">7</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/图像识别/子类-5" href="#AI工具_人工智能_图像识别_子类-5"><span class="nav-text">AI工具/人工智能/图像识别/子类-5</span><span class="nav-badge">6</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/场景生成/子类-5" href="#AI工具_人工智能_场景生成_子类-5"><span class="nav-text">AI工具/人工智能/场景生成/子类-5</span><span class="nav-badge">6</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/语音识别/子类-4" href="#AI工具_人工智能_语音识别_子类-4"><span class="nav-text">AI工具/人工智能/语音识别/子类-4</span><span class="nav-badge">5</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/聊天对话" href="#AI工具_人工智能_聊天对话"><span class="nav-text">AI工具/人工智能/聊天对话</span><span class="nav-badge">5</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/预测分析/子类-5" href="#AI工具_人工智能_预测分析_子类-5"><span class="nav-text">AI工具/人工智能/预测分析/子类-5</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/自动化流程/子类-4" href="#AI工具_人工智能_自动化流程_子类-4"><span class="nav-text">AI工具/人工智能/自动化流程/子类-4</span><span class="nav-badge">4</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/草图转图" href="#AI工具_人工智能_草图转图"><span class="nav-text">AI工具/人工智能/草图转图</span><span class="nav-badge">11</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/情感分析" href="#AI工具_人工智能_情感分析"><span class="nav-text">AI工具/人工智能/情感分析</span><span class="nav-badge">8</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/推荐系统" href="#AI工具_人工智能_推荐系统"><span class="nav-text">AI工具/人工智能/推荐系统</span><span class="nav-badge">7</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/图像识别" href="#AI工具_人工智能_图像识别"><span class="nav-text">AI工具/人工智能/图像识别</span><span class="nav-badge">6</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/场景生成" href="#AI工具_人工智能_场景生成"><span class="nav-text">AI工具/人工智能/场景生成</span><span class="nav-badge">6</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/预测分析" href="#AI工具_人工智能_预测分析"><span class="nav-text">AI工具/人工智能/预测分析</span><span class="nav-badge">4</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/自动化流程" href="#AI工具_人工智能_自动化流程"><span class="nav-text">AI工具/人工智能/自动化流程</span><span class="nav-badge">4</span></a>
 <a class="nav-sub-item" data-sub="AI工具/人工智能/文档分析" href="#AI工具_人工智能_文档分析"><span class="nav-text">AI工具/人工智能/文档分析</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/图生图/子类-5" href="#AI工具_人工智能_图生图_子类-5"><span class="nav-text">AI工具/人工智能/图生图/子类-5</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/AI视频生成" href="#AI工具_人工智能_AI视频生成"><span class="nav-text">AI工具/人工智能/AI视频生成</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/写作生成" href="#AI工具_人工智能_写作生成"><span class="nav-text">AI工具/人工智能/写作生成</span><span class="nav-badge">2</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/图像扩展/子类-3" href="#AI工具_人工智能_图像扩展_子类-3"><span class="nav-text">AI工具/人工智能/图像扩展/子类-3</span><span class="nav-badge">2</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/背景移除/子类-4" href="#AI工具_人工智能_背景移除_子类-4"><span class="nav-text">AI工具/人工智能/背景移除/子类-4</span><span class="nav-badge">2</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/视频工具" href="#AI工具_人工智能_视频工具"><span class="nav-text">AI工具/人工智能/视频工具</span><span class="nav-badge">2</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/文生图/子类-5" href="#AI工具_人工智能_文生图_子类-5"><span class="nav-text">AI工具/人工智能/文生图/子类-5</span><span class="nav-badge">1</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/风格迁移/子类-2" href="#AI工具_人工智能_风格迁移_子类-2"><span class="nav-text">AI工具/人工智能/风格迁移/子类-2</span><span class="nav-badge">1</span></a>
-<a class="nav-sub-item" data-sub="AI工具/人工智能/背景移除/子类-5" href="#AI工具_人工智能_背景移除_子类-5"><span class="nav-text">AI工具/人工智能/背景移除/子类-5</span><span class="nav-badge">1</span></a>
+<a class="nav-sub-item" data-sub="AI工具/人工智能/图生图" href="#AI工具_人工智能_图生图"><span class="nav-text">AI工具/人工智能/图生图</span><span class="nav-badge">4</span></a>
 </div>
-<div class="nav-item" data-category="开发工具"><span class="nav-icon">💻</span><span class="nav-text">开发工具</span><span class="nav-badge">418</span></div>
+<div class="nav-item" data-category="开发工具"><span class="nav-icon">💻</span><span class="nav-text">开发工具</span><span class="nav-badge">416</span></div>
 <div class="nav-children" data-parent="develop">
 <a class="nav-sub-item" data-sub="开发工具/平台开源/GitHub" href="#开发工具_平台开源_GitHub"><span class="nav-text">开发工具/平台开源/GitHub</span><span class="nav-badge">182</span></a>
 <a class="nav-sub-item" data-sub="开发工具/学习生成/在线课程" href="#开发工具_学习生成_在线课程"><span class="nav-text">开发工具/学习生成/在线课程</span><span class="nav-badge">16</span></a>
 <a class="nav-sub-item" data-sub="开发工具/学习生成/文档教程" href="#开发工具_学习生成_文档教程"><span class="nav-text">开发工具/学习生成/文档教程</span><span class="nav-badge">16</span></a>
+<a class="nav-sub-item" data-sub="开发工具" href="#开发工具"><span class="nav-text">开发工具</span><span class="nav-badge">13</span></a>
 <a class="nav-sub-item" data-sub="开发工具/CI/CD服务" href="#开发工具_CI_CD服务"><span class="nav-text">开发工具/CI/CD服务</span><span class="nav-badge">13</span></a>
 <a class="nav-sub-item" data-sub="开发工具/容器镜像" href="#开发工具_容器镜像"><span class="nav-text">开发工具/容器镜像</span><span class="nav-badge">13</span></a>
-<a class="nav-sub-item" data-sub="开发工具/云开发平台" href="#开发工具_云开发平台"><span class="nav-text">开发工具/云开发平台</span><span class="nav-badge">13</span></a>
-<a class="nav-sub-item" data-sub="开发工具/低代码平台" href="#开发工具_低代码平台"><span class="nav-text">开发工具/低代码平台</span><span class="nav-badge">13</span></a>
+<a class="nav-sub-item" data-sub="开发工具/云开发平台" href="#开发工具_云开发平台"><span class="nav-text">开发工具/云开发平台</span><span class="nav-badge">12</span></a>
+<a class="nav-sub-item" data-sub="开发工具/低代码平台" href="#开发工具_低代码平台"><span class="nav-text">开发工具/低代码平台</span><span class="nav-badge">12</span></a>
 <a class="nav-sub-item" data-sub="开发工具/DevOps工具" href="#开发工具_DevOps工具"><span class="nav-text">开发工具/DevOps工具</span><span class="nav-badge">12</span></a>
 <a class="nav-sub-item" data-sub="开发工具/包管理" href="#开发工具_包管理"><span class="nav-text">开发工具/包管理</span><span class="nav-badge">11</span></a>
 <a class="nav-sub-item" data-sub="开发工具/API网关" href="#开发工具_API网关"><span class="nav-text">开发工具/API网关</span><span class="nav-badge">11</span></a>
 <a class="nav-sub-item" data-sub="开发工具/日志服务" href="#开发工具_日志服务"><span class="nav-text">开发工具/日志服务</span><span class="nav-badge">11</span></a>
 <a class="nav-sub-item" data-sub="开发工具/持续部署" href="#开发工具_持续部署"><span class="nav-text">开发工具/持续部署</span><span class="nav-badge">11</span></a>
-<a class="nav-sub-item" data-sub="开发工具" href="#开发工具"><span class="nav-text">开发工具</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="开发工具/代码托管" href="#开发工具_代码托管"><span class="nav-text">开发工具/代码托管</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="开发工具/代码搜索" href="#开发工具_代码搜索"><span class="nav-text">开发工具/代码搜索</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="开发工具/Serverless" href="#开发工具_Serverless"><span class="nav-text">开发工具/Serverless</span><span class="nav-badge">10</span></a>
@@ -233,13 +241,12 @@ html, body {
 <a class="nav-sub-item" data-sub="开发工具/部署服务" href="#开发工具_部署服务"><span class="nav-text">开发工具/部署服务</span><span class="nav-badge">5</span></a>
 <a class="nav-sub-item" data-sub="开发工具/API服务" href="#开发工具_API服务"><span class="nav-text">开发工具/API服务</span><span class="nav-badge">4</span></a>
 <a class="nav-sub-item" data-sub="开发工具/API生成" href="#开发工具_API生成"><span class="nav-text">开发工具/API生成</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="开发工具/文档资源" href="#开发工具_文档资源"><span class="nav-text">开发工具/文档资源</span><span class="nav-badge">3</span></a>
 </div>
-<div class="nav-item active" data-category="设计工具"><span class="nav-icon">🎨</span><span class="nav-text">设计工具</span><span class="nav-badge">388</span></div>
+<div class="nav-item active" data-category="设计工具"><span class="nav-icon">🎨</span><span class="nav-text">设计工具</span><span class="nav-badge">386</span></div>
 <div class="nav-children" data-parent="design">
-<a class="nav-sub-item" data-sub="设计工具/UI设计工具" href="#设计工具_UI设计工具"><span class="nav-text">设计工具/UI设计工具</span><span class="nav-badge">92</span></a>
+<a class="nav-sub-item" data-sub="设计工具/UI设计工具" href="#设计工具_UI设计工具"><span class="nav-text">设计工具/UI设计工具</span><span class="nav-badge">91</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源" href="#设计工具_资源"><span class="nav-text">设计工具/资源</span><span class="nav-badge">46</span></a>
-<a class="nav-sub-item" data-sub="设计工具" href="#设计工具"><span class="nav-text">设计工具</span><span class="nav-badge">27</span></a>
+<a class="nav-sub-item" data-sub="设计工具" href="#设计工具"><span class="nav-text">设计工具</span><span class="nav-badge">42</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/PPT模板" href="#设计工具_资源_PPT模板"><span class="nav-text">设计工具/资源/PPT模板</span><span class="nav-badge">18</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/插画资源" href="#设计工具_资源_插画资源"><span class="nav-text">设计工具/资源/插画资源</span><span class="nav-badge">15</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/纹理贴图" href="#设计工具_资源_纹理贴图"><span class="nav-text">设计工具/资源/纹理贴图</span><span class="nav-badge">15</span></a>
@@ -249,10 +256,10 @@ html, body {
 <a class="nav-sub-item active" data-sub="设计工具/资源/3D模型" href="#设计工具_资源_3D模型"><span class="nav-text">设计工具/资源/3D模型</span><span class="nav-badge">12</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/样机模板" href="#设计工具_资源_样机模板"><span class="nav-text">设计工具/资源/样机模板</span><span class="nav-badge">12</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/图标资源" href="#设计工具_资源_图标资源"><span class="nav-text">设计工具/资源/图标资源</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="设计工具/资源/设计资源包" href="#设计工具_资源_设计资源包"><span class="nav-text">设计工具/资源/设计资源包</span><span class="nav-badge">12</span></a>
 <a class="nav-sub-item" data-sub="设计工具/图片资源" href="#设计工具_图片资源"><span class="nav-text">设计工具/图片资源</span><span class="nav-badge">11</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/设计素材" href="#设计工具_资源_设计素材"><span class="nav-text">设计工具/资源/设计素材</span><span class="nav-badge">11</span></a>
 <a class="nav-sub-item" data-sub="设计工具/资源/设计灵感" href="#设计工具_资源_设计灵感"><span class="nav-text">设计工具/资源/设计灵感</span><span class="nav-badge">11</span></a>
+<a class="nav-sub-item" data-sub="设计工具/资源/设计资源包" href="#设计工具_资源_设计资源包"><span class="nav-text">设计工具/资源/设计资源包</span><span class="nav-badge">11</span></a>
 <a class="nav-sub-item" data-sub="设计工具/字体资源" href="#设计工具_字体资源"><span class="nav-text">设计工具/字体资源</span><span class="nav-badge">9</span></a>
 <a class="nav-sub-item" data-sub="设计工具/图片社区" href="#设计工具_图片社区"><span class="nav-text">设计工具/图片社区</span><span class="nav-badge">7</span></a>
 <a class="nav-sub-item" data-sub="设计工具/字体教程" href="#设计工具_字体教程"><span class="nav-text">设计工具/字体教程</span><span class="nav-badge">5</span></a>
@@ -260,83 +267,50 @@ html, body {
 <a class="nav-sub-item" data-sub="设计工具/资源社区" href="#设计工具_资源社区"><span class="nav-text">设计工具/资源社区</span><span class="nav-badge">5</span></a>
 <a class="nav-sub-item" data-sub="设计工具/模板社区" href="#设计工具_模板社区"><span class="nav-text">设计工具/模板社区</span><span class="nav-badge">4</span></a>
 <a class="nav-sub-item" data-sub="设计工具/UI设计开源" href="#设计工具_UI设计开源"><span class="nav-text">设计工具/UI设计开源</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="设计工具/平台资源" href="#设计工具_平台资源"><span class="nav-text">设计工具/平台资源</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="设计工具/流程图生成" href="#设计工具_流程图生成"><span class="nav-text">设计工具/流程图生成</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="设计工具/白板资源" href="#设计工具_白板资源"><span class="nav-text">设计工具/白板资源</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="设计工具/白板教程" href="#设计工具_白板教程"><span class="nav-text">设计工具/白板教程</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="设计工具/白板开源" href="#设计工具_白板开源"><span class="nav-text">设计工具/白板开源</span><span class="nav-badge">3</span></a>
 </div>
-<div class="nav-item" data-category="效率办公"><span class="nav-icon">⚡</span><span class="nav-text">效率办公</span><span class="nav-badge">747</span></div>
+<div class="nav-item" data-category="效率办公"><span class="nav-icon">⚡</span><span class="nav-text">效率办公</span><span class="nav-badge">778</span></div>
 <div class="nav-children" data-parent="productivity">
+<a class="nav-sub-item" data-sub="效率办公/协作工具" href="#效率办公_协作工具"><span class="nav-text">效率办公/协作工具</span><span class="nav-badge">52</span></a>
+<a class="nav-sub-item" data-sub="效率办公/故事生成" href="#效率办公_故事生成"><span class="nav-text">效率办公/故事生成</span><span class="nav-badge">51</span></a>
+<a class="nav-sub-item" data-sub="效率办公/剧本创作" href="#效率办公_剧本创作"><span class="nav-text">效率办公/剧本创作</span><span class="nav-badge">51</span></a>
+<a class="nav-sub-item" data-sub="效率办公/博客管理" href="#效率办公_博客管理"><span class="nav-text">效率办公/博客管理</span><span class="nav-badge">50</span></a>
+<a class="nav-sub-item" data-sub="效率办公/社交媒体" href="#效率办公_社交媒体"><span class="nav-text">效率办公/社交媒体</span><span class="nav-badge">45</span></a>
+<a class="nav-sub-item" data-sub="效率办公/总结摘要" href="#效率办公_总结摘要"><span class="nav-text">效率办公/总结摘要</span><span class="nav-badge">44</span></a>
 <a class="nav-sub-item" data-sub="效率办公/创意激发" href="#效率办公_创意激发"><span class="nav-text">效率办公/创意激发</span><span class="nav-badge">39</span></a>
 <a class="nav-sub-item" data-sub="效率办公/AI写作" href="#效率办公_AI写作"><span class="nav-text">效率办公/AI写作</span><span class="nav-badge">37</span></a>
-<a class="nav-sub-item" data-sub="效率办公/协作工具" href="#效率办公_协作工具"><span class="nav-text">效率办公/协作工具</span><span class="nav-badge">31</span></a>
-<a class="nav-sub-item" data-sub="效率办公/总结摘要" href="#效率办公_总结摘要"><span class="nav-text">效率办公/总结摘要</span><span class="nav-badge">27</span></a>
-<a class="nav-sub-item" data-sub="效率办公/技术写作" href="#效率办公_技术写作"><span class="nav-text">效率办公/技术写作</span><span class="nav-badge">26</span></a>
-<a class="nav-sub-item" data-sub="效率办公/改写重述" href="#效率办公_改写重述"><span class="nav-text">效率办公/改写重述</span><span class="nav-badge">24</span></a>
-<a class="nav-sub-item" data-sub="效率办公/标题生成" href="#效率办公_标题生成"><span class="nav-text">效率办公/标题生成</span><span class="nav-badge">22</span></a>
-<a class="nav-sub-item" data-sub="效率办公/社交媒体" href="#效率办公_社交媒体"><span class="nav-text">效率办公/社交媒体</span><span class="nav-badge">21</span></a>
+<a class="nav-sub-item" data-sub="效率办公/标题生成" href="#效率办公_标题生成"><span class="nav-text">效率办公/标题生成</span><span class="nav-badge">37</span></a>
+<a class="nav-sub-item" data-sub="效率办公/改写重述" href="#效率办公_改写重述"><span class="nav-text">效率办公/改写重述</span><span class="nav-badge">35</span></a>
+<a class="nav-sub-item" data-sub="效率办公/技术写作" href="#效率办公_技术写作"><span class="nav-text">效率办公/技术写作</span><span class="nav-badge">30</span></a>
+<a class="nav-sub-item" data-sub="效率办公/邮件写作" href="#效率办公_邮件写作"><span class="nav-text">效率办公/邮件写作</span><span class="nav-badge">29</span></a>
+<a class="nav-sub-item" data-sub="效率办公" href="#效率办公"><span class="nav-text">效率办公</span><span class="nav-badge">27</span></a>
+<a class="nav-sub-item" data-sub="效率办公/实用工具/文件工具" href="#效率办公_实用工具_文件工具"><span class="nav-text">效率办公/实用工具/文件工具</span><span class="nav-badge">25</span></a>
+<a class="nav-sub-item" data-sub="效率办公/文案优化" href="#效率办公_文案优化"><span class="nav-text">效率办公/文案优化</span><span class="nav-badge">23</span></a>
 <a class="nav-sub-item" data-sub="效率办公/内容写作" href="#效率办公_内容写作"><span class="nav-text">效率办公/内容写作</span><span class="nav-badge">20</span></a>
-<a class="nav-sub-item" data-sub="效率办公/故事生成" href="#效率办公_故事生成"><span class="nav-text">效率办公/故事生成</span><span class="nav-badge">20</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文数据分析" href="#效率办公_网文数据分析"><span class="nav-text">效率办公/网文数据分析</span><span class="nav-badge">20</span></a>
 <a class="nav-sub-item" data-sub="效率办公/诗歌创作" href="#效率办公_诗歌创作"><span class="nav-text">效率办公/诗歌创作</span><span class="nav-badge">17</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文作家协会" href="#效率办公_网文作家协会"><span class="nav-text">效率办公/网文作家协会</span><span class="nav-badge">17</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文辅助工具" href="#效率办公_网文辅助工具"><span class="nav-text">效率办公/网文辅助工具</span><span class="nav-badge">17</span></a>
-<a class="nav-sub-item" data-sub="效率办公/邮件写作" href="#效率办公_邮件写作"><span class="nav-text">效率办公/邮件写作</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="效率办公/剧本创作" href="#效率办公_剧本创作"><span class="nav-text">效率办公/剧本创作</span><span class="nav-badge">16</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文阅读应用" href="#效率办公_网文阅读应用"><span class="nav-text">效率办公/网文阅读应用</span><span class="nav-badge">16</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文版权交易" href="#效率办公_网文版权交易"><span class="nav-text">效率办公/网文版权交易</span><span class="nav-badge">16</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文推广平台" href="#效率办公_网文推广平台"><span class="nav-text">效率办公/网文推广平台</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="效率办公/网文书评社区" href="#效率办公_网文书评社区"><span class="nav-text">效率办公/网文书评社区</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="效率办公/剧本创作/子类-5" href="#效率办公_剧本创作_子类-5"><span class="nav-text">效率办公/剧本创作/子类-5</span><span class="nav-badge">14</span></a>
-<a class="nav-sub-item" data-sub="效率办公/社交媒体/子类-5" href="#效率办公_社交媒体_子类-5"><span class="nav-text">效率办公/社交媒体/子类-5</span><span class="nav-badge">14</span></a>
-<a class="nav-sub-item" data-sub="效率办公/博客管理" href="#效率办公_博客管理"><span class="nav-text">效率办公/博客管理</span><span class="nav-badge">14</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文编辑工具" href="#效率办公_网文编辑工具"><span class="nav-text">效率办公/网文编辑工具</span><span class="nav-badge">14</span></a>
-<a class="nav-sub-item" data-sub="效率办公/协作工具/子类-5" href="#效率办公_协作工具_子类-5"><span class="nav-text">效率办公/协作工具/子类-5</span><span class="nav-badge">14</span></a>
-<a class="nav-sub-item" data-sub="效率办公/故事生成/子类-3" href="#效率办公_故事生成_子类-3"><span class="nav-text">效率办公/故事生成/子类-3</span><span class="nav-badge">13</span></a>
-<a class="nav-sub-item" data-sub="效率办公/博客管理/子类-4" href="#效率办公_博客管理_子类-4"><span class="nav-text">效率办公/博客管理/子类-4</span><span class="nav-badge">13</span></a>
-<a class="nav-sub-item" data-sub="效率办公/剧本创作/子类-4" href="#效率办公_剧本创作_子类-4"><span class="nav-text">效率办公/剧本创作/子类-4</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="效率办公/博客管理/子类-3" href="#效率办公_博客管理_子类-3"><span class="nav-text">效率办公/博客管理/子类-3</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="效率办公/博客管理/子类-5" href="#效率办公_博客管理_子类-5"><span class="nav-text">效率办公/博客管理/子类-5</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="效率办公/网文榜单统计" href="#效率办公_网文榜单统计"><span class="nav-text">效率办公/网文榜单统计</span><span class="nav-badge">12</span></a>
-<a class="nav-sub-item" data-sub="效率办公/社交媒体/子类-4" href="#效率办公_社交媒体_子类-4"><span class="nav-text">效率办公/社交媒体/子类-4</span><span class="nav-badge">11</span></a>
+<a class="nav-sub-item" data-sub="效率办公/网文书评社区" href="#效率办公_网文书评社区"><span class="nav-text">效率办公/网文书评社区</span><span class="nav-badge">14</span></a>
+<a class="nav-sub-item" data-sub="效率办公/营销文案" href="#效率办公_营销文案"><span class="nav-text">效率办公/营销文案</span><span class="nav-badge">12</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文资源下载" href="#效率办公_网文资源下载"><span class="nav-text">效率办公/网文资源下载</span><span class="nav-badge">10</span></a>
-<a class="nav-sub-item" data-sub="效率办公/故事生成/子类-4" href="#效率办公_故事生成_子类-4"><span class="nav-text">效率办公/故事生成/子类-4</span><span class="nav-badge">10</span></a>
-<a class="nav-sub-item" data-sub="效率办公/剧本创作/子类-3" href="#效率办公_剧本创作_子类-3"><span class="nav-text">效率办公/剧本创作/子类-3</span><span class="nav-badge">10</span></a>
-<a class="nav-sub-item" data-sub="效率办公/总结摘要/子类-4" href="#效率办公_总结摘要_子类-4"><span class="nav-text">效率办公/总结摘要/子类-4</span><span class="nav-badge">10</span></a>
-<a class="nav-sub-item" data-sub="效率办公/营销文案" href="#效率办公_营销文案"><span class="nav-text">效率办公/营销文案</span><span class="nav-badge">9</span></a>
-<a class="nav-sub-item" data-sub="效率办公/邮件写作/子类-4" href="#效率办公_邮件写作_子类-4"><span class="nav-text">效率办公/邮件写作/子类-4</span><span class="nav-badge">8</span></a>
-<a class="nav-sub-item" data-sub="效率办公/标题生成/子类-4" href="#效率办公_标题生成_子类-4"><span class="nav-text">效率办公/标题生成/子类-4</span><span class="nav-badge">8</span></a>
-<a class="nav-sub-item" data-sub="效率办公/标题生成/子类-5" href="#效率办公_标题生成_子类-5"><span class="nav-text">效率办公/标题生成/子类-5</span><span class="nav-badge">8</span></a>
-<a class="nav-sub-item" data-sub="效率办公/故事生成/子类-5" href="#效率办公_故事生成_子类-5"><span class="nav-text">效率办公/故事生成/子类-5</span><span class="nav-badge">8</span></a>
-<a class="nav-sub-item" data-sub="效率办公/协作工具/子类-4" href="#效率办公_协作工具_子类-4"><span class="nav-text">效率办公/协作工具/子类-4</span><span class="nav-badge">8</span></a>
-<a class="nav-sub-item" data-sub="效率办公/改写重述/子类-5" href="#效率办公_改写重述_子类-5"><span class="nav-text">效率办公/改写重述/子类-5</span><span class="nav-badge">7</span></a>
-<a class="nav-sub-item" data-sub="效率办公/总结摘要/子类-5" href="#效率办公_总结摘要_子类-5"><span class="nav-text">效率办公/总结摘要/子类-5</span><span class="nav-badge">7</span></a>
-<a class="nav-sub-item" data-sub="效率办公/文案优化/子类-4" href="#效率办公_文案优化_子类-4"><span class="nav-text">效率办公/文案优化/子类-4</span><span class="nav-badge">6</span></a>
-<a class="nav-sub-item" data-sub="效率办公/文案优化/子类-3" href="#效率办公_文案优化_子类-3"><span class="nav-text">效率办公/文案优化/子类-3</span><span class="nav-badge">6</span></a>
-<a class="nav-sub-item" data-sub="效率办公/文案优化/子类-1" href="#效率办公_文案优化_子类-1"><span class="nav-text">效率办公/文案优化/子类-1</span><span class="nav-badge">5</span></a>
-<a class="nav-sub-item" data-sub="效率办公/邮件写作/子类-5" href="#效率办公_邮件写作_子类-5"><span class="nav-text">效率办公/邮件写作/子类-5</span><span class="nav-badge">5</span></a>
-<a class="nav-sub-item" data-sub="效率办公/改写重述/子类-4" href="#效率办公_改写重述_子类-4"><span class="nav-text">效率办公/改写重述/子类-4</span><span class="nav-badge">5</span></a>
-<a class="nav-sub-item" data-sub="效率办公/网络小说平台" href="#效率办公_网络小说平台"><span class="nav-text">效率办公/网络小说平台</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="效率办公" href="#效率办公"><span class="nav-text">效率办公</span><span class="nav-badge">4</span></a>
+<a class="nav-sub-item" data-sub="效率办公/网文榜单统计" href="#效率办公_网文榜单统计"><span class="nav-text">效率办公/网文榜单统计</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="效率办公/网文写作教程" href="#效率办公_网文写作教程"><span class="nav-text">效率办公/网文写作教程</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="效率办公/文案优化/子类-2" href="#效率办公_文案优化_子类-2"><span class="nav-text">效率办公/文案优化/子类-2</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="效率办公/技术写作/子类-4" href="#效率办公_技术写作_子类-4"><span class="nav-text">效率办公/技术写作/子类-4</span><span class="nav-badge">4</span></a>
-<a class="nav-sub-item" data-sub="效率办公/网文作者工具" href="#效率办公_网文作者工具"><span class="nav-text">效率办公/网文作者工具</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="效率办公/营销文案/子类-5" href="#效率办公_营销文案_子类-5"><span class="nav-text">效率办公/营销文案/子类-5</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="效率办公/文案优化/子类-5" href="#效率办公_文案优化_子类-5"><span class="nav-text">效率办公/文案优化/子类-5</span><span class="nav-badge">2</span></a>
 </div>
-<div class="nav-item" data-category="学术科研"><span class="nav-icon">📚</span><span class="nav-text">学术科研</span><span class="nav-badge">248</span></div>
+<div class="nav-item" data-category="学术科研"><span class="nav-icon">📚</span><span class="nav-text">学术科研</span><span class="nav-badge">244</span></div>
 <div class="nav-children" data-parent="academic">
-<a class="nav-sub-item" data-sub="学术科研/论文检索" href="#学术科研_论文检索"><span class="nav-text">学术科研/论文检索</span><span class="nav-badge">18</span></a>
 <a class="nav-sub-item" data-sub="学术科研/学术搜索" href="#学术科研_学术搜索"><span class="nav-text">学术科研/学术搜索</span><span class="nav-badge">18</span></a>
-<a class="nav-sub-item" data-sub="学术科研/数据集平台" href="#学术科研_数据集平台"><span class="nav-text">学术科研/数据集平台</span><span class="nav-badge">18</span></a>
 <a class="nav-sub-item" data-sub="学术科研/学术期刊" href="#学术科研_学术期刊"><span class="nav-text">学术科研/学术期刊</span><span class="nav-badge">18</span></a>
+<a class="nav-sub-item" data-sub="学术科研/论文检索" href="#学术科研_论文检索"><span class="nav-text">学术科研/论文检索</span><span class="nav-badge">17</span></a>
+<a class="nav-sub-item" data-sub="学术科研/数据集平台" href="#学术科研_数据集平台"><span class="nav-text">学术科研/数据集平台</span><span class="nav-badge">17</span></a>
 <a class="nav-sub-item" data-sub="学术科研/开放课程" href="#学术科研_开放课程"><span class="nav-text">学术科研/开放课程</span><span class="nav-badge">17</span></a>
 <a class="nav-sub-item" data-sub="学术科研/学术地图" href="#学术科研_学术地图"><span class="nav-text">学术科研/学术地图</span><span class="nav-badge">17</span></a>
 <a class="nav-sub-item" data-sub="学术科研" href="#学术科研"><span class="nav-text">学术科研</span><span class="nav-badge">16</span></a>
 <a class="nav-sub-item" data-sub="学术科研/学术会议" href="#学术科研_学术会议"><span class="nav-text">学术科研/学术会议</span><span class="nav-badge">16</span></a>
-<a class="nav-sub-item" data-sub="学术科研/学术委员会" href="#学术科研_学术委员会"><span class="nav-text">学术科研/学术委员会</span><span class="nav-badge">16</span></a>
+<a class="nav-sub-item" data-sub="学术科研/学术委员会" href="#学术科研_学术委员会"><span class="nav-text">学术科研/学术委员会</span><span class="nav-badge">15</span></a>
 <a class="nav-sub-item" data-sub="学术科研/工具教程" href="#学术科研_工具教程"><span class="nav-text">学术科研/工具教程</span><span class="nav-badge">14</span></a>
 <a class="nav-sub-item" data-sub="学术科研/研究工具" href="#学术科研_研究工具"><span class="nav-text">学术科研/研究工具</span><span class="nav-badge">13</span></a>
 <a class="nav-sub-item" data-sub="学术科研/实验室管理" href="#学术科研_实验室管理"><span class="nav-text">学术科研/实验室管理</span><span class="nav-badge">12</span></a>
@@ -344,18 +318,15 @@ html, body {
 <a class="nav-sub-item" data-sub="学术科研/工具教程/论文搜索" href="#学术科研_工具教程_论文搜索"><span class="nav-text">学术科研/工具教程/论文搜索</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="学术科研/引文管理" href="#学术科研_引文管理"><span class="nav-text">学术科研/引文管理</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="学术科研/学术写作" href="#学术科研_学术写作"><span class="nav-text">学术科研/学术写作</span><span class="nav-badge">9</span></a>
-<a class="nav-sub-item" data-sub="学术科研/课程资料" href="#学术科研_课程资料"><span class="nav-text">学术科研/课程资料</span><span class="nav-badge">9</span></a>
+<a class="nav-sub-item" data-sub="学术科研/课程资料" href="#学术科研_课程资料"><span class="nav-text">学术科研/课程资料</span><span class="nav-badge">8</span></a>
 <a class="nav-sub-item" data-sub="学术科研/学术社交" href="#学术科研_学术社交"><span class="nav-text">学术科研/学术社交</span><span class="nav-badge">5</span></a>
 </div>
-<div class="nav-item" data-category="多媒体"><span class="nav-icon">🎬</span><span class="nav-text">多媒体</span><span class="nav-badge">200</span></div>
+<div class="nav-item" data-category="多媒体"><span class="nav-icon">🎬</span><span class="nav-text">多媒体</span><span class="nav-badge">194</span></div>
 <div class="nav-children" data-parent="media">
-<a class="nav-sub-item" data-sub="多媒体/视频娱乐/教程" href="#多媒体_视频娱乐_教程"><span class="nav-text">多媒体/视频娱乐/教程</span><span class="nav-badge">165</span></a>
+<a class="nav-sub-item" data-sub="多媒体/视频娱乐/教程" href="#多媒体_视频娱乐_教程"><span class="nav-text">多媒体/视频娱乐/教程</span><span class="nav-badge">160</span></a>
+<a class="nav-sub-item" data-sub="多媒体" href="#多媒体"><span class="nav-text">多媒体</span><span class="nav-badge">18</span></a>
 <a class="nav-sub-item" data-sub="多媒体/视频娱乐" href="#多媒体_视频娱乐"><span class="nav-text">多媒体/视频娱乐</span><span class="nav-badge">11</span></a>
-<a class="nav-sub-item" data-sub="多媒体" href="#多媒体"><span class="nav-text">多媒体</span><span class="nav-badge">10</span></a>
 <a class="nav-sub-item" data-sub="多媒体/视频娱乐/国内视频" href="#多媒体_视频娱乐_国内视频"><span class="nav-text">多媒体/视频娱乐/国内视频</span><span class="nav-badge">5</span></a>
-<a class="nav-sub-item" data-sub="多媒体/视频娱乐/音乐生成" href="#多媒体_视频娱乐_音乐生成"><span class="nav-text">多媒体/视频娱乐/音乐生成</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="多媒体/视频娱乐/视频游戏" href="#多媒体_视频娱乐_视频游戏"><span class="nav-text">多媒体/视频娱乐/视频游戏</span><span class="nav-badge">3</span></a>
-<a class="nav-sub-item" data-sub="多媒体/特效生成" href="#多媒体_特效生成"><span class="nav-text">多媒体/特效生成</span><span class="nav-badge">3</span></a>
 </div>
 </nav></nav>
             <div id="tag-cloud-section" class="tag-cloud-section border-t border-white/10" role="complementary" aria-label="热门标签">
@@ -399,6 +370,7 @@ html, body {
                 <button class="game-cat-btn" data-cat="classic">经典</button>
                 <button class="game-cat-btn" data-cat="strategy">策略</button>
                 <button class="game-cat-btn" data-cat="rpg">RPG</button>
+                <button class="game-cat-btn" data-cat="puzzle">益智</button>
             </div>
             <div class="game-hub-body">
                 <div class="game-grid" id="game-grid"></div>
@@ -427,7 +399,9 @@ html, body {
 
     <!-- 脚本 -->
     <!-- 核心（同步，仅2个） -->
-    <script src="assets/js/state.js"></script>
+        <!-- LocalForage: 增强本地缓存 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js" integrity="sha512-+ZqK5fYLxKqU3PbY3n5J3d6C/1zZqxFgP7FQ8d0NtH3Kb5cS+9wgwA3vzNKLBbzRE8xwKV4QqJ5SYXEHnQzLBPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="assets/js/state.js"></script>
     <script src="assets/js/data.js"></script>
     <!-- 非核心模块（defer延迟，不阻塞首屏渲染） -->
     <script src="assets/js/search.js" defer></script>
@@ -447,7 +421,9 @@ html, body {
     <script src="assets/js/games/mahjong.js" defer></script>
     <script src="assets/js/games/wuxia.js" defer></script>
     <script src="assets/js/games/dating.js" defer></script>
-    <script src="assets/js/game-hub.js" defer></script>
+        <script src="assets/js/games/2048.js" defer></script>
+    <script src="assets/js/games/gomoku.js" defer></script>
+<script src="assets/js/game-hub.js" defer></script>
     <script src="assets/js/monetization.js" defer></script>
 
     <!-- 收藏弹窗（增强版） -->
@@ -517,5 +493,20 @@ html, body {
         });
     }
     </script>
+
+    <!-- PWA 安装提示横幅 -->
+    <div id="install-banner" class="install-banner hidden" role="dialog" aria-label="安装提示">
+        <div class="install-banner-content">
+            <div class="install-banner-text">
+                <span class="install-banner-icon">📱</span>
+                <span>添加到主屏幕，享受更快体验</span>
+            </div>
+            <div class="install-banner-actions">
+                <button id="install-btn" class="install-btn">安装</button>
+                <button id="install-dismiss" class="install-dismiss-btn">关闭</button>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
