@@ -8,6 +8,9 @@ const CACHE_NAME = 'webnav-v3-' + '20260514';
 const STATIC_ASSETS = [
     '/',
     '/index.html',
+    '/manifest.json',
+    '/assets/images/favicon.png',
+    '/favicon.ico',
     '/assets/css/core.css',
     '/assets/css/app.css',
     '/assets/css/favorite-enhancements.css',
