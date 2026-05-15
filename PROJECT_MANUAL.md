@@ -106,16 +106,17 @@ websites.json → dataManager.load()
 
 ### 3.3 缓存策略
 
-|| 数据类型 | 缓存键 | TTL | 底层存储 |
-||---|---|---|---|
-|| 站点数据 | `nav_sites_v1` | 24h | LocalForage |
-|| 标签索引 | `nav_tags_v1` | 1h | LocalForage |
-|| 侧边栏状态 | `nav_sidebar_v1` | 7d | LocalForage |
-|| 主题/视图 | `nav_theme_v1` | ∞ | LocalForage |
-|| 音效偏好 | `gn_sound_enabled` | ∞ | localStorage |
-|| 游戏存档 | `gn_game_<key>` | ∞ | localStorage |
+||| 数据类型 | 缓存键 | TTL | 底层存储 |
+|---|---|---|---|
+||| 站点数据 | `nav_sites_v1` | 24h | LocalForage |
+||| 标签索引 | `nav_tags_v1` | 1h | LocalForage |
+||| 侧边栏状态 | `nav_sidebar_v1` | 7d | LocalForage |
+||| 主题/视图 | `nav_theme_v1` | ∞ | LocalForage |
+||| 音效偏好 | `gn_sound_enabled` | ∞ | localStorage |
+||| 游戏存档 | `gn_game_<key>` | ∞ | localStorage |
 
-> LocalForage 不可用时自动降级到 `localStorage`。
+> LocalForage 不可用时降级到 localStorage；data.js `_saveCache/_loadCache` 已统一路由到
+> state._saveToCache / state.get('sites')，SPA 内站点数据唯一来源为 LocalForage `nav_sites_v1`。
 
 ### 3.4 数据质量报告（2026-05-15）
 

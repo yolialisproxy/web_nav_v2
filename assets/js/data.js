@@ -45,8 +45,10 @@ class DataManager {
             if (!text || text.trim().length === 0) {
                 throw new Error('数据文件为空');
             }
-
             this.raw = JSON.parse(text);
+            /* local-cache unification: data.js now relies on state.get('sites')
+               (state LocalForage) as the single source of truth;
+               fallback path reads state.get('sites') instead of its own localStorage */
 
             if (!Array.isArray(this.raw)) {
                 throw new Error('数据格式错误：期望数组');
@@ -78,10 +80,22 @@ class DataManager {
             this._loadError = e;
             console.error('[DataManager] 加载失败:', e);
 
-            // 尝试从 localStorage 缓存恢复
+            // local-cache unification: 优先从 state（LocalForage）恢复站点数据
+            const stateSites = state ? state.get('sites') : null;
+            if (stateSites && Array.isArray(stateSites) && stateSites.length > 0) {
+                console.warn('[DataManager] 从 state.get(sites) 恢复数据，跳过 localStorage 副本');
+                this.raw = stateSites;
+                this._buildIndexes();
+                this.isLoaded = true;
+                this._loadError = null;
+                if (state) state.set('loading', false);
+                return Promise.resolve();
+            }
+
+            //  fallback: 尝试从 localStorage 缓存恢复（兼容旧版本）
             const cached = this._loadCache();
             if (cached) {
-                console.warn('[DataManager] 已从缓存恢复数据');
+                console.warn('[DataManager] 从 localStorage 缓存恢复数据');
                 this.raw = cached;
                 this._buildIndexes();
                 this.isLoaded = true;
@@ -229,51 +243,54 @@ _validateSites(sites) {
     }
 
     _saveCache() {
+        /* local-cache unification: 写入统一通过 state._saveToCache 走 LocalForage
+           此函数保留作降级兼容（当 state 不可用时回退 localStorage）。
+           localStorage 副本已不作为主要缓存路径。 */
         try {
-            const cacheData = {
-                version: 'v3',
-                timestamp: Date.now(),
-                data: this.raw
-            };
-            localStorage.setItem('webnav_sites_cache', JSON.stringify(cacheData));
-            // // console.log('[DataManager] 数据已缓存');
+            if (state && state._cacheReady && state._cacheBackend) {
+                // 主路径：写入 LocalForage（带 TTL + version）
+                state._cacheBackend.setItem(state._cache.keys.sites, {
+                    value: this.raw,
+                    ts: Date.now(),
+                    v: state._cache.version
+                }).catch(function(){});
+            } else {
+                // 降级：localStorage
+                const cacheData = {
+                    version: 'v3',
+                    timestamp: Date.now(),
+                    data: this.raw
+                };
+                localStorage.setItem('webnav_sites_cache', JSON.stringify(cacheData));
+            }
         } catch (e) {
             console.warn('[DataManager] 缓存保存失败:', e);
         }
     }
 
     _loadCache() {
+        /* local-cache unification: 数据统一通过 state.get('sites') 读取，
+           此函数仅作最后降级兼容：从 localStorage 'webnav_sites_cache' 读取。 */
         try {
             const cached = localStorage.getItem('webnav_sites_cache');
             if (!cached) return null;
 
             const parsed = JSON.parse(cached);
             if (!parsed || !parsed.data || !Array.isArray(parsed.data)) {
-                console.warn('[DataManager] 缓存格式无效，清除旧缓存');
+                console.warn('[DataManager] (降级) 缓存格式无效，清除旧缓存');
                 localStorage.removeItem('webnav_sites_cache');
                 return null;
             }
-
-            // 检查缓存版本
-            if (parsed.version !== 'v3') {
-                // console.log('[DataManager] 缓存版本不匹配，忽略缓存');
-                return null;
-            }
-
-            // 检查缓存过期时间
-            const maxAge = 7 * 24 * 60 * 60 * 1000; // 7天
+            // 7 天 TTL
+            const maxAge = 7 * 24 * 60 * 60 * 1000;
             if (Date.now() - parsed.timestamp > maxAge) {
-                // console.log('[DataManager] 缓存已过期');
                 localStorage.removeItem('webnav_sites_cache');
                 return null;
             }
-
-            // 验证数据格式
             this._validateSites(parsed.data);
-            // console.log('[DataManager] 从缓存恢复数据（版本: ' + parsed.version + '）');
             return parsed.data;
         } catch (e) {
-            console.warn('[DataManager] 缓存加载失败:', e);
+            console.warn('[DataManager] (降级) 缓存加载失败:', e);
             localStorage.removeItem('webnav_sites_cache');
         }
         return null;
@@ -288,10 +305,7 @@ _validateSites(sites) {
             '<h2 style="margin-bottom:8px;">数据加载失败</h2>' +
             '<p style="color:var(--text-secondary);max-width:500px;margin:0 auto 20px;">' +
             '原因: ' + (error.message || String(error)) + '<br/>' +
-            '建议检查网络连接或稍后重试。' +
-            '</p>' +
-            '<button onclick="window.dataManager.load()" style="padding:10px 24px;cursor:pointer;">重试加载</button>' +
-            '</div>';
+            '建议检查网络连接或稍后重试。</p><button onclick="window.dataManager.load()" style="margin-top:20px;padding:10px 24px;cursor:pointer;">重试加载</button></div>';
     }
 
     getSitesByLeafId(leafId) {
