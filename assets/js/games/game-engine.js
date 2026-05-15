@@ -168,6 +168,7 @@ GameEngine.prototype = {
     gameOver: function() {
         this.state = 'over';
         this._stopLoop();
+        GameUtils.playSfx('gameOver');
         var elapsed = Date.now() - this._stats.startTime;
         if (this.onGameOver) this.onGameOver(this.score, elapsed);
     },

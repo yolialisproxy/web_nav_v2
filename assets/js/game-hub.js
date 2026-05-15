@@ -37,6 +37,16 @@ var GameHub = {
             }.bind(btn));
         });
 
+        // 音效开关
+        var soundBtn = document.getElementById('game-sound-toggle');
+        if (soundBtn) {
+            soundBtn.addEventListener('click', function() {
+                GameUtils.toggleSound();
+                soundBtn.textContent = GameUtils.soundEnabled ? '🔊' : '🔇';
+                soundBtn.title = GameUtils.soundEnabled ? '音效开' : '音效关';
+            });
+        }
+
         // 退出游戏
         var quitBtn = document.getElementById('game-quit-btn');
         if (quitBtn) quitBtn.addEventListener('click', function() { GameHub.closeGame(); });

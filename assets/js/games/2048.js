@@ -117,6 +117,7 @@ Game2048.prototype._bindEvents = function() {
             case 'ArrowDown':  e.preventDefault(); moved = self._move('down');  break;
         }
         if (moved) {
+            GameUtils.playSfx('move');
             self._spawnTile();
             self._updateUI();
             self._render();
@@ -136,10 +137,10 @@ Game2048.prototype._bindEvents = function() {
         var dy = e.changedTouches[0].clientY - startY;
         if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 30) {
             var moved = self._move(dx > 0 ? 'right' : 'left');
-            if (moved) { self._spawnTile(); self._updateUI(); self._render(); self._checkWin(); }
+            if (moved) { GameUtils.playSfx('move'); self._spawnTile(); self._updateUI(); self._render(); self._checkWin(); }
         } else if (Math.abs(dy) > 30) {
             var moved = self._move(dy > 0 ? 'down' : 'up');
-            if (moved) { self._spawnTile(); self._updateUI(); self._render(); self._checkWin(); }
+            if (moved) { GameUtils.playSfx('move'); self._spawnTile(); self._updateUI(); self._render(); self._checkWin(); }
         }
     }, {passive: true});
 };

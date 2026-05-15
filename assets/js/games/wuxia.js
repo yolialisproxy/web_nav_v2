@@ -255,7 +255,7 @@ WuxiaGame.prototype._endFight = function(victory) {
     this.enemy = null;
     this._checkLevelUp();
     this.save();
-    setTimeout(function() { that.render(); }, 500);
+    setTimeout(function() { self.render(); }, 500);
 };
 
 WuxiaGame.prototype._playerAttack = function() {

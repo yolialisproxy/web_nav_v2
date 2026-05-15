@@ -138,6 +138,7 @@ Tetris.prototype._lockPiece = function() {
             }
         }
     }
+    GameUtils.playSfx('flip');
 };
 
 Tetris.prototype._clearLines = function() {
@@ -152,6 +153,7 @@ Tetris.prototype._clearLines = function() {
         }
     }
     if (cleared > 0) {
+        GameUtils.playSfx('score');
         this.combo++;
         var points = [0, 100, 300, 500, 800][cleared] * this.level + this.combo * 50;
         this.score += points;
@@ -177,6 +179,7 @@ Tetris.prototype._rotate = function() {
     newPiece.shape = newShape;
     if (this._canMove(newPiece, newPiece.x, newPiece.y)) {
         this.current = newPiece;
+        GameUtils.playSfx('rotate');
         this._render();
     } else {
         // wall kick
@@ -184,6 +187,7 @@ Tetris.prototype._rotate = function() {
             if (this._canMove(newPiece, newPiece.x + offset, newPiece.y)) {
                 this.current = newPiece;
                 this.current.x += offset;
+                GameUtils.playSfx('rotate');
                 this._render();
                 return;
             }
@@ -193,19 +197,24 @@ Tetris.prototype._rotate = function() {
 
 Tetris.prototype._moveLeft = function() {
     if (this._canMove(this.current, this.current.x - 1, this.current.y)) {
-        this.current.x--; this._render();
+        this.current.x--;
+        GameUtils.playSfx('move');
+        this._render();
     }
 };
 
 Tetris.prototype._moveRight = function() {
     if (this._canMove(this.current, this.current.x + 1, this.current.y)) {
-        this.current.x++; this._render();
+        this.current.x++;
+        GameUtils.playSfx('move');
+        this._render();
     }
 };
 
 Tetris.prototype._hardDrop = function() {
     while (this._canMove(this.current, this.current.x, this.current.y + 1)) {
         this.current.y++;
+        GameUtils.playSfx('move');
     }
     this._lockPiece();
     this._clearLines();

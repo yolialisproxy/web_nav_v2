@@ -256,6 +256,7 @@ Solitaire.prototype._bindEvents = function() {
                 card.faceUp = true;
                 self.waste.push(card);
                 self.moves++;
+                GameUtils.playSfx('flip');
                 self.addScore(0);
                 self.save();
                 self.render();
@@ -266,6 +267,7 @@ Solitaire.prototype._bindEvents = function() {
                     self.stock.push(c);
                 }
                 self.moves++;
+                GameUtils.playSound(200, 0.1, 'square');
                 self.save();
                 self.render();
             }
@@ -313,6 +315,7 @@ Solitaire.prototype._autoToFoundation = function(card) {
         // 从牌堆中移除
         this._removeCardFromTableau(card);
         this.score += 10;
+        GameUtils.playSfx('score');
         this.moves++;
         this.lines = f.reduce(function(s, arr) { return s + arr.length; }, 0);
         this._checkWin();
