@@ -218,6 +218,7 @@ Gomoku.prototype._undo = function() {
     }
     this.currentPlayer = this.currentPlayer === 1 ? 2 : 1;
     this.board = this._history.pop();
+    GameUtils.playSfx('click');
     this._render();
 };
 

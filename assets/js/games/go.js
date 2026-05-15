@@ -231,6 +231,7 @@ GoGame.prototype.pass = function() {
         passCount: this.passCount
     });
     this.passCount++;
+    GameUtils.playSfx('click');
     if (this.passCount >= 2) {
         // 终局，计算领地
         this._endGame();
