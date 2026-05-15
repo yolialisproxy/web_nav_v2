@@ -15,7 +15,9 @@
       2683,
       2684,
       2685
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/3D模型"
   },
   {
     "tag": "AI写作",
@@ -59,7 +61,9 @@
       3104,
       3105,
       3106
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "AI工具",
@@ -1153,7 +1157,9 @@
       3078,
       3079,
       3080
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "API服务",
@@ -1163,7 +1169,9 @@
       402,
       403,
       404
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API服务"
   },
   {
     "tag": "API生成",
@@ -1173,7 +1181,9 @@
       687,
       688,
       689
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "API网关",
@@ -1190,7 +1200,9 @@
       2366,
       2367,
       2368
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/API网关"
   },
   {
     "tag": "CD服务",
@@ -1209,7 +1221,9 @@
       2279,
       2280,
       2281
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/CI/CD服务"
   },
   {
     "tag": "CI",
@@ -1228,7 +1242,9 @@
       2279,
       2280,
       2281
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/CI/CD服务"
   },
   {
     "tag": "DevOps工具",
@@ -1246,7 +1262,9 @@
       2378,
       2379,
       2380
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/DevOps工具"
   },
   {
     "tag": "GitHub",
@@ -1434,7 +1452,9 @@
       395,
       396,
       397
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "PPT模板",
@@ -1458,7 +1478,9 @@
       2637,
       2638,
       2639
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/PPT模板"
   },
   {
     "tag": "Serverless",
@@ -1474,7 +1496,9 @@
       2355,
       2356,
       2357
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/Serverless"
   },
   {
     "tag": "UI设计工具",
@@ -1571,7 +1595,9 @@
       630,
       631,
       632
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/UI设计工具"
   },
   {
     "tag": "UI设计开源",
@@ -1581,14 +1607,18 @@
       636,
       637,
       638
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计开源"
   },
   {
     "tag": "a8",
     "count": 1,
     "sites": [
       2756
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/设计资源包"
   },
   {
     "tag": "aa0amfcjhq",
@@ -1596,91 +1626,117 @@
     "sites": [
       1223,
       1230
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "aa2squhin-e",
     "count": 1,
     "sites": [
       1076
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "about",
     "count": 1,
     "sites": [
       535
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "academia",
     "count": 1,
     "sites": [
       3086
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "academy",
     "count": 1,
     "sites": [
       3092
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "ace",
     "count": 1,
     "sites": [
       2928
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/引文管理"
   },
   {
     "tag": "acme",
     "count": 1,
     "sites": [
       863
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/协作社区"
   },
   {
     "tag": "activitywatch",
     "count": 1,
     "sites": [
       882
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "adobe",
     "count": 1,
     "sites": [
       3049
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "advanced",
     "count": 1,
     "sites": [
       32
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "affine",
     "count": 1,
     "sites": [
       3036
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "afhi",
     "count": 1,
     "sites": [
       1294
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "agpl-3",
     "count": 1,
     "sites": [
       1501
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ai",
@@ -1696,21 +1752,27 @@
       881,
       1748,
       3095
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "ai-powered",
     "count": 1,
     "sites": [
       38
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "aippt",
     "count": 1,
     "sites": [
       18
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "algorithms-4th-robert-sedgewick",
@@ -1718,84 +1780,108 @@
     "sites": [
       1187,
       1311
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "algorithms-parts-1-4-fundamentals-structure",
     "count": 1,
     "sites": [
       940
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/推荐系统"
   },
   {
     "tag": "aliasvault",
     "count": 1,
     "sites": [
       25
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "allthingsdistributed",
     "count": 1,
     "sites": [
       2621
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/字体资源"
   },
   {
     "tag": "alni-bqr9hjqadpbtujfjd",
     "count": 1,
     "sites": [
       1370
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "altf",
     "count": 1,
     "sites": [
       1052
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "an",
     "count": 1,
     "sites": [
       657
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "anaconda",
     "count": 1,
     "sites": [
       866
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/表单社区"
   },
   {
     "tag": "analytics",
     "count": 1,
     "sites": [
       650
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "andi",
     "count": 1,
     "sites": [
       883
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "ap",
     "count": 1,
     "sites": [
       2754
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/背景图案"
   },
   {
     "tag": "apache",
     "count": 1,
     "sites": [
       30
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "apache-2",
@@ -1803,7 +1889,9 @@
     "sites": [
       1471,
       1512
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "api",
@@ -1811,7 +1899,9 @@
     "sites": [
       407,
       685
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "applicationofrnninmeetingrecognition",
@@ -1819,21 +1909,27 @@
     "sites": [
       773,
       1933
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/内容写作"
   },
   {
     "tag": "applications",
     "count": 1,
     "sites": [
       2800
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/协作工具"
   },
   {
     "tag": "apps",
     "count": 1,
     "sites": [
       636
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计开源"
   },
   {
     "tag": "aqt",
@@ -1841,28 +1937,36 @@
     "sites": [
       889,
       894
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "aqug04",
     "count": 1,
     "sites": [
       944
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "archbee",
     "count": 1,
     "sites": [
       664
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "archive",
     "count": 1,
     "sites": [
       359
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "archives",
@@ -1870,14 +1974,18 @@
     "sites": [
       2043,
       2222
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/总结摘要"
   },
   {
     "tag": "ardatabase",
     "count": 1,
     "sites": [
       2030
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/社交媒体"
   },
   {
     "tag": "at0nzx92o",
@@ -1885,49 +1993,63 @@
     "sites": [
       1108,
       1154
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "atheos",
     "count": 1,
     "sites": [
       686
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "atril",
     "count": 1,
     "sites": [
       718
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/在线工具"
   },
   {
     "tag": "atsumeru",
     "count": 1,
     "sites": [
       707
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "awesome",
     "count": 1,
     "sites": [
       635
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计开源"
   },
   {
     "tag": "awi7v5zk",
     "count": 1,
     "sites": [
       986
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "awjspnxr0",
     "count": 1,
     "sites": [
       1312
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "ayzoubkuf3m",
@@ -1935,14 +2057,18 @@
     "sites": [
       1812,
       2009
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "azi5e",
     "count": 1,
     "sites": [
       1019
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "b-bhkxjzllc",
@@ -1950,105 +2076,135 @@
     "sites": [
       1178,
       1190
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "b-tree",
     "count": 1,
     "sites": [
       1297
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "b3spqzaazp4",
     "count": 1,
     "sites": [
       994
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/预测分析"
   },
   {
     "tag": "b7",
     "count": 1,
     "sites": [
       667
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "backup",
     "count": 1,
     "sites": [
       909
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "bcv3qqw4a",
     "count": 1,
     "sites": [
       1362
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "beautifulsoup",
     "count": 1,
     "sites": [
       2287
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/容器镜像"
   },
   {
     "tag": "berkeleyx",
     "count": 1,
     "sites": [
       1854
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "berlin",
     "count": 1,
     "sites": [
       35
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "best",
     "count": 1,
     "sites": [
       3022
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/在线工具"
   },
   {
     "tag": "bge",
     "count": 1,
     "sites": [
       1349
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "bigmodel",
     "count": 1,
     "sites": [
       701
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板教程"
   },
   {
     "tag": "bitwise",
     "count": 1,
     "sites": [
       1416
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "blinko",
     "count": 1,
     "sites": [
       38
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "bme",
     "count": 1,
     "sites": [
       1791
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "bo",
@@ -2056,7 +2212,9 @@
     "sites": [
       789,
       1946
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "bobby",
@@ -2064,14 +2222,18 @@
     "sites": [
       842,
       2123
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/营销文案"
   },
   {
     "tag": "brainscape",
     "count": 1,
     "sites": [
       21
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "brhc7ktaq",
@@ -2079,14 +2241,18 @@
     "sites": [
       464,
       473
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "brnn",
     "count": 1,
     "sites": [
       837
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "bro7mvift08",
@@ -2094,7 +2260,9 @@
     "sites": [
       1036,
       1125
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "bsa",
@@ -2102,7 +2270,9 @@
     "sites": [
       1329,
       1342
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "bsd-2-clause",
@@ -2110,42 +2280,54 @@
     "sites": [
       1480,
       1555
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图生图"
   },
   {
     "tag": "bsd-3-clause",
     "count": 1,
     "sites": [
       1586
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "bsuxp-1tc0",
     "count": 1,
     "sites": [
       1335
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "btdukbzc78",
     "count": 1,
     "sites": [
       479
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "buffer",
     "count": 1,
     "sites": [
       3104
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "build",
     "count": 1,
     "sites": [
       683
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "business",
@@ -2154,21 +2336,27 @@
       29,
       665,
       3100
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "busl-1",
     "count": 1,
     "sites": [
       1606
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "buymeacoffee",
     "count": 1,
     "sites": [
       637
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计开源"
   },
   {
     "tag": "byowmqah",
@@ -2176,35 +2364,45 @@
     "sites": [
       1217,
       1279
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "c3-pyglk",
     "count": 1,
     "sites": [
       475
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "c3ssduqasd4",
     "count": 1,
     "sites": [
       444
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "c4kc8xzca68",
     "count": 1,
     "sites": [
       1398
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "cache",
     "count": 1,
     "sites": [
       2538
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网文榜单统计"
   },
   {
     "tag": "camera",
@@ -2212,21 +2410,27 @@
     "sites": [
       1833,
       2224
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "cannery",
     "count": 1,
     "sites": [
       874
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "canva",
     "count": 1,
     "sites": [
       3029
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板社区"
   },
   {
     "tag": "cave",
@@ -2234,42 +2438,54 @@
     "sites": [
       1728,
       1924
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/技术写作"
   },
   {
     "tag": "caviardata1",
     "count": 1,
     "sites": [
       2102
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "caxlaan2ue",
     "count": 1,
     "sites": [
       1283
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "cc",
     "count": 1,
     "sites": [
       1253
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "cdcfohtsau",
     "count": 1,
     "sites": [
       1085
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "cdzgrgpa",
     "count": 1,
     "sites": [
       1394
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "ce3kvua",
@@ -2277,56 +2493,72 @@
     "sites": [
       900,
       962
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "chain",
     "count": 1,
     "sites": [
       710
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/网络工具"
   },
   {
     "tag": "changelog",
     "count": 1,
     "sites": [
       358
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "chartdb",
     "count": 1,
     "sites": [
       730
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/视频游戏"
   },
   {
     "tag": "chatgpt",
     "count": 1,
     "sites": [
       3075
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "cheat",
     "count": 1,
     "sites": [
       691
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/文档资源"
   },
   {
     "tag": "christofidis",
     "count": 1,
     "sites": [
       2215
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "christoschristofidis",
     "count": 1,
     "sites": [
       323
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "chvq3q",
@@ -2334,28 +2566,36 @@
     "sites": [
       1256,
       1274
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "circular",
     "count": 1,
     "sites": [
       1328
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "classroom",
     "count": 1,
     "sites": [
       403
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API服务"
   },
   {
     "tag": "claude",
     "count": 1,
     "sites": [
       3074
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "cloud",
@@ -2365,28 +2605,36 @@
       57,
       686,
       726
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "cloud-native",
     "count": 1,
     "sites": [
       689
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "cml",
     "count": 1,
     "sites": [
       399
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "cms",
     "count": 1,
     "sites": [
       670
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "code",
@@ -2394,21 +2642,27 @@
     "sites": [
       34,
       46
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "codeberg",
     "count": 1,
     "sites": [
       3046
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "codesandbox",
     "count": 1,
     "sites": [
       3025
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/在线工具"
   },
   {
     "tag": "coding",
@@ -2416,84 +2670,108 @@
     "sites": [
       398,
       715
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "colanode",
     "count": 1,
     "sites": [
       422
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "com",
     "count": 1,
     "sites": [
       511
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "commerce",
     "count": 1,
     "sites": [
       525
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体教程"
   },
   {
     "tag": "commercial",
     "count": 1,
     "sites": [
       3065
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "community",
     "count": 1,
     "sites": [
       717
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/AI视频生成"
   },
   {
     "tag": "comp9444",
     "count": 1,
     "sites": [
       2087
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "compare",
     "count": 1,
     "sites": [
       647
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "compile",
     "count": 1,
     "sites": [
       44
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "computing",
     "count": 1,
     "sites": [
       722
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/国内视频"
   },
   {
     "tag": "concrete",
     "count": 1,
     "sites": [
       670
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "conduit",
     "count": 1,
     "sites": [
       43
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "conferences",
@@ -2501,28 +2779,36 @@
     "sites": [
       4,
       1898
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "configuration",
     "count": 1,
     "sites": [
       659
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "content",
     "count": 1,
     "sites": [
       654
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "contentbot",
     "count": 1,
     "sites": [
       674
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "continuous",
@@ -2531,147 +2817,189 @@
       399,
       1158,
       1261
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "convert",
     "count": 1,
     "sites": [
       526
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体教程"
   },
   {
     "tag": "cooklang",
     "count": 1,
     "sites": [
       531
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "copilot",
     "count": 1,
     "sites": [
       3073
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "copy",
     "count": 1,
     "sites": [
       3096
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "core",
     "count": 1,
     "sites": [
       3094
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "coreshop",
     "count": 1,
     "sites": [
       15
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "cos392w4w",
     "count": 1,
     "sites": [
       1176
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "countbitssetkernighan",
     "count": 1,
     "sites": [
       1464
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "coursera",
     "count": 1,
     "sites": [
       3090
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "cozk7nath4k",
     "count": 1,
     "sites": [
       917
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "cozy",
     "count": 1,
     "sites": [
       726
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/音乐生成"
   },
   {
     "tag": "cppcheck",
     "count": 1,
     "sites": [
       507
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "cpvdr",
     "count": 1,
     "sites": [
       1434
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "cracking-coding-interview-6th-programming",
     "count": 1,
     "sites": [
       998
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "crashcatch",
     "count": 1,
     "sites": [
       739
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "creative",
     "count": 1,
     "sites": [
       3059
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板社区"
   },
   {
     "tag": "cross-architecture",
     "count": 1,
     "sites": [
       44
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "cs188x",
     "count": 1,
     "sites": [
       1854
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "ctafl7axaq",
     "count": 1,
     "sites": [
       1445
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "cut",
     "count": 1,
     "sites": [
       663
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "cvssp",
@@ -2679,7 +3007,9 @@
     "sites": [
       827,
       2228
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "czze",
@@ -2687,14 +3017,18 @@
     "sites": [
       928,
       1113
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "d3oy4",
     "count": 1,
     "sites": [
       1308
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "d5sraga1pno",
@@ -2702,35 +3036,45 @@
     "sites": [
       1063,
       1153
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/语音识别"
   },
   {
     "tag": "dafont",
     "count": 1,
     "sites": [
       3052
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "dagshub",
     "count": 1,
     "sites": [
       405
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "dall-e",
     "count": 1,
     "sites": [
       3069
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "dalton",
     "count": 1,
     "sites": [
       3066
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "data",
@@ -2740,7 +3084,9 @@
       1236,
       1258,
       2154
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "data-structures-algorithms-michael-goodrich",
@@ -2748,7 +3094,9 @@
     "sites": [
       1121,
       1427
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "database",
@@ -2757,14 +3105,18 @@
       730,
       1749,
       2192
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/视频游戏"
   },
   {
     "tag": "dataverse",
     "count": 1,
     "sites": [
       3087
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "davis6k0vc",
@@ -2772,21 +3124,27 @@
     "sites": [
       1846,
       2080
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "dawarich",
     "count": 1,
     "sites": [
       692
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/文档资源"
   },
   {
     "tag": "dbeaver",
     "count": 1,
     "sites": [
       40
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "ddb",
@@ -2794,28 +3152,36 @@
     "sites": [
       2077,
       2223
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/总结摘要"
   },
   {
     "tag": "ddmcaulxh1m",
     "count": 1,
     "sites": [
       1391
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "dead-simple",
     "count": 1,
     "sites": [
       514
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "deep",
     "count": 1,
     "sites": [
       406
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "deepfacedrawing",
@@ -2823,28 +3189,36 @@
     "sites": [
       1853,
       2081
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "deepfashion",
     "count": 1,
     "sites": [
       2205
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "deeplearning-nowpublishing-vol7-sig-039",
     "count": 1,
     "sites": [
       1999
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/社交媒体"
   },
   {
     "tag": "deeplearning4j",
     "count": 1,
     "sites": [
       291
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "deeplearningtutorial",
@@ -2852,77 +3226,99 @@
     "sites": [
       791,
       1956
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "deforum",
     "count": 1,
     "sites": [
       568
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计工具"
   },
   {
     "tag": "denotationgraph",
     "count": 1,
     "sites": [
       1892
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "desktop",
     "count": 1,
     "sites": [
       259
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "devhints",
     "count": 1,
     "sites": [
       638
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计开源"
   },
   {
     "tag": "devops",
     "count": 1,
     "sites": [
       1384
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "diffusion",
     "count": 1,
     "sites": [
       3068
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "dify",
     "count": 1,
     "sites": [
       703
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "digiboard",
     "count": 1,
     "sites": [
       646
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "directions",
     "count": 1,
     "sites": [
       680
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "directory",
     "count": 1,
     "sites": [
       1528
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "dkipre8gw4",
@@ -2930,14 +3326,18 @@
     "sites": [
       1095,
       1229
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "dlive",
     "count": 1,
     "sites": [
       856
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/部署服务"
   },
   {
     "tag": "dmgr0-yyo",
@@ -2945,21 +3345,27 @@
     "sites": [
       1174,
       1198
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "dnn",
     "count": 1,
     "sites": [
       1816
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "dns",
     "count": 1,
     "sites": [
       672
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "docs",
@@ -2969,84 +3375,108 @@
       357,
       613,
       721
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "document",
     "count": 1,
     "sites": [
       10
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "documentation",
     "count": 1,
     "sites": [
       855
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/部署服务"
   },
   {
     "tag": "documize",
     "count": 1,
     "sites": [
       702
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板开源"
   },
   {
     "tag": "docusaurus",
     "count": 1,
     "sites": [
       857
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/部署服务"
   },
   {
     "tag": "docuseal",
     "count": 1,
     "sites": [
       669
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "dokuwiki",
     "count": 1,
     "sites": [
       2753
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/背景图案"
   },
   {
     "tag": "domain",
     "count": 1,
     "sites": [
       704
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "dqdmyeveye4",
     "count": 1,
     "sites": [
       1166
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "draw",
     "count": 1,
     "sites": [
       3037
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/流程图生成"
   },
   {
     "tag": "dream",
     "count": 1,
     "sites": [
       534
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "drsaradaherke",
     "count": 1,
     "sites": [
       492
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "dujjhmy4",
@@ -3054,21 +3484,27 @@
     "sites": [
       955,
       972
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "dv8efub3h2g",
     "count": 1,
     "sites": [
       483
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "dvc",
     "count": 1,
     "sites": [
       400
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "dzcx1cm",
@@ -3076,14 +3512,18 @@
     "sites": [
       1200,
       1209
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "e5",
     "count": 1,
     "sites": [
       2756
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/设计资源包"
   },
   {
     "tag": "e7cxp",
@@ -3091,14 +3531,18 @@
     "sites": [
       1189,
       1239
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "ebqigy1roly",
     "count": 1,
     "sites": [
       990
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ece-692",
@@ -3106,84 +3550,108 @@
     "sites": [
       842,
       2123
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/营销文案"
   },
   {
     "tag": "eclipse",
     "count": 1,
     "sites": [
       291
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "egghead",
     "count": 1,
     "sites": [
       33
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "elabel",
     "count": 1,
     "sites": [
       2255
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/音频生成"
   },
   {
     "tag": "elevenlabs",
     "count": 1,
     "sites": [
       3078
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频工具"
   },
   {
     "tag": "elsa",
     "count": 1,
     "sites": [
       424
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "emacs",
     "count": 1,
     "sites": [
       983
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作生成"
   },
   {
     "tag": "email",
     "count": 1,
     "sites": [
       1511
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作生成"
   },
   {
     "tag": "emp",
     "count": 1,
     "sites": [
       0
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "enterprise",
     "count": 1,
     "sites": [
       642
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "enterprise-ready",
     "count": 1,
     "sites": [
       408
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "epel",
     "count": 1,
     "sites": [
       1621
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/草图转图"
   },
   {
     "tag": "epl-1",
@@ -3191,98 +3659,126 @@
     "sites": [
       1495,
       1681
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/背景移除"
   },
   {
     "tag": "error",
     "count": 1,
     "sites": [
       519
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "eshpq",
     "count": 1,
     "sites": [
       1167
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "eternal",
     "count": 1,
     "sites": [
       639
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "etl",
     "count": 1,
     "sites": [
       1695
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "everything",
     "count": 1,
     "sites": [
       405
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "evidence",
     "count": 1,
     "sites": [
       665
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "ewbnv",
     "count": 1,
     "sites": [
       1196
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "ewsghsst0u",
     "count": 1,
     "sites": [
       979
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ex9cnvcoyxst3bppjp4b",
     "count": 1,
     "sites": [
       1817
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "example",
     "count": 1,
     "sites": [
       873
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "expression",
     "count": 1,
     "sites": [
       518
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "ezettkg",
     "count": 1,
     "sites": [
       1253
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "ezeyi7p9mju",
     "count": 1,
     "sites": [
       1353
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "ezhjq",
@@ -3290,14 +3786,18 @@
     "sites": [
       932,
       945
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "f2oy1",
     "count": 1,
     "sites": [
       1365
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "f3oo7zioaje",
@@ -3305,49 +3805,63 @@
     "sites": [
       1084,
       1212
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "face",
     "count": 1,
     "sites": [
       3076
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "fast",
     "count": 1,
     "sites": [
       527
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体教程"
   },
   {
     "tag": "fbq8voz",
     "count": 1,
     "sites": [
       1401
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "fedora",
     "count": 1,
     "sites": [
       2971
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/开放课程"
   },
   {
     "tag": "ff",
     "count": 1,
     "sites": [
       2971
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/开放课程"
   },
   {
     "tag": "fi7cuza",
     "count": 1,
     "sites": [
       1417
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "figma",
@@ -3355,28 +3869,36 @@
     "sites": [
       3032,
       3105
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "file",
     "count": 1,
     "sites": [
       712
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "final",
     "count": 1,
     "sites": [
       663
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "fireworks",
     "count": 1,
     "sites": [
       878
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/特效生成"
   },
   {
     "tag": "fjeczgxu",
@@ -3384,35 +3906,45 @@
     "sites": [
       1122,
       1139
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "fnel18kswpc",
     "count": 1,
     "sites": [
       1278
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "font",
     "count": 1,
     "sites": [
       3026
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "fontshare",
     "count": 1,
     "sites": [
       3051
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "fontsquirrel",
     "count": 1,
     "sites": [
       3026
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "foo8qdb8guu",
@@ -3420,35 +3952,45 @@
     "sites": [
       818,
       2022
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "forgejo",
     "count": 1,
     "sites": [
       3045
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "forms",
     "count": 1,
     "sites": [
       683
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "forum",
     "count": 1,
     "sites": [
       521
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "framing",
     "count": 1,
     "sites": [
       1952
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/剧本创作"
   },
   {
     "tag": "free",
@@ -3456,21 +3998,27 @@
     "sites": [
       24,
       699
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "freepbx",
     "count": 1,
     "sites": [
       822
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "freepik",
     "count": 1,
     "sites": [
       3055
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "fuc",
@@ -3478,7 +4026,9 @@
     "sites": [
       836,
       2065
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "fyah07jh0o",
@@ -3486,91 +4036,117 @@
     "sites": [
       819,
       2005
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "fyhs",
     "count": 1,
     "sites": [
       1127
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "fzgugfqdr60",
     "count": 1,
     "sites": [
       1403
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "g-lgcc4kkok",
     "count": 1,
     "sites": [
       987
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "g75vn2mnjeq",
     "count": 1,
     "sites": [
       1100
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "g9bkam6b8",
     "count": 1,
     "sites": [
       1109
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "games",
     "count": 1,
     "sites": [
       715
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/AI视频生成"
   },
   {
     "tag": "gateway",
     "count": 1,
     "sites": [
       655
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "geocoding",
     "count": 1,
     "sites": [
       685
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "gfuoto",
     "count": 1,
     "sites": [
       905
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "gil",
     "count": 1,
     "sites": [
       946
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "gitea",
     "count": 1,
     "sites": [
       3043
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "gitee",
     "count": 1,
     "sites": [
       860
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "gitlab",
@@ -3578,35 +4154,45 @@
     "sites": [
       687,
       3044
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "gkd",
     "count": 1,
     "sites": [
       447
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "glaze",
     "count": 1,
     "sites": [
       690
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "glmse7ueka",
     "count": 1,
     "sites": [
       1446
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "glossary",
     "count": 1,
     "sites": [
       656
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "gnhetcu5oekddmkk",
@@ -3614,14 +4200,18 @@
     "sites": [
       1217,
       1279
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "gnome",
     "count": 1,
     "sites": [
       687
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "go",
@@ -3629,28 +4219,36 @@
     "sites": [
       401,
       505
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API服务"
   },
   {
     "tag": "godays",
     "count": 1,
     "sites": [
       35
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "gogs",
     "count": 1,
     "sites": [
       879
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/特效生成"
   },
   {
     "tag": "goland",
     "count": 1,
     "sites": [
       28
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "golang",
@@ -3658,35 +4256,45 @@
     "sites": [
       697,
       720
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板资源"
   },
   {
     "tag": "golang-kathmandu",
     "count": 1,
     "sites": [
       2297
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/包管理"
   },
   {
     "tag": "gpl-3",
     "count": 1,
     "sites": [
       1609
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "gps",
     "count": 1,
     "sites": [
       695
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/流程图生成"
   },
   {
     "tag": "gqmqg-cszw4",
     "count": 1,
     "sites": [
       1303
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "gqqln",
@@ -3694,42 +4302,54 @@
     "sites": [
       1030,
       1081
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "grammarly",
     "count": 1,
     "sites": [
       3100
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "graphhopper",
     "count": 1,
     "sites": [
       680
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "grmxks",
     "count": 1,
     "sites": [
       1374
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "groupware",
     "count": 1,
     "sites": [
       536
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "grv2q",
     "count": 1,
     "sites": [
       1400
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "h2nui-1-qm",
@@ -3737,7 +4357,9 @@
     "sites": [
       782,
       1985
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "h4vmcd7zkm0",
@@ -3745,56 +4367,72 @@
     "sites": [
       952,
       970
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "h8h",
     "count": 1,
     "sites": [
       1114
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "handbrake",
     "count": 1,
     "sites": [
       725
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "harbor",
     "count": 1,
     "sites": [
       876
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "harvard",
     "count": 1,
     "sites": [
       3087
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "haven",
     "count": 1,
     "sites": [
       633
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "hd0",
     "count": 1,
     "sites": [
       1797
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "head",
     "count": 1,
     "sites": [
       1707
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "head-first-design-patterns-freeman",
@@ -3802,42 +4440,54 @@
     "sites": [
       1331,
       1343
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "hemingway",
     "count": 1,
     "sites": [
       3101
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "here",
     "count": 1,
     "sites": [
       56
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "heroicons",
     "count": 1,
     "sites": [
       2
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "high",
     "count": 1,
     "sites": [
       1056
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "hitobito",
     "count": 1,
     "sites": [
       870
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "hkjdmi",
@@ -3845,14 +4495,18 @@
     "sites": [
       1101,
       1195
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "hockenmaiergroup",
     "count": 1,
     "sites": [
       1952
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/剧本创作"
   },
   {
     "tag": "hoixgm4-p4m",
@@ -3860,14 +4514,18 @@
     "sites": [
       1300,
       1340
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "homarr",
     "count": 1,
     "sites": [
       673
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "home",
@@ -3883,42 +4541,54 @@
       723,
       1962,
       2211
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "homepage",
     "count": 1,
     "sites": [
       2668
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/设计灵感"
   },
   {
     "tag": "how",
     "count": 1,
     "sites": [
       520
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "hubot",
     "count": 1,
     "sites": [
       658
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "hugging",
     "count": 1,
     "sites": [
       3076
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "humata",
     "count": 1,
     "sites": [
       700
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板教程"
   },
   {
     "tag": "hv9dvu",
@@ -3926,7 +4596,9 @@
     "sites": [
       466,
       489
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "hvs",
@@ -3934,105 +4606,135 @@
     "sites": [
       1101,
       1195
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "hxqo9",
     "count": 1,
     "sites": [
       1015
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "hyperkitty",
     "count": 1,
     "sites": [
       2612
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/字体资源"
   },
   {
     "tag": "hz5ytanv5qe",
     "count": 1,
     "sites": [
       463
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "hzifpgyh",
     "count": 1,
     "sites": [
       1351
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "i3gfye3w",
     "count": 1,
     "sites": [
       472
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "icdm",
     "count": 1,
     "sites": [
       2031
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/社交媒体"
   },
   {
     "tag": "iconfinder",
     "count": 1,
     "sites": [
       523
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "iconfont",
     "count": 1,
     "sites": [
       37
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "icons",
     "count": 1,
     "sites": [
       677
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/平台资源"
   },
   {
     "tag": "ide",
     "count": 1,
     "sites": [
       329
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "identity",
     "count": 1,
     "sites": [
       440
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "iegfoqo4ipnpyqui46qqt0j",
     "count": 1,
     "sites": [
       1027
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/自动化流程"
   },
   {
     "tag": "igrcqi",
     "count": 1,
     "sites": [
       1053
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ij9o8",
     "count": 1,
     "sites": [
       1177
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "ikd2-makxyq",
@@ -4040,7 +4742,9 @@
     "sites": [
       1208,
       1215
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "ilkt",
@@ -4048,7 +4752,9 @@
     "sites": [
       466,
       489
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "imagedatabase",
@@ -4056,49 +4762,63 @@
     "sites": [
       2043,
       2222
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/总结摘要"
   },
   {
     "tag": "imm",
     "count": 1,
     "sites": [
       826
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "implement",
     "count": 1,
     "sites": [
       520
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "importance",
     "count": 1,
     "sites": [
       1014
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "in",
     "count": 1,
     "sites": [
       714
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "indico",
     "count": 1,
     "sites": [
       645
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "inkscape",
     "count": 1,
     "sites": [
       3030
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "integer",
@@ -4106,7 +4826,9 @@
     "sites": [
       1429,
       1454
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "introduction",
@@ -4115,7 +4837,9 @@
       667,
       862,
       879
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "introduction-algorithms-fourth-thomas-cormen",
@@ -4123,35 +4847,45 @@
     "sites": [
       1129,
       1211
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "inventree",
     "count": 1,
     "sites": [
       540
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "io",
     "count": 1,
     "sites": [
       513
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "ipaddr",
     "count": 1,
     "sites": [
       2727
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/纹理贴图"
   },
   {
     "tag": "ipl-1",
     "count": 1,
     "sites": [
       1652
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "is2011",
@@ -4159,28 +4893,36 @@
     "sites": [
       773,
       1933
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/内容写作"
   },
   {
     "tag": "ithp5lae1ve",
     "count": 1,
     "sites": [
       1035
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "iuft6akbge",
     "count": 1,
     "sites": [
       1465
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "iuglc29i",
     "count": 1,
     "sites": [
       1221
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "iwar0colwfhpgbcb1apzq9jvswewtmezd9octnqvr52t5prujp",
@@ -4188,21 +4930,27 @@
     "sites": [
       1853,
       2081
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "izfykbw",
     "count": 1,
     "sites": [
       493
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "j2k0sl1g",
     "count": 1,
     "sites": [
       1348
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "j5ajecor6eo",
@@ -4211,7 +4959,9 @@
       491,
       1402,
       1418
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "j7e",
@@ -4219,7 +4969,9 @@
     "sites": [
       1256,
       1274
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "jamluxdhh8o",
@@ -4227,70 +4979,90 @@
     "sites": [
       924,
       959
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "jdijo2ro",
     "count": 1,
     "sites": [
       1008
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "jdkoemo0",
     "count": 1,
     "sites": [
       1022
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "jetbrains",
     "count": 1,
     "sites": [
       28
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "jhz7xgboayb",
     "count": 1,
     "sites": [
       1886
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "jitter",
     "count": 1,
     "sites": [
       651
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "jnjq3py0dym",
     "count": 1,
     "sites": [
       993
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/预测分析"
   },
   {
     "tag": "jonasfranzdev",
     "count": 1,
     "sites": [
       184
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "joplin",
     "count": 1,
     "sites": [
       3033
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "jqcztvnsm",
     "count": 1,
     "sites": [
       459
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "jrnf0kralyo",
@@ -4298,7 +5070,9 @@
     "sites": [
       907,
       914
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "js12",
@@ -4306,49 +5080,63 @@
     "sites": [
       1069,
       1135
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/语音识别"
   },
   {
     "tag": "jsf-av-rules",
     "count": 1,
     "sites": [
       2618
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/字体资源"
   },
   {
     "tag": "jtc1",
     "count": 1,
     "sites": [
       2463
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网文版权交易"
   },
   {
     "tag": "judge0",
     "count": 1,
     "sites": [
       34
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "jupyter",
     "count": 1,
     "sites": [
       215
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "jwd1fpdd4pc",
     "count": 1,
     "sites": [
       958
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "k-ary",
     "count": 1,
     "sites": [
       1259
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "k1pleggq33i",
@@ -4356,7 +5144,9 @@
     "sites": [
       757,
       1894
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/内容写作"
   },
   {
     "tag": "k2r",
@@ -4364,105 +5154,135 @@
     "sites": [
       429,
       495
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "k8s",
     "count": 1,
     "sites": [
       23
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "kaggle",
     "count": 1,
     "sites": [
       3088
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "kaitai",
     "count": 1,
     "sites": [
       668
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "kapowarr",
     "count": 1,
     "sites": [
       2260
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/代码托管"
   },
   {
     "tag": "karaoke",
     "count": 1,
     "sites": [
       639
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "kbuzqgki",
     "count": 1,
     "sites": [
       1744
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/技术写作"
   },
   {
     "tag": "kct3avgrrpu",
     "count": 1,
     "sites": [
       1136
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "keila",
     "count": 1,
     "sites": [
       42
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "keras",
     "count": 1,
     "sites": [
       406
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "kg4bqzaqrbm",
     "count": 1,
     "sites": [
       1026
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/自动化流程"
   },
   {
     "tag": "khan",
     "count": 1,
     "sites": [
       3092
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "khoj",
     "count": 1,
     "sites": [
       881
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "kimai",
     "count": 1,
     "sites": [
       539
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "kiqt",
     "count": 1,
     "sites": [
       1387
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "klawikeyuw",
@@ -4470,7 +5290,9 @@
     "sites": [
       1179,
       1191
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "klbcux1is2c",
@@ -4478,14 +5300,18 @@
     "sites": [
       1169,
       1267
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "klim",
     "count": 1,
     "sites": [
       3064
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "klkpbcka",
@@ -4493,7 +5319,9 @@
     "sites": [
       1776,
       1973
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/邮件写作"
   },
   {
     "tag": "kn5i",
@@ -4501,14 +5329,18 @@
     "sites": [
       1314,
       1341
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "knowledge",
     "count": 1,
     "sites": [
       696
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板资源"
   },
   {
     "tag": "ktp36hvgi",
@@ -4516,168 +5348,216 @@
     "sites": [
       920,
       1281
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "kuaishou",
     "count": 1,
     "sites": [
       17
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "la",
     "count": 1,
     "sites": [
       646
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "lab",
     "count": 1,
     "sites": [
       330
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "labeled",
     "count": 1,
     "sites": [
       675
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "lancache",
     "count": 1,
     "sites": [
       643
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "lark",
     "count": 1,
     "sites": [
       54
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "layli",
     "count": 1,
     "sites": [
       729
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/视频游戏"
   },
   {
     "tag": "lcvuql",
     "count": 1,
     "sites": [
       2110
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "le",
     "count": 1,
     "sites": [
       3061
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "learning",
     "count": 1,
     "sites": [
       31
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "lemcinq",
     "count": 1,
     "sites": [
       478
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "lemmy",
     "count": 1,
     "sites": [
       679
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "lerouge",
     "count": 1,
     "sites": [
       3061
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "let",
     "count": 1,
     "sites": [
       401
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API服务"
   },
   {
     "tag": "level",
     "count": 1,
     "sites": [
       1056
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "lgpl-2",
     "count": 1,
     "sites": [
       1685
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "lgpl-3",
     "count": 1,
     "sites": [
       1524
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "librekb",
     "count": 1,
     "sites": [
       696
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板资源"
   },
   {
     "tag": "libvlc",
     "count": 1,
     "sites": [
       2939
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/学术写作"
   },
   {
     "tag": "libyaml",
     "count": 1,
     "sites": [
       3007
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/学术委员会"
   },
   {
     "tag": "life",
     "count": 1,
     "sites": [
       713
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "lightweight",
     "count": 1,
     "sites": [
       1528
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "like",
     "count": 1,
     "sites": [
       641
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "linearregression",
@@ -4685,98 +5565,126 @@
     "sites": [
       764,
       1926
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/内容写作"
   },
   {
     "tag": "linkstack",
     "count": 1,
     "sites": [
       52
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "llamaindex",
     "count": 1,
     "sites": [
       542
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计工具"
   },
   {
     "tag": "llmkube",
     "count": 1,
     "sites": [
       511
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "llvip",
     "count": 1,
     "sites": [
       2161
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "localai",
     "count": 1,
     "sites": [
       513
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "locker",
     "count": 1,
     "sites": [
       704
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "login",
     "count": 1,
     "sites": [
       16
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "loom",
     "count": 1,
     "sites": [
       661
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "luau",
     "count": 1,
     "sites": [
       36
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "lumber",
     "count": 1,
     "sites": [
       2144
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "luyinh8",
     "count": 1,
     "sites": [
       1352
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "lxwse",
     "count": 1,
     "sites": [
       1797
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "lz",
     "count": 1,
     "sites": [
       1456
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "m5c",
@@ -4784,7 +5692,9 @@
     "sites": [
       490,
       1029
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "m999a",
@@ -4792,7 +5702,9 @@
     "sites": [
       1032,
       1034
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "maegxtwmusi",
@@ -4800,14 +5712,18 @@
     "sites": [
       1087,
       1149
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "magic",
     "count": 1,
     "sites": [
       853
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "mai",
@@ -4815,35 +5731,45 @@
     "sites": [
       1157,
       1276
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "mailchimp",
     "count": 1,
     "sites": [
       3103
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "main",
     "count": 1,
     "sites": [
       724
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "making",
     "count": 1,
     "sites": [
       653
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "malshare",
     "count": 1,
     "sites": [
       875
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "mammography",
@@ -4851,77 +5777,99 @@
     "sites": [
       1749,
       2192
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/技术写作"
   },
   {
     "tag": "manage",
     "count": 1,
     "sites": [
       865
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/表单社区"
   },
   {
     "tag": "management",
     "count": 1,
     "sites": [
       659
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "mas",
     "count": 1,
     "sites": [
       1841
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "material",
     "count": 1,
     "sites": [
       677
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/平台资源"
   },
   {
     "tag": "mathematical",
     "count": 1,
     "sites": [
       518
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "maxmedia",
     "count": 1,
     "sites": [
       2508
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网文推广平台"
   },
   {
     "tag": "maza",
     "count": 1,
     "sites": [
       641
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "mcs5ovhv9s4",
     "count": 1,
     "sites": [
       966
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "mermaid",
     "count": 1,
     "sites": [
       3038
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/流程图生成"
   },
   {
     "tag": "message",
     "count": 1,
     "sites": [
       1568
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "meta-selflearning",
@@ -4929,7 +5877,9 @@
     "sites": [
       2037,
       2206
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/社交媒体"
   },
   {
     "tag": "michaelsambol",
@@ -4937,21 +5887,27 @@
     "sites": [
       1224,
       1243
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "midjourney",
     "count": 1,
     "sites": [
       3067
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "miro",
     "count": 1,
     "sites": [
       3040
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板开源"
   },
   {
     "tag": "mit6",
@@ -4959,7 +5915,9 @@
     "sites": [
       1069,
       1135
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/语音识别"
   },
   {
     "tag": "mitopencourseware",
@@ -4974,7 +5932,9 @@
       1232,
       1267,
       1310
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "miylo8adrww",
@@ -4982,7 +5942,9 @@
     "sites": [
       929,
       941
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ml",
@@ -4990,91 +5952,117 @@
     "sites": [
       656,
       3070
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "mockup",
     "count": 1,
     "sites": [
       3057
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板社区"
   },
   {
     "tag": "models",
     "count": 1,
     "sites": [
       2223
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "modis",
     "count": 1,
     "sites": [
       1841
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "mofhhfaqdjw",
     "count": 1,
     "sites": [
       1424
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "monasansvf-wdth-wght-opsz-902d64c7ad02",
     "count": 1,
     "sites": [
       249
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "montreal",
     "count": 1,
     "sites": [
       45
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "mpl-2",
     "count": 1,
     "sites": [
       1580
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "mue5dxrhyao",
     "count": 1,
     "sites": [
       1031
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "mxu0w",
     "count": 1,
     "sites": [
       480
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "myfonts",
     "count": 1,
     "sites": [
       3062
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "mz5nrrs",
     "count": 1,
     "sites": [
       1399
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "n4ice5ji",
     "count": 1,
     "sites": [
       1124
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "name",
@@ -5082,28 +6070,36 @@
     "sites": [
       1496,
       2508
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "nastia",
     "count": 1,
     "sites": [
       851
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "natural",
     "count": 1,
     "sites": [
       32
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "ncxxdocc",
     "count": 1,
     "sites": [
       1442
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "ndf1qdtrkck",
@@ -5111,21 +6107,27 @@
     "sites": [
       428,
       465
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "net",
     "count": 1,
     "sites": [
       643
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "networks",
     "count": 1,
     "sites": [
       31
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "neural",
@@ -5134,35 +6136,45 @@
       5,
       398,
       709
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "news",
     "count": 1,
     "sites": [
       720
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/国内视频"
   },
   {
     "tag": "nextcloud",
     "count": 1,
     "sites": [
       12
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "ng5qq0o",
     "count": 1,
     "sites": [
       1364
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ni",
     "count": 1,
     "sites": [
       1455
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "ninwepprkdq",
@@ -5170,14 +6182,18 @@
     "sites": [
       1097,
       1141
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "nitric",
     "count": 1,
     "sites": [
       689
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "nkldp3rch3m",
@@ -5185,28 +6201,36 @@
     "sites": [
       457,
       496
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "nlswrmvih6kftjolnaz8t",
     "count": 1,
     "sites": [
       484
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "nmq4ly43p4",
     "count": 1,
     "sites": [
       947
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "nmv",
     "count": 1,
     "sites": [
       930
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "node",
@@ -5214,14 +6238,18 @@
     "sites": [
       721,
       2250
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/国内视频"
   },
   {
     "tag": "nominate",
     "count": 1,
     "sites": [
       293
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "notes",
@@ -5229,28 +6257,36 @@
     "sites": [
       1236,
       1258
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "notesnook",
     "count": 1,
     "sites": [
       3035
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "notion",
     "count": 1,
     "sites": [
       3095
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "nowcoder",
     "count": 1,
     "sites": [
       649
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "nshizbk9jd8",
@@ -5258,21 +6294,27 @@
     "sites": [
       1175,
       1199
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "nyzzp",
     "count": 1,
     "sites": [
       431
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "nz1kzxbghj8",
     "count": 1,
     "sites": [
       1313
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "nzgfuwoaoiw",
@@ -5280,7 +6322,9 @@
     "sites": [
       1350,
       1378
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "o4nwuqqodag",
@@ -5288,35 +6332,45 @@
     "sites": [
       1077,
       1140
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "o9yqlx89htb",
     "count": 1,
     "sites": [
       2953
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/课程资料"
   },
   {
     "tag": "oa3dgezua",
     "count": 1,
     "sites": [
       1111
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "oaok0cuqe",
     "count": 1,
     "sites": [
       1310
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "obsidian",
     "count": 1,
     "sites": [
       3106
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "obt-vmvdm8s",
@@ -5324,35 +6378,45 @@
     "sites": [
       1458,
       1466
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "odl7md04q",
     "count": 1,
     "sites": [
       997
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "oldap-2",
     "count": 1,
     "sites": [
       1632
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ombi",
     "count": 1,
     "sites": [
       532
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "online",
     "count": 1,
     "sites": [
       3023
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/在线工具"
   },
   {
     "tag": "open",
@@ -5366,7 +6430,9 @@
       681,
       708,
       3050
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "open-source",
@@ -5375,35 +6441,45 @@
       24,
       422,
       882
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "openfoundry",
     "count": 1,
     "sites": [
       3050
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "openolat",
     "count": 1,
     "sites": [
       49
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "openstax",
     "count": 1,
     "sites": [
       3089
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "ops",
     "count": 1,
     "sites": [
       1451
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "opticalflow",
@@ -5411,7 +6487,9 @@
     "sites": [
       790,
       2195
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "opts",
@@ -5419,63 +6497,81 @@
     "sites": [
       1075,
       1126
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "opus",
     "count": 1,
     "sites": [
       706
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "oq5kskqer4",
     "count": 1,
     "sites": [
       1107
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "organisieren",
     "count": 1,
     "sites": [
       870
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "organize",
     "count": 1,
     "sites": [
       713
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "os-level",
     "count": 1,
     "sites": [
       1670
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "osbsf",
     "count": 1,
     "sites": [
       1058
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/语音识别"
   },
   {
     "tag": "osrkjuzm",
     "count": 1,
     "sites": [
       1377
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "oxygine",
     "count": 1,
     "sites": [
       508
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "p-8z0-mhdqs",
@@ -5483,14 +6579,18 @@
     "sites": [
       891,
       1244
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "p-yw7lqr08",
     "count": 1,
     "sites": [
       1363
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "p9ydif5",
@@ -5498,14 +6598,18 @@
     "sites": [
       468,
       1045
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "palette",
     "count": 1,
     "sites": [
       693
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/文档资源"
   },
   {
     "tag": "papers",
@@ -5513,77 +6617,99 @@
     "sites": [
       1037,
       1099
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/文档分析"
   },
   {
     "tag": "papra",
     "count": 1,
     "sites": [
       10
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "party",
     "count": 1,
     "sites": [
       2800
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/协作工具"
   },
   {
     "tag": "patterns",
     "count": 1,
     "sites": [
       671
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "pbncrdota",
     "count": 1,
     "sites": [
       432
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "pdfs",
     "count": 1,
     "sites": [
       2620
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/字体资源"
   },
   {
     "tag": "pe4wq8coq",
     "count": 1,
     "sites": [
       1372
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "penpot",
     "count": 1,
     "sites": [
       3031
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "people",
     "count": 1,
     "sites": [
       1791
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "personal",
     "count": 1,
     "sites": [
       666
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "pexels",
     "count": 1,
     "sites": [
       3028
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "pglbmth",
@@ -5591,35 +6717,45 @@
     "sites": [
       937,
       942
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/推荐系统"
   },
   {
     "tag": "piwigo",
     "count": 1,
     "sites": [
       53
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "pixabay",
     "count": 1,
     "sites": [
       3053
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "pl-xxv-cva",
     "count": 1,
     "sites": [
       1370
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "pl13bz4shgmrxlzvmwq9dvxo1feg4udgkr",
     "count": 1,
     "sites": [
       478
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "pl1bagv1cih4uhkl8a9bjgg356covj76qn",
@@ -5627,14 +6763,18 @@
     "sites": [
       994,
       1263
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/预测分析"
   },
   {
     "tag": "pl1h1sbf1vakvmonjwjkmuh6",
     "count": 1,
     "sites": [
       1365
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "pl2",
@@ -5649,14 +6789,18 @@
       1009,
       1291,
       1399
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "pl3b08ae665ab9002a",
     "count": 1,
     "sites": [
       446
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "pl5phm2jkkxmi5cxxi7b3jcl1twybtdtkq",
@@ -5664,7 +6808,9 @@
     "sites": [
       903,
       1247
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "pl6ogfv-ieghdogkgg2bik3gl1glbteu8c",
@@ -5672,14 +6818,18 @@
     "sites": [
       1448,
       1462
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "pl6xpj9i5qxyecohn7tqghaj6naprnmubh",
     "count": 1,
     "sites": [
       1778
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/邮件写作"
   },
   {
     "tag": "pl78u8qqhxgrhp9azraxtt5-x1rcctcuyt",
@@ -5687,7 +6837,9 @@
     "sites": [
       1842,
       2088
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "pl89b61f78b552c1ab",
@@ -5698,14 +6850,18 @@
       1109,
       1174,
       1198
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "pl9d558d49ca734a02",
     "count": 1,
     "sites": [
       949
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "pl9xmbv",
@@ -5715,7 +6871,9 @@
       974,
       996,
       1007
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "pla5lqm4uh9bbq-e0znqtia8lral77ica6",
@@ -5730,14 +6888,18 @@
       1237,
       1394,
       1409
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "plainpad",
     "count": 1,
     "sites": [
       512
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "plamzfofxwonjpfxzawqs7czgspyy0x",
@@ -5745,7 +6907,9 @@
     "sites": [
       481,
       977
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "plb7540dedd482705b",
@@ -5755,14 +6919,18 @@
       1362,
       1424,
       1446
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "pldslqjcppol64cjdf0qee5owqgs6we",
     "count": 1,
     "sites": [
       1184
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "pldzf4clw0vboewos",
@@ -5770,21 +6938,27 @@
     "sites": [
       891,
       1244
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "plebntdjur",
     "count": 1,
     "sites": [
       1027
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/自动化流程"
   },
   {
     "tag": "plehulrpyt1hyi78uokmpwcgrxgca9nvoe",
     "count": 1,
     "sites": [
       2047
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/总结摘要"
   },
   {
     "tag": "plfdnelg9dpvxqcxud-9bsy2e7bwy3t5sm",
@@ -5798,7 +6972,9 @@
       1402,
       1418,
       1425
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "plfe6e58f856038c69",
@@ -5807,7 +6983,9 @@
       428,
       465,
       1053
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "plglfvvz",
@@ -5815,14 +6993,18 @@
     "sites": [
       1235,
       1257
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "plheizmdg",
     "count": 1,
     "sites": [
       1817
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "plhyi3fbmv0sdzmhay0an59oynly5vyyta",
@@ -5830,7 +7012,9 @@
     "sites": [
       796,
       1954
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "plj9pm",
@@ -5838,14 +7022,18 @@
     "sites": [
       1102,
       1150
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "pljbui5mgii6bweuzf7he6nowwvgne",
     "count": 1,
     "sites": [
       2110
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "plmvb1oknmnjuc5podcdv5ocs7",
@@ -5853,14 +7041,18 @@
     "sites": [
       1200,
       1209
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "ploromvodv4rmigqp3wxshtmggzqpfvfbu",
     "count": 1,
     "sites": [
       1989
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/剧本创作"
   },
   {
     "tag": "plotl7m3yp-dx6ic0hgt0pux",
@@ -5885,14 +7077,18 @@
       1330,
       1372,
       1411
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "plou2xlyxmsijgert5rrcqasgtmyyqnt2h",
     "count": 1,
     "sites": [
       1216
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "plp-0k3kfddpzcns4cqkphh-zt3adwybde",
@@ -5900,28 +7096,36 @@
     "sites": [
       1723,
       1900
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/技术写作"
   },
   {
     "tag": "plqymg7htrazbkenj-je",
     "count": 1,
     "sites": [
       1886
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "plqymg7htrazcdxz44o4p3n5anz3llrvzf",
     "count": 1,
     "sites": [
       1843
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "plrrw1w6cgacxbmtdfj205valogmirc82-",
     "count": 1,
     "sites": [
       475
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "plul4u3cngp61hsjnduldudlrl493b-xzf",
@@ -5929,7 +7133,9 @@
     "sites": [
       1097,
       1141
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "plul4u3cngp61oq3twyp6v",
@@ -5943,7 +7149,9 @@
       1278,
       1283,
       1313
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "plul4u3cngp62k2djqlrxdnri0z2irwnnh",
@@ -5957,7 +7165,9 @@
       1364,
       1443,
       1460
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "plul4u3cngp6317wasnfmcvgym2ucw3ogp",
@@ -5977,28 +7187,36 @@
       1377,
       1378,
       1379
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "plul4u3cngp63gfhb6xb-kvbiqhye",
     "count": 1,
     "sites": [
       1426
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "plwx710qnzo",
     "count": 1,
     "sites": [
       484
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "plzso",
     "count": 1,
     "sites": [
       2098
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "pnpvczmrbe",
@@ -6006,35 +7224,45 @@
     "sites": [
       1301,
       1330
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "pocketbase",
     "count": 1,
     "sites": [
       506
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "podofo",
     "count": 1,
     "sites": [
       688
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API生成"
   },
   {
     "tag": "poly",
     "count": 1,
     "sites": [
       633
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "posthog",
     "count": 1,
     "sites": [
       854
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "ppzdmpka",
@@ -6042,7 +7270,9 @@
     "sites": [
       798,
       1800
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "pra0w1kecg",
@@ -6050,7 +7280,9 @@
     "sites": [
       1001,
       1016
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "prima",
@@ -6059,35 +7291,45 @@
       769,
       2158,
       2203
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "privacy-first",
     "count": 1,
     "sites": [
       25
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "pro",
     "count": 1,
     "sites": [
       40
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "program",
     "count": 1,
     "sites": [
       359
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "programming",
     "count": 1,
     "sites": [
       999
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "project",
@@ -6095,28 +7337,36 @@
     "sites": [
       215,
       852
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源"
   },
   {
     "tag": "projects",
     "count": 1,
     "sites": [
       2144
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "prowritingaid",
     "count": 1,
     "sites": [
       3102
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "psono",
     "count": 1,
     "sites": [
       684
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "pub",
@@ -6124,21 +7374,27 @@
     "sites": [
       1833,
       2224
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "pubmed",
     "count": 1,
     "sites": [
       3083
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "pvlzw",
     "count": 1,
     "sites": [
       992
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/预测分析"
   },
   {
     "tag": "pwnel",
@@ -6146,28 +7402,36 @@
     "sites": [
       488,
       494
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "pydio",
     "count": 1,
     "sites": [
       858
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/部署服务"
   },
   {
     "tag": "pyqt6",
     "count": 1,
     "sites": [
       613
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计工具"
   },
   {
     "tag": "python",
     "count": 1,
     "sites": [
       8
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "q-uqazcnza",
@@ -6175,14 +7439,18 @@
     "sites": [
       1356,
       1379
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "qbnz7",
     "count": 1,
     "sites": [
       1292
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "qcgss3kygo0",
@@ -6190,28 +7458,36 @@
     "sites": [
       1860,
       2131
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "qdzpzctpf10",
     "count": 1,
     "sites": [
       1204
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "qji0arlq7s",
     "count": 1,
     "sites": [
       1842
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "qkw",
     "count": 1,
     "sites": [
       1447
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "qm8k",
@@ -6219,105 +7495,135 @@
     "sites": [
       1307,
       1334
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "qn6fpid0gzo",
     "count": 1,
     "sites": [
       1094
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "qq5e0",
     "count": 1,
     "sites": [
       1245
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "qqypt7g",
     "count": 1,
     "sites": [
       1254
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "qst",
     "count": 1,
     "sites": [
       699
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板教程"
   },
   {
     "tag": "qt",
     "count": 1,
     "sites": [
       705
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "quaud",
     "count": 1,
     "sites": [
       980
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "qwik",
     "count": 1,
     "sites": [
       13
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "qyrzroria",
     "count": 1,
     "sites": [
       1460
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "r21-11",
     "count": 1,
     "sites": [
       2754
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/背景图案"
   },
   {
     "tag": "r5on3iwx78m",
     "count": 1,
     "sites": [
       956
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "rabbit",
     "count": 1,
     "sites": [
       26
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "rapidminer",
     "count": 1,
     "sites": [
       3080
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "raval",
     "count": 1,
     "sites": [
       55
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "rawpixel",
     "count": 1,
     "sites": [
       3056
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "rc9hesnkwklal",
@@ -6325,28 +7631,36 @@
     "sites": [
       1102,
       1150
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "readeck",
     "count": 1,
     "sites": [
       723
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/国内视频"
   },
   {
     "tag": "recherche",
     "count": 1,
     "sites": [
       826
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "recipe",
     "count": 1,
     "sites": [
       531
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "recurrent",
@@ -6354,56 +7668,72 @@
     "sites": [
       5,
       709
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "red",
     "count": 1,
     "sites": [
       877
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体"
   },
   {
     "tag": "redaxo",
     "count": 1,
     "sites": [
       654
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "rei3",
     "count": 1,
     "sites": [
       509
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "reilly",
     "count": 1,
     "sites": [
       4
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "remove",
     "count": 1,
     "sites": [
       3071
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "replicate",
     "count": 1,
     "sites": [
       3077
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "replit",
     "count": 1,
     "sites": [
       3024
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/在线工具"
   },
   {
     "tag": "research",
@@ -6414,49 +7744,63 @@
       827,
       2195,
       2228
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "researchgate",
     "count": 1,
     "sites": [
       3085
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "rest",
     "count": 1,
     "sites": [
       407
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "restream",
     "count": 1,
     "sites": [
       676
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/平台资源"
   },
   {
     "tag": "reverse",
     "count": 1,
     "sites": [
       1671
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "rf",
     "count": 1,
     "sites": [
       591
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计工具"
   },
   {
     "tag": "rfc",
     "count": 1,
     "sites": [
       712
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "rfkvkko",
@@ -6464,21 +7808,27 @@
     "sites": [
       490,
       1029
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "rhodecode",
     "count": 1,
     "sites": [
       642
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "rid",
     "count": 1,
     "sites": [
       2077
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/总结摘要"
   },
   {
     "tag": "rikxvci-r4k",
@@ -6486,7 +7836,9 @@
     "sites": [
       815,
       2021
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "rktgpx0mary",
@@ -6494,21 +7846,27 @@
     "sites": [
       456,
       482
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "rmuo",
     "count": 1,
     "sites": [
       934
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "rna",
     "count": 1,
     "sites": [
       837
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "rnn13",
@@ -6516,14 +7874,18 @@
     "sites": [
       820,
       1996
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "romm",
     "count": 1,
     "sites": [
       861
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/协作社区"
   },
   {
     "tag": "rpgcyiky7uw",
@@ -6531,14 +7893,18 @@
     "sites": [
       931,
       938
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "runway",
     "count": 1,
     "sites": [
       3070
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频工具"
   },
   {
     "tag": "rvl",
@@ -6547,21 +7913,27 @@
       768,
       2198,
       2227
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "rytr",
     "count": 1,
     "sites": [
       3098
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "s-cart",
     "count": 1,
     "sites": [
       41
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "s5xxz",
@@ -6569,42 +7941,54 @@
     "sites": [
       1145,
       1197
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "samvera",
     "count": 1,
     "sites": [
       682
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "sanebox",
     "count": 1,
     "sites": [
       678
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/平台资源"
   },
   {
     "tag": "sanecpplibraries",
     "count": 1,
     "sites": [
       2941
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/实验室管理"
   },
   {
     "tag": "sarbwvhupq",
     "count": 1,
     "sites": [
       981
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "sc22",
     "count": 1,
     "sites": [
       2463
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网文版权交易"
   },
   {
     "tag": "scholar",
@@ -6612,84 +7996,108 @@
     "sites": [
       3081,
       3093
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "scoold",
     "count": 1,
     "sites": [
       867
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/表单社区"
   },
   {
     "tag": "securely",
     "count": 1,
     "sites": [
       11
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "security",
     "count": 1,
     "sites": [
       330
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "seeddms",
     "count": 1,
     "sites": [
       535
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "segcomp",
     "count": 1,
     "sites": [
       2177
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "self-balancing",
     "count": 1,
     "sites": [
       1393
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "self-hosted",
     "count": 1,
     "sites": [
       52
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "semantic",
     "count": 1,
     "sites": [
       3093
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "send",
     "count": 1,
     "sites": [
       11
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "sequencefile",
     "count": 1,
     "sites": [
       1491
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "server",
     "count": 1,
     "sites": [
       2488
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网文作家协会"
   },
   {
     "tag": "sfclm8tu",
@@ -6697,70 +8105,90 @@
     "sites": [
       1180,
       1192
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "sgzpso-yc",
     "count": 1,
     "sites": [
       1441
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "shared-nothing",
     "count": 1,
     "sites": [
       1611
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "sheets",
     "count": 1,
     "sites": [
       691
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/文档资源"
   },
   {
     "tag": "shmxxqtdds",
     "count": 1,
     "sites": [
       2088
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "shotcut",
     "count": 1,
     "sites": [
       2908
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/研究工具"
   },
   {
     "tag": "showdoc",
     "count": 1,
     "sites": [
       3042
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "si",
     "count": 1,
     "sites": [
       1426
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "si8tevmx8pk",
     "count": 1,
     "sites": [
       1123
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "sievvk3nvuk",
     "count": 1,
     "sites": [
       460
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "sign",
@@ -6768,14 +8196,18 @@
     "sites": [
       292,
       714
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "sijmoe9l9g",
     "count": 1,
     "sites": [
       1443
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "simple",
@@ -6783,35 +8215,45 @@
     "sites": [
       14,
       402
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "sindresorhus",
     "count": 1,
     "sites": [
       636
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/UI设计开源"
   },
   {
     "tag": "singa",
     "count": 1,
     "sites": [
       30
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "sip",
     "count": 1,
     "sites": [
       2893
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/学术会议"
   },
   {
     "tag": "siraj",
     "count": 1,
     "sites": [
       55
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "site",
@@ -6819,35 +8261,45 @@
     "sites": [
       789,
       1946
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "sitepoint",
     "count": 1,
     "sites": [
       522
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "skip",
     "count": 1,
     "sites": [
       1023
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "slink",
     "count": 1,
     "sites": [
       855
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/部署服务"
   },
   {
     "tag": "smfwfdesmhi",
     "count": 1,
     "sites": [
       1321
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "soeu",
@@ -6855,35 +8307,45 @@
     "sites": [
       932,
       945
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "software",
     "count": 1,
     "sites": [
       292
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "sogo",
     "count": 1,
     "sites": [
       2355
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/Serverless"
   },
   {
     "tag": "sort",
     "count": 1,
     "sites": [
       1240
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "sorting",
     "count": 1,
     "sites": [
       1430
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "source",
@@ -6891,98 +8353,126 @@
     "sites": [
       681,
       708
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "sourcehut",
     "count": 1,
     "sites": [
       3047
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "sovereign",
     "count": 1,
     "sites": [
       722
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐/国内视频"
   },
   {
     "tag": "spark",
     "count": 1,
     "sites": [
       7
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "speak",
     "count": 1,
     "sites": [
       424
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "spip",
     "count": 1,
     "sites": [
       541
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "spree",
     "count": 1,
     "sites": [
       525
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体教程"
   },
   {
     "tag": "sqhqhbcogaobuljoxayyqhpfw",
     "count": 1,
     "sites": [
       2098
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "squad-explorer",
     "count": 1,
     "sites": [
       766
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/内容写作"
   },
   {
     "tag": "srs",
     "count": 1,
     "sites": [
       402
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API服务"
   },
   {
     "tag": "sta",
     "count": 1,
     "sites": [
       293
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "stability",
     "count": 1,
     "sites": [
       1430
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "stable",
     "count": 1,
     "sites": [
       3068
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "standard",
     "count": 1,
     "sites": [
       3034
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "standwithukraine",
@@ -6991,35 +8481,45 @@
       244,
       245,
       453
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "stocksnap",
     "count": 1,
     "sites": [
       3054
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "storefront",
     "count": 1,
     "sites": [
       863
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/协作社区"
   },
   {
     "tag": "strace",
     "count": 1,
     "sites": [
       1020
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "struct",
     "count": 1,
     "sites": [
       668
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "studio",
@@ -7027,56 +8527,72 @@
     "sites": [
       47,
       853
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "sudowrite",
     "count": 1,
     "sites": [
       3099
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "summarize",
     "count": 1,
     "sites": [
       19
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "supercharge",
     "count": 1,
     "sites": [
       634
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "sutgofyjzs",
     "count": 1,
     "sites": [
       1028
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/自动化流程"
   },
   {
     "tag": "svelte",
     "count": 1,
     "sites": [
       868
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "t-a",
     "count": 1,
     "sites": [
       905
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "t3",
     "count": 1,
     "sites": [
       2087
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "t3a4jlhlhta",
@@ -7084,42 +8600,54 @@
     "sites": [
       913,
       915
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "tab-separated",
     "count": 1,
     "sites": [
       675
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公"
   },
   {
     "tag": "tableau",
     "count": 1,
     "sites": [
       3079
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "tamari",
     "count": 1,
     "sites": [
       716
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/AI视频生成"
   },
   {
     "tag": "tbivyjoii",
     "count": 1,
     "sites": [
       1392
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "tcdi",
     "count": 1,
     "sites": [
       1116
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "tcpdump",
@@ -7127,7 +8655,9 @@
     "sites": [
       39,
       48
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "tdo3r5m1lno",
@@ -7135,28 +8665,36 @@
     "sites": [
       902,
       1232
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "technitium",
     "count": 1,
     "sites": [
       672
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "textio",
     "count": 1,
     "sites": [
       869
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "th18w",
     "count": 1,
     "sites": [
       1168
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "the",
@@ -7171,42 +8709,54 @@
       660,
       861,
       1014
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "them",
     "count": 1,
     "sites": [
       647
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "themeforest",
     "count": 1,
     "sites": [
       3058
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "thought",
     "count": 1,
     "sites": [
       710
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/网络工具"
   },
   {
     "tag": "tinode",
     "count": 1,
     "sites": [
       648
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "tinyimages",
     "count": 1,
     "sites": [
       784
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "tj8skcusdbu",
@@ -7214,126 +8764,162 @@
     "sites": [
       1042,
       1059
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "tl90tntkvxs",
     "count": 1,
     "sites": [
       445
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "tmuno5rznee",
     "count": 1,
     "sites": [
       1088
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "tni2whmaei",
     "count": 1,
     "sites": [
       1366
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "tob1tuez2x4",
     "count": 1,
     "sites": [
       1368
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "together",
     "count": 1,
     "sites": [
       865
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/表单社区"
   },
   {
     "tag": "toml-to-go",
     "count": 1,
     "sites": [
       526
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体教程"
   },
   {
     "tag": "torch",
     "count": 1,
     "sites": [
       6
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "tr1312",
     "count": 1,
     "sites": [
       1891
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "tracking",
     "count": 1,
     "sites": [
       695
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/流程图生成"
   },
   {
     "tag": "trae",
     "count": 1,
     "sites": [
       872
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "trailbase",
     "count": 1,
     "sites": [
       652
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "transforming",
     "count": 1,
     "sites": [
       15
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "translate",
     "count": 1,
     "sites": [
       640
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "treap",
     "count": 1,
     "sites": [
       1320
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "tries",
     "count": 1,
     "sites": [
       967
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "tsp",
     "count": 1,
     "sites": [
       901
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "tusiart",
     "count": 1,
     "sites": [
       533
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "tutorial",
@@ -7341,49 +8927,63 @@
     "sites": [
       697,
       1872
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板资源"
   },
   {
     "tag": "tuwunel",
     "count": 1,
     "sites": [
       862
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/协作社区"
   },
   {
     "tag": "twitter-timeline-scalability",
     "count": 1,
     "sites": [
       1406
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "two",
     "count": 1,
     "sites": [
       1452
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "typetogether",
     "count": 1,
     "sites": [
       3063
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/字体资源"
   },
   {
     "tag": "typo3",
     "count": 1,
     "sites": [
       852
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "u7l",
     "count": 1,
     "sites": [
       474
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "ubmcbbjnf4",
@@ -7391,7 +8991,9 @@
     "sites": [
       1359,
       1369
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ucid",
@@ -7399,119 +9001,153 @@
     "sites": [
       1784,
       2200
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "udkzq",
     "count": 1,
     "sites": [
       1033
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "uek2",
     "count": 1,
     "sites": [
       1024
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "uf-uq3a0kg",
     "count": 1,
     "sites": [
       1411
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "ufldl",
     "count": 1,
     "sites": [
       1872
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "ui8",
     "count": 1,
     "sites": [
       3060
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "understanding",
     "count": 1,
     "sites": [
       505
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具"
   },
   {
     "tag": "unreasonable",
     "count": 1,
     "sites": [
       258
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "unsplash",
     "count": 1,
     "sites": [
       3027
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "upscayl",
     "count": 1,
     "sites": [
       3072
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "uqxft",
     "count": 1,
     "sites": [
       1280
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "urpc0",
     "count": 1,
     "sites": [
       1371
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "urx87-nmm6c",
     "count": 1,
     "sites": [
       455
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "us",
     "count": 1,
     "sites": [
       1729
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/技术写作"
   },
   {
     "tag": "using",
     "count": 1,
     "sites": [
       1295
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "ut90klnn264",
     "count": 1,
     "sites": [
       1009
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "utmonaws",
     "count": 1,
     "sites": [
       2620
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/资源/字体资源"
   },
   {
     "tag": "uz7o6",
@@ -7519,7 +9155,9 @@
     "sites": [
       1096,
       1138
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "v4yiqkm1o",
@@ -7527,7 +9165,9 @@
     "sites": [
       433,
       1046
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "v6mkvru1evu",
@@ -7535,49 +9175,63 @@
     "sites": [
       1144,
       1397
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "vast",
     "count": 1,
     "sites": [
       27
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "vev74hwaseu",
     "count": 1,
     "sites": [
       953
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "vgjmkejw0",
     "count": 1,
     "sites": [
       500
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "vhjofmc",
     "count": 1,
     "sites": [
       1409
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "vi",
     "count": 1,
     "sites": [
       1295
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "vikunja",
     "count": 1,
     "sites": [
       3
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "vinewhc24",
@@ -7585,49 +9239,63 @@
     "sites": [
       835,
       2042
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "virtual",
     "count": 1,
     "sites": [
       403
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/API服务"
   },
   {
     "tag": "vis4ydpup98",
     "count": 1,
     "sites": [
       1327
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "visiontexture",
     "count": 1,
     "sites": [
       825
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "visual",
     "count": 1,
     "sites": [
       47
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "vja6dyr",
     "count": 1,
     "sites": [
       1220
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "vlive",
     "count": 1,
     "sites": [
       871
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研"
   },
   {
     "tag": "voc",
@@ -7635,14 +9303,18 @@
     "sites": [
       1826,
       2160
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "vq26fp4",
     "count": 1,
     "sites": [
       1237
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "vrdaqmdalq",
@@ -7650,70 +9322,90 @@
     "sites": [
       841,
       2122
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/营销文案"
   },
   {
     "tag": "vs",
     "count": 1,
     "sites": [
       1371
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "w3x0f",
     "count": 1,
     "sites": [
       934
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "w54zuadg",
     "count": 1,
     "sites": [
       1043
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "w9f",
     "count": 1,
     "sites": [
       1308
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "wavelog",
     "count": 1,
     "sites": [
       51
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "we",
     "count": 1,
     "sites": [
       854
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具"
   },
   {
     "tag": "web",
     "count": 1,
     "sites": [
       1645
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "webthings",
     "count": 1,
     "sites": [
       655
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "webui",
     "count": 1,
     "sites": [
       20
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "welcome",
@@ -7721,14 +9413,18 @@
     "sites": [
       652,
       657
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "wgjrlqtx7as",
     "count": 1,
     "sites": [
       933
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "what-is-tail-recursion-why-is-it-so-bad",
@@ -7736,21 +9432,27 @@
     "sites": [
       1133,
       1137
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "what-is-the-difference-between-a-process-and-a-thread",
     "count": 1,
     "sites": [
       1054
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "whimsical",
     "count": 1,
     "sites": [
       3039
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板开源"
   },
   {
     "tag": "wiki",
@@ -7759,21 +9461,27 @@
       22,
       408,
       864
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "wikisuite",
     "count": 1,
     "sites": [
       662
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "windsurf",
     "count": 1,
     "sites": [
       644
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "wnnau",
@@ -7781,21 +9489,27 @@
     "sites": [
       1164,
       1214
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "wokyboo0ai",
     "count": 1,
     "sites": [
       1291
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "word",
     "count": 1,
     "sites": [
       1188
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "wp8oio",
@@ -7803,7 +9517,9 @@
     "sites": [
       928,
       1113
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "write-great-code-understanding-machine",
@@ -7811,42 +9527,54 @@
     "sites": [
       1181,
       1210
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "writesonic",
     "count": 1,
     "sites": [
       3097
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/AI写作"
   },
   {
     "tag": "writing",
     "count": 1,
     "sites": [
       983
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作生成"
   },
   {
     "tag": "wywwy2onc",
     "count": 1,
     "sites": [
       957
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "wzjlrqg",
     "count": 1,
     "sites": [
       1298
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "xc5iwtji",
     "count": 1,
     "sites": [
       1017
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "xfvd8",
@@ -7854,7 +9582,9 @@
     "sites": [
       889,
       894
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "xiggk",
@@ -7862,14 +9592,18 @@
     "sites": [
       501,
       1066
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "xiv",
     "count": 1,
     "sites": [
       3082
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "xm4lgflqfva",
@@ -7877,49 +9611,63 @@
     "sites": [
       1293,
       1332
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "xvg6r3k",
     "count": 1,
     "sites": [
       923
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "xwikiplayground",
     "count": 1,
     "sites": [
       724
-    ]
+    ],
+    "padded": true,
+    "path": "多媒体/视频娱乐"
   },
   {
     "tag": "xwpsrupj4ii",
     "count": 1,
     "sites": [
       1390
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "xxut2pn-v8q",
     "count": 1,
     "sites": [
       984
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "xyf",
     "count": 1,
     "sites": [
       969
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/情感分析"
   },
   {
     "tag": "y6lolpxg6dc",
     "count": 1,
     "sites": [
       1386
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "y85gkayzbk",
@@ -7927,28 +9675,36 @@
     "sites": [
       1317,
       1361
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "yarn",
     "count": 1,
     "sites": [
       515
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "yd5gwgzia",
     "count": 1,
     "sites": [
       1231
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "yf",
     "count": 1,
     "sites": [
       1019
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "yi0jzof4",
@@ -7956,21 +9712,27 @@
     "sites": [
       458,
       497
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "yjzcuhxncv8",
     "count": 1,
     "sites": [
       1375
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ykftfkee",
     "count": 1,
     "sites": [
       1425
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "your",
@@ -7978,56 +9740,72 @@
     "sites": [
       43,
       666
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "yozmxejjiyfhwa-4nkg6sdoiv",
     "count": 1,
     "sites": [
       996
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "yoznfppv98djtdd9x6ui9kmhz",
     "count": 1,
     "sites": [
       954
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "yozobei3hf6lmyw-cbfs7nkov",
     "count": 1,
     "sites": [
       974
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/情感分析"
   },
   {
     "tag": "yozoufgdieopuh6cfsnnrmau-",
     "count": 1,
     "sites": [
       1007
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "yqs6ic-vgmo",
     "count": 1,
     "sites": [
       1173
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "yrc8",
     "count": 1,
     "sites": [
       462
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "yu",
     "count": 1,
     "sites": [
       1184
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "yvbtgksqsg",
@@ -8035,49 +9813,63 @@
     "sites": [
       436,
       1048
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "yxkth6q",
     "count": 1,
     "sites": [
       1080
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "yxw",
     "count": 1,
     "sites": [
       1263
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "zammad",
     "count": 1,
     "sites": [
       717
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/AI视频生成"
   },
   {
     "tag": "zbx",
     "count": 1,
     "sites": [
       1564
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "zfvbwoo0-k",
     "count": 1,
     "sites": [
       1929
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/故事生成"
   },
   {
     "tag": "zkaak9wwa4",
     "count": 1,
     "sites": [
       1457
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "zlc",
@@ -8085,14 +9877,18 @@
     "sites": [
       485,
       1050
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "zotero",
     "count": 1,
     "sites": [
       3084
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "zpg",
@@ -8100,21 +9896,27 @@
     "sites": [
       1302,
       1306
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "zt38a",
     "count": 1,
     "sites": [
       893
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "ztwjxj81nvy",
     "count": 1,
     "sites": [
       973
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/情感分析"
   },
   {
     "tag": "zusikxcz",
@@ -8122,7 +9924,9 @@
     "sites": [
       1339,
       1354
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "zyecca",
@@ -8130,7 +9934,9 @@
     "sites": [
       1157,
       1276
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "zzwndm",
@@ -8138,7 +9944,9 @@
     "sites": [
       1235,
       1257
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "云开发平台",
@@ -8156,7 +9964,9 @@
       2333,
       2334,
       2335
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/云开发平台"
   },
   {
     "tag": "人工智能",
@@ -9250,7 +11060,9 @@
       3078,
       3079,
       3080
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能"
   },
   {
     "tag": "代码助手",
@@ -9305,7 +11117,9 @@
       1710,
       3073,
       3080
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/代码助手"
   },
   {
     "tag": "代码托管",
@@ -9321,7 +11135,9 @@
       2266,
       2267,
       2268
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/代码托管"
   },
   {
     "tag": "代码搜索",
@@ -9337,7 +11153,9 @@
       2321,
       2322,
       2323
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/代码搜索"
   },
   {
     "tag": "低代码平台",
@@ -9355,7 +11173,9 @@
       2345,
       2346,
       2347
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/低代码平台"
   },
   {
     "tag": "内容写作",
@@ -9381,7 +11201,9 @@
       771,
       772,
       773
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/内容写作"
   },
   {
     "tag": "写作助手",
@@ -9464,7 +11286,9 @@
       1217,
       1218,
       1219
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/写作助手"
   },
   {
     "tag": "创意激发",
@@ -9509,7 +11333,9 @@
       1818,
       1819,
       1820
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/创意激发"
   },
   {
     "tag": "剧本创作",
@@ -9566,7 +11392,9 @@
       1992,
       1993,
       1994
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/剧本创作"
   },
   {
     "tag": "办公工具",
@@ -9586,7 +11414,9 @@
       3034,
       3035,
       3036
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公"
   },
   {
     "tag": "包管理",
@@ -9603,7 +11433,9 @@
       2303,
       2304,
       2305
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/包管理"
   },
   {
     "tag": "协作工具",
@@ -9661,7 +11493,9 @@
       2815,
       2816,
       2817
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/协作工具"
   },
   {
     "tag": "博客管理",
@@ -9717,21 +11551,27 @@
       2131,
       2132,
       2133
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/博客管理"
   },
   {
     "tag": "去中心化",
     "count": 1,
     "sites": [
       516
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "吐司",
     "count": 1,
     "sites": [
       533
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "国内视频",
@@ -9742,7 +11582,9 @@
       721,
       722,
       723
-    ]
+    ],
+    "padded": false,
+    "path": "多媒体/视频娱乐/国内视频"
   },
   {
     "tag": "图像处理",
@@ -9776,7 +11618,9 @@
       3069,
       3071,
       3072
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/图像处理"
   },
   {
     "tag": "图像扩展",
@@ -9784,7 +11628,9 @@
     "sites": [
       1487,
       1488
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图像扩展"
   },
   {
     "tag": "图像识别",
@@ -9796,7 +11642,9 @@
       1351,
       1352,
       1353
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/图像识别"
   },
   {
     "tag": "图标资源",
@@ -9814,7 +11662,9 @@
       2707,
       2708,
       2709
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/图标资源"
   },
   {
     "tag": "图片社区",
@@ -9827,7 +11677,9 @@
       3054,
       3055,
       3056
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/图片社区"
   },
   {
     "tag": "图片资源",
@@ -9844,7 +11696,9 @@
       519,
       520,
       521
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/图片资源"
   },
   {
     "tag": "图生图",
@@ -9854,7 +11708,9 @@
       1480,
       1481,
       1482
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/图生图"
   },
   {
     "tag": "在线工具",
@@ -9866,7 +11722,9 @@
       3024,
       3025,
       3041
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/在线工具"
   },
   {
     "tag": "在线课程",
@@ -9887,7 +11745,9 @@
       42,
       43,
       44
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/学习生成/在线课程"
   },
   {
     "tag": "场景生成",
@@ -9899,7 +11759,9 @@
       1664,
       1665,
       1666
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/场景生成"
   },
   {
     "tag": "培训",
@@ -9907,7 +11769,9 @@
     "sites": [
       23,
       877
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "多媒体",
@@ -10107,7 +11971,9 @@
       883,
       884,
       885
-    ]
+    ],
+    "padded": false,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "字体教程",
@@ -10118,7 +11984,9 @@
       527,
       528,
       529
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/字体教程"
   },
   {
     "tag": "字体资源",
@@ -10146,7 +12014,9 @@
       3064,
       3065,
       3066
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/字体资源"
   },
   {
     "tag": "学习生成",
@@ -10183,7 +12053,9 @@
       419,
       420,
       421
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "学术会议",
@@ -10205,7 +12077,9 @@
       2901,
       2902,
       2903
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术会议"
   },
   {
     "tag": "学术写作",
@@ -10220,7 +12094,9 @@
       2938,
       2939,
       2940
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术写作"
   },
   {
     "tag": "学术地图",
@@ -10243,7 +12119,9 @@
       2992,
       2993,
       2994
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术地图"
   },
   {
     "tag": "学术委员会",
@@ -10264,7 +12142,9 @@
       3019,
       3020,
       3021
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术委员会"
   },
   {
     "tag": "学术搜索",
@@ -10288,7 +12168,9 @@
       2850,
       2851,
       2852
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术搜索"
   },
   {
     "tag": "学术期刊",
@@ -10312,7 +12194,9 @@
       2885,
       2886,
       2887
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术期刊"
   },
   {
     "tag": "学术社交",
@@ -10323,7 +12207,9 @@
       2919,
       2920,
       2921
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术社交"
   },
   {
     "tag": "学术科研",
@@ -10574,7 +12460,9 @@
       3092,
       3093,
       3094
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/学术搜索"
   },
   {
     "tag": "实用工具",
@@ -10609,7 +12497,9 @@
       709,
       710,
       711
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "实验室管理",
@@ -10627,7 +12517,9 @@
       2950,
       2951,
       2952
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/实验室管理"
   },
   {
     "tag": "容器镜像",
@@ -10646,7 +12538,9 @@
       2292,
       2293,
       2294
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/容器镜像"
   },
   {
     "tag": "工具教程",
@@ -10677,7 +12571,9 @@
       3092,
       3093,
       3094
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/工具教程"
   },
   {
     "tag": "平台开源",
@@ -10871,7 +12767,9 @@
       400,
       422,
       423
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "开发工具",
@@ -11292,14 +13190,18 @@
       3045,
       3046,
       3047
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "开放平台",
     "count": 1,
     "sites": [
       54
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "开放课程",
@@ -11322,7 +13224,9 @@
       2975,
       2976,
       2977
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/开放课程"
   },
   {
     "tag": "引文管理",
@@ -11338,14 +13242,18 @@
       2929,
       2930,
       2931
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/引文管理"
   },
   {
     "tag": "快手",
     "count": 1,
     "sites": [
       17
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "总结摘要",
@@ -11395,7 +13303,9 @@
       2081,
       2082,
       2083
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/总结摘要"
   },
   {
     "tag": "情感分析",
@@ -11409,7 +13319,9 @@
       974,
       975,
       976
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/情感分析"
   },
   {
     "tag": "技术写作",
@@ -11445,7 +13357,9 @@
       1750,
       1751,
       1752
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/技术写作"
   },
   {
     "tag": "持续部署",
@@ -11462,7 +13376,9 @@
       2420,
       2421,
       2422
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/持续部署"
   },
   {
     "tag": "推荐系统",
@@ -11475,7 +13391,9 @@
       941,
       942,
       943
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/推荐系统"
   },
   {
     "tag": "插画资源",
@@ -11496,7 +13414,9 @@
       2722,
       2723,
       2724
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/插画资源"
   },
   {
     "tag": "搜索引擎",
@@ -11538,7 +13458,9 @@
       1323,
       1324,
       1325
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/搜索引擎"
   },
   {
     "tag": "摘要生成",
@@ -11613,7 +13535,9 @@
       1140,
       1141,
       1142
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/摘要生成"
   },
   {
     "tag": "改写重述",
@@ -11654,7 +13578,9 @@
       1890,
       1891,
       1892
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/改写重述"
   },
   {
     "tag": "故事生成",
@@ -11711,7 +13637,9 @@
       1941,
       1942,
       1943
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/故事生成"
   },
   {
     "tag": "效率办公",
@@ -12454,7 +14382,9 @@
       3104,
       3105,
       3106
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/协作工具"
   },
   {
     "tag": "教程",
@@ -12620,7 +14550,9 @@
       212,
       213,
       214
-    ]
+    ],
+    "padded": false,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "数据分析",
@@ -12732,7 +14664,9 @@
       1619,
       1635,
       3079
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/数据分析"
   },
   {
     "tag": "数据集平台",
@@ -12755,7 +14689,9 @@
       2867,
       2868,
       2869
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/数据集平台"
   },
   {
     "tag": "文件工具",
@@ -12786,7 +14722,9 @@
       661,
       662,
       663
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "文案优化",
@@ -12815,7 +14753,9 @@
       794,
       795,
       796
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/文案优化"
   },
   {
     "tag": "文档分析",
@@ -12825,7 +14765,9 @@
       1337,
       1381,
       1684
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/文档分析"
   },
   {
     "tag": "文档托管",
@@ -12839,7 +14781,9 @@
       2311,
       2312,
       2313
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/文档托管"
   },
   {
     "tag": "文档教程",
@@ -12861,14 +14805,18 @@
       419,
       420,
       421
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/学习生成/文档教程"
   },
   {
     "tag": "文生图",
     "count": 1,
     "sites": [
       1473
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/文生图"
   },
   {
     "tag": "日志服务",
@@ -12885,14 +14833,18 @@
       2399,
       2400,
       2401
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/日志服务"
   },
   {
     "tag": "智谱",
     "count": 1,
     "sites": [
       701
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/白板教程"
   },
   {
     "tag": "标题生成",
@@ -12935,7 +14887,9 @@
       1855,
       1856,
       1857
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/标题生成"
   },
   {
     "tag": "样机模板",
@@ -12953,7 +14907,9 @@
       2695,
       2696,
       2697
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/样机模板"
   },
   {
     "tag": "模板工具",
@@ -12964,7 +14920,9 @@
       534,
       535,
       536
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/模板工具"
   },
   {
     "tag": "模板社区",
@@ -12974,21 +14932,27 @@
       3029,
       3057,
       3059
-    ]
+    ],
+    "padded": true,
+    "path": "设计工具/模板社区"
   },
   {
     "tag": "牛客网",
     "count": 1,
     "sites": [
       649
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "登录",
     "count": 1,
     "sites": [
       716
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/AI视频生成"
   },
   {
     "tag": "监控告警",
@@ -13004,7 +14968,9 @@
       2388,
       2389,
       2390
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/监控告警"
   },
   {
     "tag": "知识图谱",
@@ -13080,7 +15046,9 @@
       1287,
       1288,
       1289
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/知识图谱"
   },
   {
     "tag": "研究助理",
@@ -13098,7 +15066,9 @@
       3004,
       3005,
       3006
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/研究助理"
   },
   {
     "tag": "研究工具",
@@ -13117,7 +15087,9 @@
       2914,
       2915,
       2916
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/研究工具"
   },
   {
     "tag": "社交媒体",
@@ -13169,7 +15141,9 @@
       2037,
       2038,
       2039
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/社交媒体"
   },
   {
     "tag": "系统工具",
@@ -13204,7 +15178,9 @@
       709,
       710,
       711
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/实用工具/文件工具"
   },
   {
     "tag": "纹理贴图",
@@ -13225,7 +15201,9 @@
       2737,
       2738,
       2739
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/纹理贴图"
   },
   {
     "tag": "综合平台",
@@ -13258,7 +15236,9 @@
       26,
       27,
       28
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/综合平台"
   },
   {
     "tag": "网文书评社区",
@@ -13278,7 +15258,9 @@
       2533,
       2534,
       2535
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文书评社区"
   },
   {
     "tag": "网文作家协会",
@@ -13301,7 +15283,9 @@
       2489,
       2490,
       2491
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文作家协会"
   },
   {
     "tag": "网文写作教程",
@@ -13311,7 +15295,9 @@
       751,
       752,
       753
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网文写作教程"
   },
   {
     "tag": "网文推广平台",
@@ -13333,7 +15319,9 @@
       2519,
       2520,
       2521
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文推广平台"
   },
   {
     "tag": "网文数据分析",
@@ -13359,7 +15347,9 @@
       2456,
       2457,
       2458
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文数据分析"
   },
   {
     "tag": "网文榜单统计",
@@ -13375,7 +15365,9 @@
       2543,
       2544,
       2545
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文榜单统计"
   },
   {
     "tag": "网文版权交易",
@@ -13397,7 +15389,9 @@
       2472,
       2473,
       2474
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文版权交易"
   },
   {
     "tag": "网文编辑工具",
@@ -13417,7 +15411,9 @@
       2503,
       2504,
       2505
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文编辑工具"
   },
   {
     "tag": "网文资源下载",
@@ -13433,7 +15429,9 @@
       747,
       748,
       749
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文资源下载"
   },
   {
     "tag": "网文辅助工具",
@@ -13456,7 +15454,9 @@
       2560,
       2561,
       2562
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文辅助工具"
   },
   {
     "tag": "网文阅读应用",
@@ -13478,7 +15478,9 @@
       2436,
       2437,
       2438
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/网文阅读应用"
   },
   {
     "tag": "网络小说平台",
@@ -13487,7 +15489,9 @@
       731,
       732,
       733
-    ]
+    ],
+    "padded": true,
+    "path": "效率办公/网络小说平台"
   },
   {
     "tag": "聊天对话",
@@ -13579,7 +15583,9 @@
       1379,
       3074,
       3075
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/聊天对话"
   },
   {
     "tag": "背景图案",
@@ -13600,7 +15606,9 @@
       2752,
       2753,
       2754
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/背景图案"
   },
   {
     "tag": "背景移除",
@@ -13609,7 +15617,9 @@
       1493,
       1494,
       1495
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/背景移除"
   },
   {
     "tag": "自动化流程",
@@ -13619,7 +15629,9 @@
       1027,
       1028,
       1029
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/自动化流程"
   },
   {
     "tag": "草图转图",
@@ -13636,7 +15648,9 @@
       1628,
       1629,
       1630
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/草图转图"
   },
   {
     "tag": "营销文案",
@@ -13654,7 +15668,9 @@
       848,
       849,
       850
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/营销文案"
   },
   {
     "tag": "视频娱乐",
@@ -13841,7 +15857,9 @@
       728,
       729,
       730
-    ]
+    ],
+    "padded": false,
+    "path": "多媒体/视频娱乐/教程"
   },
   {
     "tag": "视频生成",
@@ -13957,7 +15975,9 @@
       2241,
       2242,
       2243
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/视频生成"
   },
   {
     "tag": "论文搜索",
@@ -13974,7 +15994,9 @@
       52,
       53,
       54
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/工具教程/论文搜索"
   },
   {
     "tag": "论文检索",
@@ -13997,7 +16019,9 @@
       2832,
       2833,
       2834
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/论文检索"
   },
   {
     "tag": "设计工具",
@@ -14388,7 +16412,9 @@
       3064,
       3065,
       3066
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/UI设计工具"
   },
   {
     "tag": "设计灵感",
@@ -14405,7 +16431,9 @@
       2671,
       2672,
       2673
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/设计灵感"
   },
   {
     "tag": "设计素材",
@@ -14422,7 +16450,9 @@
       2648,
       2649,
       2650
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/设计素材"
   },
   {
     "tag": "设计资源包",
@@ -14439,7 +16469,9 @@
       2763,
       2764,
       2765
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/设计资源包"
   },
   {
     "tag": "诗歌创作",
@@ -14462,14 +16494,18 @@
       836,
       837,
       838
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/诗歌创作"
   },
   {
     "tag": "话题",
     "count": 1,
     "sites": [
       329
-    ]
+    ],
+    "padded": true,
+    "path": "开发工具/平台开源/GitHub"
   },
   {
     "tag": "语音识别",
@@ -14491,7 +16527,9 @@
       1071,
       1072,
       1073
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/语音识别"
   },
   {
     "tag": "课程资料",
@@ -14505,7 +16543,9 @@
       2958,
       2959,
       2960
-    ]
+    ],
+    "padded": false,
+    "path": "学术科研/课程资料"
   },
   {
     "tag": "资源社区",
@@ -14516,7 +16556,9 @@
       681,
       682,
       683
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源社区"
   },
   {
     "tag": "邮件写作",
@@ -14551,7 +16593,9 @@
       1779,
       1780,
       1781
-    ]
+    ],
+    "padded": false,
+    "path": "效率办公/邮件写作"
   },
   {
     "tag": "部署服务",
@@ -14562,7 +16606,9 @@
       857,
       858,
       859
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/部署服务"
   },
   {
     "tag": "配置中心",
@@ -14578,7 +16624,9 @@
       2409,
       2410,
       2411
-    ]
+    ],
+    "padded": false,
+    "path": "开发工具/配置中心"
   },
   {
     "tag": "配色方案",
@@ -14596,7 +16644,9 @@
       2660,
       2661,
       2662
-    ]
+    ],
+    "padded": false,
+    "path": "设计工具/资源/配色方案"
   },
   {
     "tag": "音频生成",
@@ -14617,7 +16667,9 @@
       2256,
       2257,
       2258
-    ]
+    ],
+    "padded": false,
+    "path": "AI工具/人工智能/音频生成"
   },
   {
     "tag": "预测分析",
@@ -14627,20 +16679,26 @@
       993,
       994,
       995
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/预测分析"
   },
   {
     "tag": "风格迁移",
     "count": 1,
     "sites": [
       1489
-    ]
+    ],
+    "padded": true,
+    "path": "AI工具/人工智能/风格迁移"
   },
   {
     "tag": "飞书开放",
     "count": 1,
     "sites": [
       50
-    ]
+    ],
+    "padded": true,
+    "path": "学术科研/工具教程/论文搜索"
   }
 ]
