@@ -12,7 +12,7 @@
     :root:not([data-theme="dark"]) {
         /* --- 亮色主题 (系统自动) --- */
         --color-bg: #f8f9fc;
-        --color-surface: #ffffff;
+        --color-surface: var(--text-on-primary)fff;
         --color-surface-soft: rgba(255,255,255,0.7);
         --color-border: #e5e7eb;
         --color-divider: #f3f4f6;
@@ -54,7 +54,7 @@
         --color-warning: #fbbf24;
 
         --glass-bg: rgba(10,10,15,0.75);
-        --glass-border: rgba(255,255,255,0.08);
+        --glass-border: var(--white-08);
         --glass-shadow: 0 8px 32px rgba(0,0,0,0.3);
         --card-bg: rgba(20,20,30,0.85);
         --card-border: rgba(30,30,45,0.6);
@@ -66,7 +66,7 @@
 [data-theme="light"] {
     /* --- 强制亮色 --- */
     --color-bg: #f8f9fc !important;
-    --color-surface: #ffffff !important;
+    --color-surface: var(--text-on-primary)fff !important;
     --color-surface-soft: rgba(255,255,255,0.7) !important;
     --color-border: #e5e7eb !important;
     --color-divider: #f3f4f6 !important;
@@ -106,7 +106,7 @@
     --color-warning: #fbbf24 !important;
 
     --glass-bg: rgba(10,10,15,0.75) !important;
-    --glass-border: rgba(255,255,255,0.08) !important;
+    --glass-border: var(--white-08) !important;
     --glass-shadow: 0 8px 32px rgba(0,0,0,0.3) !important;
     --card-bg: rgba(20,20,30,0.85) !important;
     --card-border: rgba(30,30,45,0.6) !important;
@@ -141,11 +141,11 @@
     /* --- 颜色 (Color Primitives) --- */
     --color-bg: #0a0a0f;
     --color-bg-alt: #12121a;
-    --color-bg-hover: rgba(255, 255, 255, 0.05);
+    --color-bg-hover: var(--white-05);
     --color-bg-card: rgba(20, 20, 30, 0.75);
     --color-bg-card-hover: rgba(30, 30, 45, 0.85);
-    --color-bg-input: rgba(255, 255, 255, 0.05);
-    --color-bg-overlay: rgba(10, 10, 15, 0.85);
+    --color-bg-input: var(--white-05);
+    --color-bg-overlay: var(--bg-modal);
 
     /* --- 文字颜色 --- */
     --color-text: #f0f0f5;
@@ -154,28 +154,28 @@
     --color-text-inverse: #1a1a2e;
 
     /* --- 品牌色 --- */
-    --color-primary: #7c3aed;
-    --color-primary-light: #a78bfa;
+    --color-primary: var(--color-primary);
+    --color-primary-light: var(--color-primary-light);
     --color-primary-soft: rgba(124, 58, 237, 0.1);
     --color-primary-hover: rgba(124, 58, 237, 0.2);
-    --color-accent: #06b6d4;
-    --color-accent-soft: rgba(6, 182, 212, 0.1);
+    --color-accent: var(--color-accent);
+    --color-accent-soft: var(--accent-10);
 
     /* --- 渐变色 --- */
-    --gradient-brand: linear-gradient(135deg, #7c3aed 0%, #a78bfa 50%, #06b6d4 100%);
+    --gradient-brand: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-accent) 100%);
     --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    --gradient-text: linear-gradient(135deg, #7c3aed, #a78bfa, #06b6d4);
+    --gradient-text: linear-gradient(135deg, var(--color-primary), var(--color-primary-light), var(--color-accent));
 
     /* --- 边框 --- */
-    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border: var(--white-08);
     --color-border-active: rgba(124, 58, 237, 0.6);
-    --color-border-hover: rgba(255, 255, 255, 0.15);
+    --color-border-hover: var(--white-15);
 
     /* --- 阴影 --- */
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 8px 32px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
-    --shadow-glow: 0 0 60px rgba(124, 58, 237, 0.15);
+    --shadow-glow: 0 0 60px var(--primary-15);
     --shadow-card: 0 2px 4px rgba(0, 0, 0, 0.3);
     --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
 
@@ -192,12 +192,61 @@
     --space-2xl: 32px;
 
     /* --- 功能色 --- */
-    --color-error: #ff6b6b;
+    --color-error: var(--color-error);
     --color-error-soft: rgba(255, 107, 107, 0.1);
-    --color-rose: #ff6b9d;
-    --color-rose-soft: rgba(255, 107, 157, 0.1);
-    --color-rose-light: rgba(255, 107, 157, 0.3);
+    --color-rose: var(--color-rose);
+    --color-rose-soft: var(--rose-10);
+    --color-rose-light: var(--rose-30);
     --color-rose-pale: rgba(255, 136, 170, 0.6);
+
+    /* --- 透明度工具 (Opacity Utilities) --- */
+    --white-02: rgba(255, 255, 255, 0.02);
+    --white-03: rgba(255, 255, 255, 0.03);
+    --white-04: rgba(255, 255, 255, 0.04);
+    --white-05: rgba(255, 255, 255, 0.05);
+    --white-06: rgba(255, 255, 255, 0.06);
+    --white-08: rgba(255, 255, 255, 0.08);
+    --white-10: rgba(255, 255, 255, 0.10);
+    --white-15: rgba(255, 255, 255, 0.15);
+    --white-70: rgba(255, 255, 255, 0.70);
+    --black-15: rgba(0, 0, 0, 0.15);
+    --black-20: rgba(0, 0, 0, 0.20);
+    --black-30: rgba(0, 0, 0, 0.30);
+    --black-40: rgba(0, 0, 0, 0.40);
+    --black-50: rgba(0, 0, 0, 0.50);
+    --black-60: rgba(0, 0, 0, 0.60);
+    --black-75: rgba(0, 0, 0, 0.75);
+    --black-85: rgba(0, 0, 0, 0.85);
+    --primary-05: rgba(124, 58, 237, 0.05);
+    --primary-06: rgba(124, 58, 237, 0.06);
+    --primary-08: rgba(124, 58, 237, 0.08);
+    --primary-10: rgba(124, 58, 237, 0.10);
+    --primary-12: rgba(124, 58, 237, 0.12);
+    --primary-15: rgba(124, 58, 237, 0.15);
+    --primary-18: rgba(124, 58, 237, 0.18);
+    --primary-20: rgba(124, 58, 237, 0.20);
+    --primary-25: rgba(124, 58, 237, 0.25);
+    --primary-30: rgba(124, 58, 237, 0.30);
+    --primary-40: rgba(124, 58, 237, 0.40);
+    --primary-50: rgba(124, 58, 237, 0.50);
+    --primary-80: rgba(124, 58, 237, 0.80);
+    --accent-10: rgba(6, 182, 212, 0.10);
+    --accent-40: rgba(6, 182, 212, 0.40);
+    --primary-light-60: rgba(167, 139, 250, 0.6);
+    --rose-10: rgba(255, 107, 157, 0.1);
+    --rose-30: rgba(255, 107, 157, 0.3);
+    --rose-80: rgba(255, 107, 157, 0.8);
+    --indigo-20: rgba(99, 102, 241, 0.2);
+    --blue-05: rgba(59, 130, 246, 0.05);
+    --error-soft: rgba(255, 107, 107, 0.15);
+
+    /* --- 语义色 (Semantic) --- */
+    --bg-header: rgba(10, 10, 15, 0.8);
+    --bg-modal: rgba(10, 10, 15, 0.85);
+    --border-active: rgba(255, 255, 255, 0.15);
+    --border-default: rgba(255, 255, 255, 0.08);
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --text-on-primary: #fff;
 }
 
 /* ===== @font-face with font-display: swap ===== */
@@ -286,7 +335,7 @@ button {
 }
 
 .glass-solid {
-    background: rgba(10, 10, 15, 0.85);
+    background: var(--bg-modal);
     backdrop-filter: blur(30px) saturate(180%);
     -webkit-backdrop-filter: blur(30px) saturate(180%);
 }
@@ -302,7 +351,7 @@ button {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     border-radius: 3px;
 }
 
@@ -341,7 +390,7 @@ button {
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
 .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 .font-bold { font-weight: 700; }
-.text-white { color: #ffffff; }
+.text-white { color: var(--text-on-primary)fff; }
 .text-center { text-align: center; }
 .rounded-lg { border-radius: 0.5rem; }
 .rounded-xl { border-radius: 0.75rem; }
@@ -430,13 +479,13 @@ button {
     cursor: pointer;
 }
 
-.suggestion-item:hover { background: rgba(124, 58, 237, 0.08); }
+.suggestion-item:hover { background: var(--primary-08); }
 
 .suggestion-item .si-icon {
     width: 24px;
     height: 24px;
     border-radius: var(--radius-sm);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
     display: flex;
     align-items: center;
     justify-content: center;

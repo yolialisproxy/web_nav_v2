@@ -7,8 +7,8 @@
 
 /* ===== 视口与基础body ===== */
 body {
-    background: radial-gradient(ellipse at 20% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    background: radial-gradient(ellipse at 20% 0%, var(--primary-15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, var(--accent-10) 0%, transparent 50%),
         linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 50%, #0f0f15 100%);
     background-attachment: fixed;
     min-height: 100vh;
@@ -34,7 +34,7 @@ body {
 
 .skeleton-header {
     height: 60px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
     border-radius: var(--radius-md);
     margin-bottom: 20px;
     max-width: 1200px;
@@ -58,7 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--white-03);
     border-radius: var(--radius-lg);
     padding: 16px;
 }
@@ -72,7 +72,7 @@ body {
 
 .skeleton-line {
     height: 14px;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
     border-radius: 6px;
     animation: skeletonPulse 1.5s ease-in-out infinite;
 }
@@ -86,7 +86,7 @@ body {
 
 .skeleton-card {
     height: 140px;
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--white-04);
     border-radius: var(--radius-lg);
     animation: skeletonPulse 1.5s ease-in-out infinite;
 }
@@ -106,7 +106,7 @@ body {
 /* ===== 顶栏 & 搜索 ===== */
 
 #header {
-    background: rgba(10, 10, 15, 0.8);
+    background: var(--bg-header);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
     border-bottom: 1px solid var(--color-border);
@@ -134,15 +134,15 @@ body {
 }
 
 #search-input:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--white-08);
     border-color: var(--color-border-active);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.12);
+    box-shadow: 0 0 20px var(--primary-12);
 }
 
 #search-input:focus {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     border-color: var(--color-primary);
-    box-shadow: 0 0 30px rgba(124, 58, 237, 0.2);
+    box-shadow: 0 0 30px var(--primary-25);
     outline: none;
 }
 
@@ -162,7 +162,7 @@ body {
 
 #search-clear:hover {
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
 }
 
 .search-overlay {
@@ -198,7 +198,7 @@ body {
 
 .search-input:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 40px rgba(124, 58, 237, 0.18);
+    box-shadow: 0 0 40px var(--primary-18);
 }
 
 .search-input::placeholder {
@@ -240,7 +240,7 @@ body {
     cursor: pointer;
     user-select: none;
     position: relative;
-    background: rgba(255, 255, 255, 0.02);
+    background: var(--white-03);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     margin: 4px 8px;
@@ -277,7 +277,7 @@ body {
 }
 
 .menu-category:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
     border-color: var(--color-border-hover);
     transform: translateX(4px);
 }
@@ -285,7 +285,7 @@ body {
 .menu-category.active {
     background: var(--color-primary-soft);
     border-color: var(--color-border-active);
-    box-shadow: 0 0 20px rgba(124, 58, 237, 0.08);
+    box-shadow: 0 0 20px var(--primary-08);
 }
 
 .menu-category.active > .category-header::before {
@@ -336,7 +336,7 @@ body {
 
 .subcategory-header:hover {
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--white-03);
 }
 
 .subcategory-arrow {
@@ -363,13 +363,13 @@ body {
 
 .menu-leaf:hover {
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--white-03);
     transform: translateX(4px);
 }
 
 .menu-leaf.active {
     color: var(--color-primary-light);
-    background: rgba(124, 58, 237, 0.06);
+    background: var(--primary-06);
 }
 
 .menu-leaf.active::before {
@@ -382,7 +382,7 @@ body {
 
 .tag-cloud-section {
     padding: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid var(--white-08);
     margin-top: auto;
 }
 
@@ -399,7 +399,7 @@ body {
 
 .tag-cloud-header:hover {
     color: var(--color-text);
-    background: rgba(124, 58, 237, 0.08);
+    background: var(--primary-08);
 }
 
 .tag-cloud-header[aria-expanded="true"] {
@@ -422,7 +422,7 @@ body {
     gap: 4px;
     padding: 3px 8px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--white-04);
     border: 1px solid transparent;
     color: var(--color-text-dim);
     text-decoration: none;
@@ -432,20 +432,20 @@ body {
 
 .tag-pill:hover {
     color: var(--color-text);
-    border-color: rgba(124, 58, 237, 0.3);
-    background: rgba(124, 58, 237, 0.12);
+    border-color: var(--primary-30);
+    background: var(--primary-12);
 }
 
 .tag-pill.active {
-    background: rgba(124, 58, 237, 0.2);
+    background: var(--primary-25);
     border-color: var(--color-primary);
-    color: #a78bfa;
+    color: var(--color-primary-light);
 }
 
 .tag-count {
     font-size: 0.7em;
     opacity: 0.7;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     padding: 1px 5px;
     border-radius: 999px;
 }
@@ -475,7 +475,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #ff6b9d, #a78bfa, #7c3aed, #ff6b9d);
+    background: linear-gradient(45deg, var(--color-rose), var(--color-primary-light), var(--color-primary), var(--color-rose));
     background-size: 400%;
     border-radius: 50%;
     z-index: -1;
@@ -492,7 +492,7 @@ body {
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--black-60);
     backdrop-filter: blur(8px);
     z-index: 2000;
     justify-content: center;
@@ -534,7 +534,7 @@ body {
 }
 
 .modal-close:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     color: var(--color-text);
 }
 
@@ -567,7 +567,7 @@ body {
     align-items: center;
     gap: 8px;
     padding: 10px 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid var(--white-04);
     transition: background var(--transition-fast);
 }
 
@@ -582,7 +582,7 @@ body {
     align-items: center;
     gap: 0.25rem;
     padding: 0.25rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
     border-radius: 0.5rem;
 }
 
@@ -598,12 +598,12 @@ body {
 }
 
 .view-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     color: var(--text-primary);
 }
 
 .view-btn.active {
-    background: rgba(99, 102, 241, 0.2);
+    background: var(--indigo-20);
     color: var(--accent-primary);
 }
 
@@ -626,7 +626,7 @@ body {
 
 .site-list-item:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px var(--black-15);
 }
 
 .site-list-content {
@@ -693,7 +693,7 @@ body {
     border-radius: 9999px;
 }
 hover {
-    background: rgba(255,255,255,0.03);
+    background: var(--white-03);
 }
 
 .favorite-item a {
@@ -736,7 +736,7 @@ hover {
 }
 
 .favorite-btn.favorited {
-    color: #ff6b9d;
+    color: var(--color-rose);
 }
 
 .favorite-badge {
@@ -760,7 +760,7 @@ hover {
     font-size: 10px;
     padding: 1px 6px;
     border-radius: var(--radius-full);
-    background: rgba(124,58,237,0.15);
+    background: var(--primary-15);
     color: var(--color-primary-light);
     margin-right: 6px;
 }
@@ -814,7 +814,7 @@ hover {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+    background: linear-gradient(90deg, transparent, var(--white-06), transparent);
     transition: left 0.6s;
     z-index: 1;
 }
@@ -836,7 +836,7 @@ hover {
 
 .site-card:hover .card-icon {
     transform: scale(1.1) rotate(2deg);
-    filter: drop-shadow(0 4px 16px rgba(124, 58, 237, 0.3));
+    filter: drop-shadow(0 4px 16px var(--primary-30));
 }
 
 .site-card:hover .card-title {
@@ -855,7 +855,7 @@ hover {
 .view-meta {
     font-size: 12px;
     color: var(--color-text-dim);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
     padding: 4px 12px;
     border-radius: var(--radius-full);
 }
@@ -869,7 +869,7 @@ hover {
     width: 36px;
     height: 36px;
     border-radius: var(--radius-sm);
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--white-04);
     border: 1px solid var(--color-border);
     color: var(--color-text-dim);
     font-size: 16px;
@@ -936,7 +936,7 @@ hover {
 .loading-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
+    border: 3px solid var(--white-10);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -946,7 +946,7 @@ hover {
 .loading-spinner-small {
     width: 16px;
     height: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--white-10);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -1023,7 +1023,7 @@ hover {
 }
 
 .toast-msg.toast-error {
-    border-left: 3px solid #ff6b6b;
+    border-left: 3px solid var(--color-error);
 }
 
 .toast-msg.toast-info {
@@ -1033,8 +1033,8 @@ hover {
 /* ===== 加载 & 动画 ===== */
 
 .mark {
-    background: rgba(124, 58, 237, 0.25);
-    color: #a78bfa;
+    background: var(--primary-25);
+    color: var(--color-primary-light);
     padding: 0 2px;
     border-radius: 2px;
 }
@@ -1042,7 +1042,7 @@ hover {
 .loading-spinner {
     width: 40px;
     height: 40px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
+    border: 3px solid var(--white-10);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -1075,7 +1075,7 @@ hover {
 .loading-spinner-small {
     width: 16px;
     height: 16px;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--white-10);
     border-top-color: var(--color-primary);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -1093,7 +1093,7 @@ hover {
     z-index: 800;
     transform: translateY(100%);
     transition: transform var(--transition-medium);
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 -4px 20px var(--black-20);
 }
 
 .batch-toolbar.visible {
@@ -1129,7 +1129,7 @@ hover {
 }
 
 .overlay-search-item:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--white-08);
 }
 
 .overlay-search-item .osi-icon {
@@ -1323,7 +1323,7 @@ html { scroll-behavior: smooth; }
 
 .game-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px var(--black-12);
 }
 
 .game-icon {
@@ -1426,7 +1426,7 @@ html { scroll-behavior: smooth; }
     z-index: 9999;
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -4px 24px var(--black-30);
 }
 
 .install-banner.show {

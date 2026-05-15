@@ -8,8 +8,8 @@
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(167, 139, 250, 0.6));
-    color: #fff;
+    background: linear-gradient(135deg, var(--primary-80), var(--primary-light-60));
+    color: var(--text-on-primary);
     border: none;
     border-radius: 10px;
     padding: 12px 24px;
@@ -17,17 +17,17 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+    box-shadow: 0 4px 15px var(--primary-30);
     margin: 10px 0;
 }
 
 #favorite-detail-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5);
+    box-shadow: 0 8px 25px var(--primary-50);
 }
 
 #favorite-detail-btn.favorited {
-    background: linear-gradient(135deg, rgba(255, 107, 157, 0.8), rgba(255, 136, 170, 0.6));
+    background: linear-gradient(135deg, var(--rose-80), rgba(255, 136, 170, 0.6));
 }
 
 /* 收藏弹窗叠加动画 */
@@ -48,7 +48,7 @@
     flex-wrap: wrap;
     margin-bottom: 12px;
     padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--white-03);
     border-radius: var(--radius-sm);
     font-size: 12px;
     color: var(--color-text-dim);
@@ -78,8 +78,8 @@
 .favorite-search-bar input {
     width: 100%;
     padding: 8px 32px 8px 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--white-05);
+    border: 1px solid var(--white-10);
     border-radius: var(--radius-md);
     color: var(--color-text);
     font-size: 13px;
@@ -114,7 +114,7 @@
 
 .fav-search-clear-btn:hover {
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--white-08);
 }
 
 /* 分组标签栏 */
@@ -123,9 +123,9 @@
     gap: 4px;
     margin-bottom: 12px;
     padding: 3px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--white-03);
     border-radius: var(--radius-md);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--white-06);
 }
 
 .fav-group-tab {
@@ -144,7 +144,7 @@
 
 .fav-group-tab:hover {
     color: var(--color-text);
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
 }
 
 .fav-group-tab.active {
@@ -163,7 +163,7 @@
     font-weight: 600;
     color: var(--color-primary-light);
     padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--white-06);
     margin-bottom: 6px;
     display: flex;
     align-items: center;
@@ -197,7 +197,7 @@
 }
 
 .favorite-item:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--white-05);
 }
 
 .favorite-item a {
@@ -214,7 +214,7 @@
     font-size: 10px;
     padding: 1px 6px;
     border-radius: var(--radius-full);
-    background: rgba(124, 58, 237, 0.15);
+    background: var(--primary-15);
     color: var(--color-primary-light);
     margin-bottom: 3px;
     align-self: flex-start;
@@ -261,15 +261,15 @@
 }
 
 .fav-remove-btn:hover {
-    color: #ff6b9d;
-    background: rgba(255, 107, 157, 0.1);
+    color: var(--color-rose);
+    background: var(--rose-10);
 }
 
 /* 弹窗内搜索信息提示 */
 .favorite-search-info {
     padding: 8px 12px;
     margin-bottom: 8px;
-    background: rgba(124, 58, 237, 0.08);
+    background: var(--primary-08);
     border-radius: var(--radius-sm);
     font-size: 12px;
     color: var(--color-text-dim);
@@ -301,7 +301,7 @@
     display: none;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
+    background: var(--black-60);
     backdrop-filter: blur(8px);
     z-index: 2000;
     justify-content: center;
@@ -349,7 +349,7 @@
 }
 
 .modal-close:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     color: var(--color-text);
 }
 
@@ -387,7 +387,7 @@
 }
 
 .favorite-btn.favorited {
-    color: #ff6b9d;
+    color: var(--color-rose);
 }
 
 .favorite-badge {
@@ -426,13 +426,13 @@
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--white-10);
     color: var(--color-text);
     border: 1px solid var(--color-border);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background: var(--white-15);
 }
 
 /* 弹窗底部 */
@@ -446,7 +446,7 @@
 
 /* 水波起伏
 @keyframes wavePulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(124, 58, 237, 0.4); }
+    0%, 100% { box-shadow: 0 0 0 0 var(--primary-40); }
     50% { box-shadow: 0 0 0 10px rgba(124, 58, 237, 0); }
 }
 
@@ -459,7 +459,7 @@
     content: '';
     position: absolute;
     top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(45deg, #ff6b9d, #a78bfa, #7c3aed, #ff6b9d);
+    background: linear-gradient(45deg, var(--color-rose), var(--color-primary-light), var(--color-primary), var(--color-rose));
     background-size: 400%;
     border-radius: 50%;
     z-index: -1;
@@ -472,8 +472,8 @@
 .favorite-badge {
     position: absolute;
     top: -4px; right: -4px;
-    background: #ff6b9d;
-    color: #fff;
+    background: var(--color-rose);
+    color: var(--text-on-primary);
     font-size: 10px;
     font-weight: 700;
     min-width: 16px;
@@ -483,7 +483,7 @@
     align-items: center;
     justify-content: center;
     padding: 0 4px;
-    box-shadow: 0 2px 6px rgba(255,107,157,0.4);
+    box-shadow: 0 2px 6px var(--rose-40);
 }
 
 @keyframes gradientRotate {
