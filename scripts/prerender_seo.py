@@ -100,6 +100,7 @@ MAIN_CATEGORIES = [
     ('设计工具', 'design'),
     ('效率办公', 'productivity'),
     ('学术科研', 'academic'),
+    ('游戏', 'game'),
     ('多媒体', 'media'),
 ]
 
@@ -156,6 +157,7 @@ def get_icon(cat_name):
         '设计工具': '🎨',
         '效率办公': '⚡',
         '学术科研': '📚',
+        '游戏': '🎮',
         '多媒体': '🎬',
     }
     return icons.get(cat_name, '📁')
