@@ -187,8 +187,29 @@ class TestGames(unittest.TestCase):
             pattern = r"'?" + re.escape(key) + r"'?\s*:\s*\{[^}]+rating:\s*[1-5]"
             self.assertRegex(
                 content, pattern,
-                msg=f"game-hub.js 中 {key} 缺少 rating 字段或格式错误"
             )
+
+
+class TestGamesAPI(unittest.TestCase):
+    """游戏 API 数据文件检查"""
+
+    def test_games_api_file_exists(self):
+        """`api/games.json` 必须存在且为有效 JSON"""
+        import pathlib
+        api_path = pathlib.Path(__file__).parent.parent / "api" / "games.json"
+        self.assertTrue(api_path.exists(), "api/games.json 不存在")
+        try:
+            data = json.loads(api_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            self.fail(f"api/games.json 不是有效 JSON: {e}")
+        self.assertIsInstance(data, list, "api/games.json 应为数组")
+        self.assertGreaterEqual(len(data), 1, "api/games.json 应至少包含一个游戏")
+        for entry in data:
+            self.assertIn("key", entry, "每个游戏条目应包含 'key' 字段")
+            self.assertIn("name", entry, "每个游戏条目应包含 'name' 字段")
+            self.assertIn("rating", entry, "每个游戏条目应包含 'rating' 字段")
+
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
