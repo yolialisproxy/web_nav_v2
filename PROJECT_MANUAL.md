@@ -310,6 +310,11 @@ web_nav_v2/
 │           ├── 2048.js           # 🔢 2048
 │           └── gomoku.js         # ⚫ 五子棋
 ├── .scratch/                     # 临时工作区（不提交）
+├── pages/                        # 独立页面
+│   ├── site-detail.html          # 站点详情页（SPA，通过 ?name= 参数定位）
+│   ├── category.html             # 分类页占位
+│   └── search-results.html       # 搜索结果页占位
+├── prerendered/                  # SEO预渲染快照（155个分类页面，差异化 title/description）
 └── docs/
     ├── adr/                      # 设计决策记录
     ├── agents/                   # 代理系统配置
