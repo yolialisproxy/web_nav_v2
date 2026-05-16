@@ -189,6 +189,28 @@
     font-weight: 600;
 }
 
+/* 游戏卡片收藏按钮（复用 favorite 系统） */
+.game-card .favorite-btn {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 16px;
+    color: var(--color-text-dim);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    transition: transform var(--transition-fast), color var(--transition-fast);
+}
+.game-card .favorite-btn:hover {
+    transform: scale(1.2);
+    color: var(--color-rose);
+}
+.game-card .favorite-btn.favorited {
+    color: var(--color-rose);
+}
+
 .game-card-stars {
     color: #ffc107; /* amber-400 */
     font-size: 14px;

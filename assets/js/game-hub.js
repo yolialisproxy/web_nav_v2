@@ -56,6 +56,7 @@ var GameHub = {
     },
 
     renderGrid: function(category) {
+        this.currentCat = category; // 保存当前分类，便于后续重渲染
         var grid = document.getElementById('game-grid');
         if (!grid) return;
         grid.innerHTML = '';
@@ -77,10 +78,16 @@ var GameHub = {
                 '★'.repeat(game.rating || 0) +
                 '</div>';
 
+            // 收藏按钮（复用 favorite 系统）
+            var isFav = window.favoriteManager && window.favoriteManager.isFavorite(game.name);
+            var favHeart = isFav ? '♥' : '♡';
+            var favClass = isFav ? 'favorite-btn favorited' : 'favorite-btn';
+            var favBtn = '<button class="' + favClass + '" data-game-key="' + key + '" onclick="event.stopPropagation();GameHub.toggleGameFav(\'' + key + '\');" aria-label="收藏游戏">' + favHeart + '</button>';
+
             card.innerHTML = '<span class="game-card-icon">' + game.icon + '</span>' +
                 '<div class="game-card-name">' + game.name + '</div>' +
                 '<div class="game-card-desc">' + game.desc + '</div>' +
-                stars + badge;
+                stars + badge + favBtn;
             card.addEventListener('click', function() { self.startGame(key); });
             grid.appendChild(card);
         });
@@ -214,6 +221,32 @@ var GameHub = {
             document.body.appendChild(el);
             setTimeout(function() { el.style.opacity = '0'; }, (duration || 3000) - 400);
             setTimeout(function() { if (el.parentNode) el.parentNode.removeChild(el); }, duration || 3000);
+        }
+    },
+
+    // 切换游戏收藏状态（复用 favorite 系统）
+    toggleGameFav: function(key) {
+        if (!this.games[key]) return;
+        var game = this.games[key];
+        var favManager = window.favoriteManager;
+        if (!favManager) return;
+
+        var isFav = favManager.isFavorite(game.name);
+        var result;
+        if (isFav) {
+            result = favManager.remove(game.name);
+        } else {
+            result = favManager.add({
+                name: game.name,
+                url: '#game/' + key,
+                category: '游戏',
+                icon: game.icon,
+                description: game.desc
+            });
+        }
+        if (result && result.success) {
+            // 重新渲染当前分类网格（更新所有按钮状态）
+            if (this.currentCat) this.renderGrid(this.currentCat);
         }
     },
 
