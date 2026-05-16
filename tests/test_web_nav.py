@@ -51,6 +51,19 @@ class TestDataIntegrity(unittest.TestCase):
         self.assertGreater(len(categories), 10, "Should have more than 10 categories")
         self.assertLess(len(categories), 300, "Should have less than 300 categories")
 
+    def test_tag_index_exists_and_valid(self):
+        tag_path = PROJECT_ROOT / "data" / "tag_index.json"
+        self.assertTrue(tag_path.exists(), "tag_index.json should exist")
+        with open(tag_path, 'r', encoding='utf-8') as f:
+            tag_data = json.load(f)
+        self.assertIsInstance(tag_data, list, "tag_index should be a list")
+        self.assertGreater(len(tag_data), 0, "tag_index should not be empty")
+        for entry in tag_data[:10]:
+            self.assertIn('tag', entry, "each entry must have 'tag'")
+            self.assertIn('count', entry, "each entry must have 'count'")
+            self.assertGreaterEqual(entry['count'], 0, "count must be >= 0")
+
+
 class TestPerformance(unittest.TestCase):
     def test_json_load_time(self):
         import time
