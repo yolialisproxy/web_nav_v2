@@ -18,7 +18,7 @@ INDEX_FILE = "../index.html"  # 相对路径从prerendered到根
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-with open("websites.json", 'r', encoding='utf-8') as f:
+with open("data/websites.json", 'r', encoding='utf-8') as f:
     sites = json.load(f)
 
 # 构建分类树
