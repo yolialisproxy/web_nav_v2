@@ -155,12 +155,17 @@ class SearchEngine {
     }
 
     _computeBaseScore(name, desc, url, tags) {
-        let score = 0;
+        var score = 0;
         score += name.length > 0 ? 10 : 0;
         score += desc.length > 10 ? 5 : 0;
         score += desc.length > 50 ? 5 : 0;
         score += url.includes('https') ? 3 : 0;
         score += tags.length > 0 ? 5 : 0;
+        /* w3-hotness: 标签数量即热度代理 (tags 越多，内容越丰富) */
+        if (tags.length >= 10) { score += 8; }
+        else if (tags.length >= 5) { score += 5; }
+        else if (tags.length >= 3) { score += 3; }
+        else if (tags.length >= 1) { score += 1; }
         return score;
     }
 
