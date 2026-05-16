@@ -96,7 +96,7 @@ class TestFrontendIntegration(unittest.TestCase):
         index_path = PROJECT_ROOT / "index.html"
         with open(index_path, 'r', encoding='utf-8') as f:
             content = f.read()
-        css_files = ['core.css', 'theme-modern.css']
+        css_files = ['core.css', 'app.css']
         for css_file in css_files:
             self.assertIn(css_file, content, f"HTML should link to {css_file}")
 
