@@ -189,6 +189,15 @@
     font-weight: 600;
 }
 
+.game-card-stars {
+    color: #ffc107; /* amber-400 */
+    font-size: 14px;
+    margin-top: 6px;
+    letter-spacing: 2px;
+    display: flex;
+    justify-content: center;
+}
+
 .game-card.has-save::after {
     content: '💾';
     position: absolute;

@@ -3,15 +3,15 @@
  */
 var GameHub = {
     games: {
-        solitaire: { name: '🃏 纸牌接龙', icon: '🃏', desc: '经典Klondike单人纸牌', cat: 'classic', constructor: null },
-        tetris:    { name: '🟩 俄罗斯方块', icon: '🟩', desc: '永不过时的方块消除', cat: 'classic', constructor: null },
-        go:        { name: '⚫ 围棋',      icon: '⚫', desc: '黑白纵横，千年智慧',   cat: 'strategy', constructor: null },
-        chess:     { name: '♟️ 象棋',      icon: '♟️', desc: '中国象棋在线对战AI',   cat: 'strategy', constructor: null },
-        mahjong:   { name: '🀄 麻将',      icon: '🀄', desc: '四川麻将简约版',       cat: 'classic', constructor: null },
-        wuxia:     { name: '⚔️ 武侠世界',   icon: '⚔️', desc: '武侠剧情杀怪升级',     cat: 'rpg', constructor: null },
-        dating:    { name: '💕 恋爱大富翁', icon: '💕', desc: '恋爱养成+大富翁',     cat: 'rpg', constructor: null },
-        game2048:  { name: '🔢 2048',       icon: '🔢', desc: '数字滑动合体挑战',     cat: 'puzzle', constructor: null },
-        gomoku:    { name: '⚫ 五子棋',     icon: '⚫', desc: '15路棋盘双人对弈',     cat: 'strategy', constructor: null }
+        solitaire: { name: '🃏 纸牌接龙', icon: '🃏', desc: '经典Klondike单人纸牌', cat: 'classic', rating: 5, constructor: null },
+        tetris:    { name: '🟩 俄罗斯方块', icon: '🟩', desc: '永不过时的方块消除',   cat: 'classic', rating: 5, constructor: null },
+        go:        { name: '⚫ 围棋',      icon: '⚫', desc: '黑白纵横，千年智慧',   cat: 'strategy', rating: 4, constructor: null },
+        chess:     { name: '♟️ 象棋',      icon: '♟️', desc: '中国象棋在线对战AI',   cat: 'strategy', rating: 5, constructor: null },
+        mahjong:   { name: '🀄 麻将',      icon: '🀄', desc: '四川麻将简约版',       cat: 'classic', rating: 4, constructor: null },
+        wuxia:     { name: '⚔️ 武侠世界',   icon: '⚔️', desc: '武侠剧情杀怪升级',     cat: 'rpg', rating: 4, constructor: null },
+        dating:    { name: '💕 恋爱大富翁', icon: '💕', desc: '恋爱养成+大富翁',     cat: 'rpg', rating: 3, constructor: null },
+        game2048:  { name: '🔢 2048',       icon: '🔢', desc: '数字滑动合体挑战',     cat: 'puzzle', rating: 5, constructor: null },
+        gomoku:    { name: '⚫ 五子棋',     icon: '⚫', desc: '15路棋盘双人对弈',     cat: 'strategy', rating: 4, constructor: null }
     },
     currentGame: null,
     currentEngine: null,
@@ -72,9 +72,15 @@ var GameHub = {
             // 新游戏标签
             var badge = saveData ? '<span class="game-card-badge">💾 继续</span>' : '';
 
+            // 评分星星
+            var stars = '<div class="game-card-stars" aria-label="评分 ' + (game.rating || 0) + ' 星">' +
+                '★'.repeat(game.rating || 0) +
+                '</div>';
+
             card.innerHTML = '<span class="game-card-icon">' + game.icon + '</span>' +
                 '<div class="game-card-name">' + game.name + '</div>' +
-                '<div class="game-card-desc">' + game.desc + '</div>' + badge;
+                '<div class="game-card-desc">' + game.desc + '</div>' +
+                stars + badge;
             card.addEventListener('click', function() { self.startGame(key); });
             grid.appendChild(card);
         });
