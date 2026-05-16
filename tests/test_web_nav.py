@@ -210,6 +210,47 @@ class TestGamesAPI(unittest.TestCase):
             self.assertIn("rating", entry, "每个游戏条目应包含 'rating' 字段")
 
 
+class TestRecentGames(unittest.TestCase):
+    """GameHub 最近游戏存储逻辑检查（静态检查）"""
+
+    def test_recent_key_defined(self):
+        """_RECENT_KEY 常量应使用 'gn_recent' 前缀"""
+        import pathlib
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        self.assertRegex(
+            content,
+            r'_RECENT_KEY\s*:\s*[\'"]gn_recent',
+            msg="GameHub 缺少 _RECENT_KEY localStorage key 定义",
+        )
+
+    def test_push_recent_method_exists(self):
+        """GameHub 应有 pushRecent 方法"""
+        import pathlib
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        self.assertRegex(content, r'pushRecent\s*:\s*function', msg="GameHub 缺少 pushRecent 方法")
+
+    def test_is_recent_method_exists(self):
+        """GameHub 应有 _isRecent 方法用于渲染过滤"""
+        import pathlib
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        self.assertRegex(content, r'_isRecent\s*:', msg="GameHub 缺少 _isRecent 方法")
+
+    def test_render_grid_handles_recent_category(self):
+        """renderGrid 应处理 'recent' 分类并调用 _isRecent 过滤"""
+        import pathlib
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        self.assertRegex(
+            content,
+            r"category\s*===\s*'recent'",
+            msg="renderGrid 未处理 'recent' 分类",
+        )
+
+
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

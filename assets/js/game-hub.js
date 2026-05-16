@@ -64,7 +64,13 @@ var GameHub = {
         Object.keys(this.games).forEach(function(key) {
             var game = self.games[key];
             if (game.hidden) return; // 支持隐藏标记
-            if (category !== 'all' && game.cat !== category) return;
+            if (category !== 'all') {
+                if (category === 'recent') {
+                    if (!self._isRecent(key)) return;
+                } else {
+                    if (game.cat !== category) return;
+                }
+            }
             var card = document.createElement('div');
             card.className = 'game-card';
             var saveData = GameUtils.load('gn_save_' + key);
@@ -188,6 +194,9 @@ var GameHub = {
             GameHub.showToast('🎮 游戏结束！得分: ' + score + ' | 用时: ' + GameUtils.formatTime(elapsed));
         };
 
+        // 记录最近游戏
+        this.pushRecent(gameKey);
+
         // 显示游戏界面
         var playOverlay = document.getElementById('game-play-overlay');
         document.getElementById('game-play-title').textContent = this.currentEngine.title;
@@ -254,6 +263,31 @@ var GameHub = {
         var s = Math.floor(ms / 1000), m = Math.floor(s / 60);
         s = s % 60;
         return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
+    },
+
+    // === 最近游戏 ===
+    _RECENT_MAX: 5,
+    _RECENT_KEY: 'gn_recent_games_v1',
+
+    // 格式化时间并写入最近游戏
+    pushRecent: function(key) {
+        var list = GameHub._loadRecent();
+        // 去重并移到开头
+        list = list.filter(function(k) { return k !== key; });
+        list.unshift(key);
+        if (list.length > GameHub._RECENT_MAX) list.length = GameHub._RECENT_MAX;
+        try { localStorage.setItem(GameHub._RECENT_KEY, JSON.stringify(list)); } catch(e) {}
+    },
+
+    _loadRecent: function() {
+        try {
+            var raw = localStorage.getItem(GameHub._RECENT_KEY);
+            return raw ? JSON.parse(raw) : [];
+        } catch(e) { return []; }
+    },
+
+    _isRecent: function(key) {
+        return GameHub._loadRecent().indexOf(key) !== -1;
     }
 };
 
