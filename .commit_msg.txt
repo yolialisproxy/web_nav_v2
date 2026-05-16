@@ -1,8 +1,0 @@
-feat(local-cache): data.js 统一走 state LocalForage + tag-index.json + cache doc
-
-- data.js _saveCache/_loadCache: 主路径写 LocalForage (state._cacheBackend)
-- catch block 优先从 state.get(sites) 恢复，单数据源原则
-- _loadCache() 旧副本彻底清理（孤儿代码块移除）
-- 生成 data/tag_index.json (1029标签, 52KB) 供 state.loadTags() 按需加载
-- state/render/app/data/tags/toast 全部 JS 语法 100% 通过
-- PROJECT_MANUAL 3.3 缓存策略段补充数据源唯一化说明
