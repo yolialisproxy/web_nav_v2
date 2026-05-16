@@ -142,5 +142,40 @@ class TestPages(unittest.TestCase):
         page_path = PROJECT_ROOT / "pages" / "search-results.html"
         self.assertTrue(page_path.exists(), "search-results.html should exist")
 
+class TestGames(unittest.TestCase):
+    """游戏注册与DOM静态快照检查（纯AST断言，不依赖浏览器）"""
+    def test_nine_games_registered(self):
+        """GameHub.games 必须包含全部 9 款注册游戏，名称和图标不可为空"""
+        import pathlib, re
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+
+        expected = {
+            "solitaire": "🃏 纸牌接龙",
+            "tetris": "🟩 俄罗斯方块",
+            "go": "⚫ 围棋",
+            "chess": "♟️ 象棋",
+            "mahjong": "🀄 麻将",
+            "wuxia": "⚔️ 武侠世界",
+            "dating": "💕 恋爱大富翁",
+            "game2048": "🔢 2048",
+            "gomoku": "⚫ 五子棋",
+        }
+
+        for key, name in expected.items():
+            escaped = re.escape(name)
+            pattern = r"'?" + re.escape(key) + r"'?\s*:\s*\{[^}]+name:\s*'" + escaped + r"',[^}]+icon:\s*'"
+            self.assertRegex(
+                content, pattern,
+                msg=f"game-hub.js 缺少或格式错误: {key} (name='{name}')"
+            )
+
+        # 确认 games 字典遍历 (renderGrid 内 Object.keys(this.games).forEach)
+        self.assertRegex(
+            content,
+            r"Object\.keys\(this\.games\)\.forEach",
+            msg="game-hub.js 缺少 games 字典遍历逻辑"
+        )
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
