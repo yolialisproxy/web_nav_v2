@@ -177,5 +177,18 @@ class TestGames(unittest.TestCase):
             msg="game-hub.js 缺少 games 字典遍历逻辑"
         )
 
+    def test_games_have_rating(self):
+        """每个游戏都应有 rating 字段（1–5 星）"""
+        import pathlib, re
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        expected_keys = ["solitaire","tetris","go","chess","mahjong","wuxia","dating","game2048","gomoku"]
+        for key in expected_keys:
+            pattern = r"'?" + re.escape(key) + r"'?\s*:\s*\{[^}]+rating:\s*[1-5]"
+            self.assertRegex(
+                content, pattern,
+                msg=f"game-hub.js 中 {key} 缺少 rating 字段或格式错误"
+            )
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
