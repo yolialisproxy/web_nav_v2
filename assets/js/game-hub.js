@@ -150,6 +150,11 @@ var GameHub = {
         this.currentGame = gameKey;
         this._gameStartTime = Date.now(); // 记录游戏启动时间
 
+        // 统计：游戏启动事件
+        if (typeof window.trackSiteClick === 'function') {
+            window.trackSiteClick('game: ' + this.games[gameKey].name);
+        }
+
         // 重置游戏状态 UI
         var scoreEl = document.getElementById('game-play-score');
         var levelEl = document.getElementById('game-play-level');
