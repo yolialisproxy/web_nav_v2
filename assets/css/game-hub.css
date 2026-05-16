@@ -136,6 +136,14 @@
     gap: 16px;
 }
 
+/* ===== 移动端竖屏：2 列网格（ Phase 28 优化） ===== */
+@media (max-width: 768px) and (orientation: portrait) {
+    .game-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
 .game-card {
     background: var(--color-bg-card);
     border: 1px solid var(--color-border);

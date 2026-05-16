@@ -250,6 +250,40 @@ class TestRecentGames(unittest.TestCase):
         )
 
 
+class TestGameStats(unittest.TestCase):
+    """游戏时长统计（localStorage 持久化）静态检查"""
+
+    def test_game_start_time_stamped(self):
+        """startGame 应设置 _gameStartTime 时间戳"""
+        import pathlib
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        self.assertRegex(
+            content,
+            r"_gameStartTime\s*=\s*Date\.now\(\)",
+            msg="startGame 未设置 _gameStartTime",
+        )
+
+    def test_close_game_persists_stats(self):
+        """closeGame 应将时长写入 localStorage，字段含 totalSeconds / sessions / lastPlayed"""
+        import pathlib
+        path = pathlib.Path(__file__).parent.parent / "assets" / "js" / "game-hub.js"
+        content = path.read_text(encoding="utf-8")
+        self.assertRegex(
+            content,
+            r"gn_stats_",
+            msg="closeGame 缺少 gn_stats_ key",
+        )
+        self.assertRegex(
+            content,
+            r"totalSeconds",
+            msg="关闭游戏缺少 totalSeconds 累计字段",
+        )
+        self.assertRegex(
+            content,
+            r"lastPlayed",
+            msg="关闭游戏缺 lastPlayed 时间戳",
+        )
 
 
 if __name__ == '__main__':

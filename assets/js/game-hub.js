@@ -148,6 +148,8 @@ var GameHub = {
         var self = this;
         this.closeHub();
         this.currentGame = gameKey;
+        this._gameStartTime = Date.now(); // 记录游戏启动时间
+
         // 重置游戏状态 UI
         var scoreEl = document.getElementById('game-play-score');
         var levelEl = document.getElementById('game-play-level');
@@ -212,6 +214,21 @@ var GameHub = {
             if (this.currentEngine.destroy) this.currentEngine.destroy();
             this.currentEngine = null;
         }
+        // 记录游戏时长统计（本次 session）
+        if (this.currentGame && this._gameStartTime) {
+            var elapsed = Date.now() - this._gameStartTime;
+            var statsKey = 'gn_stats_' + this.currentGame;
+            try {
+                var raw = localStorage.getItem(statsKey);
+                var entry = raw ? JSON.parse(raw) : { totalSeconds: 0, sessions: 0 };
+                entry.lastDuration = elapsed;
+                entry.totalSeconds += Math.floor(elapsed / 1000);
+                entry.sessions += 1;
+                entry.lastPlayed = new Date().toISOString();
+                localStorage.setItem(statsKey, JSON.stringify(entry));
+            } catch(e) {}
+        }
+        if (this.currentGame) this._gameStartTime = null;
         this.currentGame = null;
         document.getElementById('game-play-overlay').classList.remove('active');
     },
