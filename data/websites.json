@@ -44838,5 +44838,140 @@
       "效率办公"
     ],
     "id": 3106
+  },
+  {
+    "id": 3107,
+    "title": "纸牌接龙",
+    "url": "https://www.bing.com/games/search?q=spider+solitaire",
+    "description": "经典的纸牌接龙游戏，在Bing Games平台在线畅玩。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "棋牌",
+      "纸牌",
+      "接龙",
+      "经典"
+    ],
+    "name": "纸牌接龙"
+  },
+  {
+    "id": 3108,
+    "title": "QQ麻将",
+    "url": "https://game.qq.com/",
+    "description": "QQ游戏大厅提供的麻将系列，支持四川麻将、武汉麻将、广东麻将等多种玩法。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "棋牌",
+      "麻将",
+      "多人",
+      "经典"
+    ],
+    "name": "QQ麻将"
+  },
+  {
+    "id": 3109,
+    "title": "俄罗斯方块",
+    "url": "https://tetris.com/play-tetris",
+    "description": "官方经典版俄罗斯方块，直接在浏览器中游玩。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "益智",
+      "方块",
+      "经典",
+      "单人"
+    ],
+    "name": "俄罗斯方块"
+  },
+  {
+    "id": 3110,
+    "title": "在线围棋",
+    "url": "https://online-go.com/",
+    "description": "Online-Go.com 提供全球围棋爱好者对弈平台，支持实时匹配和棋谱分析。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "策略",
+      "围棋",
+      "双人",
+      "在线对弈"
+    ],
+    "name": "在线围棋"
+  },
+  {
+    "id": 3111,
+    "title": "中国象棋",
+    "url": "https://www.chess.com/play/chinese-chess",
+    "description": "Chess.com 优秀的中国象棋对弈与学习平台，支持AI对战、好友对局。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "策略",
+      "象棋",
+      "双人",
+      "在线对弈"
+    ],
+    "name": "中国象棋"
+  },
+  {
+    "id": 3112,
+    "title": "神途武侠",
+    "url": "http://www.70yx.com/",
+    "description": "经典H5武侠网页游戏，体验 sword and sorcery 江湖冒险。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "RPG",
+      "武侠",
+      "H5",
+      "角色扮演"
+    ],
+    "name": "神途武侠"
+  },
+  {
+    "id": 3113,
+    "title": "恋爱限定祭",
+    "url": "https://www.4399.com/flash/220888.htm",
+    "description": "4399平台的一款恋爱养成类H5小游戏，轻松休闲的模拟互动体验。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "养成",
+      "恋爱",
+      "H5",
+      "休闲"
+    ],
+    "name": "恋爱限定祭"
+  },
+  {
+    "id": 3114,
+    "title": "大富翁",
+    "url": "https://h.4399.com/zzy/207818.htm",
+    "description": "经典模拟经营大富翁游戏，占地、买卖、收费，策略与运气并存。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "益智",
+      "大富翁",
+      "模拟经营",
+      "多人"
+    ],
+    "name": "大富翁"
+  },
+  {
+    "id": 3115,
+    "title": "欢乐斗地主",
+    "url": "https://www.bing.com/games/search?q=doudizhu",
+    "description": "Bing Games聚合的斗地主在线游戏入口。",
+    "category": "游戏",
+    "_cat": "游戏",
+    "tags": [
+      "棋牌",
+      "斗地主",
+      "经典",
+      "多人"
+    ],
+    "name": "欢乐斗地主"
   }
 ]
