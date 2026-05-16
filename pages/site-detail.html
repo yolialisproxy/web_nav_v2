@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>啃魂导航 - 站点详情</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon.png">
+    <link rel="canonical" href="">
+    <meta name="description" content="">
     <link rel="stylesheet" href="../assets/css/core.css">
     <link rel="stylesheet" href="../assets/css/app.css">
     <style>
         html, body { margin: 0; padding: 0; }
         .detail-wrap { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
-        .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 1.5rem; color: var(--color-accent); text-decoration: none; cursor: pointer; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 1.5rem; color: var(--color-accent); text-decoration: none; cursor: pointer; font-size: .9rem; }
         .back-link:hover { opacity: .8; }
         .site-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; }
+        .breadcrumb { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 1rem; font-size: .85rem; color: var(--color-muted); }
+        .breadcrumb a { color: var(--color-accent); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .breadcrumb .sep { opacity: .5; }
         .site-icon-wrap { width: 64px; height: 64px; border-radius: 16px; overflow: hidden; flex-shrink: 0; background: var(--color-bg); display: flex; align-items: center; justify-content: center; }
         .site-icon-wrap img { width: 100%; height: 100%; object-fit: contain; }
         .site-title { font-size: 1.5rem; font-weight: 700; margin: .5rem 0 .25rem; }
@@ -20,10 +26,17 @@
         .site-desc { margin: 1rem 0; line-height: 1.7; color: var(--color-text); }
         .site-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: .75rem; }
         .tag { padding: 4px 10px; border-radius: 999px; font-size: .75rem; background: rgba(124,58,237,.15); color: var(--color-accent); border: 1px solid rgba(124,58,237,.3); }
-        .fav-btn { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-card); color: var(--color-text); cursor: pointer; }
+        .fav-btn { padding: 8px 16px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-card); color: var(--color-text); cursor: pointer; font-size: .9rem; }
         .fav-btn.is-fav { color: var(--color-accent); border-color: var(--color-accent); background: rgba(124,58,237,.12); }
         .error-state { text-align: center; padding: 4rem 2rem; }
         .back-btn { position: fixed; top: 1rem; left: 1rem; z-index: 100; padding: 8px 14px; border-radius: 8px; background: var(--color-card); border: 1px solid var(--color-border); color: var(--color-text); cursor: pointer; }
+        .related-section { margin-top: 2rem; }
+        .related-title { font-size: 1.1rem; font-weight: 600; margin-bottom: .75rem; }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+        .related-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 10px; padding: .75rem 1rem; display: block; text-decoration: none; color: var(--color-text); transition: border-color .15s; }
+        .related-card:hover { border-color: var(--color-accent); }
+        .related-card .rc-name { font-weight: 600; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .related-card .rc-cat { font-size: .78rem; color: var(--color-muted); margin-top: 4px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
     </style>
 </head>
 <body>
@@ -37,32 +50,88 @@
 <script src="../assets/js/data.js"></script>
 <script>
 (function(){
-    const $ = function(id){ return document.getElementById(id); };
-    const root = $('detail-root');
+    var $ = function(id){ return document.getElementById(id); };
+    var root = $('detail-root');
 
     async function init() {
         var params = new URLSearchParams(location.search);
         var name = params.get('name');
-        if (!name) { showError('缺少站点名称参数'); return; }
+        if (!name) return showError('缺少站点名称参数');
 
-        try {
-            await dataManager.load();
-        } catch(e) {
-            showError('数据加载失败: ' + e.message);
-            return;
-        }
+        try { await dataManager.load(); } catch(e) { return showError('数据加载失败: ' + e.message); }
 
         var site = null;
         var all = dataManager.getAllSites();
         for (var i = 0; i < all.length; i++) {
-            if (decodeURIComponent(all[i].name) === decodeURIComponent(name)) {
-                site = all[i]; break;
-            }
+            if (decodeURIComponent(all[i].name) === decodeURIComponent(name)) { site = all[i]; break; }
         }
-        if (!site) { showError('未找到站点: ' + name); return; }
+        if (!site) return showError('未找到站点: ' + esc(name));
 
         render(site);
         updateMeta(site);
+    }
+
+    function esc(s) {
+        var d = document.createElement('div');
+        d.textContent = s || '';
+        return d.innerHTML;
+    }
+
+    function parseCategory(cat) {
+        var parts = cat.split('/').map(function(p){ return p.trim(); }).filter(Boolean);
+        if (parts.length === 0) return [];
+        if (parts.length === 1) return [parts[0], parts[0], parts[0]];
+        if (parts.length === 2) return [parts[0], parts[1], parts[1]];
+        return [parts[0], parts[1], parts[2]];
+    }
+
+    function renderBreadcrumb(cat) {
+        var parts = parseCategory(cat);
+        var html = '';
+        for (var i = 0; i < parts.length; i++) {
+            if (i > 0) html += '<span class="sep">›</span>';
+            var path = parts.slice(0, i + 1).join('/');
+            html += '<a href="../index.html#cat=' + esc(path) + '" title="浏览 ' + esc(parts[i]) + '">' + esc(parts[i]) + '</a>';
+        }
+        return html;
+    }
+
+    function findRelated(site, all, limit) {
+        var scored = [];
+        var myTags = new Set((site.tags || []).map(function(t){ return t.toLowerCase(); }));
+        for (var i = 0; i < all.length; i++) {
+            var other = all[i];
+            if (other.id === site.id) continue;
+            var score = 0;
+            // same category
+            if (other.category === site.category) score += 5;
+            // tag overlap
+            var otags = (other.tags || []);
+            var overlap = 0;
+            for (var j = 0; j < otags.length; j++) {
+                if (myTags.has(otags[j].toLowerCase())) overlap++;
+            }
+            score += overlap * 3;
+            if (score > 0) scored.push({ site: other, score: score });
+        }
+        scored.sort(function(a, b){ return b.score - a.score; });
+        return scored.slice(0, limit).map(function(x){ return x.site; });
+    }
+
+    function renderRelated(site, all) {
+        var related = findRelated(site, all, 8);
+        if (related.length === 0) return '';
+        var cards = related.map(function(r){
+            var catShown = (r.category || '').split('/').pop();
+            return '<a class="related-card" href="?name=' + encodeURIComponent(r.name) + '">' +
+                '<div class="rc-name">' + esc(r.name) + '</div>' +
+                '<div class="rc-cat">' + esc(catShown) + '</div>' +
+            '</a>';
+        }).join('');
+        return '<div class="related-section">' +
+            '<div class="related-title">相关推荐</div>' +
+            '<div class="related-grid">' + cards + '</div>' +
+        '</div>';
     }
 
     function render(site) {
@@ -70,12 +139,12 @@
         var iconHtml = site.icon
             ? '<img src="' + esc(site.icon) + '" alt="" loading="lazy" onerror="this.parentElement.innerHTML=\'🌐\'">'
             : '<span style="font-size:24px">🌐</span>';
-
         var favKey = 'fav_' + (site.url || site.name);
         var isFav = localStorage.getItem(favKey) === '1';
 
         root.innerHTML =
             '<div class="site-card">' +
+                '<div class="breadcrumb">' + renderBreadcrumb(site.category) + '</div>' +
                 '<div style="display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">' +
                     '<div class="site-icon-wrap">' + iconHtml + '</div>' +
                     '<div style="flex:1;min-width:200px;">' +
@@ -89,7 +158,8 @@
                         '</div>' +
                     '</div>' +
                 '</div>' +
-            '</div>';
+            '</div>' +
+            renderRelated(site, dataManager.getAllSites());
 
         $('detail-fav-btn').onclick = function(){
             var now = isFav ? '0' : '1';
@@ -101,7 +171,7 @@
     }
 
     function showError(msg) {
-        root.innerHTML = '<div class="error-state"><div style="font-size:40px;margin-bottom:12px">⚠️</div><p>' + esc(msg) + '</p><button class="fav-btn" style="margin-top:16px" onclick="history.back()">← 返回</button></div>';
+        root.innerHTML = '<div class="error-state"><div style="font-size:40px;margin-bottom:12px\">⚠️</div><p>' + esc(msg) + '</p><button class="fav-btn" style="margin-top:16px" onclick="history.back()">← 返回</button></div>';
     }
 
     function updateMeta(site) {
@@ -114,12 +184,6 @@
         if (og) og.setAttribute('content', title);
         var ogd = document.querySelector('meta[property="og:description"]');
         if (ogd) ogd.setAttribute('content', desc);
-    }
-
-    function esc(s) {
-        var d = document.createElement('div');
-        d.textContent = s || '';
-        return d.innerHTML;
     }
 
     init();
