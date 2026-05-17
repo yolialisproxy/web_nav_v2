@@ -61,6 +61,13 @@
     }
     </script>
     <meta name="theme-color" content="#0a0a0f">
+
+<!-- 全局安全桩：防止引用未定义函数时的 JS 错误 -->
+<script>
+window.trackSiteClick = window.trackSiteClick || function(name) {
+  // 默认无操作 — 可由 analytics 模块覆盖
+};
+</script>
     <link rel="stylesheet" href="assets/css/core.css">
         <link rel="preload" href="assets/css/core.css" as="style">
     <link rel="stylesheet" href="assets/css/app.css">
@@ -270,7 +277,7 @@ id="search-clear" class="absolute right-9 top-1/2 -translate-y-1/2 hidden" aria-
     <!-- 脚本 -->
     <!-- 核心（同步，仅2个） -->
         <!-- LocalForage: 增强本地缓存 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js" integrity="sha512-+ZqK5fYLxKqU3PbY3n5J3d6C/1zZqxFgP7FQ8d0NtH3Kb5cS+9wgwA3vzNKLBbzRE8xwKV4QqJ5SYXEHnQzLBPA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js" integrity="sha512-+BMamP0e7wn39JGL8nKAZ3yAQT2dL5oaXWr4ZYlTGkKOaoXM/Yj7c4oy50Ngz5yoUutAG17flueD4F6QpTlPng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="assets/js/state.js"></script>
     <script src="assets/js/data.js"></script>
     <!-- 非核心模块（defer延迟，不阻塞首屏渲染） -->
