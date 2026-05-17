@@ -418,6 +418,27 @@ button {
     transform: translate(-50%, -50%);
 }
 .invisible { visibility: hidden; }
+
+/* ===== 响应式断点：平板 / 桌面 ≥768px ===== */
+/* HTML 使用 Tailwind 命名：hidden md:flex / hidden md:inline-flex 等 */
+/* 以下媒体规则补齐缺失的 md … 类覆盖 */
+@media (min-width: 768px) {
+    /* display 类型切换 */
+    .hidden.md\:flex          { display: flex !important; }
+    .hidden.md\:inline-flex   { display: inline-flex !important; }
+    .hidden.md\:grid          { display: grid !important; }
+    .hidden.md\:block         { display: block !important; }
+    .hidden.md\:inline-block  { display: inline-block !important; }
+    .hidden.md\:table         { display: table !important; }
+    .hidden.md\:table-cell    { display: table-cell !important; }
+
+    /* 不随 hidden 出现的纯 flex/inline-flex 也可通过 md: 前缀使用（保险起见） */
+    .md\:flex         { display: flex !important; }
+    .md\:inline-flex  { display: inline-flex !important; }
+    .md\:grid         { display: grid !important; }
+    .md\:block        { display: block !important; }
+    .md\:inline-block { display: inline-block !important; }
+}
 .w-auto { width: auto; }
 .h-auto { height: auto; }
 .min-w-0 { min-width: 0; }
