@@ -175,15 +175,16 @@ class TestE2E(unittest.TestCase):
         self.page.set_viewport_size({"width": 1280, "height": 960})
         self._load()
         self.page.wait_for_timeout(800)
-        # Assert via bounding-rect: element must have non-zero dimensions (is rendered and on-screen)
+        # Assert elements have non-zero bounding rect (handles header content pushed below fold)
         for sel in ["#header", "#main-content", "#search-input"]:
-            rect = self.page.evaluate(f"""sel => {{
-                const el = document.querySelector(sel);
-                if (!el) return null;
-                const r = el.getBoundingClientRect();
-                return +(r.width) > 0 && +(r.height) > 0;
-            }}""", sel)
-            self.assertTrue(rect, f"{sel} has zero or negative size in desktop viewport 1280×960")
+            rect = self.page.evaluate(
+                "sel => { const el = document.querySelector(sel);"
+                " if (!el) return null;"
+                " const r = el.getBoundingClientRect();"
+                " return +(r.width) > 0 && +(r.height) > 0; }",
+                sel
+            )
+            self.assertTrue(rect, "%s has zero or negative size at 1280x960" % sel)
 
     def test_09_mobile_layout(self):
         self.page.set_viewport_size({"width": 375, "height": 667})
