@@ -69,13 +69,20 @@ class TestE2E(unittest.TestCase):
         self.errors.append(("page", str(err)))
 
     def _load(self):
-        resp = self.page.goto(BASE_URL, wait_until="domcontentloaded")
+        # Navigate to clean home URL (no stale hash from previous test)
+        resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded")
         self.assertIsNotNone(resp, "No response from server")
         self.assertTrue(resp.ok, f"HTTP {resp.status}")
-        try:
-            self.page.wait_for_selector("#sites-grid", timeout=8000)
-        except Exception:
-            pass
+        self.page.wait_for_timeout(300)
+        # Wait for JS to fully render grid or list — spin until one appears
+        for _ in range(120):  # up to 6s
+            hg = self.page.evaluate("() => !!document.getElementById('sites-grid')")
+            hl = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+            if hg or hl:
+                break
+            self.page.wait_for_timeout(50)
+        # Final short settle
+        self.page.wait_for_timeout(300)
 
     # ── Tests ───────────────────────────────────────────
 

@@ -343,8 +343,37 @@ async function init() {
                 }
                 if (cat) {
                     state.set('sidebar.activeCategoryId', cat);
-                    state.set('sidebar.activeSubCategoryId', null);
-                    state.set('sidebar.activeLeafId', null);
+                    // Auto-resolve first sub/leaf so renderCategoryView has a valid fullId.
+                    // Without this, sub/leaf stay null → getSitesByLeafId("cat/null") → 0 results.
+                    var dm = window.dataManager;
+                    if (dm && dm.categories && dm.categories[cat]) {
+                        var subs = dm.categories[cat].subCategories;
+                        if (subs) {
+                            var subIds = Object.keys(subs);
+                            if (subIds.length > 0) {
+                                var firstSubId = subIds[0];
+                                var firstSub = subs[firstSubId];
+                                if (firstSub && firstSub.leafCategories) {
+                                    var leafIds = Object.keys(firstSub.leafCategories);
+                                    if (leafIds.length > 0) {
+                                        // Pick the first leaf that has sites
+                                        for (var li = 0; li < leafIds.length; li++) {
+                                            if (firstSub.leafCategories[leafIds[li]].siteIds.length > 0) {
+                                                state.set('sidebar.activeSubCategoryId', firstSubId);
+                                                state.set('sidebar.activeLeafId', leafIds[li]);
+                                                break;
+                                            }
+                                        }
+                                        // Fallback: any leaf
+                                        if (!state.get('sidebar.activeLeafId') && leafIds.length > 0) {
+                                            state.set('sidebar.activeSubCategoryId', firstSubId);
+                                            state.set('sidebar.activeLeafId', leafIds[0]);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     closeSidebar();
                 }
                 e.preventDefault();
