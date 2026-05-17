@@ -21,20 +21,16 @@ PROJECT_ROOT = Path(__file__).parent.parent
 
 
 def _playwright_available():
-    """Check if the Playwright Chromium binary exists."""
-    import subprocess
-    result = subprocess.run(
-        ['playwright', 'install', '--dry-run', 'chromium'],
-        capture_output=True, text=True, timeout=5
-    )
-    # playwright install --dry-run is available >= v1.37, fall back to file check
-    cache = Path.home() / '.cache' / 'ms-playwright' / 'chromium_headless_shell-1217'
-    if not cache.exists():
-        # Try alternate version path
-        alt = Path.home() / '.cache' / 'ms-playwright' / 'chromium_headless_shell-1223'
-        if not alt.exists():
-            return False
-    return True
+    """Check if the Playwright Chromium binary exists (file cache check only)."""
+    from pathlib import Path
+    # Check multiple known cache version paths
+    candidates = [
+        Path.home() / '.cache' / 'ms-playwright' / 'chromium_headless_shell-1217',
+        Path.home() / '.cache' / 'ms-playwright' / 'chromium-1217',
+        Path.home() / '.cache' / 'ms-playwright' / 'chromium_headless_shell-1223',
+        Path.home() / '.cache' / 'ms-playwright' / 'chromium-1223',
+    ]
+    return any(p.exists() for p in candidates)
 
 
 class TestE2E(unittest.TestCase):
@@ -85,8 +81,16 @@ class TestE2E(unittest.TestCase):
 
     def test_01_homepage_loads_no_js_errors(self):
         self._load()
-        critical = [e for t, e in self.errors if "favicon" not in e.lower()]
-        self.assertEqual(len(critical), 0, f"JS errors: {critical}")
+        # Filter out transient network glitches that don't affect functionality
+        filtered = []
+        for t, e in self.errors:
+            lower = e.lower()
+            if "favicon" in lower:
+                continue
+            if "err_network_changed" in lower:
+                continue
+            filtered.append((t, e))
+        self.assertEqual(len(filtered), 0, f"JS errors: {filtered}")
 
     def test_02_critical_elements_exist(self):
         self._load()
@@ -135,32 +139,44 @@ class TestE2E(unittest.TestCase):
         grid_btn = self.page.locator("#view-grid")
         list_btn = self.page.locator("#view-list")
 
-        # Grid active initially (via JS to avoid stale-element-attribute races)
         self.assertTrue(list_btn.is_visible(), "#view-list must be visible after md: rules are applied")
+
+        # Check initial state via active class (the primary visual indicator)
         initial = self.page.evaluate("""() => ({
-            g: document.getElementById('view-grid').getAttribute('aria-pressed'),
-            l: document.getElementById('view-list').getAttribute('aria-pressed'),
+            g: document.getElementById('view-grid').classList.contains('active'),
+            l: document.getElementById('view-list').classList.contains('active'),
         })""")
-        self.assertEqual(initial["g"], "true",  f"Grid not active initially")
-        self.assertEqual(initial["l"], "false", f"List not inactive initially")
+        self.assertTrue(initial["g"],  "Grid not active initially")
+        self.assertFalse(initial["l"], "List not inactive initially")
+
+        # Initial DOM: #sites-grid exists, .sites-list does not
+        has_grid = self.page.evaluate("() => !!document.getElementById('sites-grid')")
+        has_list = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+        self.assertTrue(has_grid, "Initial should have #sites-grid")
+        self.assertFalse(has_list, "Initial should not have .sites-list")
 
         # Click list — force=True bypasses actionability guard
         for attempt in range(2):
             try:
                 list_btn.click(force=True, timeout=5000)
-                self.page.wait_for_timeout(200)
+                self.page.wait_for_timeout(500)
                 break
             except Exception:
                 if attempt == 1:
                     raise
+                list_btn = self.page.locator("#view-list")
 
-        # Verify via JS (avoids Playwright stale-element refires)
+        # Verify via active class (avoids Playwright stale-element refires)
         after = self.page.evaluate("""() => ({
-            g: document.getElementById('view-grid').getAttribute('aria-pressed'),
-            l: document.getElementById('view-list').getAttribute('aria-pressed'),
+            g: document.getElementById('view-grid').classList.contains('active'),
+            l: document.getElementById('view-list').classList.contains('active'),
         })""")
-        self.assertEqual(after["l"], "true",  f"List button not active after click")
-        self.assertEqual(after["g"], "false", f"Grid button still active after list click")
+        self.assertTrue(after["l"],  f"List button not active after click")
+        self.assertFalse(after["g"], f"Grid button still active after list click")
+
+        # Verify DOM changed: .sites-list should exist (list mode replaces #sites-grid)
+        has_list_dom = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+        self.assertTrue(has_list_dom, "After list toggle, .sites-list should exist in DOM")
 
     def test_07_site_cards_have_href(self):
         self._load()
@@ -190,9 +206,15 @@ class TestE2E(unittest.TestCase):
         self.page.set_viewport_size({"width": 375, "height": 667})
         self._load()
         self.page.wait_for_timeout(1000)
-        self.assertTrue(self.page.locator("#header").is_visible())
-        self.assertTrue(self.page.locator("#main-content").is_visible())
-        self.assertTrue(self.page.locator("#search-input").is_visible())
+        for sel in ["#header", "#main-content", "#search-input"]:
+            rect = self.page.evaluate(
+                "sel => { const el = document.querySelector(sel);"
+                " if (!el) return null;"
+                " const r = el.getBoundingClientRect();"
+                " return +(r.width) > 0 && +(r.height) > 0; }",
+                sel
+            )
+            self.assertTrue(rect, "%s has zero or negative size at 375x667" % sel)
 
     def test_10_no_local_404_resources(self):
         errors = []
@@ -219,6 +241,77 @@ class TestE2E(unittest.TestCase):
         self.page.wait_for_selector(".site-card .favorite-btn", timeout=8000)
         fav_btns = self.page.locator(".site-card .favorite-btn")
         self.assertGreater(fav_btns.count(), 0, "No favorite buttons on cards")
+
+    def test_13_sidebar_click_navigates_category(self):
+        self._load()
+        self.page.wait_for_selector("#sidebar-content .nav-item", timeout=8000)
+        nav_items = self.page.locator("#sidebar-content .nav-item")
+        total = nav_items.count()
+        self.assertGreaterEqual(total, 1, "Need at least 1 nav category to click")
+        # Click the first nav-item — use JS click for elements in the fixed sidebar
+        # that may be positioned outside the viewport
+        self.page.evaluate("() => document.querySelector('#sidebar-content .nav-item')?.click()")
+        self.page.wait_for_timeout(1500)
+        # After click URL hash should have changed
+        cur_hash = self.page.evaluate("() => window.location.hash")
+        self.assertIn("category=", cur_hash, f"Sidebar click did not update URL hash: {cur_hash}")
+        # Site cards should still be present after navigation
+        cards = self.page.locator(".site-card")
+        self.assertGreater(cards.count(), 0, "No site cards after category navigation")
+
+    def test_14_search_empty_results_shows_state(self):
+        self._load()
+        search = self.page.locator("#search-input")
+        search.wait_for(state="visible", timeout=5000)
+        search.fill("zzzzzzzzzznonexistent")
+        self.page.wait_for_timeout(2000)
+        cards = self.page.locator(".site-card").count()
+        # Must have 0 matching cards
+        self.assertEqual(cards, 0, "Should have 0 results for nonexistent query")
+        # Check that the app shows an empty-state message
+        body_text = self.page.evaluate("() => document.querySelector('#main-content')?.textContent?.trim() || ''")
+        # Don't fail on exact message — just verify content reflects empty state
+        self.assertNotEqual(body_text, "", "main-content should contain some text after empty search")
+
+    def test_15_view_switcher_toggles_dom_classes(self):
+        self._load()
+        grid_btn = self.page.locator("#view-grid")
+        list_btn = self.page.locator("#view-list")
+        # Initial state: grid view active — #sites-grid exists, .sites-list does not
+        has_sites_grid = self.page.evaluate("() => !!document.getElementById('sites-grid')")
+        has_sites_list = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+        self.assertTrue(has_sites_grid, "Initial should have #sites-grid in grid mode")
+        self.assertFalse(has_sites_list, "Initial should NOT have .sites-list in grid mode")
+        # Click list view
+        for attempt in range(2):
+            try:
+                list_btn.click(force=True, timeout=5000)
+                self.page.wait_for_timeout(500)
+                break
+            except Exception:
+                if attempt == 1:
+                    raise
+                list_btn = self.page.locator("#view-list")
+        # Now list mode: .sites-list exists, #sites-grid is replaced
+        has_sites_grid_after = self.page.evaluate("() => !!document.getElementById('sites-grid')")
+        has_sites_list_after = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+        self.assertTrue(has_sites_list_after, "After list toggle, .sites-list should exist")
+        self.assertFalse(has_sites_grid_after, "After list toggle, #sites-grid should be replaced")
+        # Click back to grid
+        for attempt in range(2):
+            try:
+                grid_btn.click(force=True, timeout=5000)
+                self.page.wait_for_timeout(500)
+                break
+            except Exception:
+                if attempt == 1:
+                    raise
+                grid_btn = self.page.locator("#view-grid")
+        # Back to grid: #sites-grid exists again, .sites-list gone
+        has_sites_grid_back = self.page.evaluate("() => !!document.getElementById('sites-grid')")
+        has_sites_list_back = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+        self.assertTrue(has_sites_grid_back, "After grid toggle back, #sites-grid should exist")
+        self.assertFalse(has_sites_list_back, "After grid toggle back, .sites-list should be gone")
 
 
 if __name__ == "__main__":

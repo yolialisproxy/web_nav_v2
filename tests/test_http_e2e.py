@@ -60,8 +60,8 @@ class TestHttpE2E:
     def test_04_homepage_has_view_grid_button(self):
         resp = http_get("/")
         body = resp.read().decode("utf-8", errors="replace")
-        assert 'id="view-grid"', "Grid view button missing"
-        assert 'id="view-list"', "List view button missing"
+        assert 'id="view-grid"' in body, "Grid view button missing"
+        assert 'id="view-list"' in body, "List view button missing"
 
     # ── Data integrity ─────────────────────────────────
 
@@ -163,3 +163,43 @@ class TestHttpE2E:
         expected = {"tetris", "gomoku", "2048", "chess", "solitaire"}
         missing = expected - names
         assert not missing, f"Missing expected games: {missing}"
+
+    def test_41_api_games_all_have_required_fields(self):
+        resp = http_get("/api/games.json")
+        assert resp.status == 200
+        data = json.loads(resp.read())
+        assert isinstance(data, list), "api/games.json must return list"
+        assert len(data) > 0, "api/games.json must have at least one game"
+        for game in data:
+            # Accept 'description' or 'desc' as field name
+            assert "description" in game or "desc" in game, \
+                f"Game {game.get('key', '?')} missing both 'description' and 'desc'"
+            for field in ("key", "name", "rating"):
+                assert field in game, f"Game {game.get('key', '?')} missing field: '{field}'"
+            rating = game.get("rating", 0)
+            assert 0 <= rating <= 5, f"Game {game.get('key')} rating {rating} out of range"
+
+    def test_42_root_path_serves_index_html(self):
+        """Root path must serve index.html with static critical elements."""
+        resp = http_get("/")
+        assert resp.status == 200
+        body = resp.read().decode("utf-8", errors="replace")
+        assert '<main id="main-content"' in body, "Root must serve index.html with <main>"
+        assert '<!DOCTYPE html>' in body, "Root must serve index.html DOCTYPE"
+
+    def test_43_static_favicon_exists(self):
+        resp = http_get("/favicon.ico")
+        assert resp.status == 200, "Missing favicon.ico"
+
+    def test_44_prerender_data_files_exist(self):
+        """Pre-rendered data files used for SEO."""
+        dir_path = PROJECT_ROOT / "prerendered"
+        if not dir_path.exists():
+            pytest.skip("prerendered directory not found")
+        files = sorted(dir_path.glob("*.json"))
+        assert len(files) > 0, "Expected at least 1 prerender file"
+        for f in files[:3]:
+            try:
+                json.loads(f.read_text())
+            except json.JSONDecodeError:
+                assert False, f"Prerender file {f.name} is not valid JSON"
