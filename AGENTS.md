@@ -33,5 +33,9 @@ Rules:
 || Phase 29 | 游戏时长统计 + 移动端竖屏 2 列 | `19d4233` | 2026-05-16 |
 || Phase 30 | 预渲染数据路径修复 + 完整性验证 | `b2f2f56` | 2026-05-16 |
 
-|| Phase 31 | e2e 测试体系 + Bug 修复 | `bfcaad7` | 2026-05-17 |
+||| Phase 31 | e2e 测试体系 + Bug 修复 | `bfcaad7` | 2026-05-17 |
+||| Phase 31 | e2e playwright detect + test fixes | `3d3204f` | 2026-05-17 |
+||| Phase 31 | e2e category nav + render wait fix | `5f65dd9` | 2026-05-17 |
+||| Phase 31 | test_12 favorite-btn poll fix | `3703182` | 2026-05-17 |
+||| Phase 31 | test_04 search-clear spin-wait fix | `df03bed` | 2026-05-17 |
 *本手册由 Phase 系统持续维护，根据工作进展更新。*
