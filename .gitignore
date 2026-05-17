@@ -44,3 +44,4 @@ prerendered_backup_placeholder/
 *.xcf
 test_enrich*
 url_health_checker.py.bak.tmp_*.py
+debug_*.py
