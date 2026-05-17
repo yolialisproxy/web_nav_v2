@@ -245,7 +245,12 @@ class TestE2E(unittest.TestCase):
     def test_12_favorite_buttons_on_cards(self):
         self._load()
         # Wait until at least one site-card is rendered before asserting
-        self.page.wait_for_selector(".site-card .favorite-btn", timeout=8000)
+        # (favorite buttons are injected by deferred favorite-ui-bootstrap.js, may appear after cards)
+        self.page.wait_for_selector(".site-card", timeout=15000)
+        for _ in range(60):  # up to 12s additional poll for favorite-btn injection
+            if self.page.locator(".site-card .favorite-btn").count() > 0:
+                break
+            self.page.wait_for_timeout(200)
         fav_btns = self.page.locator(".site-card .favorite-btn")
         self.assertGreater(fav_btns.count(), 0, "No favorite buttons on cards")
 
