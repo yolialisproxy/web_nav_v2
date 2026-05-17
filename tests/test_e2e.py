@@ -128,9 +128,16 @@ class TestE2E(unittest.TestCase):
         self._load()
         search = self.page.locator("#search-input")
         search.fill("百度")
-        self.page.wait_for_timeout(500)
+        self.page.wait_for_timeout(800)  # debounce settle
         search.clear()
-        self.page.wait_for_timeout(1500)
+        # Spin until back to normal view — don't rely on fixed timeout
+        for _ in range(100):  # up to 8s
+            in_search = self.page.evaluate("() => window.state?.get('search.active') || false")
+            if not in_search:
+                # Also wait briefly for cards to actually render
+                self.page.wait_for_timeout(300)
+                break
+            self.page.wait_for_timeout(80)
         count = self.page.locator(".site-card").count()
         self.assertGreater(count, 0, "After clear should show sites")
 
