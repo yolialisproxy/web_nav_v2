@@ -73,6 +73,10 @@ class TestE2E(unittest.TestCase):
         resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded")
         self.assertIsNotNone(resp, "No response from server")
         self.assertTrue(resp.ok, f"HTTP {resp.status}")
+        # Reset view mode to grid — prev tests may have toggled to list via localStorage
+        self.page.evaluate("""() => {
+            try { localStorage.setItem('kunhun-nav-view-mode', 'grid'); } catch(e) {}
+        }""")
         self.page.wait_for_timeout(300)
         # Wait for JS to fully render grid or list — spin until one appears
         for _ in range(120):  # up to 6s
