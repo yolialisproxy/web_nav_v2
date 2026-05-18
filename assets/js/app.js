@@ -1,7 +1,7 @@
 /**
  * app.js - 应用入口与路由调度 (V3)
- * 职责：初始化、事件调度、SPA路由、键盘快捷键
- * 修复：统一所有功能到一个入口点
+ * 职责:初始化,事件调度,SPA路由,键盘快捷键
+ * 修复:统一所有功能到一个入口点
  */
 
 /**
@@ -59,7 +59,7 @@ async function init() {
     // 暴露全局函数
     window.renderSites = renderSites;
 
-    // 骨架屏已经在HTML中默认显示，无需额外设置
+    // 骨架屏已经在HTML中默认显示,无需额外设置
     // 只需确保state.loading为true
     if (state) state.set('loading', true);
 
@@ -92,8 +92,8 @@ async function init() {
         }
     }
 
-    // 将 dataManager.raw 同步入 state.sites，确保数据源唯一
-    // 使用 state.set 触发订阅者重渲染，保持 UI 与数据一致
+    // 将 dataManager.raw 同步入 state.sites,确保数据源唯一
+    // 使用 state.set 触发订阅者重渲染,保持 UI 与数据一致
     if (dataManager.raw && dataManager.raw.length > 0) {
         console.log('[App] dataManager.raw length: ', dataManager.raw.length);\n        try {
             console.log('[App] Setting state.sites with length: ', dataManager.raw.length);\n            state.set('sites', dataManager.raw);
