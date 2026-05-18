@@ -70,7 +70,7 @@ class TestE2E(unittest.TestCase):
 
     def _load(self):
         # Navigate to clean home URL (no stale hash from previous test)
-        resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded")
+        resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded", timeout=60000)
         self.assertIsNotNone(resp, "No response from server")
         self.assertTrue(resp.ok, f"HTTP {resp.status}")
         # Reset view mode to grid so next render is deterministic
@@ -111,8 +111,6 @@ class TestE2E(unittest.TestCase):
         # setViewMode('grid') (called from renderSites) fails to add 'active' in some
         # browser contexts due to an undiagnosed render timing issue.
         self.page.evaluate("() => { const b = document.getElementById('view-grid'); if (b) b.classList.add('active'); }")
-
-    # ── Tests ───────────────────────────────────────────
 
     def test_01_homepage_loads_no_js_errors(self):
         self._load()

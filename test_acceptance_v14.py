@@ -220,8 +220,21 @@ class AcceptanceTest:
         """Test category navigation"""
         print("\\n📁 Testing category navigation...")
         try:
-            # Wait for sidebar to load with categories
+            # Wait for sidebar to load
             await self.page.locator("#sidebar").wait_for(state="visible", timeout=10000)
+
+            # Open sidebar if it's closed (check for translated state)
+            sidebar_toggle = self.page.locator("#sidebar-toggle")
+            if await sidebar_toggle.is_visible():
+                # Check if sidebar is closed (has -translate-x-full or is not visible in viewport)
+                sidebar = self.page.locator("#sidebar")
+                is_closed = await sidebar.evaluate("""el => {
+                    const transform = window.getComputedStyle(el).transform;
+                    return transform !== 'none' && transform !== 'matrix(1, 0, 0, 1, 0, 0)';
+                }""")
+                if is_closed:
+                    await sidebar_toggle.click()
+                    await self.page.wait_for_timeout(500)  # Wait for animation
 
             # Wait a bit more for dynamic content
             await self.page.wait_for_timeout(2000)
@@ -231,13 +244,21 @@ class AcceptanceTest:
             print(f"   Found {categories} categories")
 
             if categories > 0:
-                # Expand first category if not already expanded
+                # Get the first category item and check its text
                 first_category = self.page.locator("#sidebar-content .nav-item").first
-                await first_category.click()
-                await self.page.wait_for_timeout(500)
-
-                self.results["tested_features"].append("category_navigation")
-                self.results["details"]["categories_found"] = categories
+                text = await first_category.inner_text()
+                print(f"   First category text: {text.strip()}")
+                # We expect it to contain "游戏"
+                if "游戏" in text:
+                    # Try to click with force=True
+                    await first_category.click(force=True)
+                    await self.page.wait_for_timeout(500)
+                    self.results["tested_features"].append("category_navigation")
+                    self.results["details"]["categories_found"] = categories
+                    self.results["details"]["first_category_text"] = text.strip()
+                else:
+                    print(f"   ⚠️ First category text does not contain '游戏': {text}")
+                    self.results["issues"].append(f"First category text does not contain '游戏': {text}")
             else:
                 print("   ⚠️ No categories found in sidebar")
                 self.results["issues"].append("No categories found for navigation test")

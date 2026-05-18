@@ -3,6 +3,9 @@
 ## 最近提交分析 (2026-05-18)
 
 - 最近10次提交:
+  - 7248acf Auto commit at 2026年 05月 18日 星期一 12:05:13 CST
+  - f1f452d Auto commit at 2026年 05月 18日 星期一 11:05:03 CST
+  - 39a4248 auto-push: 2026-05-18 10:04:14 CST
   - e540faf test_e2e: e2e stability fixes + DEVELOPMENT_GUIDELINES.md (2026-05-18 08:29:32 )
   - 820cdd5 test_e2e: _load() resets localStorage view-mode to grid on every page load
   - cda0f15 gitignore: ignore debug_*.py temp scripts
@@ -10,9 +13,6 @@
   - df03bed test_e2e: test_04 search-clear — spin-wait on state.search.active instead of fixed timeout
   - 2e9d4e1 test_e2e: test_12 favorite-btn poll: wait .site-card then poll .favorite-btn up to 12s
   - 3703182 test_e2e: test_12 favorite-btn poll: wait .site-card then poll .favorite-btn up to 12s (deferred injection flaky)
-  - 5f65dd9 Fix e2e remaining: category nav stub + render wait
-  - 3d3204f Phase 31 e2e fix: playwright detection, test_42 static check, view-switcher DOM assertions
-  - 15878e8 fixup: remove stale .tmp_ probe files, add .gitignore
 
 ## 提交约定建议
 
