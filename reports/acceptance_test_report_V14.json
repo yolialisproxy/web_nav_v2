@@ -1,12 +1,12 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-05-18T16:00:15.596221",
+  "test_timestamp": "2026-05-18T16:24:37.642448",
   "base_url": "http://localhost:8080",
   "console_errors": [
     {
       "type": "pageerror",
       "text": "Invalid or unexpected token",
-      "timestamp": "2026-05-18T15:59:17.852422"
+      "timestamp": "2026-05-18T16:23:36.325878"
     }
   ],
   "tested_features": [
@@ -17,7 +17,7 @@
   "passed": true,
   "issues": [
     "Search result state unclear",
-    "Category navigation failed: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#sidebar-toggle\")\n    - locator resolved to <button aria-label=\"切换侧边栏\" id=\"sidebar-toggle\" aria-expanded=\"false\" aria-controls=\"sidebar\" class=\"p-2 rounded-lg hover:bg-white/10 transition-colors lg:hidden\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    55 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+    "Category navigation failed: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#sidebar-toggle\")\n    - locator resolved to <button aria-label=\"切换侧边栏\" id=\"sidebar-toggle\" aria-expanded=\"false\" aria-controls=\"sidebar\" class=\"p-2 rounded-lg hover:bg-white/10 transition-colors lg:hidden\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    54 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
     "No site links found for link click test",
     "Responsive issue at Desktop (search:True, main:False)",
     "Responsive issue at Tablet (search:True, main:False)",

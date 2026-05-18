@@ -68,7 +68,8 @@ async function init() {
     try {
         await dataManager.load();
         dataLoaded = true;
-            console.log('[App] dataManager.load succeeded, raw length: ', dataManager.raw.length);\n    } catch (e) {
+        console.log('[App] dataManager.load succeeded, raw length: ', dataManager.raw.length);
+    } catch (e) {
         console.error('[App] 数据加载失败:', e);
         // 尝试从缓存恢复
         try {
@@ -79,11 +80,12 @@ async function init() {
                 dataManager._buildIndexes();
                 dataManager.isLoaded = true;
                 dataLoaded = true;
+                console.log('[App] dataManager.load from cache succeeded, raw length: ', dataManager.raw.length);
             }
-        } catch(cacheErr) {
+        } catch (cacheErr) {
             console.error('[App] 缓存恢复也失败:', cacheErr);
         }
-
+    }
         if (!dataLoaded) {
             renderSites(false);
             return;
