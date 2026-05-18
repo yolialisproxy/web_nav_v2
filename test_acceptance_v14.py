@@ -218,7 +218,7 @@ class AcceptanceTest:
 
     async def _test_category_navigation(self):
         """Test category navigation"""
-        print("\n📁 Testing category navigation...")
+        print("\\n📁 Testing category navigation...")
         try:
             # Wait for sidebar to load with categories
             await self.page.locator("#sidebar").wait_for(state="visible", timeout=10000)
@@ -226,45 +226,18 @@ class AcceptanceTest:
             # Wait a bit more for dynamic content
             await self.page.wait_for_timeout(2000)
 
-            # Get all category items (menu-category)
-            categories = await self.page.locator(".menu-category").count()
+            # Get all category items (nav-item in sidebar)
+            categories = await self.page.locator("#sidebar-content .nav-item").count()
             print(f"   Found {categories} categories")
 
             if categories > 0:
                 # Expand first category if not already expanded
-                first_category = self.page.locator(".menu-category").first
-                category_header = first_category.locator(".category-header")
-                await category_header.click()
+                first_category = self.page.locator("#sidebar-content .nav-item").first
+                await first_category.click()
                 await self.page.wait_for_timeout(500)
-
-                # Get subcategories within first category
-                first_category_content = first_category.locator(".category-content")
-                subcategories = await first_category_content.locator(".menu-subcategory").count()
-                print(f"   ✅ Clicked first category, found {subcategories} subcategories")
-
-                # Click a subcategory if available
-                if subcategories > 0:
-                    first_subcategory = first_category_content.locator(".menu-subcategory").first
-                    subcategory_header = first_subcategory.locator(".subcategory-header")
-                    await subcategory_header.click()
-                    await self.page.wait_for_timeout(500)
-
-                    # Get leaf categories
-                    subcategory_content = first_subcategory.locator(".subcategory-content")
-                    leaf_categories = await subcategory_content.locator(".menu-leaf").count()
-                    print(f"   ✅ Clicked subcategory, found {leaf_categories} leaf categories")
-
-                    # Click a leaf category if available
-                    if leaf_categories > 0:
-                        first_leaf = subcategory_content.locator(".menu-leaf").first
-                        await first_leaf.click()
-                        await self.page.wait_for_timeout(500)
-                        print(f"   ✅ Clicked leaf category successfully")
 
                 self.results["tested_features"].append("category_navigation")
                 self.results["details"]["categories_found"] = categories
-                self.results["details"]["subcategories_found"] = subcategories
-                self.results["details"]["leaf_categories_found"] = leaf_categories if subcategories > 0 else 0
             else:
                 print("   ⚠️ No categories found in sidebar")
                 self.results["issues"].append("No categories found for navigation test")

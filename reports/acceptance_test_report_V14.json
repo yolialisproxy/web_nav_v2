@@ -1,8 +1,75 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-05-17T09:16:38.645443",
+  "test_timestamp": "2026-05-18T10:54:24.696338",
   "base_url": "http://localhost:8080",
-  "console_errors": [],
+  "console_errors": [
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=about.gitlab.com&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.504565"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=cml.dev&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.521898"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=dvc.org&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.522421"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=gitea.wildfiregames.com&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.532569"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=jupyter.org&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.586086"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=sourceforge.net&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.586680"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=colanode.com&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.587227"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=gitlab.com&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.594914"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=duplicity.gitlab.io&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.595735"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=bitbucket.org&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.602112"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=emailrelay.sourceforge.net&sz=32:0",
+      "timestamp": "2026-05-18T10:53:41.609657"
+    }
+  ],
   "tested_features": [
     "homepage_navigation",
     "screenshot",
@@ -13,14 +80,15 @@
   "passed": true,
   "issues": [
     "No categories found for navigation test",
-    "Link click test 2 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================",
+    "Link click test 1 failed: Timeout 5000ms exceeded while waiting for event \"page\"",
+    "Link click test 2 failed: Timeout 5000ms exceeded while waiting for event \"page\"",
     "Missing page elements: ['view_container']"
   ],
   "details": {
     "homepage_status": 200,
     "screenshot_path": "/home/yoli/GitHub/web_nav_v2/reports/acceptance_test_screenshot.png",
     "search_test_query": "百度",
-    "search_results_count": 6,
+    "search_results_count": 17,
     "links_tested": 3,
     "viewport_tests": [
       {

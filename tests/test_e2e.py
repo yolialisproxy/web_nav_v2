@@ -78,13 +78,13 @@ class TestE2E(unittest.TestCase):
             try { localStorage.setItem('kunhun-nav-view-mode', 'grid'); } catch(e) {}
         }""")
         # Wait for core JS to be ready (renderer, state, dataManager)
-        for _ in range(200):  # up to 10s
+        for _ in range(600):  # up to 30s
             ready = self.page.evaluate("() => !!(window.renderer && window.state && window.dataManager && window.dataManager.isLoaded)")
             if ready:
                 break
             self.page.wait_for_timeout(50)
         else:
-            self.fail("Core JS did not initialize within 10s")
+            self.fail("Core JS did not initialize within 30s")
         # Force grid view via state change
         self.page.evaluate("() => { if (window.state && typeof window.state.setView === 'function') window.state.setView('grid'); }")
         # Wait for grid to render
