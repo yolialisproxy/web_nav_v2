@@ -68,7 +68,7 @@ async function init() {
     try {
         await dataManager.load();
         dataLoaded = true;
-    } catch (e) {
+            console.log('[App] dataManager.load succeeded, raw length: ', dataManager.raw.length);\n    } catch (e) {
         console.error('[App] 数据加载失败:', e);
         // 尝试从缓存恢复
         try {
@@ -93,9 +93,9 @@ async function init() {
     // 将 dataManager.raw 同步入 state.sites，确保数据源唯一
     // 使用 state.set 触发订阅者重渲染，保持 UI 与数据一致
     if (dataManager.raw && dataManager.raw.length > 0) {
-        try {
-            state.set('sites', dataManager.raw);
-        } catch (_e) { console.warn('[App] state.sites set失败', _e); }
+        console.log('[App] dataManager.raw length: ', dataManager.raw.length);\n        try {
+            console.log('[App] Setting state.sites with length: ', dataManager.raw.length);\n            state.set('sites', dataManager.raw);
+            console.log('[App] state.sites set, length: ', state.get('sites').length);\n            console.log('[App] state.sites set successfully');\n        } catch (_e) { console.warn('[App] state.sites set失败', _e); }
     }
 
     // 初始化标签系统
@@ -385,11 +385,33 @@ async function init() {
                 var subCat = subItem.getAttribute('data-sub');
                 var parentItem = subItem.closest('.nav-item');
                 var mainCat = parentItem ? parentItem.getAttribute('data-category') : null;
-                if (mainCat && subCat) {
-                    state.set('sidebar.activeCategoryId', mainCat);
-                    state.set('sidebar.activeSubCategoryId', subCat);
-                    state.set('sidebar.activeLeafId', subCat);
+            if (mainCat && subCat) {
+                state.set('sidebar.activeCategoryId', mainCat);
+                state.set('sidebar.activeSubCategoryId', subCat);
+                // Find the first leaf under this subcategory that has sites
+                var leafId = null;
+                if (window.dataManager && window.dataManager.categories && 
+                    window.dataManager.categories[mainCat] && 
+                    window.dataManager.categories[mainCat].subCategories && 
+                    window.dataManager.categories[mainCat].subCategories[subCat] &&
+                    window.dataManager.categories[mainCat].subCategories[subCat].leafCategories) {
+                    var leafCategories = window.dataManager.categories[mainCat].subCategories[subCat].leafCategories;
+                    var leafIds = Object.keys(leafCategories);
+                    // First, try to find a leaf that actually has sites
+                    for (var i = 0; i < leafIds.length; i++) {
+                        var lid = leafIds[i];
+                        if (leafCategories[lid].siteIds && leafCategories[lid].siteIds.length > 0) {
+                            leafId = lid;
+                            break;
+                        }
+                    }
+                    // If no leaf with sites found, use the first leaf (if any)
+                    if (leafId === null && leafIds.length > 0) {
+                        leafId = leafIds[0];
+                    }
                 }
+                state.set('sidebar.activeLeafId', leafId);
+            }
                 closeSidebar();
                 e.preventDefault();
             }
@@ -667,7 +689,7 @@ function syncHashToState() {
     return loaded;
 }
 
-window.renderer = renderer;
+// window.renderer = renderer;
 window.state = state;
 window.dataManager = dataManager;
 window.searchEngine = searchEngine;

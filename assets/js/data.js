@@ -133,9 +133,7 @@ class DataManager {
             site.description = (site.description || '').trim();
             site.category = (site.category || '').trim();
             site.url = (site.url || '').trim();
-
-            if (!site.name) return;
-
+            if (!site.name || !site.category) return;
             this.sites.set(site.id, site);
 
             // 分类索引构建

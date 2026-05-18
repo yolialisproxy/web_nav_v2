@@ -144,6 +144,146 @@ class PaginatedRenderer {
 
 const paginatedRenderer = new PaginatedRenderer();
 window.paginatedRenderer = paginatedRenderer;
+/**
+
+ * 渲染器对象 - 负责 sidebar 和 view 的渲染
+ */
+const renderer = {
+    /**
+     * 渲染侧边栏
+     * @param {Object} s - 状态对象
+     */
+    renderSidebar: function(s) {
+        // 更新侧边栏的激活状态和显示/隐藏子菜单
+        // 这个函数主要负责根据状态更新侧边栏UI
+        // 实际的侧边栏结构渲染可能在state.js中处理
+        // 这里我们确保激活状态正确反映在UI上
+        try {
+            // 更新侧边栏折叠/展开状态基于活动分类
+            var sidebar = document.getElementById('sidebar');
+            var sidebarContent = document.getElementById('sidebar-content');
+            if (!sidebar || !sidebarContent) return;
+            
+            // 如果有活动分类，确保侧边栏是展开的（除非有意愿折叠）
+            var activeCatId = s?.get ? s.get('sidebar.activeCategoryId') : null;
+            if (activeCatId) {
+                // 展开侧边栏
+                sidebar.classList.remove('-translate-x-full');
+                document.body.classList.add('sidebar-open');
+                var sidebarToggle = document.getElementById('sidebar-toggle');
+                if (sidebarToggle) sidebarToggle.setAttribute('aria-expanded', 'true');
+            }
+            
+            // 更新激活的导航项
+            // 移除所有活动状态
+            sidebarContent.querySelectorAll('.nav-item.active, .nav-sub-item.active').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            sidebarContent.querySelectorAll('.nav-children').forEach(function(el) {
+                el.style.display = 'none';
+            });
+            
+            // 设置活动分类
+            if (activeCatId) {
+                var catEl = sidebarContent.querySelector('.nav-item[data-category="' + activeCatId + '"]');
+                if (catEl) {
+                    catEl.classList.add('active');
+                    // 展开该分类的子菜单
+                    var nextEl = catEl.nextElementSibling;
+                    if (nextEl && nextEl.classList.contains('nav-children')) {
+                        nextEl.style.display = 'block';
+                    }
+                }
+            }
+            
+            // 设置活动的子分类（如果有）
+            var activeSubId = s?.get ? s.get('sidebar.activeSubCategoryId') : null;
+            if (activeSubId) {
+                var subEl = sidebarContent.querySelector('.nav-sub-item[data-sub="' + activeSubId + '"]');
+                if (subEl) {
+                    subEl.classList.add('active');
+                    // 确保父分类也被标记为活动
+                    var parentItem = subEl.closest('.nav-item');
+                    if (parentItem) {
+                        var parentCatId = parentItem.getAttribute('data-category');
+                        if (parentCatId) {
+                            var parentCatEl = sidebarContent.querySelector('.nav-item[data-category="' + parentCatId + '"]');
+                            if (parentCatEl) {
+                                parentCatEl.classList.add('active');
+                                var parentNextEl = parentCatEl.nextElementSibling;
+                                if (parentNextEl && parentNextEl.classList.contains('nav-children')) {
+                                    parentNextEl.style.display = 'block';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            console.error('[Renderer] Sidebar render error:', e);
+        }
+    },
+    
+    /**
+     * 渲染主视图
+     * @param {Object} s - 状态对象
+     */
+    renderView: function(s) {
+        try {
+            var currentView = s?.get ? s.get('currentView') : 'grid';
+            var mainContent = document.getElementById('main-content');
+            if (!mainContent) return;
+            
+            switch (currentView) {
+                case 'grid':
+                case 'list':
+                    // 网格或列表视图 - 渲染站点
+                    var sites = s?.get ? s.get('sites') : [];
+                    if (currentView === 'list') {
+                        renderSitesList(sites, 'main-content');
+                    } else {
+                        renderSites(sites, 'main-content');
+                    }
+                    break;
+                case 'search':
+                    // 搜索视图
+                    var query = s?.get ? s.get('search.query') : '';
+                    var results = s?.get ? s.get('search.results') : [];
+                    if (query.trim() !== '') {
+                        renderSites(results, 'main-content');
+                        // 更新搜索工具栏状态
+                        var searchInput = document.getElementById('search-input');
+                        if (searchInput) searchInput.value = query;
+                    } else {
+                        // 如果查询为空，显示分类视图
+                        renderSites(s?.get ? s.get('sites') : [], 'main-content');
+                    }
+                    break;
+                case 'category':
+                    // 分类视图
+                    var catId = s?.get ? s.get('sidebar.activeCategoryId') : null;
+                    var subId = s?.get ? s.get('sidebar.activeSubCategoryId') : null;
+                    var leafId = s?.get ? s.get('sidebar.activeLeafId') : null;
+                    if (catId) {
+                        renderCategoryView(catId, subId, leafId);
+                    }
+                    break;
+                case 'games':
+                    // 游戏中心
+                    renderGamesHub('main-content');
+                    break;
+                default:
+                    // 默认显示网格视图
+                    renderSites(s?.get ? s.get('sites') : [], 'main-content');
+            }
+        } catch (e) {
+            console.error('[Renderer] View render error:', e);
+        }
+    }
+};
+
+// 将渲染器挂载到window对象
+window.renderer = renderer;
 
 /* ========== 纯函数：构建HTML ========== */
 

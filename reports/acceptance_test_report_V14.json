@@ -1,94 +1,32 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-05-18T14:38:52.140296",
+  "test_timestamp": "2026-05-18T16:00:15.596221",
   "base_url": "http://localhost:8080",
   "console_errors": [
     {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=gitlab.com&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.287586"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=duplicity.gitlab.io&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.291130"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=sourceforge.net&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.295042"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=cml.dev&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.295699"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=dvc.org&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.296119"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=colanode.com&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.299399"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=gitea.wildfiregames.com&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.300036"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=jupyter.org&sz=32:0",
-      "timestamp": "2026-05-18T14:38:29.300576"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=about.gitlab.com&sz=32:0",
-      "timestamp": "2026-05-18T14:38:31.105412"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=emailrelay.sourceforge.net&sz=32:0",
-      "timestamp": "2026-05-18T14:38:31.107169"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=bitbucket.org&sz=32:0",
-      "timestamp": "2026-05-18T14:38:31.107489"
+      "type": "pageerror",
+      "text": "Invalid or unexpected token",
+      "timestamp": "2026-05-18T15:59:17.852422"
     }
   ],
   "tested_features": [
     "homepage_navigation",
     "screenshot",
-    "search",
-    "category_navigation",
-    "link_clicks",
-    "responsive_design",
-    "page_rendering"
+    "responsive_design"
   ],
   "passed": true,
-  "issues": [],
+  "issues": [
+    "Search result state unclear",
+    "Category navigation failed: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#sidebar-toggle\")\n    - locator resolved to <button aria-label=\"切换侧边栏\" id=\"sidebar-toggle\" aria-expanded=\"false\" aria-controls=\"sidebar\" class=\"p-2 rounded-lg hover:bg-white/10 transition-colors lg:hidden\">…</button>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    55 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div id=\"skeleton-screen\" class=\"skeleton-screen\">…</div> intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n",
+    "No site links found for link click test",
+    "Responsive issue at Desktop (search:True, main:False)",
+    "Responsive issue at Tablet (search:True, main:False)",
+    "Responsive issue at Mobile (search:True, main:False)",
+    "Missing page elements: ['site_links']"
+  ],
   "details": {
     "homepage_status": 200,
     "screenshot_path": "/home/yoli/GitHub/web_nav_v2/reports/acceptance_test_screenshot.png",
-    "search_test_query": "百度",
-    "search_results_count": 17,
-    "categories_found": 1,
-    "first_category_text": "🎮 游戏 9",
-    "links_tested": 3,
     "viewport_tests": [
       {
         "name": "Desktop",
@@ -105,14 +43,6 @@
         "width": 375,
         "height": 667
       }
-    ],
-    "page_elements": {
-      "header": true,
-      "sidebar": true,
-      "main_content": true,
-      "view_switcher": true,
-      "search_input": true,
-      "site_links": true
-    }
+    ]
   }
 }
