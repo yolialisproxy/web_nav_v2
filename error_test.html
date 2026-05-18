@@ -2,32 +2,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Error Interceptor Test</title>
+    <title>Error Test</title>
     <script src="assets/js/error-interceptor.js"></script>
 </head>
 <body>
     <h1>Error Interceptor Test</h1>
     <button onclick="triggerError()">Trigger Error</button>
     <button onclick="showErrors()">Show Stored Errors</button>
-    <button onclick="clearErrors()">Clear Errors</button>
     <div id="output"></div>
     <script>
         function triggerError() {
             // This will cause a ReferenceError
-            undefinedVariable.someProperty;
+            try {
+                undefinedVariable.someProperty;
+            } catch(e) {
+                // Error interceptor should catch this
+                console.log("Error triggered:", e);
+            }
         }
         
         function showErrors() {
             const errors = window.getStoredJsErrors ? window.getStoredJsErrors() : [];
-            document.getElementById('output').innerHTML = '<h2>Stored Errors:</h2><pre>' + JSON.stringify(errors, null, 2) + '</pre>';
-        }
-        
-        function clearErrors() {
-            if (window.clearStoredJsErrors) {
-                window.clearStoredJsErrors();
-                document.getElementById('output').innerHTML = '<p>Errors cleared</p>';
+            document.getElementById('output').innerHTML = '<h2>Stored Errors (count: ' + errors.length + '):</h2>';
+            if (errors.length === 0) {
+                document.getElementById('output').innerHTML += '<p>No errors captured yet.</p>';
+            } else {
+                document.getElementById('output').innerHTML += '<pre>' + JSON.stringify(errors.slice(-5), null, 2) + '</pre>'; // Show last 5 errors
             }
         }
+        
+        // Also show errors on page load
+        window.addEventListener('load', function() {
+            setTimeout(showErrors, 1000);
+        });
     </script>
 </body>
 </html>

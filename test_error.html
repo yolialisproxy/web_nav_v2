@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Interceptor Test</title>
+    <script src="assets/js/error-interceptor.js"></script>
+</head>
+<body>
+    <h1>Error Interceptor Test</h1>
+    <p>This page will trigger a ReferenceError to test the interceptor.</p>
+    <script>
+        // This will cause a ReferenceError that should be caught by our interceptor
+        undefinedVariable.someProperty;
+    </script>
+</body>
+</html>

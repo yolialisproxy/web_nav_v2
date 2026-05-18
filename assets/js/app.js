@@ -570,7 +570,6 @@ async function init() {
         });
     }
 
-}
 
 function renderSearchSuggestions(suggestions, query) {
     var container = document.getElementById('search-suggestions');

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error Interceptor Verification</title>
+    <script src="assets/js/error-interceptor.js"></script>
+</head>
+<body>
+    <h1>Error Interceptor Verification</h1>
+    <div id="result"></div>
+    <script>
+        // Trigger an error
+        try {
+            undefinedVariable.someProperty;
+        } catch(e) {
+            // Errors should be caught by the interceptor, but let's also log this
+            console.log("Error thrown:", e);
+        }
+        
+        // Check if any errors were captured
+        setTimeout(function() {
+            const errors = window.getStoredJsErrors ? window.getStoredJsErrors() : [];
+            const resultDiv = document.getElementById('result');
+            if (errors.length > 0) {
+                resultDiv.innerHTML = '<h2>Success! Error interceptor captured ' + errors.length + ' error(s):</h2>';
+                resultDiv.innerHTML += '<pre>' + JSON.stringify(errors, null, 2) + '</pre>';
+            } else {
+                resultDiv.innerHTML = '<h2>No errors captured yet.</h2>';
+                resultDiv.innerHTML += '<p>This might mean:</p><ul>';
+                resultDiv.innerHTML += '<li>The error interceptor is not working</li>';
+                resultDiv.innerHTML += '<li>The error was not triggered properly</li>';
+                resultDiv.innerHTML += '<li>There is a timing issue</li></ul>';
+            }
+            
+            // Also try to trigger another error to be sure
+            try {
+                anotherUndefinedFunc();
+            } catch(e2) {
+                console.log("Second error thrown:", e2);
+            }
+        }, 500);
+    </script>
+</body>
+</html>

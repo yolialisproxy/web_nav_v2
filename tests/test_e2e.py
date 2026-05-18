@@ -82,6 +82,15 @@ class TestE2E(unittest.TestCase):
             ready = self.page.evaluate("() => !!(window.renderer && window.state && window.dataManager && window.dataManager.isLoaded)")
             if ready:
                 break
+            
+            # NEW: Check for JavaScript errors every 50 iterations (every 2.5s)
+            if _ % 50 == 0:
+                errors = self.page.evaluate("""() => {
+                    return window.getStoredJsErrors ? window.getStoredJsErrors() : [];
+                }""")
+                if errors and len(errors) > 0:
+                    print(f"JS Errors detected during load: {errors}")
+            
             self.page.wait_for_timeout(50)
         else:
             self.fail("Core JS did not initialize within 45s")
@@ -126,6 +135,16 @@ class TestE2E(unittest.TestCase):
             if "err_network_changed" in lower:
                 continue
             filtered.append((t, e))
+        
+        # NEW: Report any captured JS errors from error interceptor
+        errors = self.page.evaluate("""() => {
+            return window.getStoredJsErrors ? window.getStoredJsErrors() : [];
+        }""")
+        if errors:
+            print(f"Test completed with {len(errors)} JS errors captured from error interceptor:")
+            for i, err in enumerate(errors[-5:]):  # Show last 5 errors
+                print(f"  Error {i+1}: {err.get('type', 'unknown')}: {err.get('message', 'no message')}")
+        
         self.assertEqual(len(filtered), 0, f"JS errors: {filtered}")
 
     def test_02_critical_elements_exist(self):
