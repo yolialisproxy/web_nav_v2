@@ -3,6 +3,8 @@
 ## 最近提交分析 (2026-05-18)
 
 - 最近10次提交:
+  - e540faf test_e2e: e2e stability fixes + DEVELOPMENT_GUIDELINES.md (2026-05-18 08:29:32 )
+  - 820cdd5 test_e2e: _load() resets localStorage view-mode to grid on every page load
   - cda0f15 gitignore: ignore debug_*.py temp scripts
   - 9f50dd1 Phase 31 docs: sync AGENTS.md + PROJECT_MANUAL.md milestone table (4 sub-commits)
   - df03bed test_e2e: test_04 search-clear — spin-wait on state.search.active instead of fixed timeout
@@ -11,8 +13,6 @@
   - 5f65dd9 Fix e2e remaining: category nav stub + render wait
   - 3d3204f Phase 31 e2e fix: playwright detection, test_42 static check, view-switcher DOM assertions
   - 15878e8 fixup: remove stale .tmp_ probe files, add .gitignore
-  - 3fa2b60 Phase 31 — test_08: fix page.evaluate f-string corruption
-  - 221ce38 Phase 31 — e2e test suite hardening + missing md CSS block
 
 ## 提交约定建议
 
