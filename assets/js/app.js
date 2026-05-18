@@ -90,19 +90,22 @@ async function init() {
             renderSites(false);
             return;
         }
+        await state.loadTags(dataManager);  // 标签系统已集成到 State
     }
-
     // 将 dataManager.raw 同步入 state.sites,确保数据源唯一
     // 使用 state.set 触发订阅者重渲染,保持 UI 与数据一致
     if (dataManager.raw && dataManager.raw.length > 0) {
-        console.log('[App] dataManager.raw length: ', dataManager.raw.length);\n        try {
-            console.log('[App] Setting state.sites with length: ', dataManager.raw.length);\n            state.set('sites', dataManager.raw);
-            console.log('[App] state.sites set, length: ', state.get('sites').length);\n            console.log('[App] state.sites set successfully');\n        } catch (_e) { console.warn('[App] state.sites set失败', _e); }
+        console.log('[App] dataManager.raw length: ', dataManager.raw.length);
+        try {
+            console.log('[App] Setting state.sites with length: ', dataManager.raw.length);
+            state.set('sites', dataManager.raw);
+            console.log('[App] state.sites set, length: ', state.get('sites').length);
+            console.log('[App] state.sites set successfully');
+        } catch (_e) { console.warn('[App] state.sites set失败', _e); }
     }
 
     // 初始化标签系统
     try {
-        await state.loadTags(dataManager);  // 标签系统已集成到 State
         renderTagCloud('tag-cloud-container');
     } catch (e) {
         console.warn('[App] 标签系统初始化失败:', e);
@@ -129,26 +132,7 @@ async function init() {
     // Toast通知
     Toast.init && Toast.init();
 
-    // 标签云展开/收起（tag-cloud-toggle）
-    var tagToggle = document.getElementById('tag-cloud-toggle');
-    var tagContainer = document.getElementById('tag-cloud-container');
-    if (tagToggle && tagContainer) {
-        tagToggle.setAttribute('role', 'button');
-        tagToggle.setAttribute('tabindex', '0');
-        tagToggle.addEventListener('click', function() {
-            var expanded = tagToggle.getAttribute('aria-expanded') === 'true';
-            tagToggle.setAttribute('aria-expanded', !expanded);
-            tagContainer.style.display = expanded ? 'none' : '';
-        });
-        tagToggle.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                tagToggle.click();
-            }
-        });
-    }
-
-    // 状态订阅 - 驱动UI渲染
+    // 标签云展开/收起（tag-cloud-toggle）\n    var tagToggle = document.getElementById('tag-cloud-toggle');\n    var tagContainer = document.getElementById('tag-cloud-container');\n    if (tagToggle && tagContainer) {\n        tagToggle.setAttribute('role', 'button');\n        tagToggle.setAttribute('tabindex', '0');\n        tagToggle.addEventListener('click', function() {\n            var expanded = tagToggle.getAttribute('aria-expanded') === 'true';\n            tagToggle.setAttribute('aria-expanded', !expanded);\n            tagContainer.style.display = expanded ? 'none' : '';\n        });\n        tagToggle.addEventListener('keydown', function(e) {\n            if (e.key === 'Enter' || e.key === ' ') {\n                e.preventDefault();\n                tagToggle.click();\n            }\n        });\n    }\n    // 状态订阅 - 驱动UI渲染
     state.subscribe(function(s) {
         try { renderer.renderSidebar(s); } catch(e) { console.error('[APP] Sidebar error:', e); }
 
