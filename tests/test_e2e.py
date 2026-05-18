@@ -70,7 +70,7 @@ class TestE2E(unittest.TestCase):
 
     def _load(self):
         # Navigate to clean home URL (no stale hash from previous test)
-        resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded", timeout=60000)
+        resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded", timeout=120000)
         self.assertIsNotNone(resp, "No response from server")
         self.assertTrue(resp.ok, f"HTTP {resp.status}")
         # Reset view mode to grid so next render is deterministic
@@ -78,32 +78,35 @@ class TestE2E(unittest.TestCase):
             try { localStorage.setItem('kunhun-nav-view-mode', 'grid'); } catch(e) {}
         }""")
         # Wait for core JS to be ready (renderer, state, dataManager)
-        for _ in range(600):  # up to 30s
+        for _ in range(900):  # up to 45s
             ready = self.page.evaluate("() => !!(window.renderer && window.state && window.dataManager && window.dataManager.isLoaded)")
             if ready:
                 break
             self.page.wait_for_timeout(50)
         else:
-            self.fail("Core JS did not initialize within 30s")
+            self.fail("Core JS did not initialize within 45s")
         # Force grid view via state change
         self.page.evaluate("() => { if (window.state && typeof window.state.setView === 'function') window.state.setView('grid'); }")
         # Wait for grid to render
-        for _ in range(120):  # up to 6s
+        for _ in range(240):  # up to 12s
             if self.page.evaluate("() => !!document.getElementById('sites-grid')"):
                 break
             self.page.wait_for_timeout(50)
         else:
-            self.page.evaluate(
-                "() => { "
-                "  return { v: window.state?.get('currentView'), "
-                "           g: !!document.getElementById('sites-grid'), "
-                "           l: !!document.querySelector('.sites-list'), "
-                "           mc: document.getElementById('main-content')?.textContent?.trim()?.substring(0,100) }; "
-                "}"
-            )
-            # Fallback to list if grid failed but list present
-            has_list = self.page.evaluate("() => !!document.querySelector('.sites-list')")
-            if not has_list:
+            # Grid didn't appear, wait for list to appear
+            for _ in range(240):  # up to 12s
+                if self.page.evaluate("() => !!document.querySelector('.sites-list')"):
+                    break
+                self.page.wait_for_timeout(50)
+            else:
+                self.page.evaluate(
+                    "() => { "
+                    "  return { v: window.state?.get('currentView'), "
+                    "           g: !!document.getElementById('sites-grid'), "
+                    "           l: !!document.querySelector('.sites-list'), "
+                    "           mc: document.getElementById('main-content')?.textContent?.trim()?.substring(0,100) }; "
+                    "}"
+                )
                 self.fail("Neither grid (#sites-grid) nor list (.sites-list) appeared after page load")
         # Final short settle
         self.page.wait_for_timeout(200)

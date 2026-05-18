@@ -234,7 +234,7 @@ class AcceptanceTest:
                 }""")
                 if is_closed:
                     await sidebar_toggle.click()
-                    await self.page.wait_for_timeout(500)  # Wait for animation
+                    await self.page.wait_for_timeout(1000)  # Wait for animation
 
             # Wait a bit more for dynamic content
             await self.page.wait_for_timeout(2000)
@@ -250,7 +250,12 @@ class AcceptanceTest:
                 print(f"   First category text: {text.strip()}")
                 # We expect it to contain "游戏"
                 if "游戏" in text:
-                    # Try to click with force=True
+                    # Ensure the element is visible and clickable
+                    await first_category.wait_for(state="visible", timeout=5000)
+                    # Scroll into view if needed
+                    await first_category.evaluate("el => el.scrollIntoView({block: 'center', inline: 'nearest'})")
+                    await self.page.wait_for_timeout(500)
+                    # Click with force
                     await first_category.click(force=True)
                     await self.page.wait_for_timeout(500)
                     self.results["tested_features"].append("category_navigation")
