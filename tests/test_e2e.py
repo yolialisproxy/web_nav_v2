@@ -73,20 +73,40 @@ class TestE2E(unittest.TestCase):
         resp = self.page.goto(BASE_URL + "/", wait_until="domcontentloaded")
         self.assertIsNotNone(resp, "No response from server")
         self.assertTrue(resp.ok, f"HTTP {resp.status}")
-        # Reset view mode to grid — prev tests may have toggled to list via localStorage
+        # Reset view mode to grid so next render is deterministic
         self.page.evaluate("""() => {
             try { localStorage.setItem('kunhun-nav-view-mode', 'grid'); } catch(e) {}
         }""")
-        self.page.wait_for_timeout(300)
-        # Wait for JS to fully render grid or list — spin until one appears
-        for _ in range(120):  # up to 6s
-            hg = self.page.evaluate("() => !!document.getElementById('sites-grid')")
-            hl = self.page.evaluate("() => !!document.querySelector('.sites-list')")
-            if hg or hl:
+        # Wait for core JS to be ready (renderer, state, dataManager)
+        for _ in range(200):  # up to 10s
+            ready = self.page.evaluate("() => !!(window.renderer && window.state && window.dataManager && window.dataManager.isLoaded)")
+            if ready:
                 break
             self.page.wait_for_timeout(50)
+        else:
+            self.fail("Core JS did not initialize within 10s")
+        # Force grid view via state change
+        self.page.evaluate("() => { if (window.state && typeof window.state.setView === 'function') window.state.setView('grid'); }")
+        # Wait for grid to render
+        for _ in range(120):  # up to 6s
+            if self.page.evaluate("() => !!document.getElementById('sites-grid')"):
+                break
+            self.page.wait_for_timeout(50)
+        else:
+            self.page.evaluate(
+                "() => { "
+                "  return { v: window.state?.get('currentView'), "
+                "           g: !!document.getElementById('sites-grid'), "
+                "           l: !!document.querySelector('.sites-list'), "
+                "           mc: document.getElementById('main-content')?.textContent?.trim()?.substring(0,100) }; "
+                "}"
+            )
+            # Fallback to list if grid failed but list present
+            has_list = self.page.evaluate("() => !!document.querySelector('.sites-list')")
+            if not has_list:
+                self.fail("Neither grid (#sites-grid) nor list (.sites-list) appeared after page load")
         # Final short settle
-        self.page.wait_for_timeout(300)
+        self.page.wait_for_timeout(200)
 
     # ── Tests ───────────────────────────────────────────
 
@@ -159,7 +179,12 @@ class TestE2E(unittest.TestCase):
 
         self.assertTrue(list_btn.is_visible(), "#view-list must be visible after md: rules are applied")
 
-        # Check initial state via active class (the primary visual indicator)
+        # Wait until grid button is active (may lag after _load)
+        self.page.wait_for_function(
+            "() => !!document.getElementById('view-grid')?.classList.contains('active')",
+            timeout=5000
+        )
+        # Now check active classes
         initial = self.page.evaluate("""() => ({
             g: document.getElementById('view-grid').classList.contains('active'),
             l: document.getElementById('view-list').classList.contains('active'),
@@ -208,17 +233,23 @@ class TestE2E(unittest.TestCase):
         # Use large-enough viewport height so header doesn't push main-content below screen
         self.page.set_viewport_size({"width": 1280, "height": 960})
         self._load()
-        self.page.wait_for_timeout(800)
-        # Assert elements have non-zero bounding rect (handles header content pushed below fold)
+        # Wait for layout to settle — check bounding rects with a spin loop
         for sel in ["#header", "#main-content", "#search-input"]:
-            rect = self.page.evaluate(
-                "sel => { const el = document.querySelector(sel);"
-                " if (!el) return null;"
-                " const r = el.getBoundingClientRect();"
-                " return +(r.width) > 0 && +(r.height) > 0; }",
-                sel
-            )
-            self.assertTrue(rect, "%s has zero or negative size at 1280x960" % sel)
+            import time as _t
+            deadline = _t.time() + 20  # up to 20s
+            while _t.time() < deadline:
+                rect = self.page.evaluate(
+                    "sel => { const el = document.querySelector(sel);"
+                    " if (!el) return null;"
+                    " const r = el.getBoundingClientRect();"
+                    " return +(r.width) > 0 && +(r.height) > 0; }",
+                    sel
+                )
+                if rect:
+                    break
+                self.page.wait_for_timeout(200)
+            else:
+                self.assertTrue(rect, "%s has zero or negative size at 1280x960" % sel)
 
     def test_09_mobile_layout(self):
         self.page.set_viewport_size({"width": 375, "height": 667})
@@ -255,13 +286,10 @@ class TestE2E(unittest.TestCase):
 
     def test_12_favorite_buttons_on_cards(self):
         self._load()
-        # Wait until at least one site-card is rendered before asserting
-        # (favorite buttons are injected by deferred favorite-ui-bootstrap.js, may appear after cards)
-        self.page.wait_for_selector(".site-card", timeout=15000)
-        for _ in range(60):  # up to 12s additional poll for favorite-btn injection
-            if self.page.locator(".site-card .favorite-btn").count() > 0:
-                break
-            self.page.wait_for_timeout(200)
+        # Favorite buttons are rendered inline inside each .site-card by _buildCard(),
+        # but if the favoriteManager hasn't loaded yet they may be missing initially.
+        # Wait for them with a dedicated selector (not just cards + poll).
+        self.page.wait_for_selector(".site-card .favorite-btn", timeout=20000)
         fav_btns = self.page.locator(".site-card .favorite-btn")
         self.assertGreater(fav_btns.count(), 0, "No favorite buttons on cards")
 
@@ -291,9 +319,15 @@ class TestE2E(unittest.TestCase):
         cards = self.page.locator(".site-card").count()
         # Must have 0 matching cards
         self.assertEqual(cards, 0, "Should have 0 results for nonexistent query")
-        # Check that the app shows an empty-state message
-        body_text = self.page.evaluate("() => document.querySelector('#main-content')?.textContent?.trim() || ''")
-        # Don't fail on exact message — just verify content reflects empty state
+        # Wait for empty-state message to appear (rendering is async after search debounce)
+        for _ in range(50):  # up to 5s
+            body_text = self.page.evaluate("() => document.querySelector('#main-content')?.textContent?.trim() || ''")
+            if body_text:
+                break
+            self.page.wait_for_timeout(100)
+        else:
+            body_text = self.page.evaluate("() => document.querySelector('#main-content')?.textContent?.trim() || ''")
+        # Just verify some text appears after empty search
         self.assertNotEqual(body_text, "", "main-content should contain some text after empty search")
 
     def test_15_view_switcher_toggles_dom_classes(self):
