@@ -1,73 +1,73 @@
 {
   "test_version": "V14",
-  "test_timestamp": "2026-05-18T10:54:24.696338",
+  "test_timestamp": "2026-05-18T11:53:17.021095",
   "base_url": "http://localhost:8080",
   "console_errors": [
     {
       "type": "console",
       "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=about.gitlab.com&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.504565"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=cml.dev&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.521898"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=dvc.org&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.522421"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
       "location": "https://www.google.com/s2/favicons?domain=gitea.wildfiregames.com&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.532569"
+      "timestamp": "2026-05-18T11:52:25.292500"
     },
     {
       "type": "console",
       "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
       "location": "https://www.google.com/s2/favicons?domain=jupyter.org&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.586086"
+      "timestamp": "2026-05-18T11:52:25.294998"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=cml.dev&sz=32:0",
+      "timestamp": "2026-05-18T11:52:25.295968"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=dvc.org&sz=32:0",
+      "timestamp": "2026-05-18T11:52:25.296320"
     },
     {
       "type": "console",
       "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
       "location": "https://www.google.com/s2/favicons?domain=sourceforge.net&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.586680"
+      "timestamp": "2026-05-18T11:52:25.296734"
     },
     {
       "type": "console",
       "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
       "location": "https://www.google.com/s2/favicons?domain=colanode.com&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.587227"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=gitlab.com&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.594914"
+      "timestamp": "2026-05-18T11:52:25.297054"
     },
     {
       "type": "console",
       "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
       "location": "https://www.google.com/s2/favicons?domain=duplicity.gitlab.io&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.595735"
-    },
-    {
-      "type": "console",
-      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
-      "location": "https://www.google.com/s2/favicons?domain=bitbucket.org&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.602112"
+      "timestamp": "2026-05-18T11:52:26.551084"
     },
     {
       "type": "console",
       "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
       "location": "https://www.google.com/s2/favicons?domain=emailrelay.sourceforge.net&sz=32:0",
-      "timestamp": "2026-05-18T10:53:41.609657"
+      "timestamp": "2026-05-18T11:52:26.551387"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=gitlab.com&sz=32:0",
+      "timestamp": "2026-05-18T11:52:26.559399"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=about.gitlab.com&sz=32:0",
+      "timestamp": "2026-05-18T11:52:26.562733"
+    },
+    {
+      "type": "console",
+      "text": "Failed to load resource: net::ERR_NETWORK_CHANGED",
+      "location": "https://www.google.com/s2/favicons?domain=bitbucket.org&sz=32:0",
+      "timestamp": "2026-05-18T11:52:26.563248"
     }
   ],
   "tested_features": [
@@ -75,14 +75,13 @@
     "screenshot",
     "search",
     "link_clicks",
-    "responsive_design"
+    "responsive_design",
+    "page_rendering"
   ],
   "passed": true,
   "issues": [
-    "No categories found for navigation test",
-    "Link click test 1 failed: Timeout 5000ms exceeded while waiting for event \"page\"",
-    "Link click test 2 failed: Timeout 5000ms exceeded while waiting for event \"page\"",
-    "Missing page elements: ['view_container']"
+    "Category navigation failed: Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"#sidebar-content .nav-item\").first\n    - locator resolved to <div class=\"nav-item\" data-category=\"其他\">…</div>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - element is outside of the viewport\n    - retrying click action\n    - waiting 20ms\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - element is outside of the viewport\n    - retrying click action\n      - waiting 100ms\n    55 × waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - element is outside of the viewport\n     - retrying click action\n       - waiting 500ms\n",
+    "Link click test 3 failed: Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"domcontentloaded\" event fired\n============================================================"
   ],
   "details": {
     "homepage_status": 200,
@@ -106,6 +105,14 @@
         "width": 375,
         "height": 667
       }
-    ]
+    ],
+    "page_elements": {
+      "header": true,
+      "sidebar": true,
+      "main_content": true,
+      "view_switcher": true,
+      "search_input": true,
+      "site_links": true
+    }
   }
 }
