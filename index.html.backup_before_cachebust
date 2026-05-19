@@ -68,9 +68,9 @@ window.trackSiteClick = window.trackSiteClick || function(name) {
   // 默认无操作 — 可由 analytics 模块覆盖
 };
 </script>
-    <link rel="stylesheet" href="assets/css/core.css?v=20260519">
-        <link rel="preload" href="assets/css/core.css?v=20260519" as="style">
-    <link rel="stylesheet" href="assets/css/app.css?v=20260519">
+    <link rel="stylesheet" href="assets/css/core.css">
+        <link rel="preload" href="assets/css/core.css" as="style">
+    <link rel="stylesheet" href="assets/css/app.css">
     <style>
 @font-face {
     font-family: 'FontAwesome';
@@ -101,9 +101,9 @@ html, body {
 }
 
     </style>
-    <link rel="stylesheet" href="assets/css/favorite-enhancements.css?v=20260519">
-    <link rel="stylesheet" href="assets/css/game-hub.css?v=20260519">
-    <link rel="stylesheet" href="assets/css/monetization.css?v=20260519">
+    <link rel="stylesheet" href="assets/css/favorite-enhancements.css">
+    <link rel="stylesheet" href="assets/css/game-hub.css">
+    <link rel="stylesheet" href="assets/css/monetization.css">
     <!-- PWA manifest -->
     <link rel="manifest" href="manifest.json">
 </head>
@@ -278,30 +278,30 @@ id="search-clear" class="absolute right-9 top-1/2 -translate-y-1/2 hidden" aria-
     <!-- 核心（同步，仅2个） -->
         <!-- LocalForage: 增强本地缓存 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/localforage/1.10.0/localforage.min.js" integrity="sha512-+BMamP0e7wn39JGL8nKAZ3yAQT2dL5oaXWr4ZYlTGkKOaoXM/Yj7c4oy50Ngz5yoUutAG17flueD4F6QpTlPng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="assets/js/state.js?v=20260519"></script>
-    <script src="assets/js/data.js?v=20260519" defer></script>
+<script src="assets/js/state.js"></script>
+    <script src="assets/js/data.js" defer></script>
     <!-- 非核心模块（defer延迟，不阻塞首屏渲染） -->
-    <script src="assets/js/search.js?v=20260519" defer></script>
-    <script src="assets/js/render.js?v=20260519" defer></script>
-    <script src="assets/js/tags.js?v=20260519" defer></script>
-    <script src="assets/js/favorite.js?v=20260519" defer></script>
-    <script src="assets/js/favorite-ui-bootstrap.js?v=20260519" defer></script>
-    <script src="assets/js/toast.js?v=20260519" defer></script>
-    <script src="assets/js/monetization.js?v=20260519" defer></script>
-    <script src="assets/js/app.js?v=20260519" defer></script>
+    <script src="assets/js/search.js" defer></script>
+    <script src="assets/js/render.js" defer></script>
+    <script src="assets/js/tags.js" defer></script>
+    <script src="assets/js/favorite.js" defer></script>
+    <script src="assets/js/favorite-ui-bootstrap.js" defer></script>
+    <script src="assets/js/toast.js" defer></script>
+    <script src="assets/js/monetization.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
     <!-- 游戏模块 -->
-    <script src="assets/js/game-utils.js?v=20260519" defer></script>
-    <script src="assets/js/games/game-engine.js?v=20260519" defer></script>
-    <script src="assets/js/games/solitaire.js?v=20260519" defer></script>
-    <script src="assets/js/games/tetris.js?v=20260519" defer></script>
-    <script src="assets/js/games/go.js?v=20260519" defer></script>
-    <script src="assets/js/games/chess.js?v=20260519" defer></script>
-    <script src="assets/js/games/mahjong.js?v=20260519" defer></script>
-    <script src="assets/js/games/wuxia.js?v=20260519" defer></script>
-    <script src="assets/js/games/dating.js?v=20260519" defer></script>
-        <script src="assets/js/games/2048.js?v=20260519" defer></script>
-    <script src="assets/js/games/gomoku.js?v=20260519" defer></script>
-<script src="assets/js/game-hub.js?v=20260519" defer></script>
+    <script src="assets/js/game-utils.js" defer></script>
+    <script src="assets/js/games/game-engine.js" defer></script>
+    <script src="assets/js/games/solitaire.js" defer></script>
+    <script src="assets/js/games/tetris.js" defer></script>
+    <script src="assets/js/games/go.js" defer></script>
+    <script src="assets/js/games/chess.js" defer></script>
+    <script src="assets/js/games/mahjong.js" defer></script>
+    <script src="assets/js/games/wuxia.js" defer></script>
+    <script src="assets/js/games/dating.js" defer></script>
+        <script src="assets/js/games/2048.js" defer></script>
+    <script src="assets/js/games/gomoku.js" defer></script>
+<script src="assets/js/game-hub.js" defer></script>
 
     <!-- 收藏弹窗（增强版） -->
     <div id="favorite-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="收藏面板">
@@ -372,7 +372,7 @@ id="search-clear" class="absolute right-9 top-1/2 -translate-y-1/2 hidden" aria-
     </script>
     
     <!-- JavaScript错误拦截器 -->
-    <script src="assets/js/error-interceptor.js?v=20260519" defer></script>
+    <script src="assets/js/error-interceptor.js" defer></script>
 
     <!-- PWA 安装提示横幅 -->
     <div id="install-banner" class="install-banner hidden" role="dialog" aria-label="安装提示">

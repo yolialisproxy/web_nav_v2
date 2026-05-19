@@ -128,7 +128,9 @@ async function init() {
     }
 
     // 初始化盈利模块
-    Monetization.init({ enabled: true });
+    if (typeof Monetization !== "undefined" && Monetization.init) {
+        Monetization.init({ enabled: true });
+    }
 
     // Toast通知
     Toast.init && Toast.init();
