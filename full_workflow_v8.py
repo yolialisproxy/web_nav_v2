@@ -128,7 +128,7 @@ def fix_data_js():
             site.id = siteId++;
             this.sites.set(site.id, site);
 
-            // 拆分分类路径，支持单级、二级、三级分类
+            // 拆分分类路径, 支持单级、二级、三级分类
             const parts = site.category.split('/').filter(Boolean);
             if (parts.length < 1) return;
 
