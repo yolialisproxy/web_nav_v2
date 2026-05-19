@@ -8,7 +8,7 @@
     
     // 错误存储键
     const ERROR_STORAGE_KEY = 'web_nav_v2_js_errors';
-    const MAX_ERRORS = 50; // 最多存储50个错误
+    const MAX_ERRORS = 1; // 只存储最新的一个错误
     
     // 获取现有错误或初始化空数组
     function getStoredErrors() {

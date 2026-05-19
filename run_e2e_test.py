@@ -50,6 +50,9 @@ def main():
         )
         ctx = browser.new_context(viewport={"width": 1280, "height": 720})
         page = ctx.new_page()
+        # Collect console errors
+        console_errors = []
+        page.on("console", lambda msg: console_errors.append(msg.text) if msg.type == "error" else None)
         
         BASE_URL = "http://localhost:8080"
         
@@ -65,26 +68,43 @@ def main():
         page.evaluate("""() => {
             try { localStorage.setItem('kunhun-nav-view-mode', 'grid'); } catch(e) {}
         }""")
+        # Clear stored JS errors to start fresh
+        page.evaluate("window.clearStoredJsErrors && window.clearStoredJsErrors();")
         
         # Wait for core JS to be ready (renderer, state, dataManager)
         print("Waiting for core JS to be ready...")
+        
         for i in range(900):  # up to 45s
             ready = page.evaluate("() => !!(window.renderer && window.state && window.dataManager && window.dataManager.isLoaded)")
             if ready:
                 print(f"Core JS ready at iteration {i}")
                 break
             
-            # Check for JavaScript errors every 50 iterations (every 2.5s)
+            # Check for JavaScript errors and log core status every 50 iterations (every 2.5s)
             if i % 50 == 0:
                 errors = page.evaluate("""() => {
                     return window.getStoredJsErrors ? window.getStoredJsErrors() : [];
                 }""")
+                coreStatus = page.evaluate("""() => {
+                    return {
+                        renderer: !!window.renderer,
+                        state: !!window.state,
+                        dataManager: !!window.dataManager,
+                        dataManagerIsLoaded: window.dataManager ? window.dataManager.isLoaded : false,
+                        stateSites: window.state ? window.state.get('sites') : undefined
+                    };
+                }""")
                 if errors and len(errors) > 0:
                     print(f"JS Errors detected during load: {errors}")
+                print(f"Core status at iteration {i}: {coreStatus}")
             
+            page.wait_for_timeout(50)
+                else:
+                    print(f"Still waiting for core JS... iteration {i}")
             page.wait_for_timeout(50)
         else:
             print("Core JS did not initialize within 45s")
+            print(f"Collected console errors: {console_errors}")
             # Let's see what's on the page
             content = page.content()
             print(f"Page content length: {len(content)}")
