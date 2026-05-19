@@ -138,10 +138,10 @@ def fix_data_js():
                 [cat, sub, leaf] = parts;
             } else if (parts.length === 2) {
                 [cat, sub] = parts;
-                leaf = sub; // 二级分类时,leaf使用sub的值
+                leaf = sub; // 二级分类时，leaf使用sub的值
             } else {
                 cat = parts[0];
-                sub = cat; // 单级分类时,sub和leaf都使用cat的值
+                sub = cat; // 单级分类时，sub和leaf都使用cat的值
                 leaf = cat;
             }
 
@@ -304,6 +304,7 @@ if __name__ == "__main__":
     check_data_integrity()
     generate_report()
     print("  ✅ 验收测试完成")
+'''
 
         with open('run_acceptance_tests.py', 'w', encoding='utf-8') as f:
             f.write(test_script)

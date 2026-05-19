@@ -181,9 +181,9 @@ ai_categories_detail = {
     "sub_categories": [
         {"name": "AI搜索引擎", "est": 40, "desc": "Perplexity、You.com等AI原生搜索"},
         {"name": "语义搜索", "est": 35, "desc": "向量搜索、语义理解搜索工具"},
-        {"name": "代码搜索", "est": 29, "desc": "AI增强的代码搜索引擎"}
-    ]}
-    "AI工具/人工智能/AI平台": {"count": 100, "dimension": "平台类型", "subs": [
+         {"name": "代码搜索", "est": 29, "desc": "AI增强的代码搜索引擎"}
+     ],
+     "AI工具/人工智能/AI平台": {"count": 100, "dimension": "平台类型", "subs": [
         {"name": "大模型平台", "est": 45, "desc": "OpenAI、Claude、Gemini等大模型平台"},
         {"name": "开源模型平台", "est": 30, "desc": "Hugging Face、ModelScope等开源模型社区"},
         {"name": "AI应用开发平台", "est": 25, "desc": "低代码AI开发、模型部署平台"}
