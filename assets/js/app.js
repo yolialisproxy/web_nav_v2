@@ -56,6 +56,7 @@ function initThemeToggle() {
 
 
 async function init() {
+    console.log('[App] init started');
     // 暴露全局函数
     window.renderSites = renderSites;
 
@@ -106,7 +107,7 @@ async function init() {
 
     // 初始化标签系统
     try {
-        renderTagCloud('tag-cloud-container');
+        state.renderTagCloud('tag-cloud-container');
     } catch (e) {
         console.warn('[App] 标签系统初始化失败:', e);
     }

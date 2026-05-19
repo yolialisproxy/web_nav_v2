@@ -55,10 +55,10 @@ class DataManager {
             }
 
             // 数据格式验证
-            this._validateSites(this.raw);
+    this.raw = this._validateSites(this.raw);
 
-            this._buildIndexes();
-            this.isLoaded = true;
+    this._buildIndexes();
+    this.isLoaded = true;
             this._loadError = null;
 
             // 保存到 localStorage 缓存以便恢复
@@ -285,8 +285,9 @@ _validateSites(sites) {
                 localStorage.removeItem('webnav_sites_cache');
                 return null;
             }
-            this._validateSites(parsed.data);
-            return parsed.data;
+            // 数据格式验证
+            const validatedData = this._validateSites(parsed.data);
+            return validatedData;
         } catch (e) {
             console.warn('[DataManager] (降级) 缓存加载失败:', e);
             localStorage.removeItem('webnav_sites_cache');
