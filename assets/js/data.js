@@ -55,10 +55,10 @@ class DataManager {
             }
 
             // 数据格式验证
-    this.raw = this._validateSites(this.raw);
+            this.raw = this._validateSites(this.raw);
 
-    this._buildIndexes();
-    this.isLoaded = true;
+            this._buildIndexes();
+            this.isLoaded = true;
             this._loadError = null;
 
             // 保存到 localStorage 缓存以便恢复
