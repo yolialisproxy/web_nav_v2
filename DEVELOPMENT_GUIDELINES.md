@@ -1,18 +1,18 @@
 # 开发准则
 
-## 最近提交分析 (2026-05-18)
+## 最近提交分析 (2026-05-19)
 
 - 最近10次提交:
-  - 1d8ce26 Auto commit at 2026年 05月 18日 星期一 19:01:31 CST
-  - b8e237e Auto commit at 2026年 05月 18日 星期一 17:05:20 CST
-  - b487a9a Auto commit at 2026年 05月 18日 星期一 16:08:42 CST
-  - f92c2a5 auto-push: 2026-05-18 15:01:53 CST
-  - b94f257 Fix acceptance test: improve category navigation and link click reliability
-  - 4618b25 Auto commit at 2026年 05月 18日 星期一 14:01:54 CST
-  - e27359a Auto commit at 2026年 05月 18日 星期一 13:02:18 CST
-  - 7248acf Auto commit at 2026年 05月 18日 星期一 12:05:13 CST
-  - f1f452d Auto commit at 2026年 05月 18日 星期一 11:05:03 CST
-  - 39a4248 auto-push: 2026-05-18 10:04:14 CST
+  - 918ab3c Auto commit at 2026年 05月 19日 星期二 16:00:52 CST
+  - c4e7810 Auto commit at 2026年 05月 19日 星期二 15:05:18 CST
+  - 3b3f13f auto-push: 2026-05-19 15:04:41 CST
+  - 7af53a5 Auto commit at 2026年 05月 19日 星期二 14:01:36 CST
+  - 7127205 Auto commit at 2026年 05月 19日 星期二 13:05:30 CST
+  - 74bcf27 feat(phase): update milestone tables with Phase 31 sub-commits (e2e 稳定性修复 + 开发指南, e2e _load() 重置本地存储视图模式)
+  - 42f4e2b Auto commit at 2026年 05月 19日 星期二 12:01:40 CST
+  - cc5de67 Auto commit at 2026年 05月 19日 星期二 11:03:01 CST
+  - ea9ebef Auto commit at 2026年 05月 19日 星期二 09:00:16 CST
+  - ffc106a Auto commit at 2026年 05月 18日 星期一 23:01:38 CST
 
 ## 提交约定建议
 
