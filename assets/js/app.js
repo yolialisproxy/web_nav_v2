@@ -674,10 +674,11 @@ function syncHashToState() {
     return loaded;
 }
 
-// window.renderer = renderer;
-window.state = state;
-window.dataManager = dataManager;
-window.searchEngine = searchEngine;
+    // 暴露全局变量
+    window.state = state;
+    window.dataManager = dataManager;
+    window.searchEngine = searchEngine;
+    window.renderer = renderer;
 
 // 全局错误捕获
 window.addEventListener('error', function(e) {
