@@ -22,20 +22,22 @@ Rules:
 - For cross-module "how does X relate to Y" questions, prefer `graphify query "<question>"`, `graphify path "<A>" "<B>"`, or `graphify explain "<concept>"` over grep — these traverse the graph's EXTRACTED + INFERRED edges instead of scanning files
 - After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost)
 
-| 阶段 | 主题 | Commit | 时间 |
-|---|---|---|---|
-|| Phase 23 | 游戏版块 9 款 | `4999418` | 2026-05 |
-|| Phase 24 | SEO 分级 + 标签云 + 预渲染 | `26f4771` | 2026-05-15 |
-|| Phase 25 | 列表视图 · 统一缓存 · 结构补全 · 游戏回归 | `363bec3` | 2026-05-16 |
-|| Phase 26 | 游戏评分星星显示 + 测试验证 | `06bed3c` | 2026-05-16 |
-|| Phase 27 | 游戏收藏按钮 + /api/games 端点 | `ea168d5` | 2026-05-16 |
-|| Phase 28 | 最近游戏快捷入口（recent filter） | `a767965` | 2026-05-16 |
-|| Phase 29 | 游戏时长统计 + 移动端竖屏 2 列 | `19d4233` | 2026-05-16 |
-|| Phase 30 | 预渲染数据路径修复 + 完整性验证 | `b2f2f56` | 2026-05-16 |
-
+|| 阶段 | 主题 | Commit | 时间 |
+||---|---|---|---|
+||| Phase 23 | 游戏版块 9 款 | `4999418` | 2026-05 |
+||| Phase 24 | SEO 分级 + 标签云 + 预渲染 | `26f4771` | 2026-05-15 |
+||| Phase 25 | 列表视图 · 统一缓存 · 结构补全 · 游戏回归 | `363bec3` | 2026-05-16 |
+||| Phase 26 | 游戏评分星星显示 + 测试验证 | `06bed3c` | 2026-05-16 |
+||| Phase 27 | 游戏收藏按钮 + /api/games 端点 | `ea168d5` | 2026-05-16 |
+||| Phase 28 | 最近游戏快捷入口（recent filter） | `a767965` | 2026-05-16 |
+||| Phase 29 | 游戏时长统计 + 移动端竖屏 2 列 | `19d4233` | 2026-05-16 |
+||| Phase 30 | 预渲染数据路径修复 + 完整性验证 | `b2f2f56` | 2026-05-16 |
 ||| Phase 31 | e2e 测试体系 + Bug 修复 | `bfcaad7` | 2026-05-17 |
 ||| Phase 31 | e2e playwright detect + test fixes | `3d3204f` | 2026-05-17 |
 ||| Phase 31 | e2e category nav + render wait fix | `5f65dd9` | 2026-05-17 |
 ||| Phase 31 | test_12 favorite-btn poll fix | `3703182` | 2026-05-17 |
+||| Phase 31 | test_04 search-clear spin-wait fix | `df03bed` | 2026-05-17 |
+||| Phase 31 | e2e 稳定性修复 + 开发指南 | `e540faf` | 2026-05-18 |
+||| Phase 31 | e2e _load() 重置本地存储视图模式 | `820cdd5` | 2026-05-18 |
 ||| Phase 31 | test_04 search-clear spin-wait fix | `df03bed` | 2026-05-17 |
 *本手册由 Phase 系统持续维护，根据工作进展更新。*

@@ -73,7 +73,6 @@ def main():
         
         # Wait for core JS to be ready (renderer, state, dataManager)
         print("Waiting for core JS to be ready...")
-        
         for i in range(900):  # up to 45s
             ready = page.evaluate("() => !!(window.renderer && window.state && window.dataManager && window.dataManager.isLoaded)")
             if ready:
@@ -91,6 +90,8 @@ def main():
                         state: !!window.state,
                         dataManager: !!window.dataManager,
                         dataManagerIsLoaded: window.dataManager ? window.dataManager.isLoaded : false,
+                        dataManagerRawLength: window.dataManager ? window.dataManager.raw?.length : -1,
+                        dataManagerSitesSize: window.dataManager ? window.dataManager.sites?.size : -1,
                         stateSites: window.state ? window.state.get('sites') : undefined
                     };
                 }""")
@@ -99,11 +100,11 @@ def main():
                 print(f"Core status at iteration {i}: {coreStatus}")
             
             page.wait_for_timeout(50)
-                else:
-                    print(f"Still waiting for core JS... iteration {i}")
-            page.wait_for_timeout(50)
         else:
             print("Core JS did not initialize within 45s")
+            # Check for JS errors from error interceptor
+            jsErrors = page.evaluate("window.getStoredJsErrors && window.getStoredJsErrors();")
+            print(f"JS errors from interceptor: {jsErrors}")
             print(f"Collected console errors: {console_errors}")
             # Let's see what's on the page
             content = page.content()
@@ -113,7 +114,6 @@ def main():
                 f.write(content)
             print("Saved page content to /tmp/debug_page.html")
             return 1
-        
         # Force grid view via state change
         page.evaluate("() => { if (window.state && typeof window.state.setView === 'function') window.state.setView('grid'); }")
         
