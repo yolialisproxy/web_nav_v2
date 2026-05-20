@@ -653,3 +653,42 @@
 [2026-05-19 22:59:49] 检查SEO基础标签...
 [2026-05-19 22:59:49] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260519.json
 [2026-05-19 22:59:49] === 任务完成: performance ===
+[2026-05-20 08:20:02] === 任务开始: performance ===
+[2026-05-20 08:20:02] 开始执行性能审计...
+[2026-05-20 08:20:02] 检查文件大小...
+[2026-05-20 08:20:02]   index.html: 22,216 bytes [OK]
+[2026-05-20 08:20:02]   core.css: 18,376 bytes [OK]
+[2026-05-20 08:20:02]   app.css: 32,054 bytes [OK]
+[2026-05-20 08:20:02] 预渲染页面: 142
+[2026-05-20 08:20:02] JS文件: 25个, 总大小: 337,949 bytes
+[2026-05-20 08:20:02] 图片文件: 306个, 总大小: 3,770,284 bytes
+[2026-05-20 08:20:02] Sitemap: 30,436 bytes
+[2026-05-20 08:20:02] 检查SEO基础标签...
+[2026-05-20 08:20:02] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260520.json
+[2026-05-20 08:20:02] === 任务完成: performance ===
+{
+  "timestamp": "2026-05-20T08:20:02.480749",
+  "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
+  "checks": {
+    "file_size_index.html": 22216,
+    "file_size_core.css": 18376,
+    "file_size_app.css": 32054,
+    "total_critical_size": 72646,
+    "prerendered_pages": 142,
+    "js_files_count": 25,
+    "js_total_size": 337949,
+    "image_files_count": 306,
+    "image_total_size": 3770284,
+    "sitemap_size": 30436,
+    "seo_basic": {
+      "has_meta_description": true,
+      "has_meta_keywords": true,
+      "has_canonical": true,
+      "has_og_title": true,
+      "has_viewport": true
+    }
+  },
+  "performance_score": 95
+}
+删除旧性能报告: performance_audit_20260517.json
+清理完成，删除了 1 份旧性能报告，保留最新的 3 份
