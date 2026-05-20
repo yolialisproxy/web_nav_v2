@@ -4,15 +4,6 @@
  * 职责:初始化,事件调度,SPA路由,键盘快捷键
  * 修复:统一所有功能到一个入口点
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 /**
  * 主题切换功能 (暗色/亮色/系统自动)
  */
@@ -60,54 +51,52 @@ function initThemeToggle() {
         state.set('theme', newTheme);
     });
 }
-function init() {
-    return __awaiter(this, void 0, void 0, function* () {
-        console.log('[App] init started');
-        // 暴露全局函数
-        window.renderSites = renderSites;
-        // 骨架屏已经在HTML中默认显示,无需额外设置
-        // 只需确保state.loading为true
-        if (state)
-            state.set('loading', true);
-        // 加载数据（带缓存降级）
-        let dataLoaded = false;
-        try {
-            yield dataManager.load();
-            dataLoaded = true;
-            console.log('[App] dataManager.load succeeded, raw length: ', dataManager.raw.length);
-        }
-        catch (e) {
-            console.error('[App] 数据加载失败:', e);
-            // 尝试从缓存恢复
-            try {
-                const cached = dataManager._loadCache();
-                if (cached && cached.length > 0) {
-                    // // // console.log('[App] 从缓存恢复数据:', cached.length, '条');
-                    dataManager.raw = cached;
-                    dataManager._buildIndexes();
-                    dataManager.isLoaded = true;
-                    dataLoaded = true;
-                    console.log('[App] dataManager.load from cache succeeded, raw length: ', dataManager.raw.length);
-                }
-            }
-            catch (cacheErr) {
-                console.error('[App] 缓存恢复也失败:', cacheErr);
-            }
-        }
-        if (!dataLoaded) {
-            renderSites(false);
-            return;
-        }
-        yield state.loadTags(dataManager); // 标签系统已集成到 State
-    });
-}
-// 将 dataManager.raw 同步入 state.sites,确保数据源唯一
-// 使用 state.set 触发订阅者重渲染,保持 UI 与数据一致
-if (dataManager.raw && dataManager.raw.length > 0) {
-    console.log('[App] dataManager.raw length: ', dataManager.raw.length);
+async function init() {
+    console.log('[App] init started');
+    // 暴露全局函数
+    window.renderSites = renderSites;
+    // 骨架屏已经在HTML中默认显示,无需额外设置
+    // 只需确保state.loading为true
+    if (state)
+        state.set('loading', true);
+    // 加载数据（带缓存降级）
+    let dataLoaded = false;
     try {
-        console.log('[App] Setting state.sites with length: ', dataManager.raw.length);
-        state.set('sites', dataManager.raw);
+        await window.dataManager.load();
+        dataLoaded = true;
+        console.log('[App] window.dataManager.load succeeded, raw length: ', window.dataManager.raw.length);
+    }
+    catch (e) {
+        console.error('[App] 数据加载失败:', e);
+        // 尝试从缓存恢复
+        try {
+            const cached = window.dataManager._loadCache();
+            if (cached && cached.length > 0) {
+                // // // console.log('[App] 从缓存恢复数据:', cached.length, '条');
+                window.dataManager.raw = cached;
+                window.dataManager._buildIndexes();
+                window.dataManager.isLoaded = true;
+                dataLoaded = true;
+                console.log('[App] window.dataManager.load from cache succeeded, raw length: ', window.dataManager.raw.length);
+            }
+        }
+        catch (cacheErr) {
+            console.error('[App] 缓存恢复也失败:', cacheErr);
+        }
+    }
+    if (!dataLoaded) {
+        renderSites(false);
+        return;
+    }
+    await state.loadTags(window.dataManager); // 标签系统已集成到 State
+}
+// 将 window.dataManager.raw 同步入 state.sites,确保数据源唯一
+// 使用 state.set 触发订阅者重渲染,保持 UI 与数据一致
+if (window.dataManager.raw && window.dataManager.raw.length > 0) {
+    console.log('[App] window.dataManager.raw length: ', window.dataManager.raw.length);
+    try {
+        console.log('[App] Setting state.sites with length: ', window.dataManager.raw.length);
+        state.set('sites', window.dataManager.raw);
         console.log('[App] state.sites set, length: ', state.get('sites').length);
         console.log('[App] state.sites set successfully');
     }
@@ -124,7 +113,7 @@ catch (e) {
 }
 // 搜索引擎初始化（后台任务）
 try {
-    initSearchEngine(dataManager);
+    initSearchEngine(window.dataManager);
 }
 catch (e) {
     console.warn('[App] 搜索初始化失败:', e.message);
@@ -198,12 +187,12 @@ window.addEventListener('hashchange', function () {
     syncHashToState();
 });
 // 初始路由
-var categories = Object.entries(dataManager.categories);
+var categories = Object.entries(window.dataManager.categories);
 var hashLoaded = syncHashToState();
 if (!hashLoaded && categories.length > 0) {
     var firstCatId = categories[0][0];
     state.set('sidebar.activeCategoryId', firstCatId);
-    var firstCat = dataManager.categories[firstCatId];
+    var firstCat = window.dataManager.categories[firstCatId];
     if (firstCat) {
         var subCats = firstCat.subCategories;
         if (subCats) {
@@ -651,11 +640,11 @@ function syncHashToState() {
     const sub = params.get('sub');
     const leaf = params.get('leaf');
     let loaded = false;
-    if (category && dataManager.categories[category]) {
+    if (category && window.dataManager.categories[category]) {
         state.set('sidebar.activeCategoryId', category);
         loaded = true;
         if (sub) {
-            const cat = dataManager.categories[category];
+            const cat = window.dataManager.categories[category];
             if (cat.subCategories && cat.subCategories[sub]) {
                 state.set('sidebar.activeSubCategoryId', sub);
                 if (leaf) {
@@ -671,7 +660,7 @@ function syncHashToState() {
 }
 // 暴露全局变量
 window.state = state;
-window.dataManager = dataManager;
+window.dataManager = window.dataManager;
 window.searchEngine = searchEngine;
 window.renderer = renderer;
 // 全局错误捕获

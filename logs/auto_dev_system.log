@@ -1120,4 +1120,59 @@
     "eb10dc6 auto-push: 2026-05-19 21:03:55 CST"
   ],
   "guidelines_generated": "/home/yoli/GitHub/web_nav_v2/DEVELOPMENT_GUIDELINES.md"
+}[2026-05-20 20:30:23] === 任务开始: performance ===
+[2026-05-20 20:30:23] 开始执行性能审计...
+[2026-05-20 20:30:23] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260520.json
+[2026-05-20 20:30:23] === 任务完成: performance ===
+{
+  "timestamp": "2026-05-20T20:30:23.664526",
+  "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
+  "checks": {
+    "file_size_index.html": 21919,
+    "file_size_core.css": 18376,
+    "file_size_app.css": 32054,
+    "total_critical_size": 72349,
+    "prerendered_pages": 142,
+    "js_files_count": 24,
+    "js_total_size": 333957,
+    "image_files_count": 306,
+    "image_total_size": 3770284,
+    "sitemap_size": 30436,
+    "seo_basic": {
+      "has_meta_description": true,
+      "has_meta_keywords": true,
+      "has_canonical": true,
+      "has_og_title": true,
+      "has_viewport": true
+    }
+  },
+  "performance_score": 95
+}
+[2026-05-20 20:36:23] === 任务开始: performance ===
+[2026-05-20 20:36:23] 开始执行性能审计...
+[2026-05-20 20:36:23] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260520.json
+[2026-05-20 20:36:23] === 任务完成: performance ===
+{
+  "timestamp": "2026-05-20T20:36:23.027122",
+  "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
+  "checks": {
+    "file_size_index.html": 21919,
+    "file_size_core.css": 18376,
+    "file_size_app.css": 32054,
+    "total_critical_size": 72349,
+    "prerendered_pages": 142,
+    "js_files_count": 25,
+    "js_total_size": 349604,
+    "image_files_count": 306,
+    "image_total_size": 3770284,
+    "sitemap_size": 30436,
+    "seo_basic": {
+      "has_meta_description": true,
+      "has_meta_keywords": true,
+      "has_canonical": true,
+      "has_og_title": true,
+      "has_viewport": true
+    }
+  },
+  "performance_score": 95
 }

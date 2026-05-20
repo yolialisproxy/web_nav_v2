@@ -2,18 +2,20 @@
   "compilerOptions": {
     "target": "es2017",
     "module": "none",
+    "ignoreDeprecations": "6.0",
     "rootDir": "./assets/js",
     "outDir": "./assets/js",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "removeComments": false,
     "sourceMap": true,
-    "lib": ["es2017", "dom"]
+    "lib": ["es2019", "dom"]
   },
   "include": [
-    "assets/js/**/*.ts"
+    "assets/js/**/*.ts",
+    "assets/js/**/*.d.ts"
   ],
   "exclude": [
     "node_modules"
