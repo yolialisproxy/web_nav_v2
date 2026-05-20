@@ -30,18 +30,18 @@ function initThemeToggle() {
     }
     
     // 初始更新
-    updateThemeIcon(state.get('theme') as string);
+    updateThemeIcon(state.get('theme'));
     
     // 监听状态变化
     state.subscribe(function(s) {
         if (s.theme) {
-            updateThemeIcon(s.theme as string);
+            updateThemeIcon(s.theme);
         }
     });
     
     // 绑定点击事件
     toggleBtn.addEventListener('click', function() {
-        const currentTheme = state.get('theme') as string;
+        const currentTheme = state.get('theme');
         let newTheme;
         if (currentTheme === 'light') {
             newTheme = 'dark';
@@ -67,21 +67,21 @@ async function init() {
     // 加载数据（带缓存降级）
     let dataLoaded = false;
     try {
-        await window.dataManager.load();
+        await dataManager.load();
         dataLoaded = true;
-        console.log('[App] window.dataManager.load succeeded, raw length: ', window.dataManager.raw.length);
+        console.log('[App] dataManager.load succeeded, raw length: ', dataManager.raw.length);
     } catch (e) {
         console.error('[App] 数据加载失败:', e);
         // 尝试从缓存恢复
         try {
-            const cached = window.dataManager._loadCache();
+            const cached = dataManager._loadCache();
             if (cached && cached.length > 0) {
                 // // // console.log('[App] 从缓存恢复数据:', cached.length, '条');
-                window.dataManager.raw = cached;
-                window.dataManager._buildIndexes();
-                window.dataManager.isLoaded = true;
+                dataManager.raw = cached;
+                dataManager._buildIndexes();
+                dataManager.isLoaded = true;
                 dataLoaded = true;
-                console.log('[App] window.dataManager.load from cache succeeded, raw length: ', window.dataManager.raw.length);
+                console.log('[App] dataManager.load from cache succeeded, raw length: ', dataManager.raw.length);
             }
         } catch (cacheErr) {
             console.error('[App] 缓存恢复也失败:', cacheErr);
@@ -91,15 +91,15 @@ async function init() {
             renderSites(false);
             return;
         }
-        await state.loadTags(window.dataManager);  // 标签系统已集成到 State
+        await state.loadTags(dataManager);  // 标签系统已集成到 State
     }
-    // 将 window.dataManager.raw 同步入 state.sites,确保数据源唯一
+    // 将 dataManager.raw 同步入 state.sites,确保数据源唯一
     // 使用 state.set 触发订阅者重渲染,保持 UI 与数据一致
-    if (window.dataManager.raw && window.dataManager.raw.length > 0) {
-        console.log('[App] window.dataManager.raw length: ', window.dataManager.raw.length);
+    if (dataManager.raw && dataManager.raw.length > 0) {
+        console.log('[App] dataManager.raw length: ', dataManager.raw.length);
         try {
-            console.log('[App] Setting state.sites with length: ', window.dataManager.raw.length);
-            state.set('sites', window.dataManager.raw);
+            console.log('[App] Setting state.sites with length: ', dataManager.raw.length);
+            state.set('sites', dataManager.raw);
             console.log('[App] state.sites set, length: ', state.get('sites').length);
             console.log('[App] state.sites set successfully');
         } catch (_e) { console.warn('[App] state.sites set失败', _e); }
@@ -113,7 +113,7 @@ async function init() {
     }
 
     // 搜索引擎初始化（后台任务）
-    try { initSearchEngine(window.dataManager); } catch(e) { console.warn('[App] 搜索初始化失败:', e.message); }
+    try { initSearchEngine(dataManager); } catch(e) { console.warn('[App] 搜索初始化失败:', e.message); }
     // 初始化主题切换
     initThemeToggle();
 
@@ -181,14 +181,14 @@ async function init() {
     });
 
     // 初始路由
-    var categories = Object.entries(window.dataManager.categories);
+    var categories = Object.entries(dataManager.categories);
     var hashLoaded = syncHashToState();
 
     if (!hashLoaded && categories.length > 0) {
         var firstCatId = categories[0][0];
         state.set('sidebar.activeCategoryId', firstCatId);
 
-        var firstCat = window.dataManager.categories[firstCatId];
+        var firstCat = dataManager.categories[firstCatId];
         if (firstCat) {
             var subCats = firstCat.subCategories;
             if (subCats) {
@@ -658,11 +658,11 @@ function syncHashToState() {
     const sub = params.get('sub');
     const leaf = params.get('leaf');
     let loaded = false;
-    if (category && window.dataManager.categories[category]) {
+    if (category && dataManager.categories[category]) {
         state.set('sidebar.activeCategoryId', category);
         loaded = true;
         if (sub) {
-            const cat = window.dataManager.categories[category];
+            const cat = dataManager.categories[category];
             if (cat.subCategories && cat.subCategories[sub]) {
                 state.set('sidebar.activeSubCategoryId', sub);
                 if (leaf) {
@@ -679,7 +679,7 @@ function syncHashToState() {
 
     // 暴露全局变量
     window.state = state;
-    window.dataManager = window.dataManager;
+    window.dataManager = dataManager;
     window.searchEngine = searchEngine;
     window.renderer = renderer;
 

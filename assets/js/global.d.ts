@@ -14,7 +14,7 @@ interface Window {
     __errorInterceptorInitialized?: boolean;
     localforage: any;
     trackSiteClick: (name: string) => void;
-    renderSites: (append: boolean) => void;
+    renderSites: (sites: any, containerId?: string) => void;
 }
 
 interface HTMLElement {
