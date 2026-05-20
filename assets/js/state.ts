@@ -1,54 +1,9 @@
+"use strict";
 /**
  * state.js - 全局状态机 (V2.1)
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
-
 class State {
-    private _state: {
-        theme: string;
-        sidebar: {
-            mode: string;
-            activeCategoryId: string | null;
-            activeSubCategoryId: string | null;
-            activeLeafId: string | null;
-        };
-        search: {
-            active: boolean;
-            query: string;
-            results: any[];
-        };
-        filterTags: string[];
-        searchMode: boolean;      // 是否在搜索覆盖层模式
-        sites: any[];             // 站点数据
-        loading: boolean;         // 加载状态
-        currentView: string;      // 当前视图: grid, list, category, games
-    };
-    private _subscribers: Array<(state: any) => void>;
-    // LocalForage 缓存配置
-    private _cache: {
-        version: number;
-        keys: {
-            sites: string;
-            tags: string;
-            sidebar: string;
-            theme: string;
-        };
-        ttl: {
-            sites: number;
-            tags: number;
-            sidebar: number;
-            theme: number;
-        };
-    };
-    private _cacheReady: boolean;
-    private _cacheBackend: any;
-    // 标签系统（从 tags.js 合并而来）
-    tagAll: Map<string, number>;
-    tagSites: Map<number, string[]>;
-    activeTags: Set<string>;
-    private _tagInitialized: boolean;
-    private _isNotifying: boolean; // 防止 _notify 重入导致的无限循环
-
     constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
@@ -64,10 +19,10 @@ class State {
                 results: []
             },
             filterTags: [],
-            searchMode: false,      // 是否在搜索覆盖层模式
-            sites: [],              // 站点数据
-            loading: true,          // 初始为加载中
-            currentView: 'grid'     // 默认视图
+            searchMode: false, // 是否在搜索覆盖层模式
+            sites: [], // 站点数据
+            loading: true, // 初始为加载中
+            currentView: 'grid' // 默认视图
         };
         this._subscribers = [];
         // LocalForage 缓存配置
@@ -80,26 +35,24 @@ class State {
                 theme: 'nav_theme_v1'
             },
             ttl: {
-                sites: 24 * 60 * 60 * 1000,    // 24h
-                tags: 60 * 60 * 1000,           // 1h
+                sites: 24 * 60 * 60 * 1000, // 24h
+                tags: 60 * 60 * 1000, // 1h
                 sidebar: 7 * 24 * 60 * 60 * 1000, // 7d
-                theme: 0  // 永不过期
+                theme: 0 // 永不过期
             }
         };
         this._cacheReady = false;
-        this._initCache();  // 异步初始化缓存
+        this._initCache(); // 异步初始化缓存
         // 标签系统（从 tags.js 合并而来）
-        this.tagAll = new Map();      // tag -> count
-        this.tagSites = new Map();   // site id -> tags[]
+        this.tagAll = new Map(); // tag -> count
+        this.tagSites = new Map(); // site id -> tags[]
         this.activeTags = new Set();
         this._tagInitialized = false;
         this._isNotifying = false; // 防止 _notify 重入导致的无限循环
     }
-
-    set(key: string, value: any) {
+    set(key, value) {
         const keys = key.split('.');
         let target = this._state;
-
         for (let i = 0; i < keys.length - 1; i++) {
             const k = keys[i];
             if (target[k] === undefined || target[k] === null) {
@@ -112,73 +65,65 @@ class State {
             }
             target = target[k];
         }
-
         const lastKey = keys[keys.length - 1];
         if (!target || typeof target !== 'object') {
             console.warn(`[State] 无效路径 "${key}"`);
             return;
         }
-
-        if (target[lastKey] === value) return;
-
+        if (target[lastKey] === value)
+            return;
         target[lastKey] = value;
-
         if (key === 'theme') {
             localStorage.setItem('theme', value);
             document.documentElement.dataset.theme = this._resolveTheme(value);
         }
-
         // 骨架屏控制：数据加载完成后隐藏
         if (key === 'loading' && value === false) {
             this._hideSkeleton();
         }
-
         this._notify();
     }
-
-    get(key: string) {
+    get(key) {
         try {
             return key.split('.').reduce((obj, k) => {
                 return (obj && typeof obj === 'object' ? obj[k] : undefined);
             }, this._state);
-        } catch (e) {
+        }
+        catch (e) {
             console.warn(`[State] 读取路径失败: "${key}"`, e);
             return undefined;
         }
     }
-
-    subscribe(callback: (state: any) => void) {
+    subscribe(callback) {
         this._subscribers.push(callback);
         return () => {
             this._subscribers = this._subscribers.filter(cb => cb !== callback);
         };
     }
-
-    private _notify() {
-        if (this._isNotifying) return;
+    _notify() {
+        if (this._isNotifying)
+            return;
         this._isNotifying = true;
         try {
             this._subscribers.forEach(cb => cb(this._state));
-        } finally {
+        }
+        finally {
             this._isNotifying = false;
         }
     }
-
-    private _resolveTheme(theme: string): string {
+    _resolveTheme(theme) {
         if (theme === 'system') {
             return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
         return theme;
     }
-
-    private _hideSkeleton() {
+    _hideSkeleton() {
         const skeleton = document.getElementById('skeleton-screen');
         if (skeleton) {
             skeleton.classList.add('hidden');
             setTimeout(() => skeleton.remove(), 500);
         }
     }
-
     // ════════════════════════════════════════════════
     // LocalForage 缓存层
     // ════════════════════════════════════════════════
@@ -193,7 +138,7 @@ class State {
             return;
         }
         try {
-            await (localforage as any).config({
+            await localforage.config({
                 name: 'nav_web',
                 storeName: 'cache_v1',
                 version: this._cache.version
@@ -202,24 +147,25 @@ class State {
             this._cacheReady = true;
             // 后台恢复
             this._restoreFromCache();
-        } catch (e) {
+        }
+        catch (e) {
             console.warn('[State] LocalForage 不可用，降级到 localStorage', e);
             this._cacheBackend = localStorage;
             this._cacheReady = true;
         }
     }
-
     /**
      * 从缓存恢复状态
      */
-    private _restoreFromCache() {
-        if (!this._cacheReady) return;
-
-        const restore = async (key: string) => {
+    _restoreFromCache() {
+        if (!this._cacheReady)
+            return;
+        const restore = async (key) => {
             try {
                 const raw = await this._cacheBackend.getItem(key);
-                if (!raw) return null;
-                const {value, ts} = raw;
+                if (!raw)
+                    return null;
+                const { value, ts } = raw;
                 // TTL 检查
                 const ttl = this._cache.ttl[key.split('_')[1]] || 0;
                 if (ttl > 0 && Date.now() - ts > ttl) {
@@ -227,11 +173,11 @@ class State {
                     return null;
                 }
                 return value;
-            } catch (e) {
+            }
+            catch (e) {
                 return null;
             }
         };
-
         // 并行恢复
         Promise.all([
             restore(this._cache.keys.sites),
@@ -246,15 +192,15 @@ class State {
             if (tagsData && tagsData.allTags) {
                 this.tagAll = new Map(Object.entries(tagsData.allTags));
                 // Convert tagSites: { [string]: string[] } -> Map<number, string[]>
-                const tagSitesMap = new Map<number, string[]>();
+                const tagSitesMap = new Map();
                 for (const [k, v] of Object.entries(tagsData.tagSites)) {
-                    tagSitesMap.set(parseInt(k, 10), v as string[]);
+                    tagSitesMap.set(parseInt(k, 10), v);
                 }
                 this.tagSites = tagSitesMap;
                 this.activeTags = new Set(tagsData.activeTags || []);
             }
             if (sidebar) {
-                this._state.sidebar = {...this._state.sidebar, ...sidebar};
+                this._state.sidebar = Object.assign(Object.assign({}, this._state.sidebar), sidebar);
             }
             if (theme && ['light', 'dark', 'system'].includes(theme)) {
                 this._state.theme = theme;
@@ -263,12 +209,12 @@ class State {
             this._notify();
         });
     }
-
     /**
      * 保存到缓存（增量）
      */
-    async _saveToCache(key: string, value: any) {
-        if (!this._cacheReady) return;
+    async _saveToCache(key, value) {
+        if (!this._cacheReady)
+            return;
         try {
             const payload = {
                 value,
@@ -276,48 +222,50 @@ class State {
                 v: this._cache.version
             };
             await this._cacheBackend.setItem(key, payload);
-        } catch (e) {
+        }
+        catch (e) {
             // 静默失败（配额超限等）
         }
     }
-
     /**
      * 强制清空所有缓存
      */
     async clearCache() {
-        if (!this._cacheReady) return;
+        if (!this._cacheReady)
+            return;
         try {
             const keys = await this._cacheBackend.keys();
             for (const key of keys) {
-                if (key.startsWith('nav_')) await this._cacheBackend.removeItem(key);
+                if (key.startsWith('nav_'))
+                    await this._cacheBackend.removeItem(key);
             }
             console.log('[State] 缓存已清空');
-        } catch (e) {
+        }
+        catch (e) {
             console.warn('[State] 清空缓存失败', e);
         }
     }
-
     // ════════════════════════════════════════════════
     // 标签系统（从 tags.js 合并）
     // ════════════════════════════════════════════════
     /**
      * 初始化标签索引
      */
-    async loadTags(dataManager: any) {
-        if (this._tagInitialized) return;
+    async loadTags(dataManager) {
+        if (this._tagInitialized)
+            return;
         let loadedFromJson = false;
-
         try {
             const resp = await fetch('data/tag_index.json');
             if (resp.ok) {
                 const tagIndex = await resp.json();
-                tagIndex.forEach((t: {tag: string; count: number}) => this.tagAll.set(t.tag, t.count));
+                tagIndex.forEach((t) => this.tagAll.set(t.tag, t.count));
                 loadedFromJson = true;
             }
-        } catch (e) {
+        }
+        catch (e) {
             // 忽略，将从站点数据构建
         }
-
         this._buildTagsFromSites(dataManager);
         this._tagInitialized = true;
         // 标签数据变更后持久化
@@ -328,85 +276,91 @@ class State {
         };
         this._saveToCache(this._cache.keys.tags, tagsData);
     }
-
     /**
      * 从站点数据构建标签索引
      */
-    private _buildTagsFromSites(dm: any) {
+    _buildTagsFromSites(dm) {
         this.tagAll.clear();
         this.tagSites.clear();
-
-        if (!dm || !dm.sites) return;
-
-        dm.sites.forEach((site: any) => {
-            if (!site.tags || !Array.isArray(site.tags)) return;
-            const validTags: string[] = [];
-            site.tags.forEach((tag: any) => {
-                if (!tag || typeof tag !== 'string') return;
+        if (!dm || !dm.sites)
+            return;
+        dm.sites.forEach((site) => {
+            if (!site.tags || !Array.isArray(site.tags))
+                return;
+            const validTags = [];
+            site.tags.forEach((tag) => {
+                if (!tag || typeof tag !== 'string')
+                    return;
                 const key = tag.trim().toLowerCase();
-                if (!key) return;
+                if (!key)
+                    return;
                 validTags.push(tag.trim());
-                if (!this.tagAll.has(key)) this.tagAll.set(key, 0);
+                if (!this.tagAll.has(key))
+                    this.tagAll.set(key, 0);
                 this.tagAll.set(key, this.tagAll.get(key) + 1);
             });
-            if (validTags.length > 0) this.tagSites.set(site.id, validTags);
+            if (validTags.length > 0)
+                this.tagSites.set(site.id, validTags);
         });
     }
-
     /**
      * 获取站点的标签
      */
-    getSiteTags(site: any): string[] {
-        if (site && site.tags) return site.tags;
-        if (site && this.tagSites.has(site.id)) return this.tagSites.get(site.id);
+    getSiteTags(site) {
+        if (site && site.tags)
+            return site.tags;
+        if (site && this.tagSites.has(site.id))
+            return this.tagSites.get(site.id);
         return [];
     }
-
     /**
      * 根据标签筛选站点
      */
-    filterByTags(sites: any[], tags: string[]): any[] {
-        if (!tags || !tags.length) return sites;
+    filterByTags(sites, tags) {
+        if (!tags || !tags.length)
+            return sites;
         const tagSet = new Set(tags.map(t => t.toLowerCase()));
         return sites.filter(site => {
             const keys = this.getSiteTags(site).map(t => t.toLowerCase());
             return Array.from(tagSet).some(t => keys.includes(t));
         });
     }
-
     /**
      * 切换标签激活状态
      */
-    toggleTag(tag: string, mode: 'toggle' | 'set' | 'clear' | 'exact' = 'toggle'): number {
+    toggleTag(tag, mode = 'toggle') {
         const key = tag.toLowerCase();
         if (mode === 'toggle') {
             this.activeTags.has(key) ? this.activeTags.delete(key) : this.activeTags.add(key);
-        } else if (mode === 'set') {
-            this.activeTags.clear(); this.activeTags.add(key);
-        } else if (mode === 'clear') {
+        }
+        else if (mode === 'set') {
             this.activeTags.clear();
-        } else if (mode === 'exact') {
-            this.activeTags.clear(); this.activeTags.add(key);
+            this.activeTags.add(key);
+        }
+        else if (mode === 'clear') {
+            this.activeTags.clear();
+        }
+        else if (mode === 'exact') {
+            this.activeTags.clear();
+            this.activeTags.add(key);
         }
         return this.activeTags.size;
     }
-
     /**
      * 获取激活的标签列表
      */
-    getActiveTags(): string[] {
+    getActiveTags() {
         return Array.from(this.activeTags);
     }
-
     /**
      * 渲染标签云 UI
      */
-    renderTagCloud(containerId: string, options: { limit?: number } = {}) {
+    renderTagCloud(containerId, options = {}) {
         const container = document.getElementById(containerId);
-        if (!container) return;
+        if (!container)
+            return;
         const limit = options.limit || 50;
-
-        const tagsArray: {tag: string; count: number; active: boolean}[] = [];
+        const tagsArray = [];
         this.tagAll.forEach((count, tag) => {
             tagsArray.push({ tag, count, active: this.activeTags.has(tag) });
         });
@@ -414,26 +368,24 @@ class State {
         if (tagsArray.length > limit) {
             tagsArray.length = limit;
         }
-
         if (tagsArray.length === 0) {
             container.innerHTML = '<div class=\"tag-cloud\"><span class=\"tag-pill\" style=\"opacity:0.5\">暂无标签</span></div>';
             return;
         }
-
         let html = '<div class=\"tag-cloud\">';
         tagsArray.forEach(t => {
             const size = Math.max(0.8, Math.min(1.6, 0.8 + t.count / 500));
             html += `<a href=\"#\" class=\"tag-pill ${t.active ? 'active' : ''}\" ` +
-                    `data-tag=\"${t.tag}\" style=\"font-size:${size}em\" ` +
-                    `title=\"${t.tag} (${t.count} sites)\" tabindex=\"0\" role=\"button\" aria-pressed=\"${t.active}\">` +
-                    `${this._escapeHtml(t.tag)}<span class=\"tag-count\">${t.count}</span></a>`;
+                `data-tag=\"${t.tag}\" style=\"font-size:${size}em\" ` +
+                `title=\"${t.tag} (${t.count} sites)\" tabindex=\"0\" role=\"button\" aria-pressed=\"${t.active}\">` +
+                `${this._escapeHtml(t.tag)}<span class=\"tag-count\">${t.count}</span></a>`;
         });
         html += '</div>';
         container.innerHTML = html;
-
         container.querySelectorAll('.tag-pill').forEach(el => {
-            const handler = (e: MouseEvent) => {
-                e.preventDefault(); e.stopPropagation();
+            const handler = (e) => {
+                e.preventDefault();
+                e.stopPropagation();
                 const tag = el.dataset.tag;
                 if (tag !== undefined) {
                     this.toggleTag(tag);
@@ -445,24 +397,24 @@ class State {
                 }
             };
             el.addEventListener('click', handler);
-            el.addEventListener('keydown', (e: KeyboardEvent) => {
+            el.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault(); handler(e as MouseEvent); // 类型不匹配但能工作
+                    e.preventDefault();
+                    handler(e); // 类型不匹配但能工作
                 }
             });
         });
     }
-
     /**
      * 转义 HTML 防止 XSS
      */
-    private _escapeHtml(text: string): string {
-        if (!text) return '';
+    _escapeHtml(text) {
+        if (!text)
+            return '';
         const div = document.createElement('div');
         div.appendChild(document.createTextNode(text));
         return div.innerHTML;
     }
-
     /**
      * 标签相关：禁用警告
      */
@@ -470,11 +422,10 @@ class State {
         console.warn('[State] window.tagManager 已废弃，请使用 state.tags 相关 API');
         return null;
     }
-
     // ════════════════════════════════════════════════
     // 视图切换：网格 / 列表 / 分类
     // ════════════════════════════════════════════════
-    setView(mode: string) {
+    setView(mode) {
         if (!['grid', 'list', 'category', 'games'].includes(mode)) {
             console.warn('[State] 无效视图模式:', mode);
             return;
@@ -482,6 +433,6 @@ class State {
         this.set('currentView', mode);
     }
 }
-
 const state = new State();
 window.state = state;
+//# sourceMappingURL=state.js.map

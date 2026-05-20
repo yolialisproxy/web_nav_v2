@@ -6,12 +6,18 @@
     "rootDir": "./assets/js",
     "outDir": "./assets/js",
     "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noEmitOnError": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "removeComments": false,
     "sourceMap": true,
-    "lib": ["es2019", "dom"]
+    "lib": ["es2019", "dom"],
+    "allowJs": true,
+    "checkJs": false,
+    "isolatedModules": true
   },
   "include": [
     "assets/js/**/*.ts",

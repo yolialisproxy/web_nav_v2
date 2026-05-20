@@ -1,8 +1,9 @@
+"use strict";
 /**
  * Tetris - 经典俄罗斯方块
  * Canvas实现
  */
-var Tetris = function() {
+var Tetris = function () {
     GameEngine.call(this, { id: 'tetris', title: '🟩 俄罗斯方块' });
     this.board = [];
     this.current = null;
@@ -15,21 +16,18 @@ var Tetris = function() {
     this._interval = null;
     this._dropSpeed = 800;
 };
-
 Tetris.prototype = Object.create(GameEngine.prototype);
 Tetris.prototype.constructor = Tetris;
-
 Tetris.BLOCKS = {
-    I: { shape: [[1,1,1,1]], color: '#00f0f0', pivot: 1 },
-    O: { shape: [[1,1],[1,1]], color: '#f0f000', pivot: 0 },
-    T: { shape: [[0,1,0],[1,1,1]], color: '#a000f0', pivot: 1 },
-    S: { shape: [[0,1,1],[1,1,0]], color: '#00f000', pivot: 1 },
-    Z: { shape: [[1,1,0],[0,1,1]], color: '#f00000', pivot: 1 },
-    J: { shape: [[1,0,0],[1,1,1]], color: '#0000f0', pivot: 1 },
-    L: { shape: [[0,0,1],[1,1,1]], color: '#f0a000', pivot: 1 }
+    I: { shape: [[1, 1, 1, 1]], color: '#00f0f0', pivot: 1 },
+    O: { shape: [[1, 1], [1, 1]], color: '#f0f000', pivot: 0 },
+    T: { shape: [[0, 1, 0], [1, 1, 1]], color: '#a000f0', pivot: 1 },
+    S: { shape: [[0, 1, 1], [1, 1, 0]], color: '#00f000', pivot: 1 },
+    Z: { shape: [[1, 1, 0], [0, 1, 1]], color: '#f00000', pivot: 1 },
+    J: { shape: [[1, 0, 0], [1, 1, 1]], color: '#0000f0', pivot: 1 },
+    L: { shape: [[0, 0, 1], [1, 1, 1]], color: '#f0a000', pivot: 1 }
 };
-
-Tetris.prototype.init = function() {
+Tetris.prototype.init = function () {
     GameEngine.prototype.init.call(this);
     var inner = this.el;
     inner.style.cssText = 'display:flex;gap:10px;justify-content:center;align-items:flex-start;flex-wrap:wrap;';
@@ -43,12 +41,10 @@ Tetris.prototype.init = function() {
         '等级: <span id="tet-level">1</span>' +
         '</div></div>';
     inner.innerHTML = html;
-
     this.canvas = document.getElementById('tetris-canvas');
     this.ctx = this.canvas.getContext('2d');
     this.nextCanvas = document.getElementById('tetris-next');
     this.nextCtx = this.nextCanvas.getContext('2d');
-
     this._cols = 10;
     this._rows = 20;
     this._blockSize = this.canvas.width / this._cols;
@@ -56,8 +52,7 @@ Tetris.prototype.init = function() {
     this._startGame();
     this._bindKeys();
 };
-
-Tetris.prototype._resetBoard = function() {
+Tetris.prototype._resetBoard = function () {
     this.board = [];
     for (var r = 0; r < this._rows; r++) {
         this.board[r] = [];
@@ -66,8 +61,7 @@ Tetris.prototype._resetBoard = function() {
         }
     }
 };
-
-Tetris.prototype._startGame = function() {
+Tetris.prototype._startGame = function () {
     var self = this;
     this.state = 'running';
     this.score = 0;
@@ -81,30 +75,31 @@ Tetris.prototype._startGame = function() {
     this._startDrop();
     this._render();
 };
-
-Tetris.prototype._newPiece = function() {
+Tetris.prototype._newPiece = function () {
     var keys = Object.keys(Tetris.BLOCKS);
     var key = keys[GameUtils.rand(0, keys.length - 1)];
     var def = GameUtils.clone(Tetris.BLOCKS[key]);
     return { key: key, shape: def.shape, color: def.color, x: Math.floor((this._cols - def.shape[0].length) / 2), y: 0 };
 };
-
-Tetris.prototype._startDrop = function() {
+Tetris.prototype._startDrop = function () {
     var self = this;
     this._stopDrop();
-    this._interval = setInterval(function() { self._moveDown(); }, this._dropSpeed);
+    this._interval = setInterval(function () { self._moveDown(); }, this._dropSpeed);
 };
-
-Tetris.prototype._stopDrop = function() {
-    if (this._interval) { clearInterval(this._interval); this._interval = null; }
+Tetris.prototype._stopDrop = function () {
+    if (this._interval) {
+        clearInterval(this._interval);
+        this._interval = null;
+    }
 };
-
-Tetris.prototype._moveDown = function() {
-    if (this.state !== 'running') return;
+Tetris.prototype._moveDown = function () {
+    if (this.state !== 'running')
+        return;
     if (this._canMove(this.current, this.current.x, this.current.y + 1)) {
         this.current.y++;
         this._render();
-    } else {
+    }
+    else {
         this._lockPiece();
         this._clearLines();
         this.current = this.next;
@@ -115,23 +110,25 @@ Tetris.prototype._moveDown = function() {
         this._render();
     }
 };
-
-Tetris.prototype._canMove = function(piece, newX, newY) {
+Tetris.prototype._canMove = function (piece, newX, newY) {
     for (var r = 0; r < piece.shape.length; r++) {
         for (var c = 0; c < piece.shape[r].length; c++) {
-            if (!piece.shape[r][c]) continue;
+            if (!piece.shape[r][c])
+                continue;
             var nr = newY + r, nc = newX + c;
-            if (nc < 0 || nc >= this._cols || nr >= this._rows) return false;
-            if (nr >= 0 && this.board[nr][nc]) return false;
+            if (nc < 0 || nc >= this._cols || nr >= this._rows)
+                return false;
+            if (nr >= 0 && this.board[nr][nc])
+                return false;
         }
     }
     return true;
 };
-
-Tetris.prototype._lockPiece = function() {
+Tetris.prototype._lockPiece = function () {
     for (var r = 0; r < this.current.shape.length; r++) {
         for (var c = 0; c < this.current.shape[r].length; c++) {
-            if (!this.current.shape[r][c]) continue;
+            if (!this.current.shape[r][c])
+                continue;
             var nr = this.current.y + r, nc = this.current.x + c;
             if (nr >= 0 && nr < this._rows && nc >= 0 && nc < this._cols) {
                 this.board[nr][nc] = this.current.color;
@@ -140,14 +137,14 @@ Tetris.prototype._lockPiece = function() {
     }
     GameUtils.playSfx('flip');
 };
-
-Tetris.prototype._clearLines = function() {
+Tetris.prototype._clearLines = function () {
     var cleared = 0;
     for (var r = this._rows - 1; r >= 0; r--) {
-        if (this.board[r].every(function(cell) { return cell !== 0; })) {
+        if (this.board[r].every(function (cell) { return cell !== 0; })) {
             this.board.splice(r, 1);
             this.board.unshift([]);
-            for (var c = 0; c < this._cols; c++) this.board[0][c] = 0;
+            for (var c = 0; c < this._cols; c++)
+                this.board[0][c] = 0;
             cleared++;
             r++; // 重新检查当前行
         }
@@ -160,13 +157,14 @@ Tetris.prototype._clearLines = function() {
         this.lines += cleared;
         this.level = Math.floor(this.lines / 10) + 1;
         this._dropSpeed = Math.max(100, 800 - (this.level - 1) * 60);
-        if (this._interval) this._startDrop();
-    } else {
+        if (this._interval)
+            this._startDrop();
+    }
+    else {
         this.combo = 0;
     }
 };
-
-Tetris.prototype._rotate = function() {
+Tetris.prototype._rotate = function () {
     var shape = this.current.shape;
     var newShape = [];
     for (var c = 0; c < shape[0].length; c++) {
@@ -181,7 +179,8 @@ Tetris.prototype._rotate = function() {
         this.current = newPiece;
         GameUtils.playSfx('rotate');
         this._render();
-    } else {
+    }
+    else {
         // wall kick
         for (var offset of [-1, 1, -2, 2]) {
             if (this._canMove(newPiece, newPiece.x + offset, newPiece.y)) {
@@ -194,24 +193,21 @@ Tetris.prototype._rotate = function() {
         }
     }
 };
-
-Tetris.prototype._moveLeft = function() {
+Tetris.prototype._moveLeft = function () {
     if (this._canMove(this.current, this.current.x - 1, this.current.y)) {
         this.current.x--;
         GameUtils.playSfx('move');
         this._render();
     }
 };
-
-Tetris.prototype._moveRight = function() {
+Tetris.prototype._moveRight = function () {
     if (this._canMove(this.current, this.current.x + 1, this.current.y)) {
         this.current.x++;
         GameUtils.playSfx('move');
         this._render();
     }
 };
-
-Tetris.prototype._hardDrop = function() {
+Tetris.prototype._hardDrop = function () {
     while (this._canMove(this.current, this.current.x, this.current.y + 1)) {
         this.current.y++;
         GameUtils.playSfx('move');
@@ -226,8 +222,7 @@ Tetris.prototype._hardDrop = function() {
     }
     this._render();
 };
-
-Tetris.prototype._render = function() {
+Tetris.prototype._render = function () {
     var ctx = this.ctx;
     var bs = this._blockSize;
     // 清空
@@ -236,10 +231,16 @@ Tetris.prototype._render = function() {
     // 网格
     ctx.strokeStyle = 'rgba(255,255,255,0.03)';
     for (var r = 0; r <= this._rows; r++) {
-        ctx.beginPath(); ctx.moveTo(0, r * bs); ctx.lineTo(this.canvas.width, r * bs); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(0, r * bs);
+        ctx.lineTo(this.canvas.width, r * bs);
+        ctx.stroke();
     }
     for (var c = 0; c <= this._cols; c++) {
-        ctx.beginPath(); ctx.moveTo(c * bs, 0); ctx.lineTo(c * bs, this.canvas.height); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(c * bs, 0);
+        ctx.lineTo(c * bs, this.canvas.height);
+        ctx.stroke();
     }
     // 已锁定方块
     for (var r = 0; r < this._rows; r++) {
@@ -255,7 +256,8 @@ Tetris.prototype._render = function() {
     // 当前方块（ghost）
     if (this.current) {
         var ghostY = this.current.y;
-        while (this._canMove({ shape: this.current.shape, x: this.current.x, y: ghostY + 1 }, this.current.x, ghostY + 1)) ghostY++;
+        while (this._canMove({ shape: this.current.shape, x: this.current.x, y: ghostY + 1 }, this.current.x, ghostY + 1))
+            ghostY++;
         ctx.globalAlpha = 0.2;
         this._drawPiece(ctx, this.current.shape, this.current.x, ghostY, '#555');
         ctx.globalAlpha = 1;
@@ -267,8 +269,7 @@ Tetris.prototype._render = function() {
     document.getElementById('tet-lines').textContent = this.lines;
     document.getElementById('tet-level').textContent = this.level;
 };
-
-Tetris.prototype._drawPiece = function(ctx, shape, x, y, color) {
+Tetris.prototype._drawPiece = function (ctx, shape, x, y, color) {
     var bs = this._blockSize;
     for (var r = 0; r < shape.length; r++) {
         for (var c = 0; c < shape[r].length; c++) {
@@ -282,9 +283,8 @@ Tetris.prototype._drawPiece = function(ctx, shape, x, y, color) {
         }
     }
 };
-
 // 渲染下一个方块
-Tetris.prototype._renderNext = function() {
+Tetris.prototype._renderNext = function () {
     var ctx = this.nextCtx;
     var bs = this.nextCanvas.width / 4;
     ctx.fillStyle = 'rgba(10,10,26,1)';
@@ -303,48 +303,64 @@ Tetris.prototype._renderNext = function() {
         }
     }
 };
-
-Tetris.prototype._bindKeys = function() {
+Tetris.prototype._bindKeys = function () {
     var self = this;
-    this._keyHandler = function(e) {
-        if (GameHub.currentGame !== 'tetris') return;
-        if (self.state !== 'running') return;
+    this._keyHandler = function (e) {
+        if (GameHub.currentGame !== 'tetris')
+            return;
+        if (self.state !== 'running')
+            return;
         switch (e.key) {
-            case 'ArrowLeft': e.preventDefault(); self._moveLeft(); break;
-            case 'ArrowRight': e.preventDefault(); self._moveRight(); break;
-            case 'ArrowDown': e.preventDefault(); self._moveDown(); self.addScore(1); break;
-            case 'ArrowUp': e.preventDefault(); self._rotate(); break;
-            case ' ': e.preventDefault(); self._hardDrop(); self.addScore(2); break;
+            case 'ArrowLeft':
+                e.preventDefault();
+                self._moveLeft();
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                self._moveRight();
+                break;
+            case 'ArrowDown':
+                e.preventDefault();
+                self._moveDown();
+                self.addScore(1);
+                break;
+            case 'ArrowUp':
+                e.preventDefault();
+                self._rotate();
+                break;
+            case ' ':
+                e.preventDefault();
+                self._hardDrop();
+                self.addScore(2);
+                break;
         }
     };
     document.addEventListener('keydown', this._keyHandler);
 };
-
-Tetris.prototype._gameOver = function() {
+Tetris.prototype._gameOver = function () {
     this.state = 'over';
     this._stopDrop();
     document.removeEventListener('keydown', this._keyHandler);
-    if (this.onGameOver) this.onGameOver(this.score, Date.now() - this._stats.startTime);
+    if (this.onGameOver)
+        this.onGameOver(this.score, Date.now() - this._stats.startTime);
     GameHub.showToast('💀 游戏结束！最终得分: ' + this.score);
 };
-
-Tetris.prototype.togglePause = function() {
+Tetris.prototype.togglePause = function () {
     GameEngine.prototype.togglePause.call(this);
-    if (this.state === 'paused') this._stopDrop();
-    if (this.state === 'running') this._startDrop();
+    if (this.state === 'paused')
+        this._stopDrop();
+    if (this.state === 'running')
+        this._startDrop();
 };
-
-Tetris.prototype.tick = function() {};
-
-Tetris.prototype.quit = function() {
+Tetris.prototype.tick = function () { };
+Tetris.prototype.quit = function () {
     this._stopDrop();
-    if (this._keyHandler) document.removeEventListener('keydown', this._keyHandler);
+    if (this._keyHandler)
+        document.removeEventListener('keydown', this._keyHandler);
     this.state = 'idle';
     GameHub.closeGame();
 };
-
-
-Tetris.prototype.save = function() {
+Tetris.prototype.save = function () {
     var data = {
         grid: this.grid,
         score: this.score,
@@ -358,8 +374,7 @@ Tetris.prototype.save = function() {
     };
     GameUtils.save(this.saveKey, data);
 };
-
-Tetris.prototype.load = function() {
+Tetris.prototype.load = function () {
     var data = GameUtils.load(this.saveKey);
     if (data) {
         this.grid = data.grid || this.grid;
@@ -375,23 +390,30 @@ Tetris.prototype.load = function() {
     }
     return false;
 };
-
-
-Tetris.prototype._onSwipe = function(dir) {
-    switch(dir) {
-        case 'left':  this._moveLeft();  break;
-        case 'right': this._moveRight(); break;
-        case 'up':    this._rotate();    break;
-        case 'down':  this._moveDown();  break;
+Tetris.prototype._onSwipe = function (dir) {
+    switch (dir) {
+        case 'left':
+            this._moveLeft();
+            break;
+        case 'right':
+            this._moveRight();
+            break;
+        case 'up':
+            this._rotate();
+            break;
+        case 'down':
+            this._moveDown();
+            break;
     }
     GameUtils.playSfx('move');
 };
-
-Tetris.prototype._onTouchTap = function(x, y) {
+Tetris.prototype._onTouchTap = function (x, y) {
     var mid = this.canvas.width / 2;
-    if (x < mid) this._moveLeft();
-    else this._moveRight();
+    if (x < mid)
+        this._moveLeft();
+    else
+        this._moveRight();
     GameUtils.playSfx('move');
 };
-
 window.Tetris = Tetris;
+//# sourceMappingURL=tetris.js.map

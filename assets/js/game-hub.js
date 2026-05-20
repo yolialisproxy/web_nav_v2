@@ -241,8 +241,10 @@ var GameHub = {
             el.textContent = msg;
             document.body.appendChild(el);
             setTimeout(function () { el.style.opacity = '0'; }, (duration || 3000) - 400);
-            setTimeout(function () { if (el.parentNode)
-                el.parentNode.removeChild(el); }, duration || 3000);
+            setTimeout(function () {
+                if (el.parentNode)
+                    el.parentNode.removeChild(el);
+            }, duration || 3000);
         }
     },
     // 切换游戏收藏状态（复用 favorite 系统）

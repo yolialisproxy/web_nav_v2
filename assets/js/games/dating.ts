@@ -1,8 +1,9 @@
+"use strict";
 /**
  * DatingGame - 恋爱大富翁（恋爱养成 + 大富翁模式）
  * 支持：一男追多女、一女追多男、一男多女模式
  */
-var DatingGame = function() {
+var DatingGame = function () {
     GameEngine.call(this, { id: 'dating', title: '💕 恋爱大富翁' });
     this.mode = 'male'; // male/female/multi
     this.player = null;
@@ -14,22 +15,18 @@ var DatingGame = function() {
     this.events = [];
     this.day = 1;
 };
-
 DatingGame.prototype = Object.create(GameEngine.prototype);
 DatingGame.prototype.constructor = DatingGame;
-
 // 格子类型
 DatingGame.CELL_TYPES = {
     NORMAL: 0, EVENT: 1, GIFT: 2, DATE: 3, RIVAL: 4, HEART: 5
 };
-
 DatingGame.CHARACTERS = [
     { name: '林雨桐', icon: '🌸', color: '#ff69b4', desc: '温柔可人的文学社社长' },
     { name: '苏婉儿', icon: '🌺', color: '#ff1493', desc: '高冷的学霸千金' },
     { name: '唐小蝶', icon: '🦋', color: '#ff6347', desc: '活泼开朗的邻家女孩' },
     { name: '慕容雪', icon: '❄️', color: '#87ceeb', desc: '冰雪聪明的转校生' }
 ];
-
 DatingGame.EVENTS = [
     { type: 'gift', text: '💝 随机礼物！好感+10', affectionDelta: 10, goldCost: -20 },
     { type: 'date', text: '💕 浪漫约会！好感+20', affectionDelta: 20, goldCost: -50 },
@@ -38,19 +35,18 @@ DatingGame.EVENTS = [
     { type: 'trap', text: '💀 踩到陷阱！失去30两', goldDelta: -30 },
     { type: 'charm', text: '✨ 魅力提升！好感+5', affectionDelta: 5 }
 ];
-
-DatingGame.prototype.init = function() {
+DatingGame.prototype.init = function () {
     GameEngine.prototype.init.call(this);
     // 尝试读取存档
     if (!this.load()) {
         this._selectMode();
-    } else {
+    }
+    else {
         this.state = 'running';
         this._startGame(); // 初始化玩家数据
     }
 };
-
-DatingGame.prototype._selectMode = function() {
+DatingGame.prototype._selectMode = function () {
     var self = this;
     var modes = [
         { key: 'male', icon: '👨', label: '一男追多女' },
@@ -60,28 +56,26 @@ DatingGame.prototype._selectMode = function() {
     var html = '<div style="text-align:center;padding:30px;">' +
         '<div style="font-size:24px;margin-bottom:20px;">💕 恋爱大富翁</div>' +
         '<div style="font-size:13px;color:var(--color-text-dim);margin-bottom:20px;">选择你的游戏模式</div>';
-    modes.forEach(function(m) {
+    modes.forEach(function (m) {
         html += '<button class="game-btn" data-mode="' + m.key + '" style="padding:12px 30px;font-size:15px;margin:6px;width:auto;">' +
             m.icon + ' ' + m.label + '</button>';
     });
     html += '</div>';
     this.el.innerHTML = html;
-    this.el.querySelectorAll('[data-mode]').forEach(function(btn) {
-        btn.addEventListener('click', function() {
+    this.el.querySelectorAll('[data-mode]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
             self.mode = this.dataset.mode;
             self.newGame();
         });
     });
 };
-
-DatingGame.prototype.newGame = function() {
+DatingGame.prototype.newGame = function () {
     this._reset();
     this.state = 'running';
     this.render();
     this.save();
 };
-
-DatingGame.prototype._reset = function() {
+DatingGame.prototype._reset = function () {
     this.d = {};
     this.turns = 0;
     this.day = 1;
@@ -92,29 +86,37 @@ DatingGame.prototype._reset = function() {
     this.clearSave();
     this._startGame();
 };
-
-DatingGame.prototype._startGame = function() {
-    this.targets = DatingGame.CHARACTERS.map(function(c, i) {
-        return { ...c, affection: 30 + Math.floor(Math.random() * 20), uid: i, gifts: 0 };
+DatingGame.prototype._startGame = function () {
+    this.targets = DatingGame.CHARACTERS.map(function (c, i) {
+        return Object.assign(Object.assign({}, c), { affection: 30 + Math.floor(Math.random() * 20), uid: i, gifts: 0 });
     });
-    this.targets.forEach(function(t) { this.affection[t.name] = t.affection; }, this);
+    this.targets.forEach(function (t) { this.affection[t.name] = t.affection; }, this);
     this._generateBoard();
     this.position = 0;
     this.state = 'running';
     this.render();
 };
-
-DatingGame.prototype._generateBoard = function() {
+DatingGame.prototype._generateBoard = function () {
     this.board = [];
     var size = 24;
     for (var i = 0; i < size; i++) {
         var type = DatingGame.CELL_TYPES.NORMAL;
         var event = null;
-        if (i === 0) { type = DatingGame.CELL_TYPES.HEART; }
-        else if (i % 6 === 0 && i > 0) { type = DatingGame.CELL_TYPES.DATE; }
-        else if (i % 4 === 0) { type = DatingGame.CELL_TYPES.EVENT; }
-        else if (i % 7 === 0) { type = DatingGame.CELL_TYPES.GIFT; }
-        else if (i % 8 === 0) { type = DatingGame.CELL_TYPES.RIVAL; }
+        if (i === 0) {
+            type = DatingGame.CELL_TYPES.HEART;
+        }
+        else if (i % 6 === 0 && i > 0) {
+            type = DatingGame.CELL_TYPES.DATE;
+        }
+        else if (i % 4 === 0) {
+            type = DatingGame.CELL_TYPES.EVENT;
+        }
+        else if (i % 7 === 0) {
+            type = DatingGame.CELL_TYPES.GIFT;
+        }
+        else if (i % 8 === 0) {
+            type = DatingGame.CELL_TYPES.RIVAL;
+        }
         else {
             var evIdx = i % DatingGame.EVENTS.length;
             type = DatingGame.CELL_TYPES.EVENT;
@@ -123,16 +125,16 @@ DatingGame.prototype._generateBoard = function() {
         this.board.push({ type: type, event: event, index: i });
     }
 };
-
-DatingGame.prototype.render = function() {
+DatingGame.prototype.render = function () {
     var self = this;
-    if (!this.el) return;
+    if (!this.el)
+        return;
     if (!this.targets || this.targets.length === 0) {
         this._selectMode();
         return;
     }
-    if (this.state === 'idle') return;
-
+    if (this.state === 'idle')
+        return;
     var html = '';
     // 状态栏
     html += '<div style="display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap;justify-content:center;font-size:13px;">' +
@@ -140,11 +142,10 @@ DatingGame.prototype.render = function() {
         '<span>💰 ' + this.player.gold + '两</span>' +
         '<span>🎯 步数: ' + this.turns + '</span>' +
         '</div>';
-
     // 棋盘
     html += '<div style="overflow-x:auto;padding:10px 0;margin-bottom:16px;">';
     html += '<div style="display:flex;gap:4px;min-width:max-content;">';
-    this.board.forEach(function(cell, i) {
+    this.board.forEach(function (cell, i) {
         var isCurrent = i === self.position;
         var bg = isCurrent ? 'rgba(255,215,0,0.3)' : i % 2 === 0 ? 'rgba(255,255,255,0.05)' : 'rgba(0,0,0,0.1)';
         var symbols = ['🏠', '💕', '🎁', '🌸', '😡', '✨'];
@@ -155,17 +156,15 @@ DatingGame.prototype.render = function() {
             icon + '</div>';
     });
     html += '</div></div>';
-
     // 当前格子
     var cell = this.board[this.position];
     html += '<div style="text-align:center;margin-bottom:12px;">';
     html += '<div style="font-size:12px;color:var(--color-text-dim);">当前格子</div>';
     html += '<div style="font-size:18px;">' + (cell.type <= 5 ? ['🏠 起点', '💕 约会', '🎁 礼物', '🌸 事件', '😡 情敌', '✨ 心意'][cell.type] : '📍 普通') + '</div>';
     html += '</div>';
-
     // 好感度
     html += '<div style="margin-bottom:12px;">';
-    this.targets.forEach(function(t) {
+    this.targets.forEach(function (t) {
         var a = self.affection[t.name] || 0;
         var color = a > 80 ? '#ff6b6b' : a > 50 ? '#ffd700' : a > 20 ? '#87ceeb' : '#ff6347';
         html += '<div style="margin-bottom:4px;">' + t.icon + ' ' + t.name +
@@ -173,7 +172,6 @@ DatingGame.prototype.render = function() {
             '<span style="font-size:10px;color:var(--color-text-dim);">' + '💕'.repeat(Math.floor(a / 25)) + '</span></div>';
     });
     html += '</div>';
-
     // 操作按钮
     if (this.state === 'running') {
         html += '<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;">' +
@@ -183,31 +181,31 @@ DatingGame.prototype.render = function() {
             '<button class="game-btn" id="dating-endday">🌙 结束当天</button>' +
             '</div>';
     }
-
     // 日志
     if (this.events.length > 0) {
         html += '<div style="margin-top:12px;text-align:left;font-size:12px;color:var(--color-text-dim);max-height:100px;overflow-y:auto;">';
-        this.events.slice(-6).forEach(function(ev) { html += '<div>' + ev + '</div>'; });
+        this.events.slice(-6).forEach(function (ev) { html += '<div>' + ev + '</div>'; });
         html += '</div>';
     }
-
     this.el.innerHTML = html;
     this._bindEvents();
 };
-
-DatingGame.prototype._bindEvents = function() {
+DatingGame.prototype._bindEvents = function () {
     var self = this;
     var rollBtn = document.getElementById('dating-roll');
-    if (rollBtn) rollBtn.addEventListener('click', function() { self._rollDice(); });
+    if (rollBtn)
+        rollBtn.addEventListener('click', function () { self._rollDice(); });
     var investBtn = document.getElementById('dating-invest');
-    if (investBtn) investBtn.addEventListener('click', function() { self._invest(); });
+    if (investBtn)
+        investBtn.addEventListener('click', function () { self._invest(); });
     var giftBtn = document.getElementById('dating-gift');
-    if (giftBtn) giftBtn.addEventListener('click', function() { self._giveGift(); });
+    if (giftBtn)
+        giftBtn.addEventListener('click', function () { self._giveGift(); });
     var endBtn = document.getElementById('dating-endday');
-    if (endBtn) endBtn.addEventListener('click', function() { self._endDay(); });
+    if (endBtn)
+        endBtn.addEventListener('click', function () { self._endDay(); });
 };
-
-DatingGame.prototype._rollDice = function() {
+DatingGame.prototype._rollDice = function () {
     var steps = GameUtils.rand(1, 6);
     this.turns++;
     this.position = (this.position + steps) % this.board.length;
@@ -218,12 +216,10 @@ DatingGame.prototype._rollDice = function() {
     this.save();
     this.render();
 };
-
-DatingGame.prototype._processCell = function(cell) {
+DatingGame.prototype._processCell = function (cell) {
     var self = this;
     var targetIdx = GameUtils.rand(0, this.targets.length - 1);
     var target = this.targets[targetIdx];
-
     switch (cell.type) {
         case DatingGame.CELL_TYPES.HEART:
             this.events.push('🏠 回到起点，获得20两');
@@ -237,7 +233,8 @@ DatingGame.prototype._processCell = function(cell) {
                 target.gifts++;
                 this.events.push('💕 和' + target.name + '约会，好感+' + delta);
                 GameUtils.playSound(660, 0.1, 'sine');
-            } else {
+            }
+            else {
                 this.events.push('💕 想约会但钱不够...');
             }
             break;
@@ -253,10 +250,10 @@ DatingGame.prototype._processCell = function(cell) {
         case DatingGame.CELL_TYPES.EVENT:
             if (cell.event) {
                 var ev = cell.event;
-                if (ev.goldDelta) this.player.gold = Math.max(0, this.player.gold + ev.goldDelta);
+                if (ev.goldDelta)
+                    this.player.gold = Math.max(0, this.player.gold + ev.goldDelta);
                 if (ev.affectionDelta) {
-                    this.affection[target.name] = Math.max(0, Math.min(100,
-                        (this.affection[target.name] || 0) + ev.affectionDelta));
+                    this.affection[target.name] = Math.max(0, Math.min(100, (this.affection[target.name] || 0) + ev.affectionDelta));
                 }
                 this.events.push(ev.text);
             }
@@ -272,9 +269,8 @@ DatingGame.prototype._processCell = function(cell) {
             break;
     }
 };
-
 /** 投资功能：小游戏几率获得双倍/亏损 */
-DatingGame.prototype._invest = function() {
+DatingGame.prototype._invest = function () {
     if (this.player.gold < 50) {
         GameHub.showToast('💰 至少需要50两才能投资！');
         return;
@@ -285,7 +281,8 @@ DatingGame.prototype._invest = function() {
         this.score += 100;
         this.events.push('📈 投资大获成功！金钱翻倍！');
         GameUtils.playSound(660, 0.2, 'sine');
-    } else {
+    }
+    else {
         this.player.gold = Math.floor(this.player.gold * 0.3);
         this.score = Math.max(0, this.score - 50);
         this.events.push('📉 投资失败！损失惨重...');
@@ -294,24 +291,27 @@ DatingGame.prototype._invest = function() {
     this.save();
     this.render();
 };
-
-DatingGame.prototype._giveGift = function() {
-    if (this.player.gold < 20) { GameHub.showToast('💰 金钱不足！'); return; }
+DatingGame.prototype._giveGift = function () {
+    if (this.player.gold < 20) {
+        GameHub.showToast('💰 金钱不足！');
+        return;
+    }
     var self = this;
     var html = '<div style="text-align:center;padding:10px;">送礼物给谁？<br>';
-    this.targets.forEach(function(t, i) {
+    this.targets.forEach(function (t, i) {
         html += '<button class="game-btn" data-target="' + i + '" style="margin:4px;padding:6px 14px;">' +
             t.icon + ' ' + t.name + '</button>';
     });
     html += '</div>';
     var area = document.getElementById('game-play-area');
-    if (!area) return;
+    if (!area)
+        return;
     var overlay = document.createElement('div');
     overlay.style.cssText = 'position:absolute;inset:0;background:rgba(0,0,0,0.7);display:flex;align-items:center;justify-content:center;z-index:10;';
     overlay.innerHTML = html;
     area.appendChild(overlay);
-    overlay.querySelectorAll('[data-target]').forEach(function(btn) {
-        btn.addEventListener('click', function() {
+    overlay.querySelectorAll('[data-target]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
             var t = self.targets[parseInt(this.dataset.target)];
             self.player.gold -= 20;
             var d = GameUtils.rand(8, 18);
@@ -324,8 +324,7 @@ DatingGame.prototype._giveGift = function() {
         });
     });
 };
-
-DatingGame.prototype._endDay = function() {
+DatingGame.prototype._endDay = function () {
     this.day++;
     this.turns = 0;
     this.position = 0;
@@ -338,10 +337,9 @@ DatingGame.prototype._endDay = function() {
     this.save();
     this.render();
 };
-
-DatingGame.prototype._checkWinLose = function() {
+DatingGame.prototype._checkWinLose = function () {
     var self = this;
-    this.targets.forEach(function(t) {
+    this.targets.forEach(function (t) {
         if ((self.affection[t.name] || 0) >= 90) {
             self.state = 'over';
             self.gameOver();
@@ -354,8 +352,7 @@ DatingGame.prototype._checkWinLose = function() {
         GameHub.showToast('💀 一贫如洗，感情之路也走到了尽头...');
     }
 };
-
-DatingGame.prototype.save = function() {
+DatingGame.prototype.save = function () {
     var data = {
         mode: this.mode,
         player: this.player,
@@ -372,8 +369,7 @@ DatingGame.prototype.save = function() {
     };
     GameUtils.save(this.saveKey, data);
 };
-
-DatingGame.prototype.load = function() {
+DatingGame.prototype.load = function () {
     var data = GameUtils.load(this.saveKey);
     if (data) {
         this.mode = data.mode || 'male';
@@ -391,14 +387,12 @@ DatingGame.prototype.load = function() {
     }
     return null;
 };
-
-DatingGame.prototype.togglePause = function() {
+DatingGame.prototype.togglePause = function () {
     GameEngine.prototype.togglePause.call(this);
 };
-
-DatingGame.prototype.quit = function() {
+DatingGame.prototype.quit = function () {
     this.state = 'idle';
     GameHub.closeGame();
 };
-
 window.DatingGame = DatingGame;
+//# sourceMappingURL=dating.js.map

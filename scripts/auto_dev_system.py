@@ -3,15 +3,34 @@
 auto_dev_system.py - 自动化开发系统
 支持命令：performance, git-analysis
 """
-import argparse
-import json
 import subprocess
 import sys
+import json
 from datetime import datetime
 from pathlib import Path
 
+# Import Hermes tools
+try:
+    from hermes_tools import skill_view, read_file, write_file, terminal
+except ImportError:
+    # Fallback for when running outside Hermes environment
+    def skill_view(*args, **kwargs):
+        return {'status': 'error', 'message': 'hermes_tools not available'}
+    def read_file(*args, **kwargs):
+        return {'status': 'error', 'message': 'hermes_tools not available'}
+    def write_file(*args, **kwargs):
+        return {'status': 'error', 'message': 'hermes_tools not available'}
+    def terminal(*args, **kwargs):
+        return {'status': 'error', 'message': 'hermes_tools not available'}
+
+import argparse
+
 # 项目根目录 (必须与 cron 目标一致)
-PROJECT_ROOT = Path(__file__).parent.parent.resolve()
+def get_project_root():
+    """Get the project root based on script location"""
+    return Path(__file__).parent.parent.resolve()
+
+PROJECT_ROOT = get_project_root()
 LOGS_DIR = PROJECT_ROOT / 'logs'
 REPORTS_DIR = PROJECT_ROOT / 'performance_reports'
 BASELINE_DIR = PROJECT_ROOT / 'performance_baselines'
@@ -92,15 +111,17 @@ def audit_performance():
     # 6. 检查关键SEO标签
     seo_checks = {}
     try:
-        with open(local_dir / 'index.html', 'r', encoding='utf-8') as f:
-            html = f.read()
-            seo_checks = {
-                "has_meta_description": '<meta name="description"' in html,
-                "has_meta_keywords": '<meta name="keywords"' in html,
-                "has_canonical": 'rel="canonical"' in html,
-                "has_og_title": 'property="og:title"' in html,
-                "has_viewport": 'name="viewport"' in html,
-            }
+        index_file = local_dir / 'index.html'
+        if index_file.exists():
+            with open(index_file, 'r', encoding='utf-8') as f:
+                html = f.read()
+                seo_checks = {
+                    "has_meta_description": '<meta name="description"' in html,
+                    "has_meta_keywords": '<meta name="keywords"' in html,
+                    "has_canonical": 'rel="canonical"' in html,
+                    "has_og_title": 'property="og:title"' in html,
+                    "has_viewport": 'name="viewport"' in html,
+                }
     except Exception:
         pass
     report["checks"]["seo_basic"] = seo_checks

@@ -4,6 +4,7 @@
  * 职责:初始化,事件调度,SPA路由,键盘快捷键
  * 修复:统一所有功能到一个入口点
  */
+var _a;
 /**
  * 主题切换功能 (暗色/亮色/系统自动)
  */
@@ -130,11 +131,11 @@ if (window.favoriteManager) {
     }
 }
 // 初始化盈利模块
-if (typeof Monetization !== "undefined" && Monetization.init) {
-    Monetization.init({ enabled: true });
+if (typeof window.Monetization !== "undefined" && window.Monetization.init) {
+    window.Monetization.init({ enabled: true });
 }
 // Toast通知
-Toast.init && Toast.init();
+((_a = window.Toast) === null || _a === void 0 ? void 0 : _a.init) && window.Toast.init();
 // 标签云展开/收起（tag-cloud-toggle）\n    var tagToggle = document.getElementById('tag-cloud-toggle');\n    var tagContainer = document.getElementById('tag-cloud-container');\n    if (tagToggle && tagContainer) {\n        tagToggle.setAttribute('role', 'button');\n        tagToggle.setAttribute('tabindex', '0');\n        tagToggle.addEventListener('click', function() {\n            var expanded = tagToggle.getAttribute('aria-expanded') === 'true';\n            tagToggle.setAttribute('aria-expanded', !expanded);\n            tagContainer.style.display = expanded ? 'none' : '';\n        });\n        tagToggle.addEventListener('keydown', function(e) {\n            if (e.key === 'Enter' || e.key === ' ') {\n                e.preventDefault();\n                tagToggle.click();\n            }\n        });\n    }\n    // 状态订阅 - 驱动UI渲染
 state.subscribe(function (s) {
     try {
