@@ -8,14 +8,11 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "noEmit": true,
-    "allowJs": true,
-    "checkJs": false,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "removeComments": false,
+    "sourceMap": true,
+    "types": []
   },
   "include": [
-    "assets/js/**/*.js",
     "assets/js/**/*.ts"
   ],
   "exclude": [

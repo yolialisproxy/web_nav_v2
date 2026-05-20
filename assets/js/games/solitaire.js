@@ -1,45 +1,42 @@
+"use strict";
 /**
  * Solitaire - 经典纸牌接龙 (Klondike)
  * 使用DOM实现，支持拖拽操作
  */
-var Solitaire = function() {
+var Solitaire = function () {
     GameEngine.call(this, { id: 'solitaire', title: '🃏 纸牌接龙' });
-    this.tableau = [];       // 7列牌堆
-    this.stock = [];         // 牌库
-    this.waste = [];         // 废牌堆
+    this.tableau = []; // 7列牌堆
+    this.stock = []; // 牌库
+    this.waste = []; // 废牌堆
     this.foundation = [[], [], [], []]; // 4个基础堆
     this.dragInfo = null;
-    this._history = [];      // 撤销历史
+    this._history = []; // 撤销历史
 };
-
 Solitaire.prototype = Object.create(GameEngine.prototype);
 Solitaire.prototype.constructor = Solitaire;
-
 Solitaire.CARDS = [];
-(function() {
+(function () {
     var suits = ['♠', '♥', '♦', '♣'];
     var colors = { '♠': 'black', '♥': 'red', '♦': 'red', '♣': 'black' };
     for (var s = 0; s < suits.length; s++) {
         for (var v = 1; v <= 13; v++) {
             Solitaire.CARDS.push({ suit: suits[s], value: v, color: colors[suits[s]],
-                display: (function(v, s) {
-                    var names = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
-                    return names[v-1] + s;
+                display: (function (v, s) {
+                    var names = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+                    return names[v - 1] + s;
                 })(v, suits[s])
             });
         }
     }
 })();
-
-Solitaire.prototype.init = function() {
-        // 移动端触摸拖拽支持
-        this._initTouchDrag();
+Solitaire.prototype.init = function () {
+    // 移动端触摸拖拽支持
+    this._initTouchDrag();
     GameEngine.prototype.init.call(this);
     this.render();
 };
-
 /** 保存当前状态到历史 */
-Solitaire.prototype._saveState = function() {
+Solitaire.prototype._saveState = function () {
     var state = {
         tableau: JSON.parse(JSON.stringify(this.tableau)),
         stock: JSON.parse(JSON.stringify(this.stock)),
@@ -50,11 +47,11 @@ Solitaire.prototype._saveState = function() {
     };
     this._history.push(state);
     // 限制历史记录长度
-    if (this._history.length > 100) this._history.shift();
+    if (this._history.length > 100)
+        this._history.shift();
 };
-
 /** 撤销 */
-Solitaire.prototype._undo = function() {
+Solitaire.prototype._undo = function () {
     if (this._history.length === 0) {
         GameHub.showToast('没有可撤销的步骤');
         return;
@@ -69,33 +66,35 @@ Solitaire.prototype._undo = function() {
     GameUtils.playSound(300, 0.1, 'sine');
     this.render();
 };
-
 /** 新游戏 */
-Solitaire.prototype.newGame = function() {
+Solitaire.prototype.newGame = function () {
     this._history = [];
     this._deal();
 };
-
 /** 移动牌：从source到target（自动尝试移到基础堆或列） */
-Solitaire.prototype.move = function(fromCol, toCol) {
-    if (fromCol < 0 || fromCol >= 7 || toCol < 0 || toCol >= 7) return false;
+Solitaire.prototype.move = function (fromCol, toCol) {
+    if (fromCol < 0 || fromCol >= 7 || toCol < 0 || toCol >= 7)
+        return false;
     var fromColCards = this.tableau[fromCol];
-    if (fromColCards.length === 0) return false;
-
+    if (fromColCards.length === 0)
+        return false;
     // 只允许移动最上面的翻开牌及其上面的所有翻开牌
     var firstFaceUp = -1;
     for (var i = 0; i < fromColCards.length; i++) {
-        if (fromColCards[i].faceUp) { firstFaceUp = i; break; }
+        if (fromColCards[i].faceUp) {
+            firstFaceUp = i;
+            break;
+        }
     }
-    if (firstFaceUp === -1) return false;
-
+    if (firstFaceUp === -1)
+        return false;
     var movingCards = fromColCards.slice(firstFaceUp);
-
     // 尝试移到目标列
     var targetCol = this.tableau[toCol];
     if (targetCol.length === 0) {
         // 空列只能放K
-        if (movingCards[0].value !== 13) return false;
+        if (movingCards[0].value !== 13)
+            return false;
         // 移动
         this._saveState();
         for (var j = firstFaceUp; j < fromColCards.length; j++) {
@@ -112,14 +111,14 @@ Solitaire.prototype.move = function(fromCol, toCol) {
         this.render();
         return true;
     }
-
     var topCard = targetCol[targetCol.length - 1];
-    if (!topCard.faceUp) return false;
-
+    if (!topCard.faceUp)
+        return false;
     // 检查颜色交替、数值递减
-    if (topCard.color === movingCards[0].color) return false;
-    if (topCard.value !== movingCards[0].value + 1) return false;
-
+    if (topCard.color === movingCards[0].color)
+        return false;
+    if (topCard.value !== movingCards[0].value + 1)
+        return false;
     // 合法移动
     this._saveState();
     for (var j = firstFaceUp; j < fromColCards.length; j++) {
@@ -136,12 +135,11 @@ Solitaire.prototype.move = function(fromCol, toCol) {
     this.render();
     return true;
 };
-
-Solitaire.prototype.render = function() {
+Solitaire.prototype.render = function () {
     var self = this;
     var h = '';
     // 顶行：牌库、废牌、4个基础堆
-    h += '<div class=\"sol-top-row\">'
+    h += '<div class=\"sol-top-row\">';
     h += '<div class=\"sol-pile sol-stock\" id=\"sol-stock\" data-pile=\"stock\">' +
         (this.stock.length > 0 ? '<div class=\"sol-card back\"></div>' : '<div class=\"sol-placeholder\">📦</div>') +
         '</div>';
@@ -155,7 +153,8 @@ Solitaire.prototype.render = function() {
         h += '<div class=\"sol-pile sol-foundation\" id=\"sol-foundation-' + f + '\" data-pile=\"foundation-' + f + '\">';
         if (this.foundation[f].length > 0) {
             h += this._renderCard(this.foundation[f][this.foundation[f].length - 1], true);
-        } else {
+        }
+        else {
             h += '<div class=\"sol-placeholder\">🏆</div>';
         }
         h += '</div>';
@@ -171,7 +170,8 @@ Solitaire.prototype.render = function() {
             h += '<div class=\"sol-card-tableau\" data-col=\"' + c + '\" data-row=\"' + r + '\" style=\"margin-top:' + (isLast ? '0' : r * 22) + 'px\">';
             if (card.faceUp) {
                 h += this._renderCard(card, true);
-            } else {
+            }
+            else {
                 h += '<div class=\"sol-card back\" style=\"position:absolute;top:' + (r * 22) + 'px\">' +
                     '<div class=\"card-inner\">?</div></div>';
             }
@@ -185,11 +185,9 @@ Solitaire.prototype.render = function() {
         '<button class=\"game-btn\" id=\"sol-hint\">💡 提示</button>' +
         '<button class=\"game-btn\" id=\"sol-undo\">↩️ 撤销(' + this._history.length + ')</button></div>';
     h += '<div style=\"clear:both\"></div>';
-
     var cardW = window.innerWidth < 600 ? 38 : 56;
     var cardH = cardW * 1.4;
     var gap = window.innerWidth < 600 ? 2 : 4;
-
     // 动态生成CSS
     h += '<style>' +
         '.sol-top-row{display:flex;gap:' + gap + 'px;padding:10px;' + (window.innerWidth < 600 ? 'flex-wrap:wrap;' : 'justify-content:center;') + '}' +
@@ -205,13 +203,12 @@ Solitaire.prototype.render = function() {
         '.sol-col:hover .sol-card-tableau:last-child{transform:translateY(-2px);}' +
         '@media(max-width:600px){.sol-card{font-size:11px}.sol-pile{width:38px;height:53px}}' +
         '</style>';
-
     this.el.innerHTML = h;
     this._bindEvents();
-    if (this.moves === 0) this._deal();
+    if (this.moves === 0)
+        this._deal();
 };
-
-Solitaire.prototype._deal = function() {
+Solitaire.prototype._deal = function () {
     var deck = GameUtils.shuffle(Solitaire.CARDS);
     this.tableau = [[], [], [], [], [], [], []];
     for (var i = 0; i < 7; i++) {
@@ -231,25 +228,24 @@ Solitaire.prototype._deal = function() {
     this.save();
     this.render();
 };
-
-Solitaire.prototype._renderCard = function(card, faceUp) {
+Solitaire.prototype._renderCard = function (card, faceUp) {
     var s = card.suit, v = card.value, c = card.color;
-    var names = {1:'A',2:'2',3:'3',4:'4',5:'5',6:'6',7:'7',8:'8',9:'9',10:'10',11:'J',12:'Q',13:'K'};
+    var names = { 1: 'A', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: 'J', 12: 'Q', 13: 'K' };
     var bg = c === 'red' ? 'rgba(255,80,80,0.15)' : 'rgba(255,255,255,0.08)';
-var txt = c === 'red' ? '#ff6b6b' : '#e2e8f0';
+    var txt = c === 'red' ? '#ff6b6b' : '#e2e8f0';
     return '<div class=\"sol-card-face\" data-card=\"' + card.suit + '-' + card.value + '\" style=\"width:100%;height:100%;background:' + bg +
         ';border:1px solid var(--color-border);border-radius:6px;display:flex;flex-direction:column;' +
         'align-items:center;justify-content:center;color:' + txt + ';font-size:14px;font-weight:bold;\">' +
         '<div>' + s + '</div><div style=\"font-size:12px;opacity:0.7\">' + names[v] + '</div></div>';
 };
-
-Solitaire.prototype._bindEvents = function() {
+Solitaire.prototype._bindEvents = function () {
     var self = this;
     // 牌库点击
     var stock = document.getElementById('sol-stock');
     if (stock) {
-        stock.addEventListener('click', function() {
-            if (self.state !== 'running') return;
+        stock.addEventListener('click', function () {
+            if (self.state !== 'running')
+                return;
             self._saveState();
             if (self.stock.length > 0) {
                 var card = self.stock.pop();
@@ -260,7 +256,8 @@ Solitaire.prototype._bindEvents = function() {
                 self.addScore(0);
                 self.save();
                 self.render();
-            } else if (self.waste.length > 0) {
+            }
+            else if (self.waste.length > 0) {
                 while (self.waste.length > 0) {
                     var c = self.waste.pop();
                     c.faceUp = false;
@@ -276,38 +273,44 @@ Solitaire.prototype._bindEvents = function() {
     // 废牌双击移到基础堆
     var waste = document.getElementById('sol-waste');
     if (waste) {
-        waste.addEventListener('dblclick', function() {
-            if (self.waste.length > 0) self._autoToFoundation(self.waste[self.waste.length - 1]);
+        waste.addEventListener('dblclick', function () {
+            if (self.waste.length > 0)
+                self._autoToFoundation(self.waste[self.waste.length - 1]);
         });
     }
     // 新游戏
     var newBtn = document.getElementById('sol-new-game');
-    if (newBtn) newBtn.addEventListener('click', function() { self.newGame(); });
+    if (newBtn)
+        newBtn.addEventListener('click', function () { self.newGame(); });
     // 撤销
     var undoBtn = document.getElementById('sol-undo');
-    if (undoBtn) undoBtn.addEventListener('click', function() { self._undo(); });
+    if (undoBtn)
+        undoBtn.addEventListener('click', function () { self._undo(); });
     // 列点击：尝试顶牌移到基础堆
     for (var c = 0; c < 7; c++) {
-        (function(col) {
+        (function (col) {
             var colEl = document.getElementById('sol-col-' + col);
             if (colEl) {
-                colEl.addEventListener('dblclick', function() {
-                    if (self.state !== 'running') return;
+                colEl.addEventListener('dblclick', function () {
+                    if (self.state !== 'running')
+                        return;
                     var cards = self.tableau[col];
-                    if (cards.length === 0) return;
+                    if (cards.length === 0)
+                        return;
                     var topCard = cards[cards.length - 1];
-                    if (!topCard.faceUp) return;
+                    if (!topCard.faceUp)
+                        return;
                     self._autoToFoundation(topCard);
                 });
             }
         })(c);
     }
 };
-
 /** 自动将牌移到合适的基础堆 */
-Solitaire.prototype._autoToFoundation = function(card) {
-    var suitIdx = ['♠','♥','♦','♣'].indexOf(card.suit);
-    if (suitIdx === -1) return false;
+Solitaire.prototype._autoToFoundation = function (card) {
+    var suitIdx = ['♠', '♥', '♦', '♣'].indexOf(card.suit);
+    if (suitIdx === -1)
+        return false;
     var f = this.foundation[suitIdx];
     var expected = (f.length === 0) ? 1 : f[f.length - 1].value + 1;
     if (card.value === expected) {
@@ -317,7 +320,7 @@ Solitaire.prototype._autoToFoundation = function(card) {
         this.score += 10;
         GameUtils.playSfx('score');
         this.moves++;
-        this.lines = f.reduce(function(s, arr) { return s + arr.length; }, 0);
+        this.lines = f.reduce(function (s, arr) { return s + arr.length; }, 0);
         this._checkWin();
         this.save();
         this.render();
@@ -325,16 +328,16 @@ Solitaire.prototype._autoToFoundation = function(card) {
     }
     return false;
 };
-
 /** 从tableau中移除指定的牌 */
-Solitaire.prototype._removeCardFromTableau = function(card) {
+Solitaire.prototype._removeCardFromTableau = function (card) {
     for (var c = 0; c < 7; c++) {
         var col = this.tableau[c];
         for (var r = col.length - 1; r >= 0; r--) {
             if (col[r] === card) {
                 col.splice(r, 1);
                 // 翻开移除后最上面的牌
-                if (col.length > 0) col[col.length - 1].faceUp = true;
+                if (col.length > 0)
+                    col[col.length - 1].faceUp = true;
                 return true;
             }
         }
@@ -348,20 +351,17 @@ Solitaire.prototype._removeCardFromTableau = function(card) {
     }
     return false;
 };
-
-Solitaire.prototype._checkWin = function() {
-    if (this.foundation.every(function(f) { return f.length === 13; })) {
+Solitaire.prototype._checkWin = function () {
+    if (this.foundation.every(function (f) { return f.length === 13; })) {
         GameUtils.playSfx('win');
         this.gameOver();
         GameHub.showToast('🎉 恭喜完成纸牌接龙！最终得分: ' + this.score);
     }
 };
-
-Solitaire.prototype.addScore = function(points) {
+Solitaire.prototype.addScore = function (points) {
     this.score += points;
 };
-
-Solitaire.prototype.save = function() {
+Solitaire.prototype.save = function () {
     var data = {
         tableau: this.tableau,
         stock: this.stock,
@@ -373,8 +373,7 @@ Solitaire.prototype.save = function() {
     };
     GameUtils.save(this.saveKey, data);
 };
-
-Solitaire.prototype.load = function() {
+Solitaire.prototype.load = function () {
     var data = GameUtils.load(this.saveKey);
     if (data) {
         this.tableau = data.tableau || this.tableau;
@@ -388,27 +387,22 @@ Solitaire.prototype.load = function() {
     }
     return false;
 };
-
-Solitaire.prototype.tick = function() {}; // pass回合制
-
-
-Solitaire.prototype.quit = function() {
+Solitaire.prototype.tick = function () { }; // pass回合制
+Solitaire.prototype.quit = function () {
     this.state = 'idle';
     GameHub.closeGame();
 };
-
-
 // Solitaire 触摸拖拽支持
-Solitaire.prototype._initTouchDrag = function() {
+Solitaire.prototype._initTouchDrag = function () {
     var self = this;
     var dragClone = null;
     var dragSourceCol = -1;
     var dragCardIndex = -1;
     var scrollOffset = 0;
-
-    var getCardAtPoint = function(clientX, clientY) {
+    var getCardAtPoint = function (clientX, clientY) {
         var el = self.el.elementFromPoint(clientX, clientY);
-        if (!el) return null;
+        if (!el)
+            return null;
         // 找到包含 data-col 的列元素
         while (el && el !== self.el) {
             if (el.hasAttribute('data-col')) {
@@ -418,10 +412,10 @@ Solitaire.prototype._initTouchDrag = function() {
         }
         return null;
     };
-
-    var getFoundationAtPoint = function(clientX, clientY) {
+    var getFoundationAtPoint = function (clientX, clientY) {
         var el = self.el.elementFromPoint(clientX, clientY);
-        if (!el) return -1;
+        if (!el)
+            return -1;
         while (el && el !== self.el) {
             var pileId = el.id || '';
             if (pileId.indexOf('sol-foundation-') === 0) {
@@ -431,24 +425,24 @@ Solitaire.prototype._initTouchDrag = function() {
         }
         return -1;
     };
-
     var cards = this.el.querySelectorAll('[data-col]');
-    cards.forEach(function(cardEl) {
-        cardEl.addEventListener('touchstart', function(e) {
-            if (self.state !== 'running') return;
+    cards.forEach(function (cardEl) {
+        cardEl.addEventListener('touchstart', function (e) {
+            if (self.state !== 'running')
+                return;
             var touch = e.touches[0];
             var col = parseInt(cardEl.getAttribute('data-col'), 10);
             var row = parseInt(cardEl.getAttribute('data-row'), 10);
             var cardsInCol = self.tableau[col];
-            if (!cardsInCol || row !== cardsInCol.length - 1) return; // 只允许拖最上面的翻开牌
+            if (!cardsInCol || row !== cardsInCol.length - 1)
+                return; // 只允许拖最上面的翻开牌
             var card = cardsInCol[row];
-            if (!card || !card.faceUp) return;
-
+            if (!card || !card.faceUp)
+                return;
             e.preventDefault();
             scrollOffset = window.pageYOffset;
             dragSourceCol = col;
             dragCardIndex = row;
-
             // 创建拖拽视觉克隆
             var rect = cardEl.getBoundingClientRect();
             dragClone = cardEl.cloneNode(true);
@@ -462,9 +456,9 @@ Solitaire.prototype._initTouchDrag = function() {
             document.body.appendChild(dragClone);
         }, { passive: false });
     });
-
-    document.addEventListener('touchmove', function(e) {
-        if (!dragClone) return;
+    document.addEventListener('touchmove', function (e) {
+        if (!dragClone)
+            return;
         e.preventDefault();
         var touch = e.touches[0];
         var cardW = dragClone.offsetWidth;
@@ -472,21 +466,21 @@ Solitaire.prototype._initTouchDrag = function() {
         dragClone.style.left = (touch.clientX - cardW / 2) + 'px';
         dragClone.style.top = (touch.clientY - cardH / 2 + (window.pageYOffset - scrollOffset)) + 'px';
     }, { passive: false });
-
-    document.addEventListener('touchend', function(e) {
-        if (!dragClone) return;
+    document.addEventListener('touchend', function (e) {
+        if (!dragClone)
+            return;
         var touch = e.changedTouches[0];
         var targetCol = getCardAtPoint(touch.clientX, touch.clientY);
         var targetFoundation = getFoundationAtPoint(touch.clientX, touch.clientY);
-
         dragClone.remove();
         dragClone = null;
-
-        if (dragSourceCol < 0) return;
-
+        if (dragSourceCol < 0)
+            return;
         var card = self.tableau[dragSourceCol] ? self.tableau[dragSourceCol][dragCardIndex] : null;
-        if (!card || !card.faceUp) { dragSourceCol = -1; return; }
-
+        if (!card || !card.faceUp) {
+            dragSourceCol = -1;
+            return;
+        }
         // 尝试移到目标列
         if (targetCol !== null && targetCol !== dragSourceCol) {
             var moved = self.move(dragSourceCol, targetCol);
@@ -495,7 +489,6 @@ Solitaire.prototype._initTouchDrag = function() {
                 return;
             }
         }
-
         // 尝试移到基础堆
         if (targetFoundation >= 0) {
             var moved = self._autoToFoundation(card);
@@ -504,14 +497,12 @@ Solitaire.prototype._initTouchDrag = function() {
                 return;
             }
         }
-
         // 失败：抖动画回原位
         cardEl.style.transition = 'transform 0.2s';
         cardEl.style.transform = 'none';
-        setTimeout(function() { cardEl.style.transition = ''; }, 200);
-
+        setTimeout(function () { cardEl.style.transition = ''; }, 200);
         dragSourceCol = -1;
     }, { passive: false });
 };
-
 window.Solitaire = Solitaire;
+//# sourceMappingURL=solitaire.js.map

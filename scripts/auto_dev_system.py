@@ -5,13 +5,12 @@ auto_dev_system.py - 自动化开发系统
 """
 import argparse
 import json
-import os
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
 
-# 项目根目录（必须在cwd中设置或硬编码）
+# 项目根目录 (必须与 cron 目标一致)
 PROJECT_ROOT = Path(__file__).parent.parent.resolve()
 LOGS_DIR = PROJECT_ROOT / 'logs'
 REPORTS_DIR = PROJECT_ROOT / 'performance_reports'
@@ -31,12 +30,10 @@ def log(message):
         f.write(f"[{timestamp}] {message}\n")
 
 def audit_performance():
-    """执行性能审计"""
+    """执行性能审计 - 非侵入式测量，不修改网站代码"""
     log("开始执行性能审计...")
-    
     site_url = "https://yolialisproxy.github.io/web_nav_v2/"
     local_dir = PROJECT_ROOT
-    
     report = {
         "timestamp": datetime.now().isoformat(),
         "site_url": site_url,
@@ -44,76 +41,55 @@ def audit_performance():
     }
     
     # 1. 检查关键文件大小
-    log("检查文件大小...")
     key_files = {
         'index.html': local_dir / 'index.html',
         'core.css': local_dir / 'assets' / 'css' / 'core.css',
         'app.css': local_dir / 'assets' / 'css' / 'app.css',
     }
-    
     total_size = 0
     for name, path in key_files.items():
         if path.exists():
             size = path.stat().st_size
             total_size += size
             report["checks"][f"file_size_{name}"] = size
-            status = "OK" if size < 500_000 else "WARNING"
-            log(f"  {name}: {size:,} bytes [{status}]")
         else:
             report["checks"][f"file_size_{name}"] = None
-            log(f"  {name}: MISSING")
     
     report["checks"]["total_critical_size"] = total_size
     
     # 2. 检查预渲染页面数量
     prerendered_dir = local_dir / 'prerendered'
     if prerendered_dir.exists():
-        prerendered_count = len(list(prerendered_dir.glob('*.html')))
-        report["checks"]["prerendered_pages"] = prerendered_count
-        log(f"预渲染页面: {prerendered_count}")
+        report["checks"]["prerendered_pages"] = len(list(prerendered_dir.glob('*.html')))
     else:
         report["checks"]["prerendered_pages"] = 0
-        log("预渲染目录不存在")
     
-    # 3. 检查JS资源
+    # 3. 检查JS资源计数与总大小
     js_dir = local_dir / 'assets' / 'js'
     if js_dir.exists():
         js_files = list(js_dir.rglob('*.js'))
-        total_js_size = sum(f.stat().st_size for f in js_files)
         report["checks"]["js_files_count"] = len(js_files)
-        report["checks"]["js_total_size"] = total_js_size
-        log(f"JS文件: {len(js_files)}个, 总大小: {total_js_size:,} bytes")
+        report["checks"]["js_total_size"] = sum(f.stat().st_size for f in js_files)
     else:
         report["checks"]["js_files_count"] = 0
         report["checks"]["js_total_size"] = 0
-        log("JS目录不存在")
     
     # 4. 检查图片资源
     images_dir = local_dir / 'assets' / 'images'
     if images_dir.exists():
-        image_files = list(images_dir.rglob('*'))
-        image_files = [f for f in image_files if f.is_file() and f.suffix in ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif']]
-        total_img_size = sum(f.stat().st_size for f in image_files)
+        image_files = [f for f in images_dir.rglob('*') 
+                       if f.is_file() and f.suffix in ['.png', '.jpg', '.jpeg', '.webp', '.svg', '.gif']]
         report["checks"]["image_files_count"] = len(image_files)
-        report["checks"]["image_total_size"] = total_img_size
-        log(f"图片文件: {len(image_files)}个, 总大小: {total_img_size:,} bytes")
+        report["checks"]["image_total_size"] = sum(f.stat().st_size for f in image_files)
     else:
         report["checks"]["image_files_count"] = 0
         report["checks"]["image_total_size"] = 0
-        log("图片目录不存在")
     
     # 5. 检查sitemap
     sitemap = local_dir / 'sitemap.xml'
-    if sitemap.exists():
-        sitemap_size = sitemap.stat().st_size
-        report["checks"]["sitemap_size"] = sitemap_size
-        log(f"Sitemap: {sitemap_size:,} bytes")
-    else:
-        report["checks"]["sitemap_size"] = None
-        log("Sitemap不存在")
+    report["checks"]["sitemap_size"] = sitemap.stat().st_size if sitemap.exists() else None
     
     # 6. 检查关键SEO标签
-    log("检查SEO基础标签...")
     seo_checks = {}
     try:
         with open(local_dir / 'index.html', 'r', encoding='utf-8') as f:
@@ -123,24 +99,18 @@ def audit_performance():
                 "has_meta_keywords": '<meta name="keywords"' in html,
                 "has_canonical": 'rel="canonical"' in html,
                 "has_og_title": 'property="og:title"' in html,
-                "has_viewport": 'name="viewport"' in html
+                "has_viewport": 'name="viewport"' in html,
             }
-    except Exception as e:
-        log(f"读取HTML失败: {e}")
-    
+    except Exception:
+        pass
     report["checks"]["seo_basic"] = seo_checks
     
     # 7. 计算性能评分
     score = 100
-    if total_size > 500_000:
-        score -= 10
-    if report["checks"]["js_files_count"] > 20:
-        score -= 5
-    if report["checks"]["image_total_size"] > 5_000_000:
-        score -= 10
-    if seo_checks.get("has_meta_description") is False:
-        score -= 5
-    
+    if total_size > 500_000: score -= 10
+    if report["checks"]["js_files_count"] > 20: score -= 5
+    if report["checks"]["image_total_size"] > 5_000_000: score -= 10
+    if not seo_checks.get("has_meta_description"): score -= 5
     report["performance_score"] = max(0, min(100, score))
     
     # 保存报告
@@ -153,68 +123,43 @@ def audit_performance():
     return report
 
 def analyze_git():
-    """分析Git提交历史"""
+    """分析Git提交历史 (最近10次)"""
     log("开始分析Git提交...")
-    
     try:
         # 获取最近10次提交
         result = subprocess.run(
             ['git', 'log', '--oneline', '-10'],
             cwd=PROJECT_ROOT,
-            capture_output=True,
-            text=True
+            capture_output=True, text=True
         )
-        
         if result.returncode != 0:
             log(f"git log失败: {result.stderr}")
-            return
-        
-        commits = result.stdout.strip().split('\n')
-        log(f"最近{len(commits)}次提交:")
+            return {"commits_analyzed": 0, "commits": [], "guidelines_generated": None}
+        commits = [c for c in result.stdout.strip().split('\n') if c]
+        log(f"最近{len(commits)}次提交")
         for commit in commits:
             log(f"  {commit}")
         
-        # 分析提交模式
-        commit_types = {}
-        for commit in commits:
-            parts = commit.split()
-            if parts:
-                commit_type = parts[0][:7]  # 使用短哈希
-                commit_types[commit_type] = commit_types.get(commit_type, 0) + 1
-        
-        log(f"提交类型分布: {commit_types}")
-        
         # 生成开发准则文件
-        guidelines = f"""# 开发准则
-
-## 最近提交分析 ({datetime.now().strftime('%Y-%m-%d')})
-
-- 最近10次提交:
-{chr(10).join(f"  - {c}" for c in commits)}
-
-## 提交约定建议
-
-- 使用清晰的提交消息
-- 建议遵循约定式提交: <type>(<scope>): <description>
-- 主要type: feat, fix, docs, style, refactor, test, chore
-
----
-*由 auto_dev_system.py git-analysis 自动生成*
-"""
-        
+        guidelines = (
+            f"# 开发准则\n\n"
+            f"## 最近提交分析 ({datetime.now().strftime('%Y-%m-%d')})\n\n"
+            + "\n".join(f"- {c}" for c in commits) +
+            "\n\n## 提交约定建议\n\n"
+            "- 使用清晰的提交消息\n"
+            "- 建议遵循约定式提交: <type>(<scope>): <description>\n"
+            "- 主要type: feat, fix, docs, style, refactor, test, chore\n\n"
+            "---\n*由 auto_dev_system.py git-analysis 自动生成*\n"
+        )
         guidelines_file = PROJECT_ROOT / 'DEVELOPMENT_GUIDELINES.md'
         with open(guidelines_file, 'w', encoding='utf-8') as f:
             f.write(guidelines)
-        
         log(f"开发准则已生成: {guidelines_file}")
-        
-        analysis = {
+        return {
             "commits_analyzed": len(commits),
             "commits": commits,
             "guidelines_generated": str(guidelines_file)
         }
-        return analysis
-        
     except Exception as e:
         log(f"Git分析失败: {e}")
         return None
@@ -224,10 +169,8 @@ def main():
     parser.add_argument('command', choices=['performance', 'git-analysis'],
                        help='要执行的命令')
     args = parser.parse_args()
-    
     ensure_dirs()
     log(f"=== 任务开始: {args.command} ===")
-    
     if args.command == 'performance':
         report = audit_performance()
         print(json.dumps(report, indent=2, ensure_ascii=False))
@@ -235,9 +178,6 @@ def main():
         result = analyze_git()
         if result:
             print(json.dumps(result, indent=2, ensure_ascii=False))
-        else:
-            print("Git分析完成，请查看日志")
-    
     log(f"=== 任务完成: {args.command} ===")
 
 if __name__ == '__main__':
