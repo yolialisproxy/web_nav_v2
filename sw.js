@@ -20,7 +20,6 @@ const STATIC_ASSETS = [
     '/assets/js/data.js',
     '/assets/js/search.js',
     '/assets/js/render.js',
-    '/assets/js/tags.js',
     '/assets/js/favorite.js',
     '/assets/js/favorite-ui-bootstrap.js',
     '/assets/js/toast.js',
