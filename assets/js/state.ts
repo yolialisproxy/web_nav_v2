@@ -4,6 +4,51 @@
  */
 
 class State {
+    private _state: {
+        theme: string;
+        sidebar: {
+            mode: string;
+            activeCategoryId: string | null;
+            activeSubCategoryId: string | null;
+            activeLeafId: string | null;
+        };
+        search: {
+            active: boolean;
+            query: string;
+            results: any[];
+        };
+        filterTags: string[];
+        searchMode: boolean;      // 是否在搜索覆盖层模式
+        sites: any[];             // 站点数据
+        loading: boolean;         // 加载状态
+        currentView: string;      // 当前视图: grid, list, category, games
+    };
+    private _subscribers: Array<(state: any) => void>;
+    // LocalForage 缓存配置
+    private _cache: {
+        version: number;
+        keys: {
+            sites: string;
+            tags: string;
+            sidebar: string;
+            theme: string;
+        };
+        ttl: {
+            sites: number;
+            tags: number;
+            sidebar: number;
+            theme: number;
+        };
+    };
+    private _cacheReady: boolean;
+    private _cacheBackend: any;
+    // 标签系统（从 tags.js 合并而来）
+    tagAll: Map<string, number>;
+    tagSites: Map<number, string[]>;
+    activeTags: Set<string>;
+    private _tagInitialized: boolean;
+    private _isNotifying: boolean; // 防止 _notify 重入导致的无限循环
+
     constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
@@ -19,7 +64,10 @@ class State {
                 results: []
             },
             filterTags: [],
-            searchMode: false      // 是否在搜索覆盖层模式
+            searchMode: false,      // 是否在搜索覆盖层模式
+            sites: [],              // 站点数据
+            loading: true,          // 初始为加载中
+            currentView: 'grid'     // 默认视图
         };
         this._subscribers = [];
         // LocalForage 缓存配置
@@ -48,7 +96,7 @@ class State {
         this._isNotifying = false; // 防止 _notify 重入导致的无限循环
     }
 
-    set(key, value) {
+    set(key: string, value: any) {
         const keys = key.split('.');
         let target = this._state;
 
@@ -88,24 +136,25 @@ class State {
         this._notify();
     }
 
-    get(key) {
+    get(key: string) {
         try {
-            return key.split('.').reduce((obj, k) =>
-                (obj && typeof obj === 'object' ? obj[k] : undefined), this._state);
+            return key.split('.').reduce((obj, k) => {
+                return (obj && typeof obj === 'object' ? obj[k] : undefined);
+            }, this._state);
         } catch (e) {
             console.warn(`[State] 读取路径失败: "${key}"`, e);
             return undefined;
         }
     }
 
-    subscribe(callback) {
+    subscribe(callback: (state: any) => void) {
         this._subscribers.push(callback);
         return () => {
             this._subscribers = this._subscribers.filter(cb => cb !== callback);
         };
     }
 
-    _notify() {
+    private _notify() {
         if (this._isNotifying) return;
         this._isNotifying = true;
         try {
@@ -115,14 +164,14 @@ class State {
         }
     }
 
-    _resolveTheme(theme) {
+    private _resolveTheme(theme: string): string {
         if (theme === 'system') {
             return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
         return theme;
     }
 
-    _hideSkeleton() {
+    private _hideSkeleton() {
         const skeleton = document.getElementById('skeleton-screen');
         if (skeleton) {
             skeleton.classList.add('hidden');
@@ -130,11 +179,12 @@ class State {
         }
     }
 
-    // ═══════════════════════════════════════════════
+    // ════════════════════════════════════════════════
     // LocalForage 缓存层
-    // ═══════════════════════════════════════════════
-
-    /** 异步初始化 localforage */
+    // ════════════════════════════════════════════════
+    /**
+     * 异步初始化 localforage
+     */
     async _initCache() {
         if (this._cacheReady || typeof localforage === 'undefined') {
             // localforage 未加载时降级到 localStorage
@@ -143,7 +193,7 @@ class State {
             return;
         }
         try {
-            await localforage.config({
+            await (localforage as any).config({
                 name: 'nav_web',
                 storeName: 'cache_v1',
                 version: this._cache.version
@@ -159,11 +209,13 @@ class State {
         }
     }
 
-    /** 从缓存恢复状态 */
-    _restoreFromCache() {
+    /**
+     * 从缓存恢复状态
+     */
+    private _restoreFromCache() {
         if (!this._cacheReady) return;
 
-        const restore = async (key) => {
+        const restore = async (key: string) => {
             try {
                 const raw = await this._cacheBackend.getItem(key);
                 if (!raw) return null;
@@ -193,7 +245,12 @@ class State {
             }
             if (tagsData && tagsData.allTags) {
                 this.tagAll = new Map(Object.entries(tagsData.allTags));
-                this.tagSites = new Map(Object.entries(tagsData.tagSites).map(([k, v]) => [parseInt(k), v]));
+                // Convert tagSites: { [string]: string[] } -> Map<number, string[]>
+                const tagSitesMap = new Map<number, string[]>();
+                for (const [k, v] of Object.entries(tagsData.tagSites)) {
+                    tagSitesMap.set(parseInt(k, 10), v as string[]);
+                }
+                this.tagSites = tagSitesMap;
                 this.activeTags = new Set(tagsData.activeTags || []);
             }
             if (sidebar) {
@@ -207,8 +264,10 @@ class State {
         });
     }
 
-    /** 保存到缓存（增量） */
-    async _saveToCache(key, value) {
+    /**
+     * 保存到缓存（增量）
+     */
+    async _saveToCache(key: string, value: any) {
         if (!this._cacheReady) return;
         try {
             const payload = {
@@ -222,7 +281,9 @@ class State {
         }
     }
 
-    /** 强制清空所有缓存 */
+    /**
+     * 强制清空所有缓存
+     */
     async clearCache() {
         if (!this._cacheReady) return;
         try {
@@ -236,13 +297,13 @@ class State {
         }
     }
 
-
-    // ═══════════════════════════════════════════════
+    // ════════════════════════════════════════════════
     // 标签系统（从 tags.js 合并）
-    // ═══════════════════════════════════════════════
-
-    /** 初始化标签索引 */
-    async loadTags(dataManager) {
+    // ════════════════════════════════════════════════
+    /**
+     * 初始化标签索引
+     */
+    async loadTags(dataManager: any) {
         if (this._tagInitialized) return;
         let loadedFromJson = false;
 
@@ -250,7 +311,7 @@ class State {
             const resp = await fetch('data/tag_index.json');
             if (resp.ok) {
                 const tagIndex = await resp.json();
-                tagIndex.forEach(t => this.tagAll.set(t.tag, t.count));
+                tagIndex.forEach((t: {tag: string; count: number}) => this.tagAll.set(t.tag, t.count));
                 loadedFromJson = true;
             }
         } catch (e) {
@@ -268,17 +329,19 @@ class State {
         this._saveToCache(this._cache.keys.tags, tagsData);
     }
 
-    /** 从站点数据构建标签索引 */
-    _buildTagsFromSites(dm) {
+    /**
+     * 从站点数据构建标签索引
+     */
+    private _buildTagsFromSites(dm: any) {
         this.tagAll.clear();
         this.tagSites.clear();
 
         if (!dm || !dm.sites) return;
 
-        dm.sites.forEach(site => {
+        dm.sites.forEach((site: any) => {
             if (!site.tags || !Array.isArray(site.tags)) return;
-            const validTags = [];
-            site.tags.forEach(tag => {
+            const validTags: string[] = [];
+            site.tags.forEach((tag: any) => {
                 if (!tag || typeof tag !== 'string') return;
                 const key = tag.trim().toLowerCase();
                 if (!key) return;
@@ -290,15 +353,19 @@ class State {
         });
     }
 
-    /** 获取站点的标签 */
-    getSiteTags(site) {
+    /**
+     * 获取站点的标签
+     */
+    getSiteTags(site: any): string[] {
         if (site && site.tags) return site.tags;
         if (site && this.tagSites.has(site.id)) return this.tagSites.get(site.id);
         return [];
     }
 
-    /** 根据标签筛选站点 */
-    filterByTags(sites, tags) {
+    /**
+     * 根据标签筛选站点
+     */
+    filterByTags(sites: any[], tags: string[]): any[] {
         if (!tags || !tags.length) return sites;
         const tagSet = new Set(tags.map(t => t.toLowerCase()));
         return sites.filter(site => {
@@ -307,8 +374,10 @@ class State {
         });
     }
 
-    /** 切换标签激活状态 */
-    toggleTag(tag, mode = 'toggle') {
+    /**
+     * 切换标签激活状态
+     */
+    toggleTag(tag: string, mode: 'toggle' | 'set' | 'clear' | 'exact' = 'toggle'): number {
         const key = tag.toLowerCase();
         if (mode === 'toggle') {
             this.activeTags.has(key) ? this.activeTags.delete(key) : this.activeTags.add(key);
@@ -322,78 +391,96 @@ class State {
         return this.activeTags.size;
     }
 
-    /** 获取激活的标签列表 */
-    getActiveTags() {
+    /**
+     * 获取激活的标签列表
+     */
+    getActiveTags(): string[] {
         return Array.from(this.activeTags);
     }
 
-    /** 渲染标签云 UI */
-    renderTagCloud(containerId, options = {}) {
+    /**
+     * 渲染标签云 UI
+     */
+    renderTagCloud(containerId: string, options: { limit?: number } = {}) {
         const container = document.getElementById(containerId);
         if (!container) return;
         const limit = options.limit || 50;
 
-        const tags = [];
+        const tagsArray: {tag: string; count: number; active: boolean}[] = [];
         this.tagAll.forEach((count, tag) => {
-            tags.push({ tag, count, active: this.activeTags.has(tag) });
+            tagsArray.push({ tag, count, active: this.activeTags.has(tag) });
         });
-        tags.sort((a, b) => b.count - a.count);
-        tags.splice(limit);
+        tagsArray.sort((a, b) => b.count - a.count);
+        if (tagsArray.length > limit) {
+            tagsArray.length = limit;
+        }
 
-        if (tags.length === 0) {
-            container.innerHTML = '<div class="tag-cloud"><span class="tag-pill" style="opacity:0.5">暂无标签</span></div>';
+        if (tagsArray.length === 0) {
+            container.innerHTML = '<div class=\"tag-cloud\"><span class=\"tag-pill\" style=\"opacity:0.5\">暂无标签</span></div>';
             return;
         }
 
-        let html = '<div class="tag-cloud">';
-        tags.forEach(t => {
+        let html = '<div class=\"tag-cloud\">';
+        tagsArray.forEach(t => {
             const size = Math.max(0.8, Math.min(1.6, 0.8 + t.count / 500));
-            html += `<a href="#" class="tag-pill ${t.active ? 'active' : ''}" ` +
-                    `data-tag="${t.tag}" style="font-size:${size}em" ` +
-                    `title="${t.tag} (${t.count} sites)" tabindex="0" role="button" aria-pressed="${t.active}">` +
-                    `${this._escapeHtml(t.tag)}<span class="tag-count">${t.count}</span></a>`;
+            html += `<a href=\"#\" class=\"tag-pill ${t.active ? 'active' : ''}\" ` +
+                    `data-tag=\"${t.tag}\" style=\"font-size:${size}em\" ` +
+                    `title=\"${t.tag} (${t.count} sites)\" tabindex=\"0\" role=\"button\" aria-pressed=\"${t.active}\">` +
+                    `${this._escapeHtml(t.tag)}<span class=\"tag-count\">${t.count}</span></a>`;
         });
         html += '</div>';
         container.innerHTML = html;
 
         container.querySelectorAll('.tag-pill').forEach(el => {
-            const handler = (e) => {
+            const handler = (e: MouseEvent) => {
                 e.preventDefault(); e.stopPropagation();
                 const tag = el.dataset.tag;
-                this.toggleTag(tag);
-                this.renderTagCloud(containerId, options);
-                this._notify();
-                window.dispatchEvent(new CustomEvent('tags-filter-changed', {
-                    detail: { tags: this.getActiveTags() }
-                }));
+                if (tag !== undefined) {
+                    this.toggleTag(tag);
+                    this.renderTagCloud(containerId, options);
+                    this._notify();
+                    window.dispatchEvent(new CustomEvent('tags-filter-changed', {
+                        detail: { tags: this.getActiveTags() }
+                    }));
+                }
             };
             el.addEventListener('click', handler);
-            el.addEventListener('keydown', (e) => {
+            el.addEventListener('keydown', (e: KeyboardEvent) => {
                 if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault(); handler(e);
+                    e.preventDefault(); handler(e as MouseEvent); // 类型不匹配但能工作
                 }
             });
         });
     }
 
-    /** 标签相关：禁用警告 */
+    /**
+     * 转义 HTML 防止 XSS
+     */
+    private _escapeHtml(text: string): string {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.appendChild(document.createTextNode(text));
+        return div.innerHTML;
+    }
+
+    /**
+     * 标签相关：禁用警告
+     */
     get tagManagerDeprecationNotice() {
         console.warn('[State] window.tagManager 已废弃，请使用 state.tags 相关 API');
         return null;
     }
 
-    // ═══════════════════════════════════════════════
+    // ════════════════════════════════════════════════
     // 视图切换：网格 / 列表 / 分类
-    // ═══════════════════════════════════════════════
-    setView(mode) {
+    // ════════════════════════════════════════════════
+    setView(mode: string) {
         if (!['grid', 'list', 'category', 'games'].includes(mode)) {
             console.warn('[State] 无效视图模式:', mode);
             return;
         }
         this.set('currentView', mode);
     }
-
-
 }
 
 const state = new State();
