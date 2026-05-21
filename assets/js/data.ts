@@ -28,6 +28,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: 
         function step(result: any): any { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
+};
+declare const state: any;
 class DataManager {
     raw: any | null;
     sites: Map<number, any>;
@@ -431,5 +433,5 @@ class DataManager {
     }
 }
 const dataManager = new DataManager();
-    (window as any).dataManager = dataManager;
+(window as any).dataManager = dataManager;
 //# sourceMappingURL=data.js.map

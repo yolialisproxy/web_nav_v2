@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 auto_dev_system.py - 自动化开发系统
-支持命令：performance, git-analysis
+支持命令:performance, git-analysis
 """
 import subprocess
 import sys
