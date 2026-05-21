@@ -162,15 +162,15 @@
                     return;
                 searchInput.value = this.searchQuery || '';
                 searchInput.oninput = function (e) {
-                    self.searchQuery = e.target.value;
+                    self.searchQuery = (e.target as HTMLInputElement).value;
                     var count = window.favoriteManager.getCount();
                     var clearBtn = document.getElementById('clear-favorites');
                     var searchClear = document.getElementById('favorite-search-clear');
                     // 切换搜索清除按钮
                     if (searchClear) {
-                        searchClear.style.display = e.target.value.trim() ? 'block' : 'none';
+                        searchClear.style.display = (e.target as HTMLInputElement).value.trim() ? 'block' : 'none';
                     }
-                    if (e.target.value.trim()) {
+                    if ((e.target as HTMLInputElement).value.trim()) {
                         if (clearBtn)
                             clearBtn.style.display = 'none';
                     }
@@ -447,7 +447,7 @@
                     });
                 }
                 document.addEventListener('keydown', function (e) {
-                    if (e.key === 'Escape' && window.favoriteUI) {
+                    if ((e as KeyboardEvent).key === 'Escape' && window.favoriteUI) {
                         window.favoriteUI.closeModal();
                     }
                 });

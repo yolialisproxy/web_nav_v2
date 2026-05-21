@@ -1,7 +1,10 @@
 "use strict";
 /**
+
  * data.js - 数据加载与索引管理 (V2.1)
+
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
+
  */
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -68,7 +71,9 @@ class DataManager {
                 }
                 this.raw = JSON.parse(text);
                 /* local-cache unification: data.js now relies on state.get('sites')
+
                    (state LocalForage) as the single source of truth;
+
                    fallback path reads state.get('sites') instead of its own localStorage */
                 if (!Array.isArray(this.raw)) {
                     throw new Error('数据格式错误：期望数组');
@@ -258,7 +263,9 @@ class DataManager {
     }
     _saveCache() {
         /* local-cache unification: 写入统一通过 state._saveToCache 走 LocalForage
+
            此函数保留作降级兼容（当 state 不可用时回退 localStorage）。
+
            localStorage 副本已不作为主要缓存路径。 */
         try {
             if (state && state._cacheReady && state._cacheBackend) {
@@ -285,6 +292,7 @@ class DataManager {
     }
     _loadCache() {
         /* local-cache unification: 数据统一通过 state.get('sites') 读取，
+
            此函数仅作最后降级兼容：从 localStorage 'webnav_sites_cache' 读取。 */
         try {
             const cached = localStorage.getItem('webnav_sites_cache');
@@ -362,9 +370,13 @@ class DataManager {
         return Array.from(this.sites.values());
     }
     /**
+
      * Get single site by ID
+
      * @param {number} siteId
+
      * @returns {Object|null}
+
      */
     getSite(siteId) {
         return this.sites.get(siteId) || null;

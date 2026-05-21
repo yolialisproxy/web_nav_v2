@@ -928,7 +928,7 @@ function bindCardEvents() {
             return;
         // 事件委托：一次性绑定，处理所有卡片收藏点击
         main.addEventListener('click', function (e) {
-            var btn = (e.target as Element).closest('[data-action="toggle-favorite"]');
+            var btn = e.target.closest('[data-action="toggle-favorite"]');
             if (!btn)
                 return;
             e.preventDefault();

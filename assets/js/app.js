@@ -86,7 +86,7 @@ async function init() {
         }
     }
     if (!dataLoaded) {
-        renderSites(false);
+        renderSites(false, 'main-content');
         return;
     }
     await state.loadTags(window.dataManager); // 标签系统已集成到 State
@@ -136,7 +136,7 @@ if (typeof window.Monetization !== "undefined" && window.Monetization.init) {
 }
 // Toast通知
 ((_a = window.Toast) === null || _a === void 0 ? void 0 : _a.init) && window.Toast.init();
-// 标签云展开/收起（tag-cloud-toggle）\n    var tagToggle = document.getElementById('tag-cloud-toggle');\n    var tagContainer = document.getElementById('tag-cloud-container');\n    if (tagToggle && tagContainer) {\n        tagToggle.setAttribute('role', 'button');\n        tagToggle.setAttribute('tabindex', '0');\n        tagToggle.addEventListener('click', function() {\n            var expanded = tagToggle.getAttribute('aria-expanded') === 'true';\n            tagToggle.setAttribute('aria-expanded', !expanded);\n            tagContainer.style.display = expanded ? 'none' : '';\n        });\n        tagToggle.addEventListener('keydown', function(e) {\n            if (e.key === 'Enter' || e.key === ' ') {\n                e.preventDefault();\n                tagToggle.click();\n            }\n        });\n    }\n    // 状态订阅 - 驱动UI渲染
+// 标签云展开/收起（tag-cloud-toggle）\n    var tagToggle = document.getElementById('tag-cloud-toggle');\n    var tagContainer = document.getElementById('tag-cloud-container');\n    if (tagToggle && tagContainer) {\n        tagToggle.setAttribute('role', 'button');\n        tagToggle.setAttribute('tabindex', '0');\n        tagToggle.addEventListener('click', function() {\n            var expanded = tagToggle.getAttribute('aria-expanded') === 'true';\n            tagToggle.setAttribute('aria-expanded', !expanded);\n            tagContainer.style.display = expanded ? 'none' : '';\n        });\n        tagToggle.addEventListener('keydown', function(e) {\n            if ((e as KeyboardEvent).key === 'Enter' || (e as KeyboardEvent).key === ' ') {\n                e.preventDefault();\n                tagToggle.click();\n            }\n        });\n    }\n    // 状态订阅 - 驱动UI渲染
 state.subscribe(function (s) {
     try {
         renderer.renderSidebar(s);
@@ -494,7 +494,7 @@ window.addEventListener('keydown', function (e) {
     }
     if ((e.ctrlKey || e.metaKey) && e.key === '/') {
         e.preventDefault();
-        toggleSidebar();
+        toggleSearch();
     }
 });
 // 触发初始渲染

@@ -109,7 +109,7 @@ MahjongGame.prototype._bindEvents = function () {
     var board = document.getElementById('maj-board');
     if (board) {
         board.addEventListener('click', function (e) {
-            var tileEl = (e.target as Element).closest('[data-uid]');
+            var tileEl = e.target.closest('[data-uid]');
             if (!tileEl)
                 return;
             var uid = parseInt(tileEl.dataset.uid);

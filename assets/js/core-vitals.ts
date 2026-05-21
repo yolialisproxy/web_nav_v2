@@ -115,14 +115,14 @@
                 return;
             // 卡片点击事件委托
             mainContent.addEventListener('click', function (e) {
-                var card = e.target.closest('.site-card');
+                var card = (e.target as Element).closest('.site-card');
                 if (card && typeof trackSiteClick === 'function') {
                     trackSiteClick(card.getAttribute('aria-label') || '');
                 }
             });
             // 标签过滤委托
             mainContent.addEventListener('click', function (e) {
-                var tagBtn = e.target.closest('[data-tag]');
+                var tagBtn = (e.target as Element).closest('[data-tag]');
                 if (tagBtn) {
                     e.stopPropagation();
                     // 标签过滤逻辑

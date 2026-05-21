@@ -310,7 +310,7 @@ Tetris.prototype._bindKeys = function () {
             return;
         if (self.state !== 'running')
             return;
-        switch ((e as KeyboardEvent).key) {
+        switch (e.key) {
             case 'ArrowLeft':
                 e.preventDefault();
                 self._moveLeft();

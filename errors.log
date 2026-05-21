@@ -1,0 +1,364 @@
+assets/js/app.ts(254,25): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(265,64): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(268,25): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(327,39): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/app.ts(331,27): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/app.ts(333,22): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/app.ts(426,40): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(447,25): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(464,78): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(467,32): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(470,29): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/app.ts(562,21): error TS2339: Property 'stop' does not exist on type '{ games: { solitaire: { name: string; icon: string; desc: string; cat: string; rating: number; constructor: any; }; tetris: { name: string; icon: string; desc: string; cat: string; rating: number; constructor: any; }; ... 6 more ...; gomoku: { ...; }; }; ... 17 more ...; _isRecent: (key: any) => boolean; }'.
+assets/js/core-vitals.ts(41,29): error TS2339: Property 'src' does not exist on type 'Element'.
+assets/js/core-vitals.ts(46,23): error TS2339: Property 'readyState' does not exist on type 'Element'.
+assets/js/core-vitals.ts(46,52): error TS2339: Property 'readyState' does not exist on type 'Element'.
+assets/js/core-vitals.ts(48,19): error TS2339: Property 'defer' does not exist on type 'Element'.
+assets/js/core-vitals.ts(59,26): error TS2339: Property 'width' does not exist on type 'Element'.
+assets/js/core-vitals.ts(59,40): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(60,25): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(61,25): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(62,25): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(64,26): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(64,51): error TS2339: Property 'naturalWidth' does not exist on type 'Element'.
+assets/js/core-vitals.ts(64,71): error TS2339: Property 'naturalHeight' does not exist on type 'Element'.
+assets/js/core-vitals.ts(65,25): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(65,49): error TS2339: Property 'naturalWidth' does not exist on type 'Element'.
+assets/js/core-vitals.ts(65,74): error TS2339: Property 'naturalHeight' does not exist on type 'Element'.
+assets/js/core-vitals.ts(95,32): error TS2304: Cannot find name 'initTagManager'.
+assets/js/core-vitals.ts(119,36): error TS2304: Cannot find name 'trackSiteClick'.
+assets/js/core-vitals.ts(120,21): error TS2304: Cannot find name 'trackSiteClick'.
+assets/js/core-vitals.ts(129,39): error TS2339: Property 'applyTagFilter' does not exist on type 'Window & typeof globalThis'.
+assets/js/core-vitals.ts(130,32): error TS2339: Property 'applyTagFilter' does not exist on type 'Window & typeof globalThis'.
+assets/js/core-vitals.ts(148,37): error TS2339: Property 'dataset' does not exist on type 'Element'.
+assets/js/core-vitals.ts(149,37): error TS2339: Property 'src' does not exist on type 'Element'.
+assets/js/core-vitals.ts(149,47): error TS2339: Property 'dataset' does not exist on type 'Element'.
+assets/js/core-vitals.ts(160,30): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(161,29): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(162,30): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(163,29): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(164,25): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(164,47): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(166,25): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/core-vitals.ts(209,33): error TS2339: Property 'fcp' does not exist on type '{}'.
+assets/js/core-vitals.ts(221,33): error TS2339: Property 'lcp' does not exist on type '{}'.
+assets/js/core-vitals.ts(232,35): error TS2339: Property 'hadRecentInput' does not exist on type 'PerformanceEntry'.
+assets/js/core-vitals.ts(234,43): error TS2339: Property 'value' does not exist on type 'PerformanceEntry'.
+assets/js/core-vitals.ts(246,33): error TS2339: Property 'inp' does not exist on type '{}'.
+assets/js/core-vitals.ts(246,54): error TS2339: Property 'processingStart' does not exist on type 'PerformanceEntry'.
+assets/js/core-vitals.ts(254,29): error TS2339: Property 'lcp' does not exist on type '{}'.
+assets/js/core-vitals.ts(254,44): error TS2339: Property 'fcp' does not exist on type '{}'.
+assets/js/data.ts(531,53): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/data.ts(535,23): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/data.ts(701,37): error TS2339: Property 'leafCategories' does not exist on type 'unknown'.
+assets/js/data.ts(703,51): error TS2339: Property 'leafCategories' does not exist on type 'unknown'.
+assets/js/data.ts(705,58): error TS2339: Property 'siteIds' does not exist on type 'unknown'.
+assets/js/data.ts(759,31): error TS2339: Property 'leafCategories' does not exist on type 'unknown'.
+assets/js/data.ts(761,38): error TS2339: Property 'siteIds' does not exist on type 'unknown'.
+assets/js/data.ts(809,35): error TS2339: Property 'leafCategories' does not exist on type 'unknown'.
+assets/js/data.ts(811,40): error TS2339: Property 'siteIds' does not exist on type 'unknown'.
+assets/js/favorite-ui-bootstrap.ts(163,29): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/favorite-ui-bootstrap.ts(186,37): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/favorite-ui-bootstrap.ts(200,25): error TS2339: Property 'onclick' does not exist on type 'Element'.
+assets/js/favorite-ui-bootstrap.ts(222,40): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(223,33): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(244,37): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/favorite-ui-bootstrap.ts(247,32): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(248,25): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(297,36): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(298,29): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(322,36): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(323,29): error TS2304: Cannot find name 'updateFavoriteButtons'.
+assets/js/favorite-ui-bootstrap.ts(342,50): error TS2339: Property 'href' does not exist on type 'Element'.
+assets/js/favorite-ui-bootstrap.ts(421,24): error TS2339: Property 'toggleSiteFavorite' does not exist on type 'Window & typeof globalThis'.
+assets/js/favorite-ui-bootstrap.ts(459,16): error TS2339: Property 'updateFavoriteButtons' does not exist on type 'Window & typeof globalThis'.
+assets/js/favorite-ui-bootstrap.ts(470,16): error TS2339: Property 'toggleFavorite' does not exist on type 'Window & typeof globalThis'.
+assets/js/favorite-ui-bootstrap.ts(473,24): error TS2339: Property 'updateFavoriteButtons' does not exist on type 'Window & typeof globalThis'.
+assets/js/favorite.ts(9,14): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(10,14): error TS2339: Property 'key' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(11,14): error TS2339: Property 'visitKey' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(12,14): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(13,14): error TS2339: Property '_memoryVisits' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(14,14): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(15,14): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(32,52): error TS2339: Property 'key' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(36,26): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(40,22): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(42,29): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(48,22): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(50,29): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(57,39): error TS2339: Property 'key' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(57,64): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(58,18): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(58,46): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(63,18): error TS2339: Property '_memoryFavorites' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(63,46): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(70,52): error TS2339: Property 'visitKey' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(74,26): error TS2339: Property '_memoryVisits' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(78,25): error TS2339: Property '_memoryVisits' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(82,25): error TS2339: Property '_memoryVisits' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(87,39): error TS2339: Property 'visitKey' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(87,69): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(99,14): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(105,28): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(109,30): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(130,14): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(132,14): error TS2554: Expected 2 arguments, but got 1.
+assets/js/favorite.ts(136,25): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(139,33): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(145,33): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(145,65): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(145,99): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(152,14): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(168,21): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(174,21): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(177,21): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(183,19): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(184,18): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(186,14): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(190,21): error TS2551: Property 'visitCounts' does not exist on type 'FavoriteManager'. Did you mean 'getVisitCount'?
+assets/js/favorite.ts(211,26): error TS2551: Property 'favorites' does not exist on type 'FavoriteManager'. Did you mean 'isFavorite'?
+assets/js/favorite.ts(228,19): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(229,18): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(231,14): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(234,19): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(236,14): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(236,38): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(239,19): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/favorite.ts(241,14): error TS2339: Property 'listeners' does not exist on type 'FavoriteManager'.
+assets/js/game-hub.ts(108,44): error TS2339: Property 'dataset' does not exist on type 'Element'.
+assets/js/game-hub.ts(179,21): error TS2554: Expected 2 arguments, but got 1.
+assets/js/game-hub.ts(189,34): error TS2351: This expression is not constructable.
+  Type 'Window' has no construct signatures.
+assets/js/game-hub.ts(191,21): error TS2554: Expected 2 arguments, but got 1.
+assets/js/game-hub.ts(232,25): error TS2304: Cannot find name 'toast'.
+assets/js/game-hub.ts(233,13): error TS2304: Cannot find name 'toast'.
+assets/js/game-utils.ts(30,33): error TS2339: Property '_audioCtx' does not exist on type '{ save: (key: any, data: any) => void; load: (key: any) => any; clear: (key: any) => void; playSound: (freq: any, duration: any, type: any) => void; rand: (min: any, max: any) => any; shuffle: (arr: any) => any; ... 8 more ...; restoreSoundPreference: () => void; }'.
+assets/js/game-utils.ts(30,57): error TS2339: Property '_audioCtx' does not exist on type '{ save: (key: any, data: any) => void; load: (key: any) => any; clear: (key: any) => void; playSound: (freq: any, duration: any, type: any) => void; rand: (min: any, max: any) => any; shuffle: (arr: any) => any; ... 8 more ...; restoreSoundPreference: () => void; }'.
+assets/js/game-utils.ts(30,104): error TS2551: Property 'webkitAudioContext' does not exist on type 'Window & typeof globalThis'. Did you mean 'AudioContext'?
+assets/js/game-utils.ts(120,5): error TS1117: An object literal cannot have multiple properties with the same name.
+assets/js/game-utils.ts(122,5): error TS1117: An object literal cannot have multiple properties with the same name.
+assets/js/game-utils.ts(133,5): error TS1117: An object literal cannot have multiple properties with the same name.
+assets/js/game-utils.ts(140,5): error TS1117: An object literal cannot have multiple properties with the same name.
+assets/js/game-utils.ts(147,5): error TS1117: An object literal cannot have multiple properties with the same name.
+assets/js/games/2048.ts(167,35): error TS2554: Expected 1-3 arguments, but got 0.
+assets/js/games/2048.ts(246,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/2048.ts(286,25): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/2048.ts(294,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/chess.ts(16,11): error TS2339: Property 'PIECES' does not exist on type '() => void'.
+assets/js/games/chess.ts(75,49): error TS2339: Property 'PIECES' does not exist on type '() => void'.
+assets/js/games/chess.ts(76,38): error TS2339: Property 'PIECES' does not exist on type '() => void'.
+assets/js/games/chess.ts(147,22): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'number', but here has type 'any'.
+assets/js/games/chess.ts(157,22): error TS2403: Subsequent variable declarations must have the same type.  Variable 'j' must be of type 'number', but here has type 'any'.
+assets/js/games/chess.ts(231,22): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'number', but here has type 'any'.
+assets/js/games/chess.ts(259,22): error TS2403: Subsequent variable declarations must have the same type.  Variable 'j' must be of type 'number', but here has type 'any'.
+assets/js/games/chess.ts(313,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/chess.ts(336,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/chess.ts(341,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/chess.ts(349,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/dating.ts(21,12): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(24,12): error TS2339: Property 'CHARACTERS' does not exist on type '() => void'.
+assets/js/games/dating.ts(30,12): error TS2339: Property 'EVENTS' does not exist on type '() => void'.
+assets/js/games/dating.ts(90,31): error TS2339: Property 'CHARACTERS' does not exist on type '() => void'.
+assets/js/games/dating.ts(103,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(106,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(109,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(112,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(115,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(118,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(121,40): error TS2339: Property 'EVENTS' does not exist on type '() => void'.
+assets/js/games/dating.ts(122,31): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(123,32): error TS2339: Property 'EVENTS' does not exist on type '() => void'.
+assets/js/games/dating.ts(224,25): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(228,25): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(241,25): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(250,25): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(261,25): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(267,25): error TS2339: Property 'CELL_TYPES' does not exist on type '() => void'.
+assets/js/games/dating.ts(275,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/dating.ts(296,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/dating.ts(346,21): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/dating.ts(352,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/game-engine.ts(75,67): error TS2339: Property '_inst' does not exist on type '(config: any) => void'.
+assets/js/games/game-engine.ts(75,87): error TS2339: Property '_inst' does not exist on type '(config: any) => void'.
+assets/js/games/go.ts(186,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/go.ts(223,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/go.ts(236,13): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/go.ts(345,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/go.ts(350,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/gomoku.ts(156,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/gomoku.ts(180,17): error TS2403: Subsequent variable declarations must have the same type.  Variable 'nr' must be of type 'any', but here has type 'number'.
+assets/js/games/gomoku.ts(180,34): error TS2403: Subsequent variable declarations must have the same type.  Variable 'nc' must be of type 'any', but here has type 'number'.
+assets/js/games/gomoku.ts(204,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/gomoku.ts(219,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/mahjong.ts(19,13): error TS2339: Property 'TILE_TYPES' does not exist on type '() => void'.
+assets/js/games/mahjong.ts(44,29): error TS2339: Property 'TILE_TYPES' does not exist on type '() => void'.
+assets/js/games/mahjong.ts(115,39): error TS2339: Property 'dataset' does not exist on type 'Element'.
+assets/js/games/mahjong.ts(143,29): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/mahjong.ts(179,93): error TS2339: Property '_render' does not exist on type 'Window & typeof globalThis'.
+assets/js/games/solitaire.ts(17,11): error TS2339: Property 'CARDS' does not exist on type '() => void'.
+assets/js/games/solitaire.ts(23,23): error TS2339: Property 'CARDS' does not exist on type '() => void'.
+assets/js/games/solitaire.ts(56,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/solitaire.ts(212,44): error TS2339: Property 'CARDS' does not exist on type '() => void'.
+assets/js/games/solitaire.ts(358,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/solitaire.ts(501,9): error TS2304: Cannot find name 'cardEl'.
+assets/js/games/solitaire.ts(502,9): error TS2304: Cannot find name 'cardEl'.
+assets/js/games/solitaire.ts(503,34): error TS2304: Cannot find name 'cardEl'.
+assets/js/games/tetris.ts(21,8): error TS2339: Property 'BLOCKS' does not exist on type '() => void'.
+assets/js/games/tetris.ts(79,35): error TS2339: Property 'BLOCKS' does not exist on type '() => void'.
+assets/js/games/tetris.ts(81,38): error TS2339: Property 'BLOCKS' does not exist on type '() => void'.
+assets/js/games/tetris.ts(346,13): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(24,11): error TS2339: Property 'SCENES' does not exist on type '() => void'.
+assets/js/games/wuxia.ts(114,31): error TS2339: Property 'SCENES' does not exist on type '() => void'.
+assets/js/games/wuxia.ts(173,36): error TS2339: Property 'SCENES' does not exist on type '() => void'.
+assets/js/games/wuxia.ts(178,29): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(195,25): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(198,44): error TS2339: Property 'SCENES' does not exist on type '() => void'.
+assets/js/games/wuxia.ts(200,57): error TS2339: Property 'SCENES' does not exist on type '() => void'.
+assets/js/games/wuxia.ts(249,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(252,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(259,35): error TS2551: Property 'render' does not exist on type 'Window & typeof globalThis'. Did you mean 'renderer'?
+assets/js/games/wuxia.ts(278,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(312,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/games/wuxia.ts(349,17): error TS2554: Expected 2 arguments, but got 1.
+assets/js/monetization.ts(117,47): error TS2554: Expected 1 arguments, but got 0.
+assets/js/monetization.ts(121,26): error TS2554: Expected 1 arguments, but got 0.
+assets/js/performance-monitor.ts(27,28): error TS2339: Property 'hadRecentInput' does not exist on type 'PerformanceEntry'.
+assets/js/performance-monitor.ts(28,45): error TS2339: Property 'value' does not exist on type 'PerformanceEntry'.
+assets/js/performance-monitor.ts(36,51): error TS2339: Property 'processingStart' does not exist on type 'PerformanceEntry'.
+assets/js/performance-monitor.ts(52,12): error TS2551: Property 'trackEvent' does not exist on type 'Window & typeof globalThis'. Did you mean 'TrackEvent'?
+assets/js/render.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'StateUI'.
+assets/js/render.ts(41,8): error TS2551: Property 'StateUI' does not exist on type 'Window & typeof globalThis'. Did you mean 'state'?
+assets/js/render.ts(67,14): error TS2339: Property 'pageSize' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(68,14): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(69,14): error TS2339: Property 'currentSites' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(70,14): error TS2339: Property 'totalPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(71,14): error TS2339: Property 'isSearchMode' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(73,14): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(76,14): error TS2339: Property 'currentSites' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(77,14): error TS2339: Property 'totalPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(77,42): error TS2339: Property 'currentSites' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(77,69): error TS2339: Property 'pageSize' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(78,14): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(79,14): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(82,28): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(82,47): error TS2339: Property 'pageSize' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(83,34): error TS2339: Property 'pageSize' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(85,21): error TS2339: Property 'currentSites' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(88,21): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(88,40): error TS2339: Property 'totalPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(92,18): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(98,14): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(99,14): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(103,19): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(104,18): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(109,24): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(111,18): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(116,21): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(116,54): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(120,21): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(129,21): error TS2339: Property '_renderedPages' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(170,20): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(180,32): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(200,50): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(243,41): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+assets/js/render.ts(386,23): error TS2339: Property 'isSearchMode' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(416,20): error TS2339: Property 'value' does not exist on type 'Element'.
+assets/js/render.ts(425,18): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(426,18): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(427,18): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(429,22): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(430,22): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(454,23): error TS2339: Property 'isSearchMode' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(480,20): error TS2339: Property 'value' does not exist on type 'Element'.
+assets/js/render.ts(545,30): error TS2339: Property 'dataset' does not exist on type 'Element'.
+assets/js/render.ts(563,23): error TS2339: Property 'isSearchMode' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(624,20): error TS2339: Property 'value' does not exist on type 'Element'.
+assets/js/render.ts(627,50): error TS2339: Property 'currentSites' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(639,23): error TS2339: Property 'isSearchMode' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(745,35): error TS2339: Property 'currentSites' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(807,17): error TS2339: Property '_observer' does not exist on type 'HTMLElement'.
+assets/js/render.ts(808,17): error TS2339: Property '_observer' does not exist on type 'HTMLElement'.
+assets/js/render.ts(811,16): error TS2339: Property '_globalScrollHandler' does not exist on type 'Window & typeof globalThis'.
+assets/js/render.ts(812,53): error TS2339: Property '_globalScrollHandler' does not exist on type 'Window & typeof globalThis'.
+assets/js/render.ts(813,16): error TS2339: Property '_globalScrollHandler' does not exist on type 'Window & typeof globalThis'.
+assets/js/render.ts(830,18): error TS2339: Property '_observer' does not exist on type 'HTMLDivElement'.
+assets/js/render.ts(833,16): error TS2339: Property '_globalScrollHandler' does not exist on type 'never'.
+assets/js/render.ts(838,16): error TS2339: Property 'addEventListener' does not exist on type 'never'.
+assets/js/render.ts(838,50): error TS2339: Property '_globalScrollHandler' does not exist on type 'never'.
+assets/js/render.ts(853,44): error TS2339: Property 'currentPage' does not exist on type 'PaginatedRenderer'.
+assets/js/render.ts(911,18): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(912,18): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(913,18): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(915,22): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(916,22): error TS2339: Property 'style' does not exist on type 'Element'.
+assets/js/render.ts(973,46): error TS2339: Property '_eventsBound' does not exist on type 'Element'.
+assets/js/render.ts(1062,47): error TS2554: Expected 1 arguments, but got 2.
+assets/js/render.ts(1104,13): error TS2554: Expected 2 arguments, but got 1.
+assets/js/schema.ts(43,24): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(43,53): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(44,31): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(65,36): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(65,58): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(66,34): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(108,17): error TS2339: Property 'logo' does not exist on type '{ '@type': string; '@id': string; name: string; alternateName: string; url: string; description: string; }'.
+assets/js/schema.ts(111,17): error TS2339: Property 'sameAs' does not exist on type '{ '@type': string; '@id': string; name: string; alternateName: string; url: string; description: string; }'.
+assets/js/schema.ts(141,24): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(141,53): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(142,35): error TS2339: Property 'dataManager' does not exist on type 'typeof globalThis'.
+assets/js/schema.ts(246,16): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+assets/js/schema.ts(283,16): error TS2339: Property 'type' does not exist on type 'HTMLElement'.
+assets/js/search.ts(18,25): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
+assets/js/search.ts(26,14): error TS2339: Property 'children' does not exist on type 'TrieNode'.
+assets/js/search.ts(27,14): error TS2339: Property 'siteIds' does not exist on type 'TrieNode'.
+assets/js/search.ts(32,14): error TS2339: Property 'root' does not exist on type 'TrieIndex'.
+assets/js/search.ts(33,14): error TS2339: Property '_allSiteIds' does not exist on type 'TrieIndex'.
+assets/js/search.ts(45,14): error TS2339: Property '_allSiteIds' does not exist on type 'TrieIndex'.
+assets/js/search.ts(50,29): error TS2339: Property 'root' does not exist on type 'TrieIndex'.
+assets/js/search.ts(54,33): error TS2339: Property 'root' does not exist on type 'TrieIndex'.
+assets/js/search.ts(75,25): error TS2339: Property 'root' does not exist on type 'TrieIndex'.
+assets/js/search.ts(98,18): error TS2339: Property '_allSiteIds' does not exist on type 'TrieIndex'.
+assets/js/search.ts(105,7): error TS2451: Cannot redeclare block-scoped variable 'SearchEngine'.
+assets/js/search.ts(107,14): error TS2339: Property 'dataManager' does not exist on type 'SearchEngine'.
+assets/js/search.ts(108,14): error TS2339: Property '_trie' does not exist on type 'SearchEngine'.
+assets/js/search.ts(109,14): error TS2339: Property '_nameIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(110,14): error TS2339: Property '_descIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(111,14): error TS2339: Property '_urlIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(112,14): error TS2339: Property '_tagIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(113,14): error TS2339: Property '_siteScores' does not exist on type 'SearchEngine'.
+assets/js/search.ts(114,14): error TS2339: Property '_siteMap' does not exist on type 'SearchEngine'.
+assets/js/search.ts(119,14): error TS2339: Property '_trie' does not exist on type 'SearchEngine'.
+assets/js/search.ts(120,31): error TS2339: Property 'dataManager' does not exist on type 'SearchEngine'.
+assets/js/search.ts(127,18): error TS2339: Property '_nameIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(128,18): error TS2339: Property '_descIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(129,18): error TS2339: Property '_urlIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(130,18): error TS2339: Property '_siteMap' does not exist on type 'SearchEngine'.
+assets/js/search.ts(132,18): error TS2339: Property '_trie' does not exist on type 'SearchEngine'.
+assets/js/search.ts(133,18): error TS2339: Property '_trie' does not exist on type 'SearchEngine'.
+assets/js/search.ts(142,39): error TS2339: Property '_tagIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(143,38): error TS2339: Property '_tagIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(144,34): error TS2339: Property '_tagIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(149,18): error TS2339: Property '_siteScores' does not exist on type 'SearchEngine'.
+assets/js/search.ts(185,35): error TS2339: Property '_trie' does not exist on type 'SearchEngine'.
+assets/js/search.ts(190,31): error TS2339: Property '_siteMap' does not exist on type 'SearchEngine'.
+assets/js/search.ts(193,30): error TS2339: Property '_siteScores' does not exist on type 'SearchEngine'.
+assets/js/search.ts(194,36): error TS2339: Property '_nameIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(195,36): error TS2339: Property '_descIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(196,35): error TS2339: Property '_urlIndex' does not exist on type 'SearchEngine'.
+assets/js/search.ts(209,26): error TS2339: Property 'length' does not exist on type 'unknown'.
+assets/js/search.ts(255,26): error TS2339: Property '_trie' does not exist on type 'SearchEngine'.
+assets/js/search.ts(258,31): error TS2339: Property '_siteMap' does not exist on type 'SearchEngine'.
+assets/js/search.ts(284,41): error TS2339: Property 'length' does not exist on type 'unknown'.
+assets/js/state.ts(145,40): error TS2304: Cannot find name 'localforage'.
+assets/js/state.ts(147,18): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(152,19): error TS2304: Cannot find name 'localforage'.
+assets/js/state.ts(157,18): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(157,34): error TS2304: Cannot find name 'localforage'.
+assets/js/state.ts(164,18): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(176,40): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(183,32): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(235,24): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(248,37): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(251,32): error TS2339: Property '_cacheBackend' does not exist on type 'State'.
+assets/js/state.ts(373,31): error TS2339: Property 'limit' does not exist on type '{}'.
+assets/js/state.ts(400,32): error TS2339: Property 'dataset' does not exist on type 'Element'.
