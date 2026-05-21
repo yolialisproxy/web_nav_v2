@@ -100,7 +100,7 @@ Game2048.prototype._bindEvents = function () {
         if (GameHub.currentGame !== 'game2048' || self.state !== 'running')
             return;
         var moved = false;
-        switch ((e as KeyboardEvent).key) {
+        switch (e.key) {
             case 'ArrowLeft':
                 e.preventDefault();
                 moved = self._move('left');

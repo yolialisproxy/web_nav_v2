@@ -13,14 +13,21 @@
     "skipLibCheck": true,
     "removeComments": false,
     "sourceMap": true,
-    "lib": ["es2019", "dom"],
+    "lib": [
+      "es2019",
+      "dom"
+    ],
     "allowJs": true,
     "checkJs": false,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "ignoreDeprecations": "6.0"
   },
   "include": [
     "assets/js/**/*.ts",
-    "assets/js/**/*.d.ts"
+    "assets/js/**/*.d.ts",
+    "assets/js/global.d.ts",
+    "**/*.ts",
+    "global.d.ts"
   ],
   "exclude": [
     "node_modules"

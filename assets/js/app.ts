@@ -217,7 +217,7 @@ var searchSuggestions = document.getElementById('search-suggestions');
 if (searchInput) {
     var searchDebounceTimer = null;
     searchInput.addEventListener('input', function (e) {
-        var query = (e.target as HTMLInputElement).value.trim();
+        var query = e.target.value.trim();
         state.set('search.query', query);
         if (searchDebounceTimer)
             clearTimeout(searchDebounceTimer);
@@ -241,11 +241,11 @@ if (searchInput) {
         }, 150);
     });
     searchInput.addEventListener('keydown', function (e) {
-        if ((e as KeyboardEvent).key === 'Escape') {
+        if (e.key === 'Escape') {
             hideSearchSuggestions();
             toggleSearch();
         }
-        if ((e as KeyboardEvent).key === 'Enter') {
+        if (e.key === 'Enter') {
             e.preventDefault();
             hideSearchSuggestions();
         }
@@ -256,7 +256,7 @@ if (searchInput) {
         }
     });
     document.addEventListener('click', function (e) {
-        if (!(e.target as Element).closest('.search-container')) {
+        if (!e.target.closest('.search-container')) {
             hideSearchSuggestions();
         }
     });
@@ -318,7 +318,7 @@ if (sidebarToggle && sidebar && sidebarOverlay) {
 var sidebarContent = document.getElementById('sidebar-content');
 if (sidebarContent) {
     sidebarContent.addEventListener('click', function (e) {
-        var navItem = (e.target as Element).closest('.nav-item[data-category]');
+        var navItem = e.target.closest('.nav-item[data-category]');
         if (navItem) {
             var cat = navItem.getAttribute('data-category');
             // 切换子分类展开/折叠
@@ -370,7 +370,7 @@ if (sidebarContent) {
             e.preventDefault();
             return;
         }
-        var subItem = (e.target as Element).closest('.nav-sub-item[data-sub]');
+        var subItem = e.target.closest('.nav-sub-item[data-sub]');
         if (subItem) {
             var subCat = subItem.getAttribute('data-sub');
             var parentItem = subItem.closest('.nav-item');
@@ -441,7 +441,7 @@ function toggleSearch() {
 if (searchOverlayInput) {
     var overlayDebounceTimer = null;
     searchOverlayInput.addEventListener('input', function (e) {
-        var query = (e.target as HTMLInputElement).value;
+        var query = e.target.value;
         state.set('search.query', query);
         if (searchInput)
             searchInput.value = query;
@@ -456,7 +456,7 @@ if (searchOverlayInput) {
         }, 150);
     });
     searchOverlayInput.addEventListener('keydown', function (e) {
-        if ((e as KeyboardEvent).key === 'Escape')
+        if (e.key === 'Escape')
             toggleSearch();
     });
     if (searchOverlayClear) {
@@ -482,17 +482,17 @@ if (searchOverlay) {
     });
 }
 window.addEventListener('keydown', function (e) {
-    if ((e as KeyboardEvent).key === 'Escape' && state.get('search.active')) {
+    if (e.key === 'Escape' && state.get('search.active')) {
         toggleSearch();
     }
 });
 // 全局键盘快捷键
 window.addEventListener('keydown', function (e) {
-    if ((e.ctrlKey || e.metaKey) && (e as KeyboardEvent).key === 'k') {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         toggleSearch();
     }
-    if ((e.ctrlKey || e.metaKey) && (e as KeyboardEvent).key === '/') {
+    if ((e.ctrlKey || e.metaKey) && e.key === '/') {
         e.preventDefault();
         toggleSearch();
     }
@@ -667,8 +667,8 @@ window.renderer = renderer;
 // 全局错误捕获
 window.addEventListener('error', function (e) {
     console.warn('[Global Error]', e.error ? e.error.message : e.message);
-    if (e.target && (e.target as Element).tagName === 'IMG') {
-        (e.target as HTMLImageElement).src = 'assets/images/favicon.png';
+    if (e.target && e.target.tagName === 'IMG') {
+        e.target.src = 'assets/images/favicon.png';
     }
 });
 // 页面加载完成初始化

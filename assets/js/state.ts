@@ -4,17 +4,6 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
-    // Tag system properties
-    tagAll: Map<string, number>;
-    tagSites: Map<string, string[]>;
-    activeTags: Set<string>;
-    _tagInitialized: boolean;
-
-    _state: any;
-    _subscribers: any[];
-    _cache: any;
-    _cacheReady: boolean;
-    _isNotifying: boolean;
     constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
@@ -409,7 +398,7 @@ class State {
             };
             el.addEventListener('click', handler);
             el.addEventListener('keydown', (e) => {
-                if ((e as KeyboardEvent).key === 'Enter' || (e as KeyboardEvent).key === ' ') {
+                if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
                     handler(e); // 类型不匹配但能工作
                 }

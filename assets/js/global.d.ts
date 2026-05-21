@@ -1,35 +1,30 @@
+// Auto-generated Window property declarations for missing globals
 interface Window {
-    state: any;
-    dataManager: any;
-    favoriteManager?: any;
-    favoriteUI?: any;
-    Monetization?: any;
-    searchEngine?: any;
-    Toast?: any;
-    renderer?: any;
-    paginatedRenderer?: any;
-    initSearchEngine: (dm: any) => void;
-    getStoredJsErrors: () => any[];
-    clearStoredJsErrors: () => void;
-    __errorInterceptorInitialized?: boolean;
-    localforage: any;
-    trackSiteClick: (name: string) => void;
-    renderSites: (sites: any, containerId?: string) => void;
+  Monetization: any;
+  StateUI: any;
+  Toast: any;
+  __errorInterceptorInitialized: any;
+  _globalScrollHandler: any;
+  _render: any;
+  applyTagFilter: any;
+  cardEl: any;
+  clearStoredJsErrors: any;
+  dataManager: any;
+  favoriteManager: any;
+  favoriteUI: any;
+  getStoredJsErrors: any;
+  initTagManager: any;
+  localforage: any;
+  paginatedRenderer: any;
+  render: any;
+  renderer: any;
+  searchEngine: any;
+  state: any;
+  toast: any;
+  toggleFavorite: any;
+  toggleSiteFavorite: any;
+  trackEvent: any;
+  trackSiteClick: any;
+  updateFavoriteButtons: any;
+  webkitAudioContext: any;
 }
-
-interface HTMLElement {
-    dataset: DOMStringMap;
-}
-
-declare const SearchEngine: {
-    prototype: any;
-    new (dm: any): any;
-    highlight(text: string, query: string): string;
-};
-
-declare const StateUI: {
-    loading(): string;
-    error(msg: string): string;
-    empty(msg: string): string;
-    searchEmpty(q: string): string;
-};
