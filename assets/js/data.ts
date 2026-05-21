@@ -6,7 +6,7 @@
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
 
  */
-var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any): any {
+var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: PromiseLike<any>, generator: (...args: any[]) => Iterator<any, any, any>): Promise<any> {
     function adopt(value: any): any { return value instanceof P ? value : new P(function (resolve: any) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
         function fulfilled(value: any): any {
@@ -28,7 +28,6 @@ var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _argume
         function step(result: any): any { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
-};
 class DataManager {
     raw: any | null;
     sites: Map<number, any>;
