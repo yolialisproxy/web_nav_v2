@@ -28,3 +28,18 @@ interface Window {
   updateFavoriteButtons: any;
   webkitAudioContext: any;
 }
+// Permissive extensions for migration
+interface EventTarget {
+  value?: any;
+  closest?: (selector: string) => Element | null;
+  style?: CSSStyleDeclaration;
+  dataset?: DOMStringMap;
+  src?: string;
+}
+interface Element {
+  value?: any;
+  closest?: (selector: string) => Element | null;
+  style?: CSSStyleDeclaration;
+  dataset?: DOMStringMap;
+  src?: string;
+}
