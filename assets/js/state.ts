@@ -4,6 +4,30 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
+    _state: any;
+    _subscribers: any[];
+    _cache: {
+        version: number;
+        keys: {
+            sites: string;
+            tags: string;
+            sidebar: string;
+            theme: string;
+        };
+        ttl: {
+            sites: number;
+            tags: number;
+            sidebar: number;
+            theme: number;
+        };
+    };
+    _cacheReady: boolean;
+    _cacheBackend: any;
+    tagAll: Map<string, number>;
+    tagSites: Map<number, string[]>;
+    activeTags: Set<string>;
+    _tagInitialized: boolean;
+    _isNotifying: boolean;
     constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
@@ -143,7 +167,7 @@ class State {
                 storeName: 'cache_v1',
                 version: this._cache.version
             });
-            this._cacheBackend = localforage;
+    _cacheBackend: any;
             this._cacheReady = true;
             // 后台恢复
             this._restoreFromCache();

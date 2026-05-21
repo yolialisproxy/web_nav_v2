@@ -6,10 +6,10 @@
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
 
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) {
+var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any): any {
+    function adopt(value: any): any { return value instanceof P ? value : new P(function (resolve: any) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve: any, reject: any) {
+        function fulfilled(value: any): any {
             try {
                 step(generator.next(value));
             }
@@ -17,7 +17,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 reject(e);
             }
         }
-        function rejected(value) {
+        function rejected(value: any): any {
             try {
                 step(generator["throw"](value));
             }
@@ -25,11 +25,21 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
                 reject(e);
             }
         }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function step(result: any): any { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
 class DataManager {
+    raw: any | null;
+    sites: Map<number, any>;
+    categories: any;
+    mappings: Map<string, number[]>;
+    tagIndex: Map<string, Set<number>>;
+    tagCloud: Map<string, {tag: string; count: number; sites: string[]}>;
+    isLoaded: boolean;
+    version: string | null;
+    _loadError: Error | null;
+    tagIndexSorted: any[];
     constructor() {
         this.raw = null;
         this.sites = new Map();
@@ -421,5 +431,5 @@ class DataManager {
     }
 }
 const dataManager = new DataManager();
-window.dataManager = dataManager;
+    (window as any).dataManager = dataManager;
 //# sourceMappingURL=data.js.map
