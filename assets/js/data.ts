@@ -6,7 +6,7 @@
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
 
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any): any {
+var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any): any {
     function adopt(value: any): any { return value instanceof P ? value : new P(function (resolve: any) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
         function fulfilled(value: any): any {
@@ -50,6 +50,7 @@ class DataManager {
         this.isLoaded = false;
         this.version = null;
         this._loadError = null;
+        this.tagIndexSorted = [];
     }
     load() {
         return __awaiter(this, void 0, void 0, function* () {
