@@ -30,6 +30,8 @@ interface FavoriteManager {
   visitKey: string;
   _memoryFavorites: any;
   _memoryVisits: any;
+  favorites: any[];
+  visitCounts: any;
   isFavorite(id: number): boolean;
   getVisitCount(id: number): number;
   // 其他方法...
