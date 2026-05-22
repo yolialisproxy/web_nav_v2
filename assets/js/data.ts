@@ -1,15 +1,17 @@
 "use strict";
-/**
+/// <reference path="../global.d.ts" />
 
+/**
  * data.js - 数据加载与索引管理 (V2.1)
 
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
-
  */
-var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: PromiseLike<any>, generator: (...args: any[]) => Iterator<any, any, any>): Promise<any> {
-    function adopt(value: any): any { return value instanceof P ? value : new P(function (resolve: any) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve: any, reject: any) {
-        function fulfilled(value: any): any {
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value: any): P | PromiseLike<P> {
+        return value instanceof P ? value : new P(function (resolve) { resolve(value); });
+    }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value: any) {
             try {
                 step(generator.next(value));
             }
@@ -17,7 +19,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: 
                 reject(e);
             }
         }
-        function rejected(value: any): any {
+        function rejected(value: any) {
             try {
                 step(generator["throw"](value));
             }
@@ -25,22 +27,17 @@ var __awaiter = (this && this.__awaiter) || function (thisArg: any, _arguments: 
                 reject(e);
             }
         }
-        function step(result: any): any { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function step(result: any) {
+            if (result.done) {
+                resolve(result.value);
+            } else {
+                adopt(result.value).then(fulfilled, rejected);
+            }
+        }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-declare const state: any;
 class DataManager {
-    raw: any | null;
-    sites: Map<number, any>;
-    categories: any;
-    mappings: Map<string, number[]>;
-    tagIndex: Map<string, Set<number>>;
-    tagCloud: Map<string, {tag: string; count: number; sites: string[]}>;
-    isLoaded: boolean;
-    version: string | null;
-    _loadError: Error | null;
-    tagIndexSorted: any[];
     constructor() {
         this.raw = null;
         this.sites = new Map();
@@ -433,5 +430,5 @@ class DataManager {
     }
 }
 const dataManager = new DataManager();
-(window as any).dataManager = dataManager;
+window.dataManager = dataManager;
 //# sourceMappingURL=data.js.map

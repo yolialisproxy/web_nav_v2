@@ -4,13 +4,6 @@
  * 功能：本地存储收藏的站点，支持访问计数、搜索、分类、导出
  */
 class FavoriteManager {
-    _memoryFavorites: any;
-    _memoryVisits: any;
-    key: any;
-    listeners: any;
-    visitCounts: any;
-    visitKey: any;
-    favorites: any;
     constructor() {
         // ===== 事件系统 =====
         this.listeners = {};
