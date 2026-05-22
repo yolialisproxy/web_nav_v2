@@ -25,15 +25,15 @@ declare var games: {
 declare var _isRecent: (key: any) => boolean;
 
 interface FavoriteManager {
-  listeners: any[];
+  listeners: { [key: string]: any[] };
   key: string;
   visitKey: string;
   _memoryFavorites: any;
   _memoryVisits: any;
   favorites: any[];
   visitCounts: any;
-  isFavorite(id: number): boolean;
-  getVisitCount(id: number): number;
+  isFavorite(siteName: string): boolean;
+  getVisitCount(siteName: string): number;
   // 其他方法...
 }
 

@@ -5,14 +5,14 @@
  */
 class FavoriteManager {
     constructor() {
-        // ===== 事件系统 =====
-        this.listeners = {};
-        this.key = 'webnav_favorites_v2';
-        this.visitKey = 'webnav_favorites_visits_v2';
-        this._memoryFavorites = null;
-        this._memoryVisits = null;
-        this.favorites = this.loadFromStorage();
-        this.visitCounts = this.loadVisits();
+// ===== 事件系统 =====
+this.listeners: any[] = [];
+this.key = 'webnav_favorites_v2';
+this.visitKey = 'webnav_favorites_visits_v2';
+this._memoryFavorites = null;
+this._memoryVisits = null;
+this.favorites = this.loadFromStorage();
+this.visitCounts = this.loadVisits();
     }
     // ===== 工具：安全日期解析 =====
     /**
