@@ -18,7 +18,7 @@ const Toast = {
         if (!this.container)
             this.init();
         const toast = document.createElement('div');
-        toast.className = 'toast-msg toast-' + type;
+        toast.className = `toast-msg toast-${type}`;
         toast.textContent = message;
         toast.setAttribute('role', 'alert');
         toast.setAttribute('aria-live', 'assertive');

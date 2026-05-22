@@ -4,7 +4,7 @@
  * 职责：页面内轻量级通知消息，避免alert()阻塞体验
  */
 const Toast = {
-    container: null,
+    container: null as HTMLElement | null,
     init() {
         this.container = document.getElementById('toast-container');
         if (!this.container) {
@@ -14,11 +14,11 @@ const Toast = {
             document.body.appendChild(this.container);
         }
     },
-    show(message, type = 'info', duration = 3000) {
+    show(message: string, type: string = 'info', duration: number = 3000) {
         if (!this.container)
             this.init();
         const toast = document.createElement('div');
-        toast.className = 'toast-msg toast-' + type;
+        toast.className = `toast-msg toast-${type}`;
         toast.textContent = message;
         toast.setAttribute('role', 'alert');
         toast.setAttribute('aria-live', 'assertive');
@@ -36,9 +36,9 @@ const Toast = {
             }
         }, duration);
     },
-    success(message) { this.show(message, 'success'); },
-    error(message) { this.show(message, 'error'); },
-    info(message) { this.show(message, 'info'); }
+    success(message: string) { this.show(message, 'success'); },
+    error(message: string) { this.show(message, 'error'); },
+    info(message: string) { this.show(message, 'info'); }
 };
 window.Toast = Toast;
 //# sourceMappingURL=toast.js.map
