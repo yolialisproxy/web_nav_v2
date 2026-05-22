@@ -4,7 +4,7 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
-    constructor() {
+    private _state: any;    private _subscribers: Array<(...args: any[]) => void>;    private _cache: {        version: number;        keys: {            sites: string;            tags: string;            sidebar: string;            theme: string;        };        ttl: {            sites: number;            tags: number;            sidebar: number;            theme: number;        };    };    private _cacheReady: boolean;    private _tagAll: Map<string, number>;    private _tagSites: Map<number, string[]>;    private _activeTags: Set<string>;    private _tagInitialized: boolean;    private _isNotifying: boolean;    private _state: any;    private _subscribers: Array<(...args: any[]) => void>;    private _cache: {        version: number;        keys: {            sites: string;            tags: string;            sidebar: string;            theme: string;        };        ttl: {            sites: number;            tags: number;            sidebar: number;            theme: number;        };    };    private _cacheReady: boolean;    private _tagAll: Map<string, number>;    private _tagSites: Map<number, string[]>;    private _activeTags: Set<string>;    private _tagInitialized: boolean;    private _isNotifying: boolean;    constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
             sidebar: {
@@ -44,9 +44,9 @@ class State {
         this._cacheReady = false;
         this._initCache(); // 异步初始化缓存
         // 标签系统（从 tags.js 合并而来）
-        this.tagAll = new Map(); // tag -> count
-        this.tagSites = new Map(); // site id -> tags[]
-        this.activeTags = new Set();
+        this._tagAll = new Map(); // tag -> count
+        this._tagSites = new Map(); // site id -> tags[]
+        this._activeTags = new Set();
         this._tagInitialized = false;
         this._isNotifying = false; // 防止 _notify 重入导致的无限循环
     }
@@ -190,14 +190,14 @@ class State {
                 this._notify();
             }
             if (tagsData && tagsData.allTags) {
-                this.tagAll = new Map(Object.entries(tagsData.allTags));
+                this._tagAll = new Map(Object.entries(tagsData.allTags));
                 // Convert tagSites: { [string]: string[] } -> Map<number, string[]>
                 const tagSitesMap = new Map();
                 for (const [k, v] of Object.entries(tagsData.tagSites)) {
                     tagSitesMap.set(parseInt(k, 10), v);
                 }
-                this.tagSites = tagSitesMap;
-                this.activeTags = new Set(tagsData.activeTags || []);
+                this._tagSites = tagSitesMap;
+                this._activeTags = new Set(tagsData.activeTags || []);
             }
             if (sidebar) {
                 this._state.sidebar = Object.assign(Object.assign({}, this._state.sidebar), sidebar);
@@ -259,7 +259,7 @@ class State {
             const resp = await fetch('data/tag_index.json');
             if (resp.ok) {
                 const tagIndex = await resp.json();
-                tagIndex.forEach((t) => this.tagAll.set(t.tag, t.count));
+                tagIndex.forEach((t) => this._tagAll.set(t.tag, t.count));
                 loadedFromJson = true;
             }
         }
@@ -270,9 +270,9 @@ class State {
         this._tagInitialized = true;
         // 标签数据变更后持久化
         const tagsData = {
-            allTags: Object.fromEntries(this.tagAll),
-            tagSites: Object.fromEntries(Array.from(this.tagSites.entries()).map(([k, v]) => [k, v])),
-            activeTags: Array.from(this.activeTags)
+            allTags: Object.fromEntries(this._tagAll),
+            tagSites: Object.fromEntries(Array.from(this._tagSites.entries()).map(([k, v]) => [k, v])),
+            activeTags: Array.from(this._activeTags)
         };
         this._saveToCache(this._cache.keys.tags, tagsData);
     }
@@ -280,8 +280,8 @@ class State {
      * 从站点数据构建标签索引
      */
     _buildTagsFromSites(dm) {
-        this.tagAll.clear();
-        this.tagSites.clear();
+        this._tagAll.clear();
+        this._tagSites.clear();
         if (!dm || !dm.sites)
             return;
         dm.sites.forEach((site) => {
@@ -295,12 +295,12 @@ class State {
                 if (!key)
                     return;
                 validTags.push(tag.trim());
-                if (!this.tagAll.has(key))
-                    this.tagAll.set(key, 0);
-                this.tagAll.set(key, this.tagAll.get(key) + 1);
+                if (!this._tagAll.has(key))
+                    this._tagAll.set(key, 0);
+                this._tagAll.set(key, this._tagAll.get(key) + 1);
             });
             if (validTags.length > 0)
-                this.tagSites.set(site.id, validTags);
+                this._tagSites.set(site.id, validTags);
         });
     }
     /**
@@ -309,8 +309,8 @@ class State {
     getSiteTags(site) {
         if (site && site.tags)
             return site.tags;
-        if (site && this.tagSites.has(site.id))
-            return this.tagSites.get(site.id);
+        if (site && this._tagSites.has(site.id))
+            return this._tagSites.get(site.id);
         return [];
     }
     /**
@@ -331,26 +331,26 @@ class State {
     toggleTag(tag, mode = 'toggle') {
         const key = tag.toLowerCase();
         if (mode === 'toggle') {
-            this.activeTags.has(key) ? this.activeTags.delete(key) : this.activeTags.add(key);
+            this._activeTags.has(key) ? this._activeTags.delete(key) : this._activeTags.add(key);
         }
         else if (mode === 'set') {
-            this.activeTags.clear();
-            this.activeTags.add(key);
+            this._activeTags.clear();
+            this._activeTags.add(key);
         }
         else if (mode === 'clear') {
-            this.activeTags.clear();
+            this._activeTags.clear();
         }
         else if (mode === 'exact') {
-            this.activeTags.clear();
-            this.activeTags.add(key);
+            this._activeTags.clear();
+            this._activeTags.add(key);
         }
-        return this.activeTags.size;
+        return this._activeTags.size;
     }
     /**
      * 获取激活的标签列表
      */
     getActiveTags() {
-        return Array.from(this.activeTags);
+        return Array.from(this._activeTags);
     }
     /**
      * 渲染标签云 UI
@@ -361,8 +361,8 @@ class State {
             return;
         const limit = options.limit || 50;
         const tagsArray = [];
-        this.tagAll.forEach((count, tag) => {
-            tagsArray.push({ tag, count, active: this.activeTags.has(tag) });
+        this._tagAll.forEach((count, tag) => {
+            tagsArray.push({ tag, count, active: this._activeTags.has(tag) });
         });
         tagsArray.sort((a, b) => b.count - a.count);
         if (tagsArray.length > limit) {
