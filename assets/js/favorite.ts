@@ -30,7 +30,7 @@ class FavoriteManager {
      * @param {string|undefined|null} dateStr - ISO日期字符串
      * @returns {number} 时间戳（无效日期返回0）
      */
-    _safeTimestamp(dateStr) {
+    _safeTimestamp(dateStr: string | null | undefined) {
         if (!dateStr)
             return 0;
         const ts = new Date(dateStr).getTime();
@@ -104,7 +104,7 @@ class FavoriteManager {
     }
 
     // ===== 核心 CRUD =====
-    add(site) {
+    add(site: { name: string; url: string; description?: string; category?: string; [key: string]: any }) {
         if (this.isFavorite(site.name)) {
             return { success: false, message: '已收藏' };
         }
@@ -114,7 +114,7 @@ class FavoriteManager {
         this.emit('favoriteAdded', favoriteItem);
         return { success: true, message: '收藏成功' };
     }
-    remove(siteName) {
+    remove(siteName: string) {
         const index = this.favorites.findIndex(f => f.name === siteName);
         if (index === -1) {
             return { success: false, message: '未找到收藏项' };
@@ -128,7 +128,7 @@ class FavoriteManager {
      * Toggle favorite status (add if not exists, remove if exists)
      * @param {Object} site - Site object {name, url, description, category}
      */
-    toggle(site) {
+    toggle(site: { name: string; url: string; description?: string; category?: string; [key: string]: any }) {
         if (!site || !site.name) {
             return { success: false, message: '无效站点' };
         }
@@ -148,13 +148,13 @@ class FavoriteManager {
     getAll() {
         return [...this.favorites].sort((a, b) => this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt));
     }
-    getRecent(limit) {
+    getRecent(limit: number) {
         const result = [...this.favorites].sort((a, b) => this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt));
         if (limit)
             result.splice(0, limit);
         return result;
     }
-    getMostVisited(limit) {
+    getMostVisited(limit: number) {
         const result = [...this.favorites].sort((a, b) => (this.visitCounts[b.name] || 0) - (this.visitCounts[a.name] || 0));
         if (limit)
             result.splice(0, limit);
@@ -174,7 +174,7 @@ class FavoriteManager {
         });
         return grouped;
     }
-    search(query) {
+    search(query: string) {
         if (!query || !query.trim())
             return this.getAll();
         const q = query.toLowerCase().trim();
@@ -183,7 +183,7 @@ class FavoriteManager {
             (f.category && f.category.toLowerCase().includes(q)) ||
             (f.url && f.url.toLowerCase().includes(q))).sort((a, b) => this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt));
     }
-    isFavorite(siteName) {
+    isFavorite(siteName: string) {
         return this.favorites.some(f => f.name === siteName);
     }
     getCount() {
@@ -199,7 +199,7 @@ class FavoriteManager {
         this.visitCounts[siteName]++;
         this.saveVisits();
     }
-    getVisitCount(siteName) {
+    getVisitCount(siteName: string) {
         return this.visitCounts[siteName] || 0;
     }
     // ===== 导出/导入 =====
@@ -248,11 +248,11 @@ class FavoriteManager {
             return;
         this.listeners[event] = this.listeners[event].filter(cb => cb !== callback);
     }
-    emit(event, data = null) {
+    emit(event: string, data: any = null) {
         if (!this.listeners[event])
             return;
         this.listeners[event].forEach(callback => callback(data));
     }
 }
-const favoriteManager = new FavoriteManager();
+var favoriteManager = new FavoriteManager();
 //# sourceMappingURL=favorite.js.map
