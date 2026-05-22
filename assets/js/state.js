@@ -4,7 +4,8 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
-    private _state: any;    private _subscribers: Array<(...args: any[]) => void>;    private _cache: {        version: number;        keys: {            sites: string;            tags: string;            sidebar: string;            theme: string;        };        ttl: {            sites: number;            tags: number;            sidebar: number;            theme: number;        };    };    private _cacheReady: boolean;    private _tagAll: Map<string, number>;    private _tagSites: Map<number, string[]>;    private _activeTags: Set<string>;    private _tagInitialized: boolean;    private _isNotifying: boolean;        constructor() {        this._state = {
+    constructor() {
+        this._state = {
             theme: localStorage.getItem('theme') || 'system',
             sidebar: {
                 mode: 'expanded',

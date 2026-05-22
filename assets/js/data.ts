@@ -25,9 +25,16 @@ var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _argume
                 reject(e);
             }
         }
-        function step(result: any) { 
+        function step(result: any) {
             if (result.done) {
                 resolve(result.value);
+            } else {
+                adopt(result.value).then(fulfilled, rejected);
+            }
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
             } else {
                 adopt(result.value).then(fulfilled, rejected);
             }

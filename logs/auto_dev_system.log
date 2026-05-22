@@ -772,3 +772,7 @@ Error: name 'terminal' is not defined
   },
   "performance_score": 95
 }
+[2026-05-22 12:22:40] === 任务开始: performance ===
+[2026-05-22 12:22:40] 开始执行性能审计...
+[2026-05-22 12:22:40] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 12:22:40] === 任务完成: performance ===
