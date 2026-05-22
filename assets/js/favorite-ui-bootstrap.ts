@@ -197,7 +197,7 @@
                 if (!tabs)
                     return;
                 tabs.forEach(function (tab) {
-                    tab.onclick = function () {
+                    (tab as HTMLElement).onclick = function () {
                         tabs.forEach(function (t) { t.classList.remove('active'); });
                         this.classList.add('active');
                         self.currentGroup = this.getAttribute('data-group');
@@ -339,9 +339,9 @@
                     return null;
                 return {
                     name: name,
-                    url: siteLinkEl ? siteLinkEl.href : (window.location.href.split('?')[0]),
+                    url: siteLinkEl ? (siteLinkEl as HTMLAnchorElement).href : (window.location.href.split('?')[0]),
                     description: siteDescEl ? siteDescEl.textContent.trim() : '',
-                    category: siteCatEl ? siteCatEl.textContent.replace(/^.+\s*>\s*/, '').trim() : ''
+                    category: siteCatEl ? siteCatEl.textContent.replace(/^.+\\s*>\\s*/, '').trim() : ''
                 };
             },
             // 从当前URL匹配已知站点

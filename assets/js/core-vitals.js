@@ -15,7 +15,7 @@
             var resources = [
                 { href: 'assets/fontawesome-free-6.4.0/fonts/fa-solid-900.woff2', as: 'font', type: 'font/woff2' },
                 { href: 'assets/images/logo.png', as: 'image' },
-                { href: 'assets/css/core.css', as: 'style' },
+                { href: 'assets/css/core.css', as: 'style' }
             ];
             resources.forEach(function (r) {
                 var link = document.createElement('link');

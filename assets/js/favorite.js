@@ -7,8 +7,14 @@ class FavoriteManager {
     constructor() {
         // ===== 事件系统 =====
         this.listeners = {};
+        // ===== 配置 =====
         this.key = 'webnav_favorites_v2';
         this.visitKey = 'webnav_favorites_visits_v2';
+        // ===== 存储 =====
+        this._memoryFavorites = null;
+        this._memoryVisits = null;
+        this.favorites = [];
+        this.visitCounts = {};
         this._memoryFavorites = null;
         this._memoryVisits = null;
         this.favorites = this.loadFromStorage();
@@ -109,7 +115,7 @@ class FavoriteManager {
         const removed = this.favorites.splice(index, 1)[0];
         this.saveToStorage();
         this.emit('favoriteRemoved', removed);
-        return { success: true, message: '取消收藏' };
+        return { success: true, message: '取消收藏           ' };
     }
     /**
      * Toggle favorite status (add if not exists, remove if exists)
@@ -129,7 +135,7 @@ class FavoriteManager {
     clear() {
         this.favorites = [];
         this.saveToStorage();
-        this.emit('favoriteCleared');
+        this.emit('favoriteCleared', null);
     }
     // ===== 查询方法 =====
     getAll() {
@@ -138,13 +144,13 @@ class FavoriteManager {
     getRecent(limit) {
         const result = [...this.favorites].sort((a, b) => this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt));
         if (limit)
-            result.splice(limit);
+            result.splice(0, limit);
         return result;
     }
     getMostVisited(limit) {
         const result = [...this.favorites].sort((a, b) => (this.visitCounts[b.name] || 0) - (this.visitCounts[a.name] || 0));
         if (limit)
-            result.splice(limit);
+            result.splice(0, limit);
         return result;
     }
     getByCategory() {
@@ -235,7 +241,7 @@ class FavoriteManager {
             return;
         this.listeners[event] = this.listeners[event].filter(cb => cb !== callback);
     }
-    emit(event, data) {
+    emit(event, data = null) {
         if (!this.listeners[event])
             return;
         this.listeners[event].forEach(callback => callback(data));

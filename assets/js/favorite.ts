@@ -4,16 +4,26 @@
  * 功能：本地存储收藏的站点，支持访问计数、搜索、分类、导出
  */
 class FavoriteManager {
+    // ===== 事件系统 =====
+    listeners: { [key: string]: any[] } = {};
+    
+    // ===== 配置 =====
+    key: string = 'webnav_favorites_v2';
+    visitKey: string = 'webnav_favorites_visits_v2';
+    
+    // ===== 存储 =====
+    _memoryFavorites: any[] | null = null;
+    _memoryVisits: any = null;
+    favorites: any[] = [];
+    visitCounts: any = {};
+
     constructor() {
-// ===== 事件系统 =====
-this.listeners: any[] = [];
-this.key = 'webnav_favorites_v2';
-this.visitKey = 'webnav_favorites_visits_v2';
-this._memoryFavorites = null;
-this._memoryVisits = null;
-this.favorites = this.loadFromStorage();
-this.visitCounts = this.loadVisits();
+        this._memoryFavorites = null;
+        this._memoryVisits = null;
+        this.favorites = this.loadFromStorage();
+        this.visitCounts = this.loadVisits();
     }
+
     // ===== 工具：安全日期解析 =====
     /**
      * 安全解析日期字符串为时间戳
@@ -26,6 +36,7 @@ this.visitCounts = this.loadVisits();
         const ts = new Date(dateStr).getTime();
         return isNaN(ts) ? 0 : ts;
     }
+
     // ===== 存储：收藏数据 =====
     loadFromStorage() {
         try {
@@ -64,6 +75,7 @@ this.visitCounts = this.loadVisits();
             return false;
         }
     }
+
     // ===== 存储：访问计数 =====
     loadVisits() {
         try {
@@ -90,6 +102,7 @@ this.visitCounts = this.loadVisits();
             console.error('[FavoriteManager] 保存访问记录失败:', e);
         }
     }
+
     // ===== 核心 CRUD =====
     add(site) {
         if (this.isFavorite(site.name)) {
@@ -109,7 +122,7 @@ this.visitCounts = this.loadVisits();
         const removed = this.favorites.splice(index, 1)[0];
         this.saveToStorage();
         this.emit('favoriteRemoved', removed);
-        return { success: true, message: '取消收藏' };
+        return { success: true, message: '取消收藏           ' };
     }
     /**
      * Toggle favorite status (add if not exists, remove if exists)
@@ -129,7 +142,7 @@ this.visitCounts = this.loadVisits();
     clear() {
         this.favorites = [];
         this.saveToStorage();
-        this.emit('favoriteCleared');
+        this.emit('favoriteCleared', null);
     }
     // ===== 查询方法 =====
     getAll() {
@@ -138,17 +151,17 @@ this.visitCounts = this.loadVisits();
     getRecent(limit) {
         const result = [...this.favorites].sort((a, b) => this._safeTimestamp(b.addedAt) - this._safeTimestamp(a.addedAt));
         if (limit)
-            result.splice(limit);
+            result.splice(0, limit);
         return result;
     }
     getMostVisited(limit) {
         const result = [...this.favorites].sort((a, b) => (this.visitCounts[b.name] || 0) - (this.visitCounts[a.name] || 0));
         if (limit)
-            result.splice(limit);
+            result.splice(0, limit);
         return result;
     }
     getByCategory() {
-        const grouped = {};
+        const grouped: { [key: string]: any[] } = {};
         this.favorites.forEach(f => {
             const cat = f.category || '未分类';
             if (!grouped[cat])
@@ -235,7 +248,7 @@ this.visitCounts = this.loadVisits();
             return;
         this.listeners[event] = this.listeners[event].filter(cb => cb !== callback);
     }
-    emit(event, data) {
+    emit(event, data = null) {
         if (!this.listeners[event])
             return;
         this.listeners[event].forEach(callback => callback(data));
