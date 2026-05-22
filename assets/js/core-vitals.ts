@@ -15,7 +15,7 @@
             var resources = [
                 { href: 'assets/fontawesome-free-6.4.0/fonts/fa-solid-900.woff2', as: 'font', type: 'font/woff2' },
                 { href: 'assets/images/logo.png', as: 'image' },
-                { href: 'assets/css/core.css', as: 'style' },
+                { href: 'assets/css/core.css', as: 'style' }
             ];
             resources.forEach(function (r) {
                 var link = document.createElement('link');
@@ -43,9 +43,9 @@
                 if (/schema\.js|state\.js|data\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                if (s.readyState === 'loaded' || s.readyState === 'complete')
+                if ((s as any).readyState === 'loaded' || (s as any).readyState === 'complete')
                     return;
-                s.defer = true;
+                (s as any).defer = true;
             });
         },
         // ===================== CLS 优化 =====================
@@ -56,13 +56,13 @@
         reserveImageSpace: function () {
             var images = document.querySelectorAll('img[loading="lazy"]');
             images.forEach(function (img) {
-                if (!img.width && !img.style.width) {
-                    img.style.width = '48px';
-                    img.style.height = '48px';
-                    img.style.objectFit = 'cover';
+                if (!(img as HTMLImageElement).width && !(img as HTMLImageElement).style.width) {
+                    (img as HTMLImageElement).style.width = '48px';
+                    (img as HTMLImageElement).style.height = '48px';
+                    (img as HTMLImageElement).style.objectFit = 'cover';
                 }
-                if (!img.style.aspectRatio && img.naturalWidth && img.naturalHeight) {
-                    img.style.aspectRatio = img.naturalWidth + '/' + img.naturalHeight;
+                if (!(img as HTMLImageElement).style.aspectRatio && (img as HTMLImageElement).naturalWidth && (img as HTMLImageElement).naturalHeight) {
+                    (img as HTMLImageElement).style.aspectRatio = (img as HTMLImageElement).naturalWidth + '/' + (img as HTMLImageElement).naturalHeight;
                 }
             });
         },
@@ -157,13 +157,13 @@
                 lazyImages.forEach(function (img) { observer.observe(img); });
                 // 为 card-icon 添加模糊占位（CLS优化）
                 document.querySelectorAll('img.card-icon').forEach(function (img) {
-                    if (!img.style.width)
-                        img.style.width = '48px';
-                    if (!img.style.height)
-                        img.style.height = '48px';
-                    img.style.objectFit = img.style.objectFit || 'cover';
+                    if (!(img as HTMLImageElement).style.width)
+                        (img as HTMLImageElement).style.width = '48px';
+                    if (!(img as HTMLImageElement).style.height)
+                        (img as HTMLImageElement).style.height = '48px';
+                    (img as HTMLImageElement).style.objectFit = (img as HTMLImageElement).style.objectFit || 'cover';
                     // 添加模糊占位背景
-                    img.style.background = 'var(--color-bg-card)';
+                    (img as HTMLImageElement).style.background = 'var(--color-bg-card)';
                 });
             }
         },

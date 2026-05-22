@@ -8,7 +8,7 @@
  */
 var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any) {
     function adopt(value: any) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
+    return new (P || (P = Promise))(function (resolve: (value: any) => void, reject: (reason: any) => void) {
         function fulfilled(value: any) {
             try {
                 step(generator.next(value));
@@ -35,25 +35,18 @@ var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-            } else {
-                adopt(result.value).then(fulfilled, rejected);
-            }
-        }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 class DataManager {
-            raw: any = null;
-            sites: Map<number, any> = new Map();
-            categories: any = {};
-            mappings: Map<string, number[]> = new Map();
-            tagIndex: Map<string, Set<number>> = new Map();
-            tagCloud: Map<string, { tag: string; count: number; sites: string[] }> = new Map();
-            isLoaded: boolean = false;
-            version: any = null;
-            _loadError: any = null;
-            tagIndexSorted: any[] = [];
-        }
+    raw: any = null;
+    sites: Map<number, any> = new Map();
+    categories: any = {};
+    mappings: Map<string, number[]> = new Map();
+    tagIndex: Map<string, Set<number>> = new Map();
+    tagCloud: Map<string, { tag: string; count: number; sites: string[] }> = new Map();
+    isLoaded: boolean = false;
+    version: any = null;
+    _loadError: any = null;
+    tagIndexSorted: any[] = [];
+}
 var dataManager = new DataManager();
 (window as any).dataManager = dataManager;
 //# sourceMappingURL=data.js.map

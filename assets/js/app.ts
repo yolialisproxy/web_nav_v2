@@ -667,8 +667,8 @@ window.renderer = renderer;
 // 全局错误捕获
 window.addEventListener('error', function (e) {
     console.warn('[Global Error]', e.error ? e.error.message : e.message);
-    if (e.target && e.target.tagName === 'IMG') {
-        e.target.src = 'assets/images/favicon.png';
+    if (e.target && (e.target as HTMLElement).tagName === 'IMG') {
+        (e.target as HTMLElement).src = 'assets/images/favicon.png';
     }
 });
 // 页面加载完成初始化

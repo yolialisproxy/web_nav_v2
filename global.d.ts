@@ -10,14 +10,30 @@ declare var appState: any;
 declare var state: any;
 
 // Favorites and game globals
-declare var favoriteManager: any;
+declare var favoriteManager: FavoriteManager;
 declare var games: {
-  solitaire: { name: string; icon: string; desc: string; cat: string; rating: number; constructor: any };
-  tetris: { name: string; icon: string; desc: string; cat: string; rating: number; constructor: any };
-  // ... other games omitted for brevity; we keep any for simplicity
-  [key: string]: { name: string; icon: string; desc: string; cat: string; rating: number; constructor: any };
+  [key: string]: { 
+    name: string; 
+    icon: string; 
+    desc: string; 
+    cat: string; 
+    rating: number; 
+    constructor: any; 
+    stop(): void 
+  };
 };
 declare var _isRecent: (key: any) => boolean;
+
+interface FavoriteManager {
+  listeners: any[];
+  key: string;
+  visitKey: string;
+  _memoryFavorites: any;
+  _memoryVisits: any;
+  isFavorite(id: number): boolean;
+  getVisitCount(id: number): number;
+  // 其他方法...
+}
 
 // Utility namespaces
 declare var render: any;
@@ -41,6 +57,7 @@ interface PerformanceEntry {
   inp?: number;
   processingStart?: number;
   hadRecentInput?: boolean;
+  value?: number;
 }
 
 // Extend Window
@@ -58,6 +75,10 @@ interface Window {
   toggleFavorite?: () => void;
   toggleSiteFavorite?: () => void;
   trackEvent?: () => void;
+  GameHub?: {
+    currentGame: string | null;
+    stop(gameKey: string): void;
+  };
 }
 
 declare var localforage: any;
