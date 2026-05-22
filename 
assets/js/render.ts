@@ -1,8 +1,9 @@
-"use strict";
+
 /**
  * render.js - 渲染引擎
  * 职责：DOM 渲染、状态UI输出
  */
+
 // 状态UI 渲染器
 const StateUI = {
     loading() {
@@ -14,11 +15,13 @@ const StateUI = {
             </div>
         `;
     },
+
     error(message = '加载数据失败', retryCallback = null) {
         const button = retryCallback ?
             `<div class="state-action">
                 <button class="state-button" onclick="(${retryCallback.toString()})()">重试加载</button>
             </div>` : '';
+
         return `
             <div class="state-container state-error">
                 <div class="state-icon">⚠️</div>
@@ -28,6 +31,7 @@ const StateUI = {
             </div>
         `;
     },
+
     empty(message = '该分类下还没有站点') {
         return `
             <div class="state-container state-empty">
@@ -37,6 +41,7 @@ const StateUI = {
             </div>
         `;
     },
+
     searchEmpty(query) {
         return `
             <div class="state-container state-empty">
@@ -47,24 +52,30 @@ const StateUI = {
         `;
     }
 };
+
 window.StateUI = StateUI;
+
 // 核心渲染函数：渲染站点列表
 function renderSites(sites, containerId = 'main-content') {
     const container = document.getElementById(containerId);
-    if (!container)
-        return;
+
+    if (!container) return;
+
     if (sites === null || sites === undefined) {
         container.innerHTML = StateUI.loading();
         return;
     }
+
     if (sites === false) {
         container.innerHTML = StateUI.error('无法加载站点数据，请检查网络连接后重试', window.loadData);
         return;
     }
+
     if (Array.isArray(sites) && sites.length === 0) {
         container.innerHTML = StateUI.empty();
         return;
     }
+
     // 正常渲染站点列表
     let html = '<div class="grid">';
     sites.forEach(site => {
@@ -78,8 +89,7 @@ function renderSites(sites, containerId = 'main-content') {
                 linkUrl = site.url;
                 linkTarget = 'target="_blank"';
                 relAttr = 'rel="noopener"';
-            }
-            catch (e) {
+            } catch (e) {
                 linkUrl = '#';
             }
         }
@@ -92,24 +102,31 @@ function renderSites(sites, containerId = 'main-content') {
         `;
     });
     html += '</div>';
+
     container.innerHTML = html;
     _bindCardEvents();
 }
+
 window.renderSites = renderSites;
+
 /**
  * 规范：Menu_System.md, Haptic_Feel.md, Technical_Architecture.md
  */
+
 class Renderer {
     constructor() {
         this.sidebar = document.getElementById('sidebar');
         this.sidebarContent = document.getElementById('sidebar-content');
         this.container = document.getElementById('main-content');
     }
+
     renderSidebar(state) {
         const categories = dataManager.categories;
         let html = '';
+
         Object.entries(categories).forEach(([catId, cat]) => {
             const isCatActive = state.sidebar.activeCategoryId === catId;
+
             html += `
                 <div class="menu-group">
                     <div class="menu-category ${isCatActive ? 'active' : ''}" data-cat-id="${catId}">
@@ -121,13 +138,16 @@ class Renderer {
                 </div>
             `;
         });
+
         this.sidebarContent.innerHTML = html;
         this._bindSidebarEvents();
     }
+
     _renderSubCategories(cat, state) {
         let html = '';
         Object.entries(cat.subCategories || {}).forEach(([subId, sub]) => {
             const isSubExpanded = state.sidebar.activeSubCategoryId === subId;
+
             html += `
                 <div class="menu-subcategory ${isSubExpanded ? 'expanded' : ''}" data-sub-id="${subId}">
                     <div class="subcategory-header">
@@ -142,6 +162,7 @@ class Renderer {
         });
         return html;
     }
+
     _renderLeafCategories(sub, state) {
         let html = '';
         Object.entries(sub.leafCategories || {}).forEach(([leafId, leaf]) => {
@@ -154,15 +175,18 @@ class Renderer {
         });
         return html;
     }
+
     renderView(state) {
         if (state.currentView === 'category') {
             const leafId = state.sidebar.activeLeafId;
             const catId = state.sidebar.activeCategoryId;
             const subId = state.sidebar.activeSubCategoryId;
+
             if (!leafId || !catId) {
                 this.container.innerHTML = this._getEmptyState();
                 return;
             }
+
             // 构建完整三级分类路径用于查询
             const fullLeafId = subId && leafId !== subId ? `${catId}/${subId}/${leafId}` : `${catId}/${leafId}`;
             const sites = dataManager.getSitesByLeafId(fullLeafId);
@@ -170,13 +194,14 @@ class Renderer {
                 this.container.innerHTML = this._getEmptyState('该分类暂无内容');
                 return;
             }
+
             this.container.innerHTML = this._createCardGridHtml(sites);
             this._bindCardEvents();
-        }
-        else if (state.currentView === 'search') {
+        } else if (state.currentView === 'search') {
             this._renderSearchResults(state);
         }
     }
+
     // 卡片视图 - 带搜索高亮
     _createCardGridHtml(sites) {
         let html = '<div class="grid">';
@@ -186,34 +211,36 @@ class Renderer {
         html += '</div>';
         return html;
     }
+
     _createCardHtml(site) {
         // 检测是否为搜索结果并应用高亮
         const query = site._query;
         let name = site.title;
         let desc = site.description;
+        
         try {
             if (query && window.searchEngine && window.searchEngine.highlight) {
                 name = window.searchEngine.highlight(name, query);
                 desc = window.searchEngine.highlight(desc, query);
             }
-        }
-        catch (e) {
+        } catch (e) {
             // 忽略高亮错误
         }
+
         // 获取favicon域名
         let faviconDomain = '';
         if (site.url) {
             try {
                 const urlObj = new URL(site.url);
                 faviconDomain = urlObj.hostname;
-            }
-            catch (e) {
+            } catch (e) {
                 faviconDomain = '';
             }
         }
         const faviconSrc = faviconDomain
             ? `https://www.google.com/s2/favicons?domain=${faviconDomain}&sz=32`
             : 'assets/images/favicon.png';
+
         return `
             <a href="${site.url || '#'}" target="_blank" class="site site-card" data-id="${site.id}">
                 <img src="${faviconSrc}" class="card-icon" onerror="this.onerror=null;this.src='assets/images/favicon.png';">
@@ -222,6 +249,7 @@ class Renderer {
             </a>
         `;
     }
+
     _getEmptyState(msg = '请选择一个分类开始浏览') {
         return `
             <div style="display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; color:var(--color-text-dim); text-align:center; opacity:0.6">
@@ -230,6 +258,7 @@ class Renderer {
             </div>
         `;
     }
+
     _renderSearchResults(state) {
         const results = state.search.results;
         if (results.length === 0) {
@@ -239,6 +268,7 @@ class Renderer {
         this.container.innerHTML = this._createCardGridHtml(results);
         this._bindCardEvents();
     }
+
     _bindSidebarEvents() {
         this.sidebarContent.querySelectorAll('.menu-category').forEach(el => {
             el.addEventListener('click', (e) => {
@@ -265,6 +295,7 @@ class Renderer {
                 state.set('search.active', false);
             });
         });
+
         this.sidebarContent.querySelectorAll('.menu-subcategory').forEach(el => {
             el.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -273,6 +304,7 @@ class Renderer {
                 state.set('sidebar.activeSubCategoryId', isExpanded ? null : subId);
             });
         });
+
         this.sidebarContent.querySelectorAll('.menu-leaf').forEach(el => {
             e.preventDefault();
             e.stopPropagation();
@@ -281,6 +313,7 @@ class Renderer {
             state.set('search.active', false);
         });
     }
+
     _bindCardEvents() {
         this.container.querySelectorAll('.site-card').forEach(card => {
             card.addEventListener('mousemove', (e) => {
@@ -295,6 +328,8 @@ class Renderer {
         });
     }
 }
+
 const renderer = new Renderer();
 window.renderer = renderer;
-//# sourceMappingURL=render.js.map
+
+

@@ -4,7 +4,6 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
-    _cache: any;
     _state: any;
     _subscribers: any[];
     _cache: {

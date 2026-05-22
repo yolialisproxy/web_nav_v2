@@ -40,6 +40,7 @@ class DataManager {
         this.isLoaded = false;
         this.version = null;
         this._loadError = null;
+        this.tagIndexSorted = [];
     }
     load() {
         return __awaiter(this, void 0, void 0, function* () {

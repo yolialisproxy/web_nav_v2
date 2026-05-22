@@ -1,13 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2017",
-    "module": "none",
-    "rootDir": "./assets/js",
-    "outDir": "./assets/js",
-    "strict": false,
-    "noImplicitAny": false,
-    "strictNullChecks": false,
-    "noEmitOnError": false,
+    "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
@@ -17,17 +11,27 @@
       "es2019",
       "dom"
     ],
-    "allowJs": true,
-    "checkJs": false,
     "isolatedModules": true,
-    "ignoreDeprecations": "6.0"
+    "ignoreDeprecations": "6.0",
+    "strict": false,
+    "allowJs": false,
+    "checkJs": false,
+    "noEmitOnError": false,
+    "outDir": ".",
+    "rootDir": ".",
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "types": [
+      "node"
+    ]
   },
   "include": [
     "assets/js/**/*.ts",
     "assets/js/**/*.d.ts",
     "assets/js/global.d.ts",
-    "**/*.ts",
-    "global.d.ts"
+    "global.d.ts",
+    "*.ts",
+    "scripts/**/*.ts"
   ],
   "exclude": [
     "node_modules"

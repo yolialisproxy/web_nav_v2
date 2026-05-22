@@ -143,7 +143,7 @@ class State {
                 storeName: 'cache_v1',
                 version: this._cache.version
             });
-            this._cacheBackend = localforage;
+            _cacheBackend: any;
             this._cacheReady = true;
             // 后台恢复
             this._restoreFromCache();

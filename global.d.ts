@@ -59,3 +59,5 @@ interface Window {
   toggleSiteFavorite?: () => void;
   trackEvent?: () => void;
 }
+
+declare var localforage: any;
