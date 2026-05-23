@@ -243,7 +243,7 @@ Game2048.prototype._saveState = function () {
 };
 Game2048.prototype._undo = function () {
     if (!this._history || this._history.length === 0) {
-        GameHub.showToast('没有可撤销的步骤', 3000);
+        GameHub.showToast('没有可撤销的步骤');
         return;
     }
     var snapshot = this._history.pop();
@@ -283,7 +283,7 @@ Game2048.prototype._checkWin = function () {
             if (this.grid[r][c] === 2048) {
                 GameUtils.playSfx('win');
                 this.gameOver();
-                GameHub.showToast('🎉 恭喜达成2048！继续挑战更高分。', 3000);
+                GameHub.showToast('🎉 恭喜达成2048！继续挑战更高分。');
                 return;
             }
         }
@@ -291,7 +291,7 @@ Game2048.prototype._checkWin = function () {
     // 检查是否无路可走
     if (this._isFull() && !this._canMove()) {
         this.gameOver();
-        GameHub.showToast('💀 游戏结束！最终得分: ' + this.score, 3000);
+        GameHub.showToast('💀 游戏结束！最终得分: ' + this.score);
     }
 };
 Game2048.prototype._isFull = function () {
