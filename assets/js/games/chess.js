@@ -1,31 +1,11 @@
-
-
 "use strict";
-/**
- * ChessGame - 中国象棋
- * DOM实现简化版（已补全：checkWin + newGame）
- */
-interface ChessGameStatic {
-    new(): any;
-    PIECES: {
-        r: { name: string; unicode: string; value: number };
-        n: { name: string; unicode: string; value: number };
-        b: { name: string; unicode: string; value: number };
-        a: { name: string; unicode: string; value: number };
-        k: { name: string; unicode: string; value: number };
-        c: { name: string; unicode: string; value: number };
-        p: { name: string; unicode: string; value: number };
-    };
-}
-
-var ChessGame = function (this: any) {
+var ChessGame = function () {
     GameEngine.call(this, { id: 'chess', title: '♟️ 中国象棋' });
     this.board = [];
     this.selected = null;
     this.turn = 'red'; // red先手
     this.moveHistory = [];
-} as unknown as ChessGameStatic;
-
+};
 ChessGame.PIECES = {
     r: { name: "车", unicode: "俥", value: 200 },
     n: { name: "马", unicode: "傌", value: 80 },
@@ -34,7 +14,7 @@ ChessGame.PIECES = {
     k: { name: "将", unicode: "帅", value: 10000 },
     c: { name: "炮", unicode: "砲", value: 100 },
     p: { name: "兵", unicode: "兵", value: 30 }
-}
+};
 ChessGame.prototype.init = function () {
     GameEngine.prototype.init.call(this);
     this._resetBoard();
@@ -85,14 +65,14 @@ ChessGame.prototype._render = function () {
                 'data-row="' + r + '" data-col="' + c + '">';
             var piece = this.board[r][c];
             if (piece !== 0) {
-                var key = Object.keys(ChessGame.PIECES)[Math.abs(piece) - 1] as keyof typeof ChessGame.PIECES;
+                var key = Object.keys(ChessGame.PIECES)[Math.abs(piece) - 1];
                 var info = ChessGame.PIECES[key];
                 var color = piece > 0 ? '#cc0000' : '#333';
                 var bg = (this.selected && this.selected[0] === r && this.selected[1] === c) ?
                     'rgba(255,255,0,0.4)' : '';
                 // 高亮可移动位置
                 if (this.selected) {
-                    var moves: number[][] = this._getMoves(this.selected[0], this.selected[1]);
+                    var moves = this._getMoves(this.selected[0], this.selected[1]);
                     if (moves.some(function (m) { return m[0] === r && m[1] === c; })) {
                         bg = 'rgba(0,255,0,0.2)';
                     }
@@ -118,11 +98,11 @@ ChessGame.prototype._render = function () {
     this.el.innerHTML = html;
     this._bindEvents();
 };
-ChessGame.prototype._handleClick = function (r: number, c: number) {
+ChessGame.prototype._handleClick = function (r, c) {
     var piece = this.board[r][c];
     if (this.selected) {
         // 尝试移动
-        var moves: number[][] = this._getMoves(this.selected[0], this.selected[1]);
+        var moves = this._getMoves(this.selected[0], this.selected[1]);
         if (moves.some(function (m) { return m[0] === r && m[1] === c; })) {
             this._move(this.selected[0], this.selected[1], r, c);
             return;
@@ -134,15 +114,15 @@ ChessGame.prototype._handleClick = function (r: number, c: number) {
         this._render();
     }
 };
-ChessGame.prototype._getMoves = function (r: number, c: number) {
+ChessGame.prototype._getMoves = function (r, c) {
     var piece = this.board[r][c];
     if (piece === 0)
         return [];
     var isRed = piece > 0;
     var type = Math.abs(piece);
-    var moves: number[][] = [];
+    var moves = [];
     var self = this;
-    function addMove(nr: number, nc: number) {
+    function addMove(nr, nc) {
         if (nr < 0 || nr >= 10 || nc < 0 || nc >= 8)
             return;
         var target = self.board[nr][nc];
@@ -295,7 +275,7 @@ ChessGame.prototype._getMoves = function (r: number, c: number) {
     }
     return moves;
 };
-ChessGame.prototype._move = function (fr: number, fc: number, tr: number, tc: number) {
+ChessGame.prototype._move = function (fr, fc, tr, tc) {
     this.moveHistory.push({
         board: JSON.parse(JSON.stringify(this.board)),
         turn: this.turn
@@ -366,8 +346,8 @@ ChessGame.prototype.checkWin = function () {
     return null;
 };
 /** 检查某一方是否被将军 */
-ChessGame.prototype._isKingInCheck = function (kingPiece: number) {
-    var kingPos: [number, number] | null = null;
+ChessGame.prototype._isKingInCheck = function (kingPiece) {
+    var kingPos = null;
     for (let r = 0; r < 10; r++) {
         for (let c = 0; c < 8; c++) {
             if (this.board[r][c] === kingPiece)
@@ -381,7 +361,7 @@ ChessGame.prototype._isKingInCheck = function (kingPiece: number) {
             var p = this.board[i][j];
             if (p !== 0 && (kingPiece === 1 ? p < 0 : p > 0)) {
                 var moves = this._getMoves(i, j);
-                if (moves.some(function (m: number[]) { return m[0] === kingPos![0] && m[1] === kingPos![1]; })) {
+                if (moves.some(function (m) { return m[0] === kingPos[0] && m[1] === kingPos[1]; })) {
                     return true;
                 }
             }
@@ -392,14 +372,14 @@ ChessGame.prototype._isKingInCheck = function (kingPiece: number) {
 // AI走子（简单随机）
 ChessGame.prototype._aiMove = function () {
     var self = this;
-    var allMoves: number[][] = [];
+    var allMoves = [];
     var aiColor = this.turn;
     for (let r = 0; r < 10; r++) {
         for (let c = 0; c < 8; c++) {
             var p = this.board[r][c];
             if (p !== 0 && ((aiColor === 'black' && p < 0) || (aiColor === 'red' && p > 0))) {
                 var moves = this._getMoves(r, c);
-                moves.forEach(function (m: number[]) { allMoves.push([r, c, m[0], m[1]]); });
+                moves.forEach(function (m) { allMoves.push([r, c, m[0], m[1]]); });
             }
         }
     }
@@ -441,7 +421,7 @@ ChessGame.prototype.load = function () {
     return null;
 };
 // 触摸回调：将坐标转换为棋盘行列
-ChessGame.prototype._onTouchTap = function (x: number, y: number) {
+ChessGame.prototype._onTouchTap = function (x, y) {
     var cellSize = Math.min(55, (window.innerWidth - 100) / 8);
     var col = Math.floor(x / cellSize);
     var row = Math.floor(y / cellSize);

@@ -559,7 +559,7 @@ var gameCloseBtn = document.getElementById('game-close-btn');
 if (gameCloseBtn) {
     gameCloseBtn.addEventListener('click', function () {
         if (window.GameHub && GameHub.currentGame)
-            GameHub.stop(GameHub.currentGame);
+            GameHub.closeGame();
         window.location.hash = '';
         state.setView('grid');
     });

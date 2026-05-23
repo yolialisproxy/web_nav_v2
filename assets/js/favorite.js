@@ -115,7 +115,7 @@ class FavoriteManager {
         const removed = this.favorites.splice(index, 1)[0];
         this.saveToStorage();
         this.emit('favoriteRemoved', removed);
-        return { success: true, message: '取消收藏           ' };
+        return { success: true, message: '取消收藏' };
     }
     /**
      * Toggle favorite status (add if not exists, remove if exists)
@@ -210,9 +210,9 @@ class FavoriteManager {
             if (!data || !Array.isArray(data.favorites)) {
                 return { success: false, message: '数据格式错误' };
             }
-            const imported = data.favorites.filter(f => f && f.name);
+            const imported = data.favorites.filter((f) => f && f.name);
             let added = 0;
-            imported.forEach(item => {
+            imported.forEach((item) => {
                 if (!this.isFavorite(item.name)) {
                     this.favorites.push(Object.assign(Object.assign({}, item), { favoriteId: this.generateId(), addedAt: item.addedAt || new Date().toISOString() }));
                     added++;
@@ -247,5 +247,5 @@ class FavoriteManager {
         this.listeners[event].forEach(callback => callback(data));
     }
 }
-const favoriteManager = new FavoriteManager();
+var favoriteManager = new FavoriteManager();
 //# sourceMappingURL=favorite.js.map

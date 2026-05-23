@@ -176,7 +176,7 @@ var GameHub = {
         var ctorName = gameMap[gameKey];
         var ctor = window[ctorName];
         if (!ctor) {
-            GameHub.showToast('游戏模块 "' + gameKey + '" 尚未加载完成，请稍后再试');
+            GameHub.showToast('游戏模块 "' + gameKey + '" 尚未加载完成，请稍后再试', 3000);
             document.getElementById('game-play-title').textContent = this.games[gameKey].name;
             document.getElementById('game-play-area').innerHTML =
                 '<div style="text-align:center;padding:60px;color:var(--color-text-dim)">' +
@@ -186,9 +186,9 @@ var GameHub = {
             document.getElementById('game-play-overlay').classList.add('active');
             return;
         }
-        this.currentEngine = new ctor();
+        this.currentEngine = new ctor;
         this.currentEngine.onGameOver = function (score, elapsed) {
-            GameHub.showToast('🎮 游戏结束！得分: ' + score + ' | 用时: ' + GameUtils.formatTime(elapsed));
+            GameHub.showToast('🎮 游戏结束！得分: ' + score + ' | 用时: ' + GameUtils.formatTime(elapsed) + '', 3000);
         };
         // 记录最近游戏
         this.pushRecent(gameKey);
@@ -229,8 +229,8 @@ var GameHub = {
     },
     showToast: function (msg, duration) {
         var t = document.getElementById('toast-container');
-        if (t && typeof toast === 'function') {
-            toast(msg, duration || 3000);
+        if (t && typeof window.toast === 'function') {
+            window.toast(msg, duration || 3000);
         }
         else {
             var el = document.createElement('div');

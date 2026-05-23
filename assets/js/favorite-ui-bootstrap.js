@@ -341,7 +341,7 @@
                     name: name,
                     url: siteLinkEl ? siteLinkEl.href : (window.location.href.split('?')[0]),
                     description: siteDescEl ? siteDescEl.textContent.trim() : '',
-                    category: siteCatEl ? siteCatEl.textContent.replace(/^.+\s*>\s*/, '').trim() : ''
+                    category: siteCatEl ? siteCatEl.textContent.replace(/^.+\\s*>\\s*/, '').trim() : ''
                 };
             },
             // 从当前URL匹配已知站点
