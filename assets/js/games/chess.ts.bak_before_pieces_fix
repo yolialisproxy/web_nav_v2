@@ -1,27 +1,26 @@
-declare var GameEngine: any;
-
 "use strict";
 /**
  * ChessGame - 中国象棋
  * DOM实现简化版（已补全：checkWin + newGame）
  */
-var ChessGame: {
-    new (): any;
-    PIECES: {
-        r: { name: "车", unicode: "俥", value: 200 },
-        n: { name: "马", unicode: "傌", value: 80 },
-        b: { name: "象", unicode: "相", value: 50 },
-        a: { name: "士", unicode: "仕", value: 30 },
-        k: { name: "将", unicode: "帅", value: 10000 },
-        c: { name: "炮", unicode: "砲", value: 100 },
-        p: { name: "兵", unicode: "兵", value: 30 }
-    }
-} = function (this: any) {
+var ChessGame = function () {
     GameEngine.call(this, { id: 'chess', title: '♟️ 中国象棋' });
     this.board = [];
     this.selected = null;
     this.turn = 'red'; // red先手
     this.moveHistory = [];
+};
+ChessGame.prototype = Object.create(GameEngine.prototype);
+ChessGame.prototype.constructor = ChessGame;
+// 棋子定义
+ChessGame.PIECES = {
+    r: { name: '车', unicode: '俥', value: 200 },
+    n: { name: '马', unicode: '傌', value: 80 },
+    b: { name: '象', unicode: '相', value: 50 },
+    a: { name: '士', unicode: '仕', value: 30 },
+    k: { name: '将', unicode: '帅', value: 10000 },
+    c: { name: '炮', unicode: '砲', value: 100 },
+    p: { name: '兵', unicode: '兵', value: 30 }
 };
 ChessGame.prototype.init = function () {
     GameEngine.prototype.init.call(this);
@@ -122,7 +121,7 @@ ChessGame.prototype._handleClick = function (r, c) {
         this._render();
     }
 };
-ChessGame.prototype._getMoves = function (r, c) {
+ChessGame.prototype._getMoves = function (r: number, c: number) {
     var piece = this.board[r][c];
     if (piece === 0)
         return [];
