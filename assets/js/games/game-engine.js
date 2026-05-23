@@ -75,7 +75,6 @@ GameEngine.prototype = {
             var self = this;
             this._pauseOverlay.onclick = function () { self.togglePause(); };
             this.el.style.position = 'relative';
-            n;
             this.el.appendChild(this._pauseOverlay);
         }
     },

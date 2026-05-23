@@ -68,12 +68,13 @@ GameEngine.prototype = {
         }
     },
 showPauseScreen: function () {
-	if (this.el) {
-		this._pauseOverlay = document.createElement('div');
-		this._pauseOverlay.style.cssText = 'position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:99;';
-		this._pauseOverlay.innerHTML = '<div style="color:#fff;font-size:28px;font-weight:bold;text-align:center;">⏸️ 暂停中<br><span style="font-size:14px;opacity:0.7;">点击暂停继续</span></div>';
-		var self = this;
-		this._pauseOverlay.onclick = function () { self.togglePause(); };
-		this.el.style.position = 'relative';\n		this.el.appendChild(this._pauseOverlay);
-	}
-	},
+ if (this.el) {
+     this._pauseOverlay = document.createElement('div');
+     this._pauseOverlay.style.cssText = 'position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:99;';
+     this._pauseOverlay.innerHTML = '<div style="color:#fff;font-size:28px;font-weight:bold;text-align:center;">⏸️ 暂停中<br><span style="font-size:14px;opacity:0.7;">点击暂停继续</span></div>';
+     var self = this;
+     this._pauseOverlay.onclick = function () { self.togglePause(); };
+     this.el.style.position = 'relative';
+     this.el.appendChild(this._pauseOverlay);
+ }
+},
