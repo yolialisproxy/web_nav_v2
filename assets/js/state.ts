@@ -4,6 +4,49 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
+    private _state: {
+        theme: string;
+        sidebar: {
+            mode: 'expanded' | 'collapsed';
+            activeCategoryId: string | null;
+            activeSubCategoryId: string | null;
+            activeLeafId: string | null;
+        };
+        search: {
+            active: boolean;
+            query: string;
+            results: any[];
+        };
+        filterTags: string[];
+        searchMode: boolean;
+        sites: any[];
+        loading: boolean;
+        currentView: 'grid' | 'list' | 'category' | 'games';
+    };
+    private _subscribers: Array<(state: any) => void>;
+    private _cache: {
+        version: number;
+        keys: {
+            sites: string;
+            tags: string;
+            sidebar: string;
+            theme: string;
+        };
+        ttl: {
+            sites: number;
+            tags: number;
+            sidebar: number;
+            theme: number;
+        };
+    };
+    private _cacheReady: boolean;
+    private _tagAll: Map<string, number>;
+    private _tagSites: Map<string, string[]>;
+    private _activeTags: Set<string>;
+    private _tagInitialized: boolean;
+    private _isNotifying: boolean;
+    private _cacheBackend: any;
+
     constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
@@ -49,6 +92,7 @@ class State {
         this._activeTags = new Set();
         this._tagInitialized = false;
         this._isNotifying = false; // 防止 _notify 重入导致的无限循环
+        this._cacheBackend = localStorage; // 初始化为 localStorage，后续可能被 localforage 替换
     }
     set(key, value) {
         const keys = key.split('.');
@@ -143,7 +187,7 @@ class State {
                 storeName: 'cache_v1',
                 version: this._cache.version
             });
-            _cacheBackend: any;
+            this._cacheBackend = localforage;
             this._cacheReady = true;
             // 后台恢复
             this._restoreFromCache();
