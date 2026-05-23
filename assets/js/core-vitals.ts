@@ -43,9 +43,9 @@
                 if (/schema\.js|state\.js|data\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                if ((s as any).readyState === 'loaded' || (s as any).readyState === 'complete')
+                if ((s as HTMLScriptElement).readyState === 'loaded' || (s as HTMLScriptElement).readyState === 'complete')
                     return;
-                (s as any).defer = true;
+                (s as HTMLScriptElement).defer = true;
             });
         },
         // ===================== CLS 优化 =====================
@@ -56,13 +56,13 @@
         reserveImageSpace: function () {
             var images = document.querySelectorAll('img[loading="lazy"]');
             images.forEach(function (img) {
-                if (!(img as HTMLImageElement).width && !(img as HTMLImageElement).style.width) {
-                    (img as HTMLImageElement).style.width = '48px';
-                    (img as HTMLImageElement).style.height = '48px';
-                    (img as HTMLImageElement).style.objectFit = 'cover';
+                if (!img.width && !img.style.width) {
+                    img.style.width = '48px';
+                    img.style.height = '48px';
+                    img.style.objectFit = 'cover';
                 }
-                if (!(img as HTMLImageElement).style.aspectRatio && (img as HTMLImageElement).naturalWidth && (img as HTMLImageElement).naturalHeight) {
-                    (img as HTMLImageElement).style.aspectRatio = (img as HTMLImageElement).naturalWidth + '/' + (img as HTMLImageElement).naturalHeight;
+                if (!img.style.aspectRatio && (img as HTMLImageElement).naturalWidth && (img as HTMLImageElement).naturalHeight) {
+                    img.style.aspectRatio = (img as HTMLImageElement).naturalWidth + '/' + (img as HTMLImageElement).naturalHeight;
                 }
             });
         },
@@ -157,13 +157,13 @@
                 lazyImages.forEach(function (img) { observer.observe(img); });
                 // 为 card-icon 添加模糊占位（CLS优化）
                 document.querySelectorAll('img.card-icon').forEach(function (img) {
-                    if (!(img as HTMLImageElement).style.width)
-                        (img as HTMLImageElement).style.width = '48px';
-                    if (!(img as HTMLImageElement).style.height)
-                        (img as HTMLImageElement).style.height = '48px';
-                    (img as HTMLImageElement).style.objectFit = (img as HTMLImageElement).style.objectFit || 'cover';
+                    if (!img.style.width)
+                        img.style.width = '48px';
+                    if (!img.style.height)
+                        img.style.height = '48px';
+                    img.style.objectFit = img.style.objectFit || 'cover';
                     // 添加模糊占位背景
-                    (img as HTMLImageElement).style.background = 'var(--color-bg-card)';
+                    img.style.background = 'var(--color-bg-card)';
                 });
             }
         },
@@ -200,7 +200,7 @@
         reportMetrics: function () {
             if (!('PerformanceObserver' in global))
                 return;
-            var metrics = {};
+            var metrics: { fcp?: number; lcp?: number; inp?: number } = {};
             // FCP
             try {
                 new PerformanceObserver(function (list) {

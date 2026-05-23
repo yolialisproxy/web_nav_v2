@@ -122,7 +122,7 @@ class FavoriteManager {
         const removed = this.favorites.splice(index, 1)[0];
         this.saveToStorage();
         this.emit('favoriteRemoved', removed);
-        return { success: true, message: '取消收藏           ' };
+        return { success: true, message: '取消收藏' };
     }
     /**
      * Toggle favorite status (add if not exists, remove if exists)
@@ -190,7 +190,7 @@ class FavoriteManager {
         return this.favorites.length;
     }
     // ===== 访问计数 =====
-    recordVisit(siteName) {
+    recordVisit(siteName: string) {
         if (!siteName)
             return;
         if (!this.visitCounts[siteName]) {
@@ -211,15 +211,15 @@ class FavoriteManager {
             favorites: this.getAll()
         }, null, 2);
     }
-    import(jsonStr) {
+    import(jsonStr: string) {
         try {
             const data = JSON.parse(jsonStr);
             if (!data || !Array.isArray(data.favorites)) {
                 return { success: false, message: '数据格式错误' };
             }
-            const imported = data.favorites.filter(f => f && f.name);
+            const imported = data.favorites.filter((f: any) => f && f.name);
             let added = 0;
-            imported.forEach(item => {
+            imported.forEach((item: any) => {
                 if (!this.isFavorite(item.name)) {
                     this.favorites.push(Object.assign(Object.assign({}, item), { favoriteId: this.generateId(), addedAt: item.addedAt || new Date().toISOString() }));
                     added++;
@@ -229,7 +229,7 @@ class FavoriteManager {
             this.emit('favoriteImported', { count: added });
             return { success: true, message: `成功导入 ${added} 个收藏`, added };
         }
-        catch (e) {
+        catch (e: any) {
             return { success: false, message: '导入失败: ' + e.message };
         }
     }
@@ -237,13 +237,13 @@ class FavoriteManager {
     generateId() {
         return 'fav_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     }
-    on(event, callback) {
+    on(event: string, callback: (data: any) => void) {
         if (!this.listeners[event]) {
             this.listeners[event] = [];
         }
         this.listeners[event].push(callback);
     }
-    off(event, callback) {
+    off(event: string, callback: (data: any) => void) {
         if (!this.listeners[event])
             return;
         this.listeners[event] = this.listeners[event].filter(cb => cb !== callback);

@@ -59,3 +59,71 @@
   },
   "performance_score": 95
 }
+[2026-05-22 21:03:58] === 任务开始: performance ===
+[2026-05-22 21:03:58] 开始执行性能审计...
+[2026-05-22 21:03:58] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 21:03:58] === 任务完成: performance ===
+{
+  "timestamp": "2026-05-22T21:03:58.160287",
+  "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
+  "checks": {
+    "file_size_index.html": 21919,
+    "file_size_core.css": 18376,
+    "file_size_app.css": 32054,
+    "total_critical_size": 72349,
+    "prerendered_pages": 142,
+    "js_files_count": 25,
+    "js_total_size": 335042,
+    "image_files_count": 306,
+    "image_total_size": 3770284,
+    "sitemap_size": 30436,
+    "seo_basic": {
+      "has_meta_description": true,
+      "has_meta_keywords": true,
+      "has_canonical": true,
+      "has_og_title": true,
+      "has_viewport": true
+    }
+  },
+  "performance_score": 95
+}
+[2026-05-22 21:40:48] === 任务开始: performance ===
+[2026-05-22 21:40:48] 开始执行性能审计...
+[2026-05-22 21:40:48] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 21:40:48] === 任务完成: performance ===
+[2026-05-22 21:46:48] === 任务开始: performance ===
+[2026-05-22 21:46:48] 开始执行性能审计...
+[2026-05-22 21:46:48] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 21:46:48] === 任务完成: performance ===
+[2026-05-22 21:50:32] === 任务开始: performance ===
+[2026-05-22 21:50:32] 开始执行性能审计...
+[2026-05-22 21:50:32] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 21:50:32] === 任务完成: performance ===
+[2026-05-22 22:39:34] === 任务开始: performance ===
+[2026-05-22 22:39:34] 开始执行性能审计...
+[2026-05-22 22:39:34] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 22:39:34] === 任务完成: performance ===
+[2026-05-22 22:40:31] === 任务开始: performance ===
+[2026-05-22 22:40:31] 开始执行性能审计...
+[2026-05-22 22:40:31] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 22:40:31] === 任务完成: performance ===
+[2026-05-22 22:55:15] === 任务开始: performance ===
+[2026-05-22 22:55:15] 开始执行性能审计...
+[2026-05-22 22:55:15] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 22:55:15] === 任务完成: performance ===
+[2026-05-22 22:59:46] === 任务开始: performance ===
+[2026-05-22 22:59:46] 开始执行性能审计...
+[2026-05-22 22:59:47] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 22:59:47] === 任务完成: performance ===
+[2026-05-22 23:22:06] === 任务开始: performance ===
+[2026-05-22 23:22:06] 开始执行性能审计...
+[2026-05-22 23:22:06] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 23:22:06] === 任务完成: performance ===
+[2026-05-22 23:23:40] === 任务开始: performance ===
+[2026-05-22 23:23:41] 开始执行性能审计...
+[2026-05-22 23:23:41] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 23:23:41] === 任务完成: performance ===
+[2026-05-22 23:33:55] === 任务开始: performance ===
+[2026-05-22 23:33:55] 开始执行性能审计...
+[2026-05-22 23:33:55] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260522.json
+[2026-05-22 23:33:55] === 任务完成: performance ===

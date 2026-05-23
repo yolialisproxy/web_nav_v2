@@ -19,7 +19,7 @@ declare var games: {
     cat: string; 
     rating: number; 
     constructor: any; 
-    stop(): void 
+    stop?: () => void 
   };
 };
 declare var _isRecent: (key: any) => boolean;
@@ -46,11 +46,12 @@ declare var Stripe: any;
 
 // Global functions
 declare function initTagManager(): void;
-declare function trackSiteClick(): void;
+declare function trackSiteClick(label: string): void;
 declare function updateFavoriteButtons(): void;
 declare function toggleFavorite(): void;
 declare function toggleSiteFavorite(): void;
 declare function trackEvent(): void;
+declare function applyTagFilter(tag: string): void;
 
 // PerformanceEntry extensions
 interface PerformanceEntry {
@@ -71,16 +72,22 @@ interface Window {
   render?: any;
   search?: any;
   localforage?: any;
-  initTagManager?: () => void;
-  trackSiteClick?: () => void;
-  updateFavoriteButtons?: () => void;
-  toggleFavorite?: () => void;
-  toggleSiteFavorite?: () => void;
-  trackEvent?: () => void;
-  GameHub?: {
-    currentGame: string | null;
-    stop(gameKey: string): void;
-  };
+initTagManager?: () => void;
+trackSiteClick?: (label: string) => void;
+updateFavoriteButtons?: () => void;
+toggleFavorite?: () => void;
+toggleSiteFavorite?: () => void;
+trackEvent?: () => void;
 }
 
 declare var localforage: any;
+
+// Game utils
+declare var GameUtils: any;
+
+// UI and data managers
+declare var favoriteManager: FavoriteManager;
+declare var favoriteUI: any;
+declare var dataManager: any;
+declare function updateFavoriteButtons(): void;
+declare function toggleFavorite(element: any, name: string, url: string, description: string, category: string): void;

@@ -3,6 +3,7 @@
  * Game Utilities - 游戏公共工具
  */
 var GameUtils = {
+    _audioCtx: null as any,
     // 存档
     save: function (key, data) {
         try {
@@ -116,34 +117,5 @@ var GameUtils = {
         }
         catch (e) { }
     },
-    // 随机整数
-    rand: function (min, max) { return Math.floor(Math.random() * (max - min + 1)) + min; },
-    // 洗牌（Fisher-Yates）
-    shuffle: function (arr) {
-        var a = arr.slice();
-        for (var i = a.length - 1; i > 0; i--) {
-            var j = Math.floor(Math.random() * (i + 1));
-            var t = a[i];
-            a[i] = a[j];
-            a[j] = t;
-        }
-        return a;
-    },
-    // 创建SVG元素字符串
-    svgEl: function (tag, attrs) {
-        var el = '<svg xmlns="http://www.w3.org/2000/svg" ' + Object.keys(attrs).map(function (k) {
-            return k + '="' + attrs[k] + '"';
-        }).join(' ') + '></svg>';
-        return el;
-    },
-    // 格式化时间
-    formatTime: function (ms) {
-        var s = Math.floor(ms / 1000);
-        var m = Math.floor(s / 60);
-        s = s % 60;
-        return (m < 10 ? '0' + m : m) + ':' + (s < 10 ? '0' + s : s);
-    },
-    // 深度克隆
-    clone: function (obj) { return JSON.parse(JSON.stringify(obj)); }
 };
 //# sourceMappingURL=game-utils.js.map

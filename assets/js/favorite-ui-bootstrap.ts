@@ -196,14 +196,14 @@
                 var tabs = document.querySelectorAll('.fav-group-tab');
                 if (!tabs)
                     return;
-                tabs.forEach(function (tab) {
-                    (tab as HTMLElement).onclick = function () {
-                        tabs.forEach(function (t) { t.classList.remove('active'); });
-                        this.classList.add('active');
-                        self.currentGroup = this.getAttribute('data-group');
-                        self.renderList();
-                    };
-                });
+            tabs.forEach(function (tab) {
+                (tab as HTMLElement).onclick = function () {
+                    tabs.forEach(function (t) { t.classList.remove('active'); });
+                    (this as HTMLElement).classList.add('active');
+                    self.currentGroup = (this as HTMLElement).getAttribute('data-group');
+                    self.renderList();
+                };
+            });
             },
             // ===== 绑定删除按钮 =====
             _bindRemoveButtons: function () {
