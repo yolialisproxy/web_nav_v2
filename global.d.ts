@@ -63,22 +63,25 @@ interface PerformanceEntry {
   value?: number;
 }
 
-// Extend Window
-interface Window {
-  dataManager?: any;
-  appState?: any;
-  favoriteManager?: any;
-  games?: any;
-  render?: any;
-  search?: any;
-  localforage?: any;
-initTagManager?: () => void;
-trackSiteClick?: (label: string) => void;
-updateFavoriteButtons?: () => void;
-toggleFavorite?: () => void;
-toggleSiteFavorite?: () => void;
-trackEvent?: () => void;
-}
+  // Extend Window
+  interface Window {
+    dataManager?: any;
+    appState?: any;
+    favoriteManager?: any;
+    games?: any;
+    render?: any;
+    search?: any;
+    localforage?: any;
+    GameEngine?: any;
+    GameUtils?: any;
+    GameHub?: any;
+    initTagManager?: () => void;
+    trackSiteClick?: (label: string) => void;
+    updateFavoriteButtons?: () => void;
+    toggleFavorite?: () => void;
+    toggleSiteFavorite?: () => void;
+    trackEvent?: () => void;
+  }
 
 declare var localforage: any;
 

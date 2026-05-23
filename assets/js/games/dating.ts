@@ -292,7 +292,8 @@ DatingGame.prototype._processCell = function (cell) {
             break;
     }
 };
-/** 投资功能：小游戏几率获得双倍/亏损 */
+DatingGame.prototype._invest = function () {
+    /** 投资功能：小游戏几率获得双倍/亏损 */
     if (this.player.gold < 50) {
         (window as Window).GameHub.showToast('💰 至少需要50两才能投资！', 3000);
         return;

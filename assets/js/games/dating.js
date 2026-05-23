@@ -263,27 +263,28 @@ DatingGame.prototype._processCell = function (cell) {
             break;
     }
 };
-/** 投资功能：小游戏几率获得双倍/亏损 */
-if (this.player.gold < 50) {
-    window.GameHub.showToast('💰 至少需要50两才能投资！', 3000);
-    return;
-}
-// 简化：50%几率赚钱100%，50%亏光
-if (Math.random() < 0.5) {
-    this.player.gold *= 2;
-    this.score += 100;
-    this.events.push('📈 投资大获成功！金钱翻倍！');
-    window.GameUtils.playSound(660, 0.2, 'sine');
-}
-else {
-    this.player.gold = Math.floor(this.player.gold * 0.3);
-    this.score = Math.max(0, this.score - 50);
-    this.events.push('📉 投资失败！损失惨重...');
-    window.GameUtils.playSound(200, 0.3, 'square');
-}
-this.save();
-this.render();
-;
+DatingGame.prototype._invest = function () {
+    /** 投资功能：小游戏几率获得双倍/亏损 */
+    if (this.player.gold < 50) {
+        window.GameHub.showToast('💰 至少需要50两才能投资！', 3000);
+        return;
+    }
+    // 简化：50%几率赚钱100%，50%亏光
+    if (Math.random() < 0.5) {
+        this.player.gold *= 2;
+        this.score += 100;
+        this.events.push('📈 投资大获成功！金钱翻倍！');
+        window.GameUtils.playSound(660, 0.2, 'sine');
+    }
+    else {
+        this.player.gold = Math.floor(this.player.gold * 0.3);
+        this.score = Math.max(0, this.score - 50);
+        this.events.push('📉 投资失败！损失惨重...');
+        window.GameUtils.playSound(200, 0.3, 'square');
+    }
+    this.save();
+    this.render();
+};
 DatingGame.prototype._giveGift = function () {
     if (this.player.gold < 20) {
         window.GameHub.showToast('💰 金钱不足！');
