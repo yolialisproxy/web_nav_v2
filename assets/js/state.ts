@@ -399,11 +399,11 @@ class State {
     /**
      * 渲染标签云 UI
      */
-    renderTagCloud(containerId, options = {}) {
+    renderTagCloud(containerId, options: { limit?: number } = {}) {
         const container = document.getElementById(containerId);
         if (!container)
             return;
-        const limit = options.limit || 50;
+        const { limit = 50 } = options;
         const tagsArray = [];
         this._tagAll.forEach((count, tag) => {
             tagsArray.push({ tag, count, active: this._activeTags.has(tag) });

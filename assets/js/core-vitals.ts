@@ -40,10 +40,11 @@
             scripts.forEach(function (s) {
                 var src = s.src || '';
                 // 跳过核心脚本（必须同步）和schema
-                if (/schema\.js|state\.js|data\.js/.test(src))
+                if (/schema\\.js|state\\.js|data\\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                if ((s as HTMLScriptElement).readyState === 'loaded' || (s as HTMLScriptElement).readyState === 'complete')
+                var script = s as any;
+                if (script.readyState === 'loaded' || script.readyState === 'complete')
                     return;
                 (s as HTMLScriptElement).defer = true;
             });
@@ -54,15 +55,15 @@
          * 防止图片加载时布局偏移
          */
         reserveImageSpace: function () {
-            var images = document.querySelectorAll('img[loading="lazy"]');
+            var images = document.querySelectorAll('img[loading="lazy"]') as NodeListOf<HTMLImageElement>;
             images.forEach(function (img) {
                 if (!img.width && !img.style.width) {
                     img.style.width = '48px';
                     img.style.height = '48px';
                     img.style.objectFit = 'cover';
                 }
-                if (!img.style.aspectRatio && (img as HTMLImageElement).naturalWidth && (img as HTMLImageElement).naturalHeight) {
-                    img.style.aspectRatio = (img as HTMLImageElement).naturalWidth + '/' + (img as HTMLImageElement).naturalHeight;
+                if (!img.style.aspectRatio && img.naturalWidth && img.naturalHeight) {
+                    img.style.aspectRatio = img.naturalWidth + '/' + img.naturalHeight;
                 }
             });
         },
