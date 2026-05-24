@@ -15,8 +15,8 @@ var MahjongGame = function () {
 };
 MahjongGame.prototype = Object.create(GameEngine.prototype);
 MahjongGame.prototype.constructor = MahjongGame;
-// 麻将符号定义（14种）
-MahjongGame.TILE_TYPES = [
+namespace MahjongGame {
+  export const TILE_TYPES = [
     { char: '🀇', name: '一筒', matchGroup: 0 },
     { char: '🀈', name: '二筒', matchGroup: 1 },
     { char: '🀉', name: '三筒', matchGroup: 2 },
@@ -31,7 +31,10 @@ MahjongGame.TILE_TYPES = [
     { char: '🀛', name: '三万', matchGroup: 11 },
     { char: '🀜', name: '四万', matchGroup: 12 },
     { char: '🀝', name: '五万', matchGroup: 13 },
-];
+  ];
+}
+// 麻将符号定义（14种）
+
 MahjongGame.prototype.init = function () {
     GameEngine.prototype.init.call(this);
     this._generateTiles();

@@ -227,7 +227,7 @@ var GameHub = {
         this.currentGame = null;
         document.getElementById('game-play-overlay').classList.remove('active');
     },
-    showToast: function (msg, duration) {
+    showToast: function (msg, duration?: number) {
         var t = document.getElementById('toast-container');
         if (t && typeof window.toast === 'function') {
             window.toast(msg, duration || 3000);
