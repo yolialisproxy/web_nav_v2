@@ -1,28 +1,8 @@
-[2026-05-23 21:14:17]   08f7418 Auto commit at 2026年 05月 23日 星期六 08:01:51 CST
-[2026-05-23 21:14:17] 开发准则已生成: /home/yoli/GitHub/web_nav_v2/DEVELOPMENT_GUIDELINES.md
-[2026-05-23 21:14:17] === 任务完成: git-analysis ===
+[2026-05-24 10:12:38] 开始执行性能审计...
+[2026-05-24 10:12:38] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260524.json
+[2026-05-24 10:12:38] === 任务完成: performance ===
 {
-  "commits_analyzed": 10,
-  "commits": [
-    "0db48ae Auto commit at 2026年 05月 23日 星期六 20:16:16 CST",
-    "885a7bd auto-push: 2026-05-23 20:13:23 CST",
-    "4288cd9 Auto commit at 2026年 05月 23日 星期六 18:01:12 CST",
-    "30f251f Auto commit at 2026年 05月 23日 星期六 16:03:23 CST",
-    "3ea2117 auto-push: 2026-05-23 15:07:01 CST",
-    "9a664fc Auto commit at 2026年 05月 23日 星期六 14:01:03 CST",
-    "5fb6256 Auto commit at 2026年 05月 23日 星期六 13:02:30 CST",
-    "17b51bf Auto commit at 2026年 05月 23日 星期六 12:08:04 CST",
-    "a6e2ec5 Auto commit at 2026年 05月 23日 星期六 11:14:55 CST",
-    "08f7418 Auto commit at 2026年 05月 23日 星期六 08:01:51 CST"
-  ],
-  "guidelines_generated": "/home/yoli/GitHub/web_nav_v2/DEVELOPMENT_GUIDELINES.md"
-}
-[2026-05-23 22:16:48] === 任务开始: performance ===
-[2026-05-23 22:16:48] 开始执行性能审计...
-[2026-05-23 22:16:48] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260523.json
-[2026-05-23 22:16:48] === 任务完成: performance ===
-{
-  "timestamp": "2026-05-23T22:16:48.751311",
+  "timestamp": "2026-05-24T10:12:38.465046",
   "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
   "checks": {
     "file_size_index.html": 21919,
