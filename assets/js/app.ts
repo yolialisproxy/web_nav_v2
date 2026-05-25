@@ -217,7 +217,7 @@ var searchSuggestions = document.getElementById('search-suggestions');
 if (searchInput) {
     var searchDebounceTimer = null;
     searchInput.addEventListener('input', function (e) {
-        var query = e.target.value.trim();
+        var query = (e.target as HTMLInputElement).value.trim();
         state.set('search.query', query);
         if (searchDebounceTimer)
             clearTimeout(searchDebounceTimer);
@@ -251,29 +251,29 @@ if (searchInput) {
         }
     });
     searchInput.addEventListener('focus', function () {
-        if (searchInput.value.length > 0) {
+        if ((searchInput as HTMLInputElement).value.length > 0) {
             showSearchSuggestions();
         }
     });
     document.addEventListener('click', function (e) {
-        if (!e.target.closest('.search-container')) {
+        if (! (e.target as HTMLElement).closest('.search-container')) {
             hideSearchSuggestions();
         }
     });
     if (searchClear) {
         searchInput.addEventListener('input', function () {
-            searchClear.classList.toggle('hidden', searchInput.value.length === 0);
+            searchClear.classList.toggle('hidden', (searchInput as HTMLInputElement).value.length === 0);
         });
-        searchClear.addEventListener('click', function () {
-            searchInput.value = '';
-            searchClear.classList.add('hidden');
-            searchInput.focus();
-            hideSearchSuggestions();
-            state.set('search.query', '');
-            state.set('search.results', []);
-            state.set('search.active', false);
-            state.set('currentView', 'category');
-        });
+            searchClear.addEventListener('click', function () {
+                (searchInput as HTMLInputElement).value = '';
+                searchClear.classList.add('hidden');
+                (searchInput as HTMLInputElement).focus();
+                hideSearchSuggestions();
+                state.set('search.query', '');
+                state.set('search.results', []);
+                state.set('search.active', false);
+                state.set('currentView', 'category');
+            });
     }
 }
 // ===== 侧边栏切换 =====
@@ -318,7 +318,7 @@ if (sidebarToggle && sidebar && sidebarOverlay) {
 var sidebarContent = document.getElementById('sidebar-content');
 if (sidebarContent) {
     sidebarContent.addEventListener('click', function (e) {
-        var navItem = e.target.closest('.nav-item[data-category]');
+        var navItem = (e.target as HTMLElement).closest('.nav-item[data-category]');
         if (navItem) {
             var cat = navItem.getAttribute('data-category');
             // 切换子分类展开/折叠
@@ -370,7 +370,7 @@ if (sidebarContent) {
             e.preventDefault();
             return;
         }
-        var subItem = e.target.closest('.nav-sub-item[data-sub]');
+        var subItem = (e.target as HTMLElement).closest('.nav-sub-item[data-sub]');
         if (subItem) {
             var subCat = subItem.getAttribute('data-sub');
             var parentItem = subItem.closest('.nav-item');
