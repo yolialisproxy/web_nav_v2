@@ -15,7 +15,7 @@
             var resources = [
                 { href: 'assets/fontawesome-free-6.4.0/fonts/fa-solid-900.woff2', as: 'font', type: 'font/woff2' },
                 { href: 'assets/images/logo.png', as: 'image' },
-                { href: 'assets/css/core.css', as: 'style' }
+                { href: 'assets/css/core.css', as: 'style' },
             ];
             resources.forEach(function (r) {
                 var link = document.createElement('link');
@@ -40,11 +40,10 @@
             scripts.forEach(function (s) {
                 var src = s.src || '';
                 // 跳过核心脚本（必须同步）和schema
-                if (/schema\\.js|state\\.js|data\\.js/.test(src))
+                if (/schema\.js|state\.js|data\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                var script = s as any;
-                if (script.readyState === 'loaded' || script.readyState === 'complete')
+                if ((s as HTMLScriptElement).readyState === 'loaded' || s.readyState === 'complete')
                     return;
                 (s as HTMLScriptElement).defer = true;
             });
@@ -55,7 +54,7 @@
          * 防止图片加载时布局偏移
          */
         reserveImageSpace: function () {
-            var images = document.querySelectorAll('img[loading="lazy"]') as NodeListOf<HTMLImageElement>;
+            var images = document.querySelectorAll('img[loading="lazy"]');
             images.forEach(function (img) {
                 if (!img.width && !img.style.width) {
                     img.style.width = '48px';
@@ -77,10 +76,10 @@
                 return;
             // 骨架屏动画完成后平滑移除
             setTimeout(function () {
-                skeleton.style.transition = 'opacity 0.4s ease';
-                skeleton.style.opacity = '0';
+                skeleton && (skeleton.style).transition = 'opacity 0.4s ease';
+                skeleton && (skeleton.style).opacity = '0';
                 setTimeout(function () {
-                    skeleton.style.display = 'none';
+                    skeleton && (skeleton.style).display = 'none';
                 }, 400);
             }, 1500);
         },
@@ -116,14 +115,14 @@
                 return;
             // 卡片点击事件委托
             mainContent.addEventListener('click', function (e) {
-                var card = e.target.closest('.site-card');
+                var card = (e.target as HTMLElement).closest('.site-card');
                 if (card && typeof trackSiteClick === 'function') {
-                    trackSiteClick(card.getAttribute('aria-label') || '');
+                    (window as any).trackSiteClick(card.getAttribute('aria-label') || '');
                 }
             });
             // 标签过滤委托
             mainContent.addEventListener('click', function (e) {
-                var tagBtn = e.target.closest('[data-tag]');
+                var tagBtn = (e.target as HTMLElement).closest('[data-tag]');
                 if (tagBtn) {
                     e.stopPropagation();
                     // 标签过滤逻辑
@@ -141,11 +140,11 @@
         enhanceLazyLoading: function () {
             if ('IntersectionObserver' in global) {
                 // 处理 data-src 图片（真正的懒加载）
-                var lazyImages = document.querySelectorAll('img[data-src]');
+                var lazyImages = document.querySelectorAll('img[data-src]') as NodeListOf<HTMLImageElement>;
                 var observer = new IntersectionObserver(function (entries) {
                     entries.forEach(function (entry) {
                         if (entry.isIntersecting) {
-                            var img = entry.target;
+                            var img = entry.target as HTMLImageElement;
                             if (img.dataset.src) {
                                 img.src = img.dataset.src;
                                 img.removeAttribute('data-src');
@@ -155,9 +154,9 @@
                         }
                     });
                 }, { rootMargin: '200px 0px' });
-                lazyImages.forEach(function (img) { observer.observe(img); });
+                lazyImages.forEach(function (img: HTMLImageElement) { observer.observe(img); });
                 // 为 card-icon 添加模糊占位（CLS优化）
-                document.querySelectorAll('img.card-icon').forEach(function (img) {
+                document.querySelectorAll('img.card-icon').forEach(function (img: HTMLImageElement) {
                     if (!img.style.width)
                         img.style.width = '48px';
                     if (!img.style.height)
@@ -201,7 +200,7 @@
         reportMetrics: function () {
             if (!('PerformanceObserver' in global))
                 return;
-            var metrics: { fcp?: number; lcp?: number; inp?: number } = {};
+            var metrics = {};
             // FCP
             try {
                 new PerformanceObserver(function (list) {
@@ -272,14 +271,14 @@
             // // console.log('[CoreVitals] 性能优化已启用');
         }
     };
-    global.Vitals = Vitals;
+    (window as any).Vitals = Vitals;
     // 在DOM Ready时初始化
-    if (global.document && global.document.readyState === 'loading') {
-        global.document.addEventListener('DOMContentLoaded', function () {
+    if ((window as any).document && (window as any).document.readyState === 'loading') {
+        (window as any).document.addEventListener('DOMContentLoaded', function () {
             Vitals.init();
         });
     }
-    else if (global.document) {
+    else if ((window as any).document) {
         Vitals.init();
     }
 })(typeof window !== 'undefined' ? window : this);
