@@ -36,16 +36,16 @@
         deferNonCritical: function () {
             // 跳过：已在HTML中设置defer，此函数仅做安全兜底
             // 如果脚本已被标记defer则跳过，避免重复
-            var scripts = document.querySelectorAll('script[src]:not([defer]):not([async])');
+            var scripts = document.querySelectorAll('script[src]:not([defer]):not([async])') as NodeListOf<HTMLScriptElement>;
             scripts.forEach(function (s) {
                 var src = s.src || '';
                 // 跳过核心脚本（必须同步）和schema
                 if (/schema\.js|state\.js|data\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                if ((s as HTMLScriptElement).readyState === 'loaded' || s.readyState === 'complete')
+                if (s.readyState === 'loaded' || s.readyState === 'complete')
                     return;
-                (s as HTMLScriptElement).defer = true;
+                s.defer = true;
             });
         },
         // ===================== CLS 优化 =====================
@@ -54,7 +54,7 @@
          * 防止图片加载时布局偏移
          */
         reserveImageSpace: function () {
-            var images = document.querySelectorAll('img[loading="lazy"]');
+            var images = document.querySelectorAll('img[loading="lazy"]') as NodeListOf<HTMLImageElement>;
             images.forEach(function (img) {
                 if (!img.width && !img.style.width) {
                     img.style.width = '48px';
@@ -76,12 +76,7 @@
                 return;
             // 骨架屏动画完成后平滑移除
             setTimeout(function () {
-                skeleton && (skeleton.style).transition = 'opacity 0.4s ease';
-                skeleton && (skeleton.style).opacity = '0';
-                setTimeout(function () {
-                    skeleton && (skeleton.style).display = 'none';
-                }, 400);
-            }, 1500);
+                if (skeleton) { skeleton.style.transition = 'opacity 0.4s ease'; }                if (skeleton) { skeleton.style.opacity = '0'; }                setTimeout(function () {                    if (skeleton) { skeleton.style.display = 'none'; }                }, 400);            }, 1500);
         },
         // ===================== INP 优化 =====================
         /**
