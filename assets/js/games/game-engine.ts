@@ -2,7 +2,7 @@
 /**
  * Game Engine - 通用游戏引擎基类
  */
-class GameEngine {
+export class GameEngine {
     config: any;
     id: string;
     containerId: string;
@@ -12,7 +12,7 @@ class GameEngine {
     level: number;
     lines: number;
     moves: number;
-    private _timer: any;
+    protected _timer: any;
     private _animFrame: any;
     _stats: { startTime: number; moves: number; errors: number };
     saveKey: string;
@@ -122,7 +122,7 @@ class GameEngine {
         }
     }
 
-    private _updateUI(): void {
+    protected _updateUI(): void {
         if (this.scoreEl) this.scoreEl.textContent = this.score.toString();
         if (this.titleEl) this.titleEl.textContent = this.title;
     }
@@ -179,4 +179,4 @@ class GameEngine {
         this._stats = { startTime: 0, moves: 0, errors: 0 };
         this._updateUI();
     }
-}
+    gameOver(): void {        this.quit();    }}
