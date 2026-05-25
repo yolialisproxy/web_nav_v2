@@ -324,13 +324,13 @@ if (sidebarContent) {
             // 切换子分类展开/折叠
             var next = navItem.nextElementSibling;
             if (next && next.classList.contains('nav-children')) {
-                var isExpanded = next.style.display !== 'none';
+                var isExpanded = (next as HTMLElement).style.display !== 'none';
                 // 折叠所有其他子菜单
                 sidebarContent.querySelectorAll('.nav-children').forEach(function (c) {
                     if (c !== next)
-                        c.style.display = 'none';
+                        (c as HTMLElement).style.display = 'none';
                 });
-                next.style.display = isExpanded ? 'none' : 'block';
+                (next as HTMLElement).style.display = isExpanded ? 'none' : 'block';
             }
             if (cat) {
                 state.set('sidebar.activeCategoryId', cat);
@@ -421,9 +421,9 @@ function toggleSearch() {
             searchOverlay.setAttribute('aria-hidden', 'false');
             requestAnimationFrame(function () {
                 if (searchOverlayInput) {
-                    searchOverlayInput.focus();
+                    (searchOverlayInput as HTMLInputElement).focus();
                     var query = state.get('search.query') || '';
-                    searchOverlayInput.value = query;
+                    (searchOverlayInput as HTMLInputElement).value = query;
                     if (window.searchEngine && query) {
                         var results = searchEngine.query(query);
                         state.set('search.results', results);
@@ -440,11 +440,11 @@ function toggleSearch() {
 }
 if (searchOverlayInput) {
     var overlayDebounceTimer = null;
-    searchOverlayInput.addEventListener('input', function (e) {
-        var query = e.target.value;
+            searchOverlayInput.addEventListener('input', function (e) {
+        var query = (e.target as HTMLInputElement).value;
         state.set('search.query', query);
         if (searchInput)
-            searchInput.value = query;
+            (searchInput as HTMLInputElement).value = query;
         if (overlayDebounceTimer)
             clearTimeout(overlayDebounceTimer);
         overlayDebounceTimer = setTimeout(function () {
@@ -461,13 +461,13 @@ if (searchOverlayInput) {
     });
     if (searchOverlayClear) {
         searchOverlayInput.addEventListener('input', function () {
-            searchOverlayClear.classList.toggle('hidden', searchOverlayInput.value.length === 0);
+                (searchOverlayClear as HTMLElement).classList.toggle('hidden', (searchOverlayInput as HTMLInputElement).value.length === 0);
         });
         searchOverlayClear.addEventListener('click', function () {
-            searchOverlayInput.value = '';
+            (searchOverlayInput as HTMLInputElement).value = '';
             searchOverlayClear.classList.add('hidden');
             if (searchInput)
-                searchInput.value = '';
+                (searchInput as HTMLInputElement).value = '';
             searchOverlayInput.focus();
             state.set('search.query', '');
             state.set('search.results', []);
