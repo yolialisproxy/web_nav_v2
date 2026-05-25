@@ -1,9 +1,9 @@
 "use strict";
-/// <reference path="./game-engine.ts" />
-/// <reference path="../game-utils.ts" />
-/// <reference path="../game-hub.ts" />
-/// <reference path="../global.d.ts" />
 
+/// <reference path="./game-engine.ts" />
+/// <reference path="./game-utils.ts" />
+/// <reference path="../game-hub.ts" />
+/// <reference path="./global.d.ts" />
 
 /**
  * MahjongGame - 四川麻将（简约版）
@@ -190,6 +190,7 @@ class MahjongGame extends GameEngine {
                 pair[0].faceUp = true;
                 pair[1].faceUp = true;
                 this._render();
+                const self = this;
                 setTimeout(function () { pair.forEach(function (t) { t.faceUp = false; }); self._render(); }, 1500);
             }
         }

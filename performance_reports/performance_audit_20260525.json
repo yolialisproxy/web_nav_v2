@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-22T23:33:55.631900",
+  "timestamp": "2026-05-25T12:08:14.293385",
   "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
   "checks": {
     "file_size_index.html": 21919,
@@ -8,7 +8,7 @@
     "total_critical_size": 72349,
     "prerendered_pages": 142,
     "js_files_count": 25,
-    "js_total_size": 335042,
+    "js_total_size": 328282,
     "image_files_count": 306,
     "image_total_size": 3770284,
     "sitemap_size": 30436,

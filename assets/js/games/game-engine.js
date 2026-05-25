@@ -2,60 +2,58 @@
 /**
  * Game Engine - 通用游戏引擎基类
  */
-var GameEngine = function (config) {
-    this.config = config || {};
-    this.id = config.id || 'game';
-    this.containerId = config.containerId || 'game-play-area';
-    this.title = config.title || '游戏';
-    this.state = 'idle'; // idle | running | paused | over
-    this.score = 0;
-    this.level = 1;
-    this.lines = 0;
-    this._timer = null;
-    this._animFrame = null;
-    this._stats = { startTime: 0, moves: 0, errors: 0 };
-    this.saveKey = 'gn_save_' + this.id;
-};
-GameEngine.prototype = {
-    // 初始化游戏界面
-    init: function () {
-        var area = document.getElementById(this.containerId);
+class GameEngine {
+    constructor(config) {
+        this.config = config || {};
+        this.id = config.id || 'game';
+        this.containerId = config.containerId || 'game-play-area';
+        this.title = config.title || '游戏';
+        this.state = 'idle';
+        this.score = 0;
+        this.level = 1;
+        this.lines = 0;
+        this.moves = 0;
+        this._timer = null;
+        this._animFrame = null;
+        this._stats = { startTime: 0, moves: 0, errors: 0 };
+        this.saveKey = 'gn_save_' + this.id;
+    }
+    init() {
+        const area = document.getElementById(this.containerId);
         if (!area)
             return;
-        area.innerHTML = '<div class="game-inner" id="game-' + this.id + '"></div>';
-        this.el = document.getElementById('game-' + this.id);
+        area.innerHTML = `<div class="game-inner" id="game-${this.id}"></div>`;
+        this.el = document.getElementById(`game-${this.id}`);
         this.scoreEl = document.getElementById('game-play-score');
         this.titleEl = document.getElementById('game-play-title');
         this.titleEl.textContent = this.title;
         this.footerEl = document.getElementById('game-play-footer');
         this._bindControls();
-    },
-    // 绑定控制器
-    _bindControls: function () {
-        var self = this;
-        var quitBtn = document.getElementById('game-quit-btn');
-        var pauseBtn = document.getElementById('game-pause-btn');
+    }
+    _bindControls() {
+        const self = this;
+        const quitBtn = document.getElementById('game-quit-btn');
+        const pauseBtn = document.getElementById('game-pause-btn');
         if (quitBtn) {
-            quitBtn.onclick = function () {
-                if (confirm('确定要退出游戏吗？'))
+            quitBtn.onclick = () => {
+                if (confirm('确定要退出游戏吗？')) {
                     self.quit();
+                }
             };
         }
         if (pauseBtn) {
-            pauseBtn.onclick = function () { self.togglePause(); };
+            pauseBtn.onclick = () => self.togglePause();
         }
-    },
-    // 开始
-    start: function () {
+    }
+    start() {
         this.state = 'running';
         this._stats.startTime = Date.now();
         this.level = 1;
         this.score = 0;
         this.moves = 0;
         this._updateUI();
-    },
-    // 暂停/恢复
-    togglePause: function () {
+    }
+    togglePause() {
         if (this.state === 'running') {
             this.state = 'paused';
             this._stopLoop();
@@ -66,17 +64,94 @@ GameEngine.prototype = {
             this._startLoop();
             this.hidePauseScreen();
         }
-    },
-    showPauseScreen: function () {
+    }
+    showPauseScreen() {
         if (this.el) {
             this._pauseOverlay = document.createElement('div');
-            this._pauseOverlay.style.cssText = 'position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:99;';
-            this._pauseOverlay.innerHTML = '<div style="color:#fff;font-size:28px;font-weight:bold;text-align:center;">⏸️ 暂停中<br><span style="font-size:14px;opacity:0.7;">点击暂停继续</span></div>';
-            var self = this;
-            this._pauseOverlay.onclick = function () { self.togglePause(); };
+            this._pauseOverlay.style.cssText = 'position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:99';
+            this._pauseOverlay.innerHTML = `<div style="color:#fff;font-size:28px;font-weight:bold;text-align:center;">⏸️ 暂停中<br><span style="font-size:14px;opacity:0.7;">点击暂停继续</span></div>`;
+            const self = this;
+            this._pauseOverlay.onclick = () => self.togglePause();
             this.el.style.position = 'relative';
             this.el.appendChild(this._pauseOverlay);
         }
-    },
-};
+    }
+    hidePauseScreen() {
+        if (this._pauseOverlay) {
+            this._pauseOverlay.parentNode.removeChild(this._pauseOverlay);
+            this._pauseOverlay = null;
+        }
+    }
+    _startLoop() {
+        const self = this;
+        const loop = () => {
+            self._update();
+            self._animFrame = requestAnimationFrame(loop);
+        };
+        this._animFrame = requestAnimationFrame(loop);
+    }
+    _stopLoop() {
+        if (this._animFrame) {
+            cancelAnimationFrame(this._animFrame);
+            this._animFrame = null;
+        }
+    }
+    _updateUI() {
+        if (this.scoreEl)
+            this.scoreEl.textContent = this.score.toString();
+        if (this.titleEl)
+            this.titleEl.textContent = this.title;
+    }
+    _update() {
+        // 由子类实现
+    }
+    quit() {
+        this.state = 'over';
+        this._stopLoop();
+        this.save();
+    }
+    save() {
+        try {
+            const state = {
+                id: this.id,
+                score: this.score,
+                level: this.level,
+                lines: this.lines,
+                state: this.state,
+                stats: this._stats
+            };
+            localStorage.setItem(this.saveKey, JSON.stringify(state));
+        }
+        catch (e) {
+            console.warn('保存游戏状态失败:', e);
+        }
+    }
+    load() {
+        try {
+            const state = localStorage.getItem(this.saveKey);
+            if (state) {
+                const data = JSON.parse(state);
+                this.id = data.id || this.id;
+                this.score = data.score || 0;
+                this.level = data.level || 1;
+                this.lines = data.lines || 0;
+                this.state = data.state || 'idle';
+                this._stats = data._stats || { startTime: 0, moves: 0, errors: 0 };
+            }
+        }
+        catch (e) {
+            console.warn('加载游戏状态失败:', e);
+        }
+    }
+    reset() {
+        this.state = 'idle';
+        this.score = 0;
+        this.level = 1;
+        this.lines = 0;
+        this.moves = 0;
+        this._stats = { startTime: 0, moves: 0, errors: 0 };
+        this._updateUI();
+    }
+    gameOver() { this.quit(); }
+}
 //# sourceMappingURL=game-engine.js.map

@@ -2,7 +2,7 @@
 /**
  * Game Engine - 通用游戏引擎基类
  */
-export class GameEngine {
+class GameEngine {
     config: any;
     id: string;
     containerId: string;

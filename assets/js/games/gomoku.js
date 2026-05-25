@@ -167,8 +167,8 @@ Gomoku.prototype._checkWin = function (r, c) {
         var dr = dirs[d][0], dc = dirs[d][1];
         var count = 1;
         // 正方向
-        for (var i = 1; i < 5; i++) {
-            var nr = r + dr * i, nc = c + dc * i;
+        for (let i = 1; i < 5; i++) {
+            let nr = r + dr * i, nc = c + dc * i;
             if (nr < 0 || nr >= this.boardSize || nc < 0 || nc >= this.boardSize)
                 break;
             if (this.board[nr][nc] !== player)
@@ -176,8 +176,8 @@ Gomoku.prototype._checkWin = function (r, c) {
             count++;
         }
         // 反方向
-        for (var i = 1; i < 5; i++) {
-            var nr = r - dr * i, nc = c - dc * i;
+        for (let i = 1; i < 5; i++) {
+            let nr = r - dr * i, nc = c - dc * i;
             if (nr < 0 || nr >= this.boardSize || nc < 0 || nc >= this.boardSize)
                 break;
             if (this.board[nr][nc] !== player)
