@@ -3,7 +3,7 @@
 /// <reference path="./game-engine.ts" />
 /// <reference path="./game-utils.ts" />
 /// <reference path="../game-hub.ts" />
-/// <reference path="./global.d.ts" />
+/// <reference path="../global.d.ts" />
 
 /**
  * MahjongGame - 四川麻将（简约版）
@@ -77,39 +77,39 @@ class MahjongGame extends GameEngine {
         const self = this;
         const cols = 7;
         const cellSize = Math.min(50, (window.innerWidth - 100) / cols);
-        let html = '<div style="text-align:center;">' +
-            '<div style="margin-bottom:12px;">' +
-            '<span style="font-size:14px;">得分: <strong id="maj-score">' + this.score + '</strong></span> &nbsp;' +
-            '<span style="font-size:14px;">配对: <strong>' + this.matches + '/' + this.totalPairs + '</strong></span> &nbsp;' +
-            '<span style="font-size:14px;">时间: <strong id="maj-time">' + GameUtils.formatTime(this._gameTime) + '</strong></span>' +
+        let html = '<div style=\"text-align:center;\">' +
+            '<div style=\"margin-bottom:12px;\">' +
+            '<span style=\"font-size:14px;\">得分: <strong id=\"maj-score\">' + this.score + '</strong></span> &nbsp;' +
+            '<span style=\"font-size:14px;\">配对: <strong>' + this.matches + '/' + this.totalPairs + '</strong></span> &nbsp;' +
+            '<span style=\"font-size:14px;\">时间: <strong id=\"maj-time\">' + GameUtils.formatTime(this._gameTime) + '</strong></span>' +
             '</div>' +
-            '<div id="maj-board" style="display:grid;grid-template-columns:repeat(' + cols + ',1fr);gap:4px;max-width:' + (cellSize * cols + 50) + 'px;margin:0 auto;">';
+            '<div id=\"maj-board\" style=\"display:grid;grid-template-columns:repeat(' + cols + ',1fr);gap:4px;max-width:' + (cellSize * cols + 50) + 'px;margin:0 auto;\">';
         this.tiles.forEach(function (tile, idx) {
             if (tile.cleared) {
-                html += '<div style="width:' + cellSize + 'px;height:' + cellSize + 'px;"></div>';
+                html += '<div style=\"width:' + cellSize + 'px;height:' + cellSize + 'px;\"></div>';
             }
             else if (tile.faceUp) {
                 const selected = self.selected.some(function (s) { return s.uid === tile.uid; });
-                html += '<div style="width:' + cellSize + 'px;height:' + cellSize + 'px;' +
+                html += '<div style=\"width:' + cellSize + 'px;height:' + cellSize + 'px;' +
                     'display:flex;align-items:center;justify-content:center;' +
                     'font-size:' + (cellSize * 0.55) + 'px;' +
                     'background:' + (selected ? 'rgba(255,215,0,0.2)' : 'rgba(255,255,255,0.9)') + ';' +
                     'border:2px solid ' + (selected ? '#ffd700' : 'var(--color-border)') + ';' +
-                    'border-radius:4px;cursor:pointer;transition:all .15s;" ' +
-                    'data-uid="' + tile.uid + '">' + tile.char + '</div>';
+                    'border-radius:4px;cursor:pointer;transition:all .15s;\" ' +
+                    'data-uid=\"' + tile.uid + '\">' + tile.char + '</div>';
             }
             else {
-                html += '<div style="width:' + cellSize + 'px;height:' + cellSize + 'px;' +
+                html += '<div style=\"width:' + cellSize + 'px;height:' + cellSize + 'px;' +
                     'background:linear-gradient(135deg,#2d3748,#4a5568);' +
                     'border:2px solid var(--color-border);border-radius:4px;cursor:pointer;' +
-                    'font-size:' + (cellSize * 0.4) + 'px;color:var(--color-text-dim);" ' +
-                    'data-uid="' + tile.uid + '">?</div>';
+                    'font-size:' + (cellSize * 0.4) + 'px;color:var(--color-text-dim);\" ' +
+                    'data-uid=\"' + tile.uid + '\">?</div>';
             }
         });
         html += '</div>' +
-            '<div style="margin-top:12px;display:flex;gap:8px;justify-content:center;">' +
-            '<button class="game-btn" style="font-size:12px;padding:4px 12px;" id="maj-new">🔄 新游戏</button>' +
-            '<button class="game-btn" style="font-size:12px;padding:4px 12px;" id="maj-reveal">👁️ 提示(揭示)</button>' +
+            '<div style=\"margin-top:12px;display:flex;gap:8px;justify-content:center;\">' +
+            '<button class=\"game-btn\" style=\"font-size:12px;padding:4px 12px;\" id=\"maj-new\">🔄 新游戏</button>' +
+            '<button class=\"game-btn\" style=\"font-size:12px;padding:4px 12px;\" id=\"maj-reveal\">👁️ 提示(揭示)</button>' +
             '</div></div>';
         this.el.innerHTML = html;
         this._bindEvents();

@@ -27,22 +27,6 @@ declare global {
     trackSiteClick: any;
     updateFavoriteButtons: any;
     webkitAudioContext: any;
-  }
-
-  interface EventTarget {
-    value?: any;
-    closest?: (selector: string) => Element | null;
-    style?: CSSStyleDeclaration;
-    dataset?: DOMStringMap;
-    src?: string;
-  }
-
-  interface Element {
-    value?: any;
-    closest?: (selector: string) => Element | null;
-    style?: CSSStyleDeclaration;
-    dataset?: DOMStringMap;
-    src?: string;
+    MahjongGame: any;
   }
 }
-export {}
