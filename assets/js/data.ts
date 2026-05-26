@@ -1,5 +1,5 @@
 "use strict";
-/// <reference path="../global.d.ts" />;
+/// <reference path="./global.d.ts" />;
 
 /**
  * data.js - 数据加载与索引管理 (V2.1)
@@ -7,7 +7,7 @@
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
  */
 var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any) {
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: (value: any) => void) { resolve(value); }); }
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve: (value: any) => void, reject: (reason: any) => void) {
         function fulfilled(value: any) {
             try {
@@ -59,94 +59,92 @@ class DataManager {
         this._loadError = null;
     }
 
-    load(): Promise<void> {
-        return __awaiter(this, void 0, void 0, function* (this: DataManager) {
-            if (this.isLoaded)
-                return Promise.resolve();
-            // 清理旧版本缓存（兼容性迁移）
-            try {
-                const oldCacheKey = 'webnav_sites_cache_v2';
-                if (localStorage.getItem(oldCacheKey)) {
-                    localStorage.removeItem(oldCacheKey);
-                    // console.log('[DataManager] 已清理旧版本缓存');
-                }
+    async load(): Promise<void> {
+        if (this.isLoaded)
+            return;
+        // 清理旧版本缓存（兼容性迁移）
+        try {
+            const oldCacheKey = 'webnav_sites_cache_v2';
+            if (localStorage.getItem(oldCacheKey)) {
+                localStorage.removeItem(oldCacheKey);
+                // console.log('[DataManager] 已清理旧版本缓存');
             }
-            catch (e) { }
-            // 显示加载状态
+        }
+        catch (e) { }
+        // 显示加载状态
+        if (state)
+            state.set('loading', true);
+        try {
+            const cacheBust = Date.now();
+            const response = await fetch(`data/websites.json?v=${cacheBust}`, {
+                headers: { 'Cache-Control': 'no-cache' }
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            const text = await response.text();
+            if (!text || text.trim().length === 0) {
+                throw new Error('数据文件为空');
+            }
+            this.raw = JSON.parse(text);
+            /* local-cache unification: data.js now relies on state.get('sites')
+               (state LocalForage) as the single source of truth;
+               fallback path reads state.get('sites') instead of its own localStorage */
+            if (!Array.isArray(this.raw)) {
+                throw new Error('数据格式错误：期望数组');
+            }
+            // 数据格式验证
+            this.raw = this._validateSites(this.raw);
+            this._buildIndexes();
+            this.isLoaded = true;
+            this._loadError = null;
+            // 保存到 localStorage 缓存以便恢复
+            this._saveCache();
+            // 设置版本信息
+            if (this.raw.length > 0 && this.raw[0].version) {
+                this.version = this.raw[0].version;
+            }
+            // 广播数据加载完成
+            const evt = new CustomEvent('data-loaded');
+            window.dispatchEvent(evt);
+            // 标记加载完成（触发骨架屏隐藏）
             if (state)
-                state.set('loading', true);
-            try {
-                const cacheBust = Date.now();
-                const response = yield fetch(`data/websites.json?v=${cacheBust}`, {
-                    headers: { 'Cache-Control': 'no-cache' }
-                });
-                if (!response.ok) {
-                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                }
-                const text = yield response.text();
-                if (!text || text.trim().length === 0) {
-                    throw new Error('数据文件为空');
-                }
-                this.raw = JSON.parse(text);
-                /* local-cache unification: data.js now relies on state.get('sites')
-                   (state LocalForage) as the single source of truth;
-                   fallback path reads state.get('sites') instead of its own localStorage */
-                if (!Array.isArray(this.raw)) {
-                    throw new Error('数据格式错误：期望数组');
-                }
-                // 数据格式验证
-                this.raw = this._validateSites(this.raw);
+                state.set('loading', false);
+        }
+        catch (e) {
+            this._loadError = e;
+            console.error('[DataManager] 加载失败:', e);
+            // local-cache unification: 优先从 state（LocalForage）恢复站点数据
+            const stateSites = state ? state.get('sites') : null;
+            if (stateSites && Array.isArray(stateSites) && stateSites.length > 0) {
+                console.warn('[DataManager] 从 state.get(sites) 恢复数据，跳过 localStorage 副本');
+                this.raw = stateSites;
                 this._buildIndexes();
                 this.isLoaded = true;
                 this._loadError = null;
-                // 保存到 localStorage 缓存以便恢复
-                this._saveCache();
-                // 设置版本信息
-                if (this.raw.length > 0 && this.raw[0].version) {
-                    this.version = this.raw[0].version;
-                }
-                // 广播数据加载完成
-                const evt = new CustomEvent('data-loaded');
-                window.dispatchEvent(evt);
-                // 标记加载完成（触发骨架屏隐藏）
                 if (state)
                     state.set('loading', false);
+                return;
             }
-            catch (e) {
-                this._loadError = e;
-                console.error('[DataManager] 加载失败:', e);
-                // local-cache unification: 优先从 state（LocalForage）恢复站点数据
-                const stateSites = state ? state.get('sites') : null;
-                if (stateSites && Array.isArray(stateSites) && stateSites.length > 0) {
-                    console.warn('[DataManager] 从 state.get(sites) 恢复数据，跳过 localStorage 副本');
-                    this.raw = stateSites;
-                    this._buildIndexes();
-                    this.isLoaded = true;
-                    this._loadError = null;
-                    if (state)
-                        state.set('loading', false);
-                    return Promise.resolve();
-                }
-                //  fallback: 尝试从 localStorage 缓存恢复（兼容旧版本）
-                const cached = this._loadCache();
-                if (cached) {
-                    console.warn('[DataManager] 从 localStorage 缓存恢复数据');
-                    this.raw = cached;
-                    this._buildIndexes();
-                    this.isLoaded = true;
-                    this._loadError = null;
-                    if (state)
-                        state.set('loading', false);
-                    return Promise.resolve();
-                }
-                // 即使加载失败也要隐藏骨架屏，显示错误状态
+            //  fallback: 尝试从 localStorage 缓存恢复（兼容旧版本）
+            const cached = this._loadCache();
+            if (cached) {
+                console.warn('[DataManager] 从 localStorage 缓存恢复数据');
+                this.raw = cached;
+                this._buildIndexes();
+                this.isLoaded = true;
+                this._loadError = null;
                 if (state)
                     state.set('loading', false);
-                // 渲染有意义的错误信息
-                this._renderError(e);
-                throw e;
+                return;
             }
-        });
+            // 即使加载失败也要隐藏骨架屏，显示错误状态
+            if (state)
+                state.set('loading', false);
+            // 渲染有意义的错误信息
+            this._renderError(e);
+            throw e;
+        }
     }
 
     _buildIndexes(): void {
@@ -447,5 +445,5 @@ class DataManager {
 }
 
 const dataManager = new DataManager();
-(window as any).dataManager = dataManager;
+window.dataManager = dataManager;
 //# sourceMappingURL=data.js.map
