@@ -15,7 +15,7 @@
             var resources = [
                 { href: 'assets/fontawesome-free-6.4.0/fonts/fa-solid-900.woff2', as: 'font', type: 'font/woff2' },
                 { href: 'assets/images/logo.png', as: 'image' },
-                { href: 'assets/css/core.css', as: 'style' }
+                { href: 'assets/css/core.css', as: 'style' },
             ];
             resources.forEach(function (r) {
                 var link = document.createElement('link');
@@ -40,11 +40,10 @@
             scripts.forEach(function (s) {
                 var src = s.src || '';
                 // 跳过核心脚本（必须同步）和schema
-                if (/schema\\.js|state\\.js|data\\.js/.test(src))
+                if (/schema\.js|state\.js|data\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                var script = s;
-                if (script.readyState === 'loaded' || script.readyState === 'complete')
+                if (s.readyState === 'loaded' || s.readyState === 'complete')
                     return;
                 s.defer = true;
             });
@@ -77,11 +76,15 @@
                 return;
             // 骨架屏动画完成后平滑移除
             setTimeout(function () {
-                skeleton.style.transition = 'opacity 0.4s ease';
-                skeleton.style.opacity = '0';
-                setTimeout(function () {
+                if (skeleton) {
+                    skeleton.style.transition = 'opacity 0.4s ease';
+                }
+                if (skeleton) {
+                    skeleton.style.opacity = '0';
+                }
+                setTimeout(function () { if (skeleton) {
                     skeleton.style.display = 'none';
-                }, 400);
+                } }, 400);
             }, 1500);
         },
         // ===================== INP 优化 =====================
@@ -118,7 +121,7 @@
             mainContent.addEventListener('click', function (e) {
                 var card = e.target.closest('.site-card');
                 if (card && typeof trackSiteClick === 'function') {
-                    trackSiteClick(card.getAttribute('aria-label') || '');
+                    window.trackSiteClick(card.getAttribute('aria-label') || '');
                 }
             });
             // 标签过滤委托
@@ -272,14 +275,14 @@
             // // console.log('[CoreVitals] 性能优化已启用');
         }
     };
-    global.Vitals = Vitals;
+    window.Vitals = Vitals;
     // 在DOM Ready时初始化
-    if (global.document && global.document.readyState === 'loading') {
-        global.document.addEventListener('DOMContentLoaded', function () {
+    if (window.document && window.document.readyState === 'loading') {
+        window.document.addEventListener('DOMContentLoaded', function () {
             Vitals.init();
         });
     }
-    else if (global.document) {
+    else if (window.document) {
         Vitals.init();
     }
 })(typeof window !== 'undefined' ? window : this);

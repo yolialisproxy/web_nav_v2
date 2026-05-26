@@ -162,7 +162,7 @@ class MahjongGame extends GameEngine {
     _updateUI() {
         const scoreEl = document.getElementById('maj-score');
         if (scoreEl)
-            scoreEl.textContent = this.score;
+            scoreEl.textContent = String(this.score);
         this.scoreEl && (this.scoreEl.textContent = 'Score: ' + this.score);
     }
     save() {
