@@ -25,3 +25,32 @@
   },
   "performance_score": 95
 }
+[2026-05-26 14:16:43] === 任务开始: performance ===
+[2026-05-26 14:16:43] 开始执行性能审计...
+[2026-05-26 14:16:44] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260526.json
+[2026-05-26 14:16:44] === 任务完成: performance ===
+{
+  "timestamp": "2026-05-26T14:16:43.950707",
+  "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
+  "checks": {
+    "file_size_index.html": 21919,
+    "file_size_core.css": 18376,
+    "file_size_app.css": 32054,
+    "total_critical_size": 72349,
+    "prerendered_pages": 142,
+    "js_files_count": 25,
+    "js_total_size": 345508,
+    "image_files_count": 306,
+    "image_total_size": 3770284,
+    "sitemap_size": 30436,
+    "seo_basic": {
+      "has_meta_description": true,
+      "has_meta_keywords": true,
+      "has_canonical": true,
+      "has_og_title": true,
+      "has_viewport": true
+    }
+  },
+  "performance_score": 95
+}
+没有需要删除的旧性能报告（当前保留所有3份）
