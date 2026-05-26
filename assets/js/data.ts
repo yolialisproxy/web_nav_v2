@@ -7,7 +7,7 @@
  * 职责：加载 JSON，构建分类索引 + 标签索引，支持容错降级
  */
 var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _arguments: any, P: any, generator: any) {
-    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    function adopt(value: any) { return value instanceof P ? value : new P(function (resolve: any) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve: (value: any) => void, reject: (reason: any) => void) {
         function fulfilled(value: any) {
             try {
@@ -221,12 +221,12 @@ class DataManager {
         const leafId = `${cat}/${sub}/${leaf}`;
         if (!this.mappings.has(leafId))
             this.mappings.set(leafId, []);
-        this.mappings.get(leafId).push(site.id);
+        this.mappings.get(leafId)!.push(site.id);
         if (leaf === sub) {
             const subLevelId = `${cat}/${sub}`;
             if (!this.mappings.has(subLevelId))
                 this.mappings.set(subLevelId, []);
-            this.mappings.get(subLevelId).push(site.id);
+            this.mappings.get(subLevelId)!.push(site.id);
         }
     }
 
@@ -243,7 +243,7 @@ class DataManager {
                 this.tagIndex.set(key, new Set());
                 this.tagCloud.set(key, { tag, count: 0, sites: [] });
             }
-            this.tagIndex.get(key).add(site.id);
+            this.tagIndex.get(key)!.add(site.id);
             const entry = this.tagCloud.get(key)!;
             entry.count++;
             if (entry.sites.length < 10)
@@ -445,5 +445,5 @@ class DataManager {
 }
 
 const dataManager = new DataManager();
-window.dataManager = dataManager;
+(window as any).dataManager = dataManager;
 //# sourceMappingURL=data.js.map
