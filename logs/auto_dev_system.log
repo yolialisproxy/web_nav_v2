@@ -1,48 +1,19 @@
-[2026-05-27 13:28:25]   8ffff7d Auto commit at 2026年 05月 26日 星期二 09:05:51 CST
-[2026-05-27 13:28:25] 开发准则已生成: /home/yoli/GitHub/web_nav_v2/DEVELOPMENT_GUIDELINES.md
-[2026-05-27 13:28:25] === 任务完成: git-analysis ===
+[2026-05-27 16:45:06]   0ed5181 Auto commit at 2026年 05月 26日 星期二 19:03:37 CST
+[2026-05-27 16:45:06] 开发准则已生成: /home/yoli/GitHub/web_nav_v2/DEVELOPMENT_GUIDELINES.md
+[2026-05-27 16:45:06] === 任务完成: git-analysis ===
 {
   "commits_analyzed": 10,
   "commits": [
+    "914a23d chore: untrack large intermediate JSON files in data/ to reduce repo bloat",
+    "aa2baf8 chore: untrack large JSON backup files to reduce repo bloat",
+    "f9d88ce chore: untrack large JSON backup and test files to reduce repo bloat",
+    "35d37c3 chore: untrack redundant JSON backup files to reduce repo bloat",
+    "1c4677b chore: untrack node_modules to reduce repo bloat",
+    "d90f5cb auto-push: 2026-05-27 15:07:26 CST",
     "c11a5c2 Auto commit at 2026年 05月 27日 星期三 13:01:59 CST",
     "693c17c Auto commit at 2026年 05月 27日 星期三 11:02:09 CST",
     "3233ad6 Auto commit at 2026年 05月 26日 星期二 22:32:57 CST",
-    "0ed5181 Auto commit at 2026年 05月 26日 星期二 19:03:37 CST",
-    "5e56ba6 auto-push: 2026-05-26 15:04:21 CST",
-    "374b8e8 Auto commit at 2026年 05月 26日 星期二 13:00:36 CST",
-    "9d4ee5d Auto commit at 2026年 05月 26日 星期二 12:05:32 CST",
-    "f44616a Auto commit at 2026年 05月 26日 星期二 11:01:07 CST",
-    "28f1dea auto-push: 2026-05-26 10:03:36 CST",
-    "8ffff7d Auto commit at 2026年 05月 26日 星期二 09:05:51 CST"
+    "0ed5181 Auto commit at 2026年 05月 26日 星期二 19:03:37 CST"
   ],
   "guidelines_generated": "/home/yoli/GitHub/web_nav_v2/DEVELOPMENT_GUIDELINES.md"
 }
-[2026-05-27 14:22:06] === 任务开始: performance ===
-[2026-05-27 14:22:06] 开始执行性能审计...
-[2026-05-27 14:22:06] 性能审计完成，评分: 95/100，报告: /home/yoli/GitHub/web_nav_v2/performance_reports/performance_audit_20260527.json
-[2026-05-27 14:22:06] === 任务完成: performance ===
-{
-  "timestamp": "2026-05-27T14:22:06.659024",
-  "site_url": "https://yolialisproxy.github.io/web_nav_v2/",
-  "checks": {
-    "file_size_index.html": 21919,
-    "file_size_core.css": 18376,
-    "file_size_app.css": 32054,
-    "total_critical_size": 72349,
-    "prerendered_pages": 142,
-    "js_files_count": 25,
-    "js_total_size": 345508,
-    "image_files_count": 306,
-    "image_total_size": 3770284,
-    "sitemap_size": 30436,
-    "seo_basic": {
-      "has_meta_description": true,
-      "has_meta_keywords": true,
-      "has_canonical": true,
-      "has_og_title": true,
-      "has_viewport": true
-    }
-  },
-  "performance_score": 95
-}
-没有需要删除的旧性能报告（当前保留所有3份）
