@@ -50,3 +50,10 @@ debug_*.py
 node_modules/
 *.js.map
 *.d.ts.map
+webstack_data.json
+webstack_data.json.*
+*.json.backup
+data/collected_buffer.json
+data/ods_raw_buffer.json
+data/ods_raw_sites.json
+data/processed_batch_1776573.json
