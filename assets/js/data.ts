@@ -33,7 +33,7 @@ var __awaiter: any = (this && this.__awaiter) || function (thisArg: any, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-declare var state: any; // global state manager from state.ts
+
 
 class DataManager {
     raw: any = null;
@@ -280,63 +280,7 @@ class DataManager {
         return valid;
     }
 
-    _saveCache(): void {
-        /* local-cache unification: 写入统一通过 state._saveToCache 走 LocalForage
-           此函数保留作降级兼容（当 state 不可用时回退 localStorage）。
-           localStorage 副本已不作为主要缓存路径。 */
-        try {
-            if (state && state._cacheReady && state._cacheBackend) {
-                // 主路径：写入 LocalForage（带 TTL + version）
-                state._cacheBackend.setItem(state._cache.keys.sites, {
-                    value: this.raw,
-                    ts: Date.now(),
-                    v: state._cache.version
-                }).catch(function () { });
-            }
-            else {
-                // 降级：localStorage
-                const cacheData = {
-                    version: 'v3',
-                    timestamp: Date.now(),
-                    data: this.raw
-                };
-                localStorage.setItem('webnav_sites_cache', JSON.stringify(cacheData));
-            }
-        }
-        catch (e) {
-            console.warn('[DataManager] 缓存保存失败:', e);
-        }
-    }
 
-    _loadCache(): any[] | null {
-        /* local-cache unification: 数据统一通过 state.get('sites') 读取，
-           此函数仅作最后降级兼容：从 localStorage 'webnav_sites_cache' 读取。 */
-        try {
-            const cached = localStorage.getItem('webnav_sites_cache');
-            if (!cached)
-                return null;
-            const parsed = JSON.parse(cached);
-            if (!parsed || !parsed.data || !Array.isArray(parsed.data)) {
-                console.warn('[DataManager] (降级) 缓存格式无效，清除旧缓存');
-                localStorage.removeItem('webnav_sites_cache');
-                return null;
-            }
-            // 7 天 TTL
-            const maxAge = 7 * 24 * 60 * 60 * 1000;
-            if (Date.now() - parsed.timestamp > maxAge) {
-                localStorage.removeItem('webnav_sites_cache');
-                return null;
-            }
-            // 数据格式验证
-            const validatedData = this._validateSites(parsed.data);
-            return validatedData;
-        }
-        catch (e) {
-            console.warn('[DataManager] (降级) 缓存加载失败:', e);
-            localStorage.removeItem('webnav_sites_cache');
-        }
-        return null;
-    }
 
     _renderError(error: any): void {
         const container = document.getElementById('site-container');
