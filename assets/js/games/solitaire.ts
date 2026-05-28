@@ -498,11 +498,11 @@ Solitaire.prototype._initTouchDrag = function () {
             }
         }
         // 失败：抖动画回原位
-        var cardEl = this.el.querySelector(".sol-card-tableau[data-col=" + dragSourceCol + "][data-row=" + dragCardIndex + "]");
+        var cardEl = self.el.querySelector(".sol-card-tableau[data-col=" + dragSourceCol + "][data-row=" + dragCardIndex + "]");
         if (cardEl) {
             cardEl.style.transition = "transform 0.2s";
             cardEl.style.transform = "none";
             setTimeout(function () { cardEl.style.transition = ""; }, 200);
         }
-    }, { passive: false });
-});
+        }, { passive: false });
+};
