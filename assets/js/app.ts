@@ -668,7 +668,7 @@ window.renderer = renderer;
 window.addEventListener('error', function (e) {
     console.warn('[Global Error]', e.error ? e.error.message : e.message);
     if (e.target && (e.target as HTMLElement).tagName === 'IMG') {
-        (e.target as HTMLElement).src = 'assets/images/favicon.png';
+        (e.target as HTMLImageElement).src = 'assets/images/favicon.png';
     }
 });
 // 页面加载完成初始化

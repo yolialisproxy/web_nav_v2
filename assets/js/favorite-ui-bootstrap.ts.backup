@@ -177,6 +177,7 @@
                         if (clearBtn)
                             clearBtn.style.display = (count > 0) ? 'block' : 'none';
                     }
+                    }
                     self.renderList();
                 };
                 var searchClear = document.getElementById('favorite-search-clear');

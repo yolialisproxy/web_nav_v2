@@ -45,15 +45,13 @@ declare var search: any;
 declare var Stripe: any;
 
 // Global functions
+declare function initTagManager(): void;
+declare function trackSiteClick(label: string): void;
 declare function updateFavoriteButtons(): void;
-declare function updateFavoriteButtons(element: any, name: string, url: string, description: string, category: string): void;
 declare function toggleFavorite(): void;
-declare function toggleFavorite(element: any, name: string, url: string, description: string, category: string): void;
 declare function toggleSiteFavorite(): void;
 declare function trackEvent(): void;
 declare function applyTagFilter(tag: string): void;
-declare function initTagManager(): void;
-declare function trackSiteClick(label: string): void;
 
 // PerformanceEntry extensions
 interface PerformanceEntry {
@@ -80,12 +78,9 @@ interface PerformanceEntry {
     initTagManager?: () => void;
     trackSiteClick?: (label: string) => void;
     updateFavoriteButtons?: () => void;
-    updateFavoriteButtons?: (element: any, name: string, url: string, description: string, category: string) => void;
     toggleFavorite?: () => void;
-    toggleFavorite?: (element: any, name: string, url: string, description: string, category: string) => void;
     toggleSiteFavorite?: () => void;
     trackEvent?: () => void;
-    applyTagFilter?: (tag: string) => void;
   }
 
 declare var localforage: any;

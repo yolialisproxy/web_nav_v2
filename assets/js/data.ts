@@ -98,8 +98,10 @@ class DataManager {
             this._buildIndexes();
             this.isLoaded = true;
             this._loadError = null;
-            // 保存到 localStorage 缓存以便恢复
-            this._saveCache();
+            // 保存到 state 以便统一缓存
+            if (state) {
+                state.set('sites', this.raw);
+            }
             // 设置版本信息
             if (this.raw.length > 0 && this.raw[0].version) {
                 this.version = this.raw[0].version;
@@ -127,17 +129,6 @@ class DataManager {
                 return;
             }
             //  fallback: 尝试从 localStorage 缓存恢复（兼容旧版本）
-            const cached = this._loadCache();
-            if (cached) {
-                console.warn('[DataManager] 从 localStorage 缓存恢复数据');
-                this.raw = cached;
-                this._buildIndexes();
-                this.isLoaded = true;
-                this._loadError = null;
-                if (state)
-                    state.set('loading', false);
-                return;
-            }
             // 即使加载失败也要隐藏骨架屏，显示错误状态
             if (state)
                 state.set('loading', false);
@@ -388,6 +379,5 @@ class DataManager {
     }
 }
 
-const dataManager = new DataManager();
-(window as any).dataManager = dataManager;
+(window as any).dataManager = new DataManager();
 //# sourceMappingURL=data.js.map

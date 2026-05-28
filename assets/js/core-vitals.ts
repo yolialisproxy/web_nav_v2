@@ -43,7 +43,7 @@
                 if (/schema\.js|state\.js|data\.js/.test(src))
                     return;
                 // 跳过已加载完成的脚本
-                if (s.readyState === 'loaded' || s.readyState === 'complete')
+                if ((s as any).readyState === 'loaded' || (s as any).readyState === 'complete')
                     return;
                 s.defer = true;
             });
@@ -195,7 +195,7 @@
         reportMetrics: function () {
             if (!('PerformanceObserver' in global))
                 return;
-            var metrics = {};
+            var metrics: any = {};
             // FCP
             try {
                 new PerformanceObserver(function (list) {
