@@ -505,4 +505,5 @@ Solitaire.prototype._initTouchDrag = function () {
             setTimeout(function () { cardEl.style.transition = ""; }, 200);
         }
         }, { passive: false });
-};
+
+}

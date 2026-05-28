@@ -21,7 +21,7 @@ var WuxiaGame = function () {
 };
 WuxiaGame.prototype = Object.create(GameEngine.prototype);
 WuxiaGame.prototype.constructor = WuxiaGame;
-(WuxiaGame as any).SCENES = {
+WuxiaGame.SCENES = {
     start: { text: '你是一名初入江湖的侠客，听闻江湖上近日风起云涌。一位老乞丐拦住你的去路……',
         choices: [{ text: '上前询问', next: 'old_beggar_talk' }, { text: '不予理会，继续前行', next: 'mountain_path' }, { text: '赠予银两', next: 'old_beggar_gift' }] },
     old_beggar_talk: { text: '老乞丐叹道："少侠，你命中有一劫。前方黑风山有妖邪作祟，若能除之，必有大造化。"说罢递给你一枚玉佩。',
@@ -111,7 +111,7 @@ WuxiaGame.prototype.render = function () {
     }
     else {
         // 剧情界面
-        var scene = (WuxiaGame as any).SCENES[this.scene];
+        var scene = WuxiaGame.SCENES[this.scene];
         if (!scene || !this.scene || this.scene === 'end') {
             html += '<div style="text-align:center;padding:40px;"><div style="font-size:48px;">🏆</div>' +
                 '<div style="color:var(--color-text);font-size:18px;">冒险结束</div>' +
@@ -170,7 +170,7 @@ WuxiaGame.prototype._bindEvents = function () {
             if (self.state !== 'running')
                 return;
             var idx = parseInt(this.dataset.choice);
-            var choice = (WuxiaGame as any).SCENES[self.scene].choices[idx];
+            var choice = WuxiaGame.SCENES[self.scene].choices[idx];
             if (!choice)
                 return;
             if (choice.goldCost && choice.goldCost < 0) {
@@ -195,9 +195,9 @@ WuxiaGame.prototype._bindEvents = function () {
                 GameHub.showToast('🎁 获得: ' + choice.reward.item);
             }
             if (choice.next && (choice.next === 'fight_tiger' || choice.next === 'fight_boss' || choice.next === 'fight_boss_surprise')) {
-                self._startFight((WuxiaGame as any).SCENES[choice.next].fight);
+                self._startFight(WuxiaGame.SCENES[choice.next].fight);
                 self.scene = choice.next;
-                self.storyLog.push('进入战斗: ' + (WuxiaGame as any).SCENES[choice.next].fight.enemy);
+                self.storyLog.push('进入战斗: ' + WuxiaGame.SCENES[choice.next].fight.enemy);
             }
             else {
                 self.scene = choice.next || 'start';
