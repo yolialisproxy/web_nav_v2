@@ -105,7 +105,7 @@ var GameHub = {
         document.getElementById('game-hub-overlay').classList.add('active');
         // 重置分类按钮
         document.querySelectorAll('.game-cat-btn').forEach(function (b) {
-            b.classList.toggle('active', b.dataset.cat === 'all');
+            b.classList.toggle('active', (b as HTMLElement).dataset.cat === 'all');
         });
     },
     closeHub: function () {

@@ -466,7 +466,16 @@
                 }
             });
         };
-        window.toggleFavorite = function (element, name, url, description, category) {
+        window.toggleFavorite = function () {
+            if (arguments.length === 0) {
+                // Called with no arguments - do nothing or handle appropriately
+                return;
+            }
+            var element = arguments[0];
+            var name = arguments[1];
+            var url = arguments[2];
+            var description = arguments[3];
+            var category = arguments[4];
             if (window.favoriteUI && window.favoriteManager) {
                 window.favoriteUI.toggle(element, name, url, description, category);
                 window.updateFavoriteButtons();

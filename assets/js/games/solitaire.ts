@@ -14,13 +14,13 @@ var Solitaire = function () {
 };
 Solitaire.prototype = Object.create(GameEngine.prototype);
 Solitaire.prototype.constructor = Solitaire;
-Solitaire.CARDS = [];
+(Solitaire as any).CARDS = [];
 (function () {
     var suits = ['♠', '♥', '♦', '♣'];
     var colors = { '♠': 'black', '♥': 'red', '♦': 'red', '♣': 'black' };
     for (var s = 0; s < suits.length; s++) {
         for (var v = 1; v <= 13; v++) {
-            Solitaire.CARDS.push({ suit: suits[s], value: v, color: colors[suits[s]],
+            (Solitaire as any).CARDS.push({ suit: suits[s], value: v, color: colors[suits[s]],
                 display: (function (v, s) {
                     var names = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
                     return names[v - 1] + s;
@@ -209,7 +209,7 @@ Solitaire.prototype.render = function () {
         this._deal();
 };
 Solitaire.prototype._deal = function () {
-    var deck = GameUtils.shuffle(Solitaire.CARDS);
+    var deck = GameUtils.shuffle((Solitaire as any).CARDS);
     this.tableau = [[], [], [], [], [], [], []];
     for (var i = 0; i < 7; i++) {
         for (var j = 0; j <= i; j++) {

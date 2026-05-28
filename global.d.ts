@@ -78,11 +78,9 @@ interface PerformanceEntry {
     GameUtils?: any;
     GameHub?: any;
     initTagManager?: () => void;
-    trackSiteClick?: (label: string) => void;
-    updateFavoriteButtons?: () => void;
-    updateFavoriteButtons?: (element: any, name: string, url: string, description: string, category: string) => void;
-    toggleFavorite?: () => void;
-    toggleFavorite?: (element: any, name: string, url: string, description: string, category: string) => void;
+       trackSiteClick?: (label: string) => void;
+    updateFavoriteButtons?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
+    toggleFavorite?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
     toggleSiteFavorite?: () => void;
     trackEvent?: () => void;
     applyTagFilter?: (tag: string) => void;
