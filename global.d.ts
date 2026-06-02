@@ -18,8 +18,8 @@ declare var games: {
     desc: string; 
     cat: string; 
     rating: number; 
-    constructor: any; 
-    stop?: () => void 
+    constructor: any;
+    stop?: () => void;
   };
 };
 declare var _isRecent: (key: any) => boolean;
@@ -65,26 +65,27 @@ interface PerformanceEntry {
   value?: number;
 }
 
-  // Extend Window
-  interface Window {
-    dataManager?: any;
-    appState?: any;
-    favoriteManager?: any;
-    games?: any;
-    render?: any;
-    search?: any;
-    localforage?: any;
-    GameEngine?: any;
-    GameUtils?: any;
-    GameHub?: any;
-    initTagManager?: () => void;
-       trackSiteClick?: (label: string) => void;
-    updateFavoriteButtons?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
-    toggleFavorite?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
-    toggleSiteFavorite?: () => void;
-    trackEvent?: () => void;
-    applyTagFilter?: (tag: string) => void;
-  }
+// Extend Window
+interface Window {
+  dataManager?: any;
+  appState?: any;
+  favoriteManager?: any;
+  games?: any;
+  render?: any;
+  search?: any;
+  localforage?: any;
+  GameEngine?: any;
+  GameUtils?: any;
+  GameHub?: any;
+  Tetris?: any;
+  initTagManager?: () => void;
+  trackSiteClick?: (label: string) => void;
+  updateFavoriteButtons?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
+  toggleFavorite?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
+  toggleSiteFavorite?: () => void;
+  trackEvent?: () => void;
+  applyTagFilter?: (tag: string) => void;
+}
 
 declare var localforage: any;
 
@@ -92,6 +93,8 @@ declare var localforage: any;
 declare var GameUtils: any;
 
 // UI and data managers
-declare var favoriteManager: FavoriteManager;
 declare var favoriteUI: any;
-declare var dataManager: any;
+
+// Tetris game - declared as any to support legacy JS patterns
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare var Tetris: any;

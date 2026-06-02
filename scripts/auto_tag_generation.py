@@ -8,11 +8,19 @@ from pathlib import Path
 def generate_tag_index():
     """Generate tag index from websites data"""
     project_root = Path(__file__).parent.parent
+    # Try sites_with_tags.json first (has enriched tags), fallback to websites.json
+    sites_with_tags_path = project_root / 'data' / 'sites_with_tags.json'
     websites_path = project_root / 'data' / 'websites.json'
     tag_index_path = project_root / 'data' / 'tag_index.json'
     
+    # Prefer sites_with_tags.json if it has real data
+    if sites_with_tags_path.exists() and sites_with_tags_path.stat().st_size > 1000:
+        source_path = sites_with_tags_path
+    else:
+        source_path = websites_path
+    
     try:
-        with open(websites_path, 'r') as f:
+        with open(source_path, 'r', encoding='utf-8') as f:
             sites = json.load(f)
         
         # Count tags across all sites

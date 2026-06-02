@@ -69,12 +69,17 @@ Tetris.prototype._startGame = function () {
     this.level = 1;
     this.combo = 0;
     this._dropSpeed = 800;
-    // _startDrop is defined later (line 84)
     this._resetBoard();
     this.current = this._newPiece();
     this.next = this._newPiece();
     this._startDrop();
     this._render();
+};
+Tetris.prototype._newPiece = function () {
+    var keys = Object.keys(Tetris.BLOCKS);
+    var key = keys[GameUtils.rand(0, keys.length - 1)];
+    var def = GameUtils.clone(Tetris.BLOCKS[key]);
+    return { key: key, shape: def.shape, color: def.color, x: Math.floor((this._cols - def.shape[0].length) / 2), y: 0 };
 };
 Tetris.prototype._startDrop = function () {
     var self = this;

@@ -42,7 +42,7 @@ const STATIC_ASSETS = [
 ];
 
 // 安装阶段：缓存静态资源
-self.addEventListener('install', (event) => {
+self.addEventListener('install', (event: ExtendableEvent) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll(STATIC_ASSETS);
@@ -52,7 +52,7 @@ self.addEventListener('install', (event) => {
 });
 
 // 激活阶段：清理旧缓存
-self.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event: ExtendableEvent) => {
     event.waitUntil(
         caches.keys().then((keys) => {
             return Promise.all(
@@ -63,16 +63,16 @@ self.addEventListener('activate', (event) => {
         })
     );
     self.clients.claim();
+});
 
 // 离线回退：返回缓存的首页
 const OFFLINE_URL = '/';
-});
 
 // 请求拦截
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch', (event: FetchEvent) => {
     const url = new URL(event.request.url);
 
-    // 只处理同源请求
+    // 只处理同源请请求
     if (url.origin !== self.location.origin) return;
 
     // 数据文件：Network First，失败时回退缓存
