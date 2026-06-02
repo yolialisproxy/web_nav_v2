@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 auto_dev_system.py - 自动化开发系统
-支持命令:performance, git-analysis
+支持命令:performance, git-analysis, data-update, tag-generation, data-validation, deploy
 """
 import subprocess
 import sys
@@ -187,7 +187,9 @@ def analyze_git():
 
 def main():
     parser = argparse.ArgumentParser(description="自动化开发系统")
-    parser.add_argument('command', choices=['performance', 'git-analysis'],
+    parser.add_argument('command', choices=['performance', 'git-analysis', 
+                                           'data-update', 'tag-generation', 
+                                           'data-validation', 'deploy'],
                        help='要执行的命令')
     args = parser.parse_args()
     ensure_dirs()
@@ -199,6 +201,61 @@ def main():
         result = analyze_git()
         if result:
             print(json.dumps(result, indent=2, ensure_ascii=False))
+    elif args.command == 'data-update':
+        from auto_data_update import update_websites_data
+        result = update_websites_data()
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    elif args.command == 'tag-generation':
+        from auto_tag_generation import generate_tag_index
+        result = generate_tag_index()
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    elif args.command == 'data-validation':
+        from auto_data_validation import validate_and_clean_websites_data
+        result = validate_and_clean_websites_data()
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    elif args.command == 'deploy':
+        # Simple deploy command that runs quality checks and git operations
+        log("开始部署流程...")
+        # Run quality checks first
+        try:
+            from auto_quality_check import main as quality_check_main
+            quality_result = quality_check_main()
+            if not quality_result:
+                log("质量检查未通过，中止部署")
+                print(json.dumps({"status": "failed", "reason": "quality_check_failed"}, indent=2))
+                return
+        except ImportError:
+            log("质量检查脚本未找到，继续部署")
+        
+        # Git operations
+        try:
+            # Add all changes
+            subprocess.run(['git', 'add', '.'], check=True, cwd=PROJECT_ROOT)
+            
+            # Check if there are changes to commit
+            diff_result = subprocess.run(['git', 'diff', '--cached', '--quiet'], 
+                                       capture_output=True, cwd=PROJECT_ROOT)
+            if diff_result.returncode == 0:
+                log("没有更改需要提交")
+                print(json.dumps({"status": "no_changes", "message": "No changes to commit"}, indent=2))
+                return
+            
+            # Commit
+            commit_message = f"Auto-deploy: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
+            subprocess.run(['git', 'commit', '-m', commit_message], check=True, cwd=PROJECT_ROOT)
+            
+            # Push
+            subprocess.run(['git', 'push'], check=True, cwd=PROJECT_ROOT)
+            
+            log("部署成功完成")
+            print(json.dumps({"status": "success", "message": "Changes committed and pushed"}, indent=2))
+        except subprocess.CalledProcessError as e:
+            log(f"Git操作失败: {e}")
+            print(json.dumps({"status": "failed", "message": f"Git command failed: {e}"}, indent=2))
+        except Exception as e:
+            log(f"部署过程中发生错误: {e}")
+            print(json.dumps({"status": "error", "message": str(e)}, indent=2))
+    
     log(f"=== 任务完成: {args.command} ===")
 
 if __name__ == '__main__':
