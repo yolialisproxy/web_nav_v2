@@ -95,6 +95,20 @@ declare var GameUtils: any;
 // UI and data managers
 declare var favoriteUI: any;
 
-// Tetris game - declared as any to support legacy JS patterns
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-declare var Tetris: any;
+// Tetris game - factory function with static properties
+interface TetrisConstructor {
+    new (): any;
+    prototype: any;
+    BLOCKS: {
+        I: { shape: number[][], color: string, pivot: number };
+        O: { shape: number[][], color: string, pivot: number };
+        T: { shape: number[][], color: string, pivot: number };
+        S: { shape: number[][], color: string, pivot: number };
+        Z: { shape: number[][], color: string, pivot: number };
+        J: { shape: number[][], color: string, pivot: number };
+        L: { shape: number[][], color: string, pivot: number };
+    };
+}
+
+// This represents the Tetris constructor function
+declare var Tetris: TetrisConstructor;

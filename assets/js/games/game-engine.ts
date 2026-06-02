@@ -179,4 +179,10 @@ class GameEngine {
         this._stats = { startTime: 0, moves: 0, errors: 0 };
         this._updateUI();
     }
+
+    addScore(points: number): void {
+        this.score += points;
+        this._updateUI();
+    }
+
     gameOver(): void {        this.quit();    }}
