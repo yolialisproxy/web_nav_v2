@@ -3,7 +3,7 @@
  * Tetris - 经典俄罗斯方块
  * Canvas实现
  */
-var Tetris = function () {
+Tetris = function () {
     GameEngine.call(this, { id: 'tetris', title: '🟩 俄罗斯方块' });
     this.board = [];
     this.current = null;
