@@ -4,7 +4,7 @@
  * 职责：唯一真理源，状态变更通知，骨架屏控制
  */
 class State {
-    private _state: {
+   private _state: {
         theme: string;
         sidebar: {
             mode: 'expanded' | 'collapsed';
@@ -46,7 +46,21 @@ class State {
     private _tagInitialized: boolean;
     private _isNotifying: boolean;
     private _cacheBackend: any;
+    
+    /**
+     * 获取所有标签的映射（只读）
+     */
+    get tagAll() {
+        return this._tagAll;
+    }
 
+    /**
+     * 获取所有标签的数量
+     */
+    get tagAllSize() {
+        return this._tagAll.size;
+    }
+    
     constructor() {
         this._state = {
             theme: localStorage.getItem('theme') || 'system',
@@ -94,6 +108,7 @@ class State {
         this._isNotifying = false; // 防止 _notify 重入导致的无限循环
         this._cacheBackend = localStorage; // 初始化为 localStorage，后续可能被 localforage 替换
     }
+    
     set(key, value) {
         const keys = key.split('.');
         let target = this._state;
@@ -127,6 +142,7 @@ class State {
         }
         this._notify();
     }
+    
     get(key) {
         try {
             return key.split('.').reduce((obj, k) => {
@@ -138,12 +154,14 @@ class State {
             return undefined;
         }
     }
+    
     subscribe(callback) {
         this._subscribers.push(callback);
         return () => {
             this._subscribers = this._subscribers.filter(cb => cb !== callback);
         };
     }
+    
     _notify() {
         if (this._isNotifying)
             return;
@@ -155,12 +173,14 @@ class State {
             this._isNotifying = false;
         }
     }
+    
     _resolveTheme(theme) {
         if (theme === 'system') {
             return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
         }
         return theme;
     }
+    
     _hideSkeleton() {
         const skeleton = document.getElementById('skeleton-screen');
         if (skeleton) {
@@ -168,9 +188,10 @@ class State {
             setTimeout(() => skeleton.remove(), 500);
         }
     }
-    // ════════════════════════════════════════════════
+    
+    // ═════════════════════════════════════════════════
     // LocalForage 缓存层
-    // ════════════════════════════════════════════════
+    // ═════════════════════════════════════════════════
     /**
      * 异步初始化 localforage
      */
@@ -198,6 +219,7 @@ class State {
             this._cacheReady = true;
         }
     }
+    
     /**
      * 从缓存恢复状态
      */
@@ -253,6 +275,7 @@ class State {
             this._notify();
         });
     }
+    
     /**
      * 保存到缓存（增量）
      */
@@ -271,6 +294,7 @@ class State {
             // 静默失败（配额超限等）
         }
     }
+    
     /**
      * 强制清空所有缓存
      */
@@ -289,9 +313,10 @@ class State {
             console.warn('[State] 清空缓存失败', e);
         }
     }
-    // ════════════════════════════════════════════════
+    
+    // ═════════════════════════════════════════════════
     // 标签系统（从 tags.js 合并）
-    // ════════════════════════════════════════════════
+    // ═════════════════════════════════════════════════
     /**
      * 初始化标签索引
      */
@@ -320,6 +345,7 @@ class State {
         };
         this._saveToCache(this._cache.keys.tags, tagsData);
     }
+    
     /**
      * 从站点数据构建标签索引
      */
@@ -347,6 +373,7 @@ class State {
                 this._tagSites.set(site.id, validTags);
         });
     }
+    
     /**
      * 获取站点的标签
      */
@@ -357,6 +384,7 @@ class State {
             return this._tagSites.get(site.id);
         return [];
     }
+    
     /**
      * 根据标签筛选站点
      */
@@ -369,6 +397,7 @@ class State {
             return Array.from(tagSet).some(t => keys.includes(t));
         });
     }
+    
     /**
      * 切换标签激活状态
      */
@@ -390,12 +419,14 @@ class State {
         }
         return this._activeTags.size;
     }
+    
     /**
      * 获取激活的标签列表
      */
     getActiveTags() {
         return Array.from(this._activeTags);
     }
+    
     /**
      * 渲染标签云 UI
      */
@@ -430,7 +461,7 @@ class State {
             const handler = (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const tag = el.dataset.tag;
+                const tag = (el as HTMLElement).dataset.tag;
                 if (tag !== undefined) {
                     this.toggleTag(tag);
                     this.renderTagCloud(containerId, options);
@@ -441,14 +472,15 @@ class State {
                 }
             };
             el.addEventListener('click', handler);
-            el.addEventListener('keydown', (e) => {
+            el.addEventListener('keydown', (e: KeyboardEvent) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                     e.preventDefault();
-                    handler(e); // 类型不匹配但能工作
+                    handler(e);
                 }
             });
         });
     }
+    
     /**
      * 转义 HTML 防止 XSS
      */
@@ -459,6 +491,7 @@ class State {
         div.appendChild(document.createTextNode(text));
         return div.innerHTML;
     }
+    
     /**
      * 标签相关：禁用警告
      */
@@ -466,9 +499,10 @@ class State {
         console.warn('[State] window.tagManager 已废弃，请使用 state.tags 相关 API');
         return null;
     }
-    // ════════════════════════════════════════════════
+    
+    // ═════════════════════════════════════════════════
     // 视图切换：网格 / 列表 / 分类
-    // ════════════════════════════════════════════════
+    // ═════════════════════════════════════════════════
     setView(mode) {
         if (!['grid', 'list', 'category', 'games'].includes(mode)) {
             console.warn('[State] 无效视图模式:', mode);
@@ -477,6 +511,6 @@ class State {
         this.set('currentView', mode);
     }
 }
-const state = new State();
-window.state = state;
-//# sourceMappingURL=state.js.map
+
+const navState = new State();
+window.state = navState;

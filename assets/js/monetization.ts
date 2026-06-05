@@ -114,12 +114,12 @@
     global.Monetization = Monetization;
     // DOM Ready 自动初始化
     if (global.document && global.document.readyState !== 'loading') {
-        setTimeout(function () { Monetization.init(); }, 100);
+    setTimeout(function () { Monetization.init({}); }, 100);
     }
     else {
-        global.document.addEventListener('DOMContentLoaded', function () {
-            Monetization.init();
-        });
+    global.document.addEventListener('DOMContentLoaded', function () {
+        Monetization.init({});
+    });
     }
 })(typeof window !== 'undefined' ? window : this);
 //# sourceMappingURL=monetization.js.map

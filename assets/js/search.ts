@@ -16,19 +16,25 @@ var __rest = (this && this.__rest) || function (s, e) {
         if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
             t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
+        for (var i = 0, symbols = Object.getOwnPropertySymbols(s); i < symbols.length; i++) {
+            if (e.indexOf(symbols[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbols[i]))
+                t[symbols[i]] = s[symbols[i]];
         }
     return t;
 };
 class TrieNode {
+    children: Map<string, TrieNode>;
+    siteIds: Set<number>;
+
     constructor() {
         this.children = new Map();
         this.siteIds = new Set();
     }
 }
 class TrieIndex {
+    root: TrieNode;
+    _allSiteIds: Set<number>;
+
     constructor() {
         this.root = new TrieNode();
         this._allSiteIds = new Set();
@@ -104,15 +110,23 @@ class TrieIndex {
 // 搜索引擎单例
 let searchEngine = null;
 class SearchEngine {
-    constructor(dataManager) {
+    dataManager: any;
+    _trie: TrieIndex | null;
+    _nameIndex: Map<string, string>;
+    _descIndex: Map<string, string>;
+    _urlIndex: Map<string, string>;
+    _tagIndex: Map<string, Set<string>>;
+    _siteScores: Map<string, number>;
+    _siteMap: Map<string, any>;
+    constructor(dataManager: any) {
         this.dataManager = dataManager;
         this._trie = null;
-        this._nameIndex = new Map();
-        this._descIndex = new Map();
-        this._urlIndex = new Map();
-        this._tagIndex = new Map();
-        this._siteScores = new Map();
-        this._siteMap = new Map();
+        this._nameIndex = new Map<string, string>();
+        this._descIndex = new Map<string, string>();
+        this._urlIndex = new Map<string, string>();
+        this._tagIndex = new Map<string, Set<string>>();
+        this._siteScores = new Map<string, number>();
+        this._siteMap = new Map<string, any>();
         this._buildIndex();
     }
     _buildIndex() {
@@ -186,15 +200,15 @@ class SearchEngine {
         const candidateIds = this._trie.fuzzySearch(query);
         // 2. 精细评分排序
         const results = [];
-        const queryWords = this._tokenize(query);
-        candidateIds.forEach(id => {
+        const queryWords: string[] = this._tokenize(query);
+        candidateIds.forEach((id: string) => {
             const site = this._siteMap.get(id);
             if (!site)
                 return;
-            let score = this._siteScores.get(id) || 0;
-            const lowerName = this._nameIndex.get(id) || '';
-            const lowerDesc = this._descIndex.get(id) || '';
-            const lowerUrl = this._urlIndex.get(id) || '';
+            let score = (this._siteScores.get(id) || 0) as number;
+            const lowerName = (this._nameIndex.get(id) || '') as string;
+            const lowerDesc = (this._descIndex.get(id) || '') as string;
+            const lowerUrl = (this._urlIndex.get(id) || '') as string;
             // 名称匹配（最高权重）
             if (lowerName === query) {
                 score += 200;
@@ -255,7 +269,7 @@ class SearchEngine {
             return [];
         const ids = this._trie.prefixSearch(prefix);
         const results = [];
-        ids.forEach(id => {
+        ids.forEach((id: string) => {
             const site = this._siteMap.get(id);
             if (site && site.name.toLowerCase().startsWith(prefix.toLowerCase())) {
                 results.push({
@@ -270,19 +284,25 @@ class SearchEngine {
     /**
      * 中文分词
      */
-    _tokenize(text) {
+    _tokenize(text): string[] {
         if (!text)
             return [];
-        const clean = text.replace(/[，。！？、；：""''【】（）《》\-_\=\+\[\]\{\}\\|<>]/g, ' ');
+        const clean = text.replace(/[，。！？、；：""''【】《》\-_\=+\[\]{}\|<>]/g, ' ');
         const words = clean.split(/\s+/).filter(w => w.length > 0);
         // 中文2-gram
-        const grams = new Set(words);
+        const grams = new Set<string>();
+        words.forEach(word => grams.add(word));
         for (let i = 0; i < text.length - 1; i++) {
             const bigram = text.substring(i, i + 2).toLowerCase();
             if (bigram.trim())
                 grams.add(bigram);
         }
-        return [...grams].filter(w => w.length >= 1);
+        const result: string[] = [];
+        grams.forEach((gram: string) => {
+            if (gram.length >= 1)
+                result.push(gram);
+        });
+        return result;
     }
     /**
      * 高亮搜索结果文本

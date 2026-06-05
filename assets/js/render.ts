@@ -1,4 +1,6 @@
 "use strict";
+
+let _globalScrollHandler: (() => void) | null = null;
 /**
  * render.js - 渲染引擎 (V3.1)
  * 职责：DOM渲染、分页管理、视图切换、骨架屏控制
@@ -63,6 +65,13 @@ function updatePageMeta({ title, description }) {
  * 分页渲染器（含DOM回收）
  */
 class PaginatedRenderer {
+    pageSize: number;
+    currentPage: number;
+    currentSites: any[];
+    totalPages: number;
+    isSearchMode: boolean;
+    _renderedPages: number[];
+    
     constructor(pageSize = PAGE_SIZE) {
         this.pageSize = pageSize;
         this.currentPage = 0;
@@ -167,7 +176,7 @@ const renderer = {
                 el.classList.remove('active');
             });
             sidebarContent.querySelectorAll('.nav-children').forEach(function (el) {
-                el.style.display = 'none';
+                (el as HTMLElement).style.display = 'none';
             });
             // 设置活动分类
             if (activeCatId) {
@@ -177,7 +186,7 @@ const renderer = {
                     // 展开该分类的子菜单
                     var nextEl = catEl.nextElementSibling;
                     if (nextEl && nextEl.classList.contains('nav-children')) {
-                        nextEl.style.display = 'block';
+                        (nextEl as HTMLElement).style.display = 'block';
                     }
                 }
             }
@@ -197,7 +206,7 @@ const renderer = {
                                 parentCatEl.classList.add('active');
                                 var parentNextEl = parentCatEl.nextElementSibling;
                                 if (parentNextEl && parentNextEl.classList.contains('nav-children')) {
-                                    parentNextEl.style.display = 'block';
+                                    (parentNextEl as HTMLElement).style.display = 'block';
                                 }
                             }
                         }
@@ -240,7 +249,7 @@ const renderer = {
                         // 更新搜索工具栏状态
                         var searchInput = document.getElementById('search-input');
                         if (searchInput)
-                            searchInput.value = query;
+                            (searchInput as HTMLInputElement).value = query;
                     }
                     else {
                         // 如果查询为空，显示分类视图
@@ -413,7 +422,7 @@ function renderSites(sites, containerId) {
     var savedSort = localStorage.getItem('kunhun-nav-sort-order') || 'default';
     var sortSelect = container.querySelector('.sort-select');
     if (sortSelect) {
-        sortSelect.value = savedSort;
+        (sortSelect as HTMLSelectElement).value = savedSort;
         // 如果之前有排序，重新应用
         if (savedSort !== 'default') {
             handleSortChange(savedSort);
@@ -422,12 +431,12 @@ function renderSites(sites, containerId) {
     // 动画
     setTimeout(function () {
         container.querySelectorAll('.site-card').forEach(function (card, i) {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(10px)';
-            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            (card as HTMLElement).style.opacity = '0';
+            (card as HTMLElement).style.transform = 'translateY(10px)';
+            (card as HTMLElement).style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             setTimeout(function () {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
+                (card as HTMLElement).style.opacity = '1';
+                (card as HTMLElement).style.transform = 'translateY(0)';
             }, 30 + i * 20);
         });
     }, 50);
@@ -477,7 +486,7 @@ function renderSitesList(sites, containerId) {
     var savedSort = localStorage.getItem('kunhun-nav-sort-order') || 'default';
     var sortSelect = container.querySelector('.sort-select');
     if (sortSelect) {
-        sortSelect.value = savedSort;
+        (sortSelect as HTMLSelectElement).value = savedSort;
         if (savedSort !== 'default') {
             handleSortChange(savedSort);
         }
@@ -525,10 +534,10 @@ function renderGamesHub(containerId) {
     html += '  <div class="games-grid">';
     var gameDefs = window.GameHub ? Object.entries(window.GameHub.games) : [];
     gameDefs.forEach(function ([key, game]) {
-        var icon = game.icon || '🎯';
-        var name = game.name || key;
-        var desc = game.desc || '游戏';
-        var cat = game.cat || 'other';
+        var icon = (game as any).icon || '🎯';
+        var name = (game as any).name || key;
+        var desc = (game as any).desc || '游戏';
+        var cat = (game as any).cat || 'other';
         html += '<a href="#game=' + key + '" class="game-card" data-game="' + key + '" title="' + desc + '">';
         html += '  <div class="game-icon">' + icon + '</div>';
         html += '  <div class="game-name">' + name + '</div>';
@@ -542,7 +551,7 @@ function renderGamesHub(containerId) {
     container.querySelectorAll('.game-card').forEach(function (el) {
         el.addEventListener('click', function (e) {
             e.preventDefault();
-            var gameKey = el.dataset.game;
+            var gameKey = (el as HTMLElement).dataset.game;
             window.location.hash = 'game=' + gameKey;
         });
     });
@@ -621,7 +630,7 @@ function renderCategoryView(catId, subId, leafId) {
     var savedSort = localStorage.getItem('kunhun-nav-sort-order') || 'default';
     var sortSelect = container.querySelector('.sort-select');
     if (sortSelect) {
-        sortSelect.value = savedSort;
+        (sortSelect as HTMLSelectElement).value = savedSort;
         if (savedSort !== 'default') {
             // 需要重新获取当前分类的站点数据并排序
             var currentSites = paginatedRenderer.currentSites;
@@ -804,13 +813,13 @@ function _recycleOldestPage(grid) {
 function _removeSentinel() {
     var old = document.getElementById('infinite-scroll-sentinel');
     if (old) {
-        if (old._observer)
-            old._observer.disconnect();
+        if ((old as any)._observer)
+            (old as any)._observer.disconnect();
         old.remove();
     }
-    if (window._globalScrollHandler) {
-        window.removeEventListener('scroll', window._globalScrollHandler);
-        window._globalScrollHandler = null;
+    if (_globalScrollHandler) {
+        (window as any).removeEventListener('scroll', _globalScrollHandler as any);
+        _globalScrollHandler = null;
     }
 }
 function _setupInfiniteScroll(container) {
@@ -827,15 +836,17 @@ function _setupInfiniteScroll(container) {
                 _loadNextPage(container);
         }, { rootMargin: '300px' });
         observer.observe(sentinel);
-        sentinel._observer = observer;
+        (sentinel as any)._observer = observer;
     }
     else {
-        window._globalScrollHandler = function () {
+        _globalScrollHandler = function () {
             if (window.innerHeight + window.pageYOffset >= document.documentElement.scrollHeight - 400) {
                 _loadNextPage(container);
             }
         };
-        window.addEventListener('scroll', window._globalScrollHandler);
+        if (_globalScrollHandler !== null) {
+            (window as any).addEventListener('scroll', _globalScrollHandler as any);
+        }
     }
 }
 /**
@@ -863,7 +874,7 @@ function _loadNextPage(container) {
     nextData.forEach(function (site) {
         var card = document.createElement('a');
         card.className = 'site site-card animate-in';
-        card.setAttribute('data-page', currentPageIdx);
+        (card as Element).setAttribute('data-page', currentPageIdx.toString());
         card.href = site.url || '#';
         card.setAttribute('aria-label', site.name || '');
         if (site.url) {
@@ -908,12 +919,12 @@ function _loadNextPage(container) {
     // 仅对新加载的卡片执行入场动画
     setTimeout(function () {
         grid.querySelectorAll('.animate-in[data-page="' + currentPageIdx + '"]').forEach(function (card) {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(10px)';
-            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            (card as HTMLElement).style.opacity = '0';
+            (card as HTMLElement).style.transform = 'translateY(10px)';
+            (card as HTMLElement).style.transition = 'opacity 0.3s ease, transform 0.3s ease';
             requestAnimationFrame(function () {
-                card.style.opacity = '1';
-                card.style.transform = 'translateY(0)';
+                (card as HTMLElement).style.opacity = '1';
+                (card as HTMLElement).style.transform = 'translateY(0)';
             });
         });
     }, 30);
@@ -928,7 +939,7 @@ function bindCardEvents() {
             return;
         // 事件委托：一次性绑定，处理所有卡片收藏点击
         main.addEventListener('click', function (e) {
-            var btn = e.target.closest('[data-action="toggle-favorite"]');
+            var btn = (e.target as Element).closest('[data-action="toggle-favorite"]');
             if (!btn)
                 return;
             e.preventDefault();
@@ -970,7 +981,7 @@ function bindCardEvents() {
         });
         // 标记绑定完成
         var cards = document.querySelectorAll('.site-card');
-        cards.forEach(function (card) { card._eventsBound = true; });
+        cards.forEach(function (card) { (card as any)._eventsBound = true; });
     }
     catch (e) {
         console.error('[CardEvents] 绑定失败:', e);
@@ -1059,7 +1070,7 @@ function renderView(s) {
             var query = s.search.query;
             var results = s.search.results;
             if (query && results && results.length > 0) {
-                _renderSearchResults(results, query);
+                _renderSearchResults({ search: { results: results, query: query } });
             }
             else if (query) {
                 var container = document.getElementById('main-content');
@@ -1101,7 +1112,7 @@ function renderView(s) {
         }
         else if (window.dataManager && window.dataManager.isLoaded) {
             var allSites = window.dataManager.raw || [];
-            renderSites(allSites);
+            renderSites(allSites, 'main-content');
         }
     }
     catch (e) {

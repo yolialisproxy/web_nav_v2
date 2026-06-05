@@ -40,7 +40,7 @@ if (valid.length === 0 && sites.length > 0) {
     // 检查前几条数据为什么失败
     for (let i = 0; i < Math.min(5, sites.length); i++) {
         const site = sites[i];
-        console.log(`\n检查第 ${i+1} 条数据:`);
+        console.log(`\\n检查第 ${i+1} 条数据:`);
         console.log(`  site:`, !!site);
         console.log(`  typeof site:`, typeof site);
         console.log(`  site.name:`, site.name, typeof site.name);
@@ -57,3 +57,6 @@ if (valid.length === 0 && sites.length > 0) {
         }
     }
 }
+
+// Make this file a module to avoid redeclaration errors
+export {};

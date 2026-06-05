@@ -1,9 +1,3 @@
-/**
- * Service Worker - 离线缓存与PWA支持
- * 缓存策略：Cache First for静态资源，Network First for数据文件
- * V3.2 — 同步文件清单至实际项目结构
- */
-
 const CACHE_NAME = 'webnav-v3-' + '20260514';
 const STATIC_ASSETS = [
     '/',
@@ -42,17 +36,17 @@ const STATIC_ASSETS = [
 ];
 
 // 安装阶段：缓存静态资源
-self.addEventListener('install', (event: ExtendableEvent) => {
+self.addEventListener('install', (event: any) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll(STATIC_ASSETS);
         })
     );
-    self.skipWaiting();
+    (self as any).skipWaiting();
 });
 
 // 激活阶段：清理旧缓存
-self.addEventListener('activate', (event: ExtendableEvent) => {
+self.addEventListener('activate', (event: any) => {
     event.waitUntil(
         caches.keys().then((keys) => {
             return Promise.all(
@@ -62,14 +56,14 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
             );
         })
     );
-    self.clients.claim();
+    (self as any).clients.claim();
 });
 
 // 离线回退：返回缓存的首页
 const OFFLINE_URL = '/';
 
 // 请求拦截
-self.addEventListener('fetch', (event: FetchEvent) => {
+self.addEventListener('fetch', (event: any) => {
     const url = new URL(event.request.url);
 
     // 只处理同源请请求

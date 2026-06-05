@@ -5,6 +5,17 @@ const url = require('url');
 
 // 复制DataManager类的关键部分
 class MockDataManager {
+    raw: any = null;
+    sites: Map<number, any> = new Map();
+    categories: any = {};
+    mappings: Map<string, number[]> = new Map();
+    tagIndex: Map<string, Set<number>> = new Map();
+    tagCloud: Map<string, { tag: string; count: number; sites: string[] }> = new Map();
+    isLoaded: boolean = false;
+    version: any = null;
+    _loadError: any = null;
+    tagIndexSorted: any[] = [];
+
     constructor() {
         this.raw = null;
         this.sites = new Map();
@@ -15,6 +26,7 @@ class MockDataManager {
         this.isLoaded = false;
         this.version = null;
         this._loadError = null;
+        this.tagIndexSorted = [];
     }
 
     async load() {

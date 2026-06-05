@@ -102,7 +102,9 @@
             'name': CONFIG.orgName,
             'alternateName': CONFIG.orgAlternateName,
             'url': CONFIG.siteUrl,
-            'description': CONFIG.orgDescription
+            'description': CONFIG.orgDescription,
+            'logo': undefined as string | undefined,
+            'sameAs': undefined as string[] | undefined
         };
         if (CONFIG.orgLogo) {
             org.logo = toAbsoluteUrl(CONFIG.orgLogo);
@@ -243,7 +245,7 @@
         if (!el) {
             // 创建新的 script 标签
             el = global.document.createElement('script');
-            el.type = 'application/ld+json';
+            el.setAttribute('type', 'application/ld+json');
             el.id = 'schema-org-data';
             var head = global.document.head || global.document.getElementsByTagName('head')[0];
             head.appendChild(el);
@@ -280,7 +282,7 @@
         var el = global.document.getElementById('schema-org-data');
         if (!el) {
             el = global.document.createElement('script');
-            el.type = 'application/ld+json';
+            el.setAttribute('type', 'application/ld+json');
             el.id = 'schema-org-data';
             var head = global.document.head || global.document.getElementsByTagName('head')[0];
             head.appendChild(el);

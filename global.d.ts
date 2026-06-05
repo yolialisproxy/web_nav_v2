@@ -50,7 +50,6 @@ declare function updateFavoriteButtons(element: any, name: string, url: string, 
 declare function toggleFavorite(): void;
 declare function toggleFavorite(element: any, name: string, url: string, description: string, category: string): void;
 declare function toggleSiteFavorite(): void;
-declare function trackEvent(): void;
 declare function applyTagFilter(tag: string): void;
 declare function initTagManager(): void;
 declare function trackSiteClick(label: string): void;
@@ -82,7 +81,7 @@ interface Window {
   updateFavoriteButtons?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
   toggleFavorite?: { (): void; (element: any, name: string, url: string, description: string, category: string): void; };
   toggleSiteFavorite?: () => void;
-  trackEvent?: () => void;
+  trackEvent?: (category: any, action: any, label: any) => void;
   applyTagFilter?: (tag: string) => void;
 }
 

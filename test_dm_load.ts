@@ -44,3 +44,6 @@ if (window.dataManager) {
         console.error('加载过程中发生错误:', e);
     }
 })();
+
+// Make this file a module to avoid redeclaration errors
+export {};
