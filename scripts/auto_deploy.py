@@ -70,4 +70,4 @@ def main():
 if __name__ == "__main__":
     result = main()
     print(json.dumps(result, indent=2))
-    sys.exit(0 if result.get("status") == "success" else 1)
+    sys.exit(0 if result.get("status") in ("success", "no_changes") else 1)
