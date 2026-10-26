@@ -32424,5 +32424,20 @@
     "phase3_split": true,
     "title": "http://deeplearning4j.org/",
     "tags": []
+  },
+  {
+    "url": "https://vostride.com",
+    "title": "agent-qa",
+    "name": "agent-qa",
+    "description": "用自然语言测试 Web、Android 和 iOS 应用，结合持久记忆与验证后的自我改进，支持 CLI 和 MCP。",
+    "_cat": "开发工具/DevOps工具",
+    "category": "开发工具/DevOps工具",
+    "tags": [
+      "AI",
+      "应用测试",
+      "自动化",
+      "MCP",
+      "持久记忆"
+    ]
   }
 ]
